@@ -150,3 +150,7 @@ CREATE TABLE recharge.daily_totals (
 - [ ] Rule: recharge does not count as consumption
 - [ ] Test: duplicate notify credits once
 - [ ] Test: online player sees diamonds update without relog
+
+## Screens
+
+- `ChoosePayTypeFrame` (`decompiled/core_module/scripts/mainBar/view/ChoosePayTypeFrame.as`, "Escolha modo de pagamento de aceleração de resfriamento:", "(Diamante vinculado prioritário)") lets the player pick how to pay for a cooldown speed-up.

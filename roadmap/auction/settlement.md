@@ -66,7 +66,7 @@ CREATE TABLE auction.settlement (
 CREATE INDEX settlement_buyer_idx ON auction.settlement (buyer_id, settled_at DESC);
 
 CREATE TABLE auction.daily_spend (
-  player_id   INTEGER  NOT NULL REFERENCES player.players(player_id),
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id),
   day         DATE     NOT NULL,
   spent       INTEGER  NOT NULL DEFAULT 0 CHECK (spent >= 0),
   PRIMARY KEY (player_id, day)
@@ -75,7 +75,7 @@ CREATE TABLE auction.daily_spend (
 CREATE TABLE auction.refund (
   refund_id   BIGSERIAL    PRIMARY KEY,
   bid_id      BIGINT       NOT NULL UNIQUE REFERENCES auction.bid(bid_id),
-  player_id   INTEGER      NOT NULL REFERENCES player.players(player_id),
+  player_id   BIGINT      NOT NULL REFERENCES player.players(player_id),
   amount      INTEGER      NOT NULL CHECK (amount > 0),
   mail_id     BIGINT,
   created_at  TIMESTAMPTZ  NOT NULL DEFAULT now()

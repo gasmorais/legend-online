@@ -74,7 +74,7 @@ Sent by the frame constructor (`M14A/ArchaeologyFrame.as:40`); the reply 296 is 
 
 ```sql
 CREATE TABLE archaeology.item_progress (
-  player_id         INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id         BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   item_template_id  INTEGER  NOT NULL,
   chip_count        INTEGER  NOT NULL DEFAULT 0 CHECK (chip_count >= 0),
   exchange_count    INTEGER  NOT NULL DEFAULT 0 CHECK (exchange_count >= 0),
@@ -83,7 +83,7 @@ CREATE TABLE archaeology.item_progress (
 );
 
 CREATE TABLE archaeology.level_reward (
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   level       SMALLINT    NOT NULL CHECK (level BETWEEN 2 AND 5),
   granted_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (player_id, level)

@@ -106,7 +106,7 @@ CREATE TABLE shops.box_featured_item (
 );
 
 CREATE TABLE shops.box_daily_purchase (
-  player_id         INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id         BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   day               DATE     NOT NULL,
   fashion_normal    INTEGER  NOT NULL DEFAULT 0,
   fashion_hot       INTEGER  NOT NULL DEFAULT 0,

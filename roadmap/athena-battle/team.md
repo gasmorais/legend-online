@@ -72,7 +72,7 @@ CREATE TABLE athena_battle.team (
 
 CREATE TABLE athena_battle.team_member (
   team_uid        uuid NOT NULL REFERENCES athena_battle.team(team_uid) ON DELETE CASCADE,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   group_id        smallint NOT NULL CHECK (group_id BETWEEN 1 AND 3),
   joined_at       timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (team_uid, player_id)

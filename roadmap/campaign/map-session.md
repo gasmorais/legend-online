@@ -143,7 +143,7 @@ CREATE TABLE campaign.instance (
   room_id       integer,
   room_type     smallint NOT NULL DEFAULT 0,
   is_cross      boolean  NOT NULL DEFAULT false,
-  owner_player_id integer REFERENCES player.players(player_id) ON DELETE SET NULL,
+  owner_player_id BIGINT REFERENCES player.players(player_id) ON DELETE SET NULL,
   state         smallint NOT NULL DEFAULT 0 CHECK (state IN (0, 1, 2, 3)),
   created_at    timestamptz NOT NULL DEFAULT now(),
   finished_at   timestamptz,
@@ -153,7 +153,7 @@ CREATE INDEX instance_open ON campaign.instance (state) WHERE finished_at IS NUL
 
 CREATE TABLE campaign.instance_member (
   instance_id bigint  NOT NULL REFERENCES campaign.instance(instance_id) ON DELETE CASCADE,
-  player_id   integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   army_id     integer NOT NULL,
   pos_x       integer NOT NULL,
   pos_y       integer NOT NULL,
@@ -174,7 +174,7 @@ CREATE TABLE campaign.instance_node (
   pos_x        integer NOT NULL,
   pos_y        integer NOT NULL,
   current_count integer NOT NULL DEFAULT 0,
-  fighting_player_id integer,
+  fighting_player_id BIGINT,
   PRIMARY KEY (instance_id, node_id)
 );
 CREATE INDEX instance_node_camp ON campaign.instance_node (instance_id, camp_data_id);

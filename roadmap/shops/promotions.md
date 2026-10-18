@@ -97,7 +97,7 @@ None. Offers are server configuration (`shops.discount_offer` in [timebuy.md](ti
 
 ```sql
 CREATE TABLE shops.daily_consumption (
-  player_id        INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   day              DATE    NOT NULL,
   diamonds_spent   BIGINT  NOT NULL DEFAULT 0 CHECK (diamonds_spent >= 0),
   PRIMARY KEY (player_id, day)

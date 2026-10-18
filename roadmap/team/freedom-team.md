@@ -83,7 +83,7 @@ CREATE TABLE team.team (
 );
 
 CREATE TABLE team.member (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     team_id       integer     NOT NULL REFERENCES team.team(team_id) ON DELETE CASCADE,
     slot          smallint    NOT NULL CHECK (slot BETWEEN 0 AND 3),  -- memberId order
     fight_pos     smallint,                                           -- see fight-positions.md
@@ -93,7 +93,7 @@ CREATE TABLE team.member (
 );
 
 CREATE TABLE team.player_setting (
-    player_id            integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id            BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     refuse_team_invite   boolean NOT NULL DEFAULT false
 );
 ```

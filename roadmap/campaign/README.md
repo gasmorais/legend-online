@@ -46,6 +46,7 @@ Conventions used in every module:
 | [dusk-area.md](dusk-area.md) | "Terra do crepúsculo" war field (map 4901): entry 8599/4493/8332, score 4252, ranking 8337/4255, report 4254, attacks 8334 |
 | [tollgate.md](tollgate.md) | "Chegada dos Deuses" tollgate protocol (8752..8755, 4645..4647) and the parts reused by Solo Pass |
 | [dungeon.md](dungeon.md) | Underground palace exploration protocol (4931, 4932): messages only, no client consumer in this build |
+| [map-frames.md](map-frames.md) | HUD frames of the campaign map: `CampaignMapFrame`, `CampaignBuffFrame`, `PVPArmyManageFrame`, `PvpMapFrame`, the sky-step and air garden small maps, the Molong dice and the Flame Temple result/rank views |
 
 ## Shared identifiers (read this before implementing)
 

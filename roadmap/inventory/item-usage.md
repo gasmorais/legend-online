@@ -167,7 +167,7 @@ Items: `inventory.items`. Buffers created by items:
 
 ```sql
 CREATE TABLE inventory.item_buffers (
-  player_id          INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   buffer_id          INTEGER     NOT NULL,
   buffer_type        SMALLINT    NOT NULL,
   grade              INTEGER     NOT NULL CHECK (grade >= 0),
@@ -179,7 +179,7 @@ CREATE INDEX item_buffers_expiry_idx ON inventory.item_buffers (expires_at);
 
 CREATE TABLE inventory.item_use_log (
   use_id       BIGSERIAL   PRIMARY KEY,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id  INTEGER     NOT NULL,
   count        INTEGER     NOT NULL CHECK (count > 0),
   target_id    INTEGER,

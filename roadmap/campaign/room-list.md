@@ -69,7 +69,7 @@ The hall state is volatile (in memory): rooms, hall viewers, waiting players. Ro
 
 ```sql
 CREATE TABLE campaign.hall_presence (
-  player_id  integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   room_type  smallint NOT NULL DEFAULT 0,
   filter_campaign_id integer NOT NULL DEFAULT 0,
   entered_at timestamptz NOT NULL DEFAULT now()

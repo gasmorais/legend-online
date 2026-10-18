@@ -85,7 +85,7 @@ Rows are deleted or reduced in `inventory.items`; gold is a player counter ([../
 ```sql
 CREATE TABLE inventory.sell_log (
   sell_id      BIGSERIAL   PRIMARY KEY,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   item_id      BIGINT      NOT NULL,
   template_id  INTEGER     NOT NULL,
   count        INTEGER     NOT NULL CHECK (count > 0),

@@ -67,7 +67,7 @@ CREATE TABLE lotteries.lotto_draw (
 
 CREATE TABLE lotteries.lotto_bet (
   draw_day   DATE     NOT NULL,
-  player_id  INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   currency   SMALLINT NOT NULL CHECK (currency IN (1, 2)),
   card       SMALLINT NOT NULL CHECK (card BETWEEN 0 AND 11),
   sign       SMALLINT NOT NULL CHECK (sign BETWEEN 0 AND 11),

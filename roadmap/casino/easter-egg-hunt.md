@@ -100,7 +100,7 @@ Start and ready of an Easter team use the game hall routes ([game-hall.md](game-
 
 ```sql
 CREATE TABLE casino.easter_player (
-  player_id        INTEGER   PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT   PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   day              DATE      NOT NULL DEFAULT CURRENT_DATE,
   ticket_buys_day  SMALLINT  NOT NULL DEFAULT 0,
   buff_buys_day    SMALLINT  NOT NULL DEFAULT 0,
@@ -110,14 +110,14 @@ CREATE TABLE casino.easter_player (
 );
 
 CREATE TABLE casino.easter_blessing (
-  player_id   INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   skill_id    INTEGER  NOT NULL,
   level       SMALLINT NOT NULL DEFAULT 0,
   PRIMARY KEY (player_id, skill_id)
 );
 
 CREATE TABLE casino.easter_pool_stock (
-  player_id   INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   prize_id    INTEGER NOT NULL,
   remaining   INTEGER NOT NULL CHECK (remaining >= 0),
   PRIMARY KEY (player_id, prize_id)

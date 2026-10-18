@@ -55,7 +55,7 @@ Feature [navigation](README.md), module `shop`. Aliases in [README.md](README.md
 
 ```sql
 CREATE TABLE navigation.shop_offer (
-  player_id    INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   slot         SMALLINT NOT NULL CHECK (slot BETWEEN 0 AND 5),
   shop_id      INTEGER  NOT NULL,
   bought       BOOLEAN  NOT NULL DEFAULT false,

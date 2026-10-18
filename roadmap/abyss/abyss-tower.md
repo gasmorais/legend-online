@@ -107,7 +107,7 @@ The boss composition per wave, `bossNum`, `guardSealNum` per floor and the reset
 CREATE SCHEMA IF NOT EXISTS abyss;
 
 CREATE TABLE abyss.progress (
-  player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   is_hell       boolean  NOT NULL,
   wave_index    integer  NOT NULL DEFAULT 1 CHECK (wave_index >= 1),
   floor         integer  NOT NULL DEFAULT 1 CHECK (floor >= 1),
@@ -120,7 +120,7 @@ CREATE TABLE abyss.progress (
 
 CREATE TABLE abyss.fight_log (
   fight_id    bigserial   PRIMARY KEY,
-  player_id   integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   is_hell     boolean     NOT NULL,
   wave_index  integer     NOT NULL,
   won         boolean     NOT NULL,

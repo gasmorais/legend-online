@@ -100,7 +100,7 @@ Replies `{op: 9|10|11|19|20}`; events `{op: 12}` new missions, `{op: 2}` ship ba
 
 ```sql
 CREATE TABLE navigation.port (
-  player_id          INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   port_no            SMALLINT    NOT NULL CHECK (port_no BETWEEN 1 AND 3),
   grade              SMALLINT    NOT NULL DEFAULT 1 CHECK (grade BETWEEN 1 AND 6),
   cooldown_ends_at   TIMESTAMPTZ,
@@ -110,7 +110,7 @@ CREATE TABLE navigation.port (
 );
 
 CREATE TABLE navigation.port_mission (
-  player_id     INTEGER  NOT NULL,
+  player_id     BIGINT  NOT NULL,
   port_no       SMALLINT NOT NULL,
   slot          SMALLINT NOT NULL CHECK (slot BETWEEN 1 AND 6),
   template_id   INTEGER  NOT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE navigation.port_mission (
 
 CREATE TABLE navigation.expedition (
   id            BIGSERIAL   PRIMARY KEY,
-  player_id     INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   port_no       SMALLINT    NOT NULL,
   ship_id       UUID        NOT NULL REFERENCES navigation.ship(ship_id) ON DELETE CASCADE,
   reward_coins  INTEGER     NOT NULL CHECK (reward_coins >= 0),

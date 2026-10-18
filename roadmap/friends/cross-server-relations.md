@@ -69,7 +69,7 @@ CREATE INDEX global_relation_target_idx ON friends.global_relation (target_uuid,
 
 CREATE TABLE friends.global_player_card (
     uuid          text        PRIMARY KEY,
-    player_id     integer     REFERENCES player.players(player_id) ON DELETE CASCADE, -- local players only
+    player_id     BIGINT     REFERENCES player.players(player_id) ON DELETE CASCADE, -- local players only
     server_name   text        NOT NULL,
     card_json     jsonb       NOT NULL,           -- jsonstr payload
     online        boolean     NOT NULL DEFAULT false,

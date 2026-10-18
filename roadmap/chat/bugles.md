@@ -62,7 +62,7 @@ When the item is missing the client opens the quick buy frame and, after the pur
 
 ```sql
 CREATE TABLE chat.bugle_daily (
-    player_id          integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     day                date        NOT NULL,
     small_free_used    smallint    NOT NULL DEFAULT 0 CHECK (small_free_used >= 0),
     cross_free_used    smallint    NOT NULL DEFAULT 0 CHECK (cross_free_used >= 0),

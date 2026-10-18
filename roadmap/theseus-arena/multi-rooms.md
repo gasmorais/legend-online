@@ -91,7 +91,7 @@ CREATE TABLE theseus_arena.multi_match (
 
 CREATE TABLE theseus_arena.multi_match_player (
   match_id        bigint NOT NULL REFERENCES theseus_arena.multi_match(match_id) ON DELETE CASCADE,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   side            smallint NOT NULL CHECK (side IN (1, 2)),
   points_delta    integer NOT NULL,
   streak_bonus    integer NOT NULL DEFAULT 0,

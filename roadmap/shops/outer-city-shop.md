@@ -85,7 +85,7 @@ All routes: send 9528 (0x2538) `U_C_MAPSHOPINFO` (named like the reply in `proto
 
 ```sql
 CREATE TABLE shops.map_shop_state (
-  player_id        INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   next_refresh_at  TIMESTAMPTZ NOT NULL,
   refresh_day      DATE        NOT NULL,
   manual_refreshes INTEGER     NOT NULL DEFAULT 0 CHECK (manual_refreshes >= 0),
@@ -94,7 +94,7 @@ CREATE TABLE shops.map_shop_state (
 );
 
 CREATE TABLE shops.map_shop_slot (
-  player_id    INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   slot_index   SMALLINT NOT NULL CHECK (slot_index BETWEEN 0 AND 5),
   map_shop_id  INTEGER  NOT NULL,
   cost_id      INTEGER  NOT NULL DEFAULT 0,

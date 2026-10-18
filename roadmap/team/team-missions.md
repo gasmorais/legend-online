@@ -84,7 +84,7 @@ Rooms are runtime objects. Daily attempts:
 
 ```sql
 CREATE TABLE team.mission_daily (
-    player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     day           date        NOT NULL,
     attempts_used smallint    NOT NULL DEFAULT 0 CHECK (attempts_used >= 0),
     PRIMARY KEY (player_id, day)

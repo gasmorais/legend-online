@@ -94,7 +94,7 @@ CREATE TABLE campaign.war_field_match (
 
 CREATE TABLE campaign.war_field_player (
   instance_id  bigint  NOT NULL REFERENCES campaign.war_field_match(instance_id) ON DELETE CASCADE,
-  player_id    integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   team_id      integer NOT NULL,
   points       integer NOT NULL DEFAULT 0,
   resources    integer NOT NULL DEFAULT 0,

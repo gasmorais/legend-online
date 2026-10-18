@@ -109,7 +109,7 @@ CREATE TABLE lotteries.roulette_reward (
 
 CREATE TABLE lotteries.roulette_player (
   event_id         INTEGER  NOT NULL REFERENCES lotteries.roulette_event(event_id) ON DELETE CASCADE,
-  player_id        INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   diamonds_spent   INTEGER  NOT NULL DEFAULT 0,
   draws_total      INTEGER  NOT NULL DEFAULT 0,
   draws_left       INTEGER  NOT NULL DEFAULT 0 CHECK (draws_left >= 0),
@@ -121,7 +121,7 @@ CREATE TABLE lotteries.roulette_player (
 CREATE TABLE lotteries.roulette_winner_log (
   log_id     BIGSERIAL   PRIMARY KEY,
   event_id   INTEGER     NOT NULL REFERENCES lotteries.roulette_event(event_id) ON DELETE CASCADE,
-  player_id  INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   item_id    INTEGER     NOT NULL,
   item_count INTEGER     NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()

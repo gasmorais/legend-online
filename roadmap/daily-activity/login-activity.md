@@ -65,7 +65,7 @@ Uses the generic funny activity tables of [seasonal-events](../seasonal-events/R
 
 ```sql
 CREATE TABLE daily_activity.login_event_progress (
-    player_id      integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     active_id      text     NOT NULL,
     login_days     smallint NOT NULL DEFAULT 0,
     streak_days    smallint NOT NULL DEFAULT 0,

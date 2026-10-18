@@ -52,11 +52,13 @@ The profile is pushed at login (4245) and edited in two places: the hero informa
 
 The file is not present under `raw/xml/`; it must be authored or fetched (gap). Blood types are client constants (no template).
 
+Social share texts (Facebook) come from `raw/xml/tempinfos/ShareTemplateInfos.xml`, loaded by `TempleteManager` into `FaceBookTemplateCate` (`decompiled/core_module/scripts/yishi/manager/TempleteManager.as:1224`) and read through the share flow in [search-and-recommend.md](search-and-recommend.md).
+
 ## 7. Persistent state
 
 ```sql
 CREATE TABLE friends.sns_profile (
-    player_id      integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     signature      varchar(64) NOT NULL DEFAULT '',
     sex            smallint    NOT NULL DEFAULT 0,
     birthday_type  smallint    NOT NULL DEFAULT 0,

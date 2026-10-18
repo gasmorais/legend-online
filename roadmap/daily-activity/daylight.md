@@ -129,7 +129,7 @@ CREATE TABLE daily_activity.daylight_match (
 
 CREATE TABLE daily_activity.daylight_participant (
     match_id     integer   NOT NULL REFERENCES daily_activity.daylight_match(match_id) ON DELETE CASCADE,
-    player_id    integer   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     team         smallint  NOT NULL CHECK (team IN (1, 2)),
     score        integer   NOT NULL DEFAULT 0,
     repel_count  integer   NOT NULL DEFAULT 0,

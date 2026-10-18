@@ -105,7 +105,7 @@ Constants `OP_START 1`, `OP_FLIP 2`, `OP_AUTO 3`, `OP_SHOW 4`, `OP_CLOSE 5` (AMM
 
 ```sql
 CREATE TABLE casino.minigame_session (
-  player_id    INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   game         SMALLINT    NOT NULL CHECK (game IN (2, 3)),
   turn         SMALLINT    NOT NULL DEFAULT 1,
   score        INTEGER     NOT NULL DEFAULT 0,

@@ -37,7 +37,7 @@ Personal Athena score places the player in one of six categories. The rank frame
 
 ```sql
 CREATE TABLE athena_battle.player_score (
-  player_id       integer PRIMARY KEY REFERENCES player.players(player_id),
+  player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id),
   server_id       integer NOT NULL,
   total_score     integer NOT NULL DEFAULT 0 CHECK (total_score >= 0),
   category        smallint NOT NULL DEFAULT 0 CHECK (category BETWEEN 0 AND 5),
@@ -48,7 +48,7 @@ CREATE INDEX ON athena_battle.player_score (category, total_score DESC);
 
 CREATE TABLE athena_battle.reward_grant (
   period          text NOT NULL,                       -- 'YYYY-MM' or battle id
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   amount          integer NOT NULL,
   reason          text NOT NULL CHECK (reason IN ('battle', 'monthly')),
   granted_at      timestamptz NOT NULL DEFAULT now(),

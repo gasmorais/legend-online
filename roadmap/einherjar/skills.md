@@ -124,3 +124,7 @@ CREATE TABLE einherjar.pet_skills (
 - [ ] Rule: 5 active / 3 passive caps, level 55
 - [ ] Table `einherjar.pet_skills` (optional)
 - [ ] Tests: duplicate learn rejected, free interval with VIP reduction
+
+## Screens
+
+- `MorphingSkillLockTip` (`decompiled/m14/scripts/pet/property/MorphingSkillLockTip.as`, "Despertar Avançado", "Aberto no nível 55 do Einherjar", "Aumento do despertamento eleva 10 vezes; Dano de habilidade eleva 10%; pode aprender mais habilidades de despertamento.") explains why an advanced awakening skill is still locked and the level it opens at.

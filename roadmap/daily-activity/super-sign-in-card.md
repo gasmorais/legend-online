@@ -78,14 +78,14 @@ CREATE TABLE daily_activity.super_sign_card_reward (
 );
 
 CREATE TABLE daily_activity.super_sign_card (
-    player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     event_id      integer     NOT NULL REFERENCES daily_activity.super_sign_card_event(event_id),
     activated_at  timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (player_id, event_id)
 );
 
 CREATE TABLE daily_activity.super_sign_card_day (
-    player_id   integer  NOT NULL,
+    player_id   BIGINT  NOT NULL,
     event_id    integer  NOT NULL,
     card_day    smallint NOT NULL CHECK (card_day BETWEEN 1 AND 8),
     state       smallint NOT NULL CHECK (state BETWEEN 0 AND 3),

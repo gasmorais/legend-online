@@ -123,7 +123,7 @@ The activity definition and the generic claim ledger belong to the sum-active en
 
 ```sql
 CREATE TABLE medals.hall_of_fame_progress (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   active_id     text        NOT NULL,              -- SumActiveinfoMsg.active_id of the type 146 activity
   best_power    bigint      NOT NULL DEFAULT 0 CHECK (best_power >= 0),
   updated_at    timestamptz NOT NULL DEFAULT now(),
@@ -131,7 +131,7 @@ CREATE TABLE medals.hall_of_fame_progress (
 );
 
 CREATE TABLE medals.hall_of_fame_claims (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   active_id     text        NOT NULL,
   package_id    text        NOT NULL,
   power_at_claim bigint     NOT NULL,

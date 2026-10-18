@@ -122,3 +122,7 @@ CREATE INDEX client_logs_time_idx ON account.client_logs (logged_at DESC);
 - [ ] Tables `account.update_announcements`, `account.update_announcement_items`, `account.client_logs`
 - [ ] Test: missing `time` shows "Não há comunicado de atualização"
 - [ ] Test: `/n` renders a line break
+
+## Screens
+
+- `IndulgeInfoFrame` (`decompiled/core_module/scripts/mainBar/view/IndulgeInfoFrame.as`, "Alerta de mensagem anti-vício", "Informação Anti-Vício", "Preencher informações anti-vício", "Após registrar, terá que acessar novamente no jogo.", "Prezado Usuário:") collects the anti-addiction identity data; on submit the client forces a relog.

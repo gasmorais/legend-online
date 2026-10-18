@@ -63,7 +63,7 @@ CREATE TABLE quests.simple_task (
 );
 
 CREATE TABLE quests.simple_task_state (
-    player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     task_id     integer  NOT NULL REFERENCES quests.simple_task(task_id),
     progress    integer  NOT NULL DEFAULT 0,
     state       smallint NOT NULL DEFAULT 0 CHECK (state BETWEEN -1 AND 2),

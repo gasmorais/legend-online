@@ -66,7 +66,7 @@ Common: send 9575 (0x2567) `C_ARCHAEOLOGY_REQ`, `ArchaeologyReqMsg` `op` (#1, IN
 
 ```sql
 CREATE TABLE archaeology.book_claim (
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   book_id     INTEGER     NOT NULL,
   claimed_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (player_id, book_id)

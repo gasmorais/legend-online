@@ -135,7 +135,7 @@ Rules:
 CREATE SCHEMA IF NOT EXISTS medals;
 
 CREATE TABLE medals.imperial_medals (
-  player_id      integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   grade          smallint    NOT NULL DEFAULT 1 CHECK (grade BETWEEN 1 AND 10),
   gp             bigint      NOT NULL DEFAULT 0 CHECK (gp >= 0),
   invalid_at     timestamptz,                 -- NULL or past = expired
@@ -146,7 +146,7 @@ CREATE INDEX imperial_medals_invalid_at ON medals.imperial_medals (invalid_at);
 
 CREATE TABLE medals.imperial_medal_log (
   id             bigserial   PRIMARY KEY,
-  player_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   op_type        smallint    NOT NULL CHECK (op_type IN (1, 3, 4, 5)),
   arena_medals_spent integer NOT NULL DEFAULT 0 CHECK (arena_medals_spent >= 0),
   scepters_spent integer     NOT NULL DEFAULT 0 CHECK (scepters_spent >= 0),

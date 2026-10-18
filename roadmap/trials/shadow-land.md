@@ -71,14 +71,14 @@ A `nodeList` entry must exist for every open area and difficulty, otherwise the 
 
 ```sql
 CREATE TABLE trials.shadow_land_state (
-    player_id        integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     open_area_id     smallint    NOT NULL DEFAULT 1 CHECK (open_area_id BETWEEN 1 AND 5),
     energy           smallint    NOT NULL DEFAULT 200 CHECK (energy >= 0),
     energy_updated_at timestamptz NOT NULL DEFAULT now()
 );
 
 CREATE TABLE trials.shadow_land_progress (
-    player_id        integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     area_id          smallint NOT NULL CHECK (area_id BETWEEN 1 AND 5),
     difficulty       smallint NOT NULL CHECK (difficulty IN (1, 2)),
     passed_node      smallint NOT NULL DEFAULT 0 CHECK (passed_node BETWEEN 0 AND 6),

@@ -50,7 +50,7 @@ No server work is needed for parity beyond sending sane `relogin_process` and `r
 
 ```sql
 CREATE TABLE daily_activity.login_milestone (
-    player_id        integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     login_days       smallint NOT NULL DEFAULT 0 CHECK (login_days >= 0),
     last_login_on    date,
     claimed_mask     smallint NOT NULL DEFAULT 0 CHECK (claimed_mask BETWEEN 0 AND 127)

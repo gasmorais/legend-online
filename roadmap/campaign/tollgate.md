@@ -89,7 +89,7 @@ CREATE TABLE campaign.tollgate_event (
 
 CREATE TABLE campaign.tollgate_player (
   event_id       integer NOT NULL REFERENCES campaign.tollgate_event(event_id) ON DELETE CASCADE,
-  player_id      integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   score          integer NOT NULL DEFAULT 0,
   cur_tollgate_id integer NOT NULL DEFAULT 1,
   remain_count   smallint NOT NULL DEFAULT 5,

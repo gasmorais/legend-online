@@ -84,7 +84,7 @@ Config (`raw/xml/tempinfos/ConfigInfos.xml`):
 CREATE SCHEMA IF NOT EXISTS roads;
 
 CREATE TABLE roads.final_road_state (
-    player_id            integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     week_start           date        NOT NULL,
     chapter_access_left  smallint    NOT NULL DEFAULT 1,
     chapter_access_bought smallint   NOT NULL DEFAULT 0,
@@ -93,7 +93,7 @@ CREATE TABLE roads.final_road_state (
 );
 
 CREATE TABLE roads.final_road_run (
-    player_id          integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     chapter            smallint NOT NULL,
     floor              smallint NOT NULL DEFAULT 1 CHECK (floor BETWEEN 1 AND 6),
     stage              smallint NOT NULL DEFAULT 1 CHECK (stage BETWEEN 1 AND 5),

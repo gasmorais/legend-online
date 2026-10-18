@@ -85,12 +85,13 @@ Empty body. Handler `SAM:76-86`: resets the model, returns to space if inside th
 | `SecretEventTemplates.xml` (`secretEventCate`) | `Id`, `Name`, `Type`, `Description`, `Icon`, `Resource`, `Para1`, `Para2`, `NoteName` (Chinese designer note), `LevelId`, `FunType` |
 | `RoyaltyTemplates.xml` | `OpenSecret` highest region unlocked per royalty level ([theseus](../theseus/README.md)) |
 | `ConfigInfos.xml` | `secretexplore_reset_times_cost_diamonds` (empty), `secretexplore_revive_time` 24, `secretexplore_revive_cost_diamonds` 30, `secretexplore_close_time` `0,23:30:00\|23:59:59`, client key `Secret_time` |
+| `ExploreEventTemplates.xml` | Legacy table of the "Eremitério com poder sagrado" (holy power) exploration, per floor events: `EventId`, `EventType` (1 monster, 2 chest, 3 blood pack, 4 transmitter, 5 rock trap, 6 Michelangelo Yunus spear), `Name`, `Desc`, `Icon`, `RangeMin`, `RangeMax`. Not loaded by `TempleteManager` in this build (server side or unused), kept for reference |
 
 ## 7. Persistent state
 
 ```sql
 CREATE TABLE exploration.secret_run (
-  player_id          INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   week_start         DATE        NOT NULL,
   region_id          SMALLINT    NOT NULL DEFAULT 1 CHECK (region_id BETWEEN 1 AND 4),
   level_id           SMALLINT    NOT NULL DEFAULT 1 CHECK (level_id BETWEEN 1 AND 12),
@@ -108,7 +109,7 @@ CREATE TABLE exploration.secret_run (
 );
 
 CREATE TABLE exploration.secret_cell (
-  player_id     INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   map_data_id   SMALLINT NOT NULL,
   node_id       INTEGER  NOT NULL,
   event_id      INTEGER  NOT NULL,

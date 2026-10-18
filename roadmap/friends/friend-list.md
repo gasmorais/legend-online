@@ -105,7 +105,7 @@ CREATE TABLE friends.relation (
 CREATE INDEX relation_target_idx ON friends.relation (target_id, relation);
 
 CREATE TABLE friends.setting (
-    player_id       integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     refuse_requests boolean NOT NULL DEFAULT false   -- PlayerMsg.refuseFriend
 );
 ```
@@ -151,3 +151,8 @@ CREATE TABLE friends.setting (
 - [ ] Refuse friend requests toggle (8285/4193) and `PlayerMsg.refuseFriend`
 - [ ] Limits: 200 + VIP friends, 50 blacklist, 3 custom groups
 - [ ] Test: accept from the popup adds the requester back
+
+## Screens
+
+- `FriendsHelpFrame` (`decompiled/m12/scripts/friends/view/FriendsHelpFrame.as`, "Explicação", "Confirmar") is the friends help popup.
+- `RosePresentBackView` and `RosePresentBackNewView` (`decompiled/core_module/scripts/simplegame/roses/`, title "Presentear de volta") render the rose give-back dialog with a message editor ("Modificar mensagem", "Vamos festejar nossa amizade eterna！") and the friend-only guard "Esse jogador não é seu amigo, não é possível presentear". The new variant validates the bag ("Não há este item na Mochila") and warns before sending an empty message.

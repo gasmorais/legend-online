@@ -154,7 +154,7 @@ Types 103 and 144..146 do not appear in the data.
 
 ```sql
 CREATE TABLE medals.achievement_tasks (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id   integer     NOT NULL,                 -- AchievementTaskTemplates.Id
   progress      integer     NOT NULL DEFAULT 0 CHECK (progress >= 0),
   completed_at  timestamptz,
@@ -168,7 +168,7 @@ CREATE INDEX achievement_tasks_open ON medals.achievement_tasks (player_id) WHER
 
 -- Shared lifetime counters for count-type conditions, keyed by condition, so chain steps share progress.
 CREATE TABLE medals.achievement_counters (
-  player_id       integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   condition_type  smallint NOT NULL,
   condition_parm1 integer  NOT NULL DEFAULT 0,
   condition_parm3 integer  NOT NULL DEFAULT 0,

@@ -112,7 +112,7 @@ CREATE TABLE exchange.box_hot_item (
 );
 
 CREATE TABLE exchange.box_daily (
-  player_id          INTEGER   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   day                DATE      NOT NULL,
   fashion_draws      SMALLINT  NOT NULL DEFAULT 0,
   fashion_chests     SMALLINT  NOT NULL DEFAULT 0,

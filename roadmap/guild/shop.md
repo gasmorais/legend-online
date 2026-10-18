@@ -114,7 +114,7 @@ CREATE TABLE guild.commerce_supply_slot (
 );
 
 CREATE TABLE guild.commerce_trade_offer (
-  player_id    INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id    BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   period_start DATE     NOT NULL,
   position     SMALLINT NOT NULL CHECK (position BETWEEN 0 AND 11),
   map_shop_id  INTEGER  NOT NULL,
@@ -123,14 +123,14 @@ CREATE TABLE guild.commerce_trade_offer (
 );
 
 CREATE TABLE guild.commerce_trade_refresh (
-  player_id    INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id    BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   period_start DATE     NOT NULL,
   refresh_count SMALLINT NOT NULL DEFAULT 0 CHECK (refresh_count BETWEEN 0 AND 6),
   PRIMARY KEY (player_id, period_start)
 );
 
 CREATE TABLE guild.shop_purchase (
-  player_id  INTEGER  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id  BIGINT  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   shop_id    INTEGER NOT NULL,
   day        DATE    NOT NULL,
   count      INTEGER NOT NULL CHECK (count >= 0),

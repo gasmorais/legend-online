@@ -96,7 +96,7 @@ Upgrade table (`UpGradeTempInfos.xml` Types 118, `Grades`, `Data` coins, `Active
 ```sql
 CREATE TABLE navigation.ship (
   ship_id      UUID        PRIMARY KEY,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   slot         SMALLINT    NOT NULL CHECK (slot BETWEEN 1 AND 5),
   grade        SMALLINT    NOT NULL DEFAULT 1 CHECK (grade BETWEEN 1 AND 9),
   state        SMALLINT    NOT NULL DEFAULT 0 CHECK (state BETWEEN 0 AND 4),

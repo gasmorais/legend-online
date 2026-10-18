@@ -110,7 +110,7 @@ Other `PlayerOpMsg` fields are unused (list in [../forbidden-boss/boss-hall.md](
 
 ```sql
 CREATE TABLE mazes.dark_maze_runs (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   season_start  timestamptz NOT NULL,                 -- reset period the run belongs to
   layer         smallint    NOT NULL DEFAULT 1 CHECK (layer BETWEEN 1 AND 20),
   node_id       smallint    NOT NULL DEFAULT 1 CHECK (node_id BETWEEN 1 AND 22),
@@ -125,7 +125,7 @@ CREATE TABLE mazes.dark_maze_runs (
 );
 
 CREATE TABLE mazes.dark_maze_units (
-  player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   unit_id      integer  NOT NULL,          -- guardian id (> 0) or -mercenary template id (< 0)
   hp           integer  NOT NULL CHECK (hp >= 0),
   max_hp       integer  NOT NULL CHECK (max_hp > 0),

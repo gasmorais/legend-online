@@ -59,7 +59,7 @@ None in `raw/xml/tempinfos/` for nodes or events; nodes come from the server (`s
 
 ```sql
 CREATE TABLE exploration.seek_state (
-  player_id        INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   charges          SMALLINT    NOT NULL DEFAULT 10 CHECK (charges BETWEEN 0 AND 10),
   next_charge_at   TIMESTAMPTZ,
   cur_node_id      INTEGER,

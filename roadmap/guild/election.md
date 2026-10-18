@@ -82,7 +82,7 @@ CREATE UNIQUE INDEX election_one_open ON guild.election (guild_id) WHERE closed_
 
 CREATE TABLE guild.election_candidate (
     election_id integer NOT NULL REFERENCES guild.election(id) ON DELETE CASCADE,
-    player_id   integer NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+    player_id   BIGINT NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
     PRIMARY KEY (election_id, player_id)
 );
 

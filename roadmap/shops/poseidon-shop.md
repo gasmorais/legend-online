@@ -78,7 +78,7 @@ Entry: `SwitchPageHelp.openPoseidonFrame` (`SPH:3065-3074`), blocked with "Abre 
 
 ```sql
 CREATE TABLE shops.poseidon_purchase (
-  player_id    INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id  INTEGER NOT NULL,
   period_day   DATE    NOT NULL DEFAULT DATE '1970-01-01',
   bought       INTEGER NOT NULL DEFAULT 0 CHECK (bought >= 0),

@@ -110,7 +110,7 @@ Schema `planes`.
 
 ```sql
 CREATE TABLE planes.player_state (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   energy               INTEGER     NOT NULL DEFAULT 1500 CHECK (energy >= 0),
   energy_updated_at    TIMESTAMPTZ NOT NULL DEFAULT now(),
   energy_buy_count     SMALLINT    NOT NULL DEFAULT 0 CHECK (energy_buy_count BETWEEN 0 AND 5),
@@ -122,7 +122,7 @@ CREATE TABLE planes.player_state (
 
 CREATE TABLE planes.plane (
   plane_id             BIGSERIAL   PRIMARY KEY,
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   plane_template_id    INTEGER     NOT NULL,
   life_point           INTEGER     NOT NULL CHECK (life_point >= 0),
   progress_percent     SMALLINT    NOT NULL DEFAULT 0 CHECK (progress_percent BETWEEN 0 AND 100),

@@ -285,14 +285,14 @@ Schema `theseus`.
 
 ```sql
 CREATE TABLE theseus.slate_board (
-  player_id     integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   sealed_mask   integer NOT NULL CHECK (sealed_mask >= 0 AND sealed_mask < 33554432), -- 25 bits, 1 = sealed
   next_slate_id integer NOT NULL DEFAULT 1,
   created_at    timestamptz NOT NULL DEFAULT now()
 );
 
 CREATE TABLE theseus.slates (
-  player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   slate_id     integer  NOT NULL,                     -- SlateMsg.id, per player
   template_id  integer  NOT NULL,                     -- SlateTmpls.TemplateId
   level        smallint NOT NULL DEFAULT 0 CHECK (level BETWEEN 0 AND 60),
@@ -308,7 +308,7 @@ CREATE INDEX slates_equipped ON theseus.slates (player_id) WHERE board_anchor IS
 CREATE INDEX slates_template ON theseus.slates (player_id, template_id) WHERE board_anchor IS NULL;
 
 CREATE TABLE theseus.slate_task_claims (
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   task_id     smallint NOT NULL,                      -- SlateTaskTmpls.TemplateId
   claimed_at  timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (player_id, task_id)

@@ -124,7 +124,7 @@ CREATE UNIQUE INDEX snapshot_current_idx ON rankings.snapshot (file_key, area) W
 CREATE TABLE rankings.entry (
     snapshot_id   bigint      NOT NULL REFERENCES rankings.snapshot(snapshot_id) ON DELETE CASCADE,
     rank          integer     NOT NULL CHECK (rank >= 1),
-    player_id     integer     REFERENCES player.players(player_id) ON DELETE SET NULL, -- null for guild or foreign rows
+    player_id     BIGINT     REFERENCES player.players(player_id) ON DELETE SET NULL, -- null for guild or foreign rows
     guild_id      integer,                           -- constainfight rows
     server_name   text        NOT NULL,
     subject_id    integer,                           -- pet_id or child_id for pet/child lists
@@ -134,7 +134,7 @@ CREATE TABLE rankings.entry (
 CREATE INDEX entry_player_idx ON rankings.entry (player_id, snapshot_id);
 
 CREATE TABLE rankings.player_order (
-    player_id             integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id             BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     gp_order              integer     NOT NULL DEFAULT 0,  -- PlayerMsg.gp_order
     fight_capacity_order  integer     NOT NULL DEFAULT 0,  -- PlayerOrderMsg.fight_capacity_order
     geste_order           integer     NOT NULL DEFAULT 0,
@@ -144,7 +144,7 @@ CREATE TABLE rankings.player_order (
 );
 
 CREATE TABLE rankings.period_counter (
-    player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     metric        text        NOT NULL CHECK (metric IN ('gp', 'charm')),
     period        text        NOT NULL CHECK (period IN ('day', 'week')),
     period_start  date        NOT NULL,

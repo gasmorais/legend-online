@@ -142,7 +142,7 @@ CREATE TABLE guild.guild_tech (
 );
 
 CREATE TABLE guild.member_skill (
-  player_id  INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id  BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   skill_type SMALLINT NOT NULL CHECK (skill_type BETWEEN 6 AND 25 AND skill_type NOT IN (7,20)),
   level      SMALLINT NOT NULL DEFAULT 0 CHECK (level BETWEEN 0 AND 10),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),

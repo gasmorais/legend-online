@@ -67,7 +67,7 @@ CREATE TABLE casino.slot_event (
 
 CREATE TABLE casino.slot_player (
   event_id    INTEGER  NOT NULL REFERENCES casino.slot_event(event_id) ON DELETE CASCADE,
-  player_id   INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   digits      SMALLINT[] NOT NULL DEFAULT '{}',
   status      SMALLINT NOT NULL DEFAULT 0 CHECK (status IN (0, 1, 2)),
   PRIMARY KEY (event_id, player_id)

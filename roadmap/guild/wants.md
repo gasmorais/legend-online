@@ -79,18 +79,18 @@ All requests: sender `GWM.sendRequest(opType, drawIndex = 0, drawType = 0)` (`GW
 
 ```sql
 CREATE TABLE guild.member_want_state (
-  player_id          INTEGER   PRIMARY KEY REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id          BIGINT   PRIMARY KEY REFERENCES public.player(id) ON DELETE CASCADE,
   day                DATE     NOT NULL,
   hunts_left         SMALLINT NOT NULL DEFAULT 10 CHECK (hunts_left BETWEEN 0 AND 10),
   personal_score     INTEGER  NOT NULL DEFAULT 0 CHECK (personal_score >= 0),
-  target_player_id   INTEGER   REFERENCES public.player(id) ON DELETE SET NULL,
+  target_player_id   BIGINT   REFERENCES public.player(id) ON DELETE SET NULL,
   target_star        SMALLINT CHECK (target_star BETWEEN 1 AND 5),
   target_score       INTEGER,
   free_refresh_at    TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 CREATE TABLE guild.member_want_chest (
-  player_id  INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id  BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   chest_type SMALLINT NOT NULL CHECK (chest_type IN (1,2)),
   period_key DATE     NOT NULL,
   chest_index SMALLINT NOT NULL CHECK (chest_index BETWEEN 0 AND 5),
@@ -106,7 +106,7 @@ CREATE TABLE guild.guild_want_score (
 );
 
 CREATE TABLE guild.want_rank_score (
-  player_id    INTEGER  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   period_start DATE    NOT NULL,
   guild_id     INTEGER  REFERENCES guild.guild(id) ON DELETE SET NULL,
   total_score  INTEGER NOT NULL DEFAULT 0 CHECK (total_score >= 0),

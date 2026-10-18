@@ -214,6 +214,17 @@ Client (present, flag off):
 - [ ] March (C9), promotion (C10), leave (C8)
 - [ ] Result frame (566), rank (C6), record (C7), reward frame
 
+### Board chat
+
+While a match runs, the board embeds the shared chat widget (`decompiled/m3/scripts/consortiachess/board/`):
+
+| Class | pt-BR strings | Purpose |
+|---|---|---|
+| `ChesspvpChatView` | "Emoticon", "Enviar", "Mensagem em branco, não é possível enviar", "Intervalo entre mensagens deve ser maior que 1 segundo", "Pressione Enter para enviar", "Habilitar Alerta", "Desabilitar Alerta" | chat input and log used during a chess match |
+| `ChesspvpChatHistory` | "Principal", "Anterior", "Próxima", "Última" | chat history browser and quick channel switch |
+
+Both are the same widget used by [chat](../chat/README.md) and [guild group chat](../friends/guild-group-chat.md), restricted to the match channel.
+
 Backend:
 - [ ] Feature flag `guild_chess_enabled`
 - [ ] `guild::chess::handle_open` / `handle_close` -> 561

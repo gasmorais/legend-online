@@ -87,7 +87,7 @@ Toolbar `sqmomery` (TopToolBtnInfos 4026 "周年回顾"): visible when `ConfigMa
 
 ```sql
 CREATE TABLE memory_games.review_share (
-  player_id   INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   image_url   TEXT        NOT NULL,
   rewarded_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );

@@ -87,7 +87,7 @@ CREATE TABLE world_boss.events (
   opens_at     timestamptz NOT NULL,
   closes_at    timestamptz NOT NULL,
   killed_at    timestamptz,
-  last_hit_player_id integer REFERENCES player.players(player_id) ON DELETE SET NULL,
+  last_hit_player_id BIGINT REFERENCES player.players(player_id) ON DELETE SET NULL,
   max_hp       bigint,
   current_hp   bigint,
   UNIQUE (campaign_id, event_date)
@@ -95,7 +95,7 @@ CREATE TABLE world_boss.events (
 
 -- Clone purchases.
 CREATE TABLE world_boss.clones (
-  player_id    integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   event_id     bigint      NOT NULL REFERENCES world_boss.events(event_id) ON DELETE CASCADE,
   price_paid   integer     NOT NULL CHECK (price_paid >= 0),
   bought_at    timestamptz NOT NULL DEFAULT now(),

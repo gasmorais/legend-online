@@ -97,7 +97,7 @@ Board layout and node contents are server data; map nodes come from the campaign
 
 ```sql
 CREATE TABLE casino.adventure_run (
-  player_id          INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   run_day            DATE        NOT NULL,
   position           SMALLINT    NOT NULL DEFAULT 1,
   normal_dice        SMALLINT    NOT NULL DEFAULT 10,
@@ -113,7 +113,7 @@ CREATE TABLE casino.adventure_run (
 );
 
 CREATE TABLE casino.adventure_formation (
-  player_id    INTEGER PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   positions    TEXT    NOT NULL
 );
 ```

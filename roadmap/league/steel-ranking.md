@@ -112,3 +112,7 @@ CREATE TABLE league.steel_match_players (
 - [ ] Server messages 4775 and 4771.
 - [ ] Tables `league.steel_matches`, `league.steel_match_players`.
 - [ ] Test: team without rank shows "Iniciante"; 25 teams give 3 pages.
+
+## Screens
+
+- `PVPLeagueRankListFrame` (`decompiled/core_module/scripts/yishi/view/frame/pvpleague/PVPLeagueRankListFrame.as`, "Ranking da Aliança", "Emblema da Liga", "Iniciante", "Instruções", columns "Personagem", "Local", "Pontos", "Poder") is the alliance ranking list opened from the league frame.

@@ -81,7 +81,7 @@ Battle 3885: exit flag `isOpenDreamArena` reopens the main or report frame (`doc
 
 ```sql
 CREATE TABLE arena.dream_lineup (
-  player_id       integer PRIMARY KEY REFERENCES player.players(player_id),
+  player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id),
   hero_template   integer, skill_index1 integer, skill_index2 integer,
   hero_pet        integer, goddess integer,
   main_child      integer, main_child_pet integer,
@@ -95,7 +95,7 @@ CREATE TABLE arena.dream_lineup (
 
 CREATE TABLE arena.dream_run (
   run_id          bigserial PRIMARY KEY,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   event_start     timestamptz NOT NULL,
   wins            smallint NOT NULL DEFAULT 0 CHECK (wins BETWEEN 0 AND 12),
   losses          smallint NOT NULL DEFAULT 0 CHECK (losses BETWEEN 0 AND 3),

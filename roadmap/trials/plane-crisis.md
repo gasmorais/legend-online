@@ -94,7 +94,7 @@ Game sessions are in memory (team scoped, short lived). Persist only the daily c
 
 ```sql
 CREATE TABLE trials.plane_crisis_daily (
-    player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     play_date     date     NOT NULL,
     income_used   smallint NOT NULL DEFAULT 0 CHECK (income_used >= 0),
     PRIMARY KEY (player_id, play_date)
@@ -112,7 +112,7 @@ CREATE TABLE trials.plane_crisis_game (
 
 CREATE TABLE trials.plane_crisis_member (
     game_id            bigint   NOT NULL REFERENCES trials.plane_crisis_game(game_id) ON DELETE CASCADE,
-    player_id          integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     use_income         boolean  NOT NULL,
     crystals           integer  NOT NULL DEFAULT 0,
     energy_left        integer  NOT NULL DEFAULT 0,

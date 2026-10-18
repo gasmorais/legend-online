@@ -87,6 +87,7 @@ Feature `world-boss`, module `boss-map`. Client: `M3/map/campaign/CampaignSocket
 | `raw/xml/tempinfos/GameHeroTemp.xml` *(assumption: boss heroes of the map nodes)* | Boss stats | |
 | `raw/xml/tempinfos/CampaignBufferTemps.xml` `Types 7` (701..720) | Inspiration buffs | `TemplateName`, `Grades`, `Attack`, `MagicAttack`, `Description` |
 | `raw/xml/tempinfos/ConfigInfos.xml` | Config | `WorldBoss_Wound1..3`, `Live_Pay`, `Live_Fight_Pay`, `WorldBoss_Buffer_Diamond_Price`, `WorldBoss_Buffer_Gift_Price`, `BattleMusicWorldBoss` |
+| `raw/xml/tempinfos/RandomBossBuffInfos.xml` | Buffs drawn between the map nodes of a random boss run | loaded into `RondamBossTemplateCate` (`decompiled/core_module/scripts/yishi/manager/TempleteManager.as:1200`); the drawn buffs are pushed to the map as `RandomBossBuffefMsg` and consumed by `CampaignSocketManger` (`decompiled/m3/scripts/map/campaign/CampaignSocketManger.as`) |
 
 ---
 
@@ -96,7 +97,7 @@ Feature `world-boss`, module `boss-map`. Client: `M3/map/campaign/CampaignSocket
 -- Cumulative damage and rewards per player and event.
 CREATE TABLE world_boss.participants (
   event_id      bigint      NOT NULL REFERENCES world_boss.events(event_id) ON DELETE CASCADE,
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   job           smallint    NOT NULL,
   damage        bigint      NOT NULL DEFAULT 0 CHECK (damage >= 0),
   best_battle_damage bigint NOT NULL DEFAULT 0,

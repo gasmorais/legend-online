@@ -106,7 +106,7 @@ Config (`raw/xml/tempinfos/ConfigInfos.xml`): `consortia_treasure_refresh_cost`,
 
 ```sql
 CREATE TABLE guild.member_treasure_state (
-  player_id          INTEGER   PRIMARY KEY REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id          BIGINT   PRIMARY KEY REFERENCES public.player(id) ON DELETE CASCADE,
   day                DATE     NOT NULL,
   digs_used          SMALLINT NOT NULL DEFAULT 0 CHECK (digs_used >= 0),
   helps_used         SMALLINT NOT NULL DEFAULT 0 CHECK (helps_used >= 0),
@@ -116,7 +116,7 @@ CREATE TABLE guild.member_treasure_state (
 );
 
 CREATE TABLE guild.member_treasure_offer (
-  player_id   INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id   BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   slot_id     INTEGER  NOT NULL,
   template_id SMALLINT NOT NULL,
   PRIMARY KEY (player_id, slot_id)

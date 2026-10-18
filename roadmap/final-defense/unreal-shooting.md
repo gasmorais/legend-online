@@ -96,7 +96,7 @@ All use `UnrealShootingMsg` (package `unrealshooting`): `gameState` (#1, INT32);
 
 ```sql
 CREATE TABLE final_defense.unreal_player (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   day                  DATE        NOT NULL,
   enter_count          SMALLINT    NOT NULL DEFAULT 0 CHECK (enter_count BETWEEN 0 AND 1),
   week_start           DATE        NOT NULL,
@@ -156,3 +156,7 @@ Cross server players are keyed by `(server_name, user_id)`; local players also m
 - [ ] Scheduler for phases
 - [ ] Weekly reward job
 - [ ] Test: second entry on the same day refused
+
+## Screens
+
+- `UnrealShootingRoomController` (`decompiled/core_module/scripts/mvc/controler/UnrealShootingRoomController.as`) is the MVC controller of the unreal shooting room scene; it owns the scene setup and the daily entry used by this mode.

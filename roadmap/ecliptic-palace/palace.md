@@ -83,7 +83,7 @@ Schema `ecliptic_palace`.
 
 ```sql
 CREATE TABLE ecliptic_palace.player_state (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   current_layer        SMALLINT    NOT NULL DEFAULT 1 CHECK (current_layer BETWEEN 1 AND 12),
   layer_entered_at     TIMESTAMPTZ NOT NULL DEFAULT now(),
   spirit               SMALLINT    NOT NULL DEFAULT 200 CHECK (spirit >= 0),
@@ -96,7 +96,7 @@ CREATE TABLE ecliptic_palace.player_state (
 );
 
 CREATE TABLE ecliptic_palace.route_boss (
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   route                SMALLINT    NOT NULL CHECK (route BETWEEN 1 AND 3),
   boss_index           SMALLINT    NOT NULL CHECK (boss_index BETWEEN 0 AND 3),
   hero_template_id     INTEGER     NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE ecliptic_palace.route_boss (
 );
 
 CREATE TABLE ecliptic_palace.route_bonus (
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   route                SMALLINT    NOT NULL CHECK (route BETWEEN 1 AND 3),
   guard_job_type1      SMALLINT    NOT NULL DEFAULT 0,
   guard_job_type2      SMALLINT    NOT NULL DEFAULT 0,

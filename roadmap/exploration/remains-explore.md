@@ -82,7 +82,7 @@ Receivers `REM:81-221` (listeners `REM:83-85`).
 
 ```sql
 CREATE TABLE exploration.remains_state (
-  player_id          INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   tinder             SMALLINT    NOT NULL DEFAULT 300 CHECK (tinder BETWEEN 0 AND 300),
   day                DATE        NOT NULL,
   week_start         DATE        NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE exploration.remains_state (
 );
 
 CREATE TABLE exploration.remains_node (
-  player_id      INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   checkpoint_id  SMALLINT NOT NULL,
   progress       SMALLINT NOT NULL DEFAULT 0 CHECK (progress BETWEEN 0 AND 100),
   boss1_passed   BOOLEAN  NOT NULL DEFAULT false,
@@ -107,7 +107,7 @@ CREATE TABLE exploration.remains_node (
 );
 
 CREATE TABLE exploration.remains_task (
-  player_id      INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id    INTEGER  NOT NULL,
   current_count  SMALLINT NOT NULL DEFAULT 0,
   state          SMALLINT NOT NULL DEFAULT 0 CHECK (state BETWEEN 0 AND 2),
@@ -115,7 +115,7 @@ CREATE TABLE exploration.remains_task (
 );
 
 CREATE TABLE exploration.remains_chest (
-  player_id   INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   period_type SMALLINT NOT NULL CHECK (period_type IN (1, 2)),
   chest_index SMALLINT NOT NULL CHECK (chest_index BETWEEN 1 AND 5),
   claimed     BOOLEAN  NOT NULL DEFAULT false,

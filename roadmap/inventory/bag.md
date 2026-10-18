@@ -182,7 +182,7 @@ Items: `inventory.items` ([item-instance.md](item-instance.md)). Bag capacity pe
 
 ```sql
 CREATE TABLE inventory.bag_capacity (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   purchased_slots      SMALLINT    NOT NULL DEFAULT 0 CHECK (purchased_slots BETWEEN 0 AND 182 AND purchased_slots % 7 = 0),
   rental_status        SMALLINT    NOT NULL DEFAULT 0 CHECK (rental_status IN (0,1,2)),
   rental_expires_at    TIMESTAMPTZ,
@@ -193,7 +193,7 @@ CREATE TABLE inventory.bag_capacity (
 
 CREATE TABLE inventory.bag_purchase_log (
   purchase_id  BIGSERIAL   PRIMARY KEY,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   kind         TEXT        NOT NULL CHECK (kind IN ('rows','rental','rune_bag','treasure_bag')),
   amount       INTEGER     NOT NULL,
   diamonds     INTEGER     NOT NULL DEFAULT 0,

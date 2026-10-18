@@ -88,7 +88,7 @@ No table is required for parity. If revived, reuse the counters of [activity-poi
 
 ```sql
 CREATE TABLE daily_activity.leed_record (
-    player_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     template_id    integer     NOT NULL,
     current_count  integer     NOT NULL DEFAULT 0,
     is_complete    boolean     NOT NULL DEFAULT false,

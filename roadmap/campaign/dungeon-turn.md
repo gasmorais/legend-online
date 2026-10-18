@@ -85,7 +85,7 @@ Two receivers:
 ```sql
 CREATE TABLE campaign.dungeon_turn_run (
   instance_id   bigint   PRIMARY KEY REFERENCES campaign.instance(instance_id) ON DELETE CASCADE,
-  owner_player_id integer NOT NULL REFERENCES player.players(player_id),
+  owner_player_id BIGINT NOT NULL REFERENCES player.players(player_id),
   cur_pos       smallint NOT NULL DEFAULT 0 CHECK (cur_pos BETWEEN 0 AND 13),
   red           smallint NOT NULL DEFAULT 0 CHECK (red BETWEEN 0 AND 100),
   green         smallint NOT NULL DEFAULT 0 CHECK (green BETWEEN 0 AND 100),
@@ -110,13 +110,13 @@ CREATE TABLE campaign.dungeon_turn_cell (
 
 CREATE TABLE campaign.dungeon_turn_member_hp (
   instance_id bigint  NOT NULL REFERENCES campaign.dungeon_turn_run(instance_id) ON DELETE CASCADE,
-  player_id   integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   hp_percent  smallint NOT NULL DEFAULT 100 CHECK (hp_percent BETWEEN 0 AND 100),
   PRIMARY KEY (instance_id, player_id)
 );
 
 CREATE TABLE campaign.dungeon_turn_reward (
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   week_start  date     NOT NULL,
   reward      text     NOT NULL,
   claimed     boolean  NOT NULL DEFAULT false,

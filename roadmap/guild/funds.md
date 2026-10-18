@@ -118,7 +118,7 @@ ALTER TABLE guild.guild
 CREATE TABLE guild.currency_ledger (
   id         BIGSERIAL PRIMARY KEY,
   guild_id   INTEGER  NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
-  player_id  INTEGER  REFERENCES public.player(id) ON DELETE SET NULL,
+  player_id  BIGINT  REFERENCES public.player(id) ON DELETE SET NULL,
   currency   TEXT     NOT NULL CHECK (currency IN ('fortune','asset','activity','contribution','merit')),
   delta      INTEGER  NOT NULL CHECK (delta <> 0),
   reason     TEXT     NOT NULL,

@@ -65,7 +65,7 @@ Columns `contribution` and `total_contribution` live on `guild.member` ([members
 ```sql
 CREATE TABLE guild.member_daily_contribution (
     guild_id      integer NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
-    player_id     integer NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+    player_id     BIGINT NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
     day           date    NOT NULL,
     offer         integer NOT NULL DEFAULT 0 CHECK (offer >= 0),
     spirit        bigint  NOT NULL DEFAULT 0 CHECK (spirit >= 0),
@@ -78,7 +78,7 @@ ALTER TABLE guild.member ADD COLUMN total_spirit bigint NOT NULL DEFAULT 0 CHECK
 CREATE TABLE guild.donation_log (
     id          bigserial   PRIMARY KEY,
     guild_id    integer     NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
-    player_id   integer     NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+    player_id   BIGINT     NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
     currency    text        NOT NULL CHECK (currency IN ('gold', 'diamond', 'bound_diamond', 'spirit')),
     amount      bigint      NOT NULL CHECK (amount > 0),
     contribution_gained integer NOT NULL DEFAULT 0,

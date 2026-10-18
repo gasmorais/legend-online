@@ -82,7 +82,7 @@ None. Offers are `shops.discount_offer` rows with `offer_type = 3`, tiers in `sh
 ```sql
 CREATE TABLE shops.group_buy_entry (
   offer_id        INTEGER     NOT NULL REFERENCES shops.discount_offer(offer_id) ON DELETE CASCADE,
-  player_id       INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id       BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   units           INTEGER     NOT NULL DEFAULT 0 CHECK (units >= 0),
   deposits_paid   BIGINT      NOT NULL DEFAULT 0 CHECK (deposits_paid >= 0),
   settled         BOOLEAN     NOT NULL DEFAULT false,
@@ -93,7 +93,7 @@ CREATE TABLE shops.group_buy_entry (
 
 CREATE TABLE shops.group_buy_daily (
   offer_id   INTEGER NOT NULL REFERENCES shops.discount_offer(offer_id) ON DELETE CASCADE,
-  player_id  INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   day        DATE    NOT NULL,
   units      INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (offer_id, player_id, day)

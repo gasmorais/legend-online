@@ -104,7 +104,7 @@ Other sweep types on the same opcode (owned by their features, same server dispa
 
 ```sql
 CREATE TABLE campaign.player_campaign_grade (
-  player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   campaign_id  integer  NOT NULL,
   best_grade   smallint NOT NULL CHECK (best_grade BETWEEN 1 AND 7),
   clear_count  integer  NOT NULL DEFAULT 1 CHECK (clear_count >= 1),
@@ -116,7 +116,7 @@ CREATE TABLE campaign.player_campaign_grade (
 
 CREATE TABLE campaign.sweep (
   sweep_id      bigserial PRIMARY KEY,
-  player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   sweep_type    smallint NOT NULL CHECK (sweep_type BETWEEN 1 AND 6),
   campaign_id   integer  NOT NULL,
   e_index       integer  NOT NULL DEFAULT 0,

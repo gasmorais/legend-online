@@ -87,7 +87,7 @@ CREATE TABLE marriage.proposal (
 CREATE INDEX proposal_target_idx ON marriage.proposal (target_id, created_at);
 
 CREATE TABLE marriage.player_state (
-    player_id                    integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id                    BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     is_back_player_first_married boolean  NOT NULL DEFAULT false,
     daily_task_count             smallint NOT NULL DEFAULT 0,   -- quest_count
     daily_heart_count            smallint NOT NULL DEFAULT 0,   -- answer_num

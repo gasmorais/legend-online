@@ -175,3 +175,7 @@ CREATE INDEX anniversary_players_rank_idx ON hermitage_war.anniversary_players (
 - [ ] Treasure box 9695 -> 4898.
 - [ ] Tables above.
 - [ ] Tests: level roll-over at 1000, cap 600, claim with and without paid flag, buy packs parsing.
+
+## Screens
+
+- `SevenYearStarAreaHelpFrame` (`decompiled/m11/scripts/sevenyear/view/help/SevenYearStarAreaHelpFrame.as`) extends `SimpleHelpFrame` and shows the star area rules ("Instruções").

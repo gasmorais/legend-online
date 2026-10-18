@@ -105,7 +105,7 @@ Toolbar: none. Task trace tip "Você ativou a Roleta do Destino" when unlocked (
 
 ```sql
 CREATE TABLE lotteries.fate_skill (
-  player_id    INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   fate_type    INTEGER  NOT NULL CHECK (fate_type IN (2000, 2100, 2200)),
   grade        SMALLINT NOT NULL DEFAULT 0 CHECK (grade BETWEEN 0 AND 30),
   total_gp     BIGINT   NOT NULL DEFAULT 0,

@@ -62,7 +62,7 @@ CREATE TABLE theseus_arena.hall_of_fame (
   mode            smallint NOT NULL,
   season_id       integer NOT NULL,
   rank            smallint NOT NULL CHECK (rank BETWEEN 1 AND 3),
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   points          integer NOT NULL,
   stage_id        integer NOT NULL,
   avatar          jsonb NOT NULL,                      -- arm, cloth, wing, hat, fashion, job, heroTempId, vipType
@@ -73,7 +73,7 @@ CREATE TABLE theseus_arena.hall_like (
   mode            smallint NOT NULL,
   season_id       integer NOT NULL,
   rank            smallint NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   liked_at        timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (mode, season_id, rank, player_id)
 );

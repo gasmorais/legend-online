@@ -57,7 +57,7 @@ Ops 4, 5, 6 have no client sender (server pushes).
 
 ```sql
 CREATE TABLE outyard.titan_temple_state (
-  player_id        INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   day              DATE        NOT NULL,
   cur_level        SMALLINT    NOT NULL DEFAULT 1 CHECK (cur_level BETWEEN 1 AND 5),
   fights_left      SMALLINT    NOT NULL DEFAULT 8,
@@ -66,7 +66,7 @@ CREATE TABLE outyard.titan_temple_state (
 );
 
 CREATE TABLE outyard.titan_temple_opponent (
-  player_id        INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   level            SMALLINT NOT NULL CHECK (level BETWEEN 1 AND 5),
   slot             SMALLINT NOT NULL CHECK (slot BETWEEN 1 AND 4),
   opponent_id      INTEGER  NOT NULL,

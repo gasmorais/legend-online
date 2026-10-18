@@ -73,7 +73,7 @@ CREATE TABLE outyard.node_battle (
 
 CREATE TABLE outyard.node_battle_player (
   node_battlefield_uid TEXT     NOT NULL REFERENCES outyard.node_battle(node_battlefield_uid) ON DELETE CASCADE,
-  player_id            INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   side                 SMALLINT NOT NULL CHECK (side IN (1, 2)),
   kills                INTEGER  NOT NULL DEFAULT 0,
   PRIMARY KEY (node_battlefield_uid, player_id)

@@ -139,7 +139,7 @@ CREATE TABLE guild.prize_stock (
 CREATE TABLE guild.prize_grant (
   guild_id    INTEGER   NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
   week_start  DATE     NOT NULL,
-  player_id   INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id   BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   template_id INTEGER  NOT NULL,
   count       SMALLINT NOT NULL CHECK (count BETWEEN 1 AND 10),
   granted_at  TIMESTAMPTZ NOT NULL DEFAULT now(),

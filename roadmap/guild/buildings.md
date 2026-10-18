@@ -158,7 +158,7 @@ CREATE TABLE guild.guild_building (
 );
 
 CREATE TABLE guild.member_altar_day (
-  player_id           INTEGER  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id           BIGINT  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   day                 DATE     NOT NULL,
   guild_id            INTEGER  NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
   prayers_used        SMALLINT NOT NULL DEFAULT 0 CHECK (prayers_used >= 0),

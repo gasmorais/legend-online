@@ -67,7 +67,7 @@ Fields: `op` (#1, INT32, echo), `rewards` (#2, repeated `TheseusPvpRewardMsg` / 
 CREATE TABLE theseus_arena.task_progress (
   mode            smallint NOT NULL,
   season_id       integer NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   task_id         integer NOT NULL,
   period_day      date,                                -- null for season tasks
   progress        integer NOT NULL DEFAULT 0,
@@ -78,7 +78,7 @@ CREATE TABLE theseus_arena.task_progress (
 CREATE TABLE theseus_arena.glory_claim (
   mode            smallint NOT NULL,
   season_id       integer NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   gear            smallint NOT NULL,
   free_claimed    boolean NOT NULL DEFAULT false,
   paid_claimed    boolean NOT NULL DEFAULT false,

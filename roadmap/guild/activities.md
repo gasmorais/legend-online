@@ -100,10 +100,15 @@ None owned by the hub. Each prompt is derived from the owning module's state (mi
 2. `ConsortiaViewHelper.crossGuildInfo.openConsortiaNewBossTips` (id 0 prompt) is missing from `index/language.json` (entry hidden anyway).
 3. Whether the server should push all activity states at login (proposed yes) or lazily on guild frame open.
 
+### Activity reward explanation
+
+`ConsortiaActExplanationFrame` (`decompiled/m6/scripts/consortia/view/myConsortia/ConsortiaActExplanationFrame.as`, pt-BR title "Descrição da recompensa") is the popup opened from an activity entry to explain its reward table. It is a plain `Frame` fed the activity id and shows the drop description of the corresponding module.
+
 ## Implementation checklist
 
 Client (present, verify):
 - [ ] ConsortiaActivityView rebuild on the four events
+- [ ] ConsortiaActExplanationFrame reward popup per activity id
 - [ ] ConsortiaActivityItem prompt, badge, glow, overlay, hover tip per entry H1..H9
 - [ ] Entry clicks route to the owning modules
 

@@ -100,7 +100,7 @@ CREATE TABLE shops.discount_mall_discount_weight (
 
 CREATE TABLE shops.discount_mall_player (
   event_id     TEXT     NOT NULL REFERENCES shops.discount_mall_event(event_id) ON DELETE CASCADE,
-  player_id    INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   discount     SMALLINT NOT NULL DEFAULT 0 CHECK (discount BETWEEN 0 AND 10),
   score        INTEGER  NOT NULL DEFAULT 0 CHECK (score >= 0),
   PRIMARY KEY (event_id, player_id)
@@ -108,7 +108,7 @@ CREATE TABLE shops.discount_mall_player (
 
 CREATE TABLE shops.discount_mall_purchase (
   event_id    TEXT     NOT NULL,
-  player_id   INTEGER  NOT NULL,
+  player_id   BIGINT  NOT NULL,
   line_index  INTEGER  NOT NULL,
   bought      INTEGER  NOT NULL DEFAULT 0 CHECK (bought >= 0),
   PRIMARY KEY (event_id, player_id, line_index),
@@ -117,7 +117,7 @@ CREATE TABLE shops.discount_mall_purchase (
 
 CREATE TABLE shops.discount_mall_claim (
   event_id         TEXT     NOT NULL,
-  player_id        INTEGER  NOT NULL,
+  player_id        BIGINT  NOT NULL,
   score_threshold  INTEGER  NOT NULL,
   claimed_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (event_id, player_id, score_threshold),

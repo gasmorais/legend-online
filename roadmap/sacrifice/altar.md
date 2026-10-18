@@ -89,7 +89,7 @@ Schema `sacrifice`.
 
 ```sql
 CREATE TABLE sacrifice.player_state (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   day                  DATE        NOT NULL,
   times_today          SMALLINT    NOT NULL DEFAULT 0 CHECK (times_today >= 0),
   favor_exp            INTEGER     NOT NULL DEFAULT 0 CHECK (favor_exp >= 0),

@@ -155,3 +155,7 @@ CREATE TABLE treasures.flight_reward_claims (
 - [ ] Tables `treasures.flight_*`
 - [ ] Activity end job and rank rewards
 - [ ] Tests: energy accounting, hit rate cap, reward unlock by height
+
+## Screens
+
+- `SkyTreasureBoxShowTip` (`decompiled/m11/scripts/skytreasure/view/SkyTreasureBoxShowTip.as`, "Itens do Baú:") is the tooltip that lists the chest contents in the sky treasure flight.

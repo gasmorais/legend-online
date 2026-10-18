@@ -66,7 +66,7 @@ A 9 slot wheel: the player spends one draw, the wheel spins to the won slot and 
 
 ```sql
 CREATE TABLE daily_activity.lucky_draw_balance (
-    player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     source        smallint    NOT NULL CHECK (source IN (1, 2)),
     draws_left    integer     NOT NULL DEFAULT 0 CHECK (draws_left >= 0),
     draws_used    integer     NOT NULL DEFAULT 0,
@@ -75,7 +75,7 @@ CREATE TABLE daily_activity.lucky_draw_balance (
 );
 
 CREATE TABLE daily_activity.lucky_draw_pending (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     item_template integer     NOT NULL,
     item_count    integer     NOT NULL CHECK (item_count > 0),
     rolled_at     timestamptz NOT NULL DEFAULT now()

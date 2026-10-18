@@ -69,7 +69,7 @@ CREATE TABLE marriage.divorce_request (
 );
 
 CREATE TABLE marriage.ring_inheritance (
-    player_id      integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     ring_level     smallint    NOT NULL,
     ring_exp       integer     NOT NULL,
     recorded_at    timestamptz NOT NULL DEFAULT now()

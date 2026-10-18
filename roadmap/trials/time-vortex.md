@@ -90,7 +90,7 @@ Main route: send 9664 (0x25c0) `C_TIMEVORTEX_CLIENT_OP` with `simple.PropertyMsg
 
 ```sql
 CREATE TABLE trials.time_vortex_state (
-    player_id            integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     highest_node         integer     NOT NULL DEFAULT -1,
     challenges_used      smallint    NOT NULL DEFAULT 0,
     crack_wins_today     smallint    NOT NULL DEFAULT 0,
@@ -123,7 +123,7 @@ CREATE INDEX time_vortex_crack_open_idx ON trials.time_vortex_crack (closed_at) 
 
 CREATE TABLE trials.time_vortex_battle_log (
     id              bigserial   PRIMARY KEY,
-    player_id       integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id       BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     campaign_id     integer     NOT NULL,
     kind            smallint    NOT NULL CHECK (kind IN (1, 2, 3, 4, 5)),
     won             boolean     NOT NULL,

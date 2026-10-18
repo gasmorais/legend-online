@@ -83,7 +83,7 @@ CREATE TABLE outyard.guild_signup (
 CREATE INDEX guild_signup_field_idx ON outyard.guild_signup (battlefield_uid, force_index);
 
 CREATE TABLE outyard.player_state (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   user_uid             TEXT        NOT NULL UNIQUE,
   day                  DATE        NOT NULL,
   dig_left_today       SMALLINT    NOT NULL DEFAULT 0,

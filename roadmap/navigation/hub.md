@@ -112,7 +112,7 @@ Schema `navigation`.
 
 ```sql
 CREATE TABLE navigation.player_state (
-  player_id             INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id             BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   strength              INTEGER     NOT NULL DEFAULT 100 CHECK (strength >= 0),
   currency              INTEGER     NOT NULL DEFAULT 0 CHECK (currency >= 0),
   day                   DATE        NOT NULL,

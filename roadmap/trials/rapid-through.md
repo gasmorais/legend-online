@@ -63,7 +63,7 @@ Stage interactions (opening chests, eggs, orifices) are campaign map node action
 
 ```sql
 CREATE TABLE trials.rapid_through_daily (
-    player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     play_date     date     NOT NULL,
     income_used   smallint NOT NULL DEFAULT 0,
     PRIMARY KEY (player_id, play_date)
@@ -80,7 +80,7 @@ CREATE TABLE trials.rapid_through_run (
 
 CREATE TABLE trials.rapid_through_member (
     run_id      bigint   NOT NULL REFERENCES trials.rapid_through_run(run_id) ON DELETE CASCADE,
-    player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     use_income  boolean  NOT NULL,
     PRIMARY KEY (run_id, player_id)
 );

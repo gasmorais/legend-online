@@ -226,3 +226,7 @@ Totals per tier (`itemInfos`, `itemInfos2`) are computed by summing `treasure_da
 - [ ] Recharge hook updating `charge_point` and `deposit_level`, push 4612.
 - [ ] Login push 4612; end of event mail job.
 - [ ] Tests: recharge of 1000 reaches the tier with cost 1000 and the buy view highlights it; claim before `interval` refused; first claim with B makes A unclaimable; second claim of the same day refused; after the event unclaimed days are mailed once; `activeType` 3 opens nothing and shows "Evento encerrado".
+
+## Screens
+
+- `MineFieldFrame` (`decompiled/m11/scripts/mineField/MineFieldFrame.as`, "Mina de Ametistas", "Número de vagões avançados:") is the amethyst mine field frame, opened on the mine map.

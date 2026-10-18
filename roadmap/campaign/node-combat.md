@@ -95,7 +95,7 @@ Module `node-combat` of [campaign](README.md). What happens when an army reaches
 CREATE TABLE campaign.run (
   run_id        bigserial PRIMARY KEY,
   instance_id   bigint   NOT NULL REFERENCES campaign.instance(instance_id) ON DELETE CASCADE,
-  player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   campaign_id   integer  NOT NULL,
   has_gains     boolean  NOT NULL,
   failed_count  integer  NOT NULL DEFAULT 0 CHECK (failed_count >= 0),
@@ -114,7 +114,7 @@ CREATE TABLE campaign.card_draw (
   item_template_id integer NOT NULL,
   item_count  integer  NOT NULL CHECK (item_count > 0),
   is_bound    boolean  NOT NULL DEFAULT true,
-  picked_by_player_id integer REFERENCES player.players(player_id),
+  picked_by_player_id BIGINT REFERENCES player.players(player_id),
   paid        boolean  NOT NULL DEFAULT false,
   picked_at   timestamptz,
   PRIMARY KEY (run_id, card_index)
@@ -123,7 +123,7 @@ CREATE TABLE campaign.card_draw (
 CREATE TABLE campaign.map_drop (
   sign_id     text     PRIMARY KEY,
   instance_id bigint   NOT NULL REFERENCES campaign.instance(instance_id) ON DELETE CASCADE,
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   items       jsonb    NOT NULL,
   created_at  timestamptz NOT NULL DEFAULT now()
 );

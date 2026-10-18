@@ -91,7 +91,7 @@ Shared sub messages: `TablePlayerMsg`: `user_id` (#1, INT32), `user_name` (#2, S
 
 ```sql
 CREATE TABLE casino.poker_wallet (
-  player_id    INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   chips        BIGINT      NOT NULL DEFAULT 0 CHECK (chips >= 0),
   points       BIGINT      NOT NULL DEFAULT 0 CHECK (points >= 0),
   updated_at   TIMESTAMPTZ NOT NULL DEFAULT now()
@@ -107,7 +107,7 @@ CREATE TABLE casino.poker_hand_log (
 
 CREATE TABLE casino.poker_hand_result (
   hand_id      BIGINT  NOT NULL REFERENCES casino.poker_hand_log(hand_id) ON DELETE CASCADE,
-  player_id    INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   bet_total    INTEGER NOT NULL,
   pot_share    INTEGER NOT NULL DEFAULT 0,
   commission   INTEGER NOT NULL DEFAULT 0,

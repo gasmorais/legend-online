@@ -70,7 +70,7 @@ Same drop tables as [abyss-tower.md](abyss-tower.md) §6.
 
 ```sql
 CREATE TABLE abyss.sweeps (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   is_hell       boolean     NOT NULL,
   start_floor   integer     NOT NULL CHECK (start_floor >= 1),
   target_floor  integer     NOT NULL CHECK (target_floor >= start_floor),
@@ -81,7 +81,7 @@ CREATE TABLE abyss.sweeps (
 );
 
 CREATE TABLE abyss.sweep_results (
-  player_id   integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   is_hell     boolean     NOT NULL,
   floor       integer     NOT NULL,
   items       text        NOT NULL,                -- "tid,count|..." as sent in 428

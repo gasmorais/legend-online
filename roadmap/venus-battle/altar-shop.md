@@ -54,14 +54,14 @@ Skills (`TPL/SkillTempInfos.xml`): 41001000 "Escolha do Destino" (random: +500% 
 
 ```sql
 CREATE TABLE venus_battle.altar_wallet (
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   season_id       integer NOT NULL,
   altar_score     integer NOT NULL DEFAULT 0 CHECK (altar_score >= 0),
   PRIMARY KEY (player_id, season_id)
 );
 
 CREATE TABLE venus_battle.altar_holding (
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   season_id       integer NOT NULL,
   good_id         integer NOT NULL,                    -- -1, -2 or skill template id
   held_count      smallint NOT NULL DEFAULT 0 CHECK (held_count >= 0),

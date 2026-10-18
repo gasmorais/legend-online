@@ -245,7 +245,7 @@ Icons: `<ResourcePath>icon/collection/<TemplateId>.png` (`PathManager.as:808-811
 CREATE SCHEMA IF NOT EXISTS theseus;
 
 CREATE TABLE theseus.collection_items (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id   integer     NOT NULL,
   star          smallint    NOT NULL DEFAULT 0 CHECK (star BETWEEN 0 AND 10),
   activated_at  timestamptz NOT NULL DEFAULT now(),
@@ -254,7 +254,7 @@ CREATE TABLE theseus.collection_items (
 );
 
 CREATE TABLE theseus.collection_bag_items (
-  player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   bag_type     smallint NOT NULL CHECK (bag_type IN (5, 6)),
   template_id  integer  NOT NULL,
   count        integer  NOT NULL CHECK (count > 0),
@@ -264,7 +264,7 @@ CREATE TABLE theseus.collection_bag_items (
 );
 
 CREATE TABLE theseus.collection_state (
-  player_id             integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id             BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   stage_drop_id         integer     NOT NULL DEFAULT 350001,
   box_points            integer     NOT NULL DEFAULT 0 CHECK (box_points >= 0),
   diamond_boxes_opened  integer     NOT NULL DEFAULT 0 CHECK (diamond_boxes_opened >= 0),
@@ -272,14 +272,14 @@ CREATE TABLE theseus.collection_state (
 );
 
 CREATE TABLE theseus.collection_level_rewards (
-  player_id   integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   reward_id   integer     NOT NULL CHECK (reward_id BETWEEN 1001 AND 1075),
   claimed_at  timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (player_id, reward_id)
 );
 
 CREATE TABLE theseus.collection_shop_purchases (
-  player_id     integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   shop_id       integer NOT NULL,
   period_start  date    NOT NULL,
   bought        integer NOT NULL DEFAULT 0 CHECK (bought >= 0),
@@ -288,7 +288,7 @@ CREATE TABLE theseus.collection_shop_purchases (
 
 CREATE TABLE theseus.collection_box_open_log (
   id               bigserial   PRIMARY KEY,
-  player_id        integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   box_template_id  integer     NOT NULL,
   opened           smallint    NOT NULL CHECK (opened > 0),
   items            jsonb       NOT NULL,

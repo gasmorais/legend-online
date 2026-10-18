@@ -65,7 +65,7 @@ All routes: send 5195 (0x144b) `C_DEMON_ROAD_OP` with `demonroad.DemonRoadMsg`: 
 
 ```sql
 CREATE TABLE roads.increasing_road_state (
-    player_id       integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id       BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     max_layer       integer     NOT NULL DEFAULT 1,
     next_index      smallint    NOT NULL DEFAULT 1,
     energy          smallint    NOT NULL DEFAULT 100 CHECK (energy >= 0),
@@ -74,7 +74,7 @@ CREATE TABLE roads.increasing_road_state (
 );
 
 CREATE TABLE roads.increasing_road_floor_reward (
-    player_id    integer   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     layer        integer   NOT NULL,
     boss_index   smallint  NOT NULL,
     resource     text      NOT NULL,

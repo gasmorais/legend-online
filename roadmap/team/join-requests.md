@@ -49,7 +49,7 @@ Runtime only (requests are short lived). Optional table for crash recovery:
 
 ```sql
 CREATE TABLE team.join_request (
-    target_player_id  integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE, -- captain or target
+    target_player_id  BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE, -- captain or target
     applicant_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     created_at        timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (target_player_id, applicant_id)

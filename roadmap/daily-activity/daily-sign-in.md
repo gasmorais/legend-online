@@ -79,7 +79,7 @@ Entry points:
 
 ```sql
 CREATE TABLE daily_activity.sign_cycle (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     cycle_start   date        NOT NULL,
     cycle_length  smallint    NOT NULL DEFAULT 10 CHECK (cycle_length > 0),
     signed_mask   integer     NOT NULL DEFAULT 0,
@@ -88,7 +88,7 @@ CREATE TABLE daily_activity.sign_cycle (
 );
 
 CREATE TABLE daily_activity.sign_log (
-    player_id   integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     signed_on   date        NOT NULL,
     signed_at   timestamptz NOT NULL DEFAULT now(),
     auto_signed boolean     NOT NULL DEFAULT false,

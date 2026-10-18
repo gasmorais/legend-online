@@ -137,7 +137,7 @@ CREATE INDEX system_lot_event_idx ON auction.system_lot (event_id, state, queue_
 CREATE TABLE auction.system_bid (
   bid_id      BIGSERIAL    PRIMARY KEY,
   lot_id      INTEGER      NOT NULL REFERENCES auction.system_lot(lot_id),
-  player_id   INTEGER      NOT NULL REFERENCES player.players(player_id),
+  player_id   BIGINT      NOT NULL REFERENCES player.players(player_id),
   amount      INTEGER      NOT NULL CHECK (amount > 0),
   refunded    BOOLEAN      NOT NULL DEFAULT false,
   created_at  TIMESTAMPTZ  NOT NULL DEFAULT now()

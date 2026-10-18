@@ -133,7 +133,7 @@ The novice campaign node layout (nodes 1000202, 1000206, 1000208, 1000211) is ca
 
 ```sql
 CREATE TABLE tutorial.player_milestone (
-    player_id   integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     milestone   text        NOT NULL CHECK (milestone IN ('building_init','collection_battle','training_campaign_left')),
     done_at     timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (player_id, milestone)

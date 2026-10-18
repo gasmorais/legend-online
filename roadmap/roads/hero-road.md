@@ -63,7 +63,7 @@ Tab 2 uses 8671 `C_ACHIEVEMENT_TASK_CLIENT_OP` (`HRM.achivementOpenFrame`, `achi
 
 ```sql
 CREATE TABLE roads.hero_road_task (
-    player_id         integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id         BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     task_temp_id      integer     NOT NULL,
     progress          integer     NOT NULL DEFAULT 0,
     take_state        smallint    NOT NULL DEFAULT 0 CHECK (take_state IN (0, 1, 2)),
@@ -75,7 +75,7 @@ CREATE TABLE roads.hero_road_task (
 );
 
 CREATE TABLE roads.hero_road_score (
-    player_id   integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     hero_score  integer  NOT NULL DEFAULT 0
 );
 ```

@@ -110,7 +110,7 @@ CREATE TABLE tutorial.plot_line (
 );
 
 CREATE TABLE tutorial.player_plot_seen (
-    player_id  integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id  BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     plot_id    integer     NOT NULL REFERENCES tutorial.plot(plot_id) ON DELETE CASCADE,
     seen_at    timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (player_id, plot_id)

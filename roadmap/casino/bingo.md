@@ -105,7 +105,7 @@ CREATE TABLE casino.bingo_card (
 
 CREATE TABLE casino.bingo_bet (
   event_date  DATE       NOT NULL,
-  player_id   INTEGER    NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT    NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   card_id     INTEGER    NOT NULL,
   bets        INTEGER    NOT NULL CHECK (bets BETWEEN 1 AND 100),
   lucky       SMALLINT[] NOT NULL CHECK (array_length(lucky, 1) = 2),

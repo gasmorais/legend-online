@@ -61,7 +61,7 @@ Route: send 8659 (0x21d3) `C_REDEMPTION_ROAD_CLIENT_OP`, sender `RRM.sendRedempt
 
 ```sql
 CREATE TABLE roads.redemption_road_state (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     week_start    date        NOT NULL,
     difficulty    smallint    NOT NULL DEFAULT 1 CHECK (difficulty BETWEEN 1 AND 3),
     layer         smallint    NOT NULL DEFAULT 1 CHECK (layer BETWEEN 1 AND 11),
@@ -70,7 +70,7 @@ CREATE TABLE roads.redemption_road_state (
 );
 
 CREATE TABLE roads.redemption_road_node (
-    player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     node_id       integer     NOT NULL,
     difficulty    smallint    NOT NULL,
     layer         smallint    NOT NULL,

@@ -93,7 +93,7 @@ CREATE TABLE casino.blackjack_exchange (
 );
 
 CREATE TABLE casino.blackjack_player (
-  player_id     INTEGER    PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT    PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   score         INTEGER    NOT NULL DEFAULT 0,
   table_id      INTEGER    REFERENCES casino.blackjack_table(table_id),
   deck          SMALLINT[] NOT NULL DEFAULT '{}',
@@ -104,7 +104,7 @@ CREATE TABLE casino.blackjack_player (
 
 CREATE TABLE casino.blackjack_exchange_log (
   log_id     BIGSERIAL   PRIMARY KEY,
-  player_id  INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   text       TEXT        NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );

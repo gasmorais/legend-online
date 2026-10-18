@@ -79,7 +79,7 @@ Conventions and the shared `MarriageOpMsg` layout as in [proposal-and-engagement
 
 ```sql
 CREATE TABLE marriage.growth (
-    player_id          integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     happy_exp          integer     NOT NULL DEFAULT 0 CHECK (happy_exp >= 0),
     happy_level        smallint    NOT NULL DEFAULT 0,
     happy_help_used    smallint    NOT NULL DEFAULT 0,      -- per day

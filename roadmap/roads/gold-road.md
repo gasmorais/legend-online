@@ -70,7 +70,7 @@ All bodies are `goldenroad.GoldenRoadClientRequestMsg`: `consumeType` (#1, INT32
 
 ```sql
 CREATE TABLE roads.gold_road_state (
-    player_id      integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     event_id       integer     NOT NULL,
     position       smallint    NOT NULL DEFAULT 0 CHECK (position BETWEEN 0 AND 35),
     score          integer     NOT NULL DEFAULT 0,
@@ -81,7 +81,7 @@ CREATE TABLE roads.gold_road_state (
 
 CREATE TABLE roads.gold_road_throw_log (
     id             bigserial   PRIMARY KEY,
-    player_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     dice_type      smallint    NOT NULL,
     dice_value     smallint    NOT NULL,
     cost_diamonds  integer     NOT NULL DEFAULT 0,

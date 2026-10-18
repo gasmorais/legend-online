@@ -94,7 +94,7 @@ The result frame opens only when `overLevel > 0` (`decompiled/m3/scripts/map/spa
 CREATE SCHEMA IF NOT EXISTS trials;
 
 CREATE TABLE trials.war_soul_tower_state (
-    player_id        integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     highest_level    integer     NOT NULL DEFAULT 0 CHECK (highest_level BETWEEN 0 AND 500),
     current_level    integer     NOT NULL DEFAULT 1 CHECK (current_level >= 1),
     challenges_left  smallint    NOT NULL DEFAULT 1 CHECK (challenges_left >= 0),
@@ -104,7 +104,7 @@ CREATE TABLE trials.war_soul_tower_state (
 
 CREATE TABLE trials.war_soul_tower_run (
     run_id           bigserial   PRIMARY KEY,
-    player_id        integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     battle_id        text        NOT NULL,
     start_level      integer     NOT NULL,
     end_level        integer     NOT NULL DEFAULT 0,

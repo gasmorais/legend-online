@@ -103,7 +103,7 @@ Schema `archaeology`.
 
 ```sql
 CREATE TABLE archaeology.player_state (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   exp                  INTEGER     NOT NULL DEFAULT 0 CHECK (exp >= 0),
   day                  DATE        NOT NULL,
   digs_used            SMALLINT    NOT NULL DEFAULT 0 CHECK (digs_used >= 0),
@@ -112,7 +112,7 @@ CREATE TABLE archaeology.player_state (
 );
 
 CREATE TABLE archaeology.dig_node (
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   node_id     INTEGER     NOT NULL,
   map_id      SMALLINT    NOT NULL CHECK (map_id BETWEEN 1 AND 99),
   cell_x      INTEGER     NOT NULL,
@@ -124,7 +124,7 @@ CREATE INDEX dig_node_map_idx ON archaeology.dig_node (player_id, map_id);
 
 CREATE TABLE archaeology.dig_log (
   id          BIGSERIAL   PRIMARY KEY,
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   map_id      SMALLINT    NOT NULL,
   mode        SMALLINT    NOT NULL CHECK (mode IN (1, 6)),
   item_template_id INTEGER,

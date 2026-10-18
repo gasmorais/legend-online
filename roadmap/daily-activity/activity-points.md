@@ -151,7 +151,7 @@ Daily thresholds: stage 1 20/40/60/80/100, stage 2 40/80/120/160/200, stage 3 30
 CREATE SCHEMA IF NOT EXISTS daily_activity;
 
 CREATE TABLE daily_activity.activity_counter (
-    player_id      integer   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     master_type    smallint  NOT NULL CHECK (master_type BETWEEN 1 AND 4),
     son_type       smallint  NOT NULL CHECK (son_type BETWEEN 1 AND 6),
     task_type      smallint  NOT NULL,
@@ -162,7 +162,7 @@ CREATE TABLE daily_activity.activity_counter (
 );
 
 CREATE TABLE daily_activity.activity_points (
-    player_id        integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     master_type      smallint NOT NULL CHECK (master_type BETWEEN 1 AND 4),
     activity_date    date     NOT NULL,
     daily_points     integer  NOT NULL DEFAULT 0 CHECK (daily_points >= 0),
@@ -174,7 +174,7 @@ CREATE TABLE daily_activity.activity_points (
 );
 
 CREATE TABLE daily_activity.double_buff (
-    player_id    integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     stop_at      timestamptz NOT NULL,
     bought_at    timestamptz NOT NULL DEFAULT now()
 );

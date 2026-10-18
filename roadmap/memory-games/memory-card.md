@@ -93,7 +93,7 @@ CREATE TABLE memory_games.card_reward (
 
 CREATE TABLE memory_games.card_player (
   event_id     INTEGER   NOT NULL REFERENCES memory_games.card_event(event_id) ON DELETE CASCADE,
-  player_id    INTEGER   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   free_steps   INTEGER   NOT NULL DEFAULT 15,
   bought_steps INTEGER   NOT NULL DEFAULT 0,
   buys_today   INTEGER   NOT NULL DEFAULT 0,

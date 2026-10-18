@@ -72,7 +72,7 @@ Route: send 9676 (0x25cc) `C_EVIL_LAND_OP` with `player.PlayerOpMsg` (fields: `o
 
 ```sql
 CREATE TABLE trials.demon_land_state (
-    player_id          integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     max_chapter_id     smallint    NOT NULL DEFAULT 1 CHECK (max_chapter_id BETWEEN 1 AND 30),
     max_node_id        smallint    NOT NULL DEFAULT 0 CHECK (max_node_id BETWEEN 0 AND 10),
     stars              smallint    NOT NULL DEFAULT 0,
@@ -84,7 +84,7 @@ CREATE TABLE trials.demon_land_state (
 );
 
 CREATE TABLE trials.demon_land_node (
-    player_id      integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     chapter_id     smallint NOT NULL CHECK (chapter_id BETWEEN 1 AND 30),
     node_id        smallint NOT NULL CHECK (node_id BETWEEN 1 AND 10),
     attacks_used   smallint NOT NULL DEFAULT 0,

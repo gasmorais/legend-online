@@ -120,7 +120,7 @@ Rooms are live objects; persist them only to survive a restart and for audit.
 CREATE TABLE campaign.room (
   room_id      integer  PRIMARY KEY,
   room_type    smallint NOT NULL CHECK (room_type >= 0),
-  owner_player_id integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  owner_player_id BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   campaign_id  integer  NOT NULL DEFAULT 0,
   dungeon_id   integer  NOT NULL DEFAULT 0,
   password     text     NOT NULL DEFAULT '',
@@ -134,7 +134,7 @@ CREATE TABLE campaign.room_slot (
   room_id     integer  NOT NULL REFERENCES campaign.room(room_id) ON DELETE CASCADE,
   slot_index  smallint NOT NULL CHECK (slot_index BETWEEN 0 AND 3),
   is_closed   boolean  NOT NULL DEFAULT false,
-  player_id   integer  REFERENCES player.players(player_id) ON DELETE SET NULL,
+  player_id   BIGINT  REFERENCES player.players(player_id) ON DELETE SET NULL,
   ready_state smallint NOT NULL DEFAULT 0 CHECK (ready_state IN (0, 1, 2)),
   wants_gains boolean  NOT NULL DEFAULT true,
   joined_at   timestamptz,
@@ -152,12 +152,12 @@ CREATE TABLE campaign.room_invitation (
 );
 
 CREATE TABLE campaign.player_invite_setting (
-  player_id      integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   refuse_invites boolean NOT NULL DEFAULT false
 );
 
 CREATE TABLE campaign.daily_entry (
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   mode        text     NOT NULL,
   period_start date    NOT NULL,
   used_count  smallint NOT NULL DEFAULT 0 CHECK (used_count >= 0),

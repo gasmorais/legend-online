@@ -83,7 +83,7 @@ CREATE TABLE lotteries.horn_prize (
 
 CREATE TABLE lotteries.horn_activation (
   event_id     INTEGER     NOT NULL REFERENCES lotteries.horn_event(event_id) ON DELETE CASCADE,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   activated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (event_id, player_id)
 );

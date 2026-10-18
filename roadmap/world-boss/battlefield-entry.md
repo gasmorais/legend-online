@@ -72,7 +72,7 @@ Owned by the campaign feature (battlefield sessions and daily reward counts). Th
 
 ```sql
 CREATE TABLE world_boss.battlefield_daily (
-  player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   counter_date  date     NOT NULL,
   rewards_used  smallint NOT NULL DEFAULT 0 CHECK (rewards_used >= 0),
   PRIMARY KEY (player_id, counter_date)

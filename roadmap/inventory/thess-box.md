@@ -70,21 +70,21 @@ Loaded by `decompiled/core_module/scripts/yishi/manager/TempleteManager.as:1425-
 
 ```sql
 CREATE TABLE inventory.thess_box_progress (
-  player_id        INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   passed_chapter   SMALLINT    NOT NULL DEFAULT 0 CHECK (passed_chapter BETWEEN 0 AND 20),
   attempts_used    SMALLINT    NOT NULL DEFAULT 0 CHECK (attempts_used >= 0),
   attempts_day     DATE        NOT NULL DEFAULT current_date
 );
 
 CREATE TABLE inventory.thess_box_first_rewards (
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   chapter_id  SMALLINT    NOT NULL,
   claimed_at  TIMESTAMPTZ,
   PRIMARY KEY (player_id, chapter_id)
 );
 
 CREATE TABLE inventory.thess_box_runs (
-  player_id      INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   chapter_id     SMALLINT    NOT NULL,
   current_floor  SMALLINT    NOT NULL DEFAULT 1,
   map_id         INTEGER     NOT NULL,

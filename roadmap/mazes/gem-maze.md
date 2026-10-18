@@ -84,7 +84,7 @@ No client template. Configuration keys `Gem_Maze_BuyInfo`, `GemMazeHelp_Reward` 
 
 ```sql
 CREATE TABLE mazes.gem_maze_state (
-  player_id        integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   board            smallint[] NOT NULL,              -- colour per cell, index = mark
   score            integer  NOT NULL DEFAULT 0,
   week_score       integer  NOT NULL DEFAULT 0,
@@ -150,3 +150,7 @@ The maze bag items live in the inventory tables with bag type 24.
 - [ ] Game box integration (game 2) in the time-story feature.
 - [ ] Test: non adjacent swap refused; move with 0 moves refused.
 - [ ] Test: buying at 90 moves refused; buying 6 times in a day when 50 moves are purchasable refused on the sixth.
+
+## Screens
+
+- `GemMazeInvideFriendCdTimeFrame` (`decompiled/m11/scripts/gemmaze/view/GemMazeInvideFriendCdTimeFrame.as`) shows the countdown before a friend can be invited again into the gem maze.

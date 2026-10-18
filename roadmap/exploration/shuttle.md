@@ -94,7 +94,7 @@ Controller `outyard` (`decompiled/core_module/scripts/mvc/controler/OutyardContr
 
 ```sql
 CREATE TABLE exploration.shuttle_state (
-  player_id          INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   difficulty         SMALLINT    NOT NULL DEFAULT 1 CHECK (difficulty BETWEEN 1 AND 4),
   pet_ids            INTEGER[]   NOT NULL DEFAULT '{0,0,0}',
   pet_hp_percent     SMALLINT[]  NOT NULL DEFAULT '{100,100,100}',
@@ -122,7 +122,7 @@ CREATE INDEX arcane_boss_alive_idx ON exploration.arcane_boss (escapes_at) WHERE
 
 CREATE TABLE exploration.arcane_boss_access (
   boss_id     BIGINT  NOT NULL REFERENCES exploration.arcane_boss(boss_id) ON DELETE CASCADE,
-  player_id   INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   damage      BIGINT  NOT NULL DEFAULT 0,
   PRIMARY KEY (boss_id, player_id)
 );

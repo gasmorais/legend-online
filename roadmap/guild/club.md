@@ -135,6 +135,7 @@ Client (present, verify):
 - [ ] CreatConsortiaFrame validations
 - [ ] ConsortiaInfoFrame from chat link
 - [ ] Invitation popup (41 -> 8209 -> 4135)
+- [ ] `RecallPartnerFrame` ("Retirar amigo", `decompiled/m6/scripts/consortia/view/myConsortia/recall/RecallPartnerFrame.as`): opens the recall picker, prompts for the friend nickname ("Por favor introduza o Apelido do Jogador de acordo com o que é requerido"), lists "Amigos" and reports "Não há jogadores correspondente às condições!" when the recall target is invalid
 
 Backend:
 - [ ] `guild::membership::handle_list_applicants` -> 4140 (empty for a player without guild)

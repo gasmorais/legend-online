@@ -191,7 +191,7 @@ CREATE TABLE guild.dungeon_node_player_stat (
   guild_id     integer NOT NULL,
   season_id    integer NOT NULL,
   node_id      integer NOT NULL,
-  player_id    integer NOT NULL REFERENCES game.players(id),
+  player_id    BIGINT NOT NULL REFERENCES game.players(id),
   attack_count integer NOT NULL DEFAULT 0,
   total_damage bigint  NOT NULL DEFAULT 0 CHECK (total_damage >= 0),
   PRIMARY KEY (guild_id, season_id, node_id, player_id),
@@ -205,7 +205,7 @@ CREATE TABLE guild.dungeon_area (
   area_id             smallint NOT NULL CHECK (area_id BETWEEN 1 AND 5),
   difficulty          smallint NOT NULL CHECK (difficulty IN (0,1)),
   completed_at        timestamptz NOT NULL,
-  leader_player_id    integer NOT NULL REFERENCES game.players(id),
+  leader_player_id    BIGINT NOT NULL REFERENCES game.players(id),
   leader_attack_count integer NOT NULL,
   leader_total_damage bigint  NOT NULL,
   PRIMARY KEY (guild_id, season_id, area_id, difficulty),
@@ -213,7 +213,7 @@ CREATE TABLE guild.dungeon_area (
 );
 
 CREATE TABLE guild.dungeon_node_claim (
-  player_id  integer NOT NULL REFERENCES game.players(id),
+  player_id  BIGINT NOT NULL REFERENCES game.players(id),
   guild_id   integer NOT NULL,
   season_id  integer NOT NULL,
   node_id    integer NOT NULL,
@@ -222,7 +222,7 @@ CREATE TABLE guild.dungeon_node_claim (
 );
 
 CREATE TABLE guild.dungeon_area_claim (
-  player_id  integer  NOT NULL REFERENCES game.players(id),
+  player_id  BIGINT  NOT NULL REFERENCES game.players(id),
   guild_id   integer  NOT NULL,
   season_id  integer  NOT NULL,
   area_id    smallint NOT NULL CHECK (area_id BETWEEN 1 AND 5),
@@ -232,7 +232,7 @@ CREATE TABLE guild.dungeon_area_claim (
 );
 
 CREATE TABLE guild.dungeon_player_daily (
-  player_id   integer PRIMARY KEY REFERENCES game.players(id),
+  player_id   BIGINT PRIMARY KEY REFERENCES game.players(id),
   day         date     NOT NULL,
   fight_count smallint NOT NULL DEFAULT 0 CHECK (fight_count >= 0)
 );
@@ -261,7 +261,7 @@ CREATE INDEX dungeon_rank_snapshot_rank ON guild.dungeon_rank_snapshot (season_i
 CREATE TABLE guild.dungeon_season_reward_log (
   season_id integer NOT NULL,
   guild_id  integer NOT NULL,
-  player_id integer NOT NULL,
+  player_id BIGINT NOT NULL,
   rank      integer NOT NULL,
   mailed_at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (season_id, player_id)

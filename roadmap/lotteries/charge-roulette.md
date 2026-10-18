@@ -94,7 +94,7 @@ CREATE TABLE lotteries.charge_reward (
 
 CREATE TABLE lotteries.charge_player (
   event_id          INTEGER NOT NULL REFERENCES lotteries.charge_event(event_id) ON DELETE CASCADE,
-  player_id         INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id         BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   diamonds_charged  INTEGER NOT NULL DEFAULT 0,
   draws_left        INTEGER NOT NULL DEFAULT 0 CHECK (draws_left >= 0),
   draws_gained_day  INTEGER NOT NULL DEFAULT 0,
@@ -106,7 +106,7 @@ CREATE TABLE lotteries.charge_player (
 CREATE TABLE lotteries.charge_log (
   log_id      BIGSERIAL   PRIMARY KEY,
   event_id    INTEGER     NOT NULL REFERENCES lotteries.charge_event(event_id) ON DELETE CASCADE,
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   pos         SMALLINT    NOT NULL,
   created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );

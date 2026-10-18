@@ -63,7 +63,7 @@ Config keys above. No reward template in the client.
 ```sql
 CREATE TABLE navigation.fishing_reward_log (
   id          BIGSERIAL   PRIMARY KEY,
-  player_id   INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   ship_id     UUID        REFERENCES navigation.ship(ship_id) ON DELETE SET NULL,
   item_id     INTEGER     NOT NULL,
   count       INTEGER     NOT NULL CHECK (count > 0),

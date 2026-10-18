@@ -59,7 +59,7 @@ When: response to op 4. (A) Ranking is a snapshot refreshed periodically, hence 
 
 ```sql
 CREATE TABLE ares_battle.player_score (
-  player_id       integer PRIMARY KEY REFERENCES player.players(player_id),
+  player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id),
   server_id       integer NOT NULL,
   total_score     integer NOT NULL DEFAULT 0 CHECK (total_score >= 0),
   group_type      smallint NOT NULL DEFAULT 0 CHECK (group_type BETWEEN 0 AND 5),
@@ -71,7 +71,7 @@ CREATE INDEX ON ares_battle.player_score (group_type, total_score DESC);
 CREATE TABLE ares_battle.rank_snapshot (
   edition_id      integer NOT NULL,
   round_no        smallint NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   group_type      smallint NOT NULL,
   rank_order      integer NOT NULL,
   total_score     integer NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE ares_battle.rank_snapshot (
 CREATE TABLE ares_battle.reward_grant (
   edition_id      integer NOT NULL,
   round_no        smallint NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   group_type      smallint NOT NULL,
   amount          integer NOT NULL,
   mail_id         bigint,

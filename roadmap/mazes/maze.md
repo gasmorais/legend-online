@@ -100,7 +100,7 @@ Feature `mazes`, module `maze`. Client: `M9/maze/MazeFrame.as`, `M9/maze/view/Ma
 CREATE SCHEMA IF NOT EXISTS mazes;
 
 CREATE TABLE mazes.tower_progress (
-  player_id      integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   maze_index     smallint NOT NULL CHECK (maze_index BETWEEN 0 AND 2),   -- tab: 0 = 8001, 1 = 8101, 2 = 8401
   unlocked       boolean  NOT NULL DEFAULT false,
   record_floor   smallint NOT NULL DEFAULT 0 CHECK (record_floor >= 0),
@@ -119,7 +119,7 @@ CREATE INDEX tower_progress_rank ON mazes.tower_progress (maze_index, record_flo
 CREATE TABLE mazes.floor_first_kills (
   maze_index  smallint NOT NULL,
   floor       smallint NOT NULL,
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   nickname    text     NOT NULL,
   killed_at   timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (maze_index, floor)

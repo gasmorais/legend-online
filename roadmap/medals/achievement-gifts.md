@@ -77,7 +77,7 @@ No result codes; refusals are silent *(assumption: use the generic message tip)*
 
 ```sql
 CREATE TABLE medals.achievement_gift_offers (
-  player_id     integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id   integer     NOT NULL,              -- achievement Id = BuyDrop site
   status        smallint    NOT NULL DEFAULT 0 CHECK (status BETWEEN 0 AND 3),  -- 0 queued, 1 running, 2 bought, 3 expired
   queued_at     timestamptz NOT NULL DEFAULT now(),

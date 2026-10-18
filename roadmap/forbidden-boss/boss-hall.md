@@ -95,7 +95,7 @@ CREATE SCHEMA IF NOT EXISTS forbidden_boss;
 
 -- Daily counters, one row per player, category and day. category -1 holds the total for categories 2..5.
 CREATE TABLE forbidden_boss.daily_counters (
-  player_id      integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   counter_date   date     NOT NULL,
   category       smallint NOT NULL CHECK (category = -1 OR category BETWEEN 1 AND 5),
   ownership_used smallint NOT NULL DEFAULT 0 CHECK (ownership_used >= 0),

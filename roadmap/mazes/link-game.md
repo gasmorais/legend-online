@@ -88,7 +88,7 @@ Other fields (`score #6`, `time #7`, `strength #8`, `points #9 STRING`, `bomb_co
 
 ```sql
 CREATE TABLE mazes.link_game_state (
-  player_id     integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   level         smallint NOT NULL DEFAULT 1,
   board         smallint[] NOT NULL DEFAULT '{}',   -- 112 values, empty when no level is running
   level_started_at timestamptz,

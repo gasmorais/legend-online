@@ -132,7 +132,7 @@ Schema `final_defense`.
 ```sql
 CREATE TABLE final_defense.last_ditch_game (
   game_id              BIGSERIAL   PRIMARY KEY,
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   round                SMALLINT    NOT NULL DEFAULT 0 CHECK (round BETWEEN 0 AND 6),
   energy               INTEGER     NOT NULL DEFAULT 0 CHECK (energy >= 0),
   score                INTEGER     NOT NULL DEFAULT 0 CHECK (score >= 0),

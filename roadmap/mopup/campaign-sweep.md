@@ -111,7 +111,7 @@ Schema `mopup`.
 
 ```sql
 CREATE TABLE mopup.sweep_job (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   source               TEXT        NOT NULL CHECK (source IN ('campaign','maze','time_vortex','demon_land','revenge_road','shadow_land','final_road','abyss','hell_abyss','remote_pet','lord_trial')),
   sweep_type           SMALLINT,
   target_id            INTEGER     NOT NULL,
@@ -128,7 +128,7 @@ CREATE TABLE mopup.sweep_job (
 );
 
 CREATE TABLE mopup.sweep_result (
-  player_id            INTEGER     NOT NULL REFERENCES mopup.sweep_job(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES mopup.sweep_job(player_id) ON DELETE CASCADE,
   run_no               INTEGER     NOT NULL,
   gold                 INTEGER     NOT NULL DEFAULT 0,
   exp                  INTEGER     NOT NULL DEFAULT 0,

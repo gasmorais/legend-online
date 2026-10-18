@@ -94,7 +94,7 @@ CREATE TABLE exchange.lucky_drop (
 );
 
 CREATE TABLE exchange.lucky_progress (
-  player_id      INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   exchange_id    TEXT     NOT NULL REFERENCES exchange.lucky_event(exchange_id) ON DELETE CASCADE,
   luck           INTEGER  NOT NULL DEFAULT 0 CHECK (luck >= 0),
   total_trades   INTEGER  NOT NULL DEFAULT 0,

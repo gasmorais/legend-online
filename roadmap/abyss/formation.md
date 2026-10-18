@@ -71,7 +71,7 @@ None specific. Guardian data comes from the guardians feature (`ChildManager.mod
 
 ```sql
 CREATE TABLE abyss.formation_slots (
-  player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   is_hell      boolean  NOT NULL,
   fight_order  smallint NOT NULL CHECK (fight_order BETWEEN 1 AND 4),
   child_id     integer  NOT NULL,                  -- guardians feature id

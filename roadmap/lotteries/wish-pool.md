@@ -102,7 +102,7 @@ CREATE TABLE lotteries.wish_item (
 
 CREATE TABLE lotteries.wish_player (
   event_id         INTEGER     NOT NULL REFERENCES lotteries.wish_event(event_id) ON DELETE CASCADE,
-  player_id        INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   pool_keys        INTEGER[]   NOT NULL,
   free_refresh_at  TIMESTAMPTZ NOT NULL,
   score            INTEGER     NOT NULL DEFAULT 0,
@@ -121,7 +121,7 @@ CREATE TABLE lotteries.wish_shop_good (
 
 CREATE TABLE lotteries.wish_shop_purchase (
   event_id   INTEGER NOT NULL,
-  player_id  INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   good_key   INTEGER NOT NULL,
   bought     INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (event_id, player_id, good_key),
@@ -131,7 +131,7 @@ CREATE TABLE lotteries.wish_shop_purchase (
 CREATE TABLE lotteries.wish_log (
   log_id     BIGSERIAL   PRIMARY KEY,
   event_id   INTEGER     NOT NULL REFERENCES lotteries.wish_event(event_id) ON DELETE CASCADE,
-  player_id  INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   text       TEXT        NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );

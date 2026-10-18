@@ -71,7 +71,7 @@ From level 35 the player takes chained quests from Asuna in the Reino dos Céus 
 
 ```sql
 CREATE TABLE quests.cycle_progress (
-    player_id       integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id       BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     week_start      date        NOT NULL,
     completed       smallint    NOT NULL DEFAULT 0 CHECK (completed BETWEEN 0 AND 200),
     template_id     integer,

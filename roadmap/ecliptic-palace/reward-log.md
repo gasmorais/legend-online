@@ -40,7 +40,7 @@ None (items from [palace.md](palace.md) rewards).
 
 ```sql
 CREATE TABLE ecliptic_palace.weekly_reward (
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   week_start           DATE        NOT NULL,
   item_template_id     INTEGER     NOT NULL,
   count                INTEGER     NOT NULL CHECK (count > 0),

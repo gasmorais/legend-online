@@ -90,7 +90,7 @@ CREATE TABLE chat.message_log (
 CREATE INDEX message_log_sender_idx ON chat.message_log (sender_id, sent_at DESC);
 
 CREATE TABLE chat.mute (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     muted_until   timestamptz NOT NULL,
     reason        text        NOT NULL DEFAULT ''
 );

@@ -101,7 +101,7 @@ Client flag types (12, 15) have no server signal from the board path; assumption
 
 ```sql
 CREATE TABLE quests.bounty_board (
-    player_id         integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id         BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     last_refresh_at   timestamptz NOT NULL,
     free_refreshes    smallint    NOT NULL DEFAULT 0 CHECK (free_refreshes BETWEEN 0 AND 2),
     done_today        smallint    NOT NULL DEFAULT 0,
@@ -110,7 +110,7 @@ CREATE TABLE quests.bounty_board (
 );
 
 CREATE TABLE quests.bounty_slot (
-    player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     position     smallint NOT NULL CHECK (position BETWEEN 0 AND 3),
     template_id  integer  NOT NULL,
     quality      smallint NOT NULL CHECK (quality BETWEEN 1 AND 5),
@@ -119,7 +119,7 @@ CREATE TABLE quests.bounty_slot (
 );
 
 CREATE TABLE quests.bounty_active (
-    player_id    integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     template_id  integer     NOT NULL,
     position     smallint    NOT NULL,
     quality      smallint    NOT NULL,

@@ -88,7 +88,7 @@ Schema `exploration`.
 
 ```sql
 CREATE TABLE exploration.monster_explore_state (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   cur_chapter_id       SMALLINT    NOT NULL DEFAULT 1,
   cur_node_id          SMALLINT    NOT NULL DEFAULT 1,
   pass_chapter_id      SMALLINT    NOT NULL DEFAULT 0,
@@ -101,7 +101,7 @@ CREATE TABLE exploration.monster_explore_state (
 );
 
 CREATE TABLE exploration.monster_explore_slot (
-  player_id    INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   slot         SMALLINT NOT NULL CHECK (slot BETWEEN 1 AND 3),
   monster_id   INTEGER  NOT NULL,
   fight_pos    SMALLINT NOT NULL CHECK (fight_pos IN (1, 3, 4, 6, 7, 9, 10, 12)),

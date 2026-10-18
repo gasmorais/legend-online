@@ -101,7 +101,7 @@ Rewards: [quest-templates.md](quest-templates.md) section 5. Conditions: [quest-
 CREATE SCHEMA IF NOT EXISTS quests;
 
 CREATE TABLE quests.quest_progress (
-    player_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     quest_id       integer     NOT NULL,
     condition_1    integer     NOT NULL DEFAULT 0,
     condition_2    integer     NOT NULL DEFAULT 0,
@@ -114,7 +114,7 @@ CREATE TABLE quests.quest_progress (
 );
 
 CREATE TABLE quests.quest_history (
-    player_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id      BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     quest_id       integer     NOT NULL,
     repeat_finish  integer     NOT NULL DEFAULT 0 CHECK (repeat_finish >= 0),
     completed_at   timestamptz NOT NULL,
@@ -122,12 +122,12 @@ CREATE TABLE quests.quest_history (
 );
 
 CREATE TABLE quests.finished_bits (
-    player_id   integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     bits        bytea   NOT NULL DEFAULT '\x'::bytea
 );
 
 CREATE TABLE quests.phone_binding (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     phone         text        NOT NULL UNIQUE,
     pin           integer,
     pin_sent_at   timestamptz,

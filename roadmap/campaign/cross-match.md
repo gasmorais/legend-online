@@ -79,7 +79,7 @@ CREATE TABLE campaign.cross_match (
 CREATE TABLE campaign.cross_match_candidate (
   match_uid   text     NOT NULL REFERENCES campaign.cross_match(match_uid) ON DELETE CASCADE,
   server_name text     NOT NULL,
-  player_id   integer  NOT NULL,
+  player_id   BIGINT  NOT NULL,
   answer      smallint CHECK (answer IN (0, 1)),
   answered_at timestamptz,
   PRIMARY KEY (match_uid, server_name, player_id)
@@ -88,9 +88,9 @@ CREATE TABLE campaign.cross_match_candidate (
 CREATE TABLE campaign.kick_vote (
   instance_id  bigint  NOT NULL REFERENCES campaign.instance(instance_id) ON DELETE CASCADE,
   target_server_name text NOT NULL,
-  target_player_id integer NOT NULL,
+  target_player_id BIGINT NOT NULL,
   voter_server_name text NOT NULL,
-  voter_player_id  integer NOT NULL,
+  voter_player_id  BIGINT NOT NULL,
   agree        boolean,
   created_at   timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (instance_id, target_server_name, target_player_id, voter_server_name, voter_player_id)

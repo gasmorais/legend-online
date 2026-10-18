@@ -109,7 +109,7 @@ CREATE TABLE exchange.all_award (
 
 CREATE TABLE exchange.all_player (
   event_id         TEXT       NOT NULL REFERENCES exchange.all_event(event_id) ON DELETE CASCADE,
-  player_id        INTEGER    NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT    NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   box_points       INTEGER[]  NOT NULL DEFAULT '{0,0,0}',
   box_claims       INTEGER[]  NOT NULL DEFAULT '{0,0,0}',
   server_claimed   BOOLEAN[]  NOT NULL DEFAULT '{f,f,f,f,f}',

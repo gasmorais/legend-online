@@ -27,7 +27,8 @@
   "client_packages": [
    "guidetask",
    "gameguide",
-   "dialog"
+   "dialog",
+   "funpreview"
   ],
   "proto_packages": [
    "novice",
@@ -43,7 +44,6 @@
    "question",
    "questionnaire",
    "mailcheck",
-   "feedback",
    "doctor"
   ],
   "proto_packages": [
@@ -238,7 +238,9 @@
    "children",
    "childpatrol",
    "childseal",
-   "expedition"
+   "expedition",
+   "guardpve",
+   "guardpvp"
   ]
  },
  "dragon": {
@@ -251,8 +253,7 @@
   ],
   "proto_packages": [
    "dragontalker",
-   "titan",
-   "titanland"
+   "titan"
   ]
  },
  "goddess": {
@@ -287,7 +288,8 @@
   "proto_packages": [
    "item",
    "storehouse",
-   "slate"
+   "slate",
+   "box"
   ]
  },
  "shops": {
@@ -358,7 +360,8 @@
   "name_pt": "Minas do Tesouro",
   "client_packages": [
    "fund",
-   "fundVein"
+   "fundVein",
+   "mineField"
   ],
   "proto_packages": []
  },
@@ -376,11 +379,11 @@
   "client_packages": [
    "castle",
    "buildings",
-   "hook"
+   "hook",
+   "seminaryBless"
   ],
   "proto_packages": [
    "castle",
-   "castle.CastleYieldMsg",
    "building"
   ]
  },
@@ -465,8 +468,7 @@
    "marry"
   ],
   "proto_packages": [
-   "marriage",
-   "party"
+   "marriage"
   ]
  },
  "mail": {
@@ -589,7 +591,6 @@
   "proto_packages": [
    "secretexplore",
    "seek",
-   "seek.SeekNodeListMsg",
    "shuttle"
   ]
  },
@@ -599,7 +600,11 @@
   "client_packages": [
    "outyard"
   ],
-  "proto_packages": []
+  "proto_packages": [
+   "hugehead",
+   "stackhead",
+   "titanland"
+  ]
  },
  "world-boss": {
   "domain": "pve",
@@ -633,7 +638,9 @@
   "client_packages": [
    "abysm"
   ],
-  "proto_packages": []
+  "proto_packages": [
+   "guardendless"
+  ]
  },
  "mazes": {
   "domain": "pve",
@@ -668,7 +675,6 @@
    "lordtrial",
    "crisis",
    "timevortex",
-   "demonroad",
    "skytrial"
   ]
  },
@@ -691,7 +697,8 @@
    "gloryroad",
    "goldenroad",
    "heroroad",
-   "redemptionroad"
+   "redemptionroad",
+   "demonroad"
   ]
  },
  "planes": {
@@ -724,8 +731,6 @@
   ],
   "proto_packages": [
    "unrealshooting",
-   "guardendless",
-   "guardpve",
    "guardscuffle"
   ]
  },
@@ -756,8 +761,7 @@
    "dreamarena"
   ],
   "proto_packages": [
-   "pvp",
-   "guardpvp"
+   "pvp"
   ]
  },
  "ares-battle": {
@@ -820,10 +824,7 @@
    "chess",
    "chesspvp"
   ],
-  "proto_packages": [
-   "hugehead",
-   "stackhead"
-  ]
+  "proto_packages": []
  },
  "hermitage-war": {
   "domain": "pvp",
@@ -890,7 +891,8 @@
    "newactiveleed",
    "countlogin",
    "loginactivity",
-   "supersignincard"
+   "supersignincard",
+   "onlinereward"
   ],
   "proto_packages": [
    "activity",
@@ -909,7 +911,8 @@
   ],
   "proto_packages": [
    "quest",
-   "simpletask"
+   "simpletask",
+   "reward"
   ]
  },
  "seasonal-events": {
@@ -1029,7 +1032,8 @@
    "magicspring"
   ],
   "proto_packages": [
-   "magicpub"
+   "magicpub",
+   "party"
   ]
  },
  "returning-players": {
@@ -1086,11 +1090,12 @@
    "newfirstpay",
    "continuePayRebate",
    "wholerebate",
-   "encoGold"
+   "encoGold",
+   "feedback",
+   "publicchairs"
   ],
   "proto_packages": [
-   "rebate",
-   "reward"
+   "rebate"
   ]
  },
  "assistant": {
@@ -1112,5 +1117,11 @@
   "proto_packages": [
    "battle"
   ]
+ },
+ "shared-ui": {
+  "domain": "platform",
+  "name_pt": "Telas, avisos e dicas compartilhados",
+  "client_packages": [],
+  "proto_packages": []
  }
 }

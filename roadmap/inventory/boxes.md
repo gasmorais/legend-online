@@ -115,14 +115,14 @@ CREATE TABLE inventory.drop_tables (
 );
 
 CREATE TABLE inventory.novice_pack_claims (
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   level        SMALLINT    NOT NULL,
   claimed_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (player_id, level)
 );
 
 CREATE TABLE inventory.time_chest_state (
-  player_id        INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   last_period      SMALLINT    NOT NULL DEFAULT 0,
   last_claimed     BOOLEAN     NOT NULL DEFAULT false,
   seconds_counted  INTEGER     NOT NULL DEFAULT 0 CHECK (seconds_counted >= 0),

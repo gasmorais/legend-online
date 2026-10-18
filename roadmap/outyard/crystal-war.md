@@ -109,7 +109,7 @@ CREATE TABLE outyard.crystal_senior (
 
 CREATE TABLE outyard.crystal_member (
   user_uid        TEXT     PRIMARY KEY,
-  player_id       INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id       BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   battlefield_uid TEXT     NOT NULL,
   force_index     SMALLINT NOT NULL,
   alive           BOOLEAN  NOT NULL DEFAULT true,

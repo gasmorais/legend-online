@@ -133,7 +133,7 @@ CREATE TABLE planes.layer (
   plane_id             BIGINT      NOT NULL REFERENCES planes.plane(plane_id) ON DELETE CASCADE,
   layer_template_id    INTEGER     NOT NULL,
   is_activated         BOOLEAN     NOT NULL DEFAULT false,
-  occupier_player_id   INTEGER     REFERENCES player.players(player_id) ON DELETE SET NULL,
+  occupier_player_id   BIGINT     REFERENCES player.players(player_id) ON DELETE SET NULL,
   icon_state           SMALLINT    NOT NULL DEFAULT 0,
   bought_skills        INTEGER[]   NOT NULL DEFAULT '{}',
   map_stamp            INTEGER     NOT NULL DEFAULT 1,
@@ -153,7 +153,7 @@ CREATE TABLE planes.cell (
 );
 
 CREATE TABLE planes.session (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   plane_id             BIGINT      NOT NULL REFERENCES planes.plane(plane_id) ON DELETE CASCADE,
   layer_id             BIGINT      NOT NULL REFERENCES planes.layer(layer_id) ON DELETE CASCADE,
   pos_x                SMALLINT    NOT NULL,

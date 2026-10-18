@@ -82,11 +82,11 @@ Auto battle, no skill use, "Encerrar" strip; exit to `CHANLLENGE_ROOM_SCENE` if 
 ```sql
 CREATE TABLE arena.colosseum_rank (
   rank            integer PRIMARY KEY CHECK (rank > 0),
-  player_id       integer NOT NULL UNIQUE REFERENCES player.players(player_id)
+  player_id       BIGINT NOT NULL UNIQUE REFERENCES player.players(player_id)
 );
 
 CREATE TABLE arena.colosseum_player (
-  player_id       integer PRIMARY KEY REFERENCES player.players(player_id),
+  player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id),
   win_streak      integer NOT NULL DEFAULT 0,
   used_today      smallint NOT NULL DEFAULT 0,
   counters_day    date NOT NULL,

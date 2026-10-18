@@ -127,7 +127,7 @@ Server sequences referenced above:
 ```sql
 CREATE TABLE guild.member (
     guild_id            integer     NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
-    player_id           integer     NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+    player_id           BIGINT     NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
     duty_level          smallint    NOT NULL DEFAULT 5 CHECK (duty_level BETWEEN 1 AND 5),
     contribution        integer     NOT NULL DEFAULT 0 CHECK (contribution >= 0),        -- consortiaOffer, spendable
     total_contribution  integer     NOT NULL DEFAULT 0 CHECK (total_contribution >= 0),  -- consortiaTotalOffer
@@ -142,7 +142,7 @@ CREATE INDEX member_guild_idx ON guild.member (guild_id, duty_level);
 CREATE TABLE guild.join_request (
     id            serial      PRIMARY KEY,                -- apply_id / ConsortiaUserInviteInfoMsg.id / parameter1
     guild_id      integer     NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
-    player_id     integer     NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,  -- applicant or invitee
+    player_id     BIGINT     NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,  -- applicant or invitee
     inviter_id    integer     REFERENCES public.player(id) ON DELETE SET NULL,          -- set for invitations
     kind          text        NOT NULL CHECK (kind IN ('application', 'invitation')),   -- from_type false / true
     created_at    timestamptz NOT NULL DEFAULT now(),
@@ -152,7 +152,7 @@ CREATE INDEX join_request_player_idx ON guild.join_request (player_id, kind);
 CREATE INDEX join_request_guild_idx ON guild.join_request (guild_id, kind, created_at);
 
 CREATE TABLE guild.player_state (
-    player_id          integer     PRIMARY KEY REFERENCES public.player(id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES public.player(id) ON DELETE CASCADE,
     last_left_at       timestamptz,                         -- lastOutConsortia
     left_voluntarily   boolean     NOT NULL DEFAULT false,  -- is_auto
     robot_invite_sent  boolean     NOT NULL DEFAULT false

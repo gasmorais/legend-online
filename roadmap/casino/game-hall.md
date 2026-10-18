@@ -151,7 +151,7 @@ CREATE TABLE casino.hall_team (
 
 CREATE TABLE casino.hall_team_member (
   team_id     INTEGER  NOT NULL REFERENCES casino.hall_team(team_id) ON DELETE CASCADE,
-  player_id   INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   is_ready    BOOLEAN  NOT NULL DEFAULT FALSE,
   use_count   BOOLEAN  NOT NULL DEFAULT TRUE,
   fight_pos   SMALLINT,
@@ -162,7 +162,7 @@ CREATE TABLE casino.hall_team_member (
 );
 
 CREATE TABLE casino.hall_daily_runs (
-  player_id  INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   game_id    SMALLINT NOT NULL,
   day        DATE     NOT NULL,
   runs_used  SMALLINT NOT NULL DEFAULT 0,
@@ -200,3 +200,7 @@ Teams are volatile; the tables can also be in memory (assumption: keep in memory
 - [ ] Rules B1..B5
 - [ ] Reconnect into the hall (op 103)
 - [ ] Test: create on a closed weekday refused; fifth member refused; wrong password refused
+
+## Screens
+
+- `GameHallEastShopResultFrame` (`decompiled/m3/scripts/gamehall/GameHallEastShopResultFrame.as`) shows the result of a purchase made in the game hall point store.

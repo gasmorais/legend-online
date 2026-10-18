@@ -123,7 +123,7 @@ Event state lives in `planes.cell.event_state` and `planes.session.is_dead` ([ex
 
 ```sql
 CREATE TABLE planes.pending_card_pick (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   event_id             INTEGER     NOT NULL,
   card_set_id          INTEGER     NOT NULL,
   cards                JSONB       NOT NULL,
@@ -132,7 +132,7 @@ CREATE TABLE planes.pending_card_pick (
 );
 
 CREATE TABLE planes.help_request (
-  dead_player_id       INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  dead_player_id       BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   expires_at           TIMESTAMPTZ NOT NULL,
   helper_ids           INTEGER[]   NOT NULL DEFAULT '{}'
 );
@@ -169,3 +169,7 @@ CREATE TABLE planes.help_request (
 - [ ] Tables `planes.pending_card_pick`, `planes.help_request`
 - [ ] Test: layer occupation after beating event 14001
 - [ ] Test: card auto pick after 30 s
+
+## Screens
+
+- `PlanesEventBaseFrame` (`decompiled/m3/scripts/planeswar/view/eventframe/PlanesEventBaseFrame.as`) is the base frame all planes war event popups extend.

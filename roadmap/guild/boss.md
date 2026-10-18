@@ -263,14 +263,14 @@ CREATE TABLE guild.dream_boss (
 CREATE TABLE guild.dream_boss_damage (
   guild_id   integer NOT NULL REFERENCES guild.guilds(id) ON DELETE CASCADE,
   run_day    date    NOT NULL,
-  player_id  integer NOT NULL REFERENCES game.players(id),
+  player_id  BIGINT NOT NULL REFERENCES game.players(id),
   damage     bigint  NOT NULL DEFAULT 0 CHECK (damage >= 0),
   PRIMARY KEY (guild_id, run_day, player_id)
 );
 CREATE INDEX dream_boss_damage_rank ON guild.dream_boss_damage (guild_id, run_day, damage DESC);
 
 CREATE TABLE guild.dream_boss_player_day (
-  player_id           integer NOT NULL REFERENCES game.players(id),
+  player_id           BIGINT NOT NULL REFERENCES game.players(id),
   day                 date    NOT NULL,
   reward_count        smallint NOT NULL DEFAULT 0 CHECK (reward_count >= 0),
   sleep_state         smallint NOT NULL DEFAULT 0 CHECK (sleep_state BETWEEN 0 AND 3),
@@ -315,7 +315,7 @@ ALTER TABLE guild.new_boss ADD FOREIGN KEY (current_round_id) REFERENCES guild.n
 
 CREATE TABLE guild.new_boss_damage (
   round_id     bigint  NOT NULL REFERENCES guild.new_boss_round(id) ON DELETE CASCADE,
-  player_id    integer NOT NULL REFERENCES game.players(id),
+  player_id    BIGINT NOT NULL REFERENCES game.players(id),
   damage       bigint  NOT NULL DEFAULT 0 CHECK (damage >= 0),
   fight_count  smallint NOT NULL DEFAULT 0,
   refreshed_at timestamptz NOT NULL DEFAULT now(),
@@ -324,7 +324,7 @@ CREATE TABLE guild.new_boss_damage (
 CREATE INDEX new_boss_damage_rank ON guild.new_boss_damage (round_id, damage DESC);
 
 CREATE TABLE guild.new_boss_player_week (
-  player_id      integer NOT NULL REFERENCES game.players(id),
+  player_id      BIGINT NOT NULL REFERENCES game.players(id),
   week_start     date    NOT NULL,
   rewarded_rounds smallint NOT NULL DEFAULT 0 CHECK (rewarded_rounds BETWEEN 0 AND 3),
   PRIMARY KEY (player_id, week_start)

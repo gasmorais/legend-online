@@ -57,7 +57,7 @@ None.
 
 ```sql
 CREATE TABLE friends.chat_state (
-    player_id    integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     state        smallint    NOT NULL DEFAULT 7 CHECK (state IN (4, 5, 6, 7)),
     reply_away   varchar(60) NOT NULL DEFAULT '',
     reply_busy   varchar(60) NOT NULL DEFAULT '',

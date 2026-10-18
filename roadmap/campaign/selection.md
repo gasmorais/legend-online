@@ -106,14 +106,14 @@ Distribution of solo campaigns (LandId 1, Types 0): chapter 101: 7 areas, level 
 CREATE SCHEMA IF NOT EXISTS campaign;
 
 CREATE TABLE campaign.player_energy (
-  player_id      integer PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   energy         smallint NOT NULL DEFAULT 200 CHECK (energy >= 0),
   potion_restored_today smallint NOT NULL DEFAULT 0 CHECK (potion_restored_today BETWEEN 0 AND 600),
   reset_on       date NOT NULL DEFAULT current_date
 );
 
 CREATE TABLE campaign.chapter_reward_claim (
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   chapter_id  smallint NOT NULL CHECK (chapter_id BETWEEN 101 AND 199),
   reward_kind smallint NOT NULL CHECK (reward_kind IN (1, 2)),
   granted_at  timestamptz NOT NULL DEFAULT now(),

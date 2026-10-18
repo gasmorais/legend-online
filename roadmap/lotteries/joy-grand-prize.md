@@ -99,14 +99,14 @@ CREATE TABLE lotteries.joy_prize (
 
 CREATE TABLE lotteries.joy_player (
   event_id         INTEGER NOT NULL REFERENCES lotteries.joy_event(event_id) ON DELETE CASCADE,
-  player_id        INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   refreshes_used   INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (event_id, player_id)
 );
 
 CREATE TABLE lotteries.joy_player_prize (
   event_id   INTEGER  NOT NULL,
-  player_id  INTEGER  NOT NULL,
+  player_id  BIGINT  NOT NULL,
   tier       SMALLINT NOT NULL,
   position   SMALLINT NOT NULL,
   drawn      INTEGER  NOT NULL DEFAULT 0 CHECK (drawn >= 0),

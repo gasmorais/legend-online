@@ -87,7 +87,7 @@ CREATE TABLE shops.mvp_shop_pool_item (
 
 CREATE TABLE shops.mvp_shop_player (
   event_id        TEXT        NOT NULL REFERENCES shops.mvp_shop_event(event_id) ON DELETE CASCADE,
-  player_id       INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id       BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   coins           INTEGER     NOT NULL DEFAULT 0 CHECK (coins >= 0),
   next_refresh_at TIMESTAMPTZ NOT NULL,
   PRIMARY KEY (event_id, player_id)
@@ -95,7 +95,7 @@ CREATE TABLE shops.mvp_shop_player (
 
 CREATE TABLE shops.mvp_shop_slot (
   event_id      TEXT     NOT NULL,
-  player_id     INTEGER  NOT NULL,
+  player_id     BIGINT  NOT NULL,
   slot_index    SMALLINT NOT NULL CHECK (slot_index BETWEEN 0 AND 5),
   pool_item_id  INTEGER  NOT NULL,
   is_bought     BOOLEAN  NOT NULL DEFAULT false,

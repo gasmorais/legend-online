@@ -120,7 +120,7 @@ CREATE TABLE ares_battle.round (
 CREATE TABLE ares_battle.signup (
   edition_id      integer NOT NULL,
   round_no        smallint NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   server_id       integer NOT NULL,
   gold_paid       bigint NOT NULL,
   signed_at       timestamptz NOT NULL DEFAULT now(),

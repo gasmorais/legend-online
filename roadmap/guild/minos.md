@@ -174,7 +174,7 @@ CREATE UNIQUE INDEX minos_guild_node_slot ON guild.minos_guild_node (season_id, 
 
 CREATE TABLE guild.minos_player (
   season_id       integer  NOT NULL REFERENCES guild.minos_season(season_id),
-  player_id       integer  NOT NULL REFERENCES game.players(id),
+  player_id       BIGINT  NOT NULL REFERENCES game.players(id),
   guild_id        integer  NOT NULL REFERENCES guild.guilds(id),
   feat            integer  NOT NULL DEFAULT 0 CHECK (feat >= 0),
   challenge_count smallint NOT NULL DEFAULT 0 CHECK (challenge_count >= 0),
@@ -187,7 +187,7 @@ CREATE INDEX minos_player_rank ON guild.minos_player (season_id, guild_id, feat 
 
 CREATE TABLE guild.minos_player_node_reward (
   season_id  integer  NOT NULL,
-  player_id  integer  NOT NULL,
+  player_id  BIGINT  NOT NULL,
   level_id   smallint NOT NULL CHECK (level_id BETWEEN 1 AND 4),
   reward_idx smallint NOT NULL CHECK (reward_idx BETWEEN 1 AND 5),
   claimed_at timestamptz NOT NULL DEFAULT now(),
@@ -197,7 +197,7 @@ CREATE TABLE guild.minos_player_node_reward (
 
 CREATE TABLE guild.minos_player_feat_reward (
   season_id          integer NOT NULL,
-  player_id          integer NOT NULL,
+  player_id          BIGINT NOT NULL,
   reward_template_id integer NOT NULL CHECK (reward_template_id BETWEEN 201 AND 299),
   claimed_at         timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (season_id, player_id, reward_template_id),
@@ -206,7 +206,7 @@ CREATE TABLE guild.minos_player_feat_reward (
 
 CREATE TABLE guild.minos_season_reward_log (
   season_id          integer NOT NULL,
-  player_id          integer NOT NULL,
+  player_id          BIGINT NOT NULL,
   guild_id           integer NOT NULL,
   rank               integer NOT NULL CHECK (rank > 0),
   feat               integer NOT NULL,

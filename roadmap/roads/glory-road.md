@@ -74,7 +74,7 @@ All routes: send 9624 (0x2598) `C_GLORY_ROAD_OP` with `gloryroad.GloryRoadOpMsg`
 
 ```sql
 CREATE TABLE roads.glory_road_state (
-    player_id          integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     run_date           date        NOT NULL DEFAULT current_date,
     layer              smallint    NOT NULL DEFAULT 0 CHECK (layer BETWEEN 0 AND 15),
     jump_layer         smallint    NOT NULL DEFAULT 0,
@@ -97,7 +97,7 @@ CREATE TABLE roads.glory_road_state (
 );
 
 CREATE TABLE roads.glory_road_score_reward (
-    player_id    integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     grade        smallint NOT NULL,
     claimed_at   timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (player_id, grade)
@@ -130,3 +130,7 @@ Mirror opponents are chosen from snapshot data of other players (shared with are
 - [ ] G3 revives, G4 chests, G5 companions, G6 and G10 buffs, G7 skip, G8 score rewards, G9 tag
 - [ ] Daily reset
 - [ ] Tests: companion lock, HP carry, revive cost, star spending, chest limits
+
+## Screens
+
+- `GloryRoadView` (`decompiled/m9/scripts/gloryroad/view/GloryRoadView.as`) is the base view of the glory road map layer, the frame the glory road climb is drawn on.

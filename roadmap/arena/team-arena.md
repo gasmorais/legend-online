@@ -73,7 +73,7 @@ Field of the player info message handled in `CM/yishi/manager/PlayerManager.as:1
 
 ```sql
 CREATE TABLE arena.team_arena_daily (
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   day             date NOT NULL,
   matches_played  smallint NOT NULL DEFAULT 0,
   rewarded_left   smallint NOT NULL,                   -- matchRoomCount

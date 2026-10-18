@@ -68,7 +68,7 @@ Opcode **8675 (0x21e3) C_FORBIDDEN_BOSS_CLIENT_OP**, body `player.PlayerOpMsg` (
 
 ```sql
 CREATE TABLE forbidden_boss.first_kill_rewards (
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   boss_id     integer  NOT NULL,                 -- ForbiddenBossTemplates.Id
   state       smallint NOT NULL CHECK (state IN (1, 3)),  -- 2 (not reached) is the absence of a row
   reached_at  timestamptz NOT NULL DEFAULT now(),
@@ -80,7 +80,7 @@ CREATE TABLE forbidden_boss.first_kill_rewards (
 CREATE TABLE forbidden_boss.drop_records (
   record_id   bigserial   PRIMARY KEY,
   group_id    integer     NOT NULL,
-  player_id   integer     REFERENCES player.players(player_id) ON DELETE SET NULL,
+  player_id   BIGINT     REFERENCES player.players(player_id) ON DELETE SET NULL,
   nickname    text        NOT NULL,
   boss_id     integer     NOT NULL,
   item_id     integer     NOT NULL,

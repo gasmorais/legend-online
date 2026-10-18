@@ -95,7 +95,7 @@ All requests: send 5192 (0x1448) `C_LANDMINE_OP`, protobuf `PlayerOpMsg` (packag
 
 ```sql
 CREATE TABLE final_defense.land_mine_player (
-  player_id            INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   day                  DATE        NOT NULL,
   reward_count         SMALLINT    NOT NULL DEFAULT 0 CHECK (reward_count >= 0)
 );

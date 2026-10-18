@@ -96,7 +96,7 @@ Notes:
 
 ```sql
 CREATE TABLE guild.member_quest_progress (
-  player_id    INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id    BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   condition_id SMALLINT NOT NULL,
   period_key   DATE     NOT NULL,
   progress     INTEGER  NOT NULL DEFAULT 0 CHECK (progress >= 0),
@@ -104,7 +104,7 @@ CREATE TABLE guild.member_quest_progress (
 );
 
 CREATE TABLE guild.member_quest_claim (
-  player_id   INTEGER   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id   BIGINT   NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   template_id SMALLINT NOT NULL,
   period_key  DATE     NOT NULL,
   guild_id    INTEGER   NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
@@ -129,7 +129,7 @@ CREATE TABLE guild.guild_quest_claim (
 );
 
 CREATE TABLE guild.member_activity (
-  player_id   INTEGER  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES public.player(id) ON DELETE CASCADE,
   guild_id    INTEGER  NOT NULL REFERENCES guild.guild(id) ON DELETE CASCADE,
   day         DATE    NOT NULL,
   active_point INTEGER NOT NULL DEFAULT 0 CHECK (active_point >= 0),

@@ -61,7 +61,7 @@ CREATE TABLE planes.mine (
   layer_id             BIGINT      NOT NULL REFERENCES planes.layer(layer_id) ON DELETE CASCADE,
   x                    SMALLINT    NOT NULL,
   y                    SMALLINT    NOT NULL,
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   event_id             INTEGER     NOT NULL,
   occupied_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
   ends_at              TIMESTAMPTZ NOT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE planes.mine (
 CREATE INDEX mine_player_idx ON planes.mine (player_id);
 
 CREATE TABLE planes.daily_reward_log (
-  player_id            INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id            BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   layer_id             BIGINT      NOT NULL REFERENCES planes.layer(layer_id) ON DELETE CASCADE,
   day                  DATE        NOT NULL,
   PRIMARY KEY (player_id, layer_id, day)

@@ -200,7 +200,7 @@ Schema `theseus`.
 
 ```sql
 CREATE TABLE theseus.dungeon_runs (
-  player_id                integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id                BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   run_month                date     NOT NULL,              -- first day of the month of this run
   floor                    smallint NOT NULL DEFAULT 1 CHECK (floor BETWEEN 1 AND 28),
   free_actions             smallint NOT NULL DEFAULT 25 CHECK (free_actions >= 0),
@@ -212,7 +212,7 @@ CREATE TABLE theseus.dungeon_runs (
 );
 
 CREATE TABLE theseus.dungeon_blocks (
-  player_id   integer  NOT NULL REFERENCES theseus.dungeon_runs(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES theseus.dungeon_runs(player_id) ON DELETE CASCADE,
   floor       smallint NOT NULL,
   position    smallint NOT NULL CHECK (position BETWEEN 0 AND 44),  -- row-major index in the floor grid
   state       smallint NOT NULL DEFAULT 0 CHECK (state BETWEEN 0 AND 3),
@@ -221,7 +221,7 @@ CREATE TABLE theseus.dungeon_blocks (
 );
 
 CREATE TABLE theseus.dungeon_task_progress (
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   run_month   date     NOT NULL,
   task_id     smallint NOT NULL,                                    -- TheseusDungeonTaskTemplates.TemplateId
   progress    integer  NOT NULL DEFAULT 0,
@@ -231,7 +231,7 @@ CREATE TABLE theseus.dungeon_task_progress (
 
 CREATE TABLE theseus.dungeon_pending_battles (
   battle_id   text     PRIMARY KEY,
-  player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   floor       smallint NOT NULL,
   position    smallint NOT NULL,
   event_id    integer  NOT NULL,

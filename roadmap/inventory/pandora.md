@@ -73,7 +73,7 @@ CREATE TABLE inventory.pandora_levels (
 
 CREATE TABLE inventory.pandora_progress (
   event_id     INTEGER  NOT NULL REFERENCES inventory.pandora_events(event_id) ON DELETE CASCADE,
-  player_id    INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   level        SMALLINT NOT NULL DEFAULT 1,
   draws_used   SMALLINT NOT NULL DEFAULT 0,
   PRIMARY KEY (event_id, player_id)

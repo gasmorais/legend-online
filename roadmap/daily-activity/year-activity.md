@@ -66,7 +66,7 @@ Expected response for every op: item and currency pushes, then 551 with `opType`
 
 ```sql
 CREATE TABLE daily_activity.year_activity_state (
-    player_id        integer  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     event_id         integer  NOT NULL,
     checkin_states   jsonb    NOT NULL DEFAULT '{}'::jsonb,
     advanced_bought  boolean  NOT NULL DEFAULT false,

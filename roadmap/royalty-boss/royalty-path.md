@@ -83,7 +83,7 @@ No error code exists for this feature.
 CREATE SCHEMA IF NOT EXISTS royalty_boss;
 
 CREATE TABLE royalty_boss.progress (
-  player_id        integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   pass_boss_level  smallint    NOT NULL DEFAULT 0 CHECK (pass_boss_level BETWEEN 0 AND 600),
   royalty_level    smallint    NOT NULL DEFAULT 0 CHECK (royalty_level BETWEEN 0 AND 40),
   last_kill_at     timestamptz,
@@ -93,7 +93,7 @@ CREATE INDEX progress_rank ON royalty_boss.progress (royalty_level DESC, pass_bo
 
 CREATE TABLE royalty_boss.fight_log (
   fight_id     bigserial   PRIMARY KEY,
-  player_id    integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   boss_level   smallint    NOT NULL CHECK (boss_level BETWEEN 1 AND 600),
   won          boolean     NOT NULL,
   battle_id    bigint,
@@ -104,7 +104,7 @@ CREATE INDEX fight_log_player ON royalty_boss.fight_log (player_id, created_at D
 CREATE TABLE royalty_boss.rank_snapshot (
   snapshot_date  date        NOT NULL,
   rank_order     integer     NOT NULL CHECK (rank_order > 0),
-  player_id      integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   nickname       text        NOT NULL,
   royalty_level  smallint    NOT NULL,
   boss_level     smallint    NOT NULL,

@@ -86,7 +86,7 @@ CREATE TABLE theseus_arena.season (
 CREATE TABLE theseus_arena.player_state (
   mode            smallint NOT NULL,
   season_id       integer NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   server_id       integer NOT NULL,
   points          integer NOT NULL DEFAULT 0,
   stage_id        integer NOT NULL,                    -- pvpId

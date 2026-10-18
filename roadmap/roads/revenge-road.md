@@ -65,7 +65,7 @@ Route: send 9688 (0x25d8) `C_REVENGE_ROAD_OP` with `player.PlayerOpMsg` (`op` (#
 
 ```sql
 CREATE TABLE roads.revenge_road_state (
-    player_id          integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     max_node_id        smallint    NOT NULL DEFAULT 0 CHECK (max_node_id BETWEEN 0 AND 50),
     hearts             smallint    NOT NULL DEFAULT 200 CHECK (hearts >= 0),
     hearts_updated_at  timestamptz NOT NULL DEFAULT now(),
@@ -75,7 +75,7 @@ CREATE TABLE roads.revenge_road_state (
 );
 
 CREATE TABLE roads.revenge_road_node (
-    player_id       integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id       BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     node_id         smallint NOT NULL CHECK (node_id BETWEEN 1 AND 50),
     attacks_used    smallint NOT NULL DEFAULT 0,
     attacks_bought  smallint NOT NULL DEFAULT 0,

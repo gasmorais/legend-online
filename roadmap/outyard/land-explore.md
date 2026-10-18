@@ -58,13 +58,13 @@ Exploration points left (`OutyardAreaModel.exploreNum`, `decompiled/core_module/
 
 ```sql
 CREATE TABLE outyard.explore_points (
-  player_id      INTEGER  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT  PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   day            DATE     NOT NULL,
   points         SMALLINT NOT NULL DEFAULT 600 CHECK (points >= 0)
 );
 
 CREATE TABLE outyard.explore_board (
-  player_id      INTEGER     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id      BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   entrance_node  SMALLINT    NOT NULL,
   rows           SMALLINT    NOT NULL,
   cols           SMALLINT    NOT NULL,
@@ -75,7 +75,7 @@ CREATE TABLE outyard.explore_board (
 );
 
 CREATE TABLE outyard.explore_cell (
-  player_id   INTEGER  NOT NULL REFERENCES outyard.explore_board(player_id) ON DELETE CASCADE,
+  player_id   BIGINT  NOT NULL REFERENCES outyard.explore_board(player_id) ON DELETE CASCADE,
   name        TEXT     NOT NULL,
   cell_type   SMALLINT NOT NULL,
   event_id    SMALLINT NOT NULL,

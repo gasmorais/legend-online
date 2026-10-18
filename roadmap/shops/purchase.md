@@ -222,7 +222,7 @@ Result codes (`SM.shopingResult`, `SM:966-1060`, strings `shop.utils.ShopingHelp
 CREATE SCHEMA IF NOT EXISTS shops;
 
 CREATE TABLE shops.purchase_counter (
-  player_id     INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   source        SMALLINT    NOT NULL CHECK (source IN (0, 1)),
   offer_id      INTEGER     NOT NULL,
   period_kind   SMALLINT    NOT NULL CHECK (period_kind BETWEEN 0 AND 5),

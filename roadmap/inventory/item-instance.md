@@ -164,7 +164,7 @@ CREATE SEQUENCE inventory.item_id_seq MAXVALUE 2147483647;
 CREATE TABLE inventory.items (
   item_id          BIGINT      PRIMARY KEY DEFAULT nextval('inventory.item_id_seq')
                                CHECK (item_id BETWEEN 1 AND 2147483647),
-  player_id        INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id        BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id      INTEGER     NOT NULL,
   bag_type         SMALLINT    NOT NULL CHECK (bag_type >= 0),
   object_id        INTEGER     NOT NULL DEFAULT 0,
@@ -210,7 +210,7 @@ CREATE INDEX items_expiry_idx ON inventory.items ((begin_at + make_interval(mins
 
 CREATE TABLE inventory.item_log (
   log_id       BIGSERIAL   PRIMARY KEY,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   item_id      BIGINT,
   template_id  INTEGER     NOT NULL,
   delta        INTEGER     NOT NULL,

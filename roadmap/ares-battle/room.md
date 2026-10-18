@@ -84,7 +84,7 @@ Schema `ares_battle`. Room membership and turn state are in memory (A); persiste
 
 ```sql
 CREATE TABLE ares_battle.skill_set (
-  player_id       integer PRIMARY KEY REFERENCES player.players(player_id),
+  player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id),
   edition_id      integer NOT NULL,
   round_no        smallint NOT NULL,
   free_rerolls    smallint NOT NULL DEFAULT 3 CHECK (free_rerolls BETWEEN 0 AND 3),

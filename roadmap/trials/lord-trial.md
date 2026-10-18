@@ -114,7 +114,7 @@ Boss and monster composition per floor is not in the client templates (open ques
 
 ```sql
 CREATE TABLE trials.lord_trial_state (
-    player_id          integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     season_week        date        NOT NULL,
     key_count          integer     NOT NULL DEFAULT 0 CHECK (key_count >= 0),
     current_type       smallint    NOT NULL DEFAULT -1 CHECK (current_type BETWEEN -1 AND 2),
@@ -135,7 +135,7 @@ CREATE TABLE trials.lord_trial_state (
 );
 
 CREATE TABLE trials.lord_trial_best (
-    player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     season_week   date     NOT NULL,
     difficulty    smallint NOT NULL CHECK (difficulty BETWEEN 0 AND 2),
     best_floor    smallint NOT NULL DEFAULT 0 CHECK (best_floor BETWEEN 0 AND 30),
@@ -145,7 +145,7 @@ CREATE TABLE trials.lord_trial_best (
 CREATE INDEX lord_trial_best_rank_idx ON trials.lord_trial_best (season_week, difficulty, best_floor DESC, reached_at);
 
 CREATE TABLE trials.lord_trial_sweep (
-    player_id     integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     difficulty    smallint    NOT NULL CHECK (difficulty BETWEEN 0 AND 2),
     target_floor  smallint    NOT NULL,
     next_floor    smallint    NOT NULL,
@@ -156,7 +156,7 @@ CREATE TABLE trials.lord_trial_sweep (
 CREATE TABLE trials.lord_trial_rank_reward (
     season_week   date     NOT NULL,
     difficulty    smallint NOT NULL,
-    player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     rank          smallint NOT NULL CHECK (rank BETWEEN 1 AND 100),
     granted_at    timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (season_week, difficulty, player_id)

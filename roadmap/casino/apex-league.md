@@ -135,7 +135,7 @@ CREATE TABLE casino.apex_team (
 
 CREATE TABLE casino.apex_team_member (
   team_id    INTEGER NOT NULL REFERENCES casino.apex_team(team_id) ON DELETE CASCADE,
-  player_id  INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   confirmed  BOOLEAN NOT NULL DEFAULT FALSE,
   PRIMARY KEY (team_id, player_id)
 );
@@ -144,7 +144,7 @@ CREATE UNIQUE INDEX apex_member_one_team ON casino.apex_team_member (player_id);
 CREATE TABLE casino.apex_bet (
   season_id  INTEGER NOT NULL REFERENCES casino.apex_season(season_id) ON DELETE CASCADE,
   stage      SMALLINT NOT NULL,
-  player_id  INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   team_id    INTEGER NOT NULL REFERENCES casino.apex_team(team_id) ON DELETE CASCADE,
   coins      INTEGER NOT NULL CHECK (coins BETWEEN 100 AND 50000),
   won        BOOLEAN,
@@ -185,3 +185,7 @@ CREATE TABLE casino.apex_match (
 - [ ] Tables `apex_season`, `apex_team`, `apex_team_member`, `apex_bet`, `apex_match`
 - [ ] Weekly scheduler, matchmaking, scoring by division, rewards, title
 - [ ] Test: sign up by non captain refused; bet outside window refused; bet below 100 refused
+
+## Screens
+
+- `ApexHelpFrame` (`decompiled/m9/scripts/apex/ApexHelpFrame.as`) extends `SimpleHelpFrame` and shows the Apex league rules help, opened from the help button.

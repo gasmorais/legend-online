@@ -109,7 +109,7 @@ CREATE TABLE forbidden_boss.boss_damage (
   group_id    integer NOT NULL,
   boss_id     integer NOT NULL,
   life_no     integer NOT NULL,
-  player_id   integer NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id   BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   guild_id    integer,
   damage      bigint  NOT NULL DEFAULT 0 CHECK (damage >= 0),
   updated_at  timestamptz NOT NULL DEFAULT now(),
@@ -133,7 +133,7 @@ CREATE TABLE forbidden_boss.kills (
   group_id      integer     NOT NULL,
   boss_id       integer     NOT NULL,
   life_no       integer     NOT NULL,
-  owner_player_id integer   REFERENCES player.players(player_id) ON DELETE SET NULL,
+  owner_player_id BIGINT   REFERENCES player.players(player_id) ON DELETE SET NULL,
   owner_guild_id  integer,
   killed_at     timestamptz NOT NULL DEFAULT now(),
   UNIQUE (group_id, boss_id, life_no)

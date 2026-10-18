@@ -113,7 +113,7 @@ CREATE TABLE lotteries.gashapon_reward (
 
 CREATE TABLE lotteries.gashapon_player (
   event_id          INTEGER NOT NULL REFERENCES lotteries.gashapon_event(event_id) ON DELETE CASCADE,
-  player_id         INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id         BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   score             INTEGER NOT NULL DEFAULT 0,
   draws_to_floor    INTEGER NOT NULL,
   luck_used_day     INTEGER NOT NULL DEFAULT 0,
@@ -131,7 +131,7 @@ CREATE TABLE lotteries.gashapon_luck (
 
 CREATE TABLE lotteries.gashapon_luck_claim (
   luck_id    UUID    NOT NULL REFERENCES lotteries.gashapon_luck(luck_id) ON DELETE CASCADE,
-  player_id  INTEGER NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id  BIGINT NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   claimed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (luck_id, player_id)
 );

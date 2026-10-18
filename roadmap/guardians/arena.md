@@ -83,7 +83,7 @@ Receiver `CM.__childArenaBackHandler` (`CM:346-425`); only present fields are ap
 
 ## 6. Templates
 
-`ConfigInfos.xml`: `guard_pvp_bet_need_gold`, `guard_pvp_gimes`, `GuardPvp_AutoSign_VipGrade`. Reward tables are not in the client templates *(assumption: server side)*.
+`ConfigInfos.xml`: `guard_pvp_bet_need_gold`, `guard_pvp_gimes`, `GuardPvp_AutoSign_VipGrade`. The reward table is `raw/xml/tempinfos/GuardPvpDrop.xml`, loaded by `TempleteManager` into `ChildArenaRewardTempCate` (`decompiled/core_module/scripts/yishi/manager/TempleteManager.as:1250`) and read through `TempleteManager.instance.childArenaRewardTempCate`; the rank reward items shown by `V/ChildArenaRewardItem.as` come from it.
 
 ## 7. Persistent state
 

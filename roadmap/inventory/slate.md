@@ -97,7 +97,7 @@ Schema `inventory` (the slate package belongs to inventory; Theseus may reuse it
 ```sql
 CREATE TABLE inventory.slates (
   slate_id      BIGSERIAL   PRIMARY KEY,
-  player_id     INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   template_id   INTEGER     NOT NULL,
   level         SMALLINT    NOT NULL DEFAULT 0 CHECK (level BETWEEN 0 AND 60),
   rotation      SMALLINT    NOT NULL DEFAULT 0 CHECK (rotation BETWEEN 0 AND 3),
@@ -110,12 +110,12 @@ CREATE TABLE inventory.slates (
 CREATE INDEX slates_player_idx ON inventory.slates (player_id);
 
 CREATE TABLE inventory.slate_grid (
-  player_id       INTEGER PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id       BIGINT PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
   locked_mask     INTEGER NOT NULL DEFAULT 33554431 CHECK (locked_mask BETWEEN 0 AND 33554431)
 );
 
 CREATE TABLE inventory.slate_tasks (
-  player_id     INTEGER  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   task_id       INTEGER  NOT NULL,
   progress      INTEGER  NOT NULL DEFAULT 0,
   state         SMALLINT NOT NULL DEFAULT 0 CHECK (state IN (0,1,2)),

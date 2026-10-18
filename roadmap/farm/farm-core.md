@@ -257,3 +257,7 @@ Plots and animals: `farm.plots` ([farmland.md](farmland.md)). Friend states are 
 - [ ] Tables `farm.farms`, `farm.logs`.
 - [ ] Rules: level curve and hero cap, friend gp cap, plot opening, pasture capacity, daily counters.
 - [ ] Tests: level 11 player cannot load a farm; soil upgrade at farm level 29 refused; 9th soil upgrade costs 510; reaching farm level 10 opens plot 4; friend gp stops at 500.
+
+## Screens
+
+- `FarmSceneView` (`decompiled/m3/scripts/farm/FarmSceneView.as`) is the `BaseSceneView` that renders the walked farm scene, the outdoor layer above the farm grid handled by this module.

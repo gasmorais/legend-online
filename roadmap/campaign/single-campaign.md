@@ -75,7 +75,7 @@ The run state is per instance and lives in memory (see `campaign.instance` in [m
 ```sql
 CREATE TABLE campaign.solo_trail_run (
   instance_id   bigint   PRIMARY KEY REFERENCES campaign.instance(instance_id) ON DELETE CASCADE,
-  player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   campaign_id   integer  NOT NULL,
   current_index smallint NOT NULL DEFAULT 1 CHECK (current_index BETWEEN 1 AND 5),
   failed_count  smallint NOT NULL DEFAULT 0 CHECK (failed_count >= 0),

@@ -75,7 +75,7 @@ CREATE TABLE outyard.force_day (
 
 CREATE TABLE outyard.crystal_collect_log (
   id           BIGSERIAL   PRIMARY KEY,
-  player_id    INTEGER     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   amount       INTEGER     NOT NULL,
   collected_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );

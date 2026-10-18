@@ -95,20 +95,20 @@ CREATE TABLE tutorial.seven_day_reward_template (
 );
 
 CREATE TABLE tutorial.seven_day_state (
-    player_id    integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     begin_at     timestamptz NOT NULL,
     status       smallint    NOT NULL DEFAULT 1 CHECK (status IN (0, 1))
 );
 
 CREATE TABLE tutorial.seven_day_task_progress (
-    player_id    integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     task_id      integer     NOT NULL REFERENCES tutorial.seven_day_task_template(task_id),
     completed_at timestamptz,
     PRIMARY KEY (player_id, task_id)
 );
 
 CREATE TABLE tutorial.seven_day_claim (
-    player_id    integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id    BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     day          smallint    NOT NULL CHECK (day BETWEEN 1 AND 7),
     claimed_at   timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (player_id, day)

@@ -106,7 +106,7 @@ Config (`raw/xml/tempinfos/ConfigInfos.xml`):
 
 ```sql
 CREATE TABLE trials.sky_trial_state (
-    player_id          integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id          BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     energy             smallint    NOT NULL DEFAULT 500 CHECK (energy >= 0),
     energy_bought      smallint    NOT NULL DEFAULT 0,
     search_points      smallint    NOT NULL DEFAULT 0 CHECK (search_points BETWEEN 0 AND 1000),
@@ -116,7 +116,7 @@ CREATE TABLE trials.sky_trial_state (
 );
 
 CREATE TABLE trials.sky_trial_portal (
-    player_id     integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id     BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     portal_id     integer  NOT NULL,
     layer_num     smallint NOT NULL,
     search_count  smallint NOT NULL DEFAULT 0,
@@ -125,7 +125,7 @@ CREATE TABLE trials.sky_trial_portal (
 );
 
 CREATE TABLE trials.sky_trial_skill (
-    player_id   integer  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id   BIGINT  NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     skill_id    integer  NOT NULL,
     charges     smallint NOT NULL CHECK (charges BETWEEN 0 AND 5),
     PRIMARY KEY (player_id, skill_id)

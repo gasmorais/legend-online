@@ -50,7 +50,7 @@ CREATE INDEX ON venus_battle.team_score (group_type, total_score DESC);
 CREATE TABLE venus_battle.reward_grant (
   season_id       integer NOT NULL,
   week_no         smallint NOT NULL,
-  player_id       integer NOT NULL REFERENCES player.players(player_id),
+  player_id       BIGINT NOT NULL REFERENCES player.players(player_id),
   team_uid        uuid NOT NULL,
   group_type      smallint NOT NULL,
   amount          integer NOT NULL,

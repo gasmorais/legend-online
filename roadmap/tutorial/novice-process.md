@@ -119,7 +119,7 @@ The full node table is in [guided-steps.md](guided-steps.md) section 5.
 CREATE SCHEMA IF NOT EXISTS tutorial;
 
 CREATE TABLE tutorial.player_progress (
-    player_id        integer     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id        BIGINT     PRIMARY KEY REFERENCES player.players(player_id) ON DELETE CASCADE,
     novice_process   integer     NOT NULL DEFAULT 0 CHECK (novice_process >= 0 AND novice_process % 100 = 0),
     jump_novice      boolean     NOT NULL DEFAULT false,   -- PlayerMsg.jump_novice (#110): offer of 8871
     qte_guide_done   boolean     NOT NULL DEFAULT false,   -- PlayerMsg.qte_guide (#56), see guided-steps.md
@@ -129,7 +129,7 @@ CREATE TABLE tutorial.player_progress (
 
 CREATE TABLE tutorial.progress_log (
     id              bigserial   PRIMARY KEY,
-    player_id       integer     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+    player_id       BIGINT     NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
     old_value       integer     NOT NULL,
     new_value       integer     NOT NULL,
     source          text        NOT NULL CHECK (source IN ('socket_5017','http_update','jump_8871','skip_http','login_fixup','admin')),

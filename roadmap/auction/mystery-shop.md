@@ -109,7 +109,7 @@ Also using this module: the hero frame "Troca de itens" view (`decompiled/m5/scr
 
 ```sql
 CREATE TABLE auction.mystery_state (
-  player_id          INTEGER      PRIMARY KEY REFERENCES player.players(player_id),
+  player_id          BIGINT      PRIMARY KEY REFERENCES player.players(player_id),
   last_refresh_at    TIMESTAMPTZ  NOT NULL,
   paid_refresh_day   DATE         NOT NULL,
   paid_refresh_count SMALLINT     NOT NULL DEFAULT 0 CHECK (paid_refresh_count >= 0),
@@ -119,7 +119,7 @@ CREATE TABLE auction.mystery_state (
 );
 
 CREATE TABLE auction.mystery_slot (
-  player_id    INTEGER   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
+  player_id    BIGINT   NOT NULL REFERENCES player.players(player_id) ON DELETE CASCADE,
   slot_index   SMALLINT  NOT NULL CHECK (slot_index BETWEEN 0 AND 5),
   shop_id      INTEGER   NOT NULL,
   bought       BOOLEAN   NOT NULL DEFAULT false,
@@ -128,7 +128,7 @@ CREATE TABLE auction.mystery_slot (
 
 CREATE TABLE auction.mystery_event (
   event_id     BIGSERIAL    PRIMARY KEY,
-  player_id    INTEGER      NOT NULL REFERENCES player.players(player_id),
+  player_id    BIGINT      NOT NULL REFERENCES player.players(player_id),
   remark       TEXT         NOT NULL,
   created_at   TIMESTAMPTZ  NOT NULL DEFAULT now()
 );
