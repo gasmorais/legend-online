@@ -52,17 +52,33 @@ def parse(text: str) -> list[dict]:
     return fields
 
 
+def package_of(path: pathlib.Path, base: pathlib.Path) -> str:
+    current = path.parent
+    while (current.with_suffix(".as")).is_file():
+        current = current.parent
+    return ".".join(current.relative_to(base).parts)
+
+
 def main() -> None:
-    schema: dict[str, dict] = {}
+    found: dict[str, list] = {}
     for base in BASES:
         for path in sorted(base.rglob("*.as")):
             text = path.read_text(errors="replace")
             if "extends Message" not in text:
                 continue
-            name = path.stem
-            if name in schema:
+            pkg = package_of(path, base)
+            found.setdefault(path.stem, []).append((pkg, parse(text)))
+    schema: dict[str, dict] = {}
+    for name, entries in found.items():
+        pkgs = {pkg for pkg, _ in entries}
+        homonym = len(pkgs) > 1
+        for pkg, fields in entries:
+            key = name
+            if homonym and key in schema and schema[key]["package"] != pkg:
+                key = f"{pkg}.{name}"
+            if key in schema:
                 continue
-            schema[name] = {"package": str(path.parent.relative_to(base)).replace("/", "."), "fields": parse(text)}
+            schema[key] = {"package": pkg, "fields": fields}
     (ROOT / "protocol/proto.json").write_text(json.dumps(schema, ensure_ascii=False))
     nf = sum(len(m["fields"]) for m in schema.values())
     nm = sum(1 for m in schema.values() for f in m["fields"] if f["type"] == "MESSAGE")

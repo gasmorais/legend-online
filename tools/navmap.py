@@ -1519,7 +1519,7 @@ GAPS = [
     ("mail", "The mail list comes from the HTTP servlet `maillist` (zlib XML), not from the socket. `server/src/main.rs` answers it with `Result value=false`, so the Email frame opens empty"),
     ("world map", "Castle and wild land grids come from AMF (`/messagebroker/amf`) and opcode 5004 `sendCurrentScreen`; not answered"),
     ("login data", "`server/flows.json` consumes every `8224` login load, so bag, fashion, quests and friends are pushed on `8322 C_LEED_CLIENT` (templateId 1), which the client sends once right after the castle load"),
-    ("proto names", "`protocol/proto.json` keeps one message per simple name. 25 names collide (ItemInfoMsg, PropertyMsg, PosMsg, ArmyMsg...). Rules use a donor with the same field numbers through `$type` (bag items use `SimpleItemInfoMsg`) or the field-1 alias (`PropertyMsg.temp_data` = `simple.PropertyMsg.param1`)"),
+    ("proto names", "`protocol/proto.json` keys every message by its simple name, and homonyms carry the package prefix (21 keys such as `item.ItemInfoMsg`, `simple.PropertyMsg`, `party.OrderInfoMsg`). Rules use a donor with the same field numbers through `$type` (bag items use `SimpleItemInfoMsg`) or the field-1 alias (`PropertyMsg.temp_data` = `simple.PropertyMsg.param1`)"),
     ("repeated scalars", "The Rust encoder writes one tag per element of a repeated scalar. Fields that the AS3 reader decodes with `readPackedRepeated` need packed encoding, so rules leave those lists empty"),
     ("Reino do Céu", "No other players are injected (4597 player list) and node actions only work for nodes whose feature opens client side"),
 ]

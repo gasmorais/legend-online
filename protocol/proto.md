@@ -9,7 +9,7 @@ Related: [socket protocol](socket.md) (framing, cipher, opcodes), [opcode list](
 
 ## Totals
 
-Messages: **1645** in 160 groups.
+Messages: **1666** in 159 groups.
 
 ## Messages per group
 
@@ -19,22 +19,22 @@ Messages: **1645** in 160 groups.
 |---|---:|
 | `campaign` | 115 |
 | `active` | 112 |
-| `player` | 73 |
-| `battle` | 69 |
+| `player` | 74 |
+| `battle` | 70 |
 | `consortia` | 59 |
 | `army` | 52 |
-| `cccactive` | 49 |
+| `cccactive` | 50 |
 | `pet` | 48 |
+| `simple` | 47 |
 | `pvp` | 47 |
-| `simple` | 45 |
-| `item` | 33 |
+| `item` | 34 |
 | `room` | 29 |
-| `children` | 23 |
+| `children` | 24 |
 | `consortiaplay` | 23 |
 | `hugehead` | 23 |
 | `module` | 22 |
-| `minigame` | 20 |
-| `active.anniversary` | 19 |
+| `minigame` | 21 |
+| `active.anniversary` | 20 |
 | `vehicle` | 19 |
 | `chat` | 17 |
 | `bingo` | 16 |
@@ -50,6 +50,7 @@ Messages: **1645** in 160 groups.
 | `planes` | 12 |
 | `secretwar` | 12 |
 | `team` | 12 |
+| `sumpassion` | 11 |
 | `answerquestion` | 11 |
 | `childpatrol` | 11 |
 | `dragontalker` | 11 |
@@ -59,7 +60,6 @@ Messages: **1645** in 160 groups.
 | `antaeus` | 10 |
 | `crisis` | 10 |
 | `friend` | 10 |
-| `sumpassion` | 10 |
 | `christmas` | 9 |
 | `fish` | 9 |
 | `forbiddenboss` | 9 |
@@ -73,15 +73,19 @@ Messages: **1645** in 160 groups.
 | `airgarden` | 7 |
 | `archaeology` | 7 |
 | `blackjack` | 7 |
+| `culture` | 7 |
+| `party` | 7 |
+| `tollgate` | 7 |
 | `gamehall` | 7 |
 | `quest` | 7 |
 | `remotepet` | 7 |
+| `collection` | 6 |
+| `theseusdungeon` | 6 |
 | `consortiapve` | 6 |
-| `culture` | 6 |
 | `daylight` | 6 |
 | `fashion` | 6 |
+| `simpletask` | 6 |
 | `lucky` | 6 |
-| `party` | 6 |
 | `perkinlab` | 6 |
 | `shuttle` | 6 |
 | `steel` | 6 |
@@ -89,19 +93,18 @@ Messages: **1645** in 160 groups.
 | `vip` | 6 |
 | `Glory` | 5 |
 | `alchemyworkshop` | 5 |
+| `stargazing` | 5 |
 | `artifactgiftactivity` | 5 |
 | `bloodyrealm` | 5 |
-| `collection` | 5 |
 | `dungeon` | 5 |
 | `gamebox` | 5 |
 | `goddess` | 5 |
 | `rebate` | 5 |
-| `simpletask` | 5 |
 | `skytrial` | 5 |
 | `storehouse` | 5 |
-| `tollgate` | 5 |
 | `activitydaily` | 4 |
 | `areslords` | 4 |
+| `outercity` | 4 |
 | `consortiawant` | 4 |
 | `demonroad` | 4 |
 | `dungeonturn` | 4 |
@@ -117,15 +120,15 @@ Messages: **1645** in 160 groups.
 | `poseidonshop` | 4 |
 | `questionnarie` | 4 |
 | `secretexplore` | 4 |
+| `seek` | 4 |
 | `slate` | 4 |
-| `stargazing` | 4 |
-| `theseusdungeon` | 4 |
 | `titan` | 4 |
 | `universalActive` | 4 |
 | `warsoultower` | 4 |
 | `bottle` | 3 |
 | `braveleg` | 3 |
 | `carnival` | 3 |
+| `castle` | 3 |
 | `childseal` | 3 |
 | `customer` | 3 |
 | `expedition` | 3 |
@@ -137,13 +140,10 @@ Messages: **1645** in 160 groups.
 | `mapshop` | 3 |
 | `oldbacker` | 3 |
 | `redemptionroad` | 3 |
-| `seek` | 3 |
 | `stela` | 3 |
 | `watch` | 3 |
-| `outercity` | 3 |
 | `achievementtask` | 2 |
 | `auction` | 2 |
-| `castle` | 2 |
 | `cat` | 2 |
 | `exploitsshop` | 2 |
 | `gameplot` | 2 |
@@ -161,7 +161,7 @@ Messages: **1645** in 160 groups.
 | `titanland` | 2 |
 | `unrealshooting` | 2 |
 | `activity` | 1 |
-| `castle.CastleYieldMsg` | 1 |
+| `box` | 1 |
 | `changejob` | 1 |
 | `cross` | 1 |
 | `gateway` | 1 |
@@ -173,7 +173,6 @@ Messages: **1645** in 160 groups.
 | `memorycard` | 1 |
 | `novice` | 1 |
 | `privilege` | 1 |
-| `seek.SeekNodeListMsg` | 1 |
 | `sqmemory` | 1 |
 | `treasuremap` | 1 |
 | `viceplayer` | 1 |
