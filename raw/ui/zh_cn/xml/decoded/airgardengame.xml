@@ -1,0 +1,348 @@
+<style
+  name="airgardengame"
+  source="ui/zh_cn/swf/airgardengame.swf">
+  <sets>
+    <!-- 梭哈 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardMyScore_t"
+      args="Arial,14,0xffca02,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardCount_t"
+      args="Arial,14,0xffca02,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardRule_t"
+      args="Arial,12,0x948b8e,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardScoreName_t1"
+      args="Arial,14,0x948b8e,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardScoreName_t2"
+      args="Arial,14,0xffe401,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardScoreValue_t1"
+      args="Arial,14,0x948b8e,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtFivecardScoreValue_t2"
+      args="Arial,14,0xffe401,,,,,,right"
+      leading="0" />
+    <!-- 记忆翻牌 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtMemoryCardScore_t"
+      args="Arial,12,0xffca02,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtMemoryCardTime_t"
+      args="Arial,14,0xffca02,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtMemoryCardGoods1Count_t"
+      args="Arial,16,0xffca02,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtMemoryCardGoods2Count_t"
+      args="Arial,16,0xffca02,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtMemoryCardGoods1Name_t"
+      args="Arial,12,0xe1d6c0,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.airgardengame.txtMemoryCardGoods2Name_t"
+      args="Arial,12,0xe1d6c0,false,,,,,left"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <!-- 梭哈 -->
+    <bitmapData
+      resourceLink="asset.AirGardenGame.cardbg3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AirGardenGame.btnHold"
+      x="10"
+      y="125" />
+    <bitmapData
+      resourceLink="asset.AirGardenGame.cardbg4"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AirGardenGame.cardS"
+      x="-6"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.AirGardenGame.img1"
+      x="-4"
+      y="2" />
+  </bitmaps>
+  <customDisplay></customDisplay>
+  <components>
+    <!-- 连连看 -->
+    <component
+      classname="map.campaign.view.ui.airgarden.game.llk.AirGardenGameLlkFrame"
+      stylename="airGarden.AirGardenGameLlkFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="54"
+      width="796"
+      height="450" />
+    <!-- 梭哈 -->
+    <component
+      classname="map.campaign.view.ui.airgarden.game.fivecard.AirGardenGameFivecardFrame"
+      stylename="airGarden.AirGardenGameFivecardFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="44"
+      width="786"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.airgardengame.btnFivecardContinue"
+      backStyle="asset.AirGardenGame.btn2"
+      iconStyle="asset.AirGardenGame.str7"
+      iconInnerRectString="23,40,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="254"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtFivecardMyScore"
+      textFormatStyle="ui.airgardengame.txtFivecardMyScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="69"
+      height="18"
+      x="685"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtFivecardCount"
+      textFormatStyle="ui.airgardengame.txtFivecardCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="69"
+      height="18"
+      x="685"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtFivecardRule"
+      textFormatStyle="ui.airgardengame.txtFivecardRule_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="147"
+      height="238"
+      x="600"
+      y="160"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.airgardengame.btnFivecardOK"
+      backStyle="asset.AirGardenGame.btn2"
+      iconStyle="asset.AirGardenGame.str6"
+      iconInnerRectString="23,41,11,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="254"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.airgardengame.imgPic1"
+      resourceLink="asset.AirGardenGame.bg1,asset.AirGardenGame.str3,asset.AirGardenGame.img2,asset.AirGardenGame.str4,asset.AirGardenGame.str8"
+      imageRectString="-4|762|-4|410|13,592|88|35|20|13,592|161|118|24|13,624|103|121|18|13,608|71|60|17|13"
+      x="4"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtFivecardScoreName"
+      textFormatStyle="ui.airgardengame.txtFivecardScoreName_t1,ui.airgardengame.txtFivecardScoreName_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="139"
+      height="18"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtFivecardScoreValue"
+      textFormatStyle="ui.airgardengame.txtFivecardScoreValue_t1,ui.airgardengame.txtFivecardScoreValue_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="139"
+      height="18"
+      x="40"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="airGarden.fivecard.startBtn"
+      backStyle="asset.llk.startBtnBack"
+      iconStyle="asset.llk.startBtnIcon"
+      iconInnerRectString="46,141,17,37,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="234"
+      height="71"
+      x="187"
+      y="131" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="airGarden.fivecard.numb"
+      resourceLink="asset.AirGardenGame.b1,asset.AirGardenGame.b2,asset.AirGardenGame.b3,asset.AirGardenGame.b4,asset.AirGardenGame.b5,asset.AirGardenGame.b6,asset.AirGardenGame.b7,asset.AirGardenGame.b8,asset.AirGardenGame.b9,asset.AirGardenGame.b10,asset.AirGardenGame.bj,asset.AirGardenGame.bq,asset.AirGardenGame.bk"
+      scaleX="1"
+      scaleY="1"
+      x="4"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="airGarden.fivecard.numr"
+      resourceLink="asset.AirGardenGame.r1,asset.AirGardenGame.r2,asset.AirGardenGame.r3,asset.AirGardenGame.r4,asset.AirGardenGame.r5,asset.AirGardenGame.r6,asset.AirGardenGame.r7,asset.AirGardenGame.r8,asset.AirGardenGame.r9,asset.AirGardenGame.r10,asset.AirGardenGame.rj,asset.AirGardenGame.rq,asset.AirGardenGame.rk"
+      scaleX="1"
+      scaleY="1"
+      x="4"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="airGarden.fivecard.color"
+      resourceLink="asset.AirGardenGame.cardType1,asset.AirGardenGame.cardType2,asset.AirGardenGame.cardType3,asset.AirGardenGame.cardType4"
+      scaleX="1"
+      scaleY="1"
+      x="29"
+      y="72" />
+    <!-- 记忆翻牌 -->
+    <component
+      classname="map.campaign.view.ui.airgarden.game.memorycard.AirGardenGameMemoryCardFrame"
+      stylename="airGarden.AirGardenGameMemoryCardFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="44"
+      width="786"
+      height="510" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="airGarden.memorycard.bg"
+      resourceLink="asset.AirGardenGame.cardbg1,asset.AirGardenGame.cardbg2"
+      scaleX="1"
+      scaleY="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="airGarden.memorycard.icon"
+      resourceLink="asset.AirGardenGame.icon1,asset.AirGardenGame.icon2,asset.AirGardenGame.icon3,asset.AirGardenGame.icon4,asset.AirGardenGame.icon5,asset.AirGardenGame.icon6,asset.AirGardenGame.icon7,asset.AirGardenGame.icon8,asset.AirGardenGame.icon9,asset.AirGardenGame.icon10,asset.AirGardenGame.icon11,asset.AirGardenGame.icon12"
+      scaleX="1"
+      scaleY="1"
+      x="8"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="airGarden.memorycard.startBtn"
+      backStyle="asset.llk.startBtnBack"
+      iconStyle="asset.llk.startBtnIcon"
+      iconInnerRectString="46,141,17,37,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="234"
+      height="71"
+      x="204"
+      y="179" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.airgardengame.btnUse1"
+      backStyle="asset.AirGardenGame.btn"
+      iconStyle="asset.AirGardenGame.str5"
+      iconInnerRectString="15,39,11,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="650"
+      y="237" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.airgardengame.btnUse2"
+      backStyle="asset.AirGardenGame.btn"
+      iconStyle="asset.AirGardenGame.str5"
+      iconInnerRectString="15,39,11,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="650"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtMemoryCardScore"
+      textFormatStyle="ui.airgardengame.txtMemoryCardScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="18"
+      x="689"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtMemoryCardTime"
+      textFormatStyle="ui.airgardengame.txtMemoryCardTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="18"
+      x="689"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtMemoryCardGoods1Count"
+      textFormatStyle="ui.airgardengame.txtMemoryCardGoods1Count_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="696"
+      y="186" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtMemoryCardGoods2Count"
+      textFormatStyle="ui.airgardengame.txtMemoryCardGoods2Count_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="695"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtMemoryCardGoods1Name"
+      textFormatStyle="ui.airgardengame.txtMemoryCardGoods1Name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="89"
+      height="18"
+      x="631"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.airgardengame.txtMemoryCardGoods2Name"
+      textFormatStyle="ui.airgardengame.txtMemoryCardGoods2Name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="89"
+      height="18"
+      x="619"
+      y="337" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.airgardengame.memoryCardBg"
+      resourceLink="asset.AirGardenGame.bg3,asset.AirGardenGame.bg2,asset.AirGardenGame.bg2,asset.AirGardenGame.hint,asset.AirGardenGame.flip,asset.AirGardenGame.img2,asset.AirGardenGame.str2,asset.AirGardenGame.str3,asset.AirGardenGame.str1"
+      imageRectString="0|762|0|425|13,616|126|156|77|13,616|126|281|77|13,632|54|281|62|13,627|59|158|60|13,596|161|123|24|13,639|76|127|16|13,600|88|41|20|13,636|52|64|20|13"
+      x="3"
+      y="0" />
+  </components>
+</style>

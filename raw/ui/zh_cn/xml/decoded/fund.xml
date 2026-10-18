@@ -1,0 +1,866 @@
+<style
+  name="fund"
+  source="ui/zh_cn/swf/fundVein.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.Item.Txt_t"
+      args="Arial,14,0x00effe,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.actOpenTime.Txt_t"
+      args="Arial,12,0x66db17,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.actOpenTimeValue.Txt_t"
+      args="Arial,12,0xfff6ca,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.totalgetTxt_t"
+      args="Arial,18,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.fundPrompt.Txt_t"
+      args="Arial,12,0xfef500,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.Item.Txt_t_3"
+      args="Arial,18,0x00effe,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.rewardGetTimeTxt"
+      args="Arial,12,0xfff6ca,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.bottomTipsTxtSet"
+      args="Arial,12,0xfff6ca,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.bottomTotalTxtSet"
+      args="Arial,12,0xfff6ca,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.fundBuyitemTipconsume_t"
+      args="Arial,12,0xfff6ca" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.fundBuyitemTipDay_t"
+      args="Arial,12,0xfef500" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.newbuy.actOpenTime.Txt_t"
+      args="Arial,12,0xfef500,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.newbuy.fundPrompt.Txt_t"
+      args="Arial,12,0xfe0000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fundnewbuy.getBag1Txt_t"
+      args="Arial,12,0xffb330,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fundnewbuy.getBag2Txt_t"
+      args="Arial,12,0x5bdcd7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fund.FundNewBuyView.hasChargeAlert_t"
+      args="Arial,14,0xfef500,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.fund.sexwomen" />
+    <bitmapData
+      resourceLink="asset.fund.middleImg"
+      x="200"
+      y="73" />
+    <bitmapData
+      resourceLink="asset.fund.icon1" />
+    <bitmapData
+      resourceLink="asset.fund.icon2" />
+    <bitmapData
+      resourceLink="asset.fund.icon3" />
+    <bitmapData
+      resourceLink="asset.fund.iconBg"
+      x="4"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fund.splitLine"
+      x="0"
+      y="136"
+      width="124" />
+    <bitmapData
+      resourceLink="asset.fund.itemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fund.get"
+      x="41"
+      y="170" />
+    <bitmapData
+      resourceLink="asset.fund.cost"
+      x="66"
+      y="146" />
+    <bitmapData
+      resourceLink="asset.fund.LightLine"
+      x="234"
+      y="424" />
+    <bitmapData
+      resourceLink="asset.fund.value"
+      x="83"
+      y="37" />
+    <bitmapData
+      resourceLink="asset.fund.rewardPic"
+      x="83"
+      y="38" />
+    <bitmapData
+      resourceLink="asset.fund.rewardbg"
+      x="81"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.fund.acceptedPic"
+      x="190"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.fund.splitLine2"
+      x="1"
+      y="63"
+      width="445" />
+    <bitmapData
+      resourceLink="asset.fund.bg4"
+      x="207"
+      y="77"
+      width="597"
+      height="230" />
+    <bitmapData
+      resourceLink="asset.fund.cutLine"
+      x="1"
+      y="83"
+      width="250" />
+    <bitmapData
+      resourceLink="asset.fund.acceptDatePic"
+      x="80"
+      y="14"
+      width="150" />
+    <bitmapData
+      resourceLink="asset.fund.bottomBg"
+      x="0"
+      y="595" />
+    <bitmapData
+      resourceLink="asset.fundnew.sexwomen"
+      x="-100"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.fundnew.newbgBox"
+      x="125"
+      y="72" />
+    <bitmapData
+      resourceLink="asset.fundnew.spliteLine" />
+    <bitmapData
+      resourceLink="asset.fundnew.chargeBg"
+      x="591"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.fundnew.splitLine2"
+      x="4"
+      y="153" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="fund.DropItem"
+      iconStyle="fund.DropItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="20"
+      profileHeight="20"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="fund.DropItemIcon"
+      iconHeight="20"
+      iconWidth="20"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="fundnew.BaseItemView"
+      iconStyle="fundnew.ItemIcon"
+      textStyle="fundnew.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="1"
+      profileY="1"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="fundnew.ItemIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="25"
+      loadingY="25"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fundnew.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="4"
+      y="30" />
+  </customDisplay>
+  <components>
+    <component
+      classname="fundVein.FundVeinFrame"
+      stylename="fundVein.FundVeinFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="46"
+      width="877"
+      height="726"
+      moveInnerRectString="0,70,0,45,1" />
+    <component
+      classname="fund.FundFrame"
+      stylename="fund.FundFrame"
+      parentStyle="core.Frame2"
+      containerX="-16"
+      containerY="-25"
+      width="847"
+      height="510"
+      moveInnerRectString="0,70,0,45,1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.bg1"
+      parentStyle="core.describeBackground_style09"
+      x="195.5"
+      y="67"
+      width="470"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.newbg1"
+      parentStyle="core.describeBackground_style09"
+      x="195.5"
+      y="67"
+      width="753"
+      height="430" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fund.bgBox"
+      parentStyle="core.describeBackground_style27"
+      x="201"
+      y="72"
+      width="460"
+      height="390" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.bg2"
+      resourceLink="asset.fund.bg2"
+      scaleGridString="26,26,24,32"
+      x="204"
+      y="77"
+      width="456" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.bg4"
+      resourceLink="asset.fund.bg4"
+      scaleGridString="20,20,555,241"
+      x="0"
+      y="0"
+      width="858"
+      height="592" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fund.buyItemHBox"
+      spacing="22"
+      x="217"
+      y="89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.itemnumTxt"
+      textFormatStyle="fund.Item.Txt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.itemnumTxt_3"
+      textFormatStyle="fund.Item.Txt_t_3"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.itemnumTxt_2"
+      autoSize="none"
+      parentStyle="fund.itemnumTxt"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fund.recharge"
+      iconInnerRectString="19,116,8,41,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.fund.payBtnIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="700"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fund.getBtn"
+      iconInnerRectString="18,81,5,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.fund.getBtnBg"
+      iconStyle="asset.fund.getBtnIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="89"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.actOpenTimeTxt"
+      textFormatStyle="fund.actOpenTime.Txt_t"
+      filterString="core.normal_f"
+      x="207"
+      y="361" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.actGetTimeTxt"
+      textFormatStyle="fund.actOpenTime.Txt_t"
+      filterString="core.normal_f"
+      x="207"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.actOpenTimeVauleTxt"
+      textFormatStyle="fund.actOpenTimeValue.Txt_t"
+      filterString="core.normal_f"
+      x="305"
+      y="361" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.actGetTimeVauleTxt"
+      textFormatStyle="fund.actOpenTimeValue.Txt_t"
+      filterString="core.normal_f"
+      x="305"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.actpromptVauleTxt"
+      textFormatStyle="fund.fundPrompt.Txt_t"
+      filterString="core.normal_f"
+      x="207"
+      y="398" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fund.gotoPrepaidBtn"
+      iconInnerRectString="19,116,8,41,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.fund.payBtnIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="363"
+      y="417" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fund.rewardPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      viewportInnerRectString="1,280,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="280"
+      height="350"
+      x="0"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.getrewardTimeTxt"
+      parentStyle="fund.actpromptVauleTxt"
+      x="207"
+      y="365"
+      width="410" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="fund.totalGet"
+      textFieldStyle="fund.totalgetTxt"
+      colors="0xf0f078,0xffa302"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="85"
+      height="27"
+      x="286"
+      y="605" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.totalgetTxt"
+      textFormatStyle="fund.totalgetTxt_t"
+      mouseEnabled="false"
+      width="85"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="fund.itemVBox"
+      x="0"
+      y="0"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.totalgetTxt_2"
+      textFormatStyle="fund.rewardGetTimeTxt"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      width="175"
+      height="34"
+      x="85"
+      y="3"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.bottomTipsTxt"
+      textFormatStyle="fund.bottomTipsTxtSet"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      width="280"
+      height="30"
+      x="10"
+      y="608" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.bottomTotalTxt"
+      textFormatStyle="fund.bottomTotalTxtSet"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      width="90"
+      height="30"
+      x="300"
+      y="602" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fund.Item.Btn"
+      backStyle="asset.core.Style18Btn"
+      iconStyle="asset.fund.getBtnIcon_2"
+      iconInnerRectString="22,46,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="340"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.hasGetImg"
+      resourceLink="asset.core.ReceivedImg"
+      x="340"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fund.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="620"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fundVein.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="805"
+      y="-35" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fund.tipBtn"
+      backStyle="asset.core.Style18Btn"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="190"
+      y="40"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapV="-20"
+      tipGapH="-20" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fund.RewardHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fund.FundFrame.helpFrame.helpContent"
+      titleText="fund.FundFrame.helpFrame.helpTitle"
+      textWidth="373" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fund.diamondImg"
+      resourceLink="asset.core.SmallPointImg,asset.fund.bindPoint"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.deedImg"
+      resourceLink="asset.fund.deed"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      tipStyle="yishi.view.tips.goods.PropTips" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fund.LevelImg"
+      resourceLink="asset.fund.icon1,asset.fund.icon2,asset.fund.icon3,asset.fund.icon4,asset.fund.icon5"
+      tipDirctions="7,1,6,5,2,4,0,3"
+      tipGapH="-35"
+      tipGapV="-35"
+      tipStyle="yishi.view.tips.FundBuyItemTip"
+      isFollowMouse="false"
+      x="92"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fund.diamondIcon"
+      resourceLink="asset.fund.rewardIcon_1,asset.fund.rewardIcon_2,asset.fund.rewardIcon_3,asset.fund.rewardIcon_4,asset.fund.rewardIcon_5"
+      tipDirctions="7,1,6,5,2,4,0,3"
+      tipGapH="-35"
+      tipGapV="-35"
+      tipStyle="yishi.view.tips.FundBuyItemTip"
+      isFollowMouse="false"
+      x="11"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="fund.fundBuyItemTipVbox"
+      x="0"
+      y="7"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fund.consumeHBox"
+      spacing="0"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.consumeTxt"
+      textFormatStyle="fund.fundBuyitemTipconsume_t"
+      filterString="core.normal_f"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.dayTxt"
+      textFormatStyle="fund.fundBuyitemTipDay_t"
+      filterString="core.normal_f"
+      mouseEnabled="false" />
+    <!-- 新手矿脉 -->
+    <component
+      classname="fund.FundNewbieFrame"
+      stylename="fund.FundNewbieFrame"
+      parentStyle="core.Frame2"
+      containerX="-16"
+      containerY="-25"
+      width="666"
+      height="485"
+      moveInnerRectString="0,70,0,45,1" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fund.NewbieRewardHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fund.FundNewbieFrame.helpFrame.helpContent"
+      titleText="fund.FundNewbieFrame.helpFrame.helpTitle"
+      textWidth="373" />
+    <!-- 宝物矿脉 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="fund.newbuyItemVBox"
+      x="126"
+      y="72"
+      spacing="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.newbuy.actOpenTimeTxt"
+      textFormatStyle="fund.newbuy.actOpenTime.Txt_t"
+      filterString="core.normal_f"
+      x="140"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.newbuy.actpromptVauleTxt"
+      textFormatStyle="fund.newbuy.fundPrompt.Txt_t"
+      filterString="core.normal_f"
+      x="124"
+      y="460"
+      width="400"
+      height="34"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fundnewbuy.iconBg"
+      resourceLink="asset.fundnew.icon1,asset.fundnew.icon2,asset.fundnew.icon3,asset.fundnew.icon4,asset.fundnew.icon5"
+      tipDirctions="7,1,6,5,2,4,0,3"
+      tipGapH="-35"
+      tipGapV="-35"
+      isFollowMouse="false"
+      x="6"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fundnewbuy.getBag1Txt"
+      textFormatStyle="fundnewbuy.getBag1Txt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      x="70"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fundnewbuy.getBag2Txt"
+      textFormatStyle="fundnewbuy.getBag2Txt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      x="303"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fundnewbuy.preBtn"
+      backStyle="asset.fundnew.preBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="355"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fundnewbuy.nextBtn"
+      backStyle="asset.fundnew.nextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="574"
+      y="20" />
+    <!-- 	<component classname="com.pickgliss.ui.controls.container.HBox" stylename="fundnewbuy.hbox1"  -->
+    <!-- 		spacing="5" x="120" y="12"  -->
+    <!-- 	/> -->
+    <!-- 	<component classname="com.pickgliss.ui.controls.container.HBox" stylename="fundnewbuy.hbox2"  -->
+    <!-- 		spacing="5" x="345"  y="12" -->
+    <!-- 	/> -->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fundnewbuy.hbox1"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fundnewbuy.hbox2"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fundnewbuy.costdiamondTxt"
+      textFormatStyle="fundnewbuy.getBag2Txt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      x="646"
+      y="28"
+      width="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fundnewbuy.costContractTxt"
+      textFormatStyle="fundnewbuy.getBag2Txt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      x="662"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fundnewbuy.partInBtn"
+      backStyle="asset.fundnew.partInBtnBg"
+      iconStyle="asset.fundnew.partInBtnText"
+      iconInnerRectString="10,77,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="595"
+      y="29" />
+    <!-- 领奖界面 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.helpTxt"
+      textFormatStyle="fund.newbuy.fundPrompt.Txt_t"
+      filterString="core.normal_f"
+      x="6"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fundnew.rewardPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,420,0,0,2"
+      vScrollbarInnerRectString="15,-2,2,2,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="447"
+      height="317"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fundNewDoubleGiftItem.getBtn"
+      iconInnerRectString="16,51,7,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.fundnew.getBtnBg"
+      iconStyle="asset.fundnew.getBtnIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="330"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fundVeinGiftItem.getBtn"
+      iconInnerRectString="16,40,7,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="fundnew.getBtnBg"
+      iconStyle="asset.fund.acceptPic"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="186"
+      y="42"
+      width="70"
+      height="37" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fundnew.getBtnBg"
+      resourceLink="asset.fundnew.getBtnBg"
+      scaleGridString="10,10,20,20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.totalgetTxt_3"
+      textFormatStyle="fund.newbuy.actOpenTime.Txt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      width="85"
+      height="27"
+      x="13"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fundNewRewardItem.hBox"
+      x="0"
+      y="30"
+      spacing="5"
+      width="210" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fundNewRewardItem.itemListDouble"
+      hScrollbarStyle="fundNewRewardItem.itemListHScrollbar"
+      hScrollbarInnerRectString="0,0,114,17,1"
+      viewportInnerRectString="0,0,-30,162,1"
+      hScrollProxy="0"
+      hUnitIncrement="56"
+      mouseWheelEnable="false"
+      width="220"
+      height="122"
+      x="65"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="fundNewRewardItem.itemListHScrollbar"
+      trackStyle="fundNewRewardItem.itemListHScroll_BackH"
+      thumbStyle="core.Scrollbar04_StepH"
+      decreaseButtonStyle="core.Scrollbar04_left"
+      increaseButtonStyle="core.Scrollbar04_right"
+      trackInnerRectString="-2,-2,0,0,0"
+      thumbAreaInnerRectString="10,10,2,2,0"
+      decreaseButtonInnerRectString="0,0,11,12,11"
+      increaseButtonInnerRectString="0,0,11,12,12"
+      orientation="1"
+      thumbMinSize="38"
+      width="200"
+      height="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fundNewRewardItem.itemListHScroll_BackH"
+      parentStyle="core.Scrollbar04_BackH"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="fundnewReward.LightEffect"
+      resourceLink="asset.fundnewReward.LightEffect"
+      x="27"
+      y="-27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.FundNewBuyView.hasChargeAlert"
+      textFormatStyle="fund.FundNewBuyView.hasChargeAlert_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      width="120"
+      height="36"
+      x="545"
+      y="435"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fund.FundNewBuyView.hasChargePoint"
+      textFormatStyle="fundnewbuy.getBag2Txt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      width="85"
+      height="27"
+      x="640"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fund.FundNewBuyView.pointImage"
+      resourceLink="asset.core.SmallPointImg"
+      x="682"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fund.bottomBg"
+      resourceLink="asset.fund.bottomBg"
+      scaleGridString="10,10,20,20"
+      x="0"
+      y="0"
+      width="857"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="asset.fund.bottomBg"
+      resourceLink="asset.fund.bottomBg"
+      scaleGridString="10,10,20,20"
+      x="0"
+      y="0"
+      width="857"
+      height="45" />
+  </components>
+</style>

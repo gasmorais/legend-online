@@ -1,0 +1,215 @@
+<style
+  name="numbuy"
+  source="ui/zh_cn/swf/numbuy.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="numbuy.BuyFrameGoodsNameTextStyle_t"
+      args="Arial,14,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="numbuy.usebindPointTxt_t"
+      args="Arial,12,0xfffeac,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="numbuy.BuyNumTextStyle_t"
+      args="Arial,14,0xfffd7d,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="numbuy.BuyNumTextStyle_f"
+      args="0xff3c00,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="numbuy.priceValueTextStyle_t"
+      args="Arial,15,0xddcda0,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="numbuy.priceValueTextStyle_tt"
+      args="Arial,14,0xff0000,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.numbuy.diamond" />
+    <bitmapData
+      resourceLink="asset.numbuy.integral"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.numbuy.FashionPiece" />
+  </bitmaps>
+  <customDisplay>
+    <!-- BuyShop -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="numbuy.BuyBaseItemView"
+      iconStyle="numbuy.BuyBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="3"
+      profileY="3"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="30"
+      y="11"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="32"
+      strengthenY="32" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="numbuy.BuyBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="numbuy.StarShopItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="0"
+      loadingY="1"
+      tipStyle="tips.StarTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,0,3,5,7"
+      tipGapH="0"
+      tipGapV="5"
+      iconWidth="0"
+      iconHeight="0"
+      x="63"
+      y="46" />
+  </customDisplay>
+  <components>
+    <!-- 购买框Frame -->
+    <component
+      classname="yishi.view.frame.NumBuyFrame"
+      stylename="numbuy.numbuyFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.quickBuyFrameBg"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-8,1"
+      closeInnerRectString="29,-17,-12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="12"
+      width="271"
+      height="291" />
+    <!-- bg -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="numbuy.BuyFrameBg"
+      resourceLink="asset.numbuy.ExchangeBg,asset.numbuy.ExchangePrice,asset.numbuy.PayNum,asset.numbuy.ExchangeNum,numbuy.BuyInputBg"
+      imageRectString="0|268|0|241|13,50|43|98|17|13,0|96|96|18|13,12|77|135|21|13,94|87|129|30|13"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="numbuy.BuyInputBg"
+      resourceLink="asset.core.TextInputBG2"
+      x="94"
+      y="129" />
+    <!-- “+”按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="numbuy.AddButton"
+      backStyle="asset.core.UpButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="21"
+      x="193"
+      y="138" />
+    <!-- “-”按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="numbuy.DeleteButton"
+      parentStyle="numbuy.AddButton"
+      backStyle="asset.core.DownButton"
+      x="220" />
+    <!-- 优先使用绑定钻石框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="numbuy.usebindPointTxt"
+      textFormatStyle="numbuy.usebindPointTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="numbuy.useBindPointBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      textStyle="numbuy.usebindPointTxt"
+      fieldX="-7"
+      fieldY="3"
+      x="68"
+      y="163" />
+    <!-- 输入数量框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="numbuy.BuyNumTextStyle"
+      textFormatStyle="numbuy.BuyNumTextStyle_t"
+      autoSize="none"
+      x="100"
+      y="134"
+      height="20"
+      width="76"
+      type="input"
+      restrict="0-9"
+      filterString="numbuy.BuyNumTextStyle_f" />
+    <!-- 物品名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="numbuy.BuyGoodsNameStyle"
+      textFormatStyle="numbuy.BuyFrameGoodsNameTextStyle_t"
+      filterString="core.DefaultFilter"
+      x="95"
+      y="25"
+      autoSize="none"
+      width="148"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="numbuy.buyBtn"
+      iconInnerRectString="20,94,10,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.numbuy.AuctionShopBtnBg"
+      iconStyle="asset.numbuy.SureExchange"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="70"
+      y="193" />
+    <!-- 价格 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="numbuy.priceValueTextStyle"
+      textFormatStyle="numbuy.priceValueTextStyle_t,numbuy.priceValueTextStyle_tt"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="numbuy.useBindPoint_notJoinActTxt"
+      parentStyle="core.useBindPoint_notJoinActTxt"
+      x="184"
+      y="122"
+      width="89"
+      height="49"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="numbuy.PetSymbolImg"
+      resourceLink="asset.numbuy.Money101,asset.numbuy.Money102,asset.numbuy.Money103,asset.numbuy.Money104,asset.numbuy.Money105,asset.numbuy.Money106,asset.numbuy.Money107" />
+  </components>
+</style>

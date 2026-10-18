@@ -1,0 +1,373 @@
+<style
+  name="blackjack"
+  source="ui/zh_cn/swf/blackjack.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.iconRewardItemText_t"
+      args="Arial,12,0xfffefe,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.goldCardTxt_t"
+      args="Arial,12,0xfffefe,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.excCurTxt_t"
+      args="Arial,12,0xc7b079,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.excNeedTxt_t"
+      args="Arial,12,0xc7b079,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.currentPointTxt_t"
+      args="Arial,12,0xeaff78,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.betPointTxt_t"
+      args="Arial,12,0xfffefe,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="blackjack.betBlackChipTxt_t"
+      args="Arial,12,0x08bd08,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.blackjack.back" />
+    <bitmapData
+      resourceLink="asset.blackjack.betPointCard"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.blackjack.betPointCardLight"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.blackjack.betPointRewardBg" />
+    <bitmapData
+      resourceLink="asset.blackjack.exchangeNote"
+      x="3"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.blackjack.excCurrentTxt"
+      x="9"
+      y="206" />
+    <bitmapData
+      resourceLink="asset.blackjack.excNeedTxt"
+      x="10"
+      y="226" />
+    <bitmapData
+      resourceLink="asset.blackjack.startCardBg"
+      x="220"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.blackjack.startCardTxt"
+      x="274"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.blackjack.exchangeNum" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="blackjack.BlackjackLayer"
+      stylename="blackjack.BlackjackLayer"
+      x="3"
+      y="2" />
+    <custom
+      classname="blackjack.BlackjackExchangeView"
+      stylename="blackjack.BlackjackExchangeView"
+      x="630"
+      y="8" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="blackjack.iconRewardView"
+      iconStyle="blackjack.iconRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="blackjack.iconRewardItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="46"
+      profileHeight="46"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="blackjack.iconRewardIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="22"
+      loadingY="22"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.iconRewardItemText"
+      parentStyle="core.BaseItemText"
+      textFormatStyle="blackjack.iconRewardItemText_t"
+      autoSize="none"
+      x="13"
+      y="29"
+      width="33"
+      height="20" />
+    <custom
+      classname="asset.blackjack.cardStack"
+      stylename="asset.blackjack.cardStack" />
+    <custom
+      classname="asset.blackjack.cardVictory"
+      stylename="asset.blackjack.cardVictory"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <custom
+      classname="asset.blackjack.cardFailure"
+      stylename="asset.blackjack.cardFailure"
+      scaleX="0.8"
+      scaleY="0.8" />
+  </customDisplay>
+  <components>
+    <component
+      classname="blackjack.BlackjackFrame"
+      stylename="blackjack.BlackjackFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="62"
+      width="875"
+      height="620" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="blackjack.betPointImage"
+      resourceLink="asset.blackjack.betPoint1,asset.blackjack.betPoint2,asset.blackjack.betPoint3"
+      x="10"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="blackjack.currentPointNote1"
+      resourceLink="asset.blackjack.currentPointNote"
+      x="36"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="blackjack.currentPointNote2"
+      resourceLink="asset.blackjack.currentPointNote"
+      x="492"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.currentPointTxt1"
+      textFormatStyle="blackjack.currentPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="69"
+      y="184" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.currentPointTxt2"
+      parentStyle="blackjack.currentPointTxt1"
+      x="535"
+      y="248" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="blackjack.takeCardBtn"
+      backStyle="asset.blackjack.takeCardBg"
+      iconStyle="asset.blackjack.takeCardTxt"
+      iconInnerRectString="42,60,18,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="139"
+      height="62"
+      x="61"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="blackjack.stopCardBtn"
+      backStyle="asset.blackjack.stopCardBg"
+      iconStyle="asset.blackjack.stopCardTxt"
+      iconInnerRectString="40,60,20,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="139"
+      height="62"
+      x="424"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="blackjack.goldCardBtn"
+      backStyle="blackjack.goldCardBg"
+      textStyle="blackjack.goldCardTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="68"
+      height="28"
+      backgoundInnerRectString="120,20,21,13"
+      x="220"
+      y="446" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="blackjack.goldCardBg"
+      resourceLink="asset.blackjack.goldCardBg,asset.blackjack.goldCardTxt"
+      imageRectString="0|182|0|63|13,23|100|22|17|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.goldCardTxt"
+      textFormatStyle="blackjack.goldCardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="120"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="blackjack.ExchangeMulNote1"
+      resourceLink="asset.blackjack.exchangeLinebg,asset.blackjack.exchangeCreditTxt"
+      imageRectString="0|197|0|22|13,22|69|3|17|13"
+      x="2"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="blackjack.ExchangeHBox"
+      x="18"
+      y="140"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.excCurTxt"
+      textFormatStyle="blackjack.excCurTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="79"
+      y="204" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.excNeedTxt"
+      textFormatStyle="blackjack.excNeedTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="79"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="blackjack.exchangeBtn"
+      backStyle="asset.blackjack.exchangeBtn"
+      iconStyle="asset.blackjack.exchangeTxt"
+      iconInnerRectString="18,42,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="78"
+      height="38"
+      x="112"
+      y="204" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="blackjack.ExchangeMulNote2"
+      resourceLink="asset.blackjack.exchangeLinebg,asset.blackjack.exchangeRecordTxt"
+      imageRectString="0|197|0|22|13,30|102|3|18|13"
+      x="0"
+      y="268" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="blackjack.ScrollPanel"
+      vScrollbarStyle="blackjack.VScrollbar"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="4,-2,8,3,5"
+      vScrollProxy="0"
+      vUnitIncrement="10"
+      width="194"
+      height="195"
+      x="4"
+      y="302" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="blackjack.VScrollbar"
+      parentStyle="core.VScrollbar02"
+      trackStyle="consortia.Scrollbar04_Back"
+      trackInnerRectString="1,2,0,0,0"
+      thumbAreaInnerRectString="1,1,10,10,0"
+      width="15"
+      height="260" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="blackjack.Vbox"
+      width="440"
+      spacing="0"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.betPointTxt"
+      textFormatStyle="blackjack.betPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="26"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.betPointTxt1"
+      textFormatStyle="blackjack.betPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="290"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="blackjack.betBlackChipTxt"
+      textFormatStyle="blackjack.betBlackChipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="44"
+      y="417" />
+    <!-- 部队帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="blackjack.blackjackHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="blackjack.BlackjackFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="378" />
+    <component
+      stylename="blackjack.blackjackHelpBtn"
+      classname="com.pickgliss.ui.controls.BaseButton"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="800"
+      y="-30" />
+  </components>
+</style>

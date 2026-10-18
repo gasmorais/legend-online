@@ -1,0 +1,337 @@
+<style
+  name="platinum"
+  source="ui/zh_cn/swf/platinum.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="platinum.RemainTimeText_t"
+      args="Arial,12,0xc7b079,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="platinum.descTxt_t"
+      args="Arial,12,0xc3a98d,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="platinum.hammerNumText_t"
+      args="Arial,14,0xa1eefe,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="platinum.txt1_t"
+      args="Arial,14,0xbaad89,true,,,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="mainBar.StripView"
+      stylename="platinumFrame.StripView"
+      x="15"
+      y="55"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,4,0,5,6,3"
+      tipGapV="0"
+      tipGapH="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="platinum.PlatinumFrame"
+      stylename="platinum.PlatinumFrame"
+      parentStyle="core.Frame1"
+      width="720"
+      height="623"
+      containerX="19"
+      containerY="65" />
+    <!-- 背景圖片 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="platinum.PlatinumFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="678"
+      height="493"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="platinum.PlatinumFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="671"
+      height="480"
+      x="5"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="platinum.PlatinumFrameBack3"
+      parentStyle="core.describeBackground_style04"
+      width="230"
+      height="484"
+      x="445"
+      y="23" />
+    <!-- 魔罐界面右边信息 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="platinum.TitleBack1"
+      resourceLink="asset.bottle.TitleBack"
+      x="457"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="platinum.TitleBack4"
+      resourceLink="asset.bottle.bestGoods"
+      x="412"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="platinum.TitleBack2"
+      resourceLink="asset.bottle.TitleBack,asset.bottle.rewards"
+      x="457"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="platinum.TitleBack3"
+      resourceLink="asset.bottle.TitleBack,asset.bottle.luckShow"
+      x="457"
+      y="345" />
+    <!-- 魔罐界面中间 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="platinum.PlatinumBack"
+      resourceLink="asset.platinum.PlatinumBack"
+      x="3"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="platinum.CountdownBugleIcon"
+      resourceLink="asset.bottle.BigBugleIcon"
+      x="100"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="platinum.openBtn1"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.platinum.openBtn1"
+      displacement="true"
+      iconInnerRectString="30,69,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="platinum.openBtn2"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.platinum.openBtn2"
+      displacement="true"
+      iconInnerRectString="25,80,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="255"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="platinum.RewardsListScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="200"
+      height="120"
+      x="464"
+      y="224" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="platinum.LuckShowListScrollPanel"
+      parentStyle="platinum.RewardsListScrollPanel"
+      y="370"
+      x="464"
+      height="133" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="platinum.RewardsVBox"
+      x="0"
+      y="0"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="platinum.LuckShowVBox"
+      x="493"
+      y="235"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="platinum.BottleHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="635"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="platinum.RemainTimeText"
+      textFormatStyle="platinum.RemainTimeText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="330"
+      height="35"
+      x="115"
+      y="35"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="platinum.fallItemsBtn"
+      backStyle="asset.bottle.fallItemsBtnBack"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="2"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="platinum.goldBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.platinum.selectedGoldBtn"
+      unselectedIconStyle="asset.platinum.unselectedGoldBtn"
+      selectedIconInnerRectString="12,74,4,26,13"
+      unselectedIconInnerRectString="15,71,4,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="platinum.platinumBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.platinum.selectedPlatinumBtn"
+      unselectedIconStyle="asset.platinum.unselectedPlatinumBtn"
+      selectedIconInnerRectString="12,74,4,28,13"
+      unselectedIconInnerRectString="14,71,4,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="platinum.btnHbox"
+      spacing="3"
+      x="20"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="platinum.descTxt"
+      textFormatStyle="platinum.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="365"
+      height="68"
+      wordWrap="true"
+      x="45"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="platinum.hammerBmp"
+      resourceLink="platinum.hammerBmp.goldBack,platinum.hammerBmp.platinumBack"
+      x="15"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="platinum.hammerBmp.goldBack"
+      resourceLink="asset.platinum.back,asset.platinum.goldBmp"
+      imageRectString="0|112|0|31|13,5|28|3|28|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="platinum.hammerBmp.platinumBack"
+      resourceLink="asset.platinum.back,asset.platinum.platinumBmp"
+      imageRectString="0|112|0|31|13,5|28|3|28|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="platinum.hammerNumText"
+      textFormatStyle="platinum.hammerNumText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="60"
+      height="25"
+      x="47"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="platinum.plusBtn"
+      backStyle="asset.platinum.plus"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="103"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="platinum.hammer1"
+      resourceLink="asset.platinum.goldBmp,asset.platinum.platinumBmp"
+      x="105"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="platinum.hammer2"
+      resourceLink="asset.platinum.goldBmp,asset.platinum.platinumBmp"
+      x="295"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="platinum.txt1"
+      textFormatStyle="platinum.txt1_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="50"
+      height="25"
+      x="130"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="platinum.txt2"
+      textFormatStyle="platinum.txt1_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="50"
+      height="25"
+      x="320"
+      y="385" />
+    <!-- 魔罐掉落 -->
+    <component
+      classname="platinum.PlatinumDropFrame"
+      stylename="platinum.PlatinumDropFrame"
+      parentStyle="core.QuickBuyFrame"
+      closeInnerRectString="29,-17,-4,29,14"
+      containerX="5"
+      containerY="22"
+      width="588"
+      height="235" />
+    <!-- 魔罐帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="platinum.PlatinumHelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="338"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="50"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="platinum.PlatinumFrame.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="338" />
+  </components>
+</style>

@@ -1,0 +1,3430 @@
+<style
+  name="outyard"
+  source="ui/zh_cn/swf/outyard.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.sortText_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.SteelMemberItem.NameTxt_t"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardBlessFrame.attackRateTxt_t"
+      args="Arial,14,0x4fd648,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardBlessFrame.attackNoteTxt_t"
+      args="Arial,14,0x4fd648,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardBlessFrame.blessNumTxt_t"
+      args="Arial,12,0xcfcfcf,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.ActorOperTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardFrame.lastAttackTxt_t"
+      args="Arial,14,0xc8b36a,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardFrame.bottomAttackNoteTxt_t"
+      args="Arial,14,0xd6a948,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardFrame.bottomAttackValueTxt_t"
+      args="Arial,14,0x4aec12,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardFrame.executionValueTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardNoticeView.noticeValueTxt_t"
+      args="Arial,14,0xc4c1bc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardOpeningItem.openingValueTxt_t"
+      args="Arial,14,0xf9f8b7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardActorView.consortiaNameTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardActorView.leftArmyTxt_t"
+      args="Arial,12,0xc4c1bc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardActorView.scoreTxt_t"
+      args="Arial,12,0xd6a948,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardFigureItem.playerNumTxt_t"
+      args="Arial,12,0xFFFFFF,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardShowView.leftArmyTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardShowView.guildArmyTxt_t"
+      args="Arial,12,0xe85b5b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.forceNameTxt_t"
+      args="Arial,11,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.occupyNumTxt_t"
+      args="Arial,12,0xff9600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.nodeForceTxt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.crystalInformationTxt_t"
+      args="Arial,14,0xece4dd,,,,,,left"
+      letterSpacing="0"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.leftTimeTxt_t"
+      args="Arial,12,0xece4dd,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.joinTxt_t"
+      args="Arial,12,0xf5d0b6,,,,,,center"
+      letterSpacing="2"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.joinTxt2_t"
+      args="Arial,12,0xb6e8f5,,,,,,center"
+      letterSpacing="2"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.monsterLevelTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t1"
+      args="Arial,12,0x3dbdff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t2"
+      args="Arial,12,0xff3d3d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t3"
+      args="Arial,12,0x0de798,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t4"
+      args="Arial,12,0xFF66FF,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t11"
+      args="Arial,13,0x3dbdff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t22"
+      args="Arial,13,0xff3d3d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t33"
+      args="Arial,13,0x0de798,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.occupyNumTxt_t44"
+      args="Arial,13,0xFF66FF,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.RouteNodeView.leftTimeTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardAreaDiceView.exploreTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.LandNodeView.JoinTxt_t"
+      args="Arial,12,0xe9c68c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardRouteView.coolingTxt_t"
+      args="Arial,13,0xffe552,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoTopView.tansuoNumTxt_t"
+      args="Arial,13,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoTopView.xingdongNumTxt_t"
+      args="Arial,13,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.OutyardInfoView.leftCountTxt_t"
+      args="Arial,13,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEventLeftButton.titleTxt_t"
+      args="Arial,14,0xffc34f,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEvent.leftSelectedBtnText_t1"
+      args="Arial,12,0xffc34f,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEvent.leftSelectedBtnText_t2"
+      args="Arial,14,0xffc34f,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanRightView.skillCountTxt_f"
+      args="Arial,13,0xffffff,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.Style.EnterWarText02"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.Style.EnterWarText03"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.VipNameTxt_f"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.Style.EnterWarMemberText03"
+      args="Arial,12,0xfdfc04,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.Style.EnterWarMemberText04"
+      args="Arial,12,0xfdfc04,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.Style.EnterWarText01_t1"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.Style.EnterWarText01_t2"
+      args="Arial,12,0xfcc64d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEventFrame.serverTimeText_t"
+      args="Arial,13,0xfff338,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEventFrame.activityText_t"
+      args="Arial,13,0x04ef25,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEventFrame.desText_t"
+      args="Arial,12,0x00bff8,,,,,,left"
+      letterSpacing="0"
+      leading="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardEventFrame.openText_t"
+      args="Arial,13,0xfff338,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanPlayerItem.nickText_t"
+      args="Arial,12,0xf9d404,,,,,,center"
+      underline="true"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanPlayerItem.noteText1_t"
+      args="Arial,13,0xf9d404,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanPlayerItem.noteText2_t"
+      args="Arial,13,0xf9d404,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanRightView.bufftxt_t1"
+      args="Arial,12,0xffc34f,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanRightView.bufftxt_t2"
+      args="Arial,12,0x00FF00,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyardTitanRightView.bufftxt_t3"
+      args="Arial,12,0xdf320a,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.stoneTxt_t"
+      args="Arial,12,0xfff720,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.shuttleScoreTxt_t"
+      args="Arial,16,0xfffdd1,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.shuttleBossTxt_t"
+      args="Arial,13,0xfffdd1,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.resetLeftTxt_t"
+      args="Arial,13,0xfffdd1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.refreshLeftTxt_t"
+      args="Arial,12,0xfffdd1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.arcane.buyLeftTxt_t"
+      args="Arial,15,0xfdf068,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.arcane.BossNameTxt_t"
+      args="Arial,14,0xfde65d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.arcane.FinderTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.arcane.LeftTimeTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.petNote_t"
+      args="Arial,13,0xcec6a8,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.arcane.noteTxt_t"
+      args="Arial,12,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.refreshLeftTxtRed_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outyard.shuttle.freshNoteTxt_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <!-- title-分割线-->
+    <bitmapData
+      resourceLink="asset.outyard.spaceLine"
+      x="0"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.outyard.blessAttactNote"
+      x="100"
+      y="113" />
+    <bitmapData
+      resourceLink="asset.outyard.blessAttactBg"
+      x="70"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.outyard.blessDefenceNote"
+      x="343"
+      y="112" />
+    <bitmapData
+      resourceLink="asset.outyard.blessDefenceBg"
+      x="320"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.outyard.blessBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.blessAttactNote1"
+      x="87"
+      y="218" />
+    <bitmapData
+      resourceLink="asset.outyard.blessDefenceNote1"
+      x="337"
+      y="218" />
+    <bitmapData
+      resourceLink="asset.outyard.bg"
+      x="54"
+      y="66" />
+    <bitmapData
+      resourceLink="asset.outyard.NoticeViewTitle"
+      x="74"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.outyard.OpeningViewTitle"
+      x="88"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.outyard.noticeInputBmp"
+      x="10"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.outyard.inputBgBmp" />
+    <bitmapData
+      resourceLink="asset.outyard.executionBmp"
+      x="518"
+      y="476" />
+    <!-- World大地图 -->
+    <bitmapData
+      resourceLink="asset.outyard.worldBg" />
+    <bitmapData
+      resourceLink="asset.outyard.mapFrameBmp"
+      x="510"
+      y="43" />
+    <!-- Land节点 -->
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp1"
+      x="-10"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp2"
+      x="-10"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp3"
+      x="-10"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp4"
+      x="-10"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp5"
+      x="0"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp6"
+      x="0"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp7"
+      x="0"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp8"
+      x="0"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp9"
+      x="-5"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp10"
+      x="-5"
+      y="-15" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp11"
+      x="-11"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp12"
+      x="-12"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.outyard.landNodeBmp14"
+      x="-12"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.outyard.landBg1"
+      x="495"
+      y="192" />
+    <bitmapData
+      resourceLink="asset.outyard.landBg2"
+      x="347"
+      y="908" />
+    <bitmapData
+      resourceLink="asset.outyard.landBg3"
+      x="1763"
+      y="729" />
+    <bitmapData
+      resourceLink="asset.outyard.landBg4"
+      x="1523"
+      y="108" />
+    <bitmapData
+      resourceLink="asset.outyard.landBg5"
+      x="924"
+      y="528" />
+    <bitmapData
+      resourceLink="asset.outyard.landBg6"
+      x="1232"
+      y="1217" />
+    <bitmapData
+      resourceLink="asset.outyard.headSoldierBmp"
+      width="20"
+      height="29" />
+    <bitmapData
+      resourceLink="asset.outyard.clickArrow"
+      x="-15"
+      y="-71" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoBgYellow"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoBgVs"
+      x="0"
+      y="104" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoBgPeace"
+      x="0"
+      y="104" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoBgCrystal"
+      x="0"
+      y="104" />
+    <bitmapData
+      resourceLink="asset.outyard.zhanlingshuBmp"
+      x="120"
+      y="43" />
+    <bitmapData
+      resourceLink="asset.outyard.topBack"
+      x="10"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.outyard.kenengBmp"
+      x="116"
+      y="179" />
+    <bitmapData
+      resourceLink="asset.outyard.bukeBmp"
+      x="115"
+      y="179" />
+    <bitmapData
+      resourceLink="asset.outyard.hepingzhuangtaiBmp"
+      x="58"
+      y="110" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoNoticeNote"
+      x="13"
+      y="177" />
+    <bitmapData
+      resourceLink="asset.outyard.landMapName1"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.landMapName2"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.landMapName3"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.landMapName4"
+      x="3"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.landMapName5"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.landMapName6"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.routeNodeBg1"
+      x="-111"
+      y="-95" />
+    <bitmapData
+      resourceLink="asset.outyard.routeNodeBg2"
+      x="-124"
+      y="-107" />
+    <bitmapData
+      resourceLink="asset.outyard.routeOccupy1"
+      x="-39"
+      y="-52" />
+    <bitmapData
+      resourceLink="asset.outyard.routeOccupy2"
+      x="-39"
+      y="-52" />
+    <bitmapData
+      resourceLink="asset.outyard.routeOccupy3"
+      x="-39"
+      y="-52" />
+    <bitmapData
+      resourceLink="asset.outyard.routeOccupy4"
+      x="-39"
+      y="-52" />
+    <bitmapData
+      resourceLink="asset.outyard.routeOccupy5"
+      x="-39"
+      y="-52" />
+    <bitmapData
+      resourceLink="asset.outyard.routeSlotBg"
+      x="450"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.outyard.nodeNumBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.nodeBlueTower" />
+    <bitmapData
+      resourceLink="asset.outyard.nodeRedTower" />
+    <bitmapData
+      resourceLink="asset.outyard.nodeAttackBmp" />
+    <bitmapData
+      resourceLink="asset.outyard.nodeDefenceBmp" />
+    <!-- 区域战单机版 -->
+    <bitmapData
+      resourceLink="asset.outyard.areaBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arrowMc1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arrowMc2"
+      x="-8"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arrowMc3"
+      x="-2"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arrowMc4"
+      x="-8"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.areaSmallBarBg1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.areaSmallBarBg2"
+      x="0"
+      y="31" />
+    <bitmapData
+      resourceLink="asset.outyard.areaSmallPoint"
+      x="-3"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoSword"
+      x="1"
+      y="102" />
+    <bitmapData
+      resourceLink="asset.outyard.areaNodeBg"
+      x="-60"
+      y="-30" />
+    <bitmapData
+      resourceLink="asset.outyard.areaSmallBg"
+      x="3"
+      y="31" />
+    <bitmapData
+      resourceLink="asset.outyard.beizhanzhongBmp" />
+    <bitmapData
+      resourceLink="asset.outyard.xiuzhanzhongBmp" />
+    <bitmapData
+      resourceLink="asset.outyard.zhengduozhongBmp" />
+    <bitmapData
+      resourceLink="asset.outyard.landInfoVs" />
+    <bitmapData
+      resourceLink="asset.outyard.dikuangxiaoBmp"
+      x="1"
+      y="379" />
+    <bitmapData
+      resourceLink="asset.outyard.tansuoliBmp"
+      x="-38"
+      y="398" />
+    <bitmapData
+      resourceLink="asset.outyard.xingdongliBmp"
+      x="-38"
+      y="428" />
+    <bitmapData
+      resourceLink="asset.outyard.mapTxtNoteBmp"
+      x="1100"
+      y="21" />
+    <bitmapData
+      resourceLink="asset.outyard.rightViewBg"
+      x="0"
+      y="154" />
+    <bitmapData
+      resourceLink="asset.outyard.rightViewBg1"
+      x="0"
+      y="155" />
+    <bitmapData
+      resourceLink="asset.outyard.rightViewNote1"
+      x="22"
+      y="161" />
+    <bitmapData
+      resourceLink="asset.outyard.rightViewNote2"
+      x="36"
+      y="88" />
+    <bitmapData
+      resourceLink="asset.outyard.titanBg" />
+    <bitmapData
+      resourceLink="asset.outyard.titanBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.titanPlayerBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.titanTitleBmp"
+      x="248"
+      y="-30" />
+    <bitmapData
+      resourceLink="asset.outyard.register.head1"
+      x="12"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.outyard.register.head2"
+      x="12"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.outyard.register.head3"
+      x="12"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.outyard.register.head4"
+      x="12"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.outyard.register.head5"
+      x="12"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.outyard.register.head6"
+      x="12"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.outyard.titanNoteBmp1"
+      x="7"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.outyard.titanNoteBmp2"
+      x="1"
+      y="264"
+      width="95" />
+    <bitmapData
+      resourceLink="asset.outyard.titanExchangeNum" />
+    <bitmapData
+      resourceLink="asset.outyard.titanAddChallengeBmp"
+      x="105"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.outyard.titanArrowBmp"
+      x="25"
+      y="0" />
+    <!-- title-分割线-->
+    <bitmapData
+      resourceLink="asset.outyard.progress.leftarrow"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.progress.rightarrow"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.resetBtnBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.resetTxtBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.receiveBtnBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.receiveTxtBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.title.brightBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.petSelectBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.chainBmp"
+      x="12"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.assetNumBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.titleBmp"
+      x="537"
+      y="-8" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.scoreBmp"
+      x="505"
+      y="565" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.scoreBmp"
+      x="11"
+      y="90" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.leftBmp"
+      x="11"
+      y="105" />
+    <bitmapData
+      resourceLink="asset.outyard.level.normalBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.normalTxt"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.purgatoryBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.purgatoryTxt"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.difficultBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.difficultTxt"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.forbiddenTxt"
+      x="14"
+      y="48" />
+    <bitmapData
+      resourceLink="asset.outyard.level.nightmareBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.level.nightmareTxt"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.SSS"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.S"
+      x="9"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.E"
+      x="7"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.D"
+      x="5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.C"
+      x="7"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.bossNumBmp"
+      x="7"
+      y="99" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.bg" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.B"
+      x="6"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttleItem.A"
+      x="6"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.killedBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.forbiddenBmp"
+      x="19"
+      y="450" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.attackBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.shareBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.scoreBmp"
+      x="18"
+      y="443" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.resBtnBmp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.addBtn"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outyard.ShuttleScoreBg"
+      x="5"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.outyard.headAdd"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.petTxtNoteBmp"
+      x="100"
+      y="-45" />
+    <bitmapData
+      resourceLink="asset.outyard.arcane.pageNumBg"
+      x="345"
+      y="445" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.leftBmp"
+      y="613"
+      x="310" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.fightPetBmp"
+      x="16"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.scoreNote"
+      x="16"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.assetScoreBmp" />
+    <bitmapData
+      resourceLink="asset.outyard.progress.chestOpenBmp"
+      x="0"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.fightSetBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.outyard.shuttle.brightItemBmp"
+      x="-8"
+      y="-9" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="outyard.OutyardMemberItem"
+      stylename="outyard.OutyardMemberItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="outyard.OutyardFrame.actorContain"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.OutyardFigureView"
+      stylename="outyard.OutyardFigureView"
+      x="53"
+      y="65" />
+    <custom
+      classname="outyard.OutyardNoticeView"
+      stylename="outyard.OutyardNoticeView"
+      x="511"
+      y="194" />
+    <custom
+      classname="outyard.OutyardOpeningView"
+      stylename="outyard.OutyardOpeningView"
+      x="504"
+      y="2" />
+    <custom
+      classname="outyard.OutyardActorView"
+      stylename="outyard.OutyardActorView"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.outyard.figureNum"
+      stylename="outyard.figureNum"
+      x="-15"
+      y="6" />
+    <custom
+      classname="outyard.OutyardChangeView"
+      stylename="outyard.OutyardChangeView"
+      x="400" />
+    <custom
+      classname="outyard.scene.OutyardLandView"
+      stylename="outyard.scene.OutyardLandView"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.scene.OutyardRouteView"
+      stylename="outyard.scene.OutyardRouteView"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.scene.OutyardInfoView"
+      stylename="outyard.scene.OutyardInfoView"
+      x="974"
+      y="142" />
+    <custom
+      classname="outyard.scene.OutyardInfoTopView"
+      stylename="outyard.scene.OutyardInfoTopView"
+      x="974"
+      y="142" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.scene.containSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.scene.arrowSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.scene.mapSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="outyard.scene.lineSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="outyard.OutyardAreaView.stepSprite"
+      x="-15"
+      y="-205" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.scene.nodeSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.scene.shapeSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.OutyardHunterView"
+      stylename="outyard.OutyardHunterView" />
+    <custom
+      classname="outyard.OutyardAreaSmallBar"
+      stylename="outyard.OutyardAreaSmallBar"
+      x="1312"
+      y="18" />
+    <custom
+      classname="asset.outyard.areaTriangleBmp"
+      stylename="asset.outyard.areaTriangleBmp" />
+    <custom
+      classname="asset.outyard.mapShape1"
+      stylename="asset.outyard.mapShape1"
+      x="552"
+      y="229" />
+    <custom
+      classname="asset.outyard.mapShape2"
+      stylename="asset.outyard.mapShape2"
+      x="347"
+      y="941" />
+    <custom
+      classname="asset.outyard.mapShape3"
+      stylename="asset.outyard.mapShape3"
+      x="1813"
+      y="750" />
+    <custom
+      classname="asset.outyard.mapShape4"
+      stylename="asset.outyard.mapShape4"
+      x="1593"
+      y="147" />
+    <custom
+      classname="asset.outyard.mapShape5"
+      stylename="asset.outyard.mapShape5"
+      x="984"
+      y="563" />
+    <custom
+      classname="asset.outyard.mapShape6"
+      stylename="asset.outyard.mapShape6"
+      x="1232"
+      y="1212" />
+    <custom
+      classname="asset.outyard.ProgressCoolingBlue"
+      stylename="asset.outyard.ProgressCoolingBlue"
+      x="1220"
+      y="626" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.ProgressCoolingBlueStrip"
+      x="1220"
+      y="626"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="asset.outyard.ProgressAttackRed"
+      stylename="asset.outyard.ProgressAttackRed"
+      x="612"
+      y="711" />
+    <custom
+      classname="asset.outyard.ProgressBlueBar"
+      stylename="asset.outyard.occupyProgressBar1" />
+    <custom
+      classname="asset.outyard.ProgressRedBar"
+      stylename="asset.outyard.occupyProgressBar2" />
+    <custom
+      classname="asset.outyard.ProgressGreenBar"
+      stylename="asset.outyard.occupyProgressBar3" />
+    <custom
+      classname="asset.outyard.ProgressPurpleBar"
+      stylename="asset.outyard.occupyProgressBar4" />
+    <custom
+      classname="asset.outyard.ProgressExploreMc"
+      stylename="asset.outyard.ProgressExploreMc"
+      x="44"
+      y="30" />
+    <custom
+      classname="asset.outyard.diceBtnBg"
+      stylename="asset.outyard.diceBtnBg"
+      x="15" />
+    <custom
+      classname="asset.outyard.rollOverMc"
+      stylename="asset.outyard.rollOverMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.scene.OutyardSwordView"
+      stylename="outyard.scene.OutyardSwordView" />
+    <custom
+      classname="asset.outyard.defenceMc"
+      stylename="asset.outyard.defenceMc"
+      x="55"
+      y="-40" />
+    <custom
+      classname="asset.outyard.figure_1_2"
+      stylename="asset.outyard.figure_1_2" />
+    <custom
+      classname="asset.outyard.figure_1_3"
+      stylename="asset.outyard.figure_1_3" />
+    <custom
+      classname="asset.outyard.figure_1_4"
+      stylename="asset.outyard.figure_1_4" />
+    <custom
+      classname="asset.outyard.figure_2_1"
+      stylename="asset.outyard.figure_2_1" />
+    <custom
+      classname="asset.outyard.figure_2_3"
+      stylename="asset.outyard.figure_2_3" />
+    <custom
+      classname="asset.outyard.figure_2_4"
+      stylename="asset.outyard.figure_2_4" />
+    <custom
+      classname="asset.outyard.figure_3_1"
+      stylename="asset.outyard.figure_3_1" />
+    <custom
+      classname="asset.outyard.figure_3_2"
+      stylename="asset.outyard.figure_3_2" />
+    <custom
+      classname="asset.outyard.figure_3_4"
+      stylename="asset.outyard.figure_3_4" />
+    <custom
+      classname="asset.outyard.figure_4_1"
+      stylename="asset.outyard.figure_4_1" />
+    <custom
+      classname="asset.outyard.figure_4_2"
+      stylename="asset.outyard.figure_4_2" />
+    <custom
+      classname="asset.outyard.figure_4_3"
+      stylename="asset.outyard.figure_4_3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.executionStrip"
+      x="585"
+      y="476"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.occupyStrip"
+      x="115"
+      y="37"
+      tipStyle="outyard.MultipleLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="outyard.MultipleLineTip"
+      enableHtml="true"
+      contentWidth="150" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.diceBtnStripView1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="10"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="21"
+      y="19" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.diceBtnStripView2"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="10"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="113"
+      y="19" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.diceBtnStripView3"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="10"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="205"
+      y="19" />
+    <custom
+      classname="asset.outyard.diceBtnImage"
+      stylename="outyard.diceBtnImage1" />
+    <custom
+      classname="asset.outyard.diceBtnImage"
+      stylename="outyard.diceBtnImage2" />
+    <custom
+      classname="asset.outyard.diceBtnImage"
+      stylename="outyard.diceBtnImage3" />
+    <custom
+      classname="asset.outyard.numberGreen"
+      stylename="asset.outyard.numberGreen"
+      x="-14"
+      y="-250" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outyardTitanRightView.SkillItemIcon1"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="22"
+      y="317" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outyardTitanRightView.SkillItemIcon2"
+      parentStyle="outyardTitanRightView.SkillItemIcon1"
+      x="88"
+      y="317" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outyardTitanRightView.SkillItemIcon3"
+      parentStyle="outyardTitanRightView.SkillItemIcon1"
+      x="153"
+      y="317" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outyard.RemotePetHeadItemView.headIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="47"
+      iconWidth="47"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      tipStyle="yishi.view.tips.RemotePetTip"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outyard.RemotePetHeadSelectItemView.petIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="47"
+      iconWidth="47"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      tipStyle="yishi.view.tips.RemotePetTip"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyardEvent.pageSpComponent"
+      x="32"
+      y="388" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyardEvent.titleComponent"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.event.OutyardEventRightView"
+      stylename="outyard.event.OutyardEventRightView"
+      x="200"
+      y="3" />
+    <custom
+      classname="asset.outyard.routeBg"
+      stylename="asset.outyard.routeBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.outyard.crystalMovie"
+      stylename="asset.outyard.crystalMovie"
+      x="0"
+      y="0" />
+    <custom
+      classname="outyard.titan.OutyardTitanPlayerView"
+      stylename="outyard.titan.OutyardTitanPlayerView" />
+    <custom
+      classname="outyard.titan.OutyardTitanPlayerItem"
+      stylename="outyard.titan.OutyardTitanPlayerItem" />
+    <custom
+      classname="outyard.titan.OutyardTitanRightView"
+      stylename="outyard.titan.OutyardTitanRightView"
+      x="675"
+      y="112" />
+    <custom
+      classname="asset.outyard.titanProgressMc"
+      stylename="asset.outyard.titanProgressMc"
+      x="-3"
+      y="91" />
+    <custom
+      classname="asset.outyard.titanLevelMc"
+      stylename="asset.outyard.titanLevelMc"
+      x="27"
+      y="305" />
+    <custom
+      classname="outyard.shuttle.OutyardProgressView"
+      stylename="outyard.shuttle.OutyardProgressView"
+      x="258"
+      y="498" />
+    <custom
+      classname="outyard.shuttle.ShuttlePetHeadListView"
+      stylename="outyard.shuttle.ShuttlePetHeadListView"
+      x="759"
+      y="81" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.shuttle.titleItemContain"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.outyard.ShuttleScoreBar"
+      stylename="outyard.ShuttleScoreBar"
+      x="10"
+      y="10" />
+    <custom
+      classname="asset.outyard.PetGreenBar"
+      stylename="outyard.PetGreenBar"
+      x="-6"
+      y="44" />
+    <custom
+      classname="asset.outyard.arcane.redBar"
+      stylename="outyard.arcane.redBar"
+      x="70"
+      y="40" />
+    <custom
+      classname="asset.outyard.shuttle.forbiddenBmp"
+      stylename="asset.outyard.shuttle.forbiddenBmp"
+      x="53"
+      y="63" />
+    <custom
+      classname="outyard.shuttle.OutyardLevelItem"
+      stylename="outyard.shuttle.OutyardLevelItem1"
+      x="197"
+      y="32"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="outyard.shuttle.OutyardLevelItem"
+      stylename="outyard.shuttle.OutyardLevelItem2"
+      x="273"
+      y="32"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="outyard.shuttle.OutyardLevelItem"
+      stylename="outyard.shuttle.OutyardLevelItem3"
+      x="349"
+      y="32"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="outyard.shuttle.OutyardLevelItem"
+      stylename="outyard.shuttle.OutyardLevelItem4"
+      x="425"
+      y="32"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="outyard.shuttle.OutyardShuttleItem"
+      stylename="outyard.shuttle.OutyardShuttleItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="-15"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="outyard.shuttle.forbiddenContain"
+      x="990"
+      y="362"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+  </customDisplay>
+  <components>
+    <component
+      classname="outyard.OutyardFrame"
+      stylename="outyard.OutyardFrame"
+      parentStyle="core.Frame1"
+      containerX="14"
+      containerY="61"
+      width="853"
+      height="645" />
+    <component
+      classname="outyard.OutyardMemberFrame"
+      stylename="outyard.OutyardMemberFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="51"
+      width="569"
+      height="543" />
+    <component
+      classname="outyard.OutyardBlessFrame"
+      stylename="outyard.OutyardBlessFrame"
+      parentStyle="core.Frame2"
+      containerX="7"
+      containerY="43"
+      width="542"
+      height="484" />
+    <component
+      classname="outyard.OutyardChangeFrame"
+      stylename="outyard.OutyardChangeFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      width="480"
+      height="500" />
+    <component
+      classname="outyard.scene.OutyardMapFrame"
+      stylename="outyard.scene.OutyardMapFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="1000"
+      height="600"
+      containerX="0"
+      containerY="0" />
+    <component
+      classname="outyard.shuttle.OutyardArcaneFrame"
+      stylename="outyard.shuttle.OutyardArcaneFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="63"
+      width="753"
+      height="602" />
+    <component
+      classname="outyard.shuttle.OutyardShuttleFightPetFrame"
+      stylename="outyard.shuttle.OutyardShuttleFightPetFrame"
+      parentStyle="core.Frame2"
+      containerX="7"
+      containerY="45"
+      width="341"
+      height="312" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="outyard.BagBack"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="693"
+      height="472"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.MemberViewBg"
+      parentStyle="core.describeBackground_style06"
+      width="546"
+      height="423"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="outyard.nomalBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.outyard.nomalBtn1"
+      selectedIconStyle="asset.outyard.nomalBtn2"
+      unselectedIconInnerRectString="18,63,3,32,13"
+      selectedIconInnerRectString="20,59,3,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="7"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="outyard.seniorBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.outyard.seniorBtn1"
+      selectedIconStyle="asset.outyard.seniorBtn2"
+      unselectedIconInnerRectString="25,53,8,19,13"
+      selectedIconInnerRectString="25,51,10,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="106"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="outyard.TitleBg"
+      parentStyle="core.TitleBack_Style05"
+      x="1"
+      y="33"
+      width="545" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.sortText"
+      textFormatStyle="outyard.sortText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="41"
+      width="114"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="outyard.OutyardMemberView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="0,0,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="538"
+      height="386"
+      x="3"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="outyard.OutyardMemberView.Vbox"
+      spacing="-7"
+      width="442"
+      height="305" />
+    <!-- 行背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.EnterWarItemBg"
+      resourceLink="asset.outyard.Itembg11,asset.outyard.Itembg21"
+      width="441"
+      height="32" />
+    <!-- 鼠标over背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.EnterWarOverBg"
+      parentStyle="core.ItemOver1"
+      width="526"
+      x="-4"
+      y="-4" />
+    <!-- SteelMemberItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.SteelMemberItem.NameTxt"
+      textFormatStyle="outyard.SteelMemberItem.NameTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="95"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.SteelMemberItem.GradeTxt"
+      textFormatStyle="outyard.Style.EnterWarText02"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="225"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.SteelMemberItem.StateTxt"
+      textFormatStyle="outyard.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="103"
+      height="20"
+      x="417"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.SteelMemberItem.FightPowerTxt"
+      textFormatStyle="outyard.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="330"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.SteelMemberItem.DelBtn"
+      backStyle="asset.outyard.seniorChangeBtn"
+      iconStyle="asset.outyard.seniorChangeTxt"
+      iconInnerRectString="12,35,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="442"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="148"
+      y="3" />
+    <!-- 右边第一个文本 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="outyard.EnterWarText01_R.GradientText"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="outyard.EnterWarText01_R.GradientTextField"
+      width="105"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarText01_R.GradientTextField"
+      textFormatStyle="outyard.VipNameTxt_f"
+      autoSize="none"
+      width="105"
+      height="20"
+      x="63"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.blessAttackBtn"
+      backStyle="asset.outyard.blessDefenceBtnBmp"
+      iconStyle="asset.outyard.blessAttactTxtBmp"
+      iconInnerRectString="25,98,12,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="66"
+      y="276" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.blessDefenceBtn"
+      backStyle="asset.outyard.blessDefenceBtnBmp"
+      iconStyle="asset.outyard.blessDefenceTxtBmp"
+      iconInnerRectString="24,98,12,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="317"
+      y="276" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardBlessFrame.attackRateTxt"
+      textFormatStyle="outyard.OutyardBlessFrame.attackRateTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="180"
+      y="217" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardBlessFrame.defenceRateTxt"
+      parentStyle="outyard.OutyardBlessFrame.attackRateTxt"
+      x="444"
+      y="217" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardBlessFrame.attackNoteTxt"
+      textFormatStyle="outyard.OutyardBlessFrame.attackNoteTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="157"
+      height="40"
+      x="65"
+      y="239"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardBlessFrame.defenceNoteTxt"
+      parentStyle="outyard.OutyardBlessFrame.attackNoteTxt"
+      x="304"
+      y="243"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardBlessFrame.blessNumTxt"
+      textFormatStyle="outyard.OutyardBlessFrame.blessNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="183"
+      height="35"
+      x="301"
+      y="333"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.ActorViewBg"
+      resourceLink="asset.outyard.ActorViewBg1,asset.outyard.ActorViewBg2,asset.outyard.ActorViewBg3,asset.outyard.ActorViewBg4" />
+    <!-- 使用按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.ActorOperTxt"
+      textFormatStyle="outyard.ActorOperTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="62"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outyard.ActorBlessBtn"
+      backStyle="asset.outyard.ActorBlessBtnBmp"
+      textStyle="outyard.ActorOperTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backgoundInnerRectString="-8,62,2,13"
+      width="48"
+      height="24"
+      x="127"
+      y="48" />
+    <!-- 移动按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outyard.ActorAttackBtn"
+      parentStyle="outyard.ActorBlessBtn"
+      backStyle="asset.outyard.ActorAttackBtnBmp"
+      backgoundInnerRectString="-7,62,2,13"
+      width="48"
+      height="24"
+      x="127"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.ActorViewRanking"
+      resourceLink="asset.outyard.ActorViewRanking1,asset.outyard.ActorViewRanking2,asset.outyard.ActorViewRanking3,asset.outyard.ActorViewRanking4"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.ActorView.inputBg"
+      resourceLink="asset.outyard.inputBgBmp"
+      scaleGridString="5,5,10,10"
+      width="112"
+      height="27"
+      x="7"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.blessNoticeBtn"
+      backStyle="asset.outyard.noticeBtnBmp"
+      iconStyle="asset.outyard.noticeTxtBmp"
+      iconInnerRectString="19,37,7,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="159" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.shopBtn"
+      backStyle="asset.outyard.shopBtnBmp"
+      iconStyle="asset.outyard.shopTxtBmp"
+      iconInnerRectString="5,93,74,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="693"
+      y="402" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.fightPlayerBtn"
+      backStyle="asset.outyard.fightPlayerBtnBmp"
+      iconStyle="asset.outyard.fightPlayerTxtBmp"
+      iconInnerRectString="29,93,13,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="525"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OpeningItemBg"
+      resourceLink="asset.outyard.OpeningItemDarkBg,asset.outyard.OpeningItemLightBg"
+      x="10"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OpeningItemTitle"
+      resourceLink="asset.outyard.showingBmp1,asset.outyard.showingBmp2,asset.outyard.showingBmp3,asset.outyard.showingBmp4"
+      x="60"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFrame.lastAttackTxt"
+      textFormatStyle="outyard.OutyardFrame.lastAttackTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="400"
+      height="40"
+      x="51"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFrame.bottomAttackNoteTxt"
+      textFormatStyle="outyard.OutyardFrame.bottomAttackNoteTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="176"
+      height="20"
+      x="53"
+      y="506" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFrame.bottomDefenceNoteTxt"
+      parentStyle="outyard.OutyardFrame.bottomAttackNoteTxt"
+      x="267"
+      y="506" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFrame.bottomAttackValueTxt"
+      textFormatStyle="outyard.OutyardFrame.bottomAttackValueTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="231"
+      y="506" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFrame.bottomDefenceValueTxt"
+      parentStyle="outyard.OutyardFrame.bottomAttackValueTxt"
+      x="331"
+      y="506" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFrame.executionValueTxt"
+      textFormatStyle="outyard.OutyardFrame.executionValueTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="572"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardNoticeView.noticeValueTxt"
+      textFormatStyle="outyard.OutyardNoticeView.noticeValueTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      type="input"
+      width="265"
+      height="105"
+      x="20"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardOpeningItem.openingValueTxt"
+      textFormatStyle="outyard.OutyardOpeningItem.openingValueTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="140"
+      height="20"
+      x="125"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardActorView.consortiaNameTxt"
+      textFormatStyle="outyard.OutyardActorView.consortiaNameTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="120"
+      height="20"
+      x="60"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardActorView.leftArmyTxt"
+      textFormatStyle="outyard.OutyardActorView.leftArmyTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="160"
+      height="20"
+      x="11"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardActorView.scoreTxt"
+      textFormatStyle="outyard.OutyardActorView.scoreTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="90"
+      height="20"
+      x="13"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardFigureItem.playerNumTxt"
+      textFormatStyle="outyard.OutyardFigureItem.playerNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="20"
+      height="20"
+      x="-3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardShowView.leftArmyTxt"
+      textFormatStyle="outyard.OutyardShowView.leftArmyTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="95"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardShowView.guildArmyTxt"
+      textFormatStyle="outyard.OutyardShowView.guildArmyTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="95"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.inputBgBmp"
+      resourceLink="asset.outyard.inputBgBmp"
+      scaleGridString="7,7,10,10"
+      width="72"
+      height="32"
+      x="585"
+      y="476" />
+    <!-- 鼠标over背景 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="outyard.EnterWarRightScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="0,0,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="433"
+      height="342"
+      x="-15"
+      y="62" />
+    <!-- 角色按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.EnterWarRoleButton"
+      backStyle="asset.outyard.EnterWarNameTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="48"
+      y="34" />
+    <!-- 等级按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.EnterWarLevelButton"
+      backStyle="asset.outyard.EnterWarLevelTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="145"
+      y="32" />
+    <!--参战状态-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.EnterWarStateButton"
+      backStyle="asset.outyard.EnterWarStateTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="207"
+      y="34" />
+    <!-- 战斗力 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.EnterWarAPButton"
+      backStyle="asset.outyard.EnterWarAPTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="325"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.EnterWarItemBg2"
+      resourceLink="asset.outyard.Itembg12,asset.outyard.Itembg22"
+      width="441"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.EnterWarLeftBg"
+      parentStyle="core.describeBackground_style06"
+      width="355"
+      height="382"
+      x="-18"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.addExecutionBtn"
+      backStyle="asset.outyard.addExecutionBmp"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="663"
+      y="480" />
+    <!--地图按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.mapBtn1"
+      backStyle="asset.outyard.mapBtnBmp1"
+      iconStyle="asset.outyard.mapTxtBmp1"
+      iconInnerRectString="148,124,133,28,13"
+      x="204"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.mapBtn2"
+      backStyle="asset.outyard.mapBtnBmp2"
+      iconStyle="asset.outyard.mapTxtBmp2"
+      iconInnerRectString="142,123,105,29,13"
+      x="192"
+      y="459" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.mapBtn3"
+      backStyle="asset.outyard.mapBtnBmp3"
+      iconStyle="asset.outyard.mapTxtBmp3"
+      iconInnerRectString="96,124,143,29,13"
+      x="873"
+      y="363" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.mapBtn4"
+      backStyle="asset.outyard.mapBtnBmp4"
+      iconStyle="asset.outyard.mapTxtBmp4"
+      iconInnerRectString="107,146,132,28,13"
+      x="779"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.mapBtn5"
+      backStyle="asset.outyard.mapBtnBmp5"
+      iconStyle="asset.outyard.mapTxtBmp5"
+      iconInnerRectString="153,124,123,27,13"
+      x="481"
+      y="271" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.mapBtn6"
+      backStyle="asset.outyard.mapBtnBmp6"
+      iconStyle="asset.outyard.mapTxtBmp6"
+      iconInnerRectString="133,101,93,27,13"
+      x="620"
+      y="548" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.outyard.arrowFrameImage"
+      resourceLink="asset.outyard.arrowMc1,asset.outyard.arrowMc2,asset.outyard.arrowMc3,asset.outyard.arrowMc4"
+      x="-10"
+      y="-25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyard.worldBg"
+      resourceLink="asset.outyard.worldBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landNodeImage"
+      resourceLink="asset.outyard.landNodeBmp1,asset.outyard.landNodeBmp2,asset.outyard.landNodeBmp3,asset.outyard.landNodeBmp4,asset.outyard.landNodeBmp5,asset.outyard.landNodeBmp6,asset.outyard.landNodeBmp7,asset.outyard.landNodeBmp8,asset.outyard.landNodeBmp9,asset.outyard.landNodeBmp10,asset.outyard.landNodeBmp11,asset.outyard.landNodeBmp12,outyard.landNodeBmp13,asset.outyard.landNodeBmp14"
+      x="-24"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.jinxingxuanzhanBtn"
+      backStyle="asset.outyard.bigRedBtnBmp"
+      iconStyle="asset.outyard.jinxingxuanzhanBmp"
+      iconInnerRectString="13,74,9,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="13"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.hepingguanbiBtn"
+      backStyle="asset.outyard.bigRedBtnBmp"
+      iconStyle="asset.outyard.guanbiBmp"
+      iconInnerRectString="28,42,9,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="124"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.guanbiBtn"
+      backStyle="asset.outyard.bigRedBtnBmp"
+      iconStyle="asset.outyard.guanbiBmp"
+      iconInnerRectString="28,42,9,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="68"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.caijiBtn"
+      backStyle="asset.outyard.greenBtnBmp"
+      iconStyle="asset.outyard.caijiBmp"
+      iconInnerRectString="28,39,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="125"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.keyicanzhanBtn"
+      backStyle="asset.outyard.greenBtnBmp"
+      iconStyle="asset.outyard.keyicanzhanBmp"
+      iconInnerRectString="13,67,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="7"
+      y="268" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.keyicanzhanBtn2"
+      backStyle="asset.outyard.greenBtnBmp"
+      iconStyle="asset.outyard.keyicanzhanBmp"
+      iconInnerRectString="13,67,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="131"
+      y="268" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.OutyardInfoView.jinruBtn"
+      backStyle="asset.outyard.redBtnBmp"
+      iconStyle="asset.outyard.jinruBmp"
+      iconInnerRectString="28,39,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="12"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.returnBtn"
+      backStyle="asset.outyard.returnBtnBmp"
+      iconStyle="asset.outyard.returnTxtBmp"
+      iconInnerRectString="35,44,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1091"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.forceNameTxt"
+      textFormatStyle="outyard.OutyardInfoView.forceNameTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="38"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.occupyNumTxt"
+      textFormatStyle="outyard.OutyardInfoView.occupyNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="60"
+      height="20"
+      x="189"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.nodeForceTxt"
+      textFormatStyle="outyard.OutyardInfoView.nodeForceTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="48"
+      y="143" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.crystalInformationTxt"
+      textFormatStyle="outyard.OutyardInfoView.crystalInformationTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="205"
+      height="116"
+      x="15"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.leftTimeTxt"
+      textFormatStyle="outyard.OutyardInfoView.leftTimeTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="160"
+      height="20"
+      x="62"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.joinTxt"
+      textFormatStyle="outyard.OutyardInfoView.joinTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="80"
+      height="60"
+      x="17"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.joinTxt2"
+      textFormatStyle="outyard.OutyardInfoView.joinTxt2_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="80"
+      height="60"
+      x="140"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.monsterLevelTxt"
+      textFormatStyle="outyard.OutyardInfoView.monsterLevelTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="89"
+      y="204" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landInfoImage1"
+      resourceLink="asset.outyard.landInfoBmp1,asset.outyard.landInfoBmp2,asset.outyard.landInfoBmp3,asset.outyard.landInfoBmp4"
+      x="15"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landInfoImage2"
+      parentStyle="outyard.landInfoImage1"
+      x="12"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landInfoImage3"
+      parentStyle="outyard.landInfoImage1"
+      x="15"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.routeOccupy"
+      resourceLink="asset.outyard.routeOccupy1,asset.outyard.routeOccupy2,asset.outyard.routeOccupy3,asset.outyard.routeOccupy4,asset.outyard.routeOccupy5,asset.outyard.routeNodeBg1,asset.outyard.routeNodeBg2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.routeForce"
+      resourceLink="asset.outyard.routeForce1,asset.outyard.routeForce2,asset.outyard.routeForce3,asset.outyard.routeForce4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.routeOccupyHead"
+      resourceLink="asset.outyard.nodeBlueHead,asset.outyard.nodeRedHead,asset.outyard.nodeGreenHead,asset.outyard.nodePurpleHead" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.routeOccupyTower"
+      resourceLink="asset.outyard.nodeBlueTower,asset.outyard.nodeRedTower,asset.outyard.nodeGreenTower,asset.outyard.nodePurpleTower" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.nodeNumBg1"
+      resourceLink="asset.outyard.nodeNumBg"
+      scaleGridString="10,10,15,15"
+      width="60"
+      height="23"
+      x="-67"
+      y="-114" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.nodeNumBg2"
+      resourceLink="asset.outyard.nodeNumBg"
+      scaleGridString="10,10,15,15"
+      width="60"
+      height="23"
+      x="64"
+      y="-114" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.addBtn"
+      backStyle="asset.outyard.addBtnBmp"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="244"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.RouteNodeView.attackBtn"
+      backStyle="asset.outyard.nodeAttackBmp"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-27"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.RouteNodeView.defenceBtn"
+      backStyle="asset.outyard.nodeDefenceBmp"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-27"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.leftNumTxt"
+      textFormatStyle="outyard.RouteNodeView.occupyNumTxt_t1,outyard.RouteNodeView.occupyNumTxt_t2,outyard.RouteNodeView.occupyNumTxt_t3,outyard.RouteNodeView.occupyNumTxt_t4"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="55"
+      height="20"
+      x="-64"
+      y="-111" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.leftRighrTxt"
+      textFormatStyle="outyard.RouteNodeView.occupyNumTxt_t1,outyard.RouteNodeView.occupyNumTxt_t2,outyard.RouteNodeView.occupyNumTxt_t3,outyard.RouteNodeView.occupyNumTxt_t4"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="55"
+      height="20"
+      x="66"
+      y="-111" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.leftInfoTxt"
+      textFormatStyle="outyard.RouteNodeView.occupyNumTxt_t11,outyard.RouteNodeView.occupyNumTxt_t22,outyard.RouteNodeView.occupyNumTxt_t33,outyard.RouteNodeView.occupyNumTxt_t44"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="155"
+      height="20"
+      x="492"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.rightInfoTxt"
+      textFormatStyle="outyard.RouteNodeView.occupyNumTxt_t11,outyard.RouteNodeView.occupyNumTxt_t22,outyard.RouteNodeView.occupyNumTxt_t33,outyard.RouteNodeView.occupyNumTxt_t44"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="155"
+      height="20"
+      x="757"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.leftTowerTxt"
+      textFormatStyle="outyard.RouteNodeView.occupyNumTxt_t11,outyard.RouteNodeView.occupyNumTxt_t22,outyard.RouteNodeView.occupyNumTxt_t33,outyard.RouteNodeView.occupyNumTxt_t44"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="27"
+      height="20"
+      x="630"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.rightTowerTxt"
+      textFormatStyle="outyard.RouteNodeView.occupyNumTxt_t11,outyard.RouteNodeView.occupyNumTxt_t22,outyard.RouteNodeView.occupyNumTxt_t33,outyard.RouteNodeView.occupyNumTxt_t44"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="27"
+      height="20"
+      x="734"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RouteNodeView.leftTimeTxt"
+      textFormatStyle="outyard.RouteNodeView.leftTimeTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="115"
+      height="20"
+      x="643"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardAreaDiceView.exploreTxt"
+      textFormatStyle="outyard.OutyardAreaDiceView.exploreTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="158"
+      height="20"
+      x="60"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.routeLandSword"
+      resourceLink="asset.outyard.fightingSword,asset.outyard.prepareSword" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landMapName"
+      resourceLink="asset.outyard.landMapName1,asset.outyard.landMapName2,asset.outyard.landMapName3,asset.outyard.landMapName4,asset.outyard.landMapName5,asset.outyard.landMapName6"
+      x="37"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landInfoBlockBmp1"
+      resourceLink="asset.outyard.landInfoBlockBmp1,asset.outyard.landInfoBlockBmp2,asset.outyard.landInfoBlockBmp3,asset.outyard.landInfoBlockBmp4"
+      x="14"
+      y="171" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landInfoBlockBmp2"
+      resourceLink="asset.outyard.landInfoBlockBmp1,asset.outyard.landInfoBlockBmp2,asset.outyard.landInfoBlockBmp3,asset.outyard.landInfoBlockBmp4"
+      x="136"
+      y="171" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.landInfoStateImage"
+      resourceLink="asset.outyard.beizhanzhongBmp,asset.outyard.zhengduozhongBmp,asset.outyard.xiuzhanzhongBmp"
+      x="40"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyard.iconCrystal"
+      resourceLink="asset.outyard.iconCrystal"
+      tipStyle="outyard.MultipleLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,6,5,4,7"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyard.iconOutyard"
+      resourceLink="asset.outyard.iconOutyard"
+      tipStyle="outyard.MultipleLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,6,5,4,7"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyard.tansuoliBg1"
+      resourceLink="asset.outyard.tansuoliBg"
+      x="68"
+      y="397" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyard.tansuoliBg2"
+      resourceLink="asset.outyard.tansuoliBg"
+      x="68"
+      y="428" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.goumaijiaBmp1"
+      backStyle="asset.outyard.goumaijiaBmp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="129"
+      y="397" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.goumaijiaBmp2"
+      backStyle="asset.outyard.goumaijiaBmp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="129"
+      y="427" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.waiyushangdianBmp"
+      backStyle="asset.outyard.waiyushangdianBmp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="153"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.LandNodeView.JoinTxt"
+      textFormatStyle="outyard.LandNodeView.JoinTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardRouteView.coolingTxt"
+      textFormatStyle="outyard.OutyardRouteView.coolingTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="150"
+      height="20"
+      x="1186"
+      y="696" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardRouteView.coolingNumTxt"
+      parentStyle="outyard.OutyardRouteView.coolingTxt"
+      x="1185"
+      y="715" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardRouteView.attackTxt"
+      parentStyle="outyard.OutyardRouteView.coolingTxt"
+      x="632"
+      y="719" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoTopView.tansuoNumTxt"
+      textFormatStyle="outyard.OutyardInfoTopView.tansuoNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="66"
+      y="401" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoTopView.xingdongNumTxt"
+      textFormatStyle="outyard.OutyardInfoTopView.xingdongNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="66"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.OutyardInfoView.leftCountTxt"
+      textFormatStyle="outyard.OutyardInfoView.leftCountTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="180"
+      height="20"
+      x="15"
+      y="207" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.areaSmallBarTopBtn"
+      backStyle="asset.outyard.areaSmallBarTopBtn"
+      x="166"
+      y="5"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.areaSmallBarBottomBtn"
+      backStyle="asset.outyard.areaSmallBarBottomBtn"
+      x="166"
+      y="5"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 外域活动 -->
+    <component
+      classname="outyard.event.OutyardEventFrame"
+      stylename="outyard.event.OutyardEventFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="67"
+      width="769"
+      height="542" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="outyardEventFrame.back"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="735"
+      height="432" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="outyardEventLeftButton.title"
+      colors="0xffc000,0xffffd5"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="outyardEventLeftButton.titleTxt"
+      x="30"
+      y="11"
+      width="150"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEventLeftButton.titleTxt"
+      textFormatStyle="outyardEventLeftButton.titleTxt_t"
+      autoSize="none"
+      width="140"
+      height="40"
+      wordWrap="true"
+      multiline="true" />
+    <!-- 左侧按钮 -->
+    <component
+      classname="outyard.event.OutyardEventLeftButton"
+      stylename="outyardEvent.leftSelectedBtn"
+      unSelectedStyle="asset.outyard.leftBtn1"
+      selectedStyle="asset.outyard.leftBtn2"
+      textStyle="outyardEvent.leftSelectedBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="193"
+      height="55"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEvent.leftSelectedBtnText"
+      textFormatStyle="outyardEvent.leftSelectedBtnText_t1,outyardEvent.leftSelectedBtnText_t2"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="30"
+      y="10"
+      width="136"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="outyardEvent.leftVBox"
+      x="4"
+      y="4"
+      spacing="-4" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyardEvent.preBtn"
+      parentStyle="auction.prePageBtn"
+      x="0"
+      y="1" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyardEvent.nextBtn"
+      parentStyle="auction.nextPageBtn"
+      x="114"
+      y="1" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEvent.pageText"
+      parentStyle="auction.PageTxt"
+      x="40"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyardEvent.PageNumBack"
+      resourceLink="asset.core.PageNumBack"
+      x="1"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyardEvent.enterBtn"
+      backStyle="asset.luckyexchange.exchangeBtnBmp"
+      iconStyle="asset.luckyexchange.exchangeTxtBmp"
+      iconInnerRectString="49,62,12,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="444"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.rightEnterBtn"
+      backStyle="asset.outyard.rightEnterBtnBmp"
+      iconStyle="asset.outyard.rightEnterTxtBmp"
+      iconInnerRectString="35,119,15,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="172"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="outyardEventFrame.vgap"
+      resourceLink="asset.outyard.vgap,asset.outyard.vgap"
+      imageRectString="0|8|0|213|13,0|8|207|220|13"
+      x="194"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="outyardEventFrame.hgap"
+      resourceLink="asset.outyard.hgap,asset.outyard.hgap"
+      imageRectString="0|288|0|8|13,266|268|0|8|13"
+      x="0"
+      y="148" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEventFrame.serverTimeText"
+      textFormatStyle="outyardEventFrame.serverTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="20"
+      x="122"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEventFrame.activityText"
+      textFormatStyle="outyardEventFrame.activityText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="37"
+      y="111" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEventFrame.desText"
+      textFormatStyle="outyardEventFrame.desText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="510"
+      height="130"
+      x="9"
+      y="189" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardEventFrame.openText"
+      textFormatStyle="outyardEventFrame.openText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="495"
+      height="20"
+      x="37"
+      y="130" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="outyardEventFrame.topBtn"
+      button="toptoolbar.topBtnMc"
+      transparentEnable="true"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,4"
+      tipGapH="0"
+      tipGapV="0"
+      manualHeight="60"
+      manualWidth="60"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DefaultFilter" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.OutyardInfoTopView.executionStrip"
+      x="68"
+      y="433"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="outyard.OutyardInfoTopView.exploreStrip"
+      x="68"
+      y="398"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outyardTitanPlayerItem.nickBtn"
+      textStyle="outyardTitanPlayerItem.nickText"
+      autoSizeAble="false"
+      width="120"
+      height="20"
+      backgoundInnerRectString="1,8,1,13"
+      x="-25"
+      y="7"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanPlayerItem.nickText"
+      textFormatStyle="outyardTitanPlayerItem.nickText_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="-25"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanPlayerItem.noteText1"
+      textFormatStyle="outyardTitanPlayerItem.noteText1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="0"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanPlayerItem.noteText2"
+      textFormatStyle="outyardTitanPlayerItem.noteText2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="221"
+      height="40"
+      x="0"
+      y="279"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.titanAddChallengeBtn"
+      backStyle="asset.outyard.titanAddChallengeBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="245"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.titanAddSkillBtn"
+      backStyle="asset.outyard.titanAddSkillBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="50"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.titanAddSkillBtn2"
+      parentStyle="outyard.titanAddSkillBtn"
+      x="113"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.titanAddSkillBtn3"
+      parentStyle="outyard.titanAddSkillBtn"
+      x="179"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.titanChallengeBtn"
+      backStyle="asset.outyard.titanChallengeBtnBmp"
+      iconStyle="asset.outyard.titanChallengeTxtBmp"
+      iconInnerRectString="63,60,14,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="17"
+      y="367" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanRightView.skillCountTxt1"
+      textFormatStyle="outyardTitanRightView.skillCountTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="22"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanRightView.skillCountTxt2"
+      parentStyle="outyardTitanRightView.skillCountTxt1"
+      x="86"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanRightView.skillCountTxt3"
+      parentStyle="outyardTitanRightView.skillCountTxt1"
+      x="152"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="outyardTitanRightView.bufftxtVBox"
+      x="0"
+      y="32"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyardTitanRightView.bufftxt"
+      textFormatStyle="outyardTitanRightView.bufftxt_t1,outyardTitanRightView.bufftxt_t2,outyardTitanRightView.bufftxt_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OutyardTitanPlayerItem.box1"
+      resourceLink="asset.outyard.titanBoxGold1,asset.outyard.titanBoxGold2"
+      tipStyle="yishi.view.tips.SkyboxRaodRewardTips"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="437"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OutyardTitanPlayerItem.box2"
+      parentStyle="outyard.OutyardTitanPlayerItem.box1"
+      resourceLink="asset.outyard.titanBoxSilver1,asset.outyard.titanBoxSilver2"
+      x="437"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OutyardTitanPlayerItem.box3"
+      parentStyle="outyard.OutyardTitanPlayerItem.box1"
+      resourceLink="asset.outyard.titanBoxSilver1,asset.outyard.titanBoxSilver2"
+      x="437"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OutyardTitanPlayerItem.box4"
+      parentStyle="outyard.OutyardTitanPlayerItem.box1"
+      resourceLink="asset.outyard.titanBoxBronze1,asset.outyard.titanBoxBronze2"
+      x="437"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.OutyardTitanPlayerItem.box5"
+      parentStyle="outyard.OutyardTitanPlayerItem.box1"
+      resourceLink="asset.outyard.titanBoxBronze1,asset.outyard.titanBoxBronze2"
+      x="437"
+      y="0" />
+    <!-- 右边第一个文本 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.level.levelBg"
+      resourceLink="asset.outyard.level.normalBg,asset.outyard.level.difficultBg,asset.outyard.level.nightmareBg,asset.outyard.level.purgatoryBg"
+      x="6"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.level.levelTxt"
+      resourceLink="asset.outyard.level.normalTxt,asset.outyard.level.difficultTxt,asset.outyard.level.nightmareTxt,asset.outyard.level.purgatoryTxt"
+      x="30"
+      y="90"
+      rotationZ="-80" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.shuttleItem.levelImage"
+      resourceLink="asset.outyard.shuttleItem.E,asset.outyard.shuttleItem.D,asset.outyard.shuttleItem.C,asset.outyard.shuttleItem.B,asset.outyard.shuttleItem.A,asset.outyard.shuttleItem.S,asset.outyard.shuttleItem.SSS"
+      x="36"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.progress.leftArrow"
+      backStyle="asset.outyard.progress.leftArrow"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-7"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.progress.rightArrow"
+      backStyle="asset.outyard.progress.rightArrow"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="612"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.shuttle.resetBtn"
+      backStyle="asset.outyard.shuttle.resetBtnBmp"
+      iconStyle="asset.outyard.shuttle.resetTxtBmp"
+      iconInnerRectString="40,72,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="10"
+      tipGapH="-5"
+      isFollowMouse="false"
+      autoCenter="false"
+      x="309"
+      y="595" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.shuttle.refreshBtn"
+      backStyle="asset.outyard.shuttle.refreshBtnBmp"
+      iconStyle="asset.outyard.shuttle.refreshTxtBmp"
+      iconInnerRectString="49,53,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="10"
+      tipGapH="-5"
+      isFollowMouse="false"
+      autoCenter="false"
+      x="502"
+      y="595" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.shuttle.receiveBtn"
+      backStyle="asset.outyard.shuttle.receiveBtnBmp"
+      iconStyle="asset.outyard.shuttle.receiveTxtBmp"
+      iconInnerRectString="39,71,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="10"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="692"
+      y="595" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.arcane.shareBtn"
+      backStyle="asset.outyard.arcane.resBtnBmp"
+      iconStyle="asset.outyard.arcane.shareBmp"
+      iconInnerRectString="13,40,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="54"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.arcane.attackBtn"
+      backStyle="asset.outyard.arcane.resBtnBmp"
+      iconStyle="asset.outyard.arcane.attackBmp"
+      iconInnerRectString="13,40,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="134"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.RemotePetHeadItemView.closeBtn"
+      backStyle="asset.outyard.delete"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="22"
+      x="32"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outyard.RemotePetHeadItemView.headBack"
+      resourceLink="asset.outyard.headBack"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.RemotePetHeadSelectItemView.levelTxt"
+      textFormatStyle="tips.petLvlProperty_t1,tips.petLvlProperty_t2,tips.petLvlProperty_t3,tips.petLvlProperty_t4,tips.petLvlProperty_t5,tips.petLvlProperty_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="1"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.RemotePetHeadSelectItemView.closeBtn"
+      backStyle="asset.outyard.delete"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="18"
+      height="18"
+      x="32"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.shuttle.petSetBtn"
+      backStyle="asset.outyard.shuttle.fightBtnBmp"
+      iconStyle="asset.outyard.shuttle.petTxtBmp"
+      iconInnerRectString="18,58,11,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="197"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.shuttle.fightBtn"
+      backStyle="asset.outyard.shuttle.fightBtnBmp"
+      iconStyle="asset.outyard.shuttle.fightTxtBmp"
+      iconInnerRectString="18,57,12,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="197"
+      y="17" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.arcane.LastPageBtn"
+      backStyle="asset.outyard.arcane.PageBtnBg"
+      iconStyle="asset.outyard.arcane.LastPageImg"
+      width="69"
+      height="29"
+      x="264"
+      y="445"
+      iconInnerRectString="9,52,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outyard.arcane.NextPageBtn"
+      backStyle="asset.outyard.arcane.PageBtnBg"
+      iconStyle="asset.outyard.arcane.NextPageImg"
+      width="69"
+      height="29"
+      x="415"
+      y="445"
+      iconInnerRectString="9,52,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 页码数字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.arcane.PageTextStyle1"
+      parentStyle="shop.PageTextStyle1"
+      x="343"
+      y="449" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.OutyardShuttleFightPet.Back"
+      parentStyle="core.describeBackground_style09"
+      x="0"
+      y="0"
+      width="316"
+      height="221" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.stoneTxt1"
+      textFormatStyle="outyard.shuttle.stoneTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="380"
+      y="645" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.stoneTxt2"
+      parentStyle="outyard.shuttle.stoneTxt1"
+      x="574"
+      y="645" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.shuttleScoreTxt"
+      textFormatStyle="outyard.shuttle.shuttleScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="585"
+      y="563" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.shuttleBossTxt"
+      textFormatStyle="outyard.shuttle.shuttleBossTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="76"
+      y="97" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.resetLeftTxt"
+      textFormatStyle="outyard.shuttle.resetLeftTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="78"
+      y="91" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.refreshLeftTxt"
+      textFormatStyle="outyard.shuttle.refreshLeftTxt_t,outyard.shuttle.refreshLeftTxtRed_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="80"
+      y="106" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.progress.chestBmp"
+      resourceLink="asset.outyard.progress.chestBmp,asset.outyard.progress.chestOpenBmp"
+      tipStyle="yishi.view.tips.SkyboxRaodRewardTips"
+      isFollowMouse="false"
+      tipDirctions="0,4,5,6,3,7"
+      tipGapH="0"
+      tipGapV="5"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.arcane.buyLeftTxt"
+      textFormatStyle="outyard.arcane.buyLeftTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="84"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.arcane.addArcaneBtn"
+      backStyle="asset.outyard.arcane.addBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="144"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.arcane.BossNameTxt"
+      textFormatStyle="outyard.arcane.BossNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="47"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.arcane.FinderTxt"
+      textFormatStyle="outyard.arcane.FinderTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="57"
+      y="273" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.arcane.LeftTimeTxt"
+      textFormatStyle="outyard.arcane.LeftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="40"
+      x="17"
+      y="294"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.petNote"
+      textFormatStyle="outyard.shuttle.petNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="2"
+      y="122" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="outyard.ShuttleHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="outyard.OutyardShuttleView.helpContent"
+      titleText="outyard.OutyardShuttleView.helpTitle"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.ShuttleHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="1087"
+      y="-27" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="outyard.EnterWarTitlebarImg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="-19|439|1|30|13,135|22|3|28|13,193|22|3|28|13,286|22|3|28|13"
+      x="2"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="outyard.EnterWarLeftVbox"
+      width="440"
+      spacing="2"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarMemberText03"
+      textFormatStyle="outyard.Style.EnterWarMemberText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarMemberText04"
+      textFormatStyle="outyard.Style.EnterWarMemberText04"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="250"
+      height="20"
+      x="80"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.Item.EnterWarOverBg"
+      parentStyle="core.ItemOver1"
+      width="442"
+      x="-4"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.CaptainFlag"
+      resourceLink="asset.core.CaptainIcon"
+      x="7"
+      y="5"
+      width="22"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarText01_R"
+      textFormatStyle="outyard.Style.EnterWarText01_t1,outyard.Style.EnterWarText01_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="63"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarText03"
+      textFormatStyle="outyard.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="85"
+      height="20"
+      x="312"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarText04"
+      textFormatStyle="outyard.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="85"
+      height="20"
+      x="225"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.EnterWarText02"
+      textFormatStyle="outyard.Style.EnterWarText02"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="56"
+      height="20"
+      x="155"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outyard.shuttleItem.forbiddenBmp"
+      resourceLink="asset.outyard.shuttleItem.forbiddenBmp1,asset.outyard.shuttleItem.forbiddenBmp2,asset.outyard.shuttleItem.forbiddenBmp3,asset.outyard.shuttleItem.forbiddenBmp4"
+      x="0"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.arcane.noteTxt"
+      textFormatStyle="outyard.arcane.noteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="445"
+      height="20"
+      x="160"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outyard.shuttle.freshNoteTxt"
+      textFormatStyle="outyard.shuttle.freshNoteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="35"
+      x="855"
+      y="625"
+      wordWrap="true" />
+    <component
+      stylename="outyard.landNodeBmp13"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.outyard.landNodeBmp13,asset.outyard.abysmIconName"
+      imageRectString="0|0|19,5|50|19"
+      x="-12"
+      y="-20" />
+    <component
+      classname="outyard.titan.OutyardTitanFrame"
+      stylename="outyard.titan.OutyardTitanFrame"
+      backStyle="asset.outyard.titanBack"
+      parentStyle="core.Frame2"
+      moveInnerRectString="360,50,25,0,9"
+      titleOuterRectPosString="0,44,1"
+      closeInnerRectString="29,238,67,29,14"
+      containerX="10"
+      containerY="51"
+      moveEnable="false"
+      width="922"
+      height="680" />
+    <component
+      classname="outyard.shuttle.OutyardShuttleFrame"
+      stylename="outyard.shuttle.OutyardShuttleFrame"
+      backStyle="asset.outyard.shuttle.bg"
+      parentStyle="core.Frame2"
+      moveInnerRectString="360,50,25,0,9"
+      titleOuterRectPosString="0,44,1"
+      closeInnerRectString="29,18,37,29,14"
+      containerX="10"
+      containerY="51"
+      width="1173"
+      height="746" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OutyardTitanFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="625"
+      y="-15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outyard.dikuangxiaoBmp"
+      resourceLink="asset.outyard.dikuangxiaoBmp"
+      scaleGridString="100,101,39,10"
+      width="288"
+      height="88"
+      x="-49"
+      y="379" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="OutyardTitanFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="OutyardTitanFrame.helperFrame.helpTxt.text"
+      titleText="OutyardTitanFrame.helperFrame.HelpTitle.text"
+      textWidth="370" />
+  </components>
+</style>

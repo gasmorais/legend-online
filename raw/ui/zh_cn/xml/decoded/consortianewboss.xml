@@ -1,0 +1,704 @@
+<style
+  name="consortianewboss"
+  source="ui/zh_cn/swf/consortianewboss.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiaNewBossRankItem.rankTxt_t"
+      args="arial,12,0xe7d5ad,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiaNewBossRankItem.userNameTxt_t1"
+      args="Arial,12,0xe7d5ad,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiaNewBossRankItem.userNameTxt_t2"
+      args="Arial,12,0xe7ed36,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.successTxt_t"
+      args="arial,12,0xadd2aa,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.failTxt_t"
+      args="arial,12,0xd09194,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.replyTimeTxt_t"
+      args="arial,12,0xdec975,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.bossLvTxt_t"
+      args="arial,14,0xff00ff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bossName.timeTxt_t"
+      args="arial,16,0xff6000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bossLv.timeTxt"
+      args="arial,14,0xff6000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.leftBattleTimeTxt_t"
+      args="arial,12,0xdec975,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.skipDesTxt_t"
+      args="arial,12,0xdec975,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.sbDesTxt_t"
+      args="arial,12,0xdec975,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiaNewBossCallFrame.bossNameTxt_t"
+      args="arial,14,0xff892a,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.fightCountTimeText_f"
+      args="arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newboss.ConsortiaNewBossFrame.replyCountTimeText_f"
+      args="arial,12,0xDEC975,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.bossName.Txt_f"
+      args="0xff6000,0.2,6,6,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.consortianewboss.desTxt1_t"
+      args="Arial,14,0xff9933,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.consortianewboss.desTxt2_t"
+      args="Arial,14,0xff9933,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.consortianewboss.Nodetip_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.consortianewboss.t1_t"
+      args="Arial,14,0xe4d29c,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.consortianewboss.t2_t"
+      args="Arial,14,0xe4d29c,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.consortianewboss.bossHpTxt_t"
+      args="Arial,14,0xFFFFFF,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="asset.consortianewboss.waitTxt_t"
+      args="Arial,14,0x6d544d,,,,,,left"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.consortianewboss.titleImage"
+      x="390"
+      y="-48" />
+    <bitmapData
+      resourceLink="asset.consortianewboss.bg2Icon"
+      x="401"
+      y="162" />
+    <bitmapData
+      resourceLink="asset.consortianewboss.hpBar"
+      width="326"
+      height="27" />
+    <bitmapData
+      resourceLink="asset.consortianewboss.waitIcon"
+      x="401"
+      y="162" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="consortianewboss.ItemBaseItemView"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="consortianewboss.ItemBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="consortianewboss.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true"
+      x="20"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="consortianewboss.ItemBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="1"
+      iconHeight="40"
+      iconWidth="40"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="newboss.ConsortiaNewBossFrame.bossIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="45"
+      loadingY="31"
+      iconWidth="60"
+      iconHeight="60"
+      x="50"
+      y="36" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.consortianewboss.vb1"
+      spacing="12"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.consortianewboss.vb2"
+      spacing="12"
+      x="6"
+      y="347" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.consortiaNewBoss.HeadIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="39"
+      loadingY="39"
+      iconWidth="78"
+      iconHeight="78"
+      x="401"
+      y="162" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="ui.consortianewboss.bossHp"
+      x="515"
+      y="178" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortianewboss.BaseItemText"
+      parentStyle="core.BaseItemText"
+      width="40"
+      x="1"
+      y="20" />
+    <component
+      stylename="newboss.ConsortiaNewBossFrame"
+      classname="consortia.view.newboss.ConsortiaNewBossFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="65"
+      closeInnerRectString="29,0,22,29,14"
+      width="965"
+      height="633" />
+    <component
+      stylename="newboss.ConsortiaNewBossCallFrame"
+      classname="consortia.view.newboss.ConsortiaNewBossCallFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="45"
+      closeInnerRectString="29,0,22,29,14"
+      moveInnerRectString="260,30,5,0,9"
+      width="432"
+      height="405" />
+    <component
+      stylename="newboss.ConsortiaNewBossFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="924"
+      height="521"
+      x="-2"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="newboss.ConsortiaNewBossFrame.bg"
+      resourceLink="asset.consortianewboss.bg1,asset.consortianewboss.bg2,asset.consortianewboss.bg5,asset.consortianewboss.bg6,asset.consortianewboss.bg7,asset.consortianewboss.bg8,asset.consortianewboss.bg9,asset.consortianewboss.bg10,asset.consortianewboss.bg11,asset.consortianewboss.bg12"
+      imageRectString="0|257|0|515|13,256|662|0|515|13,16|34|12|14|13,80|94|12|17|13,195|41|12|14|13,4|65|495|15|13,125|41|495|13|13,270|130|377|15|13,265|95|418|27|13,265|95|462|27|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.damageRewardImg"
+      resourceLink="asset.consortianewboss.damageRewardImg"
+      tipStyle="yishi.view.tips.ConsortiaNewBossDamageRewardTip"
+      x="625"
+      y="300"
+      tipGapH="20"
+      tipGapV="-20"
+      isFollowMouse="false"
+      tipDirctions="4,5,4,6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.bufferImg"
+      resourceLink="asset.consortianewboss.bufferImg"
+      x="700"
+      y="300"
+      tipStyle="yishi.view.tips.ConsortiaNewBossBufferTip"
+      tipGapH="20"
+      tipGapV="-20"
+      isFollowMouse="false"
+      tipDirctions="4,5,4,6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.bossLeftTimeBg"
+      resourceLink="asset.consortianewboss.bossTimebg"
+      x="405"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.bossLvBg"
+      resourceLink="asset.consortianewboss.bossLvbg"
+      x="480"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.leftCountImg"
+      resourceLink="asset.consortianewboss.bg4"
+      x="730"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.bossNameBgImage"
+      resourceLink="asset.consortianewboss.bossTimebg"
+      x="390"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="newboss.ConsortiaNewBossFrame.bossNameBgImage2"
+      resourceLink="asset.consortianewboss.bg3"
+      x="470"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="consortiaNewBossRankItem.spliteImg"
+      resourceLink="asset.consortianewboss.spliteImg"
+      x="20"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="newboss.ConsortiaNewBossFrame.bufferShopBtn"
+      backStyle="asset.consortianewboss.buffer"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="775"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="newboss.ConsortiaNewBossFrame.bossShopBtn"
+      backStyle="asset.consortianewboss.bossShop"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="850"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="newboss.ConsortiaNewBossFrame.openBtn"
+      backStyle="asset.consortianewboss.openBg"
+      iconStyle="asset.consortianewboss.openTxt"
+      iconInnerRectString="38,47,50,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="760"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="newboss.ConsortiaNewBossFrame.notOpenBtn"
+      backStyle="asset.consortianewboss.openBg"
+      iconStyle="asset.consortianewboss.notOpenTxt"
+      iconInnerRectString="30,62,50,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="760"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="newboss.ConsortiaNewBossFrame.battelBtn"
+      backStyle="asset.consortianewboss.openBg"
+      iconStyle="asset.consortianewboss.battleTxt"
+      iconInnerRectString="39,49,50,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="760"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortiaNewBossRankItem.rankImg"
+      resourceLink="asset.consortianewboss.rank1,asset.consortianewboss.rank2,asset.consortianewboss.rank3"
+      x="10"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiaNewBossRankItem.rankTxt"
+      textFormatStyle="consortiaNewBossRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="25"
+      height="20"
+      x="10"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiaNewBossRankItem.userNameTxt"
+      textFormatStyle="consortiaNewBossRankItem.userNameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="60"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiaNewBossRankItem.damageTxt"
+      textFormatStyle="consortiaNewBossRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="165"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.myRankTxt"
+      textFormatStyle="consortiaNewBossRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="70"
+      y="493" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.myDamageTxt"
+      textFormatStyle="consortiaNewBossRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="165"
+      y="493" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.successTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.successTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="265"
+      y="420" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.failTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.failTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="275"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.replyTimeTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.replyTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="840"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.leftCountTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.replyTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="755"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.leftBattleTimeTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.leftBattleTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="620"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="newboss.ConsortiaNewBossFrame.bossNameTxt"
+      textFieldStyle="bossName.timeTxt"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="ui.bossName.Txt_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="505"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bossName.timeTxt"
+      textFormatStyle="bossName.timeTxt_t"
+      autoSize="none"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="newboss.ConsortiaNewBossFrame.bossLvTxt"
+      textFieldStyle="bossLv.timeTxt"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="ui.bossName.Txt_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="495"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bossLv.timeTxt"
+      textFormatStyle="bossLv.timeTxt"
+      autoSize="none"
+      width="100"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiaNewBossCallFrame.bossNameTxt"
+      textFormatStyle="consortiaNewBossCallFrame.bossNameTxt_t"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="140"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="newboss.ConsortiaNewBossFrame.vbox"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="newboss.ConsortiaNewBossFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,256,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="256"
+      height="454"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="newboss.ConsortiaNewBossFrame.successRewardHbox"
+      spacing="10"
+      x="417"
+      y="392" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="newboss.ConsortiaNewBossFrame.failRewardHbox"
+      spacing="10"
+      x="417"
+      y="437" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortiaNewBossCallFrame.bg"
+      resourceLink="core.describeBackground_style06,asset.consortianewboss.callFramebg,asset.consortia.bossFrame.IconBack,asset.consortianewboss.bg11,asset.consortianewboss.bg12"
+      imageRectString="0|409|0|323|13,4|402|4|316|13,42|76|30|75|13,40|95|125|27|13,40|95|170|27|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="consortiaNewBossCallFrame.callBtn"
+      backStyle="asset.consortia.bossFrame.callBtnBack"
+      iconStyle="asset.consortia.bossFrame.callBtnIcon"
+      iconInnerRectString="41,73,12,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipWidth="0"
+      tipGapV="0"
+      tipGapH="0"
+      tipDirctions="0,4,3"
+      x="125"
+      y="182" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="newboss.ConsortiaNewBossFrame.fightCountTime"
+      timeTxtStyle="newboss.ConsortiaNewBossFrame.fightCountTimeText"
+      x="560"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.fightCountTimeText"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.fightCountTimeText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.replyTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.replyCountTimeText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="768"
+      y="466" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="consortianewboss.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="consortianewboss.HelpFrame.helpContent"
+      titleText="consortianewboss.HelpFrame.title"
+      textWidth="365" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.consortianewboss.bg"
+      resourceLink="asset.consortianewboss.help.bg1,asset.consortianewboss.help.bg2,asset.consortianewboss.help.ft2,asset.consortianewboss.help.ft3,asset.consortianewboss.help.ft1,asset.consortianewboss.help.ft2"
+      imageRectString="6|384|0|238|13,0|384|272|143|13,224|138|8|28|13,31|145|288|14|13,17|179|16|17|13,217|138|278|28|13"
+      x="0"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.consortianewboss.confrim"
+      backStyle="asset.consortianewboss.confrimbg"
+      iconStyle="asset.consortianewboss.confirm"
+      iconInnerRectString="25,47,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="149"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.consortianewboss.desTxt1"
+      textFormatStyle="ui.consortianewboss.desTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="40"
+      wordWrap="true"
+      x="11"
+      y="-13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.consortianewboss.desTxt2"
+      textFormatStyle="ui.consortianewboss.desTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="415"
+      height="40"
+      wordWrap="true"
+      x="-9"
+      y="263" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.consortianewboss.Nodetip"
+      textFormatStyle="ui.consortianewboss.Nodetip_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="420"
+      height="40"
+      wordWrap="true"
+      x="-10"
+      y="436" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.consortianewboss.t1"
+      textFormatStyle="ui.consortianewboss.t1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.consortianewboss.t2"
+      textFormatStyle="ui.consortianewboss.t2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="179"
+      height="20"
+      x="193"
+      y="2" />
+    <component
+      classname="consortia.view.newboss.NewBossDessFrame"
+      stylename="newboss.ConsortiaNewBossHelpFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      containerX="16"
+      containerY="56"
+      width="430"
+      height="590" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="newboss.ConsortiaNewBoss.Spanel1"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,375,0,0,2"
+      vScrollbarInnerRectString="15,0,0,6,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="375"
+      height="192"
+      x="10"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.skipDesTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.skipDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="385"
+      height="20"
+      x="330"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newboss.ConsortiaNewBossFrame.sbDesTxt"
+      textFormatStyle="newboss.ConsortiaNewBossFrame.sbDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="290"
+      height="20"
+      x="435"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.consortianewboss.bossHpTxt"
+      textFormatStyle="ui.consortianewboss.bossHpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="320"
+      height="20"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="asset.consortianewboss.waitTxt"
+      textFormatStyle="asset.consortianewboss.waitTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="392"
+      y="189" />
+  </components>
+</style>

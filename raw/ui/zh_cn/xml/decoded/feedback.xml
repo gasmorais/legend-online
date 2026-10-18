@@ -1,0 +1,220 @@
+<style
+  name="feedback"
+  source="ui/zh_cn/swf/feedback.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="feedBackItem.title_t"
+      args="Arial,11,0xefd89b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="feedBackFrame.giftTitle_t"
+      args="Arial,14,0xf9ed68,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="feedBackFrame.remainTimeText_t"
+      args="Arial,16,0xee1919,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="feedBackFrame.describeText_t"
+      args="Arial,14,0x66db17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="progress.text_t"
+      args="Arial,14,0xfff6d9,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.feedback.progress1"
+      x="0"
+      y="333" />
+    <bitmapData
+      resourceLink="asset.feedback.goodsBack"
+      x="26"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.feedback.timeDownImage"
+      x="10"
+      y="282" />
+    <bitmapData
+      resourceLink="asset.feedback.titleBack"
+      x="0"
+      y="154" />
+  </bitmaps>
+  <components>
+    <!--充值回馈 Frame-->
+    <component
+      classname="feedback.FeedBackFrame"
+      stylename="feedback.FeedBackFrame"
+      parentStyle="core.Frame1"
+      containerX="25"
+      containerY="77"
+      width="775"
+      height="507" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="feedBackFrame.back1"
+      parentStyle="core.describeBackground_style27"
+      x="-8"
+      y="-16"
+      width="738"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="feedBackItem.back"
+      resourceLink="asset.feedback.itemback1,asset.feedback.itemback2"
+      x="6"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="feedBackItem.selectedBack"
+      resourceLink="asset.feedback.selectedBack"
+      scaleGridString="20,20,140,70"
+      x="0"
+      y="0"
+      width="110"
+      height="147" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="feedBackFrame.back2"
+      parentStyle="core.describeBackground_style26"
+      x="0"
+      y="0"
+      width="723"
+      height="270" />
+    <custom
+      classname="feedback.Progress"
+      stylename="feedBackFrame.Progress" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="feedBackItem.getBtn"
+      backStyle="asset.feedback.getBack"
+      iconStyle="asset.feedback.getIcon"
+      x="9"
+      y="96"
+      width="90"
+      height="34"
+      iconInnerRectString="22,46,7,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="feedBackItem.giftImage"
+      resourceLink="asset.feedback.iconImage_1,asset.feedback.iconImage_2,asset.feedback.iconImage_3,asset.feedback.iconImage_4,asset.feedback.iconImage_5,asset.feedback.iconImage_6,asset.feedback.iconImage_7"
+      x="29"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="feedBackItem.title"
+      textFormatStyle="feedBackItem.title_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="96"
+      height="36"
+      x="7"
+      y="4"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="feedBackFrame.giftTitle"
+      textFormatStyle="feedBackFrame.giftTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="9"
+      y="159" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="feedBackFrame.remainTimeText"
+      textFormatStyle="feedBackFrame.remainTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="25"
+      x="170"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="feedBackFrame.describeText"
+      textFormatStyle="feedBackFrame.describeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="500"
+      height="40"
+      x="12"
+      y="298"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="progress.text"
+      textFormatStyle="progress.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="128"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="feedBackFrame.priceIcon"
+      resourceLink="asset.feedback.priceBack1,asset.feedback.priceBack2"
+      x="525"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="feedBackFrame.chargeBtn"
+      backStyle="asset.feedback.payBack"
+      iconStyle="asset.feedback.payIcon"
+      x="540"
+      y="312"
+      width="167"
+      height="52"
+      iconInnerRectString="32,102,11,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="feedBackFrame.BaseItemView"
+      iconStyle="feedBackFrame.ItemBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="51"
+      profileHeight="51"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="feedBackFrame.ItemBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="51"
+      iconWidth="51"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="26"
+      loadingY="26"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="feedBackFrame.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="0"
+      y="33"
+      autoSize="none"
+      width="52"
+      height="18"
+      autoDisplay="false" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="feedback.LightEffect"
+      resourceLink="asset.feedback.LightEffect"
+      x="27"
+      y="-27" />
+  </components>
+</style>

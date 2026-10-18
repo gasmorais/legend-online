@@ -1,0 +1,354 @@
+<style
+  name="revengeroad"
+  source="ui/zh_cn/swf/revengeroad.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.revengeroad.needTxt_t"
+      args="Arial,12,0xfff10f,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.revengeroad.desTxt_t"
+      args="Arial,12,0xfc7d00,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.revengeroad.fbtnTxt_t"
+      args="Arial,12,0xffcc33,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.revengeroad.bossNum_t"
+      args="Arial,12,0xffcc33,false,,,,,right"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.revengeroad.circle1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.circle2"
+      x="-1"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.circleLine"
+      x="8"
+      y="91" />
+    <bitmapData
+      resourceLink="asset.revengeroad.circle3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.bar1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.bar2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.7bg"
+      x="56"
+      y="297" />
+    <bitmapData
+      resourceLink="asset.revengeroad.logo"
+      x="37"
+      y="72" />
+    <bitmapData
+      resourceLink="asset.revengeroad.bigBg"
+      x="38"
+      y="63" />
+    <bitmapData
+      resourceLink="asset.revengeroad.bossBg"
+      x="586"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.revengeroad.title2"
+      x="632"
+      y="34" />
+    <bitmapData
+      resourceLink="asset.revengeroad.2bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.rewardBox"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.getFlag"
+      x="2"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.revengeroad.lock2"
+      x="57"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.revengeroad.unLockCard"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.revengeroad.lockCard"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.revengeroad.bossRewardHbox"
+      spacing="10"
+      x="690"
+      y="70"
+      autoCenter="true" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.revengeroad.rewardVbox"
+      spacing="20"
+      x="-25"
+      y="-31" />
+    <custom
+      classname="asset.revengeroad.MapAreaContainer"
+      stylename="asset.revengeroad.MapAreaContainer"
+      x="522"
+      y="332"
+      mouseEnable="false" />
+    <custom
+      classname="asset.revengeroad.linesBg"
+      stylename="asset.revengeroad.linesBg"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.revengeroad.fristBox"
+      spacing="0"
+      x="30"
+      y="61" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.revengeroad.maybeBox"
+      spacing="10"
+      x="30"
+      y="171" />
+    <custom
+      classname="revenge.item.RevengeCicleItem"
+      stylename="revenge.item.RevengeCicleItem"
+      x="896"
+      y="120" />
+    <custom
+      classname="revenge.item.RevengeRewardBar"
+      stylename="revenge.item.RevengeRewardBar"
+      x="942"
+      y="268" />
+    <custom
+      classname="revenge.item.RevengeAreaBox"
+      stylename="revenge.item.RevengeAreaBox"
+      x="0"
+      y="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="revenge.renewTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="845"
+      y="92" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.mapLock1"
+      resourceLink="asset.revengeroad.lock1"
+      x="212"
+      y="446"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.mapLock5"
+      resourceLink="asset.revengeroad.lock1"
+      x="284"
+      y="151"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.mapLock2"
+      resourceLink="asset.revengeroad.lock1"
+      x="411"
+      y="308"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.mapLock4"
+      resourceLink="asset.revengeroad.lock1"
+      x="669"
+      y="437"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.mapLock3"
+      resourceLink="asset.revengeroad.lock1"
+      x="643"
+      y="245"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.revengeroad.needTxt"
+      textFormatStyle="ui.revengeroad.needTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.revengeroad.buyBtn"
+      backStyle="asset.revengeroad.buyBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="66"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.revengeroad.desTxt"
+      textFormatStyle="ui.revengeroad.desTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="171"
+      height="53"
+      x="58"
+      y="295"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.revengeroad.mainBack"
+      resourceLink="asset.revengeroad.1bg,asset.revengeroad.title"
+      imageRectString="0|0|19,420|58|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.revengeroad.bossBtn"
+      backStyle="asset.revengeroad.bossBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="570"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.revengeroad.fightBack"
+      resourceLink="asset.revengeroad.resource.award.bg2,asset.revengeroad.resource.award.bg3,asset.revengeroad.resource.award.bg3,asset.revengeroad.resource.award.str1,asset.revengeroad.resource.award.str2"
+      imageRectString="0|0|19,13|19|19,12|128|19,19|136|19,19|28|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.revengeroad.ftBtnBg"
+      resourceLink="asset.revengeroad.btnAttack.btn5,asset.revengeroad.btnAttack.icon,asset.revengeroad.heart"
+      imageRectString="-10|125|0|46|13,-6|70|11|22|13,75|30|8|30|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.revengeroad.ftBtn"
+      backStyle="ui.revengeroad.ftBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="49"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.revengeroad.saodang"
+      backStyle="asset.revengeroad.btnSwap.btn6"
+      iconStyle="asset.revengeroad.btnSwap.icon"
+      iconInnerRectString="34,49,9,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="201"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.revengeroad.fbtnTxt"
+      textFormatStyle="ui.revengeroad.fbtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="31"
+      height="16"
+      x="53"
+      y="15" />
+    <component
+      classname="revenge.RevengeFightFrame"
+      stylename="revenge.RevengeFightFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,15,20,29,14"
+      moveInnerRectString="376,57,20,0,9"
+      width="400"
+      height="460"
+      containerX="18" />
+    <component
+      classname="revenge.RevengeNodeFrame"
+      stylename="revenge.RevengeNodeFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,17,20,29,14"
+      moveInnerRectString="376,57,20,0,9"
+      width="897"
+      height="543" />
+    <component
+      classname="revenge.RevengeRoadFrame"
+      stylename="revenge.RevengeRoadFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,40,29,14"
+      moveInnerRectString="376,57,90,0,9"
+      width="1032"
+      height="650"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.revengeroad.circleTxt"
+      textFormatStyle="ui.revengeroad.desTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="-2"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.revengeroad.bossBuyBtn"
+      backStyle="asset.revengeroad.buyBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="239"
+      y="253" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.fIcon"
+      resourceLink="asset.revengeroad.heart"
+      x="127"
+      y="-6"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.revengeroad.bossNum"
+      textFormatStyle="ui.revengeroad.bossNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="141"
+      height="18"
+      x="95"
+      y="260" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.revengeroad.fgetFlg"
+      resourceLink="asset.revengeroad.getFlag"
+      x="28"
+      y="60"
+      scaleX="1" />
+  </components>
+</style>

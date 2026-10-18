@@ -1,0 +1,416 @@
+<style
+  name="pvpmap"
+  source="ui/zh_cn/swf/pvpmap.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_red"
+      args="Arial,12,0xff0b2d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_red2"
+      args="Arial,14,0xff0b2d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_green"
+      args="Arial,12,0x64cc27,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_green2"
+      args="Arial,14,0x64cc27,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_blue"
+      args="Arial,12,0x4dbbee,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="campaign.pvpmap.ItemSortTxt_blue2"
+      args="Arial,14,0x4dbbee,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvpmap.sortitem.PersonLabelFieldTF"
+      args="Arial,14,0xe4d29c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvpmap.sortitem.PersonPriceFieldTF"
+      args="Arial,12,0xffb100,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvpmap.sortitem.ScoreFieldTF"
+      args="Arial,22,0xffb100,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvpmap.sortitem.ServerNameTxt_t"
+      args="Arial,12,0xffc852,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="army.rune.promotBtn.txt_t"
+      letterSpacing="5"
+      args="Arial,12,0xc1d4df,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.pvpmap.number1" />
+    <bitmapData
+      resourceLink="asset.pvpmap.number2" />
+    <bitmapData
+      resourceLink="asset.pvpmap.number3" />
+    <bitmapData
+      resourceLink="asset.pvpmap.SortItemBgTitle" />
+    <bitmapData
+      resourceLink="asset.pvpmap.TeamSortAsset"
+      x="88"
+      y="-25" />
+    <bitmapData
+      resourceLink="asset.pvpmap.AwardAsset"
+      x="48"
+      y="307" />
+    <bitmapData
+      resourceLink="asset.pvpmap.RedFlagAsset" />
+    <bitmapData
+      resourceLink="asset.pvpmap.GreenFlagAsset" />
+    <bitmapData
+      resourceLink="asset.pvpmap.BlueFlagAsset" />
+    <bitmapData
+      resourceLink="asset.pvpmap.LineAwardBg"
+      x="38"
+      y="266" />
+    <bitmapData
+      resourceLink="asset.pvpmap.MinAwardAsset"
+      x="30"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.pvpmap.MaxAwardAsset" />
+    <bitmapData
+      resourceLink="asset.pvpmap.ScoreLabel"
+      x="54"
+      y="283" />
+    <bitmapData
+      resourceLink="asset.pvpmap.SymbolAsset"
+      x="210"
+      y="319" />
+    <bitmapData
+      resourceLink="asset.pvpmap.HonorIconAsset" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.geom.Point"
+      stylename="asset.pvpmap.MinAwardAssetPos2"
+      x="144"
+      y="227" />
+    <custom
+      classname="asset.pvpmap.MvpAsset"
+      stylename="asset.pvpmap.MvpAsset"
+      x="0"
+      y="7" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="flametemple.blueNumImg"
+      resourceLink="asset.flametemple.BlueNumImg"
+      x="60"
+      y="34" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="flametemple.redNumImg"
+      resourceLink="asset.flametemple.RedNumImg"
+      x="382"
+      y="34" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="gvgcrossui.RewardWang"
+      resourceLink="asset.gvgcrossui.RewardWang"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="asset.pvpmap.MaxAwardImage"
+      resourceLink="asset.pvpmap.MaxAwardAsset"
+      x="171"
+      y="308"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="-5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="asset.pvpmap.HonorIconImage"
+      resourceLink="asset.pvpmap.HonorIconAsset"
+      x="316"
+      y="308"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="-5" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pvpmap.sortitem.AwardTxt"
+      textFieldStyle="pvpmap.sortitem.Score"
+      colors="0xf3ff32,0xff9600"
+      filterString="core.normal_f"
+      alphas="1,1"
+      ratios="30,255"
+      x="234"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pvpmap.sortitem.OverHonorTxt"
+      textFieldStyle="pvpmap.sortitem.Score"
+      colors="0xf3ff32,0xff9600"
+      filterString="core.normal_f"
+      alphas="1,1"
+      ratios="30,255"
+      x="386"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pvpmap.sortitem.ScoreField"
+      textFieldStyle="pvpmap.sortitem.Score"
+      colors="0xf3ff32,0xff9600"
+      filterString="core.normal_f"
+      alphas="1,1"
+      ratios="30,255"
+      x="166"
+      y="282" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.Score"
+      textFormatStyle="pvpmap.sortitem.ScoreFieldTF"
+      autoSize="none"
+      mouseEnabled="false"
+      width="60"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.PersonPriceField"
+      textFormatStyle="pvpmap.sortitem.PersonPriceFieldTF"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="54"
+      height="20"
+      x="170"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.TeamPriceField"
+      parentStyle="pvpmap.sortitem.PersonPriceField"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.PersonLabelField"
+      textFormatStyle="pvpmap.sortitem.PersonLabelFieldTF"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="110"
+      height="20"
+      x="66"
+      y="189" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.TeamLabelField"
+      parentStyle="pvpmap.sortitem.PersonLabelField"
+      y="226" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvpmap.ItemBgImage"
+      resourceLink="pvpmap.SortItemBg2,pvpmap.SortItemBg1"
+      width="525" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pvpmap.SortItemBg1"
+      parentStyle="core.TitleBack_Style888"
+      width="402" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pvpmap.SortItemBg2"
+      parentStyle="core.TitleBack_Style777"
+      width="402" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.TeamSortFirstField"
+      parentStyle="pvpmap.sortitem.NickNameTxt"
+      textFormatStyle="campaign.pvpmap.ItemSortTxt_blue2,campaign.pvpmap.ItemSortTxt_red2,campaign.pvpmap.ItemSortTxt_green2"
+      x="119"
+      y="11"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.TeamSortSecondField"
+      parentStyle="pvpmap.TeamSortFirstField"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.TeamSortThirdField"
+      parentStyle="pvpmap.TeamSortSecondField"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvpmap.FlagAsset"
+      resourceLink="asset.pvpmap.BlueFlagAsset,asset.pvpmap.RedFlagAsset,asset.pvpmap.GreenFlagAsset"
+      x="15"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.NickNameTxt"
+      textFormatStyle="campaign.pvpmap.ItemSortTxt_blue2,campaign.pvpmap.ItemSortTxt_red2,campaign.pvpmap.ItemSortTxt_green2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.ServerNameTxt"
+      textFormatStyle="pvpmap.sortitem.ServerNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="142"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.ScoreTxt"
+      textFormatStyle="campaign.pvpmap.ItemSortTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="239"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.KillTxt"
+      textFormatStyle="campaign.pvpmap.ItemSortTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="333"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvpmap.sortitem.HonorTxt"
+      textFormatStyle="campaign.pvpmap.ItemSortTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="414"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="pvpmap.sortlist.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="11,-7,2,0,3"
+      viewportInnerRectString="10,0,0,0,5"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="540"
+      height="310"
+      x="-6"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="pvpmap.sortlist.Vbox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="map.campaign.pvp.PvpMapFrame"
+      stylename="map.campaign.pvp.PvpMapFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="68"
+      width="590"
+      height="462" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pvpmap.SortListBg"
+      parentStyle="core.describeBackground_style06"
+      width="550"
+      height="352" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pvpmap.TeamSortBg"
+      parentStyle="core.describeBackground_style06"
+      width="198"
+      height="175"
+      x="30"
+      y="-19" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pvpmap.AwardBg"
+      parentStyle="core.describeBackground_style06"
+      width="198"
+      height="169"
+      x="30"
+      y="162" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="flametemple.blueNumTxt"
+      textFormatStyle="flameTempleTopInfoView.blueScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="112"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="flametemple.redNumTxt"
+      textFormatStyle="flameTempleTopInfoView.redScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="432"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="flameTempleRightView.helpBtn"
+      backStyle="asset.core.HelpBg"
+      width="90"
+      height="21"
+      x="57"
+      y="-22"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="FlameTempleTeamItemView.headBack"
+      resourceLink="asset.flametemple.HeadBackImg"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="FlameTempleTeamView.adjustBtn"
+      backStyle="asset.flametemple.formatImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="109"
+      y="139" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="FlameTempleTeamView.back"
+      resourceLink="asset.flametemple.Line,asset.flametemple.skillBack,asset.flametemple.skillBack"
+      imageRectString="27|240|-20|3|13,96|170|0|51|13,96|170|55|51|13" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="campaignNpcView.tipView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="40"
+      height="40" />
+  </components>
+</style>

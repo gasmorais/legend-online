@@ -1,0 +1,12 @@
+[package]
+name = "lg-server"
+version = "0.1.0"
+edition = "2021"
+description = "Servidor simulado do Legend Online BR para validar o cliente HTML5 (HTTP + socket do jogo via WebSocket)"
+
+[dependencies]
+axum = { version = "0.8", features = ["ws"] }
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["cors"] }
+serde_json = "1"
+futures-util = "0.3"

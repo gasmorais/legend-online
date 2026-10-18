@@ -1,0 +1,1035 @@
+<style
+  name="gemmaze"
+  source="ui/zh_cn/swf/gemmaze.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.GemMazeFrame.ExpText_f"
+      args="Arial,12,0xf0eac4,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.GemMazeFrame.countText_f"
+      args="Arial,14,0x95feff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.GemMazeFrame.SortLinkTxt_f"
+      args="Arial,14,0x00ff36,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.ReceiveAllText_t"
+      args="Arial,12,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.InvideViewInputComBoxTxt_t"
+      args="Arial,12,0xdad8b6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.InvideCdTimeTxt_t"
+      args="Arial,18,0x782A1D,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.sort.titleTextFormat_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.FishFrame.ScoreText_f"
+      args="Arial,14,0xf0eac4,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.FishFrame.SortText_f"
+      args="Arial,14,0xf0eac4,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.sort.ItemTextValueStyle1_f"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GemMaze.grizeTitleTxt_t"
+      args="Arial,18,0xffdd84,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gemMaze.GemMazeFrame.numText1_t"
+      args="arial,16,0x999999,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.bg"
+      x="-30"
+      y="-105" />
+    <bitmapData
+      resourceLink="asset.GemMaze.LevelNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.IntegralLabel"
+      x="16"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.GemMaze.BuyTimesNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.GemMaze.BuyTimesNum2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.GemMaze.InvideBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.GemMaze.TipsTxtImg"
+      x="63"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.GemMaze.FriendInputBg"
+      x="65"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.GemMaze.InvideByBg"
+      x="0"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.GemMaze.InvideByDlg"
+      x="63"
+      y="54" />
+    <bitmapData
+      resourceLink="asset.GemMaze.InvideByCloseTipsImg"
+      x="18"
+      y="207" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemSelected"
+      x="-12"
+      y="-12" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBoxBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBoxGeted"
+      x="5"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBox1"
+      x="8"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBox2"
+      x="8"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBox3"
+      x="8"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBox4"
+      x="8"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.GemMaze.IntergalBox5"
+      x="8"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.GemMaze.numberpng" />
+    <bitmapData
+      resourceLink="asset.GemMazeSort.score"
+      x="10"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.GemMazeSort.sort"
+      x="450"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.GemMazeSort.sortBg"
+      x="530"
+      y="355" />
+    <bitmapData
+      resourceLink="asset.GemMazeSort.line"
+      x="0"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrameTitle"
+      x="375"
+      y="-65" />
+    <bitmapData
+      resourceLink="asset.GemMaze.Flag"
+      x="117"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.bgNum300"
+      x="125"
+      y="380" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.bgNum800"
+      x="125"
+      y="301" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.bgNum1800"
+      x="125"
+      y="223" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.bgNum3500"
+      x="125"
+      y="146" />
+    <bitmapData
+      resourceLink="asset.GemMaze.GemMazeFrame.bgNum6000"
+      x="125"
+      y="67" />
+    <bitmapData
+      resourceLink="asset.GemMaze.BlueBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.GemMaze.InvideingTxtImg"
+      x="55"
+      y="15" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.gemmaze.AddSpBallMC"
+      stylename="gemmaze.AddSpBallMC"
+      rotation="90" />
+    <custom
+      classname="asset.gemmaze.AddSpBallMC3"
+      stylename="gemmaze.AddSpBallMC3"
+      rotation="90" />
+    <custom
+      classname="asset.GemMaze.GemLevelMc"
+      stylename="gemMaze.GemLevelMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemMazeFrame.Lv"
+      stylename="GemMaze.LevelTxtMc"
+      x="16"
+      y="-10" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="gemMaze.levelView"
+      x="75"
+      y="-12"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="0"
+      tipDirctions="7,5,4,6"
+      tipGapH="0" />
+    <custom
+      classname="gemmaze.view.GemMazeBagView"
+      stylename="GemMaze.GemMazeBagView"
+      x="985"
+      y="138" />
+    <custom
+      classname="cell.view.gemmazebag.GemMazeBagCell"
+      stylename="gemmaze.BagCell"
+      parentStyle="core.BaseItemView"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43" />
+    <custom
+      classname="gemmaze.view.GemMazeBoxView"
+      stylename="GemMaze.GemMazeBoxView"
+      x="47"
+      y="35" />
+    <custom
+      classname="asset.GemMaze.GemMazeBoxEf"
+      stylename="GemMaze.GemMazeBoxViewEf"
+      x="131"
+      y="8" />
+    <custom
+      classname="gemmaze.view.GemMazeView"
+      stylename="GemMaze.GemMazeView"
+      x="265"
+      y="20" />
+    <custom
+      classname="asset.GemMaze.slotResult"
+      stylename="GemMaze.slotResult_0"
+      x="94"
+      y="96" />
+    <custom
+      classname="asset.GemMaze.slotResult"
+      stylename="GemMaze.slotResult_1"
+      x="143"
+      y="96" />
+    <custom
+      classname="asset.GemMaze.pull"
+      stylename="GemMaze.PullBtn"
+      x="189"
+      y="41"
+      buttonMode="true" />
+    <custom
+      classname="asset.GemMaze.GemAction_1"
+      stylename="GemMaze.GemAction_1"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemAction_2"
+      stylename="GemMaze.GemAction_2"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemAction_3"
+      stylename="GemMaze.GemAction_3"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemAction_4"
+      stylename="GemMaze.GemAction_4"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemAction_5"
+      stylename="GemMaze.GemAction_5"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemLight_1"
+      stylename="GemMaze.GemLight_1"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemLight_2"
+      stylename="GemMaze.GemLight_2"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemLight_3"
+      stylename="GemMaze.GemLight_3"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemLight_4"
+      stylename="GemMaze.GemLight_4"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.GemMaze.GemLight_5"
+      stylename="GemMaze.GemLight_5"
+      x="0"
+      y="0" />
+    <custom
+      classname="gemmaze.view.GemMazeGemCell"
+      stylename="GemMaze.GemMazeGemCell"
+      buttonMode="true"
+      x="285"
+      y="70" />
+    <custom
+      classname="gemmaze.view.GemMazeIntergalBoxView"
+      stylename="GemMaze.GemMazeIntergalBoxView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="GemMaze.BaseItemViewIcon"
+      x="5" />
+    <custom
+      classname="asset.GemMaze.GemMazeViewGrain"
+      stylename="GemMaze.GemMazeViewGrain"
+      x="517"
+      y="327"
+      rotation="-135"
+      scaleX="0.5"
+      scaleY="0.5" />
+    <custom
+      classname="asset.GemMaze.GemBoxLight"
+      stylename="GemMaze.GemBoxLight"
+      x="-5"
+      y="-10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="GemMaze.BaseItemViewIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="7"
+      y="7" />
+  </customDisplay>
+  <components>
+    <!-- 宝石阵列窗体 <component classname="gemMaze.GemMazeFrame" stylename="gemMaze.GemMazeFrame" 
+			width="960" height="620" closestyle="core.CloseBtn" titleStyle="core.FrameTitleText" 
+			backStyle="core.FrameBg1" moveInnerRectString="0,80,0,45,1" titleOuterRectPosString="0,25,1" 
+			closeInnerRectString="29,-2,22,29,14" moveEnable="true" enterEnable="true" 
+			escEnable="true" containerX="22" containerY="64" /> -->
+    <!-- 宝石阵列窗体II -->
+    <component
+      classname="gemmaze.GemMazeFrame"
+      stylename="gemmaze.GemMazeFrame.frame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GemMaze.BottleHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="918"
+      y="-48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.gemExpTxt"
+      textFormatStyle="gemMaze.GemMazeFrame.ExpText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="83"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.countText"
+      textFormatStyle="gemMaze.GemMazeFrame.countText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="25"
+      x="85"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.SortLinkTxt"
+      textFormatStyle="gemMaze.GemMazeFrame.SortLinkTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="145"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.BuyTimes.ButtonBack"
+      resourceLink="asset.GemMaze.BuyTimesBg1,asset.GemMaze.BuyTimesBg2"
+      imageRectString="0|176|0|123|13,90|98|65|34|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gemMaze.BuyTimesButton"
+      backStyle="asset.GemMaze.BuyTimesBtn"
+      iconStyle="asset.GemMaze.BuyTimesBtn"
+      iconInnerRectString="0,189,0,68,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="668"
+      y="401" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.LuckStar.ButtonBack"
+      resourceLink="asset.GemMaze.LuckStarBg"
+      imageRectString="0|132|0|48|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gemMaze.LuckStarButton"
+      backStyle="asset.GemMaze.LuckStarBtn"
+      iconStyle="asset.GemMaze.LuckStarBtn"
+      iconInnerRectString="0,189,0,68,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="434"
+      y="401" />
+    <!-- 藏宝箱 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gemMaze.gemMazeScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="400"
+      height="235"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.ReceiveAllText"
+      textFormatStyle="gemMaze.ReceiveAllText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="gemMaze.ReceiveAllButton"
+      backStyle="asset.GemMaze.ReceiveAllBtn"
+      textStyle="gemMaze.ReceiveAllText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="28"
+      backgoundInnerRectString="5,8,4,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="gemMaze.SortOutButton"
+      backStyle="asset.GemMaze.ReceiveAllBtn"
+      textStyle="gemMaze.ReceiveAllText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="28"
+      backgoundInnerRectString="5,8,4,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="90"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gemMaze.bagScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="165"
+      height="235"
+      x="2"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gemMaze.bagVBox"
+      x="0"
+      y="0"
+      width="375"
+      spacing="2" />
+    <!-- 邀请好友协助窗体 -->
+    <component
+      classname="gemmaze.view.GemMazeInvideFrame"
+      stylename="gemmaze.GemMazeInvideFrame"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="0"
+      containerY="5"
+      width="365"
+      height="175" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.InvideBottomTxt"
+      textFormatStyle="gemMaze.ReceiveAllText_t"
+      filterString="core.normal_f"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="290"
+      height="25"
+      x="40"
+      y="142" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gemMaze.InvideViewConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      offSetY="2"
+      x="58"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gemMaze.InvideViewCancleBtn"
+      parentStyle="core.AlertButtonCancel_1"
+      x="222"
+      y="107" />
+    <!-- 邀请好友combox -->
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="gemmaze.InvideViewInputComBox"
+      listPanelStyle="gemMaze.InvideViewInputComBoxListPanel"
+      listInnerRectString="30,35,10,100,18"
+      textStyle="gemMaze.InvideViewInputComBoxTxt"
+      textInnerRectString="-213,213,35,-33,0"
+      buttonStyle="gemMaze.InvideViewInputComBoxBtn"
+      width="138"
+      height="25"
+      x="286"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="gemMaze.InvideViewInputComBoxListPanel"
+      backgoundStyle="asset.GemMaze.InvideViewInputComBoxBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="13,4,-2,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.RosePresentViewInputComBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="yishi.view.adapter.EmailSelectedListAdapter"
+      stylename="gemmaze.InvideViewInputComBoxListCell"
+      backStyle="gemMaze.InvideViewInputComBoxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="core.Combox1_TextStyle"
+      autoSizeAble="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gemMaze.InvideViewInputComBoxListCellBg"
+      resourceLink=",gemMaze.comboxItembgB,gemMaze.comboxItembgB"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gemMaze.comboxItembgB"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.InvideViewInputComBoxTxt"
+      textFormatStyle="gemMaze.InvideViewInputComBoxTxt_t"
+      maxChars="12"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      width="133"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="gemMaze.InvideViewInputComBoxBtn"
+      backStyle="gemMaze.InvideViewInputComBoxBtnBg"
+      textStyle="gemMaze.InvideViewInputComBoxBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="28,0,9,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-64"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.InvideViewInputComBoxBtnBg"
+      resourceLink="asset.core.AlertBtnStyle_02,asset.core.friendsFriendImg"
+      imageRectString="0|96|0|40|13,12|19|11|17|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.InvideViewInputComBoxBtnTxt"
+      textFormatStyle="gemMaze.InvideViewInputComBoxTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="gemMaze.InvideViewInputComBoxFriendBtn"
+      unSelectedStyle="gemMaze.InvideViewInputComBoxFriendUnselectedBg"
+      selectedStyle="gemMaze.InvideViewInputComBoxFriendSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-2"
+      y="104"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.InvideViewInputComBoxFriendSelectedBg"
+      resourceLink="gemMaze.InvideButtonSelectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.InvideViewInputComBoxFriendUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gemMaze.InvideButtonSelectedImg"
+      resourceLink="asset.core.friendsButtonSelectedImg"
+      scaleY="-1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="gemMaze.InvideViewInputComBoxConsortiaBtn"
+      unSelectedStyle="friends.RosePresentViewInputComBoxConsortiaUnselectedBg"
+      selectedStyle="friends.RosePresentViewInputComBoxConsortiaSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.InvideViewInputComBoxConsortiaSelectedBg"
+      resourceLink="gemMaze.InvideButtonSelectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gemMaze.InvideViewInputComBoxConsortiaUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg" />
+    <!-- 被邀请协助窗体 -->
+    <component
+      classname="gemmaze.view.GemMazeInvideByFriendFrame"
+      stylename="gemmaze.GemMazeInvideByFriendFrame"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="0"
+      containerY="5"
+      width="270"
+      height="302" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.InvideByTipsTxt"
+      textFormatStyle="gemMaze.ReceiveAllText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="40"
+      x="0"
+      y="20"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.InvideByCdTimeTxt"
+      textFormatStyle="gemMaze.InvideCdTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="24"
+      x="170"
+      y="202" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.InvideTimesTxt"
+      textFormatStyle="gemMaze.ReceiveAllText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="24"
+      x="0"
+      y="235" />
+    <!-- 宝石迷阵帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="gemMaze.gemMazeHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="gemMaze.GemMazeFrame.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="322" />
+    <component
+      classname="gemmaze.view.GemMazeSortFrame"
+      stylename="gemmaze.GemMazeSortFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="700"
+      height="480" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gemMaze.sort.HeroRankItemBack02"
+      parentStyle="core.TitleBack_Style888"
+      width="620"
+      height="29"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gemMaze.sort.ItemBg"
+      resourceLink=",gemMaze.sort.HeroRankItemBack02"
+      height="25"
+      x="-3"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.sort.ItemTextValueStyle1"
+      textFormatStyle="gemMaze.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.sort.ItemTextValueStyle2"
+      textFormatStyle="gemMaze.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="113"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.sort.ItemTextValueStyle3"
+      textFormatStyle="gemMaze.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="225"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.sort.ItemTextValueStyle4"
+      textFormatStyle="gemMaze.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="355"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="gemMaze.sort.ItemTextValueStyle5"
+      textFieldStyle="gemMaze.sort.AppellNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="150"
+      x="475"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.sort.AppellNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="gemMaze.sort.ItemTextStyle2_vip"
+      textFieldStyle="gemMaze.sort.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="75"
+      y="5"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.sort.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.ItemTextStyle1"
+      textFormatStyle="gemMaze.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="13"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.ItemTextStyle2"
+      textFormatStyle="gemMaze.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="113"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.ItemTextStyle3"
+      textFormatStyle="gemMaze.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="250"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.ItemTextStyle4"
+      textFormatStyle="gemMaze.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="380"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.ItemTextStyle5"
+      textFormatStyle="gemMaze.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="505"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="gemMaze.GemMazeSort.ListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,1,-2,0,3"
+      viewportInnerRectString="0,0,5,2,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|gemMaze.sort.GemMazeSortItemAsset,29,583"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="652"
+      height="300"
+      x="7"
+      y="38" />
+    <custom
+      classname="gemmaze.view.GemMazeSortItemView"
+      stylename="gemMaze.sort.GemMazeSortItemAsset"
+      width="583"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gemMaze.GemMazeSortBg"
+      parentStyle="core.describeBackground_style06"
+      width="680"
+      height="390"
+      x="-15"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gemMaze.GemMazeSortListBG"
+      parentStyle="core.describeBackground_style40"
+      width="670"
+      height="330"
+      x="-10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.score"
+      textFormatStyle="gemMaze.FishFrame.ScoreText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="25"
+      x="100"
+      y="358" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeSort.sort"
+      textFormatStyle="gemMaze.FishFrame.SortText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="540"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeBoxView.AddIntergal"
+      textFormatStyle="gemMaze.ReceiveAllText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <!-- 邀请好友协助成功倒计时窗体 -->
+    <component
+      classname="gemmaze.view.GemMazeInvideMaskFrame"
+      stylename="gemmaze.GemMazeInvideMaskFrame"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="0"
+      containerY="5"
+      width="365"
+      height="175" />
+    <component
+      classname="gemMaze.view.GemMazeInvideByFriendFrame"
+      stylename="gemMaze.GemMazeInvideByFriendFrame"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="0"
+      containerY="5"
+      width="270"
+      height="302" />
+    <!-- 宝石迷阵Frame/奖励物品.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GemMaze.grizeBg"
+      resourceLink="asset.GemMaze.grizeBg"
+      x="30"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GemMaze.grizeGetBtn"
+      backStyle="asset.GemMaze.grizeGet"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="165"
+      y="129" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="GemMaze.grizeHbox"
+      x="60"
+      y="56"
+      spacing="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GemMaze.grizeTitleTxt"
+      textFormatStyle="GemMaze.grizeTitleTxt_t"
+      filterString="core.normal_f"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="240"
+      height="25"
+      x="109"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.numText1"
+      textFormatStyle="gemMaze.GemMazeFrame.numText1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="125"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.numText2"
+      parentStyle="gemMaze.GemMazeFrame.numText1"
+      x="125"
+      y="301" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.numText3"
+      parentStyle="gemMaze.GemMazeFrame.numText1"
+      x="125"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.numText4"
+      parentStyle="gemMaze.GemMazeFrame.numText1"
+      x="125"
+      y="146" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gemMaze.GemMazeFrame.numText5"
+      parentStyle="gemMaze.GemMazeFrame.numText1"
+      x="125"
+      y="67" />
+  </components>
+</style>

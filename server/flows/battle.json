@@ -1,0 +1,420 @@
+{
+ "rules": [
+  {
+   "on": "push:battle",
+   "set": {
+    "battle_id": "B1"
+   },
+   "battle": {
+    "battle_id": "$var.battle_id",
+    "battle_type": 1,
+    "map": 1,
+    "count_down": 180,
+    "heroes": [
+     {
+      "living_id": 1,
+      "user_id": "$player.player_id",
+      "user_pics": 1,
+      "temp_id": 1,
+      "type": 1,
+      "nick_name": "$player.nick_name",
+      "grade": "$player.grades",
+      "side": 1,
+      "pos": 2,
+      "max_hp": 12000,
+      "init_hp": 12000,
+      "hp": 12000,
+      "sp": 50,
+      "job": 1,
+      "pics": 1,
+      "phy_attack": 900,
+      "phy_defence": 300,
+      "mag_attack": 300,
+      "mag_defence": 300,
+      "force_hit": 10,
+      "parry": 10,
+      "captain": 100
+     },
+     {
+      "living_id": 2,
+      "user_id": 0,
+      "temp_id": 31010,
+      "type": 3,
+      "nick_name": "Rei Halazzi",
+      "grade": 20,
+      "side": 2,
+      "pos": 2,
+      "max_hp": 9000,
+      "init_hp": 9000,
+      "hp": 9000,
+      "sp": 0,
+      "job": 10,
+      "res": "boss102",
+      "phy_attack": 600,
+      "phy_defence": 200,
+      "mag_attack": 200,
+      "mag_defence": 200
+     }
+    ],
+    "soldiers": [
+     {
+      "living_id": 11,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 1,
+      "pos": 1,
+      "init_hp": 800,
+      "hp": 800,
+      "grade": 3,
+      "army_pawn_id": 11,
+      "phy_attack": 60,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 12,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 1,
+      "pos": 3,
+      "init_hp": 800,
+      "hp": 800,
+      "grade": 3,
+      "army_pawn_id": 12,
+      "phy_attack": 60,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 21,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 2,
+      "pos": 1,
+      "init_hp": 800,
+      "hp": 800,
+      "grade": 3,
+      "army_pawn_id": 21,
+      "phy_attack": 60,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 22,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 2,
+      "pos": 3,
+      "init_hp": 800,
+      "hp": 800,
+      "grade": 3,
+      "army_pawn_id": 22,
+      "phy_attack": 60,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     }
+    ],
+    "report": {
+     "battle_result": 1,
+     "gp_bonus": 350,
+     "gold_bonus": 120,
+     "strategy_bonus": 0,
+     "pet_gp_bonus": 40,
+     "baseItem": [
+      {
+       "template_id": 2129006,
+       "count": 1
+      }
+     ]
+    },
+    "report_defeat": {
+     "gp_bonus": 20,
+     "gold_bonus": 0
+    }
+   }
+  },
+  {
+   "on": "push:campaign_battle",
+   "set": {
+    "battle_id": "P1"
+   },
+   "battle": {
+    "battle_id": "$var.battle_id",
+    "battle_type": 17,
+    "map": 2,
+    "count_down": 180,
+    "heroes": [
+     {
+      "living_id": 1,
+      "user_id": "$player.player_id",
+      "user_pics": 1,
+      "temp_id": 1,
+      "type": 1,
+      "nick_name": "$player.nick_name",
+      "grade": "$player.grades",
+      "side": 1,
+      "pos": 2,
+      "max_hp": 12000,
+      "init_hp": 12000,
+      "hp": 12000,
+      "sp": 50,
+      "job": 1,
+      "pics": 1,
+      "phy_attack": 900,
+      "phy_defence": 300,
+      "mag_attack": 300,
+      "mag_defence": 300,
+      "force_hit": 10,
+      "parry": 10,
+      "captain": 100
+     },
+     {
+      "living_id": 2,
+      "temp_id": 31010,
+      "type": 3,
+      "nick_name": "Rei Halazzi",
+      "grade": 20,
+      "side": 2,
+      "pos": 5,
+      "max_hp": 7000,
+      "hp": 7000,
+      "sp": 0,
+      "job": 10,
+      "res": "boss102",
+      "phy_attack": 550,
+      "phy_defence": 180,
+      "mag_attack": 200,
+      "mag_defence": 180
+     }
+    ],
+    "soldiers": [
+     {
+      "living_id": 11,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 1,
+      "pos": 1,
+      "hp": 800,
+      "grade": 3,
+      "phy_attack": 60,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 12,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 1,
+      "pos": 3,
+      "hp": 800,
+      "grade": 3,
+      "phy_attack": 60,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 21,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 2,
+      "pos": 1,
+      "hp": 700,
+      "grade": 3,
+      "phy_attack": 55,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 22,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 2,
+      "pos": 4,
+      "hp": 700,
+      "grade": 3,
+      "phy_attack": 55,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     },
+     {
+      "living_id": 23,
+      "temp_id": 2006,
+      "type": 1,
+      "side": 2,
+      "pos": 7,
+      "hp": 700,
+      "grade": 3,
+      "phy_attack": 55,
+      "phy_defence": 10,
+      "mag_attack": 45,
+      "mag_defence": 10
+     }
+    ],
+    "report": {
+     "gp_bonus": 500,
+     "gold_bonus": 200,
+     "strategy_bonus": 0,
+     "pet_gp_bonus": 50,
+     "baseItem": [
+      {
+       "template_id": 2129006,
+       "count": 2
+      }
+     ]
+    },
+    "report_defeat": {
+     "gp_bonus": 30
+    }
+   }
+  },
+  {
+   "on": 10007,
+   "req": "LoadOverMsg",
+   "send": []
+  },
+  {
+   "on": 10018,
+   "req": "LoadOverMsg",
+   "send": [
+    {
+     "code": 156,
+     "msg": "BattleStartMsg",
+     "data": {
+      "frame": 0,
+      "mainType": 1,
+      "count_down": 180
+     }
+    }
+   ]
+  },
+  {
+   "on": 10008,
+   "req": "UseSkillMsg",
+   "send": []
+  },
+  {
+   "on": 10020,
+   "send": []
+  },
+  {
+   "on": 8256,
+   "req": "ChallengeRequestMsg",
+   "send": [
+    {
+     "code": 4169,
+     "msg": "ChallengeInfoMsg",
+     "data": {
+      "last_winCount": 2,
+      "challengeCount": 5,
+      "cur_rank": 120,
+      "total_count": 5,
+      "total_buyCount": 0,
+      "left_day": 3,
+      "notic_msg": "",
+      "simplePlayer": [
+       {
+        "userId": 2,
+        "nickName": "Arthur",
+        "isExist": 1,
+        "sexs": 1,
+        "pics": 2,
+        "camp": 1
+       },
+       {
+        "userId": 3,
+        "nickName": "Lia",
+        "isExist": 1,
+        "sexs": 0,
+        "pics": 4,
+        "camp": 1
+       },
+       {
+        "userId": 4,
+        "nickName": "Borin",
+        "isExist": 1,
+        "sexs": 1,
+        "pics": 3,
+        "camp": 1
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 8253,
+   "set": {
+    "battle_id": "C1"
+   },
+   "req": "ChallengeMsg",
+   "battle": {
+    "battle_id": "$var.battle_id",
+    "battle_type": 16,
+    "map": 3,
+    "count_down": 180,
+    "heroes": [
+     {
+      "living_id": 1,
+      "user_id": "$player.player_id",
+      "user_pics": 1,
+      "temp_id": 1,
+      "type": 1,
+      "nick_name": "$player.nick_name",
+      "grade": "$player.grades",
+      "side": 1,
+      "pos": 2,
+      "max_hp": 12000,
+      "init_hp": 12000,
+      "hp": 12000,
+      "sp": 50,
+      "job": 1,
+      "pics": 1,
+      "phy_attack": 900,
+      "phy_defence": 300,
+      "mag_attack": 300,
+      "mag_defence": 300,
+      "force_hit": 10,
+      "parry": 10,
+      "captain": 100
+     },
+     {
+      "living_id": 2,
+      "user_id": 2,
+      "temp_id": 2,
+      "type": 1,
+      "nick_name": "Arthur",
+      "grade": 80,
+      "side": 2,
+      "pos": 2,
+      "max_hp": 9000,
+      "init_hp": 9000,
+      "hp": 9000,
+      "sp": 0,
+      "job": 2,
+      "res": "",
+      "phy_attack": 600,
+      "phy_defence": 200,
+      "mag_attack": 200,
+      "mag_defence": 200
+     }
+    ],
+    "soldiers": [],
+    "report": {
+     "gp_bonus": 200,
+     "gold_bonus": 100
+    },
+    "report_defeat": {
+     "gp_bonus": 20
+    }
+   }
+  }
+ ]
+}

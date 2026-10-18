@@ -1,0 +1,642 @@
+<style
+  name="childpve"
+  source="ui/zh_cn/swf/remotepet.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.SortLinkTxt_f"
+      args="Arial,12,0x00ff0c,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.childItemGrade_t"
+      args="Arial,12,0xedbf83,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childPveBossItem.BossNameTxt_t"
+      args="Arial,14,0xf2c71c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.ChildPveOrderFrame.Title_f"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.ChildPveOrderItemView.sortText_t1"
+      args="Arial,12,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.ChildPveOrderItemView.sortText_t2"
+      args="Arial,12,0x00fffc,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.PageText_t"
+      letterSpacing="1"
+      args="Arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="childpve.PageText_f"
+      args="0x3c2000,1,1,1,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childpve.FrameTitile_t"
+      args="Arial,12,0xFFDD83,true"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNewNameTxt_t1"
+      args="Arial,12,0xffffff,true,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNewNameTxt_t2"
+      args="Arial,12,0x59cd41,true,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNewNameTxt_t3"
+      args="Arial,12,0x32a2f8,true,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNewNameTxt_t4"
+      args="Arial,12,0xc300ff,true,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNewNameTxt_t5"
+      args="Arial,12,0xff9600,true,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNewNameTxt_t6"
+      args="Arial,12,0xce0f0f,true,,,,,right"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <!-- 按钮底框.png -->
+    <bitmapData
+      resourceLink="asset.childpve.buttonBg"
+      x="0"
+      y="457"
+      width="685"
+      height="56" />
+    <!-- 编号.png -->
+    <bitmapData
+      resourceLink="asset.childpve.numberImg"
+      x="35"
+      y="184" />
+    <!-- 编号底.png -->
+    <bitmapData
+      resourceLink="asset.childpve.numberImgBg"
+      x="16"
+      y="180" />
+    <!-- 掉落选中.png -->
+    <bitmapData
+      resourceLink="asset.childpve.dropSelect"
+      x="139"
+      y="177" />
+    <!-- 法师.png -->
+    <bitmapData
+      resourceLink="asset.childpve.fashi"
+      x="0"
+      y="100" />
+    <!-- 分割线.png -->
+    <bitmapData
+      resourceLink="asset.childpve.splitLine"
+      x="3"
+      y="409"
+      width="680" />
+    <!-- 弓箭.png -->
+    <bitmapData
+      resourceLink="asset.childpve.gongjian"
+      x="320"
+      y="100" />
+    <!-- 花纹.png -->
+    <bitmapData
+      resourceLink="asset.childpve.huawen"
+      x="46"
+      y="62" />
+    <!-- 框.png -->
+    <bitmapData
+      resourceLink="asset.childpve.bossFrame"
+      x="13"
+      y="26" />
+    <!-- 守卫设置.png -->
+    <bitmapData
+      resourceLink="asset.childpve.childConfig"
+      x="0"
+      y="200"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 守卫头像框.png -->
+    <bitmapData
+      resourceLink="asset.childpve.childHeadImgFrame"
+      x="160"
+      y="200" />
+    <!-- 守卫头像上分割线面.png -->
+    <bitmapData
+      resourceLink="asset.childpve.childHeadAbove"
+      x="320"
+      y="200" />
+    <!-- 数字.png -->
+    <bitmapData
+      resourceLink="asset.childpve.number"
+      x="480"
+      y="200" />
+    <!-- 挑战.png -->
+    <bitmapData
+      resourceLink="asset.childpve.challege"
+      x="0"
+      y="0" />
+    <!-- 通缉.png -->
+    <bitmapData
+      resourceLink="asset.childpve.wanted"
+      x="50"
+      y="39" />
+    <!-- 通缉技能.png -->
+    <bitmapData
+      resourceLink="asset.childpve.wantedSkill"
+      x="30"
+      y="425" />
+    <!-- 通缉技能底.png -->
+    <bitmapData
+      resourceLink="asset.childpve.wantedSkillBg"
+      x="160"
+      y="300" />
+    <!-- 头像.png -->
+    <bitmapData
+      resourceLink="asset.childpve.wantedHeadFrame"
+      x="53"
+      y="72" />
+    <!-- 拖动进行布阵.png -->
+    <bitmapData
+      resourceLink="asset.childpve.dragToConfig"
+      x="480"
+      y="300" />
+    <!-- 文字底光.png -->
+    <bitmapData
+      resourceLink="asset.childpve.textBgLight"
+      x="640"
+      y="300" />
+    <!-- 选中框.png -->
+    <bitmapData
+      resourceLink="asset.childpve.selectFrame"
+      x="14"
+      y="26" />
+    <!-- 已消灭.png -->
+    <bitmapData
+      resourceLink="asset.childpve.beat"
+      x="33"
+      y="59" />
+    <!-- 战士.png -->
+    <bitmapData
+      resourceLink="asset.childpve.zhanshi"
+      x="320"
+      y="400" />
+    <bitmapData
+      resourceLink="asset.childpve.rewardBack"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="ChildPveReadyFrame.TileContainer"
+      paddingH="3"
+      paddingV="3"
+      columnCount="4"
+      rowCount="2"
+      x="-2"
+      y="0"
+      width="800" />
+    <custom
+      classname="asset.childpve.BossNumber"
+      stylename="childpve.BossNumber"
+      x="16"
+      y="-10" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="childpve.pageItems"
+      x="63"
+      y="494" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.point.normalRewardBackBox"
+      spacing="10"
+      x="238"
+      y="50" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.point.normalRewardBox"
+      spacing="15"
+      x="240"
+      y="53" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.point.advanceRewardBackBox"
+      spacing="10"
+      x="238"
+      y="155" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.point.advanceRewardBox"
+      spacing="15"
+      x="240"
+      y="158" />
+  </customDisplay>
+  <components>
+    <component
+      classname="childpve.ChildPveReadyFrame"
+      stylename="childpve.ChildPveReadyFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="51"
+      width="718"
+      height="614" />
+    <!-- 
+		<component classname="childpve.ChildFormationFrame" stylename="childpve.ChildFormationFrame" 
+			parentStyle="core.Frame1" containerX="15" containerY="51"
+		 	width="600" height="500"
+		/>
+		 -->
+    <component
+      classname="childpve.ChildFormationFrame"
+      stylename="childpve.ChildFormationFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="290,290,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="650"
+      height="470" />
+    <!-- 粗线框 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="childpve.BackBorder"
+      parentStyle="core.describeBackground_style11"
+      width="691"
+      height="509"
+      x="-2"
+      y="11" />
+    <!-- 细线框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="childpve.Frameback1"
+      parentStyle="core.describeBackground_style06"
+      width="679"
+      height="387"
+      alpha="0.6"
+      x="4"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childpve.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="632"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="childpve.childConfig"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.childpve.childConfig"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="129"
+      height="48"
+      iconInnerRectString="22,85,13,21,13"
+      x="280"
+      y="464" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.SortLinkTxt"
+      textFormatStyle="childpve.SortLinkTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="25"
+      x="477"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.skill.hBox"
+      x="72"
+      y="406"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childpve.challege"
+      resourceLink="asset.childpve.challege"
+      x="228"
+      y="268" />
+    <!-- HelpFrame -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="childpve.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="childpve.helpContent"
+      titleText="public.help"
+      textWidth="363" />
+    <!-- ChildPveSkillItemView -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="childpve.skillitem.skillBack"
+      resourceLink="asset.remotepet.skillBack"
+      x="10"
+      y="7" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="childpve.skillitem.skillIcon"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      iconWidth="41"
+      iconHeight="41"
+      x="12"
+      y="9" />
+    <!-- ChildPveBossItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childPveBossItem.BossNameTxt"
+      textFormatStyle="childPveBossItem.BossNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="20"
+      y="160"
+      width="150"
+      height="22" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="childPveBossItem.headIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="75"
+      iconWidth="75"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="37"
+      loadingY="37"
+      y="78"
+      x="57" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childpve.drop"
+      resourceLink="asset.childpve.drop"
+      tipStyle="yishi.view.tips.ChildPveRewardTip"
+      tipDirctions="5,2,4,1"
+      isFollowMouse="false"
+      x="139"
+      y="176" />
+    <!-- ChildPveOrderFrame -->
+    <component
+      classname="childpve.ChildPveOrderFrame"
+      stylename="childpve.ChildPveOrderFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="300"
+      height="600"
+      x="727"
+      y="12"
+      titleStyle="childpve.ChildPveOrderFrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderFrameTitleText"
+      textFormatStyle="childpve.FrameTitile_t"
+      filterString="core.FrameTitile_g" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="childpve.ChildPveOrderFrame.bg1"
+      parentStyle="core.describeBackground_style04"
+      width="265"
+      height="480"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="childpve.ChildPveOrderFrame.titleBg1"
+      resourceLink="asset.core.titleBg1"
+      scaleGridString="20,10,30,20"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="childpve.ChildPveOrderFrame.titleBg3"
+      resourceLink="asset.core.titleBg3"
+      scaleGridString="20,10,30,20"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="childpve.ChildPveOrderFrame.titleBg"
+      resourceLink="childpve.ChildPveOrderFrame.titleBg1,childpve.ChildPveOrderFrame.titleBg3"
+      imageRectString="0|130|0|35|13,130|130|0|35|13"
+      x="2"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderFrame.orderTitle"
+      textFormatStyle="childpve.ChildPveOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="5"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderFrame.nameTitle"
+      textFormatStyle="childpve.ChildPveOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="85"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderFrame.processTitle"
+      textFormatStyle="childpve.ChildPveOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="175"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderFrame.fightTitle"
+      textFormatStyle="childpve.ChildPveOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="143"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="childpve.ChildPveOrderFrame.vBox"
+      x="2"
+      y="47"
+      spacing="11" />
+    <!-- ChildPveOrderItemView -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="childpve.ChildPveOrderItemView.Line"
+      resourceLink="asset.core.SellItemLine1,asset.core.SellItemLine2,asset.core.SellItemLine3"
+      width="265"
+      height="2"
+      x="0"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderItemView.sortText"
+      textFormatStyle="childpve.ChildPveOrderItemView.sortText_t1,childpve.ChildPveOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="3"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderItemView.nameText"
+      textFormatStyle="childpve.ChildPveOrderItemView.sortText_t1,childpve.ChildPveOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="136"
+      height="20"
+      x="55"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="childpve.ChildPveOrderItemView.vipText"
+      textFieldStyle="childpve.ChildPveOrderItemView.vipTextField"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="136"
+      height="20"
+      x="55"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderItemView.vipTextField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="136"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderItemView.indexText"
+      textFormatStyle="childpve.ChildPveOrderItemView.sortText_t1,childpve.ChildPveOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="205"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.ChildPveOrderItemView.fightText"
+      textFormatStyle="childpve.ChildPveOrderItemView.sortText_t1,childpve.ChildPveOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="145"
+      y="10" />
+    <!-- 翻页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childpve.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      x="0"
+      y="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childpve.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="120"
+      y="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childpve.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="4"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childpve.PageText"
+      textFormatStyle="childpve.PageText_t"
+      filterString="childpve.PageText_f"
+      x="43"
+      y="3"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="childabysm.ChildAbysmFormationHeadView"
+      stylename="childabysm.ChildAbysmFormationHeadView"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <component
+      classname="childpatrol.ChildPatrolPointFrame"
+      stylename="childpve.ChildPatrolPointFrame"
+      parentStyle="core.Frame1"
+      containerX="25"
+      containerY="65"
+      width="605"
+      height="505" />
+    <component
+      stylename="childpve.pointFrameBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.childpve.point.B1,asset.childpve.point.B2,asset.childpve.point.B4,asset.childpve.point.B3"
+      imageRectString="0|0|19,235|5|19,150|225|19,235|118|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="childpve.pointFormBtn"
+      backStyle="asset.childpve.point.btnBack"
+      iconStyle="asset.childpve.childConfig"
+      iconInnerRectString="16,106,10,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false"
+      width="150"
+      height="50"
+      x="376"
+      y="336" />
+    <component
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="childpve.pointSkillTitle"
+      hSpace="20"
+      vSpace="20"
+      x="25"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childpve.point.challege"
+      resourceLink="asset.childpve.challege"
+      x="415"
+      y="256" />
+  </components>
+</style>

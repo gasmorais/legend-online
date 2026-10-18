@@ -1,0 +1,766 @@
+<style
+  name="mopup"
+  source="ui/zh_cn/swf/mopup.swf">
+  <sets>
+    <!-- 扫荡 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.HadMopupCountsTxt_t"
+      args="Arial,14,0xfef8e0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupTimeTxt_t"
+      args="Arial,14,0xfef8e0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupTipTitle_t"
+      args="Arial,12,0xcec6a8,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupTipTxt_t"
+      args="Arial,12,0xcec6a8,,,,,,left"
+      letterSpacing="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupGoodsLinkTxt_t"
+      args="Arial,14,0xa7db1b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupResultTitleTxt_t"
+      args="Arial,12,0xfff8dc,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupGainTxt_t"
+      args="Arial,12,0xd4a751,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupGainGoodsTxt_t"
+      args="Arial,12,0xd4a751,,,,,,left"
+      letterSpacing="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupGainCountsTxt_t"
+      args="Arial,12,0xfff499,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="mopup.MopupCountsTxt_f"
+      args="0xff3c00,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MopupCountsTxt_t"
+      args="Arial,14,0xfffd7d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.MazeMopupKingFreeTxt_t"
+      args="Arial,12,0xfff600,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.SelectTipsTxt_t"
+      args="Arial,12,0xe2c489,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mopup.mopupKeyTxt_t"
+      args="Arial,14,0xfef8e0,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 单人本扫荡 -->
+    <bitmapData
+      resourceLink="asset.mopup.MopupHowCounts"
+      x="385"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupCounts"
+      x="295"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.mopup.HadMopupHowCounts"
+      x="357"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.mopup.NeededPower"
+      x="297"
+      y="69" />
+    <!-- 迷宫扫荡 -->
+    <bitmapData
+      resourceLink="asset.mopup.MopupHowLayers"
+      x="380"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupLayers"
+      x="295"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.mopup.HadMopupHowLayers"
+      x="380"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupNeedGold"
+      x="295"
+      y="107" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupGoldTxt"
+      x="432"
+      y="110" />
+    <!--扫荡  -->
+    <bitmapData
+      resourceLink="asset.mopup.MopupAccelerate"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mopup.StartMopup"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupExp"
+      x="290"
+      y="92" />
+    <bitmapData
+      resourceLink="asset.mopup.Mopup"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupRemainTime"
+      x="279"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupUseTime"
+      x="295"
+      y="55" />
+    <bitmapData
+      resourceLink="asset.mopup.BattleOverTxt"
+      x="10"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mopup.BattleBreakTxt"
+      x="10"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupHowTurns"
+      x="365"
+      y="28" />
+    <bitmapData
+      resourceLink="asset.mopup.MopupTurns"
+      x="285"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.mopup.HadMopupHowTurns"
+      x="375"
+      y="28" />
+    <bitmapData
+      resourceLink="asset.mopup.demonland.tear"
+      x="297"
+      y="67" />
+    <bitmapData
+      resourceLink="asset.mopup.demonland.count"
+      x="297"
+      y="119" />
+    <bitmapData
+      resourceLink="asset.mopup.demonland.revengeHeart"
+      x="297"
+      y="67" />
+  </bitmaps>
+  <components>
+    <!-- 单人本扫荡 -->
+    <component
+      classname="mopup.view.CampaignMopupPrepareFrame"
+      stylename="mopup.view.CampaignMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="63"
+      width="555"
+      height="370" />
+    <component
+      classname="mopup.view.CampaignMopupIngFrame"
+      stylename="mopup.view.CampaignMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="21"
+      containerY="61"
+      width="555"
+      height="337" />
+    <!-- 迷宫扫荡 -->
+    <component
+      classname="mopup.view.MazeMopupPrepareFrame"
+      stylename="mopup.view.MazeMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="343" />
+    <component
+      classname="mopup.view.MazeMopupIngFrame"
+      stylename="mopup.view.MazeMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+    <!-- 远征扫荡 -->
+    <component
+      classname="mopup.view.RemoteMopupPrepareFrame"
+      stylename="mopup.view.RemoteMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="343" />
+    <component
+      classname="mopup.view.RemoteMopupIngFrame"
+      stylename="mopup.view.RemoteMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupNeedPowerText"
+      textFormatStyle="mopup.MopupTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="375"
+      y="69" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MazeMopupNeedGoldTxt"
+      textFormatStyle="mopup.MopupTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="375"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MazeMopupKingFreeTxt"
+      textFormatStyle="mopup.MazeMopupKingFreeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="true"
+      width="230"
+      height="35"
+      x="278"
+      y="192"
+      wordWrap="true" />
+    <!-- 获得物品窗口 -->
+    <component
+      classname="mopup.view.MopupGainGoodsFrame"
+      stylename="mopup.view.MopupGainGoodsFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="43"
+      width="310"
+      height="310" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="mopup.SimpleTileList"
+      vSpace="-1"
+      hSpace="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="mopup.GainGoodsScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="302"
+      height="235"
+      x="-12"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="mopup.BagCellIcon"
+      backgroundStyle="core.ItemBack"
+      iconStyle="mopup.GoodsCellIcon"
+      textStyle="core.BaseItemText"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="25"
+      strengthenY="23" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="mopup.GoodsCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <!-- 扫荡 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mopup.StartMopupBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.mopup.StartMopup"
+      iconInnerRectString="26,100,10,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="316"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="mopup.SelectButton1"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="300"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.SelectTipsTxt1"
+      textFormatStyle="mopup.SelectTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="325"
+      y="115"
+      width="170"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="mopup.SelectButton2"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="300"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.SelectTipsTxt2"
+      textFormatStyle="mopup.SelectTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="325"
+      y="145"
+      width="170"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="mopup.MopupBack0"
+      parentStyle="core.describeBackground_style11"
+      width="510"
+      height="230"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="mopup.MopupBack1"
+      parentStyle="core.describeBackground_style25"
+      width="500"
+      height="220"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mopup.MopupBack2"
+      parentStyle="core.describeBackground_style04"
+      width="276"
+      height="220"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupUseTimeTxt"
+      textFormatStyle="mopup.MopupTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="375"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupCountsInputTxt"
+      textFormatStyle="mopup.MopupCountsTxt_t"
+      autoSize="none"
+      filterString="mopup.MopupCountsTxt_f"
+      x="447"
+      y="25"
+      maxChars="3"
+      height="25"
+      width="35"
+      type="input"
+      restrict="0-9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupTipTitle"
+      textFormatStyle="mopup.MopupTipTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="12"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupTipTxt"
+      textFormatStyle="mopup.MopupTipTxt_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      width="270"
+      x="12"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mopup.MopupPrepareInputBack"
+      parentStyle="core.InputBack_style03"
+      width="40"
+      height="25"
+      x="445"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.HadMopupCountTxt"
+      textFormatStyle="mopup.HadMopupCountsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="35"
+      height="25"
+      x="435"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.CampaignRemainTimeTxt"
+      textFormatStyle="mopup.MopupTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="mopup.CampaignRemainTime"
+      timeTxtStyle="mopup.CampaignRemainTimeTxt"
+      y="61"
+      x="420" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupExpTxt"
+      textFormatStyle="mopup.MopupTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="375"
+      y="97" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupGoodsLinkTxt"
+      textFormatStyle="mopup.MopupGoodsLinkTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="25"
+      x="295"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="mopup.MopupListScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="275"
+      height="215"
+      x="2"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="mopup.MopupListVbox"
+      x="0"
+      y="0"
+      width="270"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupResultTitle"
+      textFormatStyle="mopup.MopupResultTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="70"
+      height="25"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupGainExpTxt"
+      textFormatStyle="mopup.MopupGainTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="25"
+      x="10"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupGainExpCountsTxt"
+      textFormatStyle="mopup.MopupGainCountsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="85"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupGainGoodsTxt"
+      textFormatStyle="mopup.MopupGainTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="25"
+      x="10"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.MopupgainGoodsItemTxt"
+      textFormatStyle="mopup.MopupGainGoodsTxt_t"
+      filterString="core.normal_f"
+      height="25"
+      x="40"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mopup.MopupAccelerateBtn"
+      backStyle="asset.core.ButtonStyle_02"
+      iconStyle="asset.mopup.MopupAccelerate"
+      width="90"
+      height="42"
+      iconInnerRectString="20,50,8,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="300"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mopup.MopupCancelBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.mopup.MopupCancel"
+      width="90"
+      height="42"
+      iconInnerRectString="20,50,8,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="400"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mopup.MopupEndBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.mopup.EndMopup"
+      width="90"
+      height="42"
+      iconInnerRectString="6,78,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="400"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mopup.changeMopupBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.mopup.change"
+      iconInnerRectString="22,72,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="331"
+      y="170" />
+    <component
+      classname="mopup.view.AbysmMopupPrepareFrame"
+      stylename="mopup.view.AbysmMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="343" />
+    <component
+      classname="mopup.view.AbysmMopupIngFrame"
+      stylename="mopup.view.AbysmMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+    <component
+      classname="mopup.view.LordTrialMopupPrepareFrame"
+      stylename="mopup.view.LordTrialMopupPrepareFrame"
+      width="532"
+      height="315"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,80,0,45,1"
+      titleOuterRectPosString="0,15,1"
+      closeInnerRectString="29,-2,15,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="10"
+      containerY="45" />
+    <component
+      classname="mopup.view.LordTrialMopupIngFrame"
+      stylename="mopup.view.LordTrialMopupIngFrame"
+      width="532"
+      height="315"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,80,0,45,1"
+      titleOuterRectPosString="0,15,1"
+      closeInnerRectString="29,-2,15,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="10"
+      containerY="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.mopupKeyTxt"
+      textFormatStyle="mopup.mopupKeyTxt_t"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSize="none"
+      x="400"
+      y="126"
+      height="22"
+      width="50" />
+    <component
+      classname="mopup.view.TimeVortexMopupPrepareFrame"
+      stylename="mopup.view.TimeVortexMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="63"
+      width="555"
+      height="370" />
+    <component
+      classname="mopup.view.TimeVortexMopupIngFrame"
+      stylename="mopup.view.TimeVortexMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="21"
+      containerY="61"
+      width="555"
+      height="337" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.TimeVortexMopupGainGoodsTxt"
+      textFormatStyle="mopup.MopupGainTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="25"
+      x="10"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.TimeVortexMopupgainGoodsItemTxt"
+      textFormatStyle="mopup.MopupGainGoodsTxt_t"
+      filterString="core.normal_f"
+      height="25"
+      x="40"
+      y="26" />
+    <component
+      classname="mopup.view.DemonLandMopupPrepareFrame"
+      stylename="mopup.view.DemonLandMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="378" />
+    <component
+      classname="mopup.view.DemonLandMopupIngFrame"
+      stylename="mopup.view.DemonLandMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mopup.demonland.swapCount"
+      textFormatStyle="mopup.MopupTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="410"
+      y="120" />
+    <component
+      classname="mopup.view.RevengeRoadMopupPrepareFrame"
+      stylename="mopup.view.RevengeRoadMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="378" />
+    <component
+      classname="mopup.view.RevengeRoadMopupIngFrame"
+      stylename="mopup.view.RevengeRoadMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+    <component
+      classname="mopup.view.HellAbysmMopupPrepareFrame"
+      stylename="mopup.view.HellAbysmMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="343" />
+    <component
+      classname="mopup.view.HellAbysmMopupIngFrame"
+      stylename="mopup.view.HellAbysmMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+    <component
+      classname="mopup.view.ShadowLandMopupPrepareFrame"
+      stylename="mopup.view.ShadowLandMopupPrepareFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="22"
+      containerY="66"
+      width="555"
+      height="378" />
+    <component
+      classname="mopup.view.ShadowLandMopupIngFrame"
+      stylename="mopup.view.ShadowLandMopupIngFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      containerX="15"
+      containerY="67"
+      width="542"
+      height="346" />
+  </components>
+</style>

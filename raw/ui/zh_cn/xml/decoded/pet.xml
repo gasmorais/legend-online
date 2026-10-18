@@ -1,0 +1,4846 @@
+<style
+  name="pet"
+  source="ui/zh_cn/swf/pet.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PetItemName_t"
+      args="Arial,12,0xedbf83,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PetItemGrade_t"
+      args="Arial,12,0xedbf83,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PetNameTxt_t"
+      args="Arial,12,0xedbf83,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.ChangeTxt_t"
+      underline="true"
+      args="Arial,12,0x12ea17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.NeedGradeTxt_t"
+      args="Arial,12,0x00d2ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GradeTxt_t"
+      args="Arial,14,0xfcf2c6,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.EnterWarText_t"
+      args="Arial,11,0xfcf2c6,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.ExpTxt_t"
+      args="Arial,12,0xfcf2c6,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.MorphSkillTextField_t"
+      args="Arial,14,0xfcf2c6,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.NormalSkillName_t"
+      args="Arial,12,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GrowthTxt_t1"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GrowthTxt_t2"
+      args="Arial,14,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GrowthTxt_t3"
+      args="Arial,14,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GrowthTxt_t4"
+      args="Arial,14,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GrowthTxt_t5"
+      args="Arial,14,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.GrowthTxt_t6"
+      args="Arial,14,0xce0f0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.WashTxt_t"
+      underline="true"
+      args="Arial,12,0x12ea17,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.StrengthCoeTxt_t"
+      args="Arial,12,0xfcf2c6,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.StrengthTxt_t1"
+      args="Arial,14,0xfcf2c6,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.StrengthTxt_t2"
+      args="Arial,14,0x12ea17,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PropertyPointTxt_t"
+      args="Arial,14,0xedbf83,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.AutoPlusText_t"
+      args="Arial,12,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.SubmitText_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PropertySelectedText_t1"
+      args="Arial,12,0x8aaec4,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PropertySelectedText_t2"
+      args="Arial,12,0xb9ebea,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PhyAttackText_t1"
+      args="Arial,14,0xc39a59,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PhyAttackText_t2"
+      args="Arial,14,0x12ea17,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.FireResText_t1"
+      args="Arial,14,0xc39a59,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.FireResText_t2"
+      args="Arial,14,0x12ea17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.MainPetTextField_t"
+      args="Arial,12,0xb9ebea,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.MainPetNameText_t"
+      args="Arial,12,0x00d2ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.NeedGradeTextField_t"
+      args="Arial,18,0xb9ebea,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.PassivityTxt_t"
+      args="Arial,10,0xffec6d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.BookNumTxt_t"
+      args="Arial,12,0xedbf83,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="coe.StrengthAddTxt_t1"
+      args="Arial,14,0xc4ff36,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="coe.StrengthAddTxt_t2"
+      args="Arial,14,0xfe0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.BuyTxt_t"
+      underline="true"
+      args="Arial,10,0x12ea17,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.UseDaimondTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.BlessBarTxt_t"
+      args="Arial,12,0xfcf2c6,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NumLabelTxt_t"
+      args="Arial,12,0xfddfa9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NumValueTxt_t"
+      args="Arial,14,0xfddfa9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NewGrowthTxt_t1"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NewGrowthTxt_t2"
+      args="Arial,14,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NewGrowthTxt_t3"
+      args="Arial,14,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NewGrowthTxt_t4"
+      args="Arial,14,0xc300ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NewGrowthTxt_t5"
+      args="Arial,14,0xff9600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.NewGrowthTxt_t6"
+      args="Arial,14,0xce0f0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petAdv.PetNameTxt_t"
+      args="Arial,12,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petrename.inputTipTxt_t"
+      args="Arial,14,0xffc62c,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petRename.RenameFrameDescribeTxt_t1"
+      args="Arial,12,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petRename.RenameFrameDescribeTxt_t2"
+      args="Arial,12,0xfddfa9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petRename.NameTxt_t"
+      letterSpacing="1"
+      args="Arial,12,0xfddfa9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MorphingSkillLockTip.titleTxt_t"
+      args="Arial,14,0xffc62c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MorphingSkillLockTip.promptTxt_t"
+      args="Arial,14,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MorphingSkillLockTip.descTxt_t"
+      args="Arial,12,0xffecb4,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AuctionCategoryPane.OpenPetTipTxt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.learnSkill.AlertTextStyle_t"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetListItemView.StateTextField_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetSwallowView.LvTxt_t"
+      args="Arial,14,0x00ff40,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetSwallowView.GradeTxt_t"
+      args="Arial,14,0x00ff40,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.IndexTxt_t"
+      args="Arial,12,0xfdf1c6,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petswallow.checkBtnForFullExpTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetComposeView.needGoldTxt_t"
+      letterSpacing="1"
+      args="Arial,18,0xffeb11,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetComposeHeadView.MainPetTextField_t"
+      args="Arial,14,0xb9ebea,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.equipNameTxt_t1"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.equipNameTxt_t2"
+      args="Arial,14,0x59cd41,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.equipNameTxt_t3"
+      args="Arial,14,0x32a2f8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.equipNameTxt_t4"
+      args="Arial,14,0xc300ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.equipNameTxt_t5"
+      args="Arial,14,0xff9600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.equipNameTxt_t6"
+      args="Arial,14,0xce0f0f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.successRateTxt_t"
+      args="Arial,14,0xffeb11,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquip.blessingValueTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.needMaterialItemTxt_t1"
+      args="Arial,12,0xff0000,,,,,,right"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.needMaterialItemTxt_t2"
+      args="Arial,12,0xffffff,,,,,,right"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.attributeTxt_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquipRefineryView.costTxt_t"
+      args="Arial,16,0xffeb11,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.refineryAttributeTxtStyle_t"
+      args="Arial,12,0xf9f5d5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.refineryAttributeTxtStyle_tt"
+      args="Arial,12,0x5daf2c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.refineryAttributeTxtStyle_ttt"
+      args="Arial,12,0xefb913,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godHeadItemView.openTipTxt_t"
+      args="Arial,12,0xce0f0f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquipRefineryView.leftContentTxt_t"
+      args="Arial,12,0xffecb4,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petEquipRefineryView.rightContentTxt_t"
+      args="Arial,12,0x12ea17,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.upgradeAttributeleftTxt_t"
+      args="Arial,12,0xf1d8bf,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.upgradeAttributeRightTxt_t"
+      args="Arial,12,0x00FF00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetMixView.level1_t"
+      args="Arial,12,0xedbf83,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetMixView.num1_t"
+      args="Arial,12,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetMixView.num2_t"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetMixView.name1_t"
+      args="Arial,12,0x3cff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetMixView.point_t"
+      args="Arial,18,0xfcf130,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetLearnSkillView.pageTxt_t"
+      args="Arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.PowerTxt_t"
+      args="Arial,12,0xcacb92,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petskill.BuyTxt1_t"
+      args="Arial,11,0xe4d9a5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.lastFreeSkillText_t"
+      args="Arial,14,0xffc000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.lastFreeSkillNote_t"
+      args="Arial,12,0xcd0202,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.autoBuyBtnText_t"
+      args="Arial,12,0xeccba6,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetAdvancedView.trainCountText_t"
+      args="arial,14,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.huohua.btnText_t1"
+      args="黑体,14,0xe9cf73,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.huohua.btnText_t2"
+      args="黑体,14,0xffeccc,,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="pet.huohua.btnGlow"
+      args="0x19051c,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.huohua.promptTxt_t"
+      args="黑体,14,0xfadf3f,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="pet.huohua.promptTxt_g"
+      args="0x211200,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pet.huohua.costTxt_t"
+      args="Arial,14,0xFFEB11,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="pet.huohua.costTxt_g"
+      args="0x000000,1,4,4,3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.pet.Back" />
+    <bitmapData
+      resourceLink="asset.pet.AdvCritNum" />
+    <bitmapData
+      resourceLink="asset.pet.FightCapacityTxt"
+      x="225"
+      y="329" />
+    <bitmapData
+      resourceLink="asset.pet.PetBg"
+      width="302" />
+    <bitmapData
+      resourceLink="asset.pet.EnterWarFlag"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.pet.PetExpBg"
+      x="-6"
+      y="252" />
+    <bitmapData
+      resourceLink="asset.pet.LevelFlag"
+      x="2"
+      y="255" />
+    <bitmapData
+      resourceLink="asset.pet.SeparateLine01"
+      x="169"
+      y="29"
+      height="422" />
+    <bitmapData
+      resourceLink="asset.pet.PointBack"
+      y="293"
+      x="0"
+      width="95"
+      height="39" />
+    <bitmapData
+      resourceLink="asset.pet.MorphSKillBg"
+      y="6"
+      x="65" />
+    <bitmapData
+      resourceLink="asset.pet.GlowLine"
+      y="210"
+      x="350" />
+    <bitmapData
+      resourceLink="asset.pet.SkillLockAsset"
+      y="1"
+      x="1" />
+    <bitmapData
+      resourceLink="asset.pet.SkillLearnedImg"
+      y="3"
+      x="3"
+      width="45"
+      height="45" />
+    <bitmapData
+      resourceLink="asset.pet.SkillBookBg"
+      y="165"
+      x="370" />
+    <bitmapData
+      resourceLink="asset.pet.skillBook"
+      y="205"
+      x="385" />
+    <bitmapData
+      resourceLink="asset.pet.PetItemMouseOver"
+      y="-11"
+      x="-9"
+      height="81" />
+    <bitmapData
+      resourceLink="asset.pet.YellowExp"
+      x="248"
+      y="72" />
+    <bitmapData
+      resourceLink="asset.pet.GreenExp"
+      x="248"
+      y="72" />
+    <bitmapData
+      resourceLink="asset.pet.FastKeyItemIndex"
+      x="33"
+      y="33" />
+    <bitmapData
+      resourceLink="asset.pet.bagBg"
+      x="-8"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.pet.strengProgress01"
+      x="184"
+      y="209" />
+    <bitmapData
+      resourceLink="asset.pet.strengProgress02"
+      x="184"
+      y="209" />
+    <bitmapData
+      resourceLink="asset.pet.progressBarBg"
+      x="169"
+      y="201" />
+    <bitmapData
+      resourceLink="asset.pet.successRateImg"
+      x="255"
+      y="182" />
+    <bitmapData
+      resourceLink="asset.pet.costGoldImg"
+      x="286"
+      y="175" />
+    <bitmapData
+      resourceLink="asset.pet.arrowImg"
+      x="282"
+      y="91" />
+    <bitmapData
+      resourceLink="asset.pet.StrengIsMax"
+      x="381"
+      y="123" />
+    <bitmapData
+      resourceLink="asset.pet.coeStone"
+      x="230"
+      y="309" />
+    <bitmapData
+      resourceLink="asset.pet.advCoeStone"
+      x="110"
+      y="309" />
+    <bitmapData
+      resourceLink="asset.pet.PetLearnSkillViewPageTxtBack"
+      x="115"
+      y="1" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="PetComposeMaterialView.materialTxt"
+      y="28"
+      x="8" />
+    <custom
+      classname="asset.pet.SwallowGradeMc"
+      stylename="pet.SwallowGradeMc"
+      y="96"
+      x="312" />
+    <custom
+      classname="asset.pet.PropertyCoeBar"
+      stylename="pet.StrengthMc"
+      y="32"
+      x="81" />
+    <custom
+      classname="asset.pet.PropertyCoeBar"
+      stylename="pet.StaminaMc"
+      y="124"
+      x="81" />
+    <custom
+      classname="asset.pet.PropertyCoeBar"
+      stylename="pet.IntellectMc"
+      y="93"
+      x="81" />
+    <custom
+      classname="asset.pet.PropertyCoeBar"
+      stylename="pet.ArmorMc"
+      y="62"
+      x="81" />
+    <custom
+      classname="pet.property.PropertyView"
+      stylename="pet.PropertyView"
+      y="31"
+      x="180" />
+    <custom
+      classname="pet.advanced.PetAdvancedView"
+      stylename="pet.PetAdvancedView"
+      y="28"
+      x="170" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="pet.FightCapacityNumContainer"
+      y="325"
+      x="247" />
+    <custom
+      classname="pet.swallow.PetSwallowView"
+      stylename="pet.PetSwallowView"
+      y="28"
+      x="170" />
+    <custom
+      classname="pet.strengthen.PetStrengthenView"
+      stylename="pet.PetStrengthenView"
+      y="48"
+      x="170" />
+    <custom
+      classname="pet.learnskill.PetLearnSkillView"
+      stylename="pet.PetLearnSkillView"
+      y="28"
+      x="170" />
+    <custom
+      classname="pet.compose.PetComposeView"
+      stylename="pet.PetComposeView"
+      y="28"
+      x="170" />
+    <custom
+      classname="pet.list.PetListView"
+      stylename="pet.PetListView"
+      y="35"
+      x="8" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.MorphSkillIcon"
+      parentStyle="core.PawnSkillIcon"
+      iconHeight="50"
+      iconWidth="50"
+      y="1"
+      x="1"
+      loadingX="25"
+      loadingY="25" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="pet.TileContainer"
+      paddingH="23"
+      paddingV="2"
+      rowCount="2"
+      columnCount="4"
+      y="23"
+      x="8" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.NormalSkillIcon"
+      parentStyle="core.PawnSkillIcon"
+      loadingX="16"
+      loadingY="16"
+      loadingWidth="3"
+      loadingHeight="3"
+      iconHeight="32"
+      iconWidth="32"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.MainPetIcon"
+      parentStyle="core.PawnSkillIcon"
+      loadingX="32"
+      loadingY="32"
+      iconHeight="60"
+      iconWidth="60"
+      y="92"
+      x="280"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.SecondPetIcon"
+      parentStyle="core.PawnSkillIcon"
+      loadingX="21"
+      loadingY="22"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconHeight="45"
+      iconWidth="45"
+      y="265"
+      x="292"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petSkill.SkillIcon"
+      parentStyle="core.PawnSkillIcon"
+      iconHeight="50"
+      iconWidth="50"
+      y="1"
+      x="1"
+      loadingX="25"
+      loadingY="25" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="petSkill.TileContainer1"
+      paddingH="18"
+      paddingV="6"
+      rowCount="2"
+      columnCount="4"
+      x="25"
+      y="299" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="petSkill.TileContainer2"
+      width="625"
+      paddingH="3"
+      paddingV="3"
+      rowCount="4"
+      columnCount="5"
+      y="3"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petSkill.SkillBookIcon"
+      parentStyle="core.PawnSkillIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingX="22"
+      loadingY="22"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.CellIcon"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5"
+      y="5"
+      iconWidth="60"
+      iconHeight="60" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="pet.bookCell"
+      iconStyle="pet.CellIcon"
+      textIconStyle="pet.bookCellBg"
+      activeStyle="store.EquipTipFrameMc"
+      textStyle="store.StoreIntensifyCellText"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,1,2,0,3"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="47"
+      strengthenY="45"
+      x="380"
+      y="183" />
+    <custom
+      stylename="pet.GrowthTxtStrip"
+      classname="mainBar.StripView"
+      x="95"
+      y="6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.StrengthCoeTxtStrip"
+      parentStyle="pet.GrowthTxtStrip"
+      x="85"
+      y="33" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.ArmorCoeTxtStrip"
+      parentStyle="pet.StrengthCoeTxtStrip"
+      y="63" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.IntellectCoeTxtStrip"
+      parentStyle="pet.StrengthCoeTxtStrip"
+      y="94" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.StaminaCoeTxtStrip"
+      parentStyle="pet.StrengthCoeTxtStrip"
+      y="125" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.StrengthTxtStrip"
+      parentStyle="pet.GrowthTxtStrip"
+      tipDirctions="3,7,5,4,6"
+      x="77"
+      y="167" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.ArmorTxtStrip"
+      parentStyle="pet.StrengthTxtStrip"
+      y="200" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.IntellectTxtStrip"
+      parentStyle="pet.StrengthTxtStrip"
+      y="232" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.StaminaTxtStrip"
+      parentStyle="pet.StrengthTxtStrip"
+      y="265" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.PhyAttackTextStrip"
+      parentStyle="pet.GrowthTxtStrip"
+      tipDirctions="3,7,5,4,6"
+      x="13"
+      y="15" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.PhyDenfenseTextStrip"
+      parentStyle="pet.PhyAttackTextStrip"
+      y="50" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.MagicAttackTextStrip"
+      parentStyle="pet.PhyAttackTextStrip"
+      y="85" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.MagicDenfenseTextStrip"
+      parentStyle="pet.PhyAttackTextStrip"
+      y="120" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.HpTextStrip"
+      parentStyle="pet.PhyAttackTextStrip"
+      y="155" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.FireResTextStrip"
+      width="115"
+      parentStyle="pet.PhyAttackTextStrip"
+      x="15"
+      y="216" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.WindResTextStrip"
+      parentStyle="pet.FireResTextStrip"
+      y="216"
+      x="150" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.WaterResTextStrip"
+      parentStyle="pet.FireResTextStrip"
+      y="256"
+      x="15" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.ElectResTextStrip"
+      parentStyle="pet.FireResTextStrip"
+      x="160"
+      y="255" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.DarkResTextStrip"
+      parentStyle="pet.FireResTextStrip"
+      y="296"
+      x="45" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.LightResTextStrip"
+      parentStyle="pet.FireResTextStrip"
+      y="296"
+      x="135" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pet.PropertyPointTxtStrip"
+      parentStyle="pet.StrengthTxtStrip"
+      x="0"
+      y="292" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petAdv.PetIcon"
+      parentStyle="core.PawnSkillIcon"
+      loadingX="30"
+      loadingY="30"
+      iconHeight="62"
+      iconWidth="62"
+      y="44"
+      x="146"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="pet.ComposeMaterialCell"
+      backgroundStyle="pet.ComposeMaterialCellBg"
+      iconStyle="store.ComposeMaterialCellIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="64"
+      profileHeight="64"
+      isShowProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="0"
+      strengthenY="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="pet.ComposeMaterialCell2"
+      iconStyle="pet.ComposeMaterialCellIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="64"
+      profileHeight="64"
+      isShowProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="0"
+      strengthenY="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.ComposeMaterialCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="32"
+      loadingY="32"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="50"
+      iconHeight="50"
+      x="4"
+      y="4" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="pet.composeBtnMc"
+      x="78"
+      y="-22" />
+    <custom
+      classname="pet.advanced.equipbag.PetBagCell"
+      stylename="pet.PetBagCell2"
+      parentStyle="pet.PetBagCell"
+      backgroundStyle="core.ItemBack2" />
+    <!-- 强化格子 -->
+    <custom
+      classname="pet.equipstore.streng.PetEquipStrengItem"
+      stylename="pet.PetEquipStrengItem"
+      iconStyle="pet.petEquipStengIcon"
+      profileStyle="core.GoodsProfileBG"
+      activeStyle="core.EquipActiveBack"
+      effectStyle="pet.petEquipSelectedEff"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      profileWidth="62"
+      profileHeight="62"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="47"
+      strengthenY="45"
+      x="142"
+      y="11" />
+    <!-- 强化格子Icon -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.petEquipStengIcon"
+      iconHeight="63"
+      iconWidth="61"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="pet.equipstore.NeedMaterialItem"
+      stylename="pet.strengNeedMaterialItemView01"
+      x="247"
+      y="24" />
+    <custom
+      classname="pet.equipstore.NeedMaterialItem"
+      stylename="pet.strengNeedMaterialItemView02"
+      x="315"
+      y="24" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="pet.needMaterialItem"
+      iconStyle="petEquipUpgradeView.stoneIconView"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      profileWidth="50"
+      profileHeight="50"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petEquipUpgradeView.stoneIconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="51"
+      iconHeight="51"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="pet.PetEquipStrengNextItem"
+      iconStyle="pet.petEquipStengIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      profileWidth="62"
+      profileHeight="62"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="47"
+      strengthenY="45"
+      x="409"
+      y="11" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.petEquipicon"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <!-- 耳环1 pos=0 -->
+    <custom
+      classname="pet.advanced.equipbag.PetEquipCell"
+      stylename="pet.petEquip01"
+      iconStyle="pet.petEquipicon"
+      profileStyle="core.GoodsProfileBG"
+      activeStyle="core.goods.Strengthen"
+      effectStyle="core.EquipActiveBack"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      iconWidth="42"
+      iconHeight="42"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      pos="0"
+      x="8"
+      y="61" />
+    <!-- 耳环2 pos=1 -->
+    <custom
+      classname="pet.advanced.equipbag.PetEquipCell"
+      stylename="pet.petEquip02"
+      parentStyle="pet.petEquip01"
+      pos="1"
+      x="8"
+      y="113" />
+    <!-- 腰带 pos=2 -->
+    <custom
+      classname="pet.advanced.equipbag.PetEquipCell"
+      stylename="pet.petEquip03"
+      parentStyle="pet.petEquip01"
+      pos="2"
+      x="8"
+      y="165" />
+    <!-- 饰品1 pos=3 -->
+    <custom
+      classname="pet.advanced.equipbag.PetEquipCell"
+      stylename="pet.petEquip04"
+      parentStyle="pet.petEquip01"
+      pos="3"
+      x="248"
+      y="61" />
+    <!-- 饰品2 pos=4 -->
+    <custom
+      classname="pet.advanced.equipbag.PetEquipCell"
+      stylename="pet.petEquip05"
+      parentStyle="pet.petEquip01"
+      pos="4"
+      x="248"
+      y="113" />
+    <!-- 神器 pos=5 -->
+    <custom
+      classname="pet.advanced.equipbag.PetEquipCell"
+      stylename="pet.petEquip06"
+      parentStyle="pet.petEquip01"
+      pos="5"
+      x="248"
+      y="165" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="pet.SimpleTileList"
+      vSpace="0"
+      hSpace="2" />
+    <custom
+      classname="pet.advanced.equipbag.PetBagCell"
+      stylename="pet.PetBagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="pet.petBagCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="pet.ProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="24"
+      fashionIconY="21" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.petBagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="pet.equipstore.EquipStoreView"
+      stylename="pet.EquipStoreView"
+      y="28"
+      x="170" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.PetIconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="90"
+      iconHeight="55"
+      x="2"
+      y="2" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petEquipRefineryView.arrow"
+      resourceLink="asset.pet.arrowImg"
+      y="98"
+      x="292" />
+    <custom
+      classname="pet.equipstore.NeedMaterialItem"
+      stylename="pet.refineryNeedMaterialItemView"
+      x="370"
+      y="24" />
+    <custom
+      classname="pet.equipstore.NeedMaterialItem"
+      stylename="pet.upgradeNeedMaterialItemView"
+      x="285"
+      y="22" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petEquipRefineryView.costImg"
+      resourceLink="asset.petrefinery.CostImg"
+      y="207"
+      x="200" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petrefinery.SelectedBack"
+      resourceLink="asset.petrefinery.SelectedBack"
+      y="2"
+      x="2" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petEquipRefineryView.pointImg"
+      resourceLink="asset.petrefinery.PointImg"
+      y="211"
+      x="336" />
+    <!-- 炼化格子 -->
+    <custom
+      classname="pet.equipstore.streng.PetEquipStrengItem"
+      stylename="pet.petEquipRefineryItem"
+      parentStyle="pet.PetEquipStrengItem"
+      x="277"
+      y="11" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petEquipUpgradeView.needGoldImg"
+      resourceLink="asset.pet.costGoldImg"
+      y="210"
+      x="240" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="godHeadItemView.bgView"
+      resourceLink="asset.godhead.ItemViewbgView"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="pet.GodHeadGemitem"
+      profileStyle="pet.ProfileBG"
+      showProfile="true"
+      profileWidth="62"
+      profileHeight="62"
+      profileX="0"
+      profileY="0"
+      iconStyle="godHeadItemView.iconView"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="godHeadItemView.iconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="32"
+      loadingY="32"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="60"
+      iconHeight="60"
+      x="0"
+      y="0"
+      resourceLink="asset.godhead.ItemLockView,asset.godhead.ItemLockView2" />
+    <!-- 神格之魂格子 -->
+    <custom
+      classname="pet.equipstore.streng.PetEquipStrengItem"
+      stylename="pet.petEquipGodHeadItem"
+      parentStyle="pet.PetEquipStrengItem"
+      x="276"
+      y="26" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="petEquipUpgradeView.item2"
+      backgroundStyle="petEquipRefineryView.itemBack"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      profileWidth="62"
+      profileHeight="62"
+      iconStyle="petEquipRefineryView.goodsItemIcon"
+      x="440"
+      y="10" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petEquipRefineryView.itemBack"
+      resourceLink="asset.pet.bigItemBg"
+      y="-5"
+      x="-7" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petEquipRefineryView.goodsItemIcon"
+      parentStyle="petEquipGodHeadView.goodsItemIconView"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petEquipGodHeadView.goodsItemIconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="32"
+      loadingY="32"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="60"
+      iconHeight="60"
+      x="0"
+      y="0" />
+    <!-- 升阶格子 -->
+    <custom
+      classname="pet.equipstore.streng.PetEquipStrengItem"
+      stylename="pet.petEquipUpgradeItem"
+      parentStyle="pet.PetEquipStrengItem"
+      x="117"
+      y="10" />
+    <custom
+      classname="pet.compose.PetComposeHeadView"
+      stylename="PetComposeView.avatarView1"
+      x="75"
+      y="15" />
+    <custom
+      classname="pet.compose.PetComposeHeadView"
+      stylename="PetComposeView.avatarView2"
+      x="355"
+      y="15" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="petEquipGodHeadView.itemBack"
+      resourceLink="asset.pet.bigItemBg"
+      y="23"
+      x="270" />
+    <custom
+      classname="pet.mix.PetMixView"
+      stylename="pet.PetMixView"
+      y="28"
+      x="170" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetMixView.pet1"
+      parentStyle="pet.MainPetIcon"
+      x="119"
+      y="37" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetMixView.pet2"
+      parentStyle="pet.MainPetIcon"
+      x="119"
+      y="149" />
+    <custom
+      classname="pet.huohua.HuohuaView"
+      stylename="pet.HuohuaView"
+      y="28"
+      x="170" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.huohua.sparkIcon"
+      iconHeight="42"
+      iconWidth="42"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="21"
+      loadingY="21"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="pet.huohua.spark.SparkBagCell"
+      stylename="pet.huohua.SparkBagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="pet.huohua.sparkIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43"
+      textStyle="core.BaseItemText"
+      lockStyle="core.BagCellLock"
+      activeStyle="core.goods.Strengthen"
+      effectStyle="core.EquipActiveBack" />
+    <custom
+      stylename="pet.huohua.EquipCell"
+      classname="pet.huohua.spark.HuohuaEquipCell"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="24"
+      fashionIconY="21"
+      iconWidth="52"
+      iconHeight="52"
+      profileX="1"
+      profileY="1"
+      equipStyle="petskill.SkillIconBack"
+      profileWidth="43"
+      profileHeight="43"
+      iconStyle="pet.petBagCellIcon"
+      textStyle="core.BaseItemText"
+      fullStyleY="1"
+      fullStyleX="2"
+      lvStyle="ui.theseusbagCell.lvText"
+      profileStyle="ui.theseus.warCell.Profile2"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pet.huohua.decomposeCell.sparkIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="21"
+      loadingY="21"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="pet.huohua.decompose.HuohuaDecomposeCell"
+      stylename="pet.huohua.decomposeCell"
+      backgroundStyle="store.resolveBack"
+      iconStyle="pet.huohua.decomposeCell.sparkIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="1"
+      profileY="1"
+      profileWidth="48"
+      profileHeight="48"
+      textStyle="core.BaseItemText"
+      tipDirctions="7,5,4,6,1,2,0,3"
+      activeStyle="store.resolveEquipTipFrameMc"
+      effectStyle="core.EquipActiveBack" />
+    <custom
+      classname="pet.huohua.upgrade.HuohuaUpgradeItem"
+      stylename="pet.huohua.upgradeItem"
+      iconStyle="pet.petEquipStengIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="62"
+      profileHeight="62"
+      strengthenX="47"
+      strengthenY="45"
+      textStyle="core.BaseItemText"
+      activeStyle="pet.petEquipSelectedEff"
+      effectStyle="core.EquipActiveBack" />
+    <custom
+      stylename="pet.huohua.spark.SparkBagCell"
+      classname="pet.huohua.spark.SparkBagCell"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="24"
+      fashionIconY="21"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileWidth="43"
+      profileHeight="43"
+      backgroundStyle="core.ItemBack"
+      iconStyle="pet.petBagCellIcon"
+      textStyle="core.BaseItemText"
+      fullStyleY="1"
+      fullStyleX="2"
+      fullStyle="asset.tips.addImg"
+      lvStyle="ui.theseusbagCell.lvText"
+      profileStyle="ui.theseus.warCell.Profile2"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.ComposeMaterialCellBg"
+      resourceLink="asset.store.ComposeMaterialCellBg"
+      width="72"
+      height="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.FireResText"
+      textFormatStyle="pet.FireResText_t1,pet.FireResText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="55"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.WindResText"
+      parentStyle="pet.FireResText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.WaterResText"
+      parentStyle="pet.FireResText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.ElectResText"
+      parentStyle="pet.FireResText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.DarkResText"
+      parentStyle="pet.FireResText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.LightResText"
+      parentStyle="pet.FireResText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.PhyAttackText"
+      textFormatStyle="pet.PhyAttackText_t1,pet.PhyAttackText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.PhyDenfenseText"
+      parentStyle="pet.PhyAttackText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.MagicAttackText"
+      parentStyle="pet.PhyAttackText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.MagicDenfenseText"
+      parentStyle="pet.PhyAttackText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.HpText"
+      parentStyle="pet.PhyAttackText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.StrengthTxt"
+      textFormatStyle="pet.StrengthTxt_t1,pet.StrengthTxt_t2"
+      autoSize="right" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.ArmorTxt"
+      parentStyle="pet.StrengthTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.IntellectTxt"
+      parentStyle="pet.StrengthTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.StaminaTxt"
+      parentStyle="pet.StrengthTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.StrengthCoeTxt"
+      textFormatStyle="pet.StrengthCoeTxt_t"
+      autoSize="none"
+      width="170"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.ArmorCoeTxt"
+      parentStyle="pet.StrengthCoeTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.IntellectCoeTxt"
+      parentStyle="pet.StrengthCoeTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.StaminaCoeTxt"
+      parentStyle="pet.StrengthCoeTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.GrowthTxt"
+      filterString="core.normal_f"
+      textFormatStyle="pet.GrowthTxt_t1,pet.GrowthTxt_t2,pet.GrowthTxt_t3,pet.GrowthTxt_t4,pet.GrowthTxt_t5,pet.GrowthTxt_t6"
+      autoSize="none"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.bookCellBg"
+      resourceLink="asset.store.EquipWordTxtImg"
+      x="1"
+      y="1" />
+    <component
+      classname="pet.PetFrame"
+      stylename="pet.PetFrame"
+      parentStyle="core.Frame1"
+      width="830"
+      height="560"
+      containerX="16"
+      containerY="62" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pet.PetFrameBack"
+      parentStyle="core.describeBackground_style11"
+      width="794"
+      height="430"
+      x="0"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.PropertyBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      selectedIconStyle="asset.pet.PropertySelectedTxt"
+      unselectedIconStyle="asset.pet.PropertyUnSelectedTxt"
+      selectedIconInnerRectString="18,62,8,18,13"
+      unselectedIconInnerRectString="18,58,8,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      x="48"
+      y="-2"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.AdvancedBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.AdvancedSelectedTxt"
+      unselectedIconStyle="asset.pet.AdvancedUnSelectedTxt"
+      x="164"
+      selectedIconInnerRectString="18,58,8,18,13"
+      unselectedIconInnerRectString="18,58,8,18,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.SwallowBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.SwallowSelectedTxt"
+      unselectedIconStyle="asset.pet.SwallowUnSelectedTxt"
+      x="280"
+      selectedIconInnerRectString="18,56,8,18,13"
+      unselectedIconInnerRectString="18,56,8,18,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.HandbookBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.HandbookSelectedTxt"
+      unselectedIconStyle="asset.pet.HandbookUnSelectedTxt"
+      x="398"
+      selectedIconInnerRectString="18,63,8,18,13"
+      unselectedIconInnerRectString="18,63,8,18,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.LearnskillBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.LearnSkillSelectedTxt"
+      unselectedIconStyle="asset.pet.LearnSkillUnSelectedTxt"
+      x="517"
+      selectedIconInnerRectString="18,58,8,18,13"
+      unselectedIconInnerRectString="18,58,8,18,13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.PetItemName"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="right"
+      x="0"
+      y="5"
+      width="150"
+      height="22"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.PetItemGrade"
+      textFormatStyle="pet.PetItemGrade_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="83"
+      y="30"
+      width="66"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="pet.PetVBox"
+      isStrictHeight="true"
+      strictHeight="68"
+      x="0"
+      y="0"
+      spacing="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.PetNameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="8"
+      y="0"
+      width="150"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.CarrayLabelTxt"
+      parentStyle="pet.PetNameTxt"
+      y="3"
+      x="200"
+      width="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.NeedGradeTxt"
+      textFormatStyle="pet.NeedGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      isAutoFitLength="true"
+      x="150"
+      y="4"
+      width="145"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.PowerLabelTxt"
+      parentStyle="pet.PetNameTxt"
+      y="30"
+      x="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.PowerTxt"
+      parentStyle="pet.NeedGradeTxt"
+      y="30"
+      x="53"
+      width="130"
+      textFormatStyle="pet.PowerTxt_t" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.GradeTxt"
+      textFormatStyle="pet.GradeTxt_t"
+      autoSize="none"
+      x="30"
+      y="252"
+      width="50"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.ExpTxt"
+      textFormatStyle="pet.ExpTxt_t"
+      autoSize="none"
+      x="55"
+      y="255"
+      width="245"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.EnterWarText"
+      textFormatStyle="pet.EnterWarText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      letterSpacing="1"
+      width="68"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.YellowBtn"
+      resourceLink="asset.pet.YellowBtn"
+      scaleGridString="37,38,11,12"
+      width="133"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.EnterMenuBack"
+      resourceLink="asset.pet.EnterMenuBack"
+      scaleGridString="37,38,11,12"
+      width="163"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.EnterWarButton"
+      backStyle="asset.pet.YellowBtn"
+      textStyle="pet.EnterWarText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="72"
+      height="24"
+      backgoundInnerRectString="2,8,3,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="231"
+      y="225" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.SacrificeButton"
+      backStyle="asset.pet.YellowBtn"
+      parentStyle="pet.EnterWarButton"
+      x="92"
+      width="72"
+      textStyle="pet.EnterWarText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      height="24"
+      backgoundInnerRectString="-14,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="221" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.priorityBtn"
+      backStyle="asset.pet.YellowBtn"
+      parentStyle="pet.EnterWarButton"
+      x="41"
+      textStyle="pet.EnterWarText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="48"
+      height="24"
+      backgoundInnerRectString="-14,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="221" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.CancelPracticeText"
+      parentStyle="pet.EnterWarText"
+      width="62" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.CancelPracticeButton"
+      backStyle="asset.pet.BlueBtn"
+      textStyle="pet.CancelPracticeText"
+      parentStyle="pet.EnterWarButton"
+      width="72"
+      x="225"
+      y="224"
+      backgoundInnerRectString="0,8,3,13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.SealButton"
+      backStyle="asset.pet.GreenBtn"
+      parentStyle="pet.EnterWarButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      y="225"
+      x="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pet.PetTypeImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      resourceLink="asset.pet.PetType101,asset.pet.PetType102,asset.pet.PetType103,asset.pet.PetType104,asset.pet.PetType105,asset.pet.PetType106,asset.pet.PetType107,asset.pet.PetType118,asset.pet.PetType119"
+      y="20"
+      x="260" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pet.ShowViewBack"
+      parentStyle="pet.PetFrameBack"
+      width="313"
+      height="258"
+      x="-6"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.MorphSkillTextField"
+      textFormatStyle="pet.MorphSkillTextField_t"
+      autoSize="none"
+      width="48"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pet.MorphSkillText"
+      colors="0xf0f078,0xffa302"
+      alphas="1,1"
+      ratios="80,255"
+      filterString="core.normal2_f"
+      textFieldStyle="pet.MorphSkillTextField"
+      mouseEnabled="false"
+      width="100"
+      height="24"
+      y="1"
+      x="50"
+      paddingH="2"
+      paddingV="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.NormalSkillName"
+      textFormatStyle="pet.NormalSkillName_t"
+      autoSize="none"
+      x="-18"
+      y="28"
+      width="80"
+      height="40"
+      mouseEnabled="false"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.MorphSkillBack"
+      resourceLink="asset.pet.MorphSkillBack"
+      scaleGridString="50,50,115,65"
+      width="235"
+      x="0"
+      y="0"
+      height="137" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.WashTxt"
+      textFormatStyle="pet.WashTxt_t"
+      autoSize="none"
+      x="73"
+      y="305"
+      width="30"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.StrengthPlusBtn"
+      backStyle="asset.pet.PlusImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="162"
+      x="190" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.StrengthMinusBtn"
+      backStyle="asset.pet.MinusImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="162"
+      x="225" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.StaminaPlusBtn"
+      parentStyle="pet.StrengthPlusBtn"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.StaminaMinusBtn"
+      parentStyle="pet.StrengthMinusBtn"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.IntellectPlusBtn"
+      parentStyle="pet.StrengthPlusBtn"
+      y="226" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.IntellectMinusBtn"
+      parentStyle="pet.StrengthMinusBtn"
+      y="226" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.ArmorPlusBtn"
+      parentStyle="pet.StrengthPlusBtn"
+      y="194" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pet.ArmorMinusBtn"
+      parentStyle="pet.StrengthMinusBtn"
+      y="194" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.PropertyPointTxt"
+      textFormatStyle="pet.PropertyPointTxt_t"
+      autoSize="none"
+      x="0"
+      y="0"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.AutoPlusText"
+      textFormatStyle="pet.AutoPlusText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.AutoPlusButton"
+      backStyle="asset.pet.AutoBtn"
+      textStyle="pet.AutoPlusText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="27"
+      backgoundInnerRectString="6,8,5,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.SubmitText"
+      textFormatStyle="pet.SubmitText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.SubmitButton"
+      backStyle="asset.core.SmallBrownBtn"
+      textStyle="pet.SubmitText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="27"
+      backgoundInnerRectString="4,8,5,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="198"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="pet.GrowthSelectedTextButton"
+      unSelectedStyle="pet.Table1UnSelected"
+      selectedStyle="pet.Table1Selected"
+      textStyle="pet.PropertySelectedText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      width="95"
+      height="25"
+      x="310"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.Table1UnSelected"
+      resourceLink="asset.pet.Table1UnSelected"
+      width="95" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.Table1Selected"
+      resourceLink="asset.pet.Table1Selected"
+      width="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.PropertySelectedText"
+      textFormatStyle="pet.PropertySelectedText_t1,pet.PropertySelectedText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="4"
+      width="95"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="pet.DetailSelectedTextButton"
+      parentStyle="pet.GrowthSelectedTextButton"
+      y="0"
+      x="410" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLineA"
+      resourceLink="asset.pet.HLine"
+      width="250"
+      y="160"
+      x="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLineB"
+      parentStyle="pet.HLineA"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLineC"
+      parentStyle="pet.HLineA"
+      y="224" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLineD"
+      parentStyle="pet.HLineA"
+      y="256" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLineE"
+      parentStyle="pet.HLineA"
+      y="288" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine1"
+      parentStyle="pet.HLineA"
+      y="40"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine2"
+      parentStyle="pet.HLine1"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine3"
+      parentStyle="pet.HLine1"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine4"
+      parentStyle="pet.HLine1"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine5"
+      parentStyle="pet.HLine1"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine6"
+      parentStyle="pet.HLine1"
+      y="243" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine7"
+      parentStyle="pet.HLine1"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.HLine8"
+      parentStyle="pet.HLine1"
+      y="323" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.MainPetTextField"
+      textFormatStyle="pet.MainPetTextField_t"
+      autoSize="none"
+      width="100"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pet.MainPetText"
+      colors="0xffffff,0xfffcd6,0xdba30d"
+      alphas="1,1,1"
+      ratios="0,90,168"
+      filterString="core.normal2_f"
+      textFieldStyle="pet.MainPetTextField"
+      mouseEnabled="false"
+      width="100"
+      height="24"
+      y="66"
+      x="263"
+      paddingH="2"
+      paddingV="2" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pet.SecondPetText"
+      parentStyle="pet.MainPetText"
+      y="229"
+      x="263" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.MainPetNameText"
+      parentStyle="petAdv.PetNameTxt"
+      autoSize="center"
+      x="230"
+      y="160"
+      width="170"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.SecondPetNameText"
+      parentStyle="pet.MainPetNameText"
+      y="315"
+      x="230" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="swallow.SwallowBtn"
+      backStyle="asset.pet.SwallowBtn"
+      iconStyle="asset.pet.SwallowTxt"
+      iconInnerRectString="43,70,15,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="390"
+      y="368" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="pet.Adornment1"
+      resourceLink="asset.pet.Adornment1"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="280"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="pet.Adornment2"
+      resourceLink="asset.pet.Adornment2"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="291"
+      y="262" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="zizhi.StrengthMc"
+      resourceLink="asset.pet.PropertyCoeBar"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="423"
+      y="8"
+      width="151" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="zizhi.IntellectMc"
+      resourceLink="asset.pet.PropertyCoeBar"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="423"
+      y="138"
+      width="151" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="zizhi.StaminaMc"
+      resourceLink="asset.pet.PropertyCoeBar"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="423"
+      y="203"
+      width="151" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="zizhi.ArmorMc"
+      resourceLink="asset.pet.PropertyCoeBar"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="423"
+      y="73"
+      width="151" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.StrengthTxt"
+      parentStyle="pet.StrengthCoeTxt"
+      y="9"
+      x="424"
+      width="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.IntellectTxt"
+      parentStyle="coe.StrengthTxt"
+      y="139" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.StaminaTxt"
+      parentStyle="coe.StrengthTxt"
+      y="204" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.ArmorTxt"
+      parentStyle="coe.StrengthTxt"
+      y="74" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="coe.NormalTrainBtn"
+      backStyle="asset.pet.NormalTrainBack"
+      iconStyle="asset.pet.NormalTrainTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="335"
+      x="395"
+      iconInnerRectString="51,72,18,18,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="coe.AdvanceTrainBtn"
+      backStyle="asset.pet.AdvanceTrainBack"
+      iconStyle="asset.pet.AdvanceTrainTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="332"
+      x="297"
+      iconInnerRectString="57,99,13,32,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="petskill.SkillBack"
+      resourceLink="asset.pet.ItemBack,asset.pet.SkillActiveBack" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="petskill.SkillIconBack"
+      resourceLink="asset.pet.SkillActive,asset.pet.SkillPassive,asset.pet.SkillPassive2"
+      y="3"
+      x="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="petskill.SuperSkillLogo"
+      resourceLink="asset.pet.SuperSkillLogoBig,asset.pet.SuperSkillLogoSmall"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="petskill.AllSkillBack"
+      parentStyle="pet.MorphSkillBack"
+      x="312"
+      y="8"
+      width="308"
+      height="287" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petskill.PassivityTxt"
+      textFormatStyle="petskill.PassivityTxt_t"
+      x="0"
+      y="0"
+      autoSize="none"
+      wordWrap="true"
+      width="45"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petskill.BookNumTxt"
+      textFormatStyle="petskill.BookNumTxt_t"
+      autoSize="none"
+      x="8"
+      y="26"
+      width="35"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="petskill.SkillNumBack"
+      resourceLink="asset.pet.SkillNumBack"
+      scaleGridString="5,5,10,10"
+      width="14"
+      x="29"
+      y="29"
+      height="14" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="petskill.SuccRate"
+      parentStyle="pet.MainPetText"
+      y="280"
+      x="68"
+      width="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petskill.SuccRateTxt"
+      parentStyle="pet.PetNameTxt"
+      x="440"
+      y="170"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="petskill.NeedGradeTxt"
+      parentStyle="pet.MainPetText"
+      colors="0xffa302,0xf0f078"
+      alphas="1,1"
+      ratios="0,90"
+      textFieldStyle="petskill.NeedGradeTextField"
+      width="300"
+      height="50"
+      x="366"
+      y="152" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petskill.NeedGradeTextField"
+      textFormatStyle="petskill.NeedGradeTextField_t"
+      autoSize="none"
+      width="200"
+      height="30"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petskill.UseDaimondTxt"
+      textFormatStyle="petskill.UseDaimondTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="petskill.UsePointBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_pet.UnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      textStyle="petSkill.usePointBtnTxt"
+      displacement="false"
+      fieldX="52"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      fieldY="3"
+      x="480"
+      y="186" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petskill.LearnBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      backStyle="asset.pet.SkillLearnBack"
+      iconStyle="asset.pet.SkillLearnTxt"
+      iconInnerRectString="18,83,10,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="330"
+      y="306"
+      offSetY="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.StrengthAddTxt"
+      textFormatStyle="coe.StrengthAddTxt_t1,coe.StrengthAddTxt_t2"
+      autoSize="none"
+      x="469"
+      y="8"
+      width="45"
+      height="22"
+      text="" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.IntellectAddTxt"
+      parentStyle="coe.StrengthAddTxt"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.StaminaAddTxt"
+      parentStyle="coe.StrengthAddTxt"
+      y="203" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="coe.ArmorAddTxt"
+      parentStyle="coe.StrengthAddTxt"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petskill.BuyTxt"
+      textFormatStyle="petskill.BuyTxt_t"
+      autoSize="right"
+      x="0"
+      y="0"
+      width="47"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="petskill.BuyBtn"
+      textStyle="petskill.BuyTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="40"
+      height="24"
+      backgoundInnerRectString="1,8,3,13"
+      x="0"
+      y="22"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="pet.ChangeTxt"
+      textFormatStyle="pet.ChangeTxt_t"
+      autoSize="left"
+      width="50"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.ChangeBtn"
+      parentStyle="petskill.BuyBtn"
+      textStyle="pet.ChangeTxt"
+      x="6"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.WashBtn"
+      parentStyle="pet.ChangeBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="307"
+      x="17" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.FireResImg"
+      resourceLink="asset.pet.FireResImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="215"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.WindResImg"
+      resourceLink="asset.pet.WindResImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="215"
+      x="130" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.WaterResImg"
+      resourceLink="asset.pet.WaterResImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="255"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.ElectResImg"
+      resourceLink="asset.pet.ElectResImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="255"
+      x="130" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.DarkResImg"
+      resourceLink="asset.pet.DarkResImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="295"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.LightResImg"
+      resourceLink="asset.pet.LightResImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="295"
+      x="130" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.PhysicsAttackImg"
+      resourceLink="asset.pet.PhysicsAttackImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="15"
+      x="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.PhysicsDefenseImg"
+      resourceLink="asset.pet.PhysicsDefenseImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="50"
+      x="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.MagicAttackImg"
+      resourceLink="asset.pet.MagicAttackImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="85"
+      x="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.MagicDefenseImg"
+      resourceLink="asset.pet.MagicDefenseImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="120"
+      x="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      stylename="pet.HpImg"
+      resourceLink="asset.pet.HpImg"
+      y="155"
+      x="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.GrowthImg"
+      resourceLink="asset.pet.GrowthImg"
+      y="5"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.StrengthCoeImg"
+      resourceLink="asset.pet.StrengthCoeImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="32"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.ArmorCoeImg"
+      resourceLink="asset.pet.ArmorCoeImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="63"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.IntellectCoeImg"
+      resourceLink="asset.pet.IntellectCoeImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="93"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.StaminaCoeImg"
+      resourceLink="asset.pet.StaminaCoeImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="125"
+      x="4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.StrengthImg"
+      resourceLink="asset.pet.StrengthImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="167"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.StaminaImg"
+      resourceLink="asset.pet.StaminaImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="265"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.IntellectImg"
+      resourceLink="asset.pet.IntellectImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="231"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      stylename="pet.ArmorImg"
+      resourceLink="asset.pet.ArmorImg"
+      y="200"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="petAdv.Back"
+      resourceLink="asset.pet.AdvancedBack"
+      mouseEnable="false"
+      mouseChildren="false" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="petAdv.BlessBar"
+      resourceLink="asset.pet.BlessingBar"
+      width="254"
+      height="35"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,4,6"
+      tipGapV="-3"
+      tipGapH="0"
+      isFollowMouse="false"
+      mouseEnable="true"
+      mouseChildren="false"
+      x="243"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petAdv.BlessBarTxt"
+      textFormatStyle="petAdv.BlessBarTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="255"
+      y="64"
+      width="210"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petAdv.NumLabelTxt"
+      textFormatStyle="petAdv.NumLabelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="273"
+      y="90"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petAdv.NumValueTxt"
+      textFormatStyle="petAdv.NumValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="344"
+      y="90"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="petAdv.BlessingTxt"
+      resourceLink="asset.pet.BlessingTxt"
+      mouseEnable="false"
+      mouseChildren="false"
+      y="43"
+      x="265" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petAdv.NewGrowthTxt"
+      textFormatStyle="petAdv.NewGrowthTxt_t1,petAdv.NewGrowthTxt_t2,petAdv.NewGrowthTxt_t3,petAdv.NewGrowthTxt_t4,petAdv.NewGrowthTxt_t5,petAdv.NewGrowthTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="-30"
+      y="0"
+      width="110"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewStrengthCoeTxt"
+      parentStyle="petAdv.NewGrowthTxt"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewArmorCoeTxt"
+      parentStyle="petAdv.NewGrowthTxt"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewIntellectCoeTxt"
+      parentStyle="petAdv.NewGrowthTxt"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewStaminaCoeTxt"
+      parentStyle="petAdv.NewGrowthTxt"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewGrowthValueTxt"
+      parentStyle="petAdv.NewGrowthTxt"
+      y="0"
+      x="62"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewStrengthCoeValueTxt"
+      parentStyle="petAdv.NewGrowthValueTxt"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewArmorCoeValueTxt"
+      parentStyle="petAdv.NewGrowthValueTxt"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewIntellectCoeValueTxt"
+      parentStyle="petAdv.NewGrowthValueTxt"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.NewStaminaCoeValueTxt"
+      parentStyle="petAdv.NewGrowthValueTxt"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petAdv.NormalBtn"
+      backStyle="asset.pet.NormalBlessBtn"
+      iconStyle="asset.pet.NormalBlessTxt"
+      iconInnerRectString="87,42,16,17,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="375"
+      y="357"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petAdv.AdvanceBtn"
+      backStyle="asset.pet.AdvancedBlessBtn"
+      iconStyle="asset.pet.AdvancedBlessTxt"
+      iconInnerRectString="49,112,17,17,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="275"
+      y="357"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petAdv.PetNameTxt"
+      parentStyle="pet.PetNameTxt"
+      width="200"
+      x="155"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petrename.inputTipTxt"
+      textFormatStyle="petrename.inputTipTxt_t"
+      autoSize="none"
+      x="-30"
+      y="-10"
+      width="100"
+      height="22" />
+    <component
+      classname="pet.property.PetRenameView"
+      stylename="pet.PetRenameFrame"
+      parentStyle="IconAlert"
+      moveInnerRectString="0,30,0,25,1"
+      width="280"
+      height="160"
+      containerX="32"
+      containerY="48" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petRename.AlertButtonConfirm_2"
+      parentStyle="core.AlertButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      y="40"
+      x="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petRename.NameTxt"
+      textFormatStyle="petRename.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="75"
+      y="-8"
+      width="130"
+      height="22"
+      restrict="^ "
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="petRename.NameBg"
+      resourceLink="asset.pet.NameBg"
+      scaleGridString="50,2,150,3"
+      width="135"
+      height="25"
+      x="72"
+      y="-12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petRename.RenameFrameDescribeTxt"
+      textFormatStyle="petRename.RenameFrameDescribeTxt_t1,petRename.RenameFrameDescribeTxt_t2"
+      autoSize="none"
+      x="-30"
+      y="10"
+      height="40"
+      width="270"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.alert.SimpleAlert"
+      stylename="pet.SimpleAlert"
+      submitButtonStyle="pet.AlertTextButtonConfirm_1"
+      cancelButtonStyle="pet.AlertTextButtonCancel_1"
+      smallTipStyle="core.AlertSmallTipTxt"
+      buttonToBottom="40"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="core.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="20"
+      containerY="40"
+      frameMiniW="285"
+      frameMiniH="170" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.AlertTextButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_01"
+      textStyle="pet.ButtonTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="13,8,9,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.AlertTextButtonCancel_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      textStyle="pet.ButtonTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="13,8,9,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.ButtonTextStyle"
+      textFormatStyle="core.BtnText_t"
+      autoSize="none"
+      width="74"
+      height="22"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="petAdv.ShenghunStone"
+      resourceLink="asset.pet.ShenghunStone,asset.pet.advShenghunStone"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="240"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="petFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="755"
+      y="-38" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="petFrame.HelpFrame1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="armyII.SkillHelpFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="453" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="PetShowView.ExpMovieImage"
+      resourceLink="asset.pet.PetExpBar"
+      mouseEnable="true"
+      mouseChildren="false"
+      height="22"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="54"
+      y="259" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetListItemView.StateFlag"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      resourceLink=",asset.pet.EnterWarImg,asset.pet.EnterChildImg"
+      y="-1"
+      x="-0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetListItemView.LockFlag"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      resourceLink=",asset.pet.PetLock"
+      y="40"
+      x="-3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pet.PetItemMouseOver"
+      resourceLink="pet.PetItemMouseOver01"
+      y="0"
+      x="0"
+      width="165"
+      height="75" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pet.PetItemMouseOver01"
+      parentStyle="shop.MouseOver1"
+      width="166"
+      height="78"
+      y="-8"
+      x="-5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.MorphSkillLock"
+      resourceLink="asset.pet.MorphSkillLockImg"
+      tipStyle="pet.property.MorphingSkillLockTip"
+      tipDirctions="7"
+      tipGapV="-37"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="32"
+      x="83" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MorphingSkillLockTip.line"
+      resourceLink="asset.core.tipsLineImg"
+      scaleGridString="10,0,222,1"
+      width="138"
+      x="-7"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MorphingSkillLockTip.titleTxt"
+      textFormatStyle="MorphingSkillLockTip.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="5"
+      width="185"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MorphingSkillLockTip.promptTxt"
+      textFormatStyle="MorphingSkillLockTip.promptTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="30"
+      width="185"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MorphingSkillLockTip.descTxt"
+      textFormatStyle="MorphingSkillLockTip.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      x="10"
+      y="56"
+      width="185"
+      height="100" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help01"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="453" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame2"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help02"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="453" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame3"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help03"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="453" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame5"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help05"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="453" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame4"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help04"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="453" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AuctionCategoryPane.OpenPetTipTxt"
+      textFormatStyle="AuctionCategoryPane.OpenPetTipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="40"
+      x="135"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetExchangeShopFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="395"
+      y="-47" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetExchangeShopFrame.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetExchangeShopFrame.HelpFrame.Txt"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petskill.tipBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="-5"
+      tipGapH="0"
+      isFollowMouse="false"
+      backStyle="asset.pet.SkillLearnBack"
+      width="200"
+      height="38"
+      alpha="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="122"
+      y="284" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petSkill.usePointBtnTxt"
+      parentStyle="pet.MainPetNameText"
+      width="70"
+      height="22"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetListItemView.StateText"
+      colors="0x8afffe,0x0096ff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="PetListItemView.StateTextField"
+      mouseEnabled="false"
+      width="180"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetListItemView.StateTextField"
+      textFormatStyle="PetListItemView.StateTextField_t"
+      autoSize="none"
+      width="180"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetSwallowView.LvTxt"
+      textFormatStyle="PetSwallowView.LvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="290"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetSwallowView.GradeTxt"
+      textFormatStyle="PetSwallowView.GradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PetSwallowView.ExpTipView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false"
+      x="248"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetChallengeCDView.AddButton"
+      backStyle="asset.core.UpButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="21"
+      x="106"
+      y="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="NormalSkillView.MorphSkillText"
+      parentStyle="pet.MorphSkillText"
+      y="-15" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetListItemView.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      x="10"
+      y="383"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetListItemView.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="120"
+      y="383"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetListItemView.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="9"
+      y="384" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetListItemView.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      x="48"
+      y="386"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetListItemView.PetItemBg"
+      resourceLink="asset.pet.PetItemLockBg,asset.pet.PetItemNullBg,asset.pet.PetItemBg"
+      y="0"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetFormationFrame.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      x="-177"
+      y="365"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetFormationFrame.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="-73"
+      y="365"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetFormationFrame.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="-181"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetFormationFrame.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      x="-142"
+      y="369"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="pet.list.PetListItemView"
+      stylename="list.PetListItemView"
+      width="154"
+      height="59"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petSkill.FastKeyItemIndexTxt"
+      textFormatStyle="petskill.IndexTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="30"
+      x="19"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="petswallow.checkBtnForFullExp"
+      parentStyle="petskill.UsePointBtn"
+      fieldX="25"
+      textStyle="petswallow.checkBtnForFullExpTxt"
+      x="30"
+      y="392" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petswallow.checkBtnForFullExpTxt"
+      textFormatStyle="petswallow.checkBtnForFullExpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="140"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="pet.hbox"
+      mouseEnabled="false"
+      x="10"
+      y="0"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.ComposeBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.ComposeSelectedTxt"
+      unselectedIconStyle="asset.pet.ComposeUnSelectedTxt"
+      selectedIconInnerRectString="13,68,10,18,13"
+      unselectedIconInnerRectString="13,68,9,18,13"
+      x="-65" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetComposeView.needMaterialImg"
+      resourceLink="asset.pet.NeedMaterialImg"
+      x="25"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetComposeView.needGoldImg"
+      resourceLink="asset.pet.NeedGoldImg"
+      x="25"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetComposeView.arrowImg"
+      resourceLink="asset.pet.ComposeArrow"
+      x="275"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetComposeHeadView.titleBack"
+      resourceLink="asset.pet.PetAvatarBack"
+      x="0"
+      y="0"
+      tipStyle="yishi.view.tips.PetComposeCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetComposeView.hbox"
+      mouseEnabled="false"
+      x="115"
+      y="265"
+      spacing="11" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="PetComposeView.selectedUsePointBtn"
+      parentStyle="petskill.UsePointBtn"
+      fieldX="25"
+      textStyle="petswallow.checkBtnForFullExpTxt"
+      x="330"
+      y="336" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetComposeView.composeBtn"
+      backStyle="asset.pet.SwallowBtn"
+      iconStyle="asset.pet.ComposeTxt"
+      iconInnerRectString="46,66,16,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="175"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetComposeHeadView.title"
+      parentStyle="pet.MainPetText"
+      textFieldStyle="PetComposeHeadView.MainPetTextField"
+      y="-23"
+      x="-18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetComposeHeadView.MainPetTextField"
+      textFormatStyle="PetComposeHeadView.MainPetTextField_t"
+      autoSize="none"
+      width="100"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetComposeView.needGoldTxt"
+      textFormatStyle="PetComposeView.needGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="100"
+      x="144"
+      y="338" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame6"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help06"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petAdv.MaxMesTxt"
+      textFormatStyle="petAdv.NumLabelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="320"
+      y="170"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.PetEquipBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.petEquipSelectedTxt"
+      unselectedIconStyle="asset.pet.petEquipUnSelectecdTxt"
+      selectedIconInnerRectString="16,66,6,26,13"
+      unselectedIconInnerRectString="16,61,6,28,13"
+      x="-65" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="petPro.equipBack"
+      resourceLink="asset.pet.equipBg"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="6"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetFrame.lockbtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      backStyle="asset.common.vp.btn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      enableHtml="false"
+      iconFrameChange="true"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0"
+      height="32"
+      width="25"
+      x="9"
+      y="216" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="pet.petEquipScroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="10,3,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="292"
+      height="382"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pet.ProfileBG"
+      parentStyle="core.GoodsProfileBG"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="pet.equipBagSelectedTextButton"
+      parentStyle="pet.GrowthSelectedTextButton"
+      y="0"
+      x="510"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.equipStrengBtn"
+      unSelectedStyle="asset.pet.equipBtnUnSelectedBg"
+      selectedStyle="asset.pet.equipBtnSelectedBg"
+      selectedIconStyle="asset.pet.equipStrengSelectedTxt"
+      unselectedIconStyle="asset.pet.equipStrengUnSelectedTxt"
+      selectedIconInnerRectString="12,94,5,18,13"
+      unselectedIconInnerRectString="12,94,4,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.equipRefineryBtn"
+      parentStyle="pet.equipStrengBtn"
+      selectedIconStyle="asset.pet.equipRefinerySelectedTxt"
+      unselectedIconStyle="asset.pet.equipRefineryUnSelectedTxt"
+      selectedIconInnerRectString="18,82,5,18,13"
+      unselectedIconInnerRectString="18,82,5,18,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.equipGodHeadBtn"
+      parentStyle="pet.equipStrengBtn"
+      selectedIconStyle="asset.pet.equipGodHeadSelectedTxt"
+      unselectedIconStyle="asset.pet.equipGodHeadUnSelectedTxt"
+      selectedIconInnerRectString="23,72,5,18,13"
+      unselectedIconInnerRectString="23,72,5,18,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.equipUpgradeBtn"
+      parentStyle="pet.equipStrengBtn"
+      selectedIconStyle="asset.pet.equipUpgradeUnselectedTxt"
+      unselectedIconStyle="asset.pet.equipUnUpgradeUnselectedTxt"
+      selectedIconInnerRectString="22,77,5,18,13"
+      unselectedIconInnerRectString="22,77,5,18,13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="pet.equipBtnHbox"
+      x="46"
+      y="10"
+      spacing="15" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.strengItemBg01"
+      resourceLink="asset.pet.bigItemBg"
+      x="136"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.strengItemBg02"
+      resourceLink="asset.pet.bigItemBg"
+      x="403"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.attributeBg01"
+      resourceLink="pet.smallAttributeBg"
+      x="55"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.smallAttributeBg"
+      resourceLink="asset.pet.smallAttributeBg"
+      scaleGridString="59,10,65,30"
+      width="226" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.attributeBg02"
+      resourceLink="pet.smallAttributeBg"
+      x="366"
+      y="85"
+      width="226" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquip.currItemName"
+      textFormatStyle="petEquip.equipNameTxt_t1,petEquip.equipNameTxt_t2,petEquip.equipNameTxt_t3,petEquip.equipNameTxt_t4,petEquip.equipNameTxt_t5,petEquip.equipNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="118"
+      height="20"
+      x="60"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquip.nextItemName"
+      textFormatStyle="petEquip.equipNameTxt_t1,petEquip.equipNameTxt_t2,petEquip.equipNameTxt_t3,petEquip.equipNameTxt_t4,petEquip.equipNameTxt_t5,petEquip.equipNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="175"
+      height="20"
+      x="368"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquip.successRateTxt"
+      textFormatStyle="petEquip.successRateTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="324"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquip.needGoldTxt"
+      parentStyle="petEquip.successRateTxt"
+      x="400" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquip.blessingValueTxt"
+      textFormatStyle="petEquip.blessingValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="216"
+      y="206" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pet.strengBtn"
+      backStyle="asset.pet.operatingBtnBg"
+      iconStyle="asset.pet.strengBtnImg"
+      iconInnerRectString="43,56,7,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="239"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="pet.petEquipSelectedEff"
+      resourceLink="asset.core.EquipActiveBack"
+      width="75"
+      height="75"
+      x="-7"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.needMaterialItemTxt"
+      textFormatStyle="pet.needMaterialItemTxt_t1,pet.needMaterialItemTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="50"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.petEquipBagViewBg01"
+      resourceLink="asset.pet.equipButtonBg"
+      scaleGridString="26,26,24,32"
+      width="616"
+      height="98"
+      alpha="1"
+      x="-3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.petEquipBagViewBg02"
+      resourceLink="asset.pet.equipButtonBg"
+      scaleGridString="26,26,24,32"
+      width="616"
+      height="144"
+      alpha="1"
+      x="-3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="pet.equipStrengScroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="10,3,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="615"
+      height="95"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="pet.strengMaxEffect"
+      parentStyle="core.goods.Strengthen"
+      x="455"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.attributeTxt"
+      textFormatStyle="pet.attributeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="190"
+      x="5"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.refineryItemBg"
+      resourceLink="asset.pet.bigItemBg"
+      x="271"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.costTxt"
+      textFormatStyle="petEquipRefineryView.costTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="100"
+      x="304"
+      y="212" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="pet.refineryItemVbox"
+      x="40"
+      y="120"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="petEquipRefineryView.replaceBtn"
+      backStyle="asset.petrefinery.ReplaceBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="439"
+      y="212" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petEquipRefineryView.washBtn"
+      backStyle="asset.pet.operatingBtnBg"
+      iconStyle="asset.petrefinery.WashImg"
+      iconInnerRectString="43,56,7,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="239"
+      y="240"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.leftTitleTxt"
+      textFormatStyle="tips.heroname_t1_2,tips.heroname_t2_2,tips.heroname_t3_2,tips.heroname_t4_2,tips.heroname_t5_2,tips.heroname_t6_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="200"
+      x="45"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.rightTitleTxt"
+      parentStyle="petEquipRefineryView.leftTitleTxt"
+      x="368"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="petEquipRefineryView.leftVBox"
+      isStrictHeight="true"
+      strictHeight="18"
+      x="35"
+      y="36"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="petEquipRefineryView.rightVBox"
+      isStrictHeight="true"
+      strictHeight="18"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="petEquipRefineryView.selectedButton"
+      unSelectedStyle="asset.petrefinery.UnSelectedBack"
+      selectedStyle="petrefinery.SelectedBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="1"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.lefttxt"
+      textFormatStyle="store.RefreshAttributeTxtStyle_t,store.RefreshAttributeTxtStyle_tt"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="22"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.rightTxt"
+      parentStyle="petEquipRefineryView.lefttxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.rightTxt2"
+      textFormatStyle="petEquipRefineryView.rightTxt2_t1,petEquipRefineryView.rightTxt2_t2"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="22"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="petEquipRefineryView.rightImg"
+      resourceLink="asset.petrefinery.UpArrow,asset.petrefinery.DownArrow" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.stoneNumTxt"
+      textFormatStyle="petEquipRefineryView.stoneNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      x="337"
+      y="58"
+      width="80" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petEquipRefineryView.upgradeBtn"
+      backStyle="asset.pet.operatingBtnBg"
+      iconStyle="asset.upgrade.UpBtnTxt"
+      iconInnerRectString="43,56,7,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="239"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.needGoldTxt"
+      textFormatStyle="petEquipRefineryView.costTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="100"
+      x="325"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.leftContentTxt"
+      textFormatStyle="petEquipRefineryView.leftContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="100"
+      width="100"
+      wordWrap="true"
+      multiline="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petEquipRefineryView.rightContentTxt"
+      textFormatStyle="petEquipRefineryView.rightContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="100"
+      width="100"
+      wordWrap="true"
+      multiline="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.refineryLeftBg"
+      resourceLink="asset.pet.refinerySkillItemBg"
+      x="30"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.refineryRightBg"
+      resourceLink="asset.pet.refinerySkillItemBg"
+      x="355"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.refineryAttributeTxt"
+      textFormatStyle="pet.refineryAttributeTxtStyle_t,pet.refineryAttributeTxtStyle_tt"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="14"
+      y="0"
+      width="190"
+      height="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="Child.refineryAttributeTxt"
+      textFormatStyle="pet.refineryAttributeTxtStyle_t,pet.refineryAttributeTxtStyle_tt"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="20"
+      y="0"
+      width="170"
+      height="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.refineryAttributeNewTxt"
+      textFormatStyle="pet.refineryAttributeTxtStyle_ttt,pet.refineryAttributeTxtStyle_tt"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="320"
+      y="0"
+      width="125"
+      height="16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.godHeadItemBg"
+      resourceLink="asset.pet.bigItemBg"
+      x="271"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="petEquipGodHeadView.hBox"
+      x="103"
+      y="117"
+      spacing="13" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="godHeadItemView.openBtn"
+      backStyle="asset.godhead.OpenBtn"
+      x="3"
+      y="76"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godHeadItemView.openTipTxt"
+      textFormatStyle="godHeadItemView.openTipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="120"
+      x="-14"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="pet.equipGodHeadScroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="10,3,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="615"
+      height="145"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pet.upgradeItemBg"
+      resourceLink="asset.pet.bigItemBg"
+      x="110"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.upgradeAttributeleftTxt"
+      textFormatStyle="pet.upgradeAttributeleftTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="0"
+      width="120"
+      height="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.upgradeAttributeRightTxt"
+      textFormatStyle="pet.upgradeAttributeRightTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="0"
+      width="120"
+      height="16" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="pet.upgradeAttributeLeftVbox"
+      x="38"
+      y="120"
+      spacing="1" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="pet.upgradeAttributeRightVbox"
+      x="359"
+      y="120"
+      spacing="1" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame7_1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help07_1"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame7_2"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help07_2"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame7_3"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help07_3"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetFrame.HelpFrame7_4"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetFrame.help07_4"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="pet.lookup.PetLookUpView"
+      stylename="pet.lookup.PetLookUpView" />
+    <component
+      classname="pet.lookup.PetLookUpFrame"
+      stylename="PetLookUpView.selfFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="14"
+      containerY="50"
+      width="335"
+      height="500" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="pet.RiverNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="pet.RiverNotAlert_confirmStyle"
+      cancelStyle="pet.RiverNotAlert_cancelStyle"
+      checkStyle="pet.RiverNotAlertCheckBtn"
+      describeStyle="pet.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="pet.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="8"
+      containerY="30"
+      usebindPointStyle="pet.UseBindPointBtn"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="400"
+      height="210"
+      notJoinActPromptStyle="pet.notJoinActPromptTxt"
+      showJoinActPrompt="true" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="pet.RiverNotAlert2"
+      parentStyle="worldboss.RiverNotAlert2"
+      confirmStyle="pet.RiverNotAlert_confirmStyle_2"
+      cancelStyle="pet.RiverNotAlert_cancelStyle_2"
+      checkStyle="pet.RiverNotAlertCheckBtn2"
+      describeStyle="pet.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="pet.AlertTextStyle"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="385"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.notJoinActPromptTxt"
+      textFormatStyle="campaign.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="25"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.RiverNotAlert_confirmStyle_2"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="50"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.RiverNotAlert_cancelStyle_2"
+      parentStyle="core.AlertButton_2"
+      x="190"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.RiverNotAlertCheckBtn2"
+      parentStyle="core.ThewCheckBtn"
+      x="110"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.RiverNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="70"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.RiverNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="210"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="40"
+      x="0"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pet.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.PetMixBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconStyle="asset.pet.petMixSelectedTxt"
+      unselectedIconStyle="asset.pet.petMixUnSelectecdTxt"
+      selectedIconInnerRectString="23,43,8,14,13"
+      unselectedIconInnerRectString="23,41,8,19,13"
+      x="-65" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PetMixView.nameBack"
+      resourceLink="asset.pet.mixNumBack,asset.pet.mixNumBack,asset.pet.mixNewNameBack,asset.core.SmallPointImg"
+      imageRectString="142|39|83|15|13,142|39|194|15|13,357|176|212|22|13,292|23|324|21|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.level1"
+      textFormatStyle="PetMixView.level1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="119"
+      y="36"
+      width="40"
+      height="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.level2"
+      textFormatStyle="PetMixView.level1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="119"
+      y="148"
+      width="40"
+      height="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.num1"
+      textFormatStyle="PetMixView.num1_t,PetMixView.num2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="142"
+      y="81"
+      width="40"
+      height="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.num2"
+      textFormatStyle="PetMixView.num1_t,PetMixView.num2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="142"
+      y="193"
+      width="40"
+      height="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.name1"
+      textFormatStyle="PetMixView.name1_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      mouseEnabled="false"
+      x="36"
+      y="106"
+      width="180"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.name2"
+      textFormatStyle="PetMixView.name1_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      mouseEnabled="false"
+      x="36"
+      y="218"
+      width="180"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.newName"
+      textFormatStyle="PetMixView.name1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="370"
+      y="213"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.point"
+      textFormatStyle="PetMixView.point_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="223"
+      y="322"
+      width="60"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetMixView.mixBtn"
+      backStyle="asset.pet.SwallowBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconStyle="asset.pet.mixBtnIcon"
+      iconInnerRectString="45,66,16,23,13"
+      x="140"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetMixView.hBox1"
+      mouseEnabled="false"
+      strictWidth="90"
+      x="220"
+      y="247" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetMixView.hBox2"
+      mouseEnabled="false"
+      strictWidth="90"
+      x="222"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetMixView.materialTxt"
+      parentStyle="store.ComposeMaterialNumTxt"
+      width="66"
+      autoSize="none"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetLearnSkillView.firstBtn"
+      backStyle="asset.pet.PetLearnSkillViewFirstPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetLearnSkillView.lastBtn"
+      backStyle="PetLearnSkillView.lastBtn.Image"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="286"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetLearnSkillView.lastBtn.Image"
+      resourceLink="asset.pet.PetLearnSkillViewFirstPageBtn"
+      scaleX="-1"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetLearnSkillView.preBtn"
+      backStyle="asset.pet.PetLearnSkillViewPageBtnBack"
+      iconStyle="asset.pet.PetLearnSkillViewPreIcon"
+      width="64"
+      height="24"
+      iconInnerRectString="11,42,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="35"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetLearnSkillView.nextBtn"
+      backStyle="asset.pet.PetLearnSkillViewPageBtnBack"
+      iconStyle="asset.pet.PetLearnSkillViewNextIcon"
+      width="64"
+      height="24"
+      iconInnerRectString="11,42,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="187"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetLearnSkillView.pageTxt"
+      textFormatStyle="PetLearnSkillView.pageTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="113"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.EnterChildText"
+      textFormatStyle="pet.EnterWarText_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      wordWrap="false"
+      multiline="true"
+      width="113"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.EnterWarButton1"
+      backStyle="asset.pet.EnterMenuBack"
+      textStyle="pet.EnterChildText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="70"
+      height="24"
+      backgoundInnerRectString="2,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="234"
+      y="167" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.EnterWarButton2"
+      backStyle="asset.pet.EnterMenuBack"
+      textStyle="pet.EnterChildText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="70"
+      height="24"
+      backgoundInnerRectString="2,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="234"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetMixView.newPetBg"
+      resourceLink="asset.pet.PetAvatarBack"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false"
+      x="350"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="petskill.BuyBtn1"
+      backStyle="asset.pet.BuySkillBg"
+      textStyle="petskill.BuyTxt1"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="48"
+      height="24"
+      backgoundInnerRectString="3,8,2,13"
+      x="0"
+      y="52"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="petskill.graspBtn"
+      parentStyle="petskill.BuyBtn1"
+      x="2"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="petskill.BuyTxt1"
+      textFormatStyle="petskill.BuyTxt1_t"
+      autoSize="none"
+      x="0"
+      y="0"
+      width="42"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.quitBtn"
+      parentStyle="petskill.BuyBtn"
+      x="2"
+      y="27" />
+    <component
+      classname="mainBar.StripView"
+      stylename="pet.autoPlusBtnTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      mouseChildren="true"
+      mouseEnabled="true"
+      scaleX="1"
+      scaleY="1"
+      x="98"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="resourceBar.StateFlag"
+      resourceLink=",asset.resourcesBar.EnterWarImg,asset.resourcesBar.EnterChildImg"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.lastFreeSkillText"
+      textFormatStyle="pet.lastFreeSkillText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="61"
+      wordWrap="true"
+      x="442"
+      y="299" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.lastFreeSkillNote"
+      textFormatStyle="pet.lastFreeSkillNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="305"
+      height="40"
+      wordWrap="true"
+      x="315"
+      y="376" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="pet.learnSkillView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,2,4,-2,3"
+      viewportInnerRectString="0,17,2,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="298"
+      height="280"
+      x="319"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="pet.learnSkillView.Image"
+      resourceLink="asset.pet.skillHLine,asset.pet.skillHLine,asset.pet.skillHLine,asset.pet.skillVLine,asset.pet.skillVLine"
+      imageRectString="0|304|0|1|13,0|304|287|1|13,0|304|416|1|13,0|1|0|411|13,306|1|0|411|13"
+      x="314"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pet.learnSkillView.Mask"
+      resourceLink="asset.pet.SkillScrollMask"
+      width="285"
+      height="15"
+      x="318"
+      y="279" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pet.composeView.immediatelyComposeBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.pet.immediatelyComposeBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,0,0"
+      tipGapV="-5"
+      isFollowMouse="false"
+      iconInnerRectString="31,90,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="337"
+      y="363" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pet.composeView.immediatelyMixBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.pet.immediatelyMixBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,0,0"
+      tipGapV="-5"
+      isFollowMouse="false"
+      iconInnerRectString="31,90,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="316"
+      y="361" />
+    <!-- 自动购买选择按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="pet.autoBuySelectButton"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="393"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.autoBuyBtnText"
+      textFormatStyle="pet.autoBuyBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      x="370"
+      y="248"
+      width="200"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.equipStrenghNote"
+      textFormatStyle="pet.lastFreeSkillNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="65"
+      wordWrap="true"
+      x="3"
+      y="228" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetAdvancedView.trainCountText"
+      textFormatStyle="PetAdvancedView.trainCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="245"
+      y="372" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetAdvancedView.trainCountImage"
+      resourceLink="asset.PetAdvancedView.trainCountImage"
+      x="50"
+      y="372" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetAdvancedView.trainCountBottom"
+      resourceLink="asset.pet.countBottomImage"
+      x="240"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetStrengthenView.trainCountText"
+      textFormatStyle="PetAdvancedView.trainCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="268"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetStrengthenView.trainCountImage"
+      resourceLink="asset.PetStrengthenView.trainCountImage"
+      x="60"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetStrengthenView.trainCountBottom"
+      resourceLink="asset.pet.countBottomImage"
+      x="260"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="godHeadItemView.iconImage"
+      resourceLink="asset.godhead.ItemLockView,asset.godhead.ItemLockView2"
+      y="4"
+      x="3" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="PetShowView.setEnterWarBtn"
+      backStyle="pet.YellowBtn"
+      textStyle="pet.EnterWarText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="133"
+      height="24"
+      backgoundInnerRectString="-1,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="165"
+      y="221" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="PetShowView.heroWarBtn"
+      backStyle="asset.pet.EnterMenuBack"
+      textStyle="pet.EnterChildText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="120"
+      height="24"
+      backgoundInnerRectString="2,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="178"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="PetShowView.childWarBtn"
+      backStyle="asset.pet.EnterMenuBack"
+      textStyle="pet.EnterChildText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="145"
+      height="24"
+      backgoundInnerRectString="2,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="153"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="PetShowView.slavedChildWarBtn"
+      backStyle="pet.EnterMenuBack"
+      textStyle="pet.EnterChildText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="163"
+      height="24"
+      backgoundInnerRectString="2,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="135"
+      y="167" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="PetShowView.resetBtn"
+      backStyle="asset.pet.EnterMenuBack"
+      textStyle="pet.EnterChildText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="75"
+      height="24"
+      backgoundInnerRectString="2,8,1,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="223"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.btnText"
+      textFormatStyle="pet.huohua.btnText_t1,pet.huohua.btnText_t2"
+      filterString="pet.huohua.btnGlow"
+      autoSize="none"
+      width="95"
+      x="13"
+      y="5"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.promptTxt"
+      textFormatStyle="pet.huohua.promptTxt_t"
+      filterString="pet.huohua.promptTxt_g"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="40"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.previewTitle"
+      parentStyle="pet.huohua.promptTxt"
+      x="380"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.costLabel"
+      textFormatStyle="pet.huohua.costTxt_t"
+      filterString="pet.huohua.costTxt_g"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="380"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.costValue"
+      parentStyle="pet.huohua.costLabel"
+      width="80"
+      x="390"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.goldLabel"
+      textFormatStyle="pet.huohua.costTxt_t"
+      filterString="pet.huohua.costTxt_g"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="245"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pet.huohua.goldValue"
+      textFormatStyle="pet.huohua.costTxt_t"
+      filterString="pet.huohua.costTxt_g"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="315"
+      y="209" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pet.huohua.leftPanel"
+      parentStyle="core.describeBackground_style11"
+      width="240"
+      height="280"
+      x="40"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pet.huohua.rightPanel"
+      parentStyle="core.describeBackground_style11"
+      width="200"
+      height="280"
+      x="340"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="pet.PethuohuaBtn"
+      parentStyle="pet.PropertyBtn"
+      selectedIconInnerRectString="29,36,6,20,13"
+      unselectedIconInnerRectString="29,35,6,20,13"
+      selectedIconStyle="asset.pet.huohualiang"
+      unselectedIconStyle="asset.pet.huohuaan"
+      x="-65" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="pet.huohua.inlayBtn"
+      unSelectedStyle="asset.pet.equipBtnUnSelectedBg"
+      selectedStyle="asset.pet.equipBtnSelectedBg"
+      textStyle="pet.huohua.btnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="95"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="pet.huohua.upgradeBtn"
+      parentStyle="pet.huohua.inlayBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="pet.huohua.decomposeBtn"
+      parentStyle="pet.huohua.inlayBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.huohua.vicePasswordLockBtn"
+      parentStyle="core.MoveButton" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="pet.huohua.setPwdBtn"
+      parentStyle="core.MoveButton" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.pet.huohuashengjikuang"
+      width="200"
+      height="7"
+      x="30"
+      y="84"
+      scaleGridString="11,50,123,61"
+      resourceLink="asset.pet.huohuashengjikuang" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.pet.huohuashengjikuang2"
+      width="200"
+      height="7"
+      x="400"
+      y="84"
+      scaleGridString="11,50,123,61"
+      resourceLink="asset.pet.huohuashengjikuang" />
+  </components>
+</style>

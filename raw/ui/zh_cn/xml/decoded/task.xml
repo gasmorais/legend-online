@@ -1,0 +1,832 @@
+<style
+  name="task"
+  source="ui/zh_cn/swf/task.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t1"
+      args="Arial,16,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t2"
+      args="Arial,14,0x12ea17,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t3"
+      args="Arial,14,0xfef500,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t4"
+      args="Arial,14,0xfef8e0,,,,,,left"
+      indent="40"
+      leading="2"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t5"
+      args="Arial,16,0xfef8e0,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t6"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t7"
+      args="Arial,14,0xe2ff44,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t10"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t11"
+      args="Arial,14,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t12"
+      args="Arial,14,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t13"
+      args="Arial,14,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.text_t14"
+      args="Arial,14,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.AlertStyle_t"
+      letterSpacing="1"
+      args="Arial,16,0xffa000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.ringTaskNumTxt_t"
+      letterSpacing="1"
+      args="Arial,14,0x1ffef1,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.ringTaskNumTxt_t_2"
+      args="Arial,12,0xfef8e0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.marryTaskText_t"
+      args="Arial,14,0xfff600,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.task.TaskFrameIIBack2"
+      x="32"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.task.RewardTxt"
+      x="7"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.core.ExpRewardAsset"
+      x="0"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.task.RewardTxt2"
+      x="7"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.task.DescribeTxt"
+      x="7"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.task.TaskMainIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.TaskMainTxt_1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.TaskCommonIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.TaskCommonTxt_1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.MarryTaskIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.MarryTaskTxt_1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.TaskActIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.TaskActTxt_1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.TaskVipIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.TaskVipTxt_1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.TaskOfferIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.ringTaskIcon"
+      x="10"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.task.TaskOfferTxt_1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.ringTask_txt1"
+      x="58"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.task.TaskItemOverBack"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="task.view.TaskMenuII"
+      stylename="task.TaskMenuII"
+      x="36"
+      y="10" />
+    <custom
+      classname="task.view.TaskTargetViewII"
+      stylename="task.TaskTargetII"
+      x="7" />
+    <custom
+      classname="task.view.TaskRewardViewII"
+      stylename="task.askRewardViewII" />
+    <custom
+      classname="task.view.TaskDescribeViewII"
+      stylename="task.TaskDescribeViewII" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="task.TaskRewardButtonMc1"
+      x="427"
+      y="419" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc2"
+      stylename="task.TaskRewardButtonMc2"
+      x="492"
+      y="438" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc3"
+      stylename="task.TaskRewardButtonMc3"
+      x="429"
+      y="419" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_0"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_1"
+      x="132"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_2"
+      x="261"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_3"
+      x="385"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_4"
+      x="0"
+      y="50" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_5"
+      x="132"
+      y="50" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.TaskRewardItemPoint_6"
+      x="261"
+      y="50" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.RewardGoodItemPoint_0"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.RewardGoodItemPoint_1"
+      x="270"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.RewardGoodItemPoint_2"
+      x="0"
+      y="74" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="task.RewardGoodItemPoint_3"
+      x="270"
+      y="74" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="task.TaskGoodItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="26"
+      loadingY="26"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="52"
+      iconHeight="52"
+      x="0"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="task.TaskGoodItem"
+      iconStyle="task.TaskGoodItemIcon"
+      textStyle="task.BaseItemText"
+      profileStyle="task.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="54"
+      profileHeight="54"
+      showProfile="true"
+      x="4"
+      y="3" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.TaskFrameIIBack"
+      resourceLink="asset.task.TaskFrameIIBack,asset.core.frameTitleImage4"
+      imageRectString=",306|30|7|0|9" />
+    <component
+      classname="task.TaskFrameII"
+      stylename="task.TaskFrameII"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="task.TaskFrameIIBack"
+      closeInnerRectString="29,9,8,29,14"
+      moveInnerRectString="0,30,15,25,1"
+      titleOuterRectPosString="0,11,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="14"
+      containerY="38"
+      width="930"
+      height="590" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="task.TaskFrameIIBack1"
+      parentStyle="core.describeBackground_style11"
+      width="847"
+      height="514"
+      x="26"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="task.TaskFrameIIBack3"
+      resourceLink="asset.task.TaskFrameIIBack3"
+      scaleX="-1"
+      x="68"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="task.TaskFrameIIBack4"
+      resourceLink="asset.task.TaskFrameIIBack3"
+      x="832"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="task.TaskFrameIIBack5"
+      resourceLink="asset.task.TaskFrameIIBack4"
+      scaleX="-1"
+      x="68"
+      y="464" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="task.TaskFrameIIBack6"
+      resourceLink="asset.task.TaskFrameIIBack4"
+      x="832"
+      y="464" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="task.VBox1"
+      spacing="10"
+      x="353"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="task.TaskTargetVBox"
+      spacing="5"
+      x="5"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="task.RewardViewVBox"
+      x="12"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.TaskScenceIcon"
+      resourceLink="asset.task.TaskType_1,asset.task.TaskType_2,asset.task.TaskType_3,asset.task.TaskType_4"
+      x="742"
+      y="15" />
+    <!-- 任务条件 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="task.TaskTargetIcon"
+      resourceLink="asset.core.TargetIcon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.TaskConditionText"
+      textFormatStyle="task.text_t1"
+      filterString="core.normal_f"
+      x="25"
+      y="0"
+      autoSize="none"
+      width="390"
+      height="22"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.TaskProgressText"
+      textFormatStyle="task.text_t2,task.text_t3"
+      filterString="core.normal_f"
+      x="0"
+      y="0"
+      autoSize="none"
+      width="270"
+      height="22" />
+    <!-- 任务描述 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.DescribeTxt"
+      textFormatStyle="task.text_t4"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="511"
+      height="180"
+      x="3"
+      y="24" />
+    <!-- 任务奖励 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.GoodsProfileBG"
+      parentStyle="core.GoodsProfileBG"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.TaskRewardItemName"
+      resourceLink="asset.core.ExpRewardAsset,asset.core.GoldRewardAsset,asset.core.SoulRewardAsset,asset.core.Crystal,asset.task.TaskConsortiaReward,asset.task.TaskConsortiaOfferReward,task.MateBG"
+      x="0"
+      y="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,4,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="task.MateBG"
+      resourceLink="asset.core.MateBg"
+      x="15"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.TaskRewardItemValue"
+      textFormatStyle="task.text_t5"
+      filterString="core.normal_f"
+      x="49"
+      y="9"
+      autoSize="none"
+      width="95"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="task.TaskGoodItemBack"
+      resourceLink="asset.task.TaskGoodItemBack"
+      x="0"
+      y="0"
+      scaleGridString="90,10,100,20"
+      width="222" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="50"
+      x="4"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.taskGoodItemName"
+      textFormatStyle="task.text_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      x="68"
+      y="17"
+      width="152"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskRewardBtn"
+      backStyle="asset.core.Style25Btn"
+      iconStyle="asset.task.TaskRewardTxt"
+      iconInnerRectString="29,106,8,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskCompleteNowBtn"
+      backStyle="asset.core.Style25Btn"
+      iconStyle="asset.task.TaskCompleteNowTxt"
+      iconInnerRectString="29,102,11,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="693"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskCampaignBtn"
+      backStyle="asset.task.TaskgoArrestBtn"
+      iconStyle="asset.task.TaskgoCollectTxt"
+      iconInnerRectString="28,106,8,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.ImmediatelyWentBtn"
+      backStyle="asset.core.Style13Btn"
+      iconStyle="asset.task.TaskGoTxt"
+      iconInnerRectString="66,104,20,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskgoArrestBtn"
+      backStyle="asset.task.TaskgoArrestBtn"
+      iconStyle="asset.task.TaskgoArrestTxt"
+      iconInnerRectString="28,101,11,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskStartPlayBtn"
+      backStyle="asset.task.TaskgoArrestBtn"
+      iconStyle="asset.task.StartPlayTxt"
+      iconInnerRectString="29,106,8,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskGiveUpBtn"
+      backStyle="asset.core.TaskGiveupBack"
+      iconStyle="asset.task.TaskGiveupTxt"
+      iconInnerRectString="15,63,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="368"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskClientBtn"
+      backStyle="asset.core.Style23Btn"
+      iconStyle="asset.core.ClientDownBtn"
+      iconInnerRectString="10,116,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="728"
+      y="454" />
+    <!-- 菜单 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.TaskMainBack"
+      resourceLink="asset.task.TaskMenuBack,asset.task.TaskMainIcon,asset.task.TaskMainTxt_1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.TaskMainButton"
+      unSelectedStyle="task.TaskMainBack"
+      selectedStyle="task.TaskMainBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.TaskCommonBack"
+      resourceLink="asset.task.TaskMenuBack,asset.task.TaskCommonIcon,asset.task.TaskCommonTxt_1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.TaskCommonButton"
+      parentStyle="task.TaskMainButton"
+      unSelectedStyle="task.TaskCommonBack"
+      selectedStyle="task.TaskCommonBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.MmarryTaskBack"
+      resourceLink="asset.task.TaskMenuBack,asset.task.MarryTaskIcon,asset.task.MarryTaskTxt_1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.MmarryTaskBtn"
+      parentStyle="task.TaskMainButton"
+      unSelectedStyle="task.MmarryTaskBack"
+      selectedStyle="task.MmarryTaskBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.TaskActBack"
+      resourceLink="asset.task.TaskMenuBack,asset.task.TaskActIcon,asset.task.TaskActTxt_1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.TaskActButton"
+      parentStyle="task.TaskMainButton"
+      unSelectedStyle="task.TaskActBack"
+      selectedStyle="task.TaskActBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.TaskVipBack"
+      resourceLink="asset.task.TaskMenuBack,asset.task.TaskVipIcon,asset.task.TaskVipTxt_1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.TaskVipButton"
+      parentStyle="task.TaskMainButton"
+      unSelectedStyle="task.TaskVipBack"
+      selectedStyle="task.TaskVipBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.TaskOfferBack"
+      resourceLink="asset.task.TaskMenuBack,asset.task.TaskOfferIcon,asset.task.TaskOfferTxt_1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.TaskOfferButton"
+      parentStyle="task.TaskMainButton"
+      unSelectedStyle="task.TaskOfferBack"
+      selectedStyle="task.TaskOfferBack"
+      x="0"
+      y="0" />
+    <!-- 跑环任务 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.RingTaskBack"
+      resourceLink="asset.task.ringTaskBg1,asset.task.ringTaskIcon,asset.task.ringTask_txt1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="task.RingTaskButton"
+      parentStyle="task.TaskMainButton"
+      unSelectedStyle="task.RingTaskBack"
+      selectedStyle="task.RingTaskBack"
+      x="0"
+      y="0" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.TaskTypeIcon"
+      resourceLink="asset.task.TaskMainIcon,asset.task.TaskCommonIcon,asset.task.TaskActIcon,asset.task.TaskVipIcon,asset.task.TaskOfferIcon,asset.task.ringTaskIcon,asset.task.MarryTaskIcon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.TaskTypeTxt"
+      resourceLink="asset.task.TaskMainTxt_2,asset.task.TaskCommonTxt_2,asset.task.TaskActTxt_2,asset.task.TaskVipTxt_2,asset.task.TaskOfferTxt_2,asset.task.ringTask_txt2,asset.task.MarryTaskTxt_2"
+      x="58"
+      y="17" />
+    <!-- 任务列表 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.TaskIcon"
+      resourceLink="asset.task.TaskCompleteIcon,asset.task.TaskNewIcon,asset.task.TaskRecommendationIcon"
+      x="176"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.TaskItemText"
+      textFormatStyle="task.text_t10,task.text_t11,task.text_t12,task.text_t13,task.text_t14,task.text_t6,task.text_t7"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="29"
+      y="9"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="task.TaskItemBack"
+      resourceLink="asset.task.TaskItemDefaultBack,asset.task.TaskItemSelectedBack,asset.task.TaskItemCompleteBack"
+      x="0"
+      y="0" />
+    <component
+      classname="task.view.TaskItemCell"
+      stylename="task.TaskListCell"
+      backStyle="task.TaskItemBack"
+      textStyle="task.TaskItemText"
+      iconStyle="task.TaskIcon"
+      selectStyle="asset.task.TaskItemOverBack"
+      height="36"
+      width="263" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="task.TaskListBack"
+      resourceLink="asset.task.TaskListBack_1,asset.task.TaskListBack_2,asset.task.TaskListBack_3"
+      width="308" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="task.TaskListBack2"
+      resourceLink="asset.task.ringTaskBg2,asset.task.TaskListBack_2,asset.task.TaskListBack_3"
+      width="308" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="task.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="10,-24,0,0,3"
+      viewportInnerRectString="11,0,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|task.TaskListCell,36,263,false"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vScrollProxy="1"
+      width="275"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.TaskGainMovie.text"
+      textFormatStyle="task.AlertStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.ringTaskNum.text"
+      textFormatStyle="task.ringTaskNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      x="190"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.ringTasktip.text"
+      textFormatStyle="task.ringTaskNumTxt_t_2"
+      filterString="core.normal_f"
+      x="66"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.marryTaskText"
+      textFormatStyle="task.marryTaskText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.TaskDragonTransferBtn"
+      backStyle="asset.task.TaskgoArrestBtn"
+      iconStyle="asset.task.TaskgoCampaignTxt"
+      iconInnerRectString="28,106,8,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="12" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="task.RiverNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="task.RiverNotAlert_confirmStyle"
+      cancelStyle="task.RiverNotAlert_cancelStyle"
+      checkStyle="task.RiverNotAlertCheckBtn"
+      describeStyle="task.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="task.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="8"
+      containerY="30"
+      usebindPointStyle="task.UseBindPointBtn"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="440"
+      height="235"
+      notJoinActPromptStyle="task.notJoinActPromptTxt"
+      showJoinActPrompt="true" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="task.RiverNotAlert2"
+      parentStyle="worldboss.RiverNotAlert2"
+      confirmStyle="task.RiverNotAlert_confirmStyle_2"
+      cancelStyle="task.RiverNotAlert_cancelStyle_2"
+      checkStyle="task.RiverNotAlertCheckBtn2"
+      describeStyle="task.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="task.AlertTextStyle"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="430"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.notJoinActPromptTxt"
+      textFormatStyle="campaign.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="25"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.RiverNotAlert_confirmStyle_2"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="90"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.RiverNotAlert_cancelStyle_2"
+      parentStyle="core.AlertButton_2"
+      x="230"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.RiverNotAlertCheckBtn2"
+      parentStyle="core.ThewCheckBtn"
+      x="150"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.RiverNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="90"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.RiverNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="225"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="420"
+      height="88"
+      x="0"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="task.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      y="95"
+      fieldX="23"
+      fieldY="3"
+      x="35" />
+  </components>
+</style>

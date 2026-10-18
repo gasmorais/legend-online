@@ -1,0 +1,315 @@
+<style
+  name="mailcheck"
+  source="ui/zh_cn/swf/mailcheck.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.emailAddressHint_t"
+      args="Arial,14,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.checkCodeHint_t"
+      args="Arial,14,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.successPrize_t"
+      args="Arial,14,0xffc000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.emailAddressInputTxt_t"
+      args="Arial,16,0xeae7ce,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.checkCodeInputTxt_t"
+      args="Arial,16,0xeae7ce,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.sendCheckCodeBtnText_t"
+      args="Arial,12,0xffefbd,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.submitBtnText_t"
+      args="Arial,12,0xffefbd,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailcheck.gotoGM_txt"
+      args="Arial,14,0xff9915,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mailCheckFrame.privacyTxt_txt"
+      args="Arial,12,0xabcffc,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.mailcheck.leftBack"
+      x="4"
+      y="4" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="mailcheck.iconRewardView"
+      iconStyle="mailcheck.iconRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="blackjack.iconRewardItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="46"
+      profileHeight="46"
+      showProfile="true"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <!--转职选择 Frame-->
+    <component
+      classname="mailcheck.MailCheckFrame"
+      stylename="mailcheck.MailCheckFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="491"
+      height="270" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mailcheck.Bg1"
+      parentStyle="core.describeBackground_style04"
+      x="-5"
+      y="9"
+      width="466"
+      height="179" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mailcheck.Bg2"
+      parentStyle="core.describeBackground_style04"
+      x="-5"
+      y="166"
+      width="466"
+      height="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.emailAddressHint"
+      textFormatStyle="mailcheck.emailAddressHint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      x="-22"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.checkCodeHint"
+      textFormatStyle="mailcheck.checkCodeHint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      x="-22"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.successPrize"
+      textFormatStyle="mailcheck.successPrize_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="22"
+      x="165"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="mailcheck.prizeHBox"
+      x="8"
+      y="199"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.emailAddressInputTxt"
+      textFormatStyle="mailcheck.emailAddressInputTxt_t"
+      filterString="core.FrameContent_g"
+      autoSize="none"
+      type="input"
+      width="225"
+      height="24"
+      x="165"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.checkCodeInputTxt"
+      textFormatStyle="mailcheck.checkCodeInputTxt_t"
+      filterString="core.FrameContent_g"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      width="115"
+      height="24"
+      x="167"
+      y="78" />
+    <!-- 请求验证邮件按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="mailcheck.sendCheckCodeBtn"
+      backStyle="asset.mailcheck.textBtnBg"
+      textStyle="mailcheck.sendCheckCodeBtnText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="111"
+      height="40"
+      backgoundInnerRectString="4,8,9,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="311"
+      y="69" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.sendCheckCodeBtnText"
+      textFormatStyle="mailcheck.sendCheckCodeBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="85"
+      height="24" />
+    <!-- 提交验证码按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="mailcheck.submitBtn"
+      backStyle="asset.mailcheck.textBtnBg"
+      textStyle="mailcheck.submitBtnText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      backgoundInnerRectString="19,8,10,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="178"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mailcheck.submitBtnText"
+      textFormatStyle="mailcheck.submitBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="24" />
+    <!-- 请输入验证码 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mailcheck.checkCodeInputHint"
+      resourceLink="asset.mailcheck.checkCodeInputHint"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="22"
+      y="78" />
+    <!-- 请输入邮箱地址 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mailcheck.mailAddressInputHint"
+      resourceLink="asset.mailcheck.mailAddressInputHint"
+      x="36"
+      y="28" />
+    <!-- 验证码输入框 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mailcheck.checkCodeInputBg"
+      resourceLink="asset.mailcheck.checkCodeInputBg"
+      x="157"
+      y="72" />
+    <!-- 邮箱输入框 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mailcheck.mailAddressInputBg"
+      resourceLink="asset.mailcheck.mailAddressInputBg"
+      x="157"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="mobilephoneCheck.bg"
+      resourceLink="asset.mailcheck.mobilebg1,asset.mailcheck.mobilebg2,asset.mailcheck.mobilebg3,asset.mailcheck.mobilebg4,asset.mailcheck.mobilebg5"
+      imageRectString="0|684|13|329|13,118|527|144|91|13,-152|374|-82|467|13,155|468|-17|158|13,422|243|108|157|13"
+      x="0"
+      y="0" />
+    <component
+      stylename="mailcheck.MobilephoneCheckFrame"
+      classname="mailcheck.MobilephoneCheckFrame"
+      parentStyle=""
+      containerX="20"
+      containerY="20"
+      width="700"
+      height="500"
+      closeInnerRectString="29,33,45,29,14"
+      moveInnerRectString="0,30,50,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="mobilephoneCheck.hbox"
+      x="165"
+      y="175"
+      spacing="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mobilephoneCheck.btn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.mailcheck.mobileCheckTxt"
+      iconInnerRectString="25,100,10,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="151"
+      height="46"
+      x="300"
+      y="260" />
+    <component
+      stylename="mailcheck.gotoGMTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="mailcheck.gotoGM_txt"
+      mouseEnabled="true"
+      width="130"
+      height="20"
+      x="305"
+      y="150" />
+    <component
+      stylename="mailcheck.refreshTimeCountTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="mailcheck.gotoGM_txt"
+      mouseEnabled="true"
+      width="150"
+      height="20"
+      x="285"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mailCheckFrame.selectedCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="130"
+      y="120"
+      fieldX="-12" />
+    <component
+      stylename="mailCheckFrame.privacyTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="mailCheckFrame.privacyTxt_txt"
+      mouseEnabled="true"
+      width="130"
+      height="20"
+      x="240"
+      y="124" />
+  </components>
+</style>

@@ -1,0 +1,781 @@
+<style
+  name="steelmap"
+  source="ui/zh_cn/swf/steelmap.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="steel.SteelRankItem.RankTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="steel.SteelSortTopView.SelfPointTxt_t"
+      args="Arial,14,0xff9600,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.steelmap.steelFrameBg"
+      x="0"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.steelmap.ScoreTxt"
+      x="158"
+      y="36" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="steel.view.member.SteelMemberView"
+      stylename="steel.SteelMemberView"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.svsmap.svsViewOpenTips"
+      stylename="steelmap.steelViewOpenTips"
+      x="120"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="steel.SteelView.YearSprite"
+      x="360"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="steel.SteelView.MouthSprite"
+      x="320"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="steel.SteelView.DaySprite"
+      x="280"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="steel.SteelView.StartHourSprite"
+      x="450"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="steel.SteelView.StartMinuteSprite"
+      x="485"
+      y="220" />
+    <custom
+      classname="steel.view.auditing.SteelApplyPlayerList"
+      stylename="steel.SteelApplyPlayerList"
+      x="-11"
+      y="37" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="steel.SteelTopTemView.SwitchBtn"
+      x="2"
+      y="105" />
+  </customDisplay>
+  <components>
+    <!-- 钢铁之战主界面 -->
+    <component
+      classname="steel.view.SteelFrame"
+      stylename="steel.SteelFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="steel.SteelView.Bg"
+      resourceLink="asset.steelmap.steelViewBg"
+      x="185"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelView.JoinBtn"
+      parentStyle="svs.SvsView.JoinBtn"
+      x="389"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelView.ListBtn"
+      parentStyle="svs.SvsView.ListBtn"
+      x="625"
+      y="375"
+      width="120" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelView.ChangeBtn"
+      parentStyle="svs.SvsView.RankBtn"
+      backStyle="asset.steelmap.BtnBgRed"
+      iconStyle="asset.steelmap.steelFrameChangeBtnTxt"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelView.RankBtn"
+      parentStyle="svs.SvsView.RankBtn"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelView.HelpBtn"
+      parentStyle="svs.SvsView.HelpBtn"
+      y="470" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="steel.HelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="steel.view.SteelFrame.helpContent"
+      titleText="steel.view.SteelFrame.helpTitle"
+      textWidth="363" />
+    <!-- 钢铁之战我的战盟 -->
+    <component
+      classname="steel.view.member.SteelMemberFrame"
+      stylename="steel.SteelMemberFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      containerX="18"
+      containerY="50"
+      width="480"
+      height="500" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelMemberFrame.InviteBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.steelmap.InviteBtnTxt"
+      iconInnerRectString="20,75,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="114"
+      height="42"
+      x="120"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelMemberFrame.AuditBtn"
+      parentStyle="steel.SteelMemberFrame.InviteBtn"
+      iconStyle="asset.steelmap.AuditBtnTxt"
+      iconInnerRectString="20,75,10,22,13"
+      x="235" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelMemberFrame.MemberQuitBtn"
+      parentStyle="steel.SteelMemberFrame.InviteBtn"
+      iconStyle="asset.steelmap.MemberQuitBtnTxt"
+      iconInnerRectString="20,75,10,22,13"
+      x="168" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelMemberFrame.QuitBtn"
+      backStyle="asset.steelmap.QuitBtn"
+      iconStyle="asset.steelmap.QuitBtnTxt"
+      iconInnerRectString="3,60,2,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="85"
+      height="26"
+      x="350"
+      y="358" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelMemberView.Bg"
+      resourceLink="core.describeBackground_style04,asset.warlords.SplitLine"
+      imageRectString="0|442|0|400|13,2|438|340|3|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="steel.SteelMemberView.ContentBg"
+      parentStyle="core.describeBackground_style40"
+      width="434"
+      height="338"
+      x="4"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelMemberView.TitileGap"
+      resourceLink="asset.svsmap.titleGap,asset.svsmap.titleGap,asset.svsmap.titleGap"
+      imageRectString="150|18|0|28|13,220|18|0|28|13,310|18|0|28|13"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="steel.SteelMemberView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="0,0,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="433"
+      height="308"
+      x="4"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="steel.SteelMemberView.Vbox"
+      spacing="2"
+      width="442"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberView.NameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="35"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberView.GradesTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="175"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberView.StateTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="230"
+      y="3"
+      wordWrap="true"
+      width="90"
+      heigth="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberView.FightPowerTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="320"
+      y="3"
+      wordWrap="true"
+      width="120"
+      heigth="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberView.MemberTipsTxt"
+      textFormatStyle="gvg.Style.EnterWarMemberText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="115"
+      height="40"
+      x="5"
+      y="345"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberView.MemberNumTipsTxt"
+      textFormatStyle="gvg.Style.EnterWarMemberText04"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="45"
+      y="375" />
+    <!-- SteelMemberItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberItem.NameTxt"
+      textFormatStyle="gvg.Style.EnterWarText01_t1,gvg.Style.EnterWarText01_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="50"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberItem.GradeTxt"
+      textFormatStyle="gvg.Style.EnterWarText02"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="155"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberItem.StateTxt"
+      textFormatStyle="gvg.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="90"
+      height="20"
+      x="225"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelMemberItem.FightPowerTxt"
+      textFormatStyle="gvg.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="315"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="steel.SteelMemberItem.DelBtn"
+      backStyle="asset.core.deleteBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="410"
+      y="7" />
+    <!-- 钢铁之战搜索战盟 -->
+    <component
+      classname="steel.view.search.SteelSearchFrame"
+      stylename="steel.SteelSearchFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="56"
+      width="844"
+      height="474" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="steel.SteelSearchLeftView.Bg"
+      parentStyle="core.describeBackground_style03"
+      width="461"
+      height="370"
+      x="3"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="steel.SteelSearchLeftView.ListBg"
+      parentStyle="core.describeBackground_style40"
+      width="455"
+      height="298"
+      x="7"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelSearchLeftView.TitleGap"
+      resourceLink="asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="159|22|7|28|13,298|22|7|28|13"
+      x="10"
+      y="3" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="steel.SteelSearchLeftView.SelectAll"
+      parentStyle="consortia.ApplyPlayerAllSelectBtn"
+      x="10"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSearchLeftView.TeamNameTxt"
+      textFormatStyle="consortia.consortiaNameTextStyle_t"
+      filterString="consortia.consortiaNameTextStyle_f"
+      height="20"
+      x="25"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSearchLeftView.HostNameTxt"
+      parentStyle="steel.SteelSearchLeftView.TeamNameTxt"
+      x="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSearchLeftView.FightPowerTxt"
+      parentStyle="steel.SteelSearchLeftView.TeamNameTxt"
+      x="296"
+      y="8"
+      width="180"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelSearchLeftView.ApplyBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.steelmap.ApplyBtnTxt"
+      iconInnerRectString="27,76,11,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="130"
+      height="46"
+      x="90"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelSearchLeftView.CreateBtn"
+      parentStyle="steel.SteelSearchLeftView.ApplyBtn"
+      iconStyle="asset.steelmap.CreateBtnTxt"
+      x="240" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelSearchLeftView.RefreshBtn"
+      backStyle="asset.steelmap.RefreshBtn"
+      iconStyle="asset.steelmap.RefreshBtnTxt"
+      iconInnerRectString="7,36,5,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="50"
+      height="26"
+      x="390"
+      y="325" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="steel.SteelSearchRightView.Bg"
+      parentStyle="core.describeBackground_style06"
+      width="341"
+      height="369"
+      x="468"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelSearchRightView.TitleGap"
+      resourceLink="consortia.rightsideTitlebar.TitleBack,consortia.TitleSplit"
+      imageRectString="0|0|0|0|0,174|135|3|2|0"
+      width="331"
+      height="33"
+      x="473"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSearchRightView.TeamNameTxt"
+      parentStyle="consortia.consortiaNameTextStyle"
+      x="495"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSearchRightView.OperationTxt"
+      parentStyle="consortia.consortiaNameTextStyle"
+      x="706"
+      y="13" />
+    <!-- SteelTeamInfoItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelTeamInfoItem.TeamNameTxt"
+      textFormatStyle="consortia.ConsortiaItemNameTextStyle_t"
+      autoSize="none"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      width="126"
+      height="20"
+      x="35"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelTeamInfoItem.HostNickNameTxt"
+      textFormatStyle="consortia.ConsortiaItemNameTextStyle_t"
+      autoSize="none"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      width="136"
+      height="20"
+      x="165"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelTeamInfoItem.FightPowerTxt"
+      textFormatStyle="consortia.ConsortiaItemGradeTextStyle_t"
+      autoSize="none"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      width="146"
+      height="20"
+      x="305"
+      y="15" />
+    <!-- SteelRecordItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRecordItem.TeamNameTxt"
+      textFormatStyle="consortia.ConsortiaItemNameTextStyle_t"
+      autoSize="none"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      width="170"
+      height="20"
+      x="2"
+      y="6" />
+    <!-- 钢铁之战审核批准 -->
+    <component
+      classname="steel.view.auditing.SteelAuditingFrame"
+      stylename="steel.SteelAuditingFrame"
+      parentStyle="consortia.CreatConsortiaFrame"
+      backStyle="consortia.ConsortiaAuditingFrameBg"
+      containerY="56"
+      width="539"
+      height="443" />
+    <!-- 钢铁之战邀请 -->
+    <component
+      classname="steel.view.invite.SteelInviteFrame"
+      stylename="steel.SteelInviteFrame"
+      parentStyle="core.Frame5"
+      backStyle="room.RoomInviteFrameBg5"
+      titleOuterRectPosString="0,12,1"
+      width="336"
+      height="442" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="steel.SteelInviteFrame.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="18,5,0,0,3"
+      viewportInnerRectString="0,22,0,0,0"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|steel.view.invite.SteelInviteItem,30,213"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="305"
+      height="240"
+      x="-21"
+      y="60"
+      hScrollProxy="0"
+      vScrollProxy="0"
+      vUnitIncrement="10" />
+    <!-- 钢铁之战排行榜 -->
+    <component
+      classname="steel.view.ranklists.SteelRankListFrame"
+      stylename="steel.SteelRankListFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="20"
+      width="655"
+      height="560" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelRankListFrame.Bg"
+      resourceLink="core.describeBackground_style04,asset.warlords.SplitLine,asset.core.pageBg,steel.SteelRankListFrame.MyRankBg"
+      imageRectString="0|632|0|482|13,2|628|378|3|13,281|64|386|33|13,"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelRankListFrame.MyRankBg"
+      resourceLink="steel.SteelRankListFrameMyRankBgBack,asset.warlords.MyRankTxtBg,asset.steelmap.steelRankTxt,asset.warlords.RankTxt,warlords.WarlordsRankFrameTxtBg,asset.steelmap.WinCountTxt,warlords.WarlordsRankFrameTxtBg"
+      imageRectString="0|627|0|55|13,0|146|-9|17|13,0|103|-10|21|13,25|37|25|15|13,66|120|19|27|13,420|93|25|16|13,524|80|19|27|13"
+      x="3"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="steel.SteelRankListFrameMyRankBgBack"
+      resourceLink="asset.warlords.MyRankBg" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="steel.SteelRankListFrame.ContentBg"
+      parentStyle="core.describeBackground_style40"
+      width="625"
+      height="376"
+      x="4"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="steel.SteelRankListFrame.TitileGap"
+      resourceLink="asset.svsmap.titleGap,asset.svsmap.titleGap,asset.svsmap.titleGap,asset.svsmap.titleGap"
+      imageRectString="110|18|0|28|13,260|18|0|28|13,405|18|0|28|13,500|18|0|28|13"
+      x="4"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.RankTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="30"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.TeamNameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="170"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.ServerNameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="315"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.WinCountTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="415"
+      y="28"
+      wordWrap="true"
+      width="95"
+      heigth="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.FightTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="510"
+      y="28"
+      wordWrap="true"
+      width="120"
+      heigth="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.PageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="282"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelRankListFrame.PrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="206"
+      y="411" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="steel.SteelRankListFrame.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="352"
+      y="411" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.MyRankTxt"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="77"
+      y="470" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankListFrame.MyWinCountTxt"
+      parentStyle="warlords.WarlordsRankFrameMyRankTxt"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="538"
+      y="470" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="steel.SteelRankListFrame.ItemVBox"
+      spacing="1"
+      x="5"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="steel.SteelRankItem.ItemGap"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      width="623"
+      height="3"
+      x="0"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="steel.SteelRankItem.RankImg"
+      resourceLink="asset.svsmap.RankNum1,asset.svsmap.RankNum2,asset.svsmap.RankNum3"
+      x="40"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankItem.RankTxt"
+      textFormatStyle="steel.SteelRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankItem.TeamNameTxt"
+      textFormatStyle="steel.SteelRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="120"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankItem.ServerNameTxt"
+      textFormatStyle="steel.SteelRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="260"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankItem.WinCountTxt"
+      textFormatStyle="steel.SteelRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="405"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelRankItem.FightPowerTxt"
+      textFormatStyle="steel.SteelRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="500"
+      y="5" />
+    <!-- 副本 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="steel.manageBtn"
+      backStyle="asset.steelmap.ManageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="steel.SteelBottomBar.helpBtn"
+      backStyle="asset.steelmap.HelpBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="steel.SteelBottomBar.exitBtn"
+      backStyle="asset.steelmap.ExitBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="680"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="steel.SteelBottomBar.teamFlag"
+      resourceLink="asset.vehiclemap.BlueFlag,asset.vehiclemap.RedFlag"
+      x="65"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="steel.SteelSortTopView.ItemVBox"
+      spacing="1"
+      x="30"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSortTopView.SelfPointTipsTxt"
+      textFormatStyle="steel.SteelSortTopView.SelfPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="24"
+      x="35"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSortTopView.SelfPointTxt"
+      textFormatStyle="steel.SteelSortTopView.SelfPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24"
+      x="148"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSortTopItem.RankTxt"
+      textFormatStyle="worldboss.woundinfo.woundInfoNumTxt_t1,worldboss.woundinfo.woundInfoNumTxt_t2,worldboss.woundinfo.woundInfoNumTxt_t3,worldboss.woundinfo.woundInfoNumTxt_t4,worldboss.woundinfo.woundInfoNumTxt_t5,worldboss.woundinfo.woundInfoNumTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="25"
+      height="20"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSortTopItem.NickNameTxt"
+      textFormatStyle="worldboss.woundinfo.woundInfoTxt_t1,worldboss.woundinfo.woundInfoTxt_t2,worldboss.woundinfo.woundInfoTxt_t3,worldboss.woundinfo.woundInfoTxt_t4,worldboss.woundinfo.woundInfoTxt_t5,worldboss.woundinfo.woundInfoTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="steel.SteelSortTopItem.PointTxt"
+      textFormatStyle="worldboss.woundinfo.woundInfoTxt_t1,worldboss.woundinfo.woundInfoTxt_t2,worldboss.woundinfo.woundInfoTxt_t3,worldboss.woundinfo.woundInfoTxt_t4,worldboss.woundinfo.woundInfoTxt_t5,worldboss.woundinfo.woundInfoTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="130" />
+  </components>
+</style>

@@ -1,0 +1,843 @@
+<style
+  name="maze"
+  source="ui/zh_cn/swf/maze.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.MyRecordValueTxt_t"
+      args="Arial,16,0xfff5cd,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.MyOrderValueTxt_t"
+      args="Arial,14,0xfff5cd,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.campaign.TableTextFormat_t"
+      args="Arial,12,0xfff0a8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.campaign.TableTextFormat_t2"
+      args="Arial,12,0x64cc27,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.campaign.ValeuTextFormat_t"
+      args="Arial,14,0xe6c408,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.order.titleTextFormat_t"
+      args="Arial,14,0xf9e8c5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.order.ItemTextValueStyle1_f"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.order.ItemTextValueStyle2_f"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.order.ItemTextValueStyle3_f"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.fall.FallItemsLinkStyle_f2"
+      args="Arial,12,0xa7db1b,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="maze.FirstBloodText_2_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.maze.BackAsset1" />
+    <bitmapData
+      resourceLink="asset.maze.BackAsset2" />
+    <bitmapData
+      resourceLink="asset.maze.BackAsset3" />
+    <bitmapData
+      resourceLink="asset.maze.MyRecordTxt"
+      x="56"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.maze.MazeCoins"
+      x="19"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.maze.MyOrderTxt"
+      x="420"
+      y="107" />
+    <bitmapData
+      resourceLink="asset.maze.TodayFreeCountTxt"
+      x="430"
+      y="200" />
+    <bitmapData
+      resourceLink="asset.maze.TodayPropCountTxt"
+      x="430"
+      y="225" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_10"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_20"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_30"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_40"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_50"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_60"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_70"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_80"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_90"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_100"
+      x="0"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_5"
+      x="9"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_15"
+      x="9"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.Floor_25"
+      x="9"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.maze.TotalExpTxt"
+      x="418"
+      y="262" />
+    <bitmapData
+      resourceLink="asset.maze.CurrentFloorTxt"
+      x="482"
+      y="234" />
+    <bitmapData
+      resourceLink="asset.maze.GetDoubleProfit"
+      x="480"
+      y="244" />
+    <bitmapData
+      resourceLink="asset.maze.FirstBlood"
+      x="1"
+      y="115" />
+    <bitmapData
+      resourceLink="asset.maze.GetDoubleProfit2"
+      x="475"
+      y="265" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_1"
+      x="344"
+      y="24" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_2"
+      x="55"
+      y="50" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_3"
+      x="344"
+      y="95" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_4"
+      x="55"
+      y="119" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_5"
+      x="344"
+      y="162" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_6"
+      x="55"
+      y="187" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_7"
+      x="344"
+      y="232" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_8"
+      x="55"
+      y="257" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_9"
+      x="344"
+      y="300" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_1_10"
+      x="55"
+      y="327" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_2_1"
+      x="342"
+      y="54" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_2_2"
+      x="54"
+      y="81" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_2_3"
+      x="342"
+      y="151" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_2_4"
+      x="54"
+      y="178" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_2_5"
+      x="342"
+      y="247" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="maze.FloorPoint_2_6"
+      x="54"
+      y="275" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="maze.MazeBtn2Mc"
+      x="-63"
+      y="152" />
+    <custom
+      classname="maze.view.MazeFloorItem"
+      stylename="maze.FloorItem"
+      tipStyle="yishi.view.tips.MazeFloorTips"
+      tipDirctions="7,5,4,6"
+      tipGapH="30"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="maze.campaign.fallGoodsList"
+      vSpace="3"
+      hSpace="1"
+      x="10"
+      y="215" />
+    <custom
+      classname="maze.order.MazeOrderItemView"
+      stylename="maze.order.MazeOrderItemAsset"
+      width="383"
+      height="30" />
+  </customDisplay>
+  <components>
+    <component
+      classname="maze.MazeFrame"
+      stylename="maze.MazeFrame1"
+      parentStyle="core.Frame1"
+      width="710"
+      height="498"
+      containerX="14"
+      containerY="56" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="maze.FrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="635"
+      height="392"
+      x="39"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="maze.FrameBack2"
+      parentStyle="core.describeBackground_style16"
+      width="630"
+      height="386"
+      x="41"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.FrameBack3"
+      parentStyle="core.describeBackground_style06"
+      width="367"
+      height="376"
+      alpha="0.6"
+      x="45"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.FrameBack4"
+      parentStyle="core.describeBackground_style06"
+      width="251"
+      height="81"
+      alpha="0.6"
+      x="416"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.FrameBack5"
+      parentStyle="core.describeBackground_style06"
+      width="251"
+      height="292"
+      alpha="0.6"
+      x="416"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="maze.BackAsset"
+      resourceLink="asset.maze.BackAsset1,asset.maze.BackAsset2,asset.maze.BackAsset3"
+      x="47"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="maze.DeascribeTxt"
+      resourceLink="asset.maze.newDeascribeTxt1,asset.maze.newDeascribeTxt2,asset.maze.newDeascribeTxt3"
+      x="415"
+      y="139" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="maze.FloorIconTxt"
+      resourceLink="asset.maze.FloorIconTxt1,asset.maze.FloorIconTxt2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="maze.MazeBtn1"
+      unSelectedStyle="asset.core.checkstyle_5.UnSelected"
+      selectedStyle="asset.core.checkstyle_5.Selected"
+      selectedIconStyle="asset.maze.MazeBtnText_Selected_1"
+      unselectedIconStyle="asset.maze.MazeBtnText_Unselected_1"
+      selectedIconInnerRectString="13,16,25,83,13"
+      unselectedIconInnerRectString="13,16,25,83,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="42"
+      height="131"
+      transparentEnable="true"
+      x="1"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="maze.MazeBtn2"
+      unSelectedStyle="asset.core.checkstyle_4.UnSelected"
+      selectedStyle="asset.core.checkstyle_4.Selected"
+      selectedIconStyle="asset.maze.MazeBtnText_Selected_2"
+      unselectedIconStyle="asset.maze.MazeBtnText_Unselected_2"
+      selectedIconInnerRectString="13,16,39,54,13"
+      unselectedIconInnerRectString="13,16,39,54,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="42"
+      height="131"
+      transparentEnable="true"
+      x="0"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="maze.MazeBtn3"
+      unSelectedStyle="asset.maze.checkstyle_6.UnSelected"
+      selectedStyle="asset.maze.checkstyle_6.Selected"
+      selectedIconStyle="asset.maze.MazeBtnText_Selected_3"
+      unselectedIconStyle="asset.maze.MazeBtnText_UnSelected_3"
+      selectedIconInnerRectString="5,32,25,82,13"
+      unselectedIconInnerRectString="5,38,25,84,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="42"
+      height="131"
+      transparentEnable="true"
+      x="1"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.MyRecordValueTxt"
+      textFormatStyle="maze.MyRecordValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="105"
+      height="20"
+      x="150"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.MazeCoinsValueTxt"
+      textFormatStyle="maze.MyRecordValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="105"
+      height="20"
+      x="95"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.MyOrderValueTxt"
+      textFormatStyle="maze.MyOrderValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="520"
+      y="109" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.TodayFreeCountValue"
+      textFormatStyle="maze.MyRecordValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="600"
+      y="198" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.TodayPropCountValue"
+      textFormatStyle="maze.MyRecordValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="570"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.OrderBtn"
+      backStyle="asset.core.BlueBtn"
+      iconStyle="asset.maze.OrderTxt"
+      iconInnerRectString="14,52,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="79"
+      height="32"
+      x="585"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="maze.MazeSmallShopBtn"
+      backStyle="asset.maze.ShopBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.MazeShopBtn"
+      backStyle="asset.maze.ShopBtnBgAsset"
+      iconStyle="asset.maze.ShopBtnTxtAsset"
+      iconInnerRectString="70,148,26,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="239"
+      height="68"
+      x="421"
+      y="18"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.StartBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.maze.StartTxt"
+      iconInnerRectString="33,52,10,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="116"
+      height="42"
+      x="543"
+      y="336" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.SpliceLine1"
+      parentStyle="tips.HeroTipLine1"
+      resourceLink="asset.maze.lineBgImg"
+      width="246"
+      x="416"
+      y="136" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.SpliceLine2"
+      parentStyle="tips.HeroTipLine1"
+      resourceLink="asset.maze.lineBgImg"
+      width="246"
+      x="416"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.CurLayerTxt"
+      textFormatStyle="maze.MyRecordValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="570"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.TotalGpTxt"
+      textFormatStyle="maze.MyRecordValueTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="569"
+      y="257" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.ResetBtn"
+      backStyle="asset.maze.ResetBackAsset"
+      iconStyle="asset.maze.ResetTxt"
+      iconInnerRectString="22,54,7,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="42"
+      x="441"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.ContinueBtn"
+      backStyle="asset.maze.ContinueBackAsset"
+      iconStyle="asset.maze.ContinueTxt"
+      iconInnerRectString="24,50,7,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="42"
+      x="551"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.mazeInfoViewBackgroud"
+      parentStyle="core.commonTipBg"
+      width="225"
+      height="164"
+      x="5"
+      y="137" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.campaign.CurLayerTxt"
+      textFormatStyle="maze.campaign.TableTextFormat_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="10"
+      y="143" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.campaign.TotalGpTxt"
+      textFormatStyle="maze.campaign.TableTextFormat_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="10"
+      y="167" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.campaign.CurFallTxt"
+      textFormatStyle="maze.campaign.TableTextFormat_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="10"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.campaign.FallItemsLinkTxt"
+      textFormatStyle="maze.campaign.TableTextFormat_t2"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="10"
+      y="191" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.campaign.CurLayerValueTxt"
+      textFormatStyle="maze.campaign.ValeuTextFormat_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="76"
+      y="143" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.campaign.TotalGpValueTxt"
+      textFormatStyle="maze.campaign.ValeuTextFormat_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="90"
+      y="167" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="maze.campaign.fallGoodsPanel"
+      parentStyle="core.fallGoodsPanel"
+      width="172"
+      height="50"
+      x="10"
+      y="239" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="maze.order.itemBg"
+      resourceLink="core.HeroRankItemBack1,core.HeroRankItemBack2"
+      x="-3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.ItemTextStyle1"
+      textFormatStyle="maze.order.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="4"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.ItemTextStyle2"
+      textFormatStyle="maze.order.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="185"
+      height="20"
+      x="110"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="maze.order.ItemTextStyle2_vip"
+      textFieldStyle="maze.order.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="103"
+      y="5"
+      width="185" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="185"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.ItemTextStyle3"
+      textFormatStyle="maze.order.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="301"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.ItemTextValueStyle1"
+      textFormatStyle="maze.order.ItemTextValueStyle1_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="5"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.ItemTextValueStyle2"
+      textFormatStyle="maze.order.ItemTextValueStyle2_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="185"
+      height="20"
+      x="105"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.order.ItemTextValueStyle3"
+      textFormatStyle="maze.order.ItemTextValueStyle3_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="94"
+      height="20"
+      x="291"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="maze.order.PlayerListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-2,-2,6,3"
+      viewportInnerRectString="0,0,5,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|maze.order.MazeOrderItemAsset,29,383"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="400"
+      height="268"
+      x="7"
+      y="38" />
+    <component
+      classname="maze.order.MazeOrderFrame"
+      stylename="maze.order.MazeOrderFrame"
+      parentStyle="core.Frame1"
+      width="447"
+      height="471"
+      containerX="16"
+      containerY="61" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="maze.order.MazeOrderBack1"
+      parentStyle="core.describeBackground_style13"
+      width="413"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="maze.order.MazeOrderBack2"
+      parentStyle="core.FameBottomImage"
+      width="412"
+      height="53"
+      x="0"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="maze.OrderItemBack1"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|406|0|32|13,105|22|3|28|13,290|22|3|28|13"
+      x="4"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="maze.order.MazeOrderCloseBtn"
+      parentStyle="core.AlertButton"
+      fieldX="5"
+      fieldY="7"
+      width="97"
+      height="33"
+      x="156"
+      y="321" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.fall.FallItemsLinkTxt"
+      textFormatStyle="maze.fall.FallItemsLinkStyle_f2"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="421"
+      y="188" />
+    <!-- 使用迷宫钥匙双倍收益按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="maze.DoubleProfitSelectButton"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="450"
+      y="250" />
+    <!-- 首杀 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="maze.FirstBloodText"
+      textFieldStyle="maze.FirstBloodText_2"
+      colors="0xfff6ba,0xff9000"
+      filterString="core.normal_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="70"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="maze.FirstBloodText_2"
+      textFormatStyle="maze.FirstBloodText_2_t"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <!-- 扫荡 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.MopupStartBtn"
+      backStyle="asset.core.ButtonStyle_02"
+      iconStyle="asset.maze.MopupTxt"
+      width="114"
+      height="42"
+      iconInnerRectString="30,51,10,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="426"
+      y="336" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="maze.showTipBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="426"
+      y="336"
+      width="114"
+      height="42" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.MopupContinueBtn"
+      backStyle="asset.core.ButtonStyle_02"
+      iconStyle="asset.maze.ContinueMopupTxt"
+      width="136"
+      height="42"
+      iconInnerRectString="17,55,12,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="425"
+      y="285" />
+    <!-- 帮助 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="maze.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="638"
+      y="-31" />
+    <!-- 扫荡帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="maze.MazeHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="maze.MazeFrame.helpContent"
+      titleText="maze.MazeHelpFrame.titleText"
+      textWidth="409" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.MazeView.autoBtn"
+      backStyle="asset.maze.MazeView.autoBtnBack"
+      iconStyle="asset.maze.MazeView.autoBtnText"
+      iconInnerRectString="55,84,10,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="15"
+      y="225" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="maze.MazeView.stopAutoBtn"
+      backStyle="asset.maze.MazeView.stopAutoBtnBack"
+      iconStyle="asset.maze.MazeView.stopAutoBtnText"
+      iconInnerRectString="55,87,10,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="15"
+      y="225" />
+  </components>
+</style>

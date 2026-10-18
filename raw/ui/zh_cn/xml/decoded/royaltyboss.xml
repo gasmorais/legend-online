@@ -1,0 +1,595 @@
+<style
+  name="royaltyboss"
+  source="ui/zh_cn/swf/royaltyboss.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossFrame.bossTxt.text_t"
+      args="Arial,16,0xff6000,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.bossName.Txt_f"
+      args="0xff6000,0.2,6,6,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossItem.nameTxt_t"
+      args="Arial,12,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossItem.levelTxt_t"
+      args="Arial,12,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossFrame.rankBtn.rankTxt_t"
+      args="Arial,12,0xff9600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossFrame.propertyLevelTxt_t"
+      args="Arial,14,0xfff38d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossFrame.fightNumTxt_t"
+      args="Arial,16,0xff9600,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyPropertyItem.txt_t"
+      args="Arial,12,0xff9600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyFightFrame.fightTxt_t1"
+      args="Arial,14,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyFightFrame.fightTxt_t2"
+      args="Arial,14,0x00ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyFightFrame.conditionTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyFightFrame.descTxt_t"
+      args="Arial,12,0xa48972,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyRankFrame.rankTxt_t"
+      args="Arial,12,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyRankItem.rankTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="royaltyBossFrame.allTxt_t"
+      args="Arial,14,0xb1def1,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.RoyaltyBossFrame.bg"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.RoyaltyBossItem.bg" />
+    <bitmapData
+      resourceLink="asset.RoyaltyBossItem.txtBg"
+      x="0"
+      y="90" />
+    <bitmapData
+      resourceLink="asset.RoyaltyLevelItem.numImg" />
+    <bitmapData
+      resourceLink="asset.RoyaltyBossFrame.propertyImg"
+      x="410"
+      y="158" />
+    <bitmapData
+      resourceLink="asset.RoyaltyBossFrame.line"
+      x="470"
+      y="410" />
+    <bitmapData
+      resourceLink="asset.RoyaltyPropertyItem.icon"
+      x="40"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.RoyaltyFightFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RoyaltyFightFrame.theseusFight"
+      x="150"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.RoyaltyFightFrame.theseusArmor"
+      x="150"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.RoyaltyFightFrame.back"
+      x="2"
+      y="150" />
+    <bitmapData
+      resourceLink="asset.RoyaltyFightFrame.rewardsImg"
+      x="155"
+      y="140" />
+    <bitmapData
+      resourceLink="asset.RoyaltyRankFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RoyaltyRankItem.line"
+      x="0"
+      y="28" />
+    <bitmapData
+      resourceLink="asset.RoyaltyBossFrame.leftImg"
+      x="390"
+      y="390" />
+    <bitmapData
+      resourceLink="asset.RoyaltyBossFrame.rightImg"
+      x="580"
+      y="390" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="royaltyBossItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="60"
+      iconHeight="60"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="27"
+      y="25" />
+    <custom
+      classname="yishi.view.base.HRollItemPanel"
+      stylename="royaltyBossFrame.rollPanel"
+      x="330"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="royaltyBossFrame.rollPanel.HBox"
+      x="15"
+      y="15"
+      spacing="18" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="royaltyBossFrame.vBox"
+      spacing="3"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="royaltyRankFrame.vBox"
+      spacing="2"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="royaltyboss.RoyaltyBossFrame"
+      stylename="royaltyboss.RoyaltyBossFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="16"
+      containerY="65"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,27,10,0,9"
+      width="760"
+      height="565" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="royaltyBossFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="723"
+      height="456" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="royaltyBossFrame.bossTxt"
+      textFieldStyle="royaltyBossFrame.bossTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="ui.bossName.Txt_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="70"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.bossTxt.text"
+      textFormatStyle="royaltyBossFrame.bossTxt.text_t"
+      autoSize="none"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossItem.nameTxt"
+      textFormatStyle="royaltyBossItem.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="5"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossItem.levelTxt"
+      textFormatStyle="royaltyBossItem.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="5"
+      y="103" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="royaltyBossFrame.rankBtn"
+      backStyle="asset.RoyaltyBossFrame.rankBtn"
+      textStyle="royaltyBossFrame.rankBtn.rankTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,13,33,13"
+      displacement="false"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="52"
+      height="52"
+      x="25"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.rankBtn.rankTxt"
+      textFormatStyle="royaltyBossFrame.rankBtn.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="royaltyBossFrame.rollPanel.LeftBtn"
+      backStyle="asset.RoyaltyBossFrame.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      scaleX="-1"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="royaltyBossFrame.rollPanel.RightBtn"
+      backStyle="asset.RoyaltyBossFrame.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="370"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="royaltyLevelItem.txt"
+      parentStyle="royaltyBossFrame.bossTxt"
+      textFieldStyle="royaltyLevelItem.txt.text"
+      width="75"
+      height="25"
+      x="0"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="royaltyLevelItem.txt1"
+      parentStyle="royaltyBossFrame.bossTxt"
+      textFieldStyle="royaltyLevelItem.txt.text"
+      width="75"
+      height="25"
+      x="15"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyLevelItem.txt.text"
+      textFormatStyle="royaltyBossFrame.bossTxt.text_t"
+      autoSize="none"
+      width="75"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.propertyLevelTxt"
+      textFormatStyle="royaltyBossFrame.propertyLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="580"
+      y="156" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="royaltyBossFrame.fightTxt"
+      parentStyle="royaltyBossFrame.bossTxt"
+      textFieldStyle="royaltyBossFrame.fightTxt.text"
+      width="170"
+      height="25"
+      x="330"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.fightTxt.text"
+      textFormatStyle="royaltyBossFrame.bossTxt.text_t"
+      autoSize="none"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="royaltyBossFrame.fightAllTxt"
+      parentStyle="royaltyBossFrame.bossTxt"
+      textFieldStyle="royaltyBossFrame.fightTxt.text"
+      width="170"
+      height="25"
+      x="377"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.fightNumTxt"
+      textFormatStyle="royaltyBossFrame.fightNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="480"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="royaltyBossFrame.unlockTxt"
+      parentStyle="royaltyBossFrame.bossTxt"
+      textFieldStyle="royaltyBossFrame.unlockTxt.text"
+      width="170"
+      height="25"
+      x="429"
+      y="405" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.unlockTxt.text"
+      textFormatStyle="royaltyBossFrame.bossTxt.text_t"
+      autoSize="none"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="royaltyPropertyItem.bg"
+      resourceLink="asset.RoyaltyPropertyItem.bg1,asset.RoyaltyPropertyItem.bg2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyPropertyItem.txt"
+      textFormatStyle="royaltyPropertyItem.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="25"
+      x="55"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="royaltyBossFrame.propertySpanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,386,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="390"
+      height="160"
+      x="310"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyBossFrame.allTxt"
+      textFormatStyle="royaltyBossFrame.allTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="25"
+      y="225" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="royaltyBossFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="675"
+      y="-50" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="royaltyBossFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="royaltyBossFrame.helperFrame.helpTxt.text"
+      titleText="royaltyBossFrame.helperFrame.HelpTitle.text"
+      textWidth="363" />
+    <!-- 挑战界面 -->
+    <component
+      classname="royaltyboss.RoyaltyFightFrame"
+      stylename="royaltyboss.RoyaltyFightFrame"
+      parentStyle="core.Frame2"
+      containerX="6"
+      containerY="43"
+      width="383"
+      height="413" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyFightFrame.fightTxt"
+      textFormatStyle="royaltyFightFrame.fightTxt_t1,royaltyFightFrame.fightTxt_t2"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="280"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyFightFrame.armorTxt"
+      parentStyle="royaltyFightFrame.fightTxt"
+      x="255"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyFightFrame.conditionTxt"
+      textFormatStyle="royaltyFightFrame.conditionTxt_t"
+      autoSize="none"
+      width="220"
+      height="40"
+      wordWrap="true"
+      x="150"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyFightFrame.descTxt"
+      textFormatStyle="royaltyFightFrame.descTxt_t"
+      autoSize="none"
+      width="325"
+      height="50"
+      wordWrap="true"
+      x="35"
+      y="228" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="royaltyFightFrame.armorBtn"
+      backStyle="asset.core.Style45Btn"
+      iconStyle="asset.RoyaltyFightFrame.armorBtnTxt"
+      iconInnerRectString="12,90,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="40"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="royaltyFightFrame.fightBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.RoyaltyFightFrame.fightBtnTxt"
+      iconInnerRectString="32,50,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="royaltyFightFrame.RewardsHBox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="royaltyFightFrame.panel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-5,4"
+      viewportInnerRectString="0,0,-5,70,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="280"
+      height="52"
+      x="45"
+      y="167" />
+    <!-- 排行榜 -->
+    <component
+      classname="royaltyboss.RoyaltyRankFrame"
+      stylename="royaltyboss.RoyaltyRankFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="65"
+      width="575"
+      height="510" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankFrame.rankTxt"
+      textFormatStyle="royaltyRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="24"
+      x="5"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankFrame.nameTxt"
+      parentStyle="royaltyRankFrame.rankTxt"
+      autoSize="none"
+      width="165"
+      height="24"
+      x="70"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankFrame.royaltyLevelTxt"
+      parentStyle="royaltyRankFrame.rankTxt"
+      autoSize="none"
+      width="145"
+      height="24"
+      x="236"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankFrame.bossLevelTxt"
+      parentStyle="royaltyRankFrame.rankTxt"
+      autoSize="none"
+      width="155"
+      height="24"
+      x="382"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="royaltyRankFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,520,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="535"
+      height="295"
+      x="0"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="royaltyRankFrame.btn"
+      backStyle="asset.RoyaltyRankFrame.btnBg"
+      iconStyle="asset.RoyaltyRankFrame.btnTxt"
+      iconInnerRectString="36,44,12,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="347" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankItem.rankTxt"
+      textFormatStyle="royaltyRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="24"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankItem.nameTxt"
+      parentStyle="royaltyRankItem.rankTxt"
+      autoSize="none"
+      width="165"
+      height="24"
+      x="70"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankItem.royaltyLevelTxt"
+      parentStyle="royaltyRankItem.rankTxt"
+      autoSize="none"
+      width="145"
+      height="24"
+      x="236"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="royaltyRankItem.bossLevelTxt"
+      parentStyle="royaltyRankItem.rankTxt"
+      autoSize="none"
+      width="155"
+      height="24"
+      x="382"
+      y="5" />
+  </components>
+</style>

@@ -1,0 +1,701 @@
+<style
+  name="christmastree"
+  source="ui/zh_cn/swf/christmastree.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.openBtnIconText_t"
+      args="Arial,14,0xfcdfa7,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ChristmasTreeHammerTitleText_t"
+      args="Arial,12,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ChristmasTreeHammerNumText_t"
+      args="Arial,14,0xa1eefe,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.StorageTipText_t"
+      args="Arial,12,0xeddb95,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.RemainTimeText_t"
+      args="Arial,12,0xc7b079,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.OpenchristmastreeDescribeTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.FallItemsLinkTxt_t"
+      args="Arial,12,0x35ff48,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ItemName_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ItemName_t2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ItemName_t3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ItemName_t4"
+      args="Arial,12,0xa838f7"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ItemName_t5"
+      args="Arial,12,0xff8000"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ItemName_t6"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="christmastree.ChristmasTreeBoxView.countText_f"
+      args="Arial,14,0x95feff,,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.christmastree.goodsShow"
+      x="93"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.christmastree.rewards"
+      x="78"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.christmastree.luckShow"
+      x="72"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.christmastree.DropFrameLine"
+      x="0"
+      y="0"
+      width="569" />
+    <bitmapData
+      resourceLink="asset.christmastree.Num100"
+      x="58"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.christmastree.Num50"
+      x="65"
+      y="135" />
+    <bitmapData
+      resourceLink="asset.christmastree.Num30"
+      x="66"
+      y="225" />
+    <bitmapData
+      resourceLink="asset.christmastree.Num10"
+      x="71"
+      y="315" />
+    <bitmapData
+      resourceLink="asset.christmastree.Num3"
+      x="76"
+      y="405" />
+    <bitmapData
+      resourceLink="asset.christmastree.percentbg"
+      x="132"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.christmastree.ChristmasTreeBoxView.CurrentCount"
+      x="8"
+      y="1" />
+    <bitmapData
+      resourceLink="christmastree.ChristmasTreeBoxViewEf"
+      x="132"
+      y="25" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="cell.view.christmastreebag.ChristmastreeBagCell"
+      stylename="christmastree.ChristmasTreeBagCell"
+      parentStyle="core.BaseItemView"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="christmastree.ItemIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <custom
+      classname="cell.view.christmastreebag.ChristmastreeBagCell"
+      stylename="christmastree.ChristmasTreeDropItemCell"
+      iconStyle="christmastree.ChristmasTreeDropItemCellIcon"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      iconWidth="30"
+      iconHeight="30"
+      profileX="1"
+      profileY="1"
+      profileWidth="31"
+      profileHeight="31"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="christmastree.ChristmasTreeDropItemCellIcon"
+      iconHeight="32"
+      iconWidth="32"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="14"
+      loadingY="14"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="asset.christmastree.CTBoxLight"
+      stylename="christmastree.CTBoxLight"
+      x="-5"
+      y="-10" />
+    <custom
+      classname="christmastree.ChristmasTreeBoxView"
+      stylename="christmastree.ChristmasTreeBoxView"
+      x="8"
+      y="17" />
+    <custom
+      classname="christmastree.ChristmasTreeIntergalBoxView"
+      stylename="christmastree.ChristmasTreeIntergalBoxView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="christmastree.BaseItemViewIcon" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="christmastree.BaseItemViewIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="7"
+      y="7" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="christmastree.TileContainer"
+      paddingH="5"
+      paddingV="6"
+      rowCount="2"
+      columnCount="3"
+      x="639"
+      y="48" />
+    <custom
+      classname="asset.christmastree.ChristmasTreeAnime0"
+      stylename="christmastree.ChristmasTreeAnime0"
+      x="209"
+      y="-121" />
+    <custom
+      classname="asset.christmastree.ChristmasTreeAnime1"
+      stylename="christmastree.ChristmasTreeAnime1"
+      x="233"
+      y="23" />
+    <custom
+      classname="asset.christmastree.ChristmasTreeAnime2"
+      stylename="christmastree.ChristmasTreeAnime2"
+      x="204"
+      y="23" />
+  </customDisplay>
+  <components>
+    <component
+      classname="christmastree.ChristmasTreeFrame"
+      stylename="christmastree.ChristmasTreeFrame"
+      parentStyle="core.Frame1"
+      width="905"
+      height="610"
+      containerX="18"
+      containerY="60" />
+    <!-- 背景圖片 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="christmastree.ChristmasTreeFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="869"
+      height="507"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="christmastree.ChristmasTreeFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="860"
+      height="498"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="christmastree.ChristmasTreeFrameBack3"
+      parentStyle="core.describeBackground_style04"
+      width="226"
+      height="493"
+      x="620"
+      y="7" />
+    <!-- 魔罐界面右边信息 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.TitleBack"
+      resourceLink="asset.christmastree.TitleBack,asset.christmastree.goodsShow"
+      x="627"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.TitleBack1"
+      resourceLink="asset.christmastree.TitleBack,asset.christmastree.rewards"
+      x="627"
+      y="184" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.TitleBack2"
+      resourceLink="asset.christmastree.TitleBack,asset.christmastree.luckShow"
+      x="627"
+      y="341" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="christmastree.RewardsListScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="220"
+      height="130"
+      x="624"
+      y="208" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="christmastree.LuckShowListScrollPanel"
+      parentStyle="christmastree.RewardsListScrollPanel"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="2"
+      vUnitIncrement="0"
+      width="220"
+      height="130"
+      x="623"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="christmastree.RewardsVBox"
+      x="0"
+      y="0"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="christmastree.LuckShowVBox"
+      x="493"
+      y="235"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="christmastree.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.openBtnText1"
+      textFormatStyle="christmastree.openBtnIconText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.openBtnBg1"
+      resourceLink="asset.christmastree.openBtnBack,asset.christmastree.openNum1,christmastree.SmallPointImg"
+      imageRectString="0|137|0|76|13,13|110|20|20|13,70|23|45|21|13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="christmastree.openBtn1"
+      backStyle="christmastree.openBtnBg1"
+      textStyle="christmastree.openBtnText1"
+      autoSizeAble="false"
+      backgoundInnerRectString="25,0,45,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="195"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.openBtnBg2"
+      resourceLink="asset.christmastree.openBtnBack,asset.christmastree.openNum2,christmastree.SmallPointImg"
+      imageRectString="0|137|0|76|13,7|121|20|20|13,70|23|45|21|13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="christmastree.openBtn2"
+      parentStyle="christmastree.openBtn1"
+      backStyle="christmastree.openBtnBg2"
+      x="335"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.openBtnBg3"
+      resourceLink="asset.christmastree.openBtnBack,asset.christmastree.openNum3,christmastree.SmallPointImg"
+      imageRectString="0|137|0|76|13,7|122|20|20|13,70|23|45|21|13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="christmastree.openBtn3"
+      parentStyle="christmastree.openBtn1"
+      backStyle="christmastree.openBtnBg3"
+      x="474"
+      y="404" />
+    <!-- 魔罐界面中间 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.ChristmasTreeBack"
+      resourceLink="asset.christmastree.christmastreeBack"
+      x="210"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="christmastree.CountdownBack"
+      resourceLink="asset.christmastree.CountdownBack"
+      x="271"
+      y="481" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="christmastree.CountdownBugleIcon"
+      resourceLink="asset.christmastree.BigBugleIcon"
+      x="288"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.ChristmasTreeImage"
+      resourceLink="asset.christmastree.christmastreeBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="christmastree.StorageButtonBack"
+      resourceLink="asset.christmastree.StorageButtonBack1"
+      imageRectString="29|68|0|67|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="christmastree.StorageButton"
+      backStyle="asset.christmastree.StorageButtonIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="495"
+      y="316" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="christmastree.AllGoodsButton"
+      backStyle="asset.christmastree.allGoodsButtonIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="207"
+      y="316" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="christmastree.ItemBack"
+      resourceLink="asset.christmastree.ItemBack" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.hammerTitleText"
+      textFormatStyle="christmastree.ChristmasTreeHammerTitleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="338"
+      y="384" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.hammerNumText"
+      textFormatStyle="christmastree.ChristmasTreeHammerNumText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="452"
+      y="383" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.RemainTimeText"
+      textFormatStyle="christmastree.RemainTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="25"
+      x="291"
+      y="482" />
+    <component
+      classname="yishi.view.community.BaseItemView"
+      stylename="christmastree.Item"
+      iconStyle="christmastree.ItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <!-- 魔罐仓库 -->
+    <component
+      classname="christmastree.ChristmasTreeStorageFrame"
+      stylename="christmastree.ChristmasTreeStorageFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="422"
+      height="350" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="christmastree.ChristmasTreeStorageFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="400"
+      height="240"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="christmastree.ChristmasTreeStorageFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="390"
+      height="230"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.StorageTipText"
+      textFormatStyle="christmastree.StorageTipText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="40"
+      x="-20"
+      y="240"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.StorageBtnText"
+      textFormatStyle="christmastree.StorageTipText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="christmastree.StoragePickupBtn"
+      backStyle="asset.christmastree.StorageBtnBack"
+      textStyle="christmastree.StorageBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="3,0,3,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="84"
+      height="28"
+      x="180"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="christmastree.StorageGiveupBtn"
+      parentStyle="christmastree.StoragePickupBtn"
+      x="250"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="christmastree.StorageCleanupBtn"
+      parentStyle="christmastree.StoragePickupBtn"
+      x="268"
+      y="245"
+      width="122"
+      height="28" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="christmastree.ChristmasTreeBagScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="400"
+      height="235"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="christmastree.ChristmasTreeBagVBox"
+      x="0"
+      y="0"
+      width="375"
+      spacing="2" />
+    <!-- 开启魔罐提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="christmastree.OpenchristmastreeAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      containerY="42"
+      confirmStyle="christmastree.OpenchristmastreeConfirmBtn"
+      cancelStyle="christmastree.OpenchristmastreeCancelBtn"
+      checkStyle="christmastree.OpenchristmastreeCheckBtn"
+      describeStyle="christmastree.OpenchristmastreeDescribeTxt"
+      width="300"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="christmastree.OpenchristmastreeCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="54"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="christmastree.OpenchristmastreeConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="5"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="christmastree.OpenchristmastreeCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="130"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.OpenchristmastreeDescribeTxt"
+      parentStyle="core.ThewDescribeTxt"
+      textFormatStyle="christmastree.OpenchristmastreeDescribeTxt_t"
+      autoSize="none"
+      height="40"
+      width="260"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="christmastree.ChristmasTreeHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="830"
+      y="-31" />
+    <!-- 魔罐帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="christmastree.ChristmasTreeHelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="christmastree.view.ChristmasTreeFrame.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="322" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="christmastree.OpenchristmastreeUseBindPoint"
+      parentStyle="core.ThewCheckBtn"
+      x="125"
+      y="48" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.FallItemsLinkTxt"
+      textFormatStyle="christmastree.FallItemsLinkTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="407"
+      y="300" />
+    <!-- 魔罐掉落 -->
+    <component
+      classname="christmastree.ChristmasTreeDropFrame"
+      stylename="christmastree.ChristmasTreeDropFrame"
+      parentStyle="core.QuickBuyFrame"
+      closeInnerRectString="29,-17,-4,29,14"
+      containerX="5"
+      containerY="22"
+      width="600"
+      height="235" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="christmastree.ChristmasTreeDropFrame.Bg"
+      resourceLink="asset.christmastree.DropFrameBg1,asset.christmastree.DropFrameBg2,asset.christmastree.DropFrameBg3,asset.christmastree.DropFrameBg4,asset.christmastree.DropFrameBg5,asset.christmastree.DropFrameBg6,asset.christmastree.DropFrameBg7,asset.christmastree.DropFrameBg8,asset.christmastree.DropFrameBg9"
+      width="585"
+      height="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.ChristmasTreeDropItemName"
+      textFormatStyle="christmastree.ItemName_t1,christmastree.ItemName_t2,christmastree.ItemName_t3,christmastree.ItemName_t4,christmastree.ItemName_t5,christmastree.ItemName_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="150"
+      x="35"
+      y="8"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="christmastree.ChristmasTreeDropScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,0,-5,-5,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="576"
+      height="158"
+      x="3"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.ChristmasTreeBoxView.AddIntergal"
+      textFormatStyle="christmastree.OpenchristmastreeDescribeTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="christmastree.ChristmasTreeBoxView.countText"
+      textFormatStyle="christmastree.ChristmasTreeBoxView.countText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="25"
+      x="95"
+      y="5" />
+  </components>
+</style>

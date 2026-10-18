@@ -1,0 +1,151 @@
+<style
+  name="securitycode"
+  source="ui/zh_cn/swf/securitycode.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="securityCode.tipTxt_t"
+      args="Arial,12,0xeeca00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="securityCode.remainCountTxt_t"
+      args="Arial,14,0xffd800,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="securityCode.alertTxt_t"
+      args="Arial,12,0xecd0ac,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="securityCode.ExpValueTxt_t"
+      args="Arial,12,0xffd800,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <!--时间数字-->
+    <bitmapData
+      resourceLink="asset.securitycode.Numer" />
+    <bitmapData
+      resourceLink="asset.securitycode.ExpImg"
+      x="430"
+      y="50" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="securitycode.Canvas"
+      x="-9"
+      y="24" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="securitycode.TimeContainer"
+      x="413"
+      y="128" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="securityCode.Frame"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="false"
+      enterEnable="true"
+      escEnable="false"
+      containerX="35"
+      containerY="40"
+      width="500"
+      height="300" />
+    <!--	验证码-->
+    <component
+      classname="securityCode.SecurityCodeFrame"
+      stylename="securityCode.SecurityCodeFrame"
+      parentStyle="securityCode.Frame"
+      width="572"
+      height="424" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="securitycode.rightBackground"
+      parentStyle="core.describeBackground_style04"
+      width="542"
+      height="330"
+      x="-23"
+      y="11" />
+    <!--确定按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="securitycode.ConfirmBtn"
+      backStyle="asset.core.ButtonStyle_03"
+      iconStyle="asset.securitycode.SubmitTxt"
+      width="114"
+      height="42"
+      iconInnerRectString="35,46,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="351"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="securitycode.AlertTxt"
+      textFormatStyle="securityCode.alertTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="308"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="securitycode.ExpTxt"
+      textFormatStyle="securityCode.alertTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="64"
+      height="20"
+      x="308"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="securitycode.ExpValueTxt"
+      textFormatStyle="securityCode.ExpValueTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="367"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="securityCode.tipTxt"
+      textFormatStyle="securityCode.tipTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      mutiLine="true"
+      wordWrap="true"
+      width="208"
+      height="40"
+      x="304"
+      y="292" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="securityCode.remainCountTxt"
+      textFormatStyle="securityCode.remainCountTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="140"
+      height="24"
+      x="347"
+      y="156" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="securitycode.TimeBack"
+      resourceLink="asset.securitycode.titleBg,asset.securitycode.countDownBg"
+      imageRectString="0|188|0|80|13,20|120|12|22|13"
+      x="327"
+      y="114" />
+  </components>
+</style>

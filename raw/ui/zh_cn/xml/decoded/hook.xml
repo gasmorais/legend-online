@@ -1,0 +1,70 @@
+<style
+  name="hook"
+  source="ui/zh_cn/swf/hook.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="hook.item_count1"
+      args="Arial,14,0x59cd41,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="hook.item_count2"
+      args="Arial,14,0xff0000,,,,,,right"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.hook.TitleBack"
+      x="5"
+      y="9" />
+  </bitmaps>
+  <!--	<customDisplay>-->
+  <!--		<custom classname="hook.view.HookItem" stylename="hook.HookItem" />-->
+  <!--	</customDisplay>-->
+  <components>
+    <component
+      classname="hook.HookFrame"
+      stylename="hook.HookFrame"
+      parentStyle="core.Frame1"
+      width="765"
+      height="472"
+      containerX="16"
+      containerY="56" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="hook.FrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="730"
+      height="367"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="hook.FrameBack2"
+      parentStyle="core.describeBackground_style16"
+      width="722"
+      height="310"
+      x="5"
+      y="56" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="hook.RewardBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.hook.RewardBtnTxt"
+      iconInnerRectString="14,123,13,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="564"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="hook.RoomCapicity"
+      textFormatStyle="hook.item_count1,hook.item_count2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="128"
+      x="98"
+      y="62" />
+  </components>
+</style>

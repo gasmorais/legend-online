@@ -1,0 +1,496 @@
+<style
+  name="matelordsroom"
+  source="ui/zh_cn/swf/matelordsroom.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelordsroom.FinalRoomRightSelfWinCountTxt_t"
+      args="Arial,14,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelordsroom.demonScoreText_t"
+      args="Arial,14,0xd72f2f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MatelordsDemonShopFrame.demonScoreText_t"
+      args="Arial,14,0xd72f2f,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MatelordsDemonShopItem.itemName_t"
+      args="Arial,12,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MatelordsDemonShopItem.itemDesc_t"
+      args="Arial,12,0xbaad89,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MatelordsDemonShopItem.costText_t"
+      args="Arial,12,0x7bbbd9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MatelordsDemonShopItem.hasText_t"
+      args="Arial,12,0x87d97b,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.matelordsroom.RoomBg" />
+    <bitmapData
+      resourceLink="asset.matelords.InspireBitmap"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.matelords.rightBottomView" />
+    <bitmapData
+      resourceLink="asset.MatelordsDemonShopItem.back" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="matelords.room.MatelordsRoomView"
+      stylename="matelordsroom.MatelordsRoomView"
+      x="0"
+      y="0" />
+    <!-- 玩家形象 -->
+    <custom
+      classname="flash.geom.Point"
+      stylename="matelords.PlayerView_2"
+      x="850"
+      y="167" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="matelords.PlayerView_1"
+      x="550"
+      y="167" />
+    <custom
+      classname="matelords.MatelordsGeneralListCell"
+      stylename="matelordsroom.FinalRoomRightRankListCell"
+      cellType="2"
+      disObjStyle1="warlordsroom.FinalRankListCellRankImg"
+      disObjStyle2="warlordsroom.FinalRankListCellRankTxt"
+      disObjStyle3="matelordsroom.FinalRankListCellNameTxt"
+      disObjStyle4="matelordsroom.FinalRankListCellWinCountTxt" />
+    <custom
+      classname="asset.matedsroom.RoomBgEffect"
+      stylename="matedsroom.RoomBgEffect" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="matelords.inspireContainer"
+      x="60"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MatelordsDemonShopItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="44"
+      iconWidth="44"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="15"
+      y="13" />
+    <custom
+      classname="matelords.room.MatelordsDemonShopItem"
+      stylename="matelords.MatelordsDemonShopItem" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRankListCellNameTxt"
+      textFormatStyle="warlordsroom.FinalRankListCellRankTxt_t1,warlordsroom.FinalRankListCellRankTxt_t2"
+      filterString="core.normal_f"
+      x="50"
+      y="2"
+      isAutoFitLength="true"
+      autoSize="none"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRankListCellWinCountTxt"
+      parentStyle="matelordsroom.FinalRankListCellNameTxt"
+      autoSize="none"
+      width="55"
+      x="167" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRoomRightNameTitleTxt"
+      parentStyle="warlordsroom.FinalRoomRightRankTitleTxt"
+      x="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRoomRightWinTitleTxt"
+      parentStyle="warlordsroom.FinalRoomRightRankTitleTxt"
+      x="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRoomRightSelfWinCountTxt"
+      textFormatStyle="matelordsroom.FinalRoomRightSelfWinCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="7"
+      y="92" />
+    <!-- 决赛房间右边界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelordsroom.FinalRoomRightBg"
+      resourceLink="matelords.RightBg,asset.warlordsroom.FinalTitleBg"
+      imageRectString="0|236|0|312|13,3|231|3|39|13"
+      x="0"
+      y="-114" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="matelords.RightBg"
+      resourceLink="asset.matelords.RightBg"
+      scaleGridString="10,20,30,40"
+      height="312" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelordsroom.FinalRoomTopTitleImg"
+      resourceLink="asset.matelords.TopTips"
+      x="68"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRoomTopWaitTimeTxt"
+      parentStyle="warlordsroom.PrelimRoomRightMatchTimeTxt"
+      x="55"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.FinalRoomTopRoundTxt"
+      parentStyle="warlordsroom.PrelimRoomRightMatchTimeTxt"
+      x="43"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelordsroom.FinalRoomRightGroupTab"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.warlordsroom.TempleTxtUnselected"
+      selectedIconStyle="asset.warlordsroom.TempleTxtSelected"
+      unselectedIconInnerRectString="8,83,5,24,13"
+      selectedIconInnerRectString="8,83,5,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="9"
+      y="-139"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="matelordsroom.FinalRoomRightGroupBg"
+      resourceLink="core.PlayerInfoTabSelectBack"
+      x="9"
+      y="-139" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="matelordsroom.FinalRoomRightGroupImg"
+      resourceLink="asset.matelords.Group1,asset.matelords.Group2,asset.matelords.Group3,asset.matelords.Group4"
+      x="25"
+      y="-132" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelordsroom.FinalTeamSortBtn"
+      backStyle="asset.matelords.TeamSortBtnBg"
+      displacement="true"
+      iconStyle="asset.matelords.TeamSortBtnTxt"
+      iconInnerRectString="8,74,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelordsroom.FinalInspireBtn"
+      backStyle="asset.matelords.InspireBtnBg"
+      displacement="true"
+      iconStyle="asset.matelords.InspireBtnTxt"
+      iconInnerRectString="3,58,8,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false"
+      x="120"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="matelordsroom.FinalRoomRightRankListPanel"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarStyle="warlordsroom.FinalRoomRightRankListPanelVScrollbar"
+      vScrollbarInnerRectString="12,0,0,0,3"
+      vScrollProxy="1"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|matelordsroom.FinalRoomRightRankListCell,28,223"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="220"
+      height="145"
+      x="3"
+      y="-74" />
+    <!-- 我的队伍 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelordsroom.RoomTeamBg"
+      resourceLink="asset.matelords.TeamBg,asset.warlordsroom.TeamTitle"
+      imageRectString="0|236|0|188|13,86|97|10|18|13"
+      x="0"
+      y="0" />
+    <!-- 英灵阵型调整 -->
+    <component
+      classname="matelords.room.MatelordsPetFormationPetHeadView"
+      stylename="matelords.room.MatelordsPetFormationPetHeadView"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <component
+      classname="matelords.room.MatelordsPetFormationFrame"
+      stylename="matelords.room.MatelordsPetFormationFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="290,290,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="650"
+      height="470" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelordsroom.MatelordsPetFormationFrame.back"
+      resourceLink="asset.matelords.PetFormationBack,asset.warlordsroom.Title"
+      imageRectString="0|624|0|395|13,183|258|0|45|13"
+      x="-14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelordsSortFrame.LockCellBack"
+      resourceLink="asset.teammanager.LockCellBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="matelordsroom.rightBottomView"
+      resourceLink="asset.matelords.rightBottomView"
+      scaleGridString="8,8,12,12"
+      width="235"
+      height="125"
+      x="0"
+      y="70" />
+    <!--   新永恒之战   -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="matelordsroom.demonBtn"
+      backStyle="asset.matelordsroom.demonBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="65"
+      y="198" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="matelordsroom.demonScoreBg"
+      resourceLink="asset.matelordsroom.demonScoreBg"
+      x="40"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.demonScoreText"
+      textFormatStyle="matelordsroom.demonScoreText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="39"
+      y="295" />
+    <component
+      classname="matelords.room.MatelordsDemonShopFrame"
+      stylename="matelords.room.MatelordsDemonShopFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="45"
+      width="490"
+      height="440" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MatelordsDemonShopFrame.propBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.MatelordsDemonShopFrame.selectpropBtn"
+      unselectedIconStyle="asset.MatelordsDemonShopFrame.unselectpropBtn"
+      selectedIconInnerRectString="6,87,8,17,13"
+      unselectedIconInnerRectString="8,82,9,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      x="10"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MatelordsDemonShopFrame.skillBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.MatelordsDemonShopFrame.selectskillBtn"
+      unselectedIconStyle="asset.MatelordsDemonShopFrame.unselectskillBtn"
+      selectedIconInnerRectString="30,38,8,17,13"
+      unselectedIconInnerRectString="31,36,9,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      x="120"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="MatelordsDemonShopFrame.border"
+      parentStyle="core.describeBackground_style11"
+      width="460"
+      height="300"
+      x="5"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MatelordsDemonShopFrame.vbox"
+      spacing="0"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MatelordsDemonShopFrame.demonScoreText"
+      textFormatStyle="MatelordsDemonShopFrame.demonScoreText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="295"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MatelordsDemonShopItem.itemName"
+      textFormatStyle="MatelordsDemonShopItem.itemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="70"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MatelordsDemonShopItem.itemDesc"
+      textFormatStyle="MatelordsDemonShopItem.itemDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="40"
+      wordWrap="true"
+      x="70"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MatelordsDemonShopItem.costText"
+      textFormatStyle="MatelordsDemonShopItem.costText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="300"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MatelordsDemonShopItem.hasText"
+      textFormatStyle="MatelordsDemonShopItem.hasText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="300"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MatelordsDemonShopItem.buyBtn"
+      backStyle="asset.MatelordsDemonShopItem.buyBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="385"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.RoomRightSelfRankTxt"
+      textFormatStyle="matelordsroom.FinalRoomRightSelfWinCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="7"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelordsroom.teamTypeText"
+      textFormatStyle="matelordsroom.FinalRoomRightSelfWinCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="37"
+      x="7"
+      y="112"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.matelordsroom.GroupBtn1"
+      unSelectedStyle="asset.matelords.matelordsroom.GroupBtnUnSelectBack"
+      selectedStyle="asset.matelords.matelordsroom.GroupBtnSelectBack"
+      unselectedIconStyle="asset.matelordsroom.GroupBtn1"
+      selectedIconStyle="asset.matelordsroom.GroupBtn1"
+      unselectedIconInnerRectString="6,56,8,14,13"
+      selectedIconInnerRectString="6,56,8,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="-3"
+      y="-139"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.matelordsroom.GroupBtn2"
+      parentStyle="matelords.matelordsroom.GroupBtn1"
+      unselectedIconStyle="asset.matelordsroom.GroupBtn2"
+      selectedIconStyle="asset.matelordsroom.GroupBtn2"
+      unselectedIconInnerRectString="5,57,7,14,13"
+      selectedIconInnerRectString="5,57,7,14,13"
+      x="55"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.matelordsroom.GroupBtn3"
+      parentStyle="matelords.matelordsroom.GroupBtn1"
+      unselectedIconStyle="asset.matelordsroom.GroupBtn3"
+      selectedIconStyle="asset.matelordsroom.GroupBtn3"
+      unselectedIconInnerRectString="16,36,8,15,13"
+      selectedIconInnerRectString="16,36,8,15,13"
+      x="111" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.matelordsroom.GroupBtn4"
+      parentStyle="matelords.matelordsroom.GroupBtn1"
+      unselectedIconStyle="asset.matelordsroom.GroupBtn4"
+      selectedIconStyle="asset.matelordsroom.GroupBtn4"
+      unselectedIconInnerRectString="18,34,10,14,13"
+      selectedIconInnerRectString="18,34,10,14,13"
+      x="169" />
+  </components>
+</style>

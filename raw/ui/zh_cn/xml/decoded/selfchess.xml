@@ -1,0 +1,982 @@
+<style
+  name="selfchess"
+  source="ui/zh_cn/swf/selfchess.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.winTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.hasGoldTxt_t"
+      args="Arial,14,0xefb913,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.bleftLvTxt_t"
+      args="Arial,14,0xfff4aa,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.bLeftAddTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.bleftGoldTxt_t"
+      args="Arial,14,0xfff4aa,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.btHeroNameTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.btRefreshGoldTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.kindName_t"
+      args="Arial,16,0xfff4aa,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.kindNum_t"
+      args="Arial,20,0xffffff,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.playerGoldTxt_t"
+      args="Arial,14,0xefb913,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.playerLvTxt_t"
+      args="Arial,14,0xfff4aa,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.blProgressTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.playerTxt_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tipHeroNameTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.gameOverGoldTxt_t"
+      args="Arial,14,0xefb913,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tip2DesTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tip2DesTxt_t2"
+      args="Arial,14,0x666666,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tip2Title1_t"
+      args="Arial,12,0xd1c9b1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tip2Title2_t"
+      args="Arial,12,0xd1c9b1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tipAttack_t"
+      args="Arial,14,0xc29958,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tipDesTxt_t"
+      args="Arial,12,0xd1c9b1,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tipDesTxt_t2"
+      args="Arial,12,0x666666,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.tipHeroGoldTxt_t"
+      args="Arial,14,0xfff4aa,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.btHeroGoldTxt_t"
+      args="Arial,14,0xefb913,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.selfchess.limitTxt_t"
+      args="Arial,14,0x858585,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="selfchess.glowBuff"
+      args="0xff9200,0.75,2,2,20" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.selfchess.waitFt"
+      x="-29"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.selfchess.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.selfchess.drag"
+      x="616"
+      y="127" />
+    <bitmapData
+      resourceLink="asset.selfchess.bottomBg"
+      x="0"
+      y="105" />
+    <bitmapData
+      resourceLink="asset.selfchess.buyBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.selfchess.bottomUpBg"
+      x="0"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.selfchess.sell"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.selfchess.kindBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.selfchess.playerSelected"
+      x="1"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.selfchess.playerBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.selfchess.progressBar1"
+      x="2"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.selfchess.overBigG"
+      x="16"
+      y="38"
+      width="385"
+      height="280" />
+    <bitmapData
+      resourceLink="asset.selfchess.box50"
+      x="13"
+      y="10" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.selfchess.second"
+      x="-23"
+      y="32" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.selfchess.trun"
+      x="126"
+      y="0" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.selfchess.x"
+      x="-10"
+      y="0" />
+    <custom
+      classname="asset.selfchess.addGoldMc"
+      stylename="ui.selfchess.goldMc"
+      x="1058"
+      y="27" />
+    <custom
+      classname="chess.SelfChessSceneView"
+      stylename="ui.selfchess.llok"
+      x="0"
+      y="0" />
+    <custom
+      classname="chess.SelfChessBottomLeftView"
+      stylename="ui.selfchess.botoomLeft"
+      x="14"
+      y="663" />
+    <custom
+      classname="chess.SelfChessTopView"
+      stylename="ui.selfchess.top"
+      x="643"
+      y="35" />
+    <custom
+      classname="chess.SelfChessBottomView"
+      stylename="ui.selfchess.bottom"
+      x="260"
+      y="637" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.btSkillIcon"
+      iconHeight="46"
+      iconWidth="46"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="23"
+      loadingY="23"
+      x="136"
+      y="48" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.selfchess.bottomHbox2"
+      spacing="2"
+      x="7"
+      y="111" />
+    <custom
+      classname="chess.item.SelfChessLockItem"
+      stylename="ui.selfchess.lockBtn"
+      x="981"
+      y="121" />
+    <custom
+      classname="chess.SelfChessRecycleView"
+      stylename="ui.selfchess.recyle"
+      x="990"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.selfchess.bottomHbox1"
+      spacing="0"
+      x="94"
+      y="45"
+      strictWidth="113" />
+    <custom
+      classname="chess.SelfChessKindListView"
+      stylename="ui.selfchess.left"
+      x="45" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.selfchess.leftVbox"
+      spacing="-5"
+      x="1"
+      y="0" />
+    <custom
+      classname="chess.SelfChessPlayerListView"
+      stylename="ui.selfchess.right"
+      x="1264"
+      y="53" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.selfchess.rightVbox"
+      spacing="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="ui.selfchess.blprogress"
+      x="19"
+      y="85" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.selfchess.playerHpBitmap"
+      x="96"
+      y="34" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="ui.selfchess.playerHpProgress"
+      x="4"
+      y="62" />
+    <custom
+      classname="chess.SelfChessHeroTeamView"
+      stylename="ui.selfchess.battleTeam"
+      x="404"
+      y="115" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.tipIcon1"
+      iconHeight="28"
+      iconWidth="28"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="14"
+      loadingY="14"
+      x="76"
+      y="33" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.tipIcon2"
+      iconHeight="28"
+      iconWidth="28"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="14"
+      loadingY="14"
+      x="112"
+      y="33" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.tipSkillIcon"
+      iconHeight="46"
+      iconWidth="46"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="23"
+      loadingY="23"
+      x="13"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.btHeroIcon"
+      iconHeight="80"
+      iconWidth="80"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="40"
+      loadingY="40"
+      tipStyle="chess.SelfChessTipView"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="-100"
+      tipGapV="22"
+      x="17"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.btHeroskIcon1"
+      iconHeight="28"
+      iconWidth="28"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="14"
+      loadingY="14"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="118"
+      y="9" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.btHeroskIcon2"
+      iconHeight="28"
+      iconWidth="28"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="14"
+      loadingY="14"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="154"
+      y="9" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.selfchess.overIdxBit"
+      x="168"
+      y="126" />
+    <custom
+      classname="chess.item.SelfChessTeamItem"
+      stylename="chess.item.SelfChessTeamItem"
+      tipStyle="chess.SelfChessTipView"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.selfchess.tipAttBox1"
+      spacing="1"
+      x="13"
+      y="73" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.selfchess.tipAttBox2"
+      spacing="1"
+      x="115"
+      y="73" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.tipHeroIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="25"
+      loadingY="25"
+      x="17"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.tipPlayHeroIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="20"
+      loadingY="20"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="playTipBattle.SimpleTileList"
+      vSpace="5"
+      hSpace="5"
+      x="17"
+      y="76" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="playTipWait.SimpleTileList"
+      vSpace="5"
+      hSpace="5"
+      x="17"
+      y="195" />
+    <custom
+      classname="chess.item.SelfChessPlayerItem"
+      stylename="chess.item.SelfChessPlayerItem"
+      tipStyle="chess.SelfChessPlayZhenTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="-230"
+      tipGapV="15"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.selfchess.kindBigIcon"
+      iconHeight="46"
+      iconWidth="46"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="23"
+      loadingY="23"
+      x="3"
+      y="9" />
+    <custom
+      classname="chess.item.SelfChessKindItem"
+      stylename="chess.item.SelfChessKindItem"
+      tipStyle="chess.SelfChessBuffTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="200"
+      tipGapV="18"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.selfchess.buffOutVbox"
+      spacing="10"
+      x="10"
+      y="10" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ui.btLeftGoldSp"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="-115"
+      x="17"
+      y="60" />
+    <custom
+      classname="asset.selfchess.upMc"
+      stylename="asset.selfchess.upMc"
+      x="21"
+      y="13" />
+    <custom
+      classname="chess.SelfChessLimitView"
+      stylename="ui.selfchess.limit"
+      x="1024"
+      y="134" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.selfchess.bleftBg"
+      resourceLink="asset.selfchess.bottomLeftBg,asset.selfchess.lvBg"
+      imageRectString="0|0|19,193|82|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.selfchess.bleftUpBtnBg"
+      resourceLink="asset.selfchess.upBg,asset.selfchess.upFt,asset.selfchess.arrow,asset.selfchess.goldenIcon"
+      imageRectString="0|0|19,17|26|19,13|57|19,40|55|19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.winTxt"
+      textFormatStyle="ui.selfchess.winTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="144"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.hasGoldTxt"
+      textFormatStyle="ui.selfchess.hasGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="117"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.bleftLvTxt"
+      textFormatStyle="ui.selfchess.bleftLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="27"
+      height="20"
+      x="195"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.bLeftAddTxt"
+      textFormatStyle="ui.selfchess.bLeftAddTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="85"
+      y="174" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.bleftGoldTxt"
+      textFormatStyle="ui.selfchess.bleftGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="126"
+      y="174" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.btHeroNameTxt"
+      textFormatStyle="ui.selfchess.btHeroNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="129"
+      height="20"
+      isAutoFitLength="true"
+      x="8"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.btHeroGoldTxt"
+      textFormatStyle="ui.selfchess.btHeroGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="163"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.selfchess.btHeroGold"
+      resourceLink="asset.selfchess.goldenIcon"
+      x="140"
+      y="112"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.selfchess.btLuckBtn"
+      backStyle="asset.selfchess.lockBg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.selfchess.lockState"
+      resourceLink="asset.selfchess.lockState,asset.selfchess.unLockState"
+      x="11"
+      y="11"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.selfchess.btRefreshBtnBg"
+      resourceLink="asset.selfchess.refreshBg,asset.selfchess.refreshFlg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      imageRectString="0|0|19,11|11|19" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.selfchess.btRefreshGold"
+      resourceLink="asset.selfchess.goldenIcon"
+      x="1008"
+      y="233"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.btRefreshGoldTxt"
+      textFormatStyle="ui.selfchess.btRefreshGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="1032"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.kindName"
+      textFormatStyle="ui.selfchess.kindName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="58"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.kindNum"
+      textFormatStyle="ui.selfchess.kindNum_t"
+      filterString="selfchess.glowBuff"
+      autoSize="none"
+      width="20"
+      height="24"
+      x="163"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.playerGoldTxt"
+      textFormatStyle="ui.selfchess.playerGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="58"
+      height="20"
+      x="26"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.playerLvTxt"
+      textFormatStyle="ui.selfchess.playerLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="27"
+      height="20"
+      x="167"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.selfchess.playerGold"
+      resourceLink="asset.selfchess.goldenIcon"
+      x="1"
+      y="33"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.selfchess.blupBtn"
+      backStyle="ui.selfchess.bleftUpBtnBg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-85"
+      isFollowMouse="false"
+      enableMouseAble="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="63"
+      y="117" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.selfchess.btRefreshBtn"
+      backStyle="ui.selfchess.btRefreshBtnBg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="981"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.blProgressTxt"
+      textFormatStyle="ui.selfchess.blProgressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="176"
+      height="18"
+      x="-1"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.selfchess.playerNameTxt"
+      autoSize="none"
+      width="142"
+      textFieldStyle="ui.selfchess.playerTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="5"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.playerTxt"
+      textFormatStyle="ui.selfchess.playerTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="142"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.gameOverGoldTxt"
+      textFormatStyle="ui.selfchess.gameOverGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="261"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.selfchess.overGold"
+      resourceLink="asset.SevenYear.coin"
+      x="232"
+      y="186"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.selfchess.overMbg"
+      resourceLink="asset.selfchess.over.sort,asset.selfchess.over.bg,asset.selfchess.overRewardTxt"
+      imageRectString="65|142|0|19|13,0|270|39|49|13,43|105|118|16|13"
+      x="81"
+      y="76" />
+    <component
+      classname="chess.SelfChessGameOverFrame"
+      stylename="chess.SelfChessGameOverFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,10,20,29,14"
+      containerX="2"
+      containerY="32"
+      moveInnerRectString="376,37,10,0,9"
+      width="430"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tip2DesTxt"
+      textFormatStyle="ui.selfchess.tip2DesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="167"
+      height="37"
+      x="59"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tip2Title1"
+      textFormatStyle="ui.selfchess.tip2Title1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="174"
+      height="20"
+      x="20"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tip2Title2"
+      textFormatStyle="ui.selfchess.tip2Title2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="174"
+      height="20"
+      x="20"
+      y="173" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.selfchess.tipGold"
+      resourceLink="asset.selfchess.goldenIcon"
+      x="200"
+      y="10"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tipAttack"
+      textFormatStyle="ui.selfchess.tipAttack_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="98"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tipDesTxt"
+      textFormatStyle="ui.selfchess.tipDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="175"
+      height="80"
+      wordWrap="true"
+      x="64"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tipHeroNameTxt"
+      textFormatStyle="ui.selfchess.tipHeroNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="129"
+      height="40"
+      wordWrap="true"
+      x="69"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.tipHeroGoldTxt"
+      textFormatStyle="ui.selfchess.tipHeroGoldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="218"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.selfchess.winStateImg"
+      resourceLink="asset.selfchess.winNum,asset.selfchess.lossNum"
+      x="17"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.oneBuffDesTxt"
+      textFormatStyle="ui.selfchess.tipDesTxt_t,ui.selfchess.tipDesTxt_t2"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="175"
+      height="48"
+      wordWrap="true"
+      x="66"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.oneBuffTitleTxt"
+      textFormatStyle="ui.selfchess.tip2DesTxt_t,ui.selfchess.tip2DesTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="66"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.limitTxt"
+      textFormatStyle="ui.selfchess.limitTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="41"
+      height="20"
+      x="34"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.selfchess.refreshTTTxt"
+      autoSize="none"
+      width="40"
+      textFieldStyle="ui.selfchess.playerTxtTT"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="973"
+      y="233" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.playerTxtTT"
+      textFormatStyle="ui.selfchess.playerTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="40"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.selfchess.exitBtn"
+      backStyle="asset.selfchess.exitBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1156"
+      y="202" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="ui.selfchess.overConfirmBtn"
+      backStyle="asset.selfchess.overConfirBtn"
+      textStyle="ui.selfchess.overConfirmBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,0,10,11"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="115"
+      height="46"
+      x="150"
+      y="261" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.selfchess.overConfirmBtnTxt"
+      textFormatStyle="taskTraceTips.BtnText_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="selfchess.iconProfile"
+      parentStyle="core.GoodsProfileBG"
+      width="95"
+      height="95"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="selfchess.TipiconProfile"
+      parentStyle="core.GoodsProfileBG"
+      width="60"
+      height="60"
+      x="12"
+      y="9"
+      visible="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selfchess.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="185"
+      y="51" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="selfchess.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="sevenyear.selfchess.helpContent"
+      titleText="public.help"
+      textWidth="500" />
+  </components>
+</style>

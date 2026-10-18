@@ -1,0 +1,61 @@
+<style
+  name="taskextra"
+  source="ui/zh_cn/swf/taskextra.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="taskextra.Title_t"
+      args="Arial,14,0x42f939,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="taskextra.CommitText_t"
+      args="Arial,14,0x35f7d9,,,true,,,center"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.taskextra.dailyTask"
+      x="40"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.taskextra.offerTask"
+      x="36"
+      y="20" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.taskextra.task.NewTaskMc"
+      stylename="asset.taskextra.task.NewTaskMc" />
+    <custom
+      classname="asset.taskextra.TaskCompleteEffect"
+      stylename="asset.taskextra.TaskCompleteEffect" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="taskextra.Title"
+      textFormatStyle="taskextra.Title_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="182"
+      height="40"
+      x="100"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="taskextra.CommitText"
+      textFormatStyle="taskextra.CommitText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="23"
+      x="200"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="taskextra.TaskIcon"
+      resourceLink="asset.taskextra.dailyTask,asset.taskextra.offerTask" />
+  </components>
+</style>

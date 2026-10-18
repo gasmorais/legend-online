@@ -1,0 +1,168 @@
+<style
+  name="multilordsroom"
+  source="ui/zh_cn/swf/multilordsroom.swf">
+  <sets />
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.multilordsroom.RoomBg" />
+    <bitmapData
+      resourceLink="asset.multilords.InspireBitmap"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="multilords.room.MultilordsRoomView"
+      stylename="multilordsroom.MultilordsRoomView"
+      x="0"
+      y="0" />
+    <!-- 玩家形象 -->
+    <custom
+      classname="flash.geom.Point"
+      stylename="multilords.PlayerView_4"
+      x="1080"
+      y="100" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="multilords.PlayerView_3"
+      x="780"
+      y="167" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="multilords.PlayerView_2"
+      x="480"
+      y="167" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="multilords.PlayerView_1"
+      x="180"
+      y="100" />
+    <custom
+      classname="multilords.MultilordsGeneralListCell"
+      stylename="multilordsroom.FinalRoomRightRankListCell"
+      cellType="4"
+      disObjStyle1="warlordsroom.FinalRankListCellRankImg"
+      disObjStyle2="warlordsroom.FinalRankListCellRankTxt"
+      disObjStyle3="warlordsroom.FinalRankListCellNameTxt"
+      disObjStyle4="warlordsroom.FinalRankListCellWinCountTxt" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="multilords.inspireContainer"
+      x="40"
+      y="5" />
+  </customDisplay>
+  <components>
+    <!-- 预赛房间右边界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilordsroom.PrelimRoomRightBg"
+      resourceLink="asset.multilords.PrelimBg,asset.multilords.PrelimScoreTxt,asset.multilords.PrelimCountTxt"
+      imageRectString="0|236|0|115|13,10|121|30|17|13,60|71|70|17|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="multilordsroom.PrelimHelpBtn"
+      backStyle="asset.multilords.HelpBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="208"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilordsroom.PrelimTeamSortBtn"
+      backStyle="asset.multilords.TeamSortBtnBg"
+      displacement="true"
+      iconStyle="asset.multilords.TeamSortBtnTxt"
+      iconInnerRectString="8,74,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilordsroom.PrelimInspireBtn"
+      backStyle="asset.multilords.InspireBtnBg"
+      displacement="true"
+      iconStyle="asset.multilords.InspireBtnTxt"
+      iconInnerRectString="9,53,10,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="120"
+      y="130"
+      autoCenter="false" />
+    <!-- 决赛房间右边界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilordsroom.FinalRoomRightBg"
+      resourceLink="asset.multilords.FinalBg,asset.warlordsroom.FinalTitleBg"
+      imageRectString="0|241|0|230|13,3|236|3|39|13"
+      x="0"
+      y="-114" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="multilordsroom.FinalHelpBtn"
+      backStyle="asset.multilords.HelpBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="208"
+      y="-138" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilordsroom.FinalTeamSortBtn"
+      backStyle="asset.multilords.TeamSortBtnBg"
+      displacement="true"
+      iconStyle="asset.multilords.TeamSortBtnTxt"
+      iconInnerRectString="8,74,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilordsroom.FinalInspireBtn"
+      backStyle="asset.multilords.InspireBtnBg"
+      displacement="true"
+      iconStyle="asset.multilords.InspireBtnTxt"
+      iconInnerRectString="9,53,10,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="120"
+      y="130"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="multilordsroom.FinalRoomRightRankListPanel"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarStyle="warlordsroom.FinalRoomRightRankListPanelVScrollbar"
+      vScrollbarInnerRectString="12,0,0,0,3"
+      vScrollProxy="1"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|multilordsroom.FinalRoomRightRankListCell,28,223"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="220"
+      height="145"
+      x="3"
+      y="-74" />
+    <!-- 帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="multilords.room.MultilordsPrelimHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="multilords.room.MultilordsRoomView.helpContent1"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="multilords.room.MultilordsFinalHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="multilords.room.MultilordsRoomView.helpContent2"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+  </components>
+</style>

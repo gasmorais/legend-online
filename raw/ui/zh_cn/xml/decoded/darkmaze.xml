@@ -1,0 +1,814 @@
+<style
+  name="darkmaze"
+  source="ui/zh_cn/swf/darkmaze.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkmazeFrame.layerTxt_t"
+      args="Arial,24,0xfffca2,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkmazeCommonFrame.txt_t"
+      args="Arial,14,0xd2b37f,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkMazeSpringFrame.descTxt1_t"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      letterSpacing="1"
+      leading="6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkMazeSpringFrame.descTxt2_t"
+      args="Arial,14,0x00deff,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkMazeLierenItemView.battleTxt_t"
+      args="Arial,12,0xfffca2,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkMazeLierenItemView.battelValueTxt_t"
+      args="Arial,12,0xff8a00,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DarkMazeShapAdjustmentHeadView.nameTxt_t"
+      args="Arial,12,0xedbf83,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DarkMazeShapAdjustmentHeadView.battleValueTxt_t"
+      args="Arial,12,0xff8a00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DarkMazeShapAdjustmentHeadView.hasDieTxt_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="darkMazeBuyItemView.priceTxt_t"
+      args="arial,14,0xffdd83,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.darkmaze.spliteImg"
+      height="399" />
+    <bitmapData
+      resourceLink="asset.darkmaze.typeImage8"
+      y="8" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.darkmaze.enterNextMc"
+      stylename="darkmazeFrame.enterNextMc"
+      x="1135"
+      y="155" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="darkMazeCommonItemView.iconView"
+      iconX="3"
+      iconY="3"
+      iconWidth="47"
+      iconHeight="47"
+      loadingStyle="asset.core.IconLoading"
+      loadingX="20"
+      loadingY="20"
+      x="3"
+      y="3" />
+    <custom
+      classname="asset.darkmaze.moveOutMc"
+      stylename="asset.darkmaze.moveOutMc" />
+    <custom
+      classname="asset.darkmaze.lockMc"
+      stylename="asset.darkmaze.lockMc" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="darkMazeCommonItemView.baseItem"
+      iconWidth="42"
+      iconHeight="42"
+      iconStyle="core.BaseItemViewIcon"
+      textStyle="core.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView1"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="100"
+      y="300" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView2"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="200"
+      y="360" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView3"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="300"
+      y="420" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView4"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="300"
+      y="300" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView5"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="400"
+      y="360" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView6"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="400"
+      y="240" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView7"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="500"
+      y="420" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView8"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="500"
+      y="300" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView9"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="500"
+      y="180" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView10"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="600"
+      y="360" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView11"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="600"
+      y="240" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView12"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="700"
+      y="420" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView13"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="700"
+      y="300" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView14"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="700"
+      y="180" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView15"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="800"
+      y="360" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView16"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="800"
+      y="240" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView17"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="900"
+      y="420" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView18"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="900"
+      y="300" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView19"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="900"
+      y="180" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView20"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="1000"
+      y="360" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView21"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="1000"
+      y="240" />
+    <custom
+      stylename="DarkMazeFrame.nodeItemView22"
+      classname="darkmaze.DarkMazeNodeItemView"
+      x="1100"
+      y="300" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="darkMazeBuyItemView.baseItemView"
+      iconStyle="darkMazeBuyItemView.itemViewIcon"
+      textStyle="darkMazeBuyItemView.itemViewText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="51"
+      y="28" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="darkMazeBuyItemView.itemViewIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeBuyItemView.itemViewText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="17"
+      y="41" />
+    <component
+      stylename="darkmaze.darkmazeShapeAdjustNewFrame"
+      classname="darkmaze.DarkmazeShapeAdjustNewFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="darkmaze.shapeAdjustFrameBack"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,105,15,25,1"
+      titleOuterRectPosString="0,13,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="1"
+      containerY="15"
+      width="735"
+      height="520" />
+    <component
+      stylename="darkmaze.darkMazeShapeAdjustmentFrame"
+      classname="darkmaze.DarkMazeShapeAdjustmentFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="darkmaze.shapeAdjustFrameBack"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,105,15,50,1"
+      titleOuterRectPosString="0,13,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="1"
+      containerY="-10"
+      width="850"
+      height="495" />
+    <component
+      stylename="darkmaze.DarkMazeBuyFrame"
+      classname="darkmaze.DarkMazeBuyFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="darkmaze.shapeAdjustFrameBack"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,105,15,50,1"
+      titleOuterRectPosString="0,13,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="1"
+      containerY="-10"
+      width="528"
+      height="335" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="darkmaze.shapeAdjustFrameBack"
+      resourceLink="core.FrameBg2"
+      imageRectString="" />
+    <component
+      classname="darkmaze.DarkMazeMainFrame"
+      stylename="darkmaze.DarkMazeMainFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0" />
+    <component
+      stylename="darkmaze.darkMazeCommonFrame"
+      classname="darkmaze.DarkMazeCommonFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,20,50,29,14"
+      moveInnerRectString="0,30,10,100,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="532"
+      height="305" />
+    <component
+      stylename="darkmaze.darkMazeSpringFrame"
+      classname="darkmaze.DarkMazeSpringFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,20,50,29,14"
+      moveInnerRectString="0,30,10,100,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="532"
+      height="305" />
+    <component
+      stylename="darkmaze.darkMazeDemonFrame"
+      classname="darkmaze.DarkMazeDemonFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,20,50,29,14"
+      moveInnerRectString="0,30,10,100,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="532"
+      height="305" />
+    <component
+      stylename="darkmaze.darkMazeLierenFrame"
+      classname="darkmaze.DarkMazeLierenFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,20,50,29,14"
+      moveInnerRectString="0,30,10,100,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="532"
+      height="305" />
+    <component
+      stylename="darkmazeCommonFrame.bg1"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.commonFrameBg1,asset.darkmaze.commonFrameBg2,asset.darkmaze.commonFrameBg2,asset.darkmaze.typeImage1,asset.darkmaze.commonFrameBg3"
+      imageRectString="0|0|19,12|74|19,12|200|19,217|-34|19,203|47|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="darkmazeCommonFrame.bg2"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.commonFrameBg1,asset.darkmaze.commonFrameBg2,asset.darkmaze.commonFrameBg2,asset.darkmaze.typeImage2,asset.darkmaze.commonFrameBg4"
+      imageRectString="0|0|19,12|74|19,12|200|19,208|-34|19,208|47|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="darkmazeCommonFrame.bg3"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.commonFrameBg1,asset.darkmaze.commonFrameBg2,asset.darkmaze.commonFrameBg2,asset.darkmaze.typeImage3,asset.darkmaze.commonFrameBg5"
+      imageRectString="0|0|19,12|74|19,12|200|19,208|-34|19,225|47|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="darkMazeLierenFrame.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.commonFrameBg1,asset.darkmaze.typeImage6,asset.darkmaze.lierenFrameBg"
+      imageRectString="0|0|19,212|-48|19,156|44|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="darkMazeSpringFrame.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.commonFrameBg1,asset.darkmaze.typeImage4,asset.darkmaze.springTitle"
+      imageRectString="0|0|19,212|-48|19,202|44|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="darkMazeDemonFrame.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.commonFrameBg1,asset.darkmaze.typeImage5,asset.darkmaze.demonTitle"
+      imageRectString="0|0|19,212|-38|19,220|44|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="darkMazeLierenItemView.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.darkmaze.borderBg,asset.darkmaze.battleImg"
+      imageRectString="0|0|19,-8|55|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DarkMazeShapeAdjustmentFrame.back"
+      resourceLink="asset.darkmaze.shapeAdjustFrameBack,asset.darkmaze.shapeAdjustFrameTitle"
+      imageRectString="0|0|19,183|0|19"
+      x="211"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkMazeLierenItemView.selected"
+      resourceLink="asset.darkmaze.selected"
+      x="-15"
+      y="-25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkMazeNodeItemView.lockImage"
+      resourceLink="asset.darkmaze.lockImage"
+      x="15"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkmazeFrame.bg"
+      resourceLink="asset.darkmaze.bg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkmazeFrame.layerImage"
+      resourceLink="asset.darkmaze.layerImage"
+      x="585"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkMazeNodeItemView.bg"
+      resourceLink="asset.darkmaze.nodeItembg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkMazeCommonItemView.borderBg"
+      resourceLink="asset.darkmaze.borderBg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkMazeCommonItemView.hpMaxImg"
+      resourceLink="asset.darkmaze.hpMaxImg"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkMazeCommonItemView.hpMinImg"
+      resourceLink="asset.darkmaze.hpMinImg"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DarkMazeShapeAdjustmentFrame.spliteImg"
+      resourceLink="asset.darkmaze.spliteImg"
+      y="62"
+      x="207" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DarkMazeShapAdjustmentHeadView.back"
+      resourceLink="asset.darkmaze.HeadViewImg,asset.darkmaze.borderBg,asset.darkmaze.battleImg"
+      imageRectString="0|0|19,9|19|19,67|29|19"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="darkMazeNodeItemView.typeImage"
+      resourceLink=",asset.darkmaze.typeImage1,asset.darkmaze.typeImage2,asset.darkmaze.typeImage3,asset.darkmaze.typeImage4,asset.darkmaze.typeImage5,asset.darkmaze.typeImage6,asset.darkmaze.typeImage7,asset.darkmaze.typeImage8"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DarkMazeShapAdjustmentHeadView.border"
+      parentStyle="core.describeBackground_style04"
+      width="160"
+      height="83"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DarkMazeShapeAdjustmentFrame.border"
+      parentStyle="core.describeBackground_style09"
+      x="16"
+      y="60"
+      width="823"
+      height="407" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkmazeFrame.layerTxt"
+      textFormatStyle="darkmazeFrame.layerTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="28"
+      x="800"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkmazeCommonFrame.txt1"
+      textFormatStyle="darkmazeCommonFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="192"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkmazeCommonFrame.txt2"
+      textFormatStyle="darkmazeCommonFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="192"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeSpringFrame.descTxt1"
+      textFormatStyle="darkMazeSpringFrame.descTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="80"
+      wordWrap="true"
+      x="60"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeSpringFrame.descTxt2"
+      textFormatStyle="darkMazeSpringFrame.descTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="28"
+      x="190"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeLierenFrame.txt"
+      textFormatStyle="darkMazeSpringFrame.descTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="80"
+      wordWrap="true"
+      x="60"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeLierenItemView.battleTxt"
+      textFormatStyle="darkMazeLierenItemView.battleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="66"
+      height="35"
+      wordWrap="true"
+      x="5"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeLierenItemView.battelValueTxt"
+      textFormatStyle="darkMazeLierenItemView.battelValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="30"
+      x="-8"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeLierenItemView.nameTxt"
+      textFormatStyle="darkMazeLierenItemView.battelValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="81"
+      height="53"
+      wordWrap="true"
+      x="-13"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeShapAdjustmentItemView.nameTxt"
+      textFormatStyle="tips.ChildNameTxt_t1,tips.ChildNameTxt_t2,tips.ChildNameTxt_t3,tips.ChildNameTxt_t4,tips.ChildNameTxt_t5,tips.ChildNameTxt_t6"
+      filterString="core.normal_f"
+      y="-190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DarkMazeShapAdjustmentHeadView.nameTxt"
+      textFormatStyle="DarkMazeShapAdjustmentHeadView.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="5"
+      y="5"
+      isAutoFitLength="true"
+      width="150"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DarkMazeShapAdjustmentHeadView.battleValueTxt"
+      textFormatStyle="DarkMazeShapAdjustmentHeadView.battleValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="80"
+      y="33"
+      width="77"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DarkMazeShapAdjustmentHeadView.hasDieTxt"
+      textFormatStyle="DarkMazeShapAdjustmentHeadView.hasDieTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="83"
+      y="55"
+      width="72"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkmazeFrame.readyBtnDescTxt"
+      textFormatStyle="darkmazeCommonFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="745"
+      y="670" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkmazeFrame.buyBtnDescTxt"
+      textFormatStyle="darkmazeCommonFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="542"
+      y="670" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeBuyItemView.priceTxt"
+      textFormatStyle="darkMazeBuyItemView.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="95"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="darkMazeBuyItemView.discountTxt"
+      textFormatStyle="darkMazeBuyItemView.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="95"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="darkmazeFrame.toReadyBtn"
+      backStyle="asset.darkmaze.toReadyBtnBg"
+      iconInnerRectString="10,56,5,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="775"
+      y="600" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="darkmazeFrame.buyBtn"
+      backStyle="asset.darkmaze.buyBtnBg"
+      iconInnerRectString="10,56,5,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="620"
+      y="600" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="darkmazeCommonFrame.adjustFormationBtn"
+      backStyle="asset.core.Style45Btn"
+      iconStyle="asset.darkmaze.adjustFormationBtnBg"
+      iconInnerRectString="17,78,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="darkmazeCommonFrame.enterBattleBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.darkmaze.enterBattleBtnBg"
+      iconInnerRectString="30,51,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="darkMazeSpringFrame.confirmBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.darkmaze.fowardBtnBg"
+      iconInnerRectString="30,50,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="darkMazeDemonFrame.confirmBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.darkmaze.demonBuyBtnBg"
+      iconInnerRectString="32,48,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="darkMazeLierenFrame.confirmBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.darkmaze.lierenConfirmBtnBg"
+      iconInnerRectString="32,50,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="darkMazeBuyItemView.buyBtn"
+      backStyle="asset.core.DarkMazeBuyBg"
+      iconStyle="asset.core.DarkMazeBuyTxt"
+      iconInnerRectString="28,42,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="188" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="darkmazeFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="935"
+      y="635" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="darkmaze.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="darkmaze.darkMazeMainFrame.helpFrame.Content"
+      titleText="darkmaze.darkMazeMainFrame.helpFrame.title"
+      textWidth="400" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="darkmazeCommonFrame.hbox1"
+      spacing="20"
+      x="95"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="darkmazeCommonFrame.hbox2"
+      spacing="20"
+      x="95"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="darkMazeLierenFrame.hbox"
+      spacing="5"
+      x="65"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DarkMazeShapeAdjustmentFrame.vBox"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="DarkMazeShapeAdjustmentFrame.scrollPanle"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="182"
+      height="397"
+      x="25"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="darkMazeBuyItemView.bg"
+      resourceLink="asset.darkmaze.buyitemBg1,asset.darkmaze.buyitemBg2,asset.darkmaze.buyitemBg3,asset.darkmaze.buyitemBg4,asset.core.SmallPointImg"
+      imageRectString="0|0|19,34|20|19,27|112|19,27|140|19,70|110|19" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="darkMazeBuyFrame.hbox"
+      spacing="2"
+      x="10"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="darkmazeFrame.layerImage2"
+      resourceLink="asset.darkmaze.layerImage2"
+      x="495"
+      y="115" />
+  </components>
+</style>

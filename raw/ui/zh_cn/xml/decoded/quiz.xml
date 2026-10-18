@@ -1,0 +1,341 @@
+<style
+  name="vicepassword"
+  source="ui/zh_cn/swf/quiz.swf">
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.quiz.select" />
+    <bitmapData
+      resourceLink="asset.quiz.rank1" />
+    <bitmapData
+      resourceLink="asset.quiz.rank2" />
+    <bitmapData
+      resourceLink="asset.quiz.rank3" />
+  </bitmaps>
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz_t1"
+      args="Arial,14,0xfffce7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz_t2"
+      args="Arial,12,0xfffce7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz_Text_t1"
+      args="Arial,12,0xFFfd5a,,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz_Text_t2"
+      args="Arial,14,0xffffff,true,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz_Text_t3"
+      args="Arial,12,0xfffc01,true,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.tips.tfstxt1"
+      args="Arial,12,0xFFffff,,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.tips.tfstxt2"
+      args="Arial,12,0xFFe400,,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t1"
+      args="Arial,14,0xff9600,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t2"
+      args="Arial,14,0xffe400,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t3"
+      args="Arial,14,0x0190ff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t4"
+      args="Arial,14,0x0b8110,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t5"
+      args="Arial,14,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t6"
+      args="Arial,14,0xffebc5,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t1n"
+      args="Arial,14,0xff9600,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t2n"
+      args="Arial,14,0xffe400,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t3n"
+      args="Arial,14,0x0190ff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t4n"
+      args="Arial,14,0x0b8110,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t5n"
+      args="Arial,14,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.woundinfo.woundInfoTxt_t6n"
+      args="Arial,14,0xffebc5,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quiz.reworddestf"
+      args="Arial,14,0xFFefbd,,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+  </sets>
+  <customDisplay>
+    <custom
+      classname="mainBar.StripView"
+      stylename="quiz.tips"
+      x="173"
+      y="-5"
+      tipStyle="quiz.reword.tips"
+      tipGapV="0"
+      height="42"
+      width="39"
+      tipGapH="0" />
+    <custom
+      classname="yishi.view.tips.goods.QuizRewordTips"
+      stylename="quiz.reword.tips"
+      enableHtml="true" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.txt1"
+      textFormatStyle="quiz_Text_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      x="68"
+      y="22"
+      height="46"
+      width="268" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.txt.answer1"
+      textFormatStyle="quiz_Text_t2"
+      filterString="core.normal_f"
+      x="0"
+      y="0"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.txt.answer2"
+      textFormatStyle="quiz_Text_t2"
+      filterString="core.normal_f"
+      x="0"
+      y="0"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.txt.time"
+      textFormatStyle="quiz_Text_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="102"
+      y="108"
+      height="20"
+      width="190" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="quiz.gradientTxt.title"
+      textFieldStyle="quiz.txtfieldstyletitle"
+      colors="0xffd052,0xfff3ce,0xfffce7"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="60"
+      y="7"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.txtfieldstyletitle"
+      textFormatStyle="quiz_t1"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="quiz.txt.myRanktxt"
+      textFieldStyle="quiz.txtfieldstylemyrenktf"
+      colors="0xffd052,0xfff3ce,0xfffce7"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="14"
+      y="36"
+      width="209"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.txtfieldstylemyrenktf"
+      textFormatStyle="quiz_t2"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20"
+      width="209" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="quiz.Top10Vbox"
+      width="443"
+      height="220"
+      spacing="0"
+      x="8"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="quiz.txt.myRanktxt2"
+      parentStyle="quiz.txt.myRanktxt"
+      x="25"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.tips.txt1"
+      textFormatStyle="quiz.tips.tfstxt1"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="8"
+      height="20"
+      width="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.tips.txt2"
+      textFormatStyle="quiz.tips.tfstxt2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="28"
+      height="20"
+      width="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.tips.txt3"
+      textFormatStyle="quiz.tips.tfstxt1"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="54"
+      height="20"
+      width="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.tips.txt4"
+      textFormatStyle="quiz.tips.tfstxt2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="74"
+      height="20"
+      width="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.tips.txt5"
+      textFormatStyle="quiz.tips.tfstxt2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="94"
+      height="20"
+      width="92" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="quiz.rank.number"
+      resourceLink="asset.quiz.rank1,asset.quiz.rank2,asset.quiz.rank3"
+      width="20"
+      height="20"
+      x="20"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.rank.jingyantxt"
+      textFormatStyle="quiz.woundinfo.woundInfoTxt_t1,quiz.woundinfo.woundInfoTxt_t2,quiz.woundinfo.woundInfoTxt_t3,quiz.woundinfo.woundInfoTxt_t4,quiz.woundinfo.woundInfoTxt_t5,quiz.woundinfo.woundInfoTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="123" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.rank.rightnumtxt"
+      textFormatStyle="quiz.woundinfo.woundInfoTxt_t1n,quiz.woundinfo.woundInfoTxt_t2n,quiz.woundinfo.woundInfoTxt_t3n,quiz.woundinfo.woundInfoTxt_t4n,quiz.woundinfo.woundInfoTxt_t5n,quiz.woundinfo.woundInfoTxt_t6n"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="20"
+      x="149" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.rank.IndexTxt"
+      textFormatStyle="quiz.woundinfo.woundInfoTxt_t1,quiz.woundinfo.woundInfoTxt_t2,quiz.woundinfo.woundInfoTxt_t3,quiz.woundinfo.woundInfoTxt_t4,quiz.woundinfo.woundInfoTxt_t5,quiz.woundinfo.woundInfoTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.rank.NickNameTxt"
+      textFormatStyle="quiz.woundinfo.woundInfoTxt_t1n,quiz.woundinfo.woundInfoTxt_t2n,quiz.woundinfo.woundInfoTxt_t3n,quiz.woundinfo.woundInfoTxt_t4n,quiz.woundinfo.woundInfoTxt_t5n,quiz.woundinfo.woundInfoTxt_t6n"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="43" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="quiz.Alert"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="35"
+      containerY="30"
+      height="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quiz.reword.des"
+      textFormatStyle="quiz.reworddestf"
+      filterString="core.normal_f"
+      x="-9"
+      y="-3"
+      height="76" />
+  </components>
+</style>

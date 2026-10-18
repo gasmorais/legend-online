@@ -1,0 +1,67 @@
+<style
+  name="hamster"
+  source="ui/zh_cn/swf/hamster.swf">
+  <customDisplay>
+    <!-- 打地鼠 -->
+    <custom
+      classname="asset.task.hamstergame.Susliks"
+      stylename="task.HamsterGameSusliks"
+      x="180"
+      y="180" />
+    <custom
+      classname="asset.task.hamstergame.Stick"
+      stylename="task.HamsterGameStick"
+      x="167"
+      y="169" />
+    <custom
+      classname="asset.task.hamstergame.GameBack"
+      stylename="task.HamsterGameBack"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.task.hamstergame.CountDownMc"
+      stylename="task.HamsterGameCountDownMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.task.hamstergame.SucceedMc"
+      stylename="task.HamsterGameSucceedMc"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <!-- 打地鼠 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.hamsterFrameTitle"
+      parentStyle="core.FrameTitleText"
+      width="25"
+      height="23"
+      x="438"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="task.hamsterBack"
+      parentStyle="core.FrameBg2"
+      x="-10"
+      y="-28"
+      width="959"
+      height="617" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="task.hamsterCloseBtn"
+      backStyle="asset.task.HamsterCloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="608"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.hamsterRestartBtn"
+      backStyle="asset.core.Style12Btn"
+      iconStyle="asset.task.HamsterRestartBtnImg"
+      iconInnerRectString="65,104,17,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="231"
+      y="278" />
+  </components>
+</style>

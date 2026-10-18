@@ -1,0 +1,189 @@
+<style
+  name="godpvpenter"
+  source="ui/zh_cn/swf/godpvpenter.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.godpvpenter.stepNameTxt_t"
+      args="Arial,12,0xedbf83,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.godpvpenter.sortNameTxt_t"
+      args="Arial,12,0xedbf83,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.godpvpenter.stepIdxTxt_t"
+      args="Arial,12,0xe7d5ad,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.godpvpenter.sortIdxTxt_t"
+      args="Arial,12,0xe7d5ad,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.godpvpenter.timeTxt_t"
+      args="Arial,14,0xedbf83,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.godpvpenter.waitTxt_t"
+      args="Arial,14,0xb40000,,,,,,center"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.godpvpenter.theseuspvp"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.godpvpenter.wait"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.godpvpenter.enterBox"
+      spacing="10"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.godpvpenter.stepNameTxt"
+      textFormatStyle="ui.godpvpenter.stepNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="18"
+      x="580"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.godpvpenter.sortNameTxt"
+      textFormatStyle="ui.godpvpenter.sortNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="18"
+      x="580"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.godpvpenter.stepIdxTxt"
+      textFormatStyle="ui.godpvpenter.stepIdxTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="18"
+      x="580"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.godpvpenter.sortIdxTxt"
+      textFormatStyle="ui.godpvpenter.sortIdxTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="18"
+      x="580"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.godpvpenter.timeTxt"
+      textFormatStyle="ui.godpvpenter.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="585"
+      height="19"
+      x="63"
+      y="201" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.godpvpenter.waitTxt"
+      textFormatStyle="ui.godpvpenter.waitTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="585"
+      height="19"
+      x="67"
+      y="113" />
+    <component
+      classname="godpvpenter.GodPvpEnterFrame"
+      stylename="godpvpenter.GodPvpEnterFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="790"
+      height="566" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.godpvpenter.enterSpanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,715,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      width="715"
+      height="468"
+      x="21"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.godpvpenter.theseusPT"
+      autoSize="none"
+      width="223"
+      textFieldStyle="ui.secretad.cardNameTxt"
+      colors="0xffffff,0xffd972"
+      filterString="ui.secretad.cardNameTxt_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="243"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.godpvp.theseuspvpred"
+      resourceLink="asset.godpvp.red"
+      x="675"
+      y="6"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.theseuDoublespvp.joinBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.theseuspve.double.joinroom"
+      iconInnerRectString="36,77,14,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="151"
+      height="50"
+      x="135"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.theseuDoublespvp.createBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.theseuspve.double.createroom"
+      iconInnerRectString="36,76,14,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="151"
+      height="50"
+      x="450"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.theseuDoublespvp.joinBtn1"
+      parentStyle="ui.theseuDoublespvp.joinBtn"
+      x="600"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.theseuDoublespvp.createBtn1"
+      parentStyle="ui.theseuDoublespvp.createBtn"
+      x="780"
+      y="425" />
+  </components>
+</style>

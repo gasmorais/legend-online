@@ -1,0 +1,536 @@
+<style
+  name="dungeonturn"
+  source="ui/zh_cn/swf/dungeonturn.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonturn.DungeonTurnFrame.numText_t"
+      args="Arial,16,0x36ff1b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeoturn.DungeonTurnFrame.progressTxt1_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeoturn.DungeonTurnFrame.progressTxt2_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeoturn.DungeonTurnFrame.progressTxt3_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonturn.TurnItem.numTxt_t"
+      args="Arial,12,0xffffff,,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.dungeoturn.num" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="dungeonturn.DiceControlView.diceView"
+      classname="map.campaign.view.frame.dungeonturn.DiceView2"
+      x="102"
+      y="44" />
+    <custom
+      stylename="dungeonturn.DungeonTurnFrame.diceView"
+      classname="map.campaign.view.frame.dungeonturn.DiceView"
+      x="309"
+      y="192" />
+    <custom
+      classname="asset.dungeoturn.DungeonTurnFrame.progress1"
+      stylename="dungeoturn.DungeonTurnFrame.progress1"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.dungeoturn.DungeonTurnFrame.progress2"
+      stylename="dungeoturn.DungeonTurnFrame.progress2"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.dungeoturn.DungeonTurnFrame.progress3"
+      stylename="dungeoturn.DungeonTurnFrame.progress3"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.dungeoturn.bossBoxMc"
+      stylename="dungeoturn.bossBoxMc"
+      x="315"
+      y="309" />
+    <custom
+      classname="asset.dungeoturn.normalBoxMc"
+      stylename="dungeoturn.normalBoxMc"
+      x="315"
+      y="374" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeoturn.HeroItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="48"
+      iconWidth="48"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.dungeourn.heroItem.hp"
+      stylename="dungeourn.heroItem.hp"
+      x="2"
+      y="50" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="dungeoturn.dungeoturnFrame.heroContainer"
+      x="630"
+      y="445" />
+    <custom
+      stylename="dungeonturn.DungeonTurnFrame.TurnItemView"
+      classname="map.campaign.view.frame.dungeonturn.TurnItemView"
+      x="92"
+      y="95" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeoturn.dunturnFrame.blueProgressStripView"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      x="83"
+      y="446" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeoturn.dunturnFrame.redProgressStripView"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      x="83"
+      y="485" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeoturn.dunturnFrame.greenProgressStripView"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      x="83"
+      y="524" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeoturn.dunturnFrame.bossBoxStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      x="416"
+      y="445" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeoturn.dunturnFrame.normalBoxStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      x="416"
+      y="510" />
+    <custom
+      classname="map.campaign.view.frame.dungeonturn.TurnItem"
+      stylename="TurnItemView.TurnItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,4,7,6"
+      tipGapV="0"
+      tipGapH="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dungeoturn.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="692"
+      y="50" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="dungeonturn.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="dungeoturn.helpFrame.helpContent"
+      titleText="dungeoturn.helpFrame.helpTitle"
+      textWidth="373" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dungeonturn.DiceControlView.selectIconButton"
+      backStyle="asset.dungeonturn.getReawrd.bg"
+      iconStyle="asset.dungeonturn.getReawrd.icon"
+      iconInnerRectString="32,51,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="55"
+      y="111" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dungeonturn.DiceControlView.cancelIconButton"
+      backStyle="asset.dungeonturn.cancel.bg"
+      iconStyle="asset.dungeonturn.cancel.icon"
+      iconInnerRectString="33,49,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="190"
+      y="111" />
+    <component
+      stylename="dungeonturn.DiceControlView.bg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.bg"
+      x="0"
+      y="0" />
+    <component
+      stylename="dungeoturn.DungeonTurnFrame.progressTxt1"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="dungeoturn.DungeonTurnFrame.progressTxt1_t"
+      type="dynamic"
+      width="200"
+      height="20"
+      x="102"
+      y="453" />
+    <component
+      stylename="dungeoturn.DungeonTurnFrame.progressTxt2"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="dungeoturn.DungeonTurnFrame.progressTxt2_t"
+      type="dynamic"
+      width="200"
+      height="20"
+      x="102"
+      y="492" />
+    <component
+      stylename="dungeoturn.DungeonTurnFrame.progressTxt3"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="dungeoturn.DungeonTurnFrame.progressTxt3_t"
+      type="dynamic"
+      width="200"
+      height="20"
+      x="102"
+      y="531" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.dungeonturn.DunFrameBg.frameBg,asset.dungeonturn.DunFrameBg.frameBGTxt"
+      imageRectString="0|796|0|594|13,337|141|15|67|13"
+      x="0"
+      y="0" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.bottomView"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.dungeonturn.BottomBg.blackBg1,asset.dungeonturn.BottomBg.blackBg1,asset.dungeonturn.BottomBg.blackBg1,asset.dungeonturn.BottomBg.challenge,asset.dungeonturn.BottomBg.reward,asset.dungeonturn.BottomBg.status"
+      imageRectString="0|0|19,323|0|19,539|0|19,7|9|19,329|9|19,548|9|19"
+      x="38"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dungeonturn.DungeonTurnFrame.shakeIconButton"
+      backStyle="asset.dungeonturn.ShakeBtn.shakeBg"
+      iconStyle="asset.dungeonturn.ShakeBtn.icon"
+      iconInnerRectString="29,79,13,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,4"
+      tipGapV="0"
+      tipGapH="0"
+      supportTipsWhenGray="true"
+      x="244"
+      y="251" />
+    <!--
+        <component classname="com.pickgliss.ui.controls.IconButton"
+                   stylename="dungeonturn.DungeonTurnFrame.controlIconButton"
+                   backStyle="asset.dungeonturn.ShakeBtn.shakeBg"
+                   iconStyle="asset.dungeonturn.ControlBtn.icon"
+                   iconInnerRectString="17,51,14,27,13"
+                   filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+                   x="432"
+                   y="251"/>
+        -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="dungeonturn.DungeonTurnFrame.controlIconButton"
+      backStyle="dungeonturn.ShakeBtn.shakeBg"
+      textStyle="dungeonturn.DungeonTurnFrame.numText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backgoundInnerRectString="86,14,16,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,4"
+      tipGapV="0"
+      tipGapH="0"
+      supportTipsWhenGray="true"
+      x="432"
+      y="251" />
+    <component
+      stylename="dungeonturn.ShakeBtn.shakeBg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.dungeonturn.ShakeBtn.shakeBg,asset.dungeonturn.DungeonTurnFrame.textBg,asset.dungeonturn.ControlBtn.icon"
+      imageRectString="0|0|19,84|15|19,4|15|19" />
+    <component
+      stylename="dungeourn.heroItem.hpBlack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeourn.heroItem.hpBlack"
+      x="2"
+      y="50" />
+    <component
+      stylename="dungeonturn.DiceView.bg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.bg"
+      x="0"
+      y="0" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.textBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.textBg"
+      x="505"
+      y="266" />
+    <component
+      stylename="dungeonturn.DiceView.num3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.num3"
+      x="109"
+      y="5" />
+    <component
+      stylename="dungeonturn.DiceView.num1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.num1"
+      x="9"
+      y="5" />
+    <component
+      stylename="dungeonturn.DiceView.num2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.num2"
+      x="59"
+      y="5" />
+    <component
+      stylename="dungeonturn.DiceView.bring1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.bring1"
+      x="-2"
+      y="-6" />
+    <component
+      stylename="dungeonturn.DiceView.bring2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.bring1"
+      x="48"
+      y="-6" />
+    <component
+      stylename="dungeonturn.DiceView.bring3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.bring1"
+      x="98"
+      y="-6" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame"
+      classname="map.campaign.view.frame.dungeonturn.DungeonTurnFrame"
+      parentStyle="core.Frame1"
+      closeInnerRectString="719,29,45,29,13"
+      backStyle="dungeonturn.DungeonTurnFrame.bg"
+      width="796"
+      height="594"
+      containerX="0"
+      containerY="0" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.numText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="dungeonturn.DungeonTurnFrame.numText_t"
+      type="dynamic"
+      width="37"
+      height="22"
+      x="507"
+      y="267" />
+    <component
+      stylename="dungeoturn.DungeoTurnFrame.startBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeoturn.DungeoTurnFrame.startBg"
+      x="90"
+      y="196" />
+    <component
+      stylename="dungeonturn.TurnItem.numTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="dungeonturn.TurnItem.numTxt_t"
+      type="dynamic"
+      width="39"
+      height="22"
+      x="46"
+      y="64" />
+    <component
+      stylename="dungeonturn.TurnItem.bored"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.TurnItem.bored"
+      x="17"
+      y="17" />
+    <component
+      stylename="dungeonturn.TurnItem.selectBored"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.DungeonTurnFrame.TurnItem.selectBored,asset.dungeonturn.DungeonTurnFrame.TurnItem.selectBored2"
+      x="0"
+      y="-1" />
+    <component
+      stylename="dungeonturn.TurnItem.power"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.power.blue,asset.dungeonturn.power.red,asset.dungeonturn.power.green"
+      x="25"
+      y="23" />
+    <component
+      stylename="dungeonturn.TurnItem.text"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.dungeonturn.words.start,asset.dungeonturn.words.killed,asset.dungeonturn.words.restart,asset.dungeonturn.words.again,asset.dungeonturn.words.boss"
+      imageRectString="3|41|7|15|13,-10|61|9|15|13,-4|57|0|29|13,-6|52|4|27|13,-7|49|9|15|13"
+      x="31"
+      y="35" />
+    <component
+      stylename="dungeonturn.TurnItem.buffer"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.buffer.contorl,asset.dungeonturn.buffer.gain"
+      x="17"
+      y="15" />
+    <component
+      stylename="dungeonturn.DiceControlView"
+      classname="map.campaign.view.frame.dungeonturn.DiceControlView"
+      parentStyle="core.Frame1"
+      width="396"
+      height="284" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dungeonturn.RewardFrame.cancel"
+      backStyle="asset.dungeonturn.cancel.bg"
+      iconStyle="asset.dungeonturn.cancel.icon"
+      iconInnerRectString="33,49,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="204"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dungeonturn.RewardFrame.getReward"
+      backStyle="asset.dungeonturn.getReawrd.bg"
+      iconStyle="asset.dungeonturn.get.icon"
+      iconInnerRectString="32,51,11,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="51"
+      y="196" />
+    <component
+      stylename="dungeonturn.RewardFrame"
+      classname="map.campaign.view.frame.dungeonturn.RewardFrame"
+      parentStyle="core.Frame1"
+      width="396"
+      height="361" />
+    <component
+      stylename="dungeonturn.RewardFrame.bg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.rewardFrame.bg"
+      x="0"
+      y="0" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.BottomBg.bossBox"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.BottomBg.bossBox,asset.dungeonturn.BottomBg.bossBox2"
+      x="28"
+      y="0" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.BottomBg.bossBox2"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.BottomBg.bossBox,asset.dungeonturn.BottomBg.bossBox2"
+      x="154"
+      y="25" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.BottomBg.normalBox"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.BottomBg.normalBox,asset.dungeonturn.BottomBg.normalBox2"
+      x="28"
+      y="0" />
+    <component
+      stylename="dungeonturn.DungeonTurnFrame.BottomBg.normalBox2"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.dungeonturn.BottomBg.normalBox,asset.dungeonturn.BottomBg.normalBox2"
+      x="156"
+      y="115" />
+    <component
+      stylename="dungeonturn.BottomBg.normalBoxTxt"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.normalBoxTxt"
+      x="425"
+      y="544" />
+    <component
+      stylename="dungeonturn.BottomBg.normalBoxTxt2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.normalBoxTxt"
+      x="135"
+      y="150" />
+    <component
+      stylename="dungeonturn.BottomBg.bossBoxTxt"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.bossBoxTxt"
+      x="421"
+      y="482" />
+    <component
+      stylename="dungeonturn.BottomBg.bossBoxTxt2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.bossBoxTxt"
+      x="123"
+      y="65" />
+    <component
+      stylename="dungeonturn.BottomBg.bossBring"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.bring1"
+      x="0"
+      y="17" />
+    <component
+      stylename="dungeonturn.BottomBg.bossBring2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.bring1"
+      x="126"
+      y="42" />
+    <component
+      stylename="dungeonturn.BottomBg.normalBring"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.bring1"
+      x="1"
+      y="17" />
+    <component
+      stylename="dungeonturn.BottomBg.normalBring2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeonturn.BottomBg.bring1"
+      x="127"
+      y="133" />
+    <component
+      stylename="dungeoturn.sign"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeoturn.sign"
+      x="525"
+      y="542" />
+    <component
+      stylename="dungeoturn.sign2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeoturn.sign"
+      x="241"
+      y="65" />
+    <component
+      stylename="dungeoturn.sign3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.dungeoturn.sign"
+      x="241"
+      y="150" />
+  </components>
+</style>

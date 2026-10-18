@@ -1,0 +1,365 @@
+<style
+  name="teammanager"
+  source="ui/zh_cn/swf/teammanager.swf">
+  <sets />
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.teammanger.teamBg"
+      x="-25"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.matelordsSortFrame.itemListBack"
+      x="-25"
+      y="-25" />
+  </bitmaps>
+  <customDisplay>
+    <!--	多人本阵形调整	-->
+    <custom
+      stylename="teammanager.TeamSortCell"
+      classname="teammanager.TeamSortCell"
+      parentStyle="core.PawnSortCell"
+      iconStyle="teammanager.TeamSortCellIcon"
+      vocationStyle="core.HeroVocation"
+      lockStyle="teammanager.LockCellBack"
+      x="-20"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="teammanager.TeamSortCellIcon"
+      iconHeight="84"
+      iconWidth="84"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="42"
+      loadingY="42"
+      tipStyle="yishi.view.tips.ThaneTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="6"
+      y="6" />
+    <!-- 组队机制-阵型调整格子 -->
+    <custom
+      classname="map.internals.view.team.sort.FreedomTeamSortCell"
+      stylename="team.FreedomTeamSortCell"
+      parentStyle="teammanager.TeamSortCell" />
+    <!--	多队伍副本格子	-->
+    <custom
+      stylename="teammanager.GroupSortCell"
+      classname="teammanager.GroupSortCell"
+      parentStyle="core.PawnSortCell"
+      iconStyle="teammanager.TeamSortCellIcon"
+      vocationStyle="core.HeroVocation"
+      lockStyle="teammanager.LockCellBack" />
+    <!--	永恒之战队伍副本格子	-->
+    <custom
+      classname="teammanager.MatelordsTeamSortCell"
+      stylename="matelordsSortFrame.TeamSortCell0"
+      parentStyle="core.PawnSortCell"
+      iconStyle="teammanager.TeamSortCellIcon"
+      vocationStyle="core.HeroVocation"
+      lockStyle="matelordsSortFrame.LockCellBack"
+      x="20"
+      y="0" />
+    <custom
+      classname="teammanager.MatelordsTeamSortCell"
+      stylename="matelordsSortFrame.TeamSortCell1"
+      parentStyle="matelordsSortFrame.TeamSortCell0"
+      x="165"
+      y="0" />
+    <custom
+      classname="teammanager.MatelordsTeamSortCell"
+      stylename="matelordsSortFrame.TeamSortCell2"
+      parentStyle="matelordsSortFrame.TeamSortCell0"
+      x="20"
+      y="115" />
+    <custom
+      classname="teammanager.MatelordsTeamSortCell"
+      stylename="matelordsSortFrame.TeamSortCell3"
+      parentStyle="matelordsSortFrame.TeamSortCell0"
+      x="165"
+      y="115" />
+    <custom
+      classname="gamehall.room.GameHallSortCell"
+      stylename="gamehall.GameHallSortCell"
+      parentStyle="teammanager.TeamSortCell" />
+  </customDisplay>
+  <components>
+    <!-- 多人本阵形调整	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="teammanager.TeamSortBg"
+      parentStyle="core.describeBackground_style04"
+      width="324"
+      height="439"
+      x="-20"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="teammanager.TeamSortBg2"
+      parentStyle="core.describeBackground_style27"
+      width="320"
+      height="435"
+      x="-18"
+      y="-18" />
+    <!-- 组队机制-队伍管理 -->
+    <component
+      classname="map.internals.view.team.FreedomTeamManageFrame"
+      parentStyle="core.Frame2"
+      stylename="core.FreedomTeamManageFrame"
+      containerX="13"
+      containerY="43"
+      width="478"
+      height="281" />
+    <!-- 组队机制-添加成员 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="team.FreedomTeamInviteFrameBg5"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-18|-15|0|23|0" />
+    <component
+      classname="map.internals.view.team.FreedomTeamInviteFrame"
+      stylename="team.FreedomTeamInviteFrame"
+      parentStyle="core.Frame5"
+      backStyle="team.FreedomTeamInviteFrameBg5"
+      titleOuterRectPosString="0,12,1"
+      width="335"
+      height="442" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="team.FreedomTeamInviteFrame.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="18,5,0,0,3"
+      viewportInnerRectString="0,22,0,0,0"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|map.internals.view.team.invite.FreedomTeamInviteItem,30,213"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="304"
+      height="240"
+      x="-21"
+      y="60"
+      hScrollProxy="0"
+      vScrollProxy="0"
+      vUnitIncrement="10" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="team.FreedomTeamInviteFrame.updateBtn"
+      parentStyle="core.BrownBtn"
+      textStyle="core.armymanage.ButtonText"
+      backgoundInnerRectString="9,8,7,13"
+      x="87"
+      y="308" />
+    <!-- 组队机制-阵型调整 -->
+    <component
+      classname="map.internals.view.team.FreedomTeamSortFrame"
+      stylename="team.FreedomTeamSortFrame"
+      parentStyle="core.TeamSortFrame"
+      titleOuterRectPosString="0,10,1"
+      closestyle="core.TeamSortFrameClose"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.TeamSortFrameBg"
+      moveInnerRectString="0,30,0,45,1"
+      closeInnerRectString="29,-12,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="350"
+      height="510"
+      containerX="33"
+      containerY="53" />
+    <!-- 添加成员按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="team.FreedomTeamManageFrame.AddBtn"
+      parentStyle="core.GreenBtn"
+      x="4"
+      y="159"
+      backgoundInnerRectString="9,8,5,13"
+      textStyle="core.armymanage.ButtonText" />
+    <!-- 任命队长按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="team.FreedomTeamManageFrame.ChangeBtn"
+      parentStyle="core.GreenBtn"
+      x="86"
+      y="159"
+      backgoundInnerRectString="9,8,5,13"
+      textStyle="core.armymanage.ButtonText" />
+    <!-- 阵型调整按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="team.FreedomTeamManageFrame.AdjustmentLineUp"
+      parentStyle="core.BlueBtn"
+      x="168"
+      y="159"
+      backgoundInnerRectString="9,8,5,13"
+      textStyle="core.armymanage.ButtonText"
+      width="96" />
+    <!-- 踢出队伍按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="team.FreedomTeamManageFrame.KickBtn"
+      parentStyle="core.RedBtn"
+      x="267"
+      y="159"
+      backgoundInnerRectString="9,8,5,13"
+      textStyle="core.armymanage.ButtonText" />
+    <!-- 退出队伍按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="team.FreedomTeamManageFrame.QuitBtn"
+      parentStyle="core.RedBtn"
+      x="347"
+      y="159"
+      backgoundInnerRectString="9,8,5,13"
+      textStyle="core.armymanage.ButtonText"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="teammanager.LockCellBack"
+      resourceLink="asset.teammanager.LockCellBack"
+      x="0"
+      y="0" />
+    <!--  多队伍副本阵形窗体 -->
+    <component
+      classname="teammanager.GroupSortFrame"
+      stylename="teammanager.groupSortFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="team.Back"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,-8,1"
+      closeInnerRectString="29,-17,-12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="357"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="groupSortFrame.tabVBox"
+      x="5"
+      y="35"
+      width="252"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="groupSortFrame.tab0"
+      unSelectedStyle="groupSortFrame.PlayerInfoTabUnselectBack"
+      selectedStyle="groupSortFrame.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.groupSortFrame.selected0"
+      unselectedIconStyle="asset.groupSortFrame.unSelected0"
+      selectedIconInnerRectString="0,19,15,72,13"
+      unselectedIconInnerRectString="0,19,10,72,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="groupSortFrame.tab1"
+      unSelectedStyle="groupSortFrame.PlayerInfoTabUnselectBack"
+      selectedStyle="groupSortFrame.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.groupSortFrame.selected1"
+      unselectedIconStyle="asset.groupSortFrame.unSelected1"
+      selectedIconInnerRectString="0,19,10,72,13"
+      unselectedIconInnerRectString="0,19,10,72,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34" />
+    <!-- tab页背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="groupSortFrame.PlayerInfoTabUnselectBack"
+      resourceLink="asset.core.Style8UnselectedBtn"
+      rotation="90"
+      x="25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="groupSortFrame.PlayerInfoTabSelectBack"
+      resourceLink="asset.core.Style8SelectedBtn"
+      rotation="90"
+      x="25" />
+    <!--	永恒之战站位	-->
+    <component
+      classname="teammanager.MatelordsSortFrame"
+      stylename="matelordsroom.MatelordsSortFrame"
+      closestyle="core.TeamSortFrameClose"
+      titleStyle="core.FrameTitleText"
+      backStyle="MatelordsSortFrame.Back"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,-5,1"
+      closeInnerRectString="29,-22,-3,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="350"
+      height="335"
+      containerX="33"
+      containerY="53" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="MatelordsSortFrame.Back"
+      resourceLink="core.AlertFrameBg,core.FrameTitleImage2"
+      imageRectString="0|0|0|0|0,229|17|-6|0|9" />
+    <!--	新版英雄站位	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="teammanager.TeamSortItem.fontBtn"
+      unSelectedStyle="asset.TeamSortItem.unselect.btnBack"
+      selectedStyle="asset.TeamSortItem.select.btnBack"
+      unselectedIconStyle="asset.TeamSortItem.unselect.fontBtnText"
+      selectedIconStyle="asset.TeamSortItem.select.fontBtnText"
+      selectedIconInnerRectString="12,80,12,26,13"
+      unselectedIconInnerRectString="12,80,12,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="187"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="teammanager.TeamSortItem.backBtn"
+      unSelectedStyle="asset.TeamSortItem.unselect.btnBack"
+      selectedStyle="asset.TeamSortItem.select.btnBack"
+      unselectedIconStyle="asset.TeamSortItem.unselect.backBtnText"
+      selectedIconStyle="asset.TeamSortItem.select.backBtnText"
+      selectedIconInnerRectString="5,91,13,25,13"
+      unselectedIconInnerRectString="5,91,13,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="90"
+      y="20" />
+    <component
+      classname="gamehall.room.GameHallSortFrame"
+      stylename="gamehall.GameHallSortFrame"
+      closestyle="core.TeamSortFrameClose"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.TeamSortFrameBg"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,-12,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="350"
+      height="510"
+      containerX="33"
+      containerY="53" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gamehall.GameHallSortFrame.TeamSortBg"
+      parentStyle="core.describeBackground_style04"
+      width="326"
+      height="445"
+      x="-20"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gamehall.GameHallSortFrame.TeamSortBg2"
+      parentStyle="core.describeBackground_style27"
+      width="322"
+      height="441"
+      x="-18"
+      y="-18" />
+  </components>
+</style>

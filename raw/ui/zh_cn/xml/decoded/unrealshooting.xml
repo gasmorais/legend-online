@@ -1,0 +1,1098 @@
+<style
+  name="unrealshooting"
+  source="ui/zh_cn/swf/unrealshooting.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingRankItem.RankTxt_t1"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      args="Arial,14,0xfa9000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingGameOverItem.IsOnHookTxt_t"
+      args="Arial,14,0xc30000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingSortTopView.SelfPointTxt_t"
+      args="Arial,14,0xff9600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingRankView.title_t"
+      args="Arial,12,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingRewardView.fourth_t"
+      args="Arial,12,0xc5b47b" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingRewardView.itemName_t"
+      args="Arial,12,0xc5b47b,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingView.TipsTxt_t"
+      args="Arial,14,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt_t"
+      args="Arial,12,0xffe400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.ItemCost_t1"
+      args="Arial,14,0x00ff00,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.ItemCost_t2"
+      args="Arial,14,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingTopBar.blueScoreTxt_t"
+      args="Arial,14,0x4dbbee,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="unrealshooting.UnrealShootingTopBar.redScoreTxt_t"
+      args="Arial,14,0xff0b2d,,,,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.unrealshooting.HoldKeyAsset"
+      stylename="asset.unrealshooting.HoldKeyAsset" />
+    <custom
+      classname="asset.UnrealShootingView.OpenTips"
+      stylename="unrealshooting.UnrealShootingView.OpenTips"
+      x="108"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.startHour1"
+      x="198"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.startMin1"
+      x="235"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.endHour1"
+      x="283"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.endMin1"
+      x="320"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.startHour2"
+      x="368"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.startMin2"
+      x="405"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.endHour2"
+      x="453"
+      y="220" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.endMin2"
+      x="490"
+      y="220" />
+    <custom
+      classname="asset.UnrealShootingView.PrepareTips"
+      stylename="unrealshooting.UnrealShootingView.PrepareTips"
+      x="108"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareStartHour1"
+      x="198"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareStartMin1"
+      x="235"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareEndHour1"
+      x="283"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareEndMin1"
+      x="320"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareStartHour2"
+      x="368"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareStartMin2"
+      x="405"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareEndHour2"
+      x="453"
+      y="245" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingView.prepareEndMin2"
+      x="490"
+      y="245" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="unrealshooting.UnrealShootingBottomBar.Head"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="31"
+      loadingY="31"
+      iconWidth="62"
+      iconHeight="62"
+      x="77"
+      y="26" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="unrealshooting.UnrealShootingBottomBar.HpComponent"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false"
+      height="20"
+      width="216"
+      x="135"
+      y="68" />
+    <custom
+      classname="unrealshooting.ranklists.UnrealShootingRankView"
+      stylename="unrealshooting.UnrealShootingRankView"
+      x="2"
+      y="30" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="unrealshooting.UnrealShootingRankView.vbox"
+      x="0"
+      y="63"
+      spacing="3" />
+    <custom
+      classname="unrealshooting.ranklists.UnrealShootingRewardView"
+      stylename="unrealshooting.UnrealShootingRewardView"
+      x="2"
+      y="30" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.vbox"
+      x="0"
+      y="73"
+      spacing="3" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.hbox"
+      x="255"
+      y="330"
+      spacing="4" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.rewardItem"
+      iconStyle="unrealshooting.UnrealShootingGameOverFrame.rewardItemIcon"
+      textStyle="unrealshooting.UnrealShootingGameOverFrame.rewardItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.rewardItemIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingBufferBuyView.SwitchBtn"
+      x="214"
+      y="152" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingSortTopView.SwitchBtn"
+      x="2"
+      y="90" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.IconItem"
+      iconWidth="48"
+      iconHeight="48"
+      tipStyle="yishi.view.tips.MapVehicleBuffTip"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      tipDirctions="0,4,5"
+      width="50"
+      height="50"
+      x="10"
+      y="5" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="unrealshooting.UnrealShootingTopBar.buleScoreTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      x="53"
+      y="16" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="unrealshooting.UnrealShootingTopBar.redScoreTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      x="287"
+      y="16" />
+    <custom
+      classname="asset.unrealshooting.BuleScoreBar"
+      stylename="unrealshooting.UnrealShootingTopBar.buleScoreBar"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.unrealshooting.RedScoreBar"
+      stylename="unrealshooting.UnrealShootingTopBar.redScoreBar"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="unrealshooting.UnrealShootingMiniMapView.MiniMapContainer"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.campaign.GuideArrowAsset"
+      stylename="unrealshooting.GuideArrowAsset"
+      scaleX="1.636"
+      scaleY="0.910" />
+  </customDisplay>
+  <components>
+    <component
+      classname="unrealshooting.UnrealShootingFrame"
+      stylename="unrealshooting.UnrealShootingFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <!-- 主界面 start -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingView.Bg"
+      resourceLink="asset.unrealshooting.UnrealShootingViewBg"
+      x="185"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingView.JoinBtn"
+      parentStyle="svs.SvsView.JoinBtn"
+      iconStyle="asset.unrealshooting.UnrealShootingFrameJoinBtnTxt"
+      iconInnerRectString="19,185,15,38,13"
+      x="389"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingView.ListBtn"
+      parentStyle="svs.SvsView.ListBtn"
+      x="625"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingView.ChangeBtn"
+      parentStyle="svs.SvsView.RankBtn"
+      backStyle="asset.steelmap.BtnBgRed"
+      iconStyle="asset.steelmap.steelFrameChangeBtnTxt"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingView.RankBtn"
+      parentStyle="svs.SvsView.RankBtn"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingView.HelpBtn"
+      parentStyle="svs.SvsView.HelpBtn"
+      y="470" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingView.TipsTxt"
+      textFormatStyle="unrealshooting.UnrealShootingView.TipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="630"
+      height="20"
+      x="185"
+      y="430" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="unrealshooting.HelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="unrealshooting.UnrealShootingFrame.helpContent"
+      titleText="public.help"
+      textWidth="600" />
+    <!-- 主界面 end -->
+    <component
+      classname="unrealshooting.ranklists.UnrealShootingRankListFrame"
+      stylename="unrealshooting.UnrealShootingRankListFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="45"
+      width="655"
+      height="530" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="unrealshooting.UnrealShootingRankListFrame.bg"
+      parentStyle="core.describeBackground_style06"
+      width="630"
+      height="420"
+      x="0"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="unrealshooting.UnrealShootingRankListFrame.rankBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.UnrealShootingRankListFrame.rankBtnSelectedTxt"
+      unselectedIconStyle="asset.UnrealShootingRankListFrame.rankBtnUnselectedTxt"
+      selectedIconInnerRectString="7,76,10,13,13"
+      unselectedIconInnerRectString="7,74,10,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="unrealshooting.UnrealShootingRankListFrame.rewardBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.UnrealShootingRankListFrame.rewardBtnSelectedTxt"
+      unselectedIconStyle="asset.UnrealShootingRankListFrame.rewardBtnUnselectedTxt"
+      selectedIconInnerRectString="9,71,5,24,13"
+      unselectedIconInnerRectString="10,70,4,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRankView.bg"
+      resourceLink="asset.UnrealShootingRankView.bg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="unrealshooting.UnrealShootingRankView.selfBg"
+      resourceLink="asset.UnrealShootingRankView.selfBgLeft,unrealshooting.UnrealShootingRankView.selfBgRight"
+      imageRectString="0|310|0|27|13,620|310|0|27|13"
+      x="3"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRankView.selfBgRight"
+      resourceLink="asset.UnrealShootingRankView.selfBgLeft"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankView.sort"
+      textFormatStyle="unrealshooting.UnrealShootingRankView.title_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="11"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankView.nickName"
+      parentStyle="unrealshooting.UnrealShootingRankView.sort"
+      x="135" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankView.server"
+      parentStyle="unrealshooting.UnrealShootingRankView.sort"
+      x="295" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankView.score"
+      parentStyle="unrealshooting.UnrealShootingRankView.sort"
+      x="422" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankView.fightPower"
+      parentStyle="unrealshooting.UnrealShootingRankView.sort"
+      x="503" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingRankView.preBtn"
+      backStyle="asset.UnrealShootingRankView.pageBtnBg"
+      iconStyle="asset.UnrealShootingRankView.prePageBtnTxt"
+      width="64"
+      height="24"
+      iconInnerRectString="11,42,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="205"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingRankView.nextBtn"
+      backStyle="asset.UnrealShootingRankView.pageBtnBg"
+      iconStyle="asset.UnrealShootingRankView.nextPageBtnTxt"
+      width="64"
+      height="24"
+      iconInnerRectString="11,42,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="360"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankView.pageTxt"
+      textFormatStyle="FurnitureBagView.pageTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="293"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRankView.pagebg"
+      resourceLink="asset.UnrealShootingRankView.pageBg"
+      x="287"
+      y="377" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRewardView.bg"
+      resourceLink="asset.UnrealShootingRewardView.bg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRewardView.prize1"
+      resourceLink="asset.UnrealShootingRewardView.prize1"
+      x="36"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRewardView.prize2"
+      resourceLink="asset.UnrealShootingRewardView.prize2"
+      x="36"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingRewardView.prize3"
+      resourceLink="asset.UnrealShootingRewardView.prize3"
+      x="36"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRewardView.fourth"
+      textFormatStyle="unrealshooting.UnrealShootingRewardView.fourth_t"
+      filterString="core.normal_f"
+      x="43"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRewardView.fifth"
+      parentStyle="unrealshooting.UnrealShootingRewardView.fourth"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRewardView.sixth"
+      parentStyle="unrealshooting.UnrealShootingRewardView.fourth"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRewardView.seventh"
+      parentStyle="unrealshooting.UnrealShootingRewardView.fourth"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRewardView.itemName"
+      textFormatStyle="unrealshooting.UnrealShootingRewardView.itemName_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="unrealshooting.UnrealShootingRewardView.itemNameBtn"
+      textStyle="unrealshooting.UnrealShootingRewardView.itemName"
+      enableHtml="true"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      tipDirctions="4,1,6,5"
+      tipGapH="-25"
+      tipGapV="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      textFrameChange="false"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="unrealshooting.UnrealShootingRankItem.ItemGap"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      width="623"
+      height="3"
+      x="0"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="unrealshooting.UnrealShootingRankItem.RankImg"
+      resourceLink="asset.svsmap.RankNum1,asset.svsmap.RankNum2,asset.svsmap.RankNum3"
+      x="30"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankItem.RankTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankItem.TeamNameTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="95"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankItem.ServerNameTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="252"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankItem.WinCountTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="380"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingRankItem.FightPowerTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="492"
+      y="5" />
+    <!-- 结算面板 start -->
+    <component
+      classname="map.campaign.view.ui.unrealshooting.UnrealShootingGameOverFrame"
+      stylename="unrealshooting.UnrealShootingGameOverFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="45"
+      width="771"
+      height="485" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.bg"
+      parentStyle="core.describeBackground_style06"
+      width="747"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.sortBg"
+      resourceLink="asset.UnrealShootingGameOverFrame.sortBg"
+      x="3"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.selfBg"
+      resourceLink="asset.UnrealShootingGameOverFrame.selfBgLeft,unrealshooting.UnrealShootingGameOverFrame.selfBgRight"
+      imageRectString="0|364|0|27|13,728|364|0|27|13"
+      x="8"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.selfBgRight"
+      resourceLink="asset.UnrealShootingGameOverFrame.selfBgLeft"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.rewardBg"
+      resourceLink="asset.UnrealShootingGameOverFrame.rewardBg"
+      x="2"
+      y="318" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.sort"
+      textFormatStyle="unrealshooting.UnrealShootingRankView.title_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="6"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.nickName"
+      parentStyle="unrealshooting.UnrealShootingGameOverFrame.sort"
+      x="114" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.server"
+      parentStyle="unrealshooting.UnrealShootingGameOverFrame.sort"
+      x="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.score"
+      parentStyle="unrealshooting.UnrealShootingGameOverFrame.sort"
+      x="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.fightPower"
+      parentStyle="unrealshooting.UnrealShootingGameOverFrame.sort"
+      x="505" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.killNum"
+      parentStyle="unrealshooting.UnrealShootingGameOverFrame.sort"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="136"
+      height="20"
+      x="615" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.rewardGetImg"
+      resourceLink="asset.UnrealShootingGameOverFrame.rewardGetImg"
+      x="140"
+      y="347" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverFrame.rewardItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="unrealshooting.UnrealShootingGameOverItem.RankImg"
+      resourceLink="asset.svsmap.RankNum1,asset.svsmap.RankNum2,asset.svsmap.RankNum3"
+      x="30"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.RankTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.TeamNameTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="85"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.ServerNameTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="235"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.ScoreTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="370"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.IsOnHookTxt"
+      textFormatStyle="unrealshooting.UnrealShootingGameOverItem.IsOnHookTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="370"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.FightPowerTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="495"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingGameOverItem.KillNumTxt"
+      textFormatStyle="unrealshooting.UnrealShootingRankItem.RankTxt_t1,unrealshooting.UnrealShootingRankItem.RankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="620"
+      y="5" />
+    <!-- 结算面板 end -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingBottomBar.Bg"
+      resourceLink="asset.unrealshooting.BottomBarBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingBottomBar.HpTxt"
+      textFormatStyle="vehiclemap.hpTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="216"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingBottomBar.NumTxt"
+      textFormatStyle="vehiclemap.numTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="22"
+      x="333"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="unrealshooting.UnrealShootingBottomBar.ChatMessageBtnMC"
+      resourceLink="asset.battle.ChatMessageBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="unrealshooting.UnrealShootingBottomBar.ChatMessageBtn"
+      button="unrealshooting.UnrealShootingBottomBar.ChatMessageBtnMC"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5"
+      x="307"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="unrealshooting.UnrealShootingBottomBar.ConsortiaChatBtnMC"
+      resourceLink="asset.maintoolbar.ConsortiaChatBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="unrealshooting.UnrealShootingBottomBar.ConsortiaChatBtn"
+      button="unrealshooting.UnrealShootingBottomBar.ConsortiaChatBtnMC"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5"
+      x="285"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="unrealshooting.UnrealShootingBottomBar.SettingBtn"
+      backStyle="asset.battle.SettingBtnBmd"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="327"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="unrealshooting.UnrealShootingBottomBar.HelpBtn"
+      backStyle="asset.steelmap.HelpBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="257"
+      y="-9" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="unrealshooting.UnrealShootingBottomBar.ExitBtn"
+      backStyle="asset.steelmap.ExitBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="480"
+      y="28" />
+    <!-- 副本 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingSortTopView.TipsBg"
+      resourceLink="asset.unrealshooting.TipsBg"
+      x="26"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="unrealshooting.UnrealShootingSortTopView.Bg"
+      resourceLink="asset.unrealshooting.RankDetailBg,asset.unrealshooting.RankDetailBtnTxt,asset.unrealshooting.RankDetailTitleTxt"
+      imageRectString="0|244|0|228|13,5|18|90|41|13,83|116|7|20|13"
+      x="0"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="unrealshooting.UnrealShootingSortTopView.ItemVBox"
+      spacing="1"
+      x="30"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt"
+      textFormatStyle="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="24"
+      x="25"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="unrealshooting.UnrealShootingSortTopView.SelfTeamIcon"
+      resourceLink="asset.unrealshooting.BlueTeamLogoSmall,asset.unrealshooting.RedTeamLogoSmall"
+      x="116"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingSortTopView.SelfScoreTipsTxt"
+      textFormatStyle="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="24"
+      x="142"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingSortTopView.SelfScoreTxt"
+      textFormatStyle="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="35"
+      height="24"
+      x="217"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingSortTopItem.RankTxt"
+      textFormatStyle="worldboss.woundinfo.woundInfoNumTxt_t1,worldboss.woundinfo.woundInfoNumTxt_t2,worldboss.woundinfo.woundInfoNumTxt_t3,worldboss.woundinfo.woundInfoNumTxt_t4,worldboss.woundinfo.woundInfoNumTxt_t5,worldboss.woundinfo.woundInfoNumTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="25"
+      height="20"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingSortTopItem.NickNameTxt"
+      textFormatStyle="worldboss.woundinfo.woundInfoTxt_t1,worldboss.woundinfo.woundInfoTxt_t2,worldboss.woundinfo.woundInfoTxt_t3,worldboss.woundinfo.woundInfoTxt_t4,worldboss.woundinfo.woundInfoTxt_t5,worldboss.woundinfo.woundInfoTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingSortTopItem.PointTxt"
+      textFormatStyle="worldboss.woundinfo.woundInfoTxt_t1,worldboss.woundinfo.woundInfoTxt_t2,worldboss.woundinfo.woundInfoTxt_t3,worldboss.woundinfo.woundInfoTxt_t4,worldboss.woundinfo.woundInfoTxt_t5,worldboss.woundinfo.woundInfoTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="130" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingBufferBuyView.TipsBg"
+      resourceLink="asset.unrealshooting.TipsBg"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="unrealshooting.UnrealShootingBufferBuyView.Bg"
+      resourceLink="asset.unrealshooting.BufferBuyBg,asset.unrealshooting.BufferBuyBtnTxt,asset.unrealshooting.BufferBuyTitleTxt"
+      imageRectString="0|242|0|351|13,214|18|149|51|13,62|104|7|20|13"
+      x="0"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="unrealshooting.UnrealShootingBufferBuyView.ItemVBox"
+      spacing="1"
+      x="5"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingBufferBuyView.SelfPointTipsTxt"
+      textFormatStyle="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="155"
+      height="34"
+      x="0"
+      y="-6"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingBufferBuyView.SelfPointTxt"
+      textFormatStyle="unrealshooting.UnrealShootingSortTopView.SelfTeamTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="24"
+      x="65"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.Bg"
+      resourceLink="asset.unrealshooting.BufferBuyItemBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.ItemCost"
+      textFormatStyle="unrealshooting.UnrealShootingBufferBuyItem.ItemCost_t1,unrealshooting.UnrealShootingBufferBuyItem.ItemCost_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="48"
+      height="18"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.BuyBtn"
+      backStyle="asset.unrealshooting.BufferBuyItemBtnBg"
+      iconStyle="asset.unrealshooting.BufferBuyItemBtnTxt1"
+      iconInnerRectString="9,48,3,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="105"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="unrealshooting.UnrealShootingBufferBuyItem.UnbuyBtn"
+      backStyle="asset.unrealshooting.BufferBuyItemBtnBg"
+      iconStyle="asset.unrealshooting.BufferBuyItemBtnTxt2"
+      iconInnerRectString="4,58,3,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="105"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingMiniMapView.Bg"
+      resourceLink="asset.unrealshooting.MiniMapBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingTopBar.blueLogo"
+      resourceLink="asset.unrealshooting.BlueTeamLogo"
+      x="-4"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingTopBar.blueScoreLabel"
+      resourceLink="asset.unrealshooting.BlueScoreLabel"
+      x="90"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingTopBar.blueScoreTxt"
+      textFormatStyle="unrealshooting.UnrealShootingTopBar.blueScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="135"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingTopBar.redLogo"
+      resourceLink="asset.unrealshooting.RedTeamLogo"
+      x="444"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="unrealshooting.UnrealShootingTopBar.redScoreLabel"
+      resourceLink="asset.unrealshooting.RedScoreLabel"
+      x="350"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="unrealshooting.UnrealShootingTopBar.redScoreTxt"
+      textFormatStyle="unrealshooting.UnrealShootingTopBar.redScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="392"
+      y="35" />
+  </components>
+</style>

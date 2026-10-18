@@ -1,0 +1,766 @@
+<style
+  name="duskarea"
+  source="ui/zh_cn/swf/duskarea.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="duskarea.ui.duskareainfoview.blueJifen_t"
+      args="Arial,14,0x95feff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="duskarea.ui.duskareainfoview.redJifen_t"
+      args="Arial,14,0xee624c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="duskarea.ui.DuskAreaSelfInfoView.pointTxtImg_t"
+      args="Arial,14,0xfadc10,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="duskarea.ui.duskareainfoview.LeftTimeTxt_t"
+      args="Arial,16,0xfadc10,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DuskAreaPointRankItem_t1"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DuskAreaPointRankItem_t2"
+      args="Arial,14,0x4dbbee,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DuskAreaPointRankItem_t3"
+      args="Arial,14,0xff0b2d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="duskarea.DuskAreaAccountFrame.RewardTxt_t"
+      args="Arial,20,0xffbc1a,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.bgTop" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.bg"
+      y="33" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.mainIcon"
+      x="30"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.infoTxtImg"
+      x="65"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.pointTxtImg"
+      x="30"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.selfResTxtImg"
+      x="18"
+      y="70" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.winImg"
+      rotation="-30"
+      x="-175"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.lossImg"
+      rotation="-30"
+      x="-203"
+      y="29" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.bg"
+      height="103"
+      width="671"
+      x="2"
+      y="340" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.getRewardTxtImg"
+      x="282"
+      y="350" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgA"
+      x="105"
+      y="380" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgB"
+      x="310"
+      y="380" />
+    <bitmapData
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgC"
+      x="485"
+      y="400" />
+    <bitmapData
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.SmallMap" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.teamIcon1"
+      x="30"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.DuskAreaSelfInfoView.teamIcon2"
+      x="30"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.NPCAsset1" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.duskareaui.bg"
+      stylename="duskarea.duskareainfoview.bg" />
+    <custom
+      classname="asset.duskareaui.blueBar"
+      stylename="duskarea.duskareainfoview.blueBar"
+      x="54"
+      y="12" />
+    <custom
+      classname="asset.duskareaui.redBar"
+      stylename="duskarea.duskareainfoview.redBar"
+      scaleX="-1"
+      x="474"
+      y="12" />
+    <custom
+      classname="map.campaign.view.frame.duskarea.DuskAreaPointRankList"
+      stylename="duskarea.DuskAreaPointRankList"
+      x="5"
+      y="65" />
+    <custom
+      classname="asset.duskarea.DuskAreaSmallMapFrame.BuildMc"
+      stylename="duskarea.DuskAreaSmallMapFrame.BuildMc" />
+    <custom
+      classname="asset.duskarea.DuskAreaSmallMapFrame.WalkTarget"
+      stylename="duskarea.DuskAreaSmallMapFrame.WalkTarget" />
+    <custom
+      classname="asset.duskarea.UpdateScoreAsset"
+      stylename="duskarea.UpdateScoreAsset"
+      x="-51"
+      y="-110" />
+    <custom
+      classname="asset.duskarea.CollectionAsset"
+      stylename="asset.duskarea.CollectionAsset" />
+    <custom
+      classname="asset.duskareaui.bg2"
+      stylename="duskarea.duskareainfoview.bg2" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.blueJifen"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.blueJifen_t"
+      x="180"
+      y="31"
+      autoSize="none"
+      width="50"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.redJifen"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.redJifen_t"
+      x="182"
+      y="32"
+      autoSize="none"
+      width="50"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.bluepeople"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.blueJifen_t"
+      x="122"
+      y="31"
+      autoSize="none"
+      width="50"
+      height="20"
+      filterString="core.normal_f"
+      text="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.redpeople"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.redJifen_t"
+      x="118"
+      y="30"
+      autoSize="none"
+      width="50"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.bluebuildNum"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.blueJifen_t"
+      x="320"
+      y="33"
+      autoSize="none"
+      width="30"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.redbuildNum"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.redJifen_t"
+      x="243"
+      y="33"
+      autoSize="none"
+      width="30"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.DuskAreaSelfInfoView.pointTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.DuskAreaSelfInfoView.pointTxtImg_t"
+      x="94"
+      y="49"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.DuskAreaSelfInfoView.selfResTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.DuskAreaSelfInfoView.pointTxtImg_t"
+      x="94"
+      y="77"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.LeftTimeTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.LeftTimeTxt_t"
+      x="225"
+      y="10"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="duskarea.ui.DuskAreaSelfInfoView.RankBtn"
+      backStyle="asset.DuskAreaSelfInfoView.rankIcon"
+      iconStyle="asset.DuskAreaSelfInfoView.rankTxtImg"
+      iconInnerRectString="5,30,36,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      ipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="35"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="duskarea.ui.DuskAreaSelfInfoView.MapBtn"
+      backStyle="asset.DuskAreaSelfInfoView.mapIcon"
+      iconStyle="asset.DuskAreaSelfInfoView.mapTxtImg"
+      iconInnerRectString="5,30,36,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="95"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="duskarea.ui.HideBtn"
+      backStyle="asset.core.HideBtnIcon"
+      x="140"
+      y="10"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="duskarea.DuskAreaPointRankView.btnHbox"
+      spacing="-5"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="duskarea.DuskAreaPointRankView.AllBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.DuskAreaPointRankView.selectedAllBtn"
+      unselectedIconStyle="asset.DuskAreaPointRankView.unselectedAllBtn"
+      selectedIconInnerRectString="26,44,10,16,13"
+      unselectedIconInnerRectString="27,44,10,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="duskarea.DuskAreaPointRankView.selfbtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.DuskAreaPointRankView.selectedselfBtn"
+      unselectedIconStyle="asset.DuskAreaPointRankView.unselectedselfBtn"
+      selectedIconInnerRectString="9,81,10,18,13"
+      unselectedIconInnerRectString="10,81,10,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="duskarea.DuskAreaPointRankView.othersidebtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.DuskAreaPointRankView.selectedothersideBtn"
+      unselectedIconStyle="asset.DuskAreaPointRankView.unselectedothersideBtn"
+      selectedIconInnerRectString="21,52,10,18,13"
+      unselectedIconInnerRectString="23,52,10,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="duskarea.DuskAreaPointRankFrame.bg"
+      width="678"
+      height="315"
+      x="0"
+      y="30"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9" />
+    <component
+      classname="map.campaign.view.frame.duskarea.DuskAreaPointRankFrame"
+      stylename="duskarea.DuskAreaPointRankFrame"
+      parentStyle="core.Frame1"
+      moveEnable="true"
+      width="710"
+      height="445" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="duskarea.DuskAreaPointRankFrame.pointrankListBG"
+      parentStyle="core.describeBackground_style40"
+      width="670"
+      height="308"
+      x="5"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankFrameRankTxt"
+      parentStyle="core.FrameTitleText"
+      x="45"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankFrameRankNameTxt"
+      parentStyle="core.FrameTitleText"
+      x="160"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankFrameAttackCountTxt"
+      parentStyle="core.FrameTitleText"
+      x="385"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankFrameGetBiuldTxtTxt"
+      parentStyle="core.FrameTitleText"
+      x="462"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankFrameGetResTxtTxt"
+      parentStyle="core.FrameTitleText"
+      wordWrap="true"
+      width="80"
+      x="574"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="duskarea.DuskAreaPointRankFrame.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,2,2,1,3"
+      viewportInnerRectString="1,0,1,266,1"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      x="5"
+      y="67"
+      width="670"
+      height="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankItem.rankTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="DuskAreaPointRankItem_t1"
+      x="10"
+      y="4"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankItem.rankNameTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="DuskAreaPointRankItem_t2,DuskAreaPointRankItem_t3"
+      x="130"
+      y="4"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankItem.attackCountTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="DuskAreaPointRankItem_t1"
+      x="405"
+      y="4"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankItem.getBuildTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="DuskAreaPointRankItem_t1"
+      x="352"
+      y="4"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankItem.getResTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="DuskAreaPointRankItem_t1"
+      x="545"
+      y="4"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="map.campaign.view.frame.duskarea.DuskAreaAccountFrame"
+      stylename="duskarea.DuskAreaAccountFrame"
+      parentStyle="core.Frame1"
+      moveEnable="true"
+      width="710"
+      height="610" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="duskarea.DuskAreaAccountFrame.LeaveBtn"
+      backStyle="asset.DuskAreaAccountFrame.leaveBtnIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      ipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="235"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaAccountFrame.RewardTxtA"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.DuskAreaAccountFrame.RewardTxt_t"
+      x="150"
+      y="394"
+      autoSize="none"
+      width="100"
+      height="25"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaAccountFrame.RewardTxtB"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.DuskAreaAccountFrame.RewardTxt_t"
+      x="355"
+      y="394"
+      autoSize="none"
+      width="100"
+      height="25"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaAccountFrame.RewardTxtC"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.DuskAreaAccountFrame.RewardTxt_t"
+      x="540"
+      y="394"
+      autoSize="none"
+      width="100"
+      height="25"
+      filterString="core.normal_f" />
+    <component
+      classname="map.campaign.view.frame.duskarea.DuskAreaSmallMapFrame"
+      stylename="duskarea.DuskAreaAccountFrame.DuskAreaSmallMapFrame"
+      parentStyle="core.Frame1"
+      backStyle="duskarea.DuskAreaSmallMapFrame.FrameBg"
+      closeInnerRectString="23,0,-2,23,14"
+      moveInnerRectString="684,10,0,-15,9"
+      titleOuterRectPosString="0,26,1"
+      containerX="4"
+      containerY="4"
+      closestyle="map.space.SpaceMapFrame.CloseBtn"
+      width="520"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="duskarea.DuskAreaSmallMapFrame.FrameBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.FrameBg"
+      scaleGridString="10,10,50,51" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="duskarea.DuskAreaSmallMapFrame.MapBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.PanelBg"
+      scaleGridString="10,10,32,33"
+      x="-2"
+      y="0"
+      width="516"
+      height="393" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DuskAreaAccountFrame.RewardImgA"
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgA"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7"
+      tipGapH="0"
+      tipGapV="0"
+      x="105"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DuskAreaAccountFrame.RewardImgB"
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgB"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7"
+      tipGapH="0"
+      tipGapV="0"
+      x="250"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DuskAreaAccountFrame.RewardImgC"
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgC"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7"
+      tipGapH="0"
+      tipGapV="0"
+      x="395"
+      y="397" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankFrameRankServerTxt"
+      parentStyle="core.FrameTitleText"
+      x="280"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.DuskAreaPointRankItem.serverNameTxt"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="DuskAreaPointRankItem_t2,DuskAreaPointRankItem_t3"
+      x="235"
+      y="4"
+      autoSize="none"
+      width="150"
+      height="20"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="duskAreaSelfInfoView.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="0"
+      y="5" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="duskAreaSelfInfoView.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="map.campaign.view.ui.duskarea.helpTxt"
+      titleText="public.help"
+      textWidth="353" />
+    <component
+      classname="mainBar.StripView"
+      stylename="duskarea.DuskAreaSmallMapFrame.NodeTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      height="60"
+      mouseChildren="false"
+      mouseEnabled="true"
+      scaleX="1"
+      scaleY="1"
+      width="36" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.NPCBtnYellowBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.NPCAssetYellow1,asset.duskarea.DuskAreaSmallMapFrame.NPCAssetYellow2,asset.duskarea.DuskAreaSmallMapFrame.NPCAssetYellow2,asset.duskarea.DuskAreaSmallMapFrame.NPCAssetYellow1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="duskarea.DuskAreaSmallMapFrame.NPCBYellowtn"
+      backStyle="map.space.SpaceMapFrame.NPCBtnYellowBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.NPCBtnGreenBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.NPCAssetGreen1,asset.duskarea.DuskAreaSmallMapFrame.NPCAssetGreen2,asset.duskarea.DuskAreaSmallMapFrame.NPCAssetGreen2,asset.duskarea.DuskAreaSmallMapFrame.NPCAssetGreen1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="duskarea.DuskAreaSmallMapFrame.NPCBGreentn"
+      backStyle="map.space.SpaceMapFrame.NPCBtnGreenBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.buildBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.build1,asset.duskarea.DuskAreaSmallMapFrame.build2,asset.duskarea.DuskAreaSmallMapFrame.build2,asset.duskarea.DuskAreaSmallMapFrame.build2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="map.space.SpaceMapFrame.buildBtn"
+      backStyle="map.space.SpaceMapFrame.buildBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.buildBlueBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.buildBlue1,asset.duskarea.DuskAreaSmallMapFrame.buildBlue2,asset.duskarea.DuskAreaSmallMapFrame.buildBlue2,asset.duskarea.DuskAreaSmallMapFrame.buildBlue2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="map.space.SpaceMapFrame.buildBlueBtn"
+      backStyle="map.space.SpaceMapFrame.buildBlueBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.buildRedBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.buildRed1,asset.duskarea.DuskAreaSmallMapFrame.buildRed2,asset.duskarea.DuskAreaSmallMapFrame.buildRed1,asset.duskarea.DuskAreaSmallMapFrame.buildRed2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="map.space.SpaceMapFrame.buildRedBtn"
+      backStyle="map.space.SpaceMapFrame.buildRedBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="duskAreaSelfInfoView.bg"
+      resourceLink="asset.DuskAreaSelfInfoView.bg"
+      scaleGridString="15,15,50,50"
+      width="172"
+      height="190"
+      x="0"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.flagBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.buildBlue,asset.duskarea.DuskAreaSmallMapFrame.buildRed"
+      x="-16"
+      y="-285" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.NPCBtnPurpleBg"
+      resourceLink="asset.duskarea.DuskAreaSmallMapFrame.buildPurple1,asset.duskarea.DuskAreaSmallMapFrame.buildPurple2,asset.duskarea.DuskAreaSmallMapFrame.buildPurple1,asset.duskarea.DuskAreaSmallMapFrame.buildPurple2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="duskarea.DuskAreaSmallMapFrame.NPCBPurpletn"
+      backStyle="map.space.SpaceMapFrame.NPCBtnPurpleBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="map.campaign.view.frame.duskarea.IceFireWarSmallMapFrame"
+      stylename="duskarea.DuskAreaAccountFrame.IceFireWarSmallMapFrame"
+      parentStyle="core.Frame1"
+      backStyle="duskarea.DuskAreaSmallMapFrame.FrameBg"
+      closeInnerRectString="23,0,-2,23,14"
+      moveInnerRectString="684,10,0,-15,9"
+      titleOuterRectPosString="0,26,1"
+      containerX="4"
+      containerY="4"
+      closestyle="map.space.SpaceMapFrame.CloseBtn"
+      width="520"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="duskarea.DuskAreaAccountFrame.RewardImgA"
+      resourceLink="asset.DuskAreaAccountFrame.RewardImgA,asset.DuskAreaAccountFrame.RewardImgAI,asset.DuskAreaAccountFrame.RewardImgAII"
+      x="105"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="duskarea.ui.duskareainfoview.LeftTimeTxt1"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="duskarea.ui.duskareainfoview.LeftTimeTxt_t"
+      x="25"
+      y="60"
+      autoSize="none"
+      width="523"
+      height="20"
+      filterString="core.normal_f" />
+  </components>
+</style>

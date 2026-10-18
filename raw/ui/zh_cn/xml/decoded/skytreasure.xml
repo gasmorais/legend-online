@@ -1,0 +1,968 @@
+<style
+  name="skytreasure"
+  source="ui/zh_cn/swf/skytreasure.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="opinionSurveyFrame.contractText_t"
+      args="Arial,14,0x24ff46,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.rankView.textfarmat"
+      args="Arial,14,0xe7c88b,,,,,,center"
+      letterSpacing="0"
+      bold="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.rankView.pageNumTxt_f"
+      args="Arial,16,0xb0cde6,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.text_f"
+      args="Arial,14,0xffc000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.rankView.textfarmat1"
+      args="Arial,14,0xe4d29c,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.showView.txt"
+      args="Arial,14,0xffb336,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.text_ff"
+      args="Arial,12,0xffc000,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.text_fff"
+      args="Arial,12,0xffecb1,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.text_ff2"
+      args="Arial,14,0xc8fffd,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.text_ff3"
+      args="Arial,14,0xc8fffd,,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="skyTreasureFrame.describeTxt"
+      args="Arial,14,0xe7c88b,,,,,,center"
+      leading="2" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.skytreasure.largeBg"
+      x="-9"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.skytreasure.myIntegral"
+      x="685"
+      y="44" />
+    <bitmapData
+      resourceLink="asset.skytreasure.myRank"
+      x="685"
+      y="67" />
+    <bitmapData
+      resourceLink="asset.skytreasure.theFirst"
+      x="765"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.skytreasure.rank"
+      x="815"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.skytreasure.centerLargeBg"
+      x="300"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.skytreasure.pageBg"
+      x="85"
+      y="365" />
+    <bitmapData
+      resourceLink="asset.skytreasure.IntergalBoxCanGet"
+      x="40"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.skytreasure.IntergalBoxGeted"
+      x="0"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.skytreasure.line"
+      x="50"
+      y="29" />
+    <bitmapData
+      resourceLink="asset.skytreasure.IntergalBoxBg"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.skytreasure.kong"
+      x="115"
+      y="-110" />
+    <bitmapData
+      resourceLink="asset.skytreasure.firstBg"
+      x="205"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.skytreasure.center.bottombg"
+      x="299"
+      y="355" />
+    <!-- 
+    <bitmapData
+      resourceLink="asset.skytreasure.charge"
+      x="5"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.skytreasure.seniorCharge"
+      x="65"
+      y="8" />
+ -->
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="skytreasure.view.SkyTreasureBagView"
+      stylename="skyTreasureFrame.skyTreasureBagView"
+      x="210"
+      y="445" />
+    <custom
+      classname="skytreasure.view.SkyTreasureBoxView"
+      stylename="skyTreasureFrame.skyTreasureBoxView"
+      x="20"
+      y="120" />
+    <custom
+      classname="skytreasure.view.SkyTreasureCenterView"
+      stylename="skyTreasureFrame.skyTreasureCenterView"
+      x="-95"
+      y="-6" />
+    <custom
+      classname="skytreasure.view.SkyTreasureRankView"
+      stylename="skyTreasureFrame.skyTreasureRankView"
+      x="685"
+      y="92" />
+    <custom
+      classname="skytreasure.view.SkyTreasureRankShowView"
+      stylename="skyTreasureFrame.SkyTreasureRankShowView"
+      x="685"
+      y="92" />
+    <custom
+      classname="skytreasure.view.SkyTreasureIntergalBoxView"
+      stylename="skytreasure.SkyTreasureIntergalBoxView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="skytreasure.BaseItemViewIcon"
+      x="5"
+      textStyle="skyTreasure.BaseItemText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasure.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="15"
+      y="35" />
+    <custom
+      classname="skytreasure.view.SkyTreasureIntergalBagView"
+      stylename="skytreasure.SkyTreasureIntergalBagView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="skytreasure.BaseItemViewIcon"
+      x="0"
+      y="25"
+      textStyle="skyTreasure.BaseItemText" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="skytreasure.BaseItemViewIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="7"
+      y="7" />
+    <custom
+      classname="cell.view.skytreasurebag.SkyTreasureBagCell"
+      stylename="skytreasure.BagCell"
+      parentStyle="core.BaseItemView"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureCenterViewEf"
+      stylename="skytreasure.SkyTreasureCenterViewEf"
+      x="350"
+      y="89" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureCenterViewBox01"
+      stylename="skytreasure.SkyTreasureCenterViewBox01"
+      x="300"
+      y="10" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureCenterViewBox02"
+      stylename="skytreasure.SkyTreasureCenterViewBox02"
+      x="300"
+      y="10" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureCenterViewBox03"
+      stylename="skytreasure.SkyTreasureCenterViewBox03"
+      x="300"
+      y="10" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureCenterViewBoxHit"
+      stylename="skytreasure.SkyTreasureCenterViewBoxHit" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureCenterViewSkyMoveEf1"
+      stylename="skytreasure.SkyTreasureCenterViewSkyMoveEf"
+      x="286"
+      y="-4" />
+    <custom
+      classname="asset.skytreasure.SkyTreasureBoxViewEf"
+      stylename="skytreasure.SkyTreasureBoxViewEf"
+      x="115"
+      y="-110" />
+    <custom
+      classname="asset.skytreasure.moveBoxViewEF1"
+      stylename="skytreasure.SkyTreasureMoveBoxViewEF" />
+    <custom
+      classname="skytreasure.view.SkyTreasureIntergalBagView"
+      stylename="skytreasure.SkyTreasureRankShowView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="skytreasure.BaseItemViewIcon"
+      x="17"
+      y="25"
+      textStyle="skyTreasure.BaseItemText" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="skyTreasure.Item"
+      iconStyle="skyTreasure.ItemIcon"
+      textStyle="skyTreasure.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="skyTreasure.ItemIcon"
+      iconHeight="39"
+      iconWidth="39"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <!--程序主窗口-->
+    <component
+      classname="skytreasure.SkyTreasureFrame"
+      stylename="skytreasure.frame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,80,0,45,1"
+      closeInnerRectString="28,0,10,28,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="17"
+      containerY="48"
+      width="945"
+      height="595" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GemMaze.BottleHelpBtn1"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="824"
+      y="-44" />
+    <!--我的排名-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankView.rankText"
+      textFormatStyle="skyTreasureFrame.rankView.textfarmat"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      x="-20"
+      y="8" />
+    <!-- 名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankView.nameText"
+      textFormatStyle="skyTreasureFrame.rankView.textfarmat"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      x="65"
+      y="8" />
+    <!--积分-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankView.countText"
+      textFormatStyle="skyTreasureFrame.rankView.textfarmat"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      x="140"
+      y="8" />
+    <!-- 页码 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankView.pageNumTxt"
+      textFormatStyle="skyTreasureFrame.rankView.pageNumTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="25"
+      x="72"
+      y="368" />
+    <!--  我的积分-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.countText"
+      textFormatStyle="skyTreasureFrame.text_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      x="740"
+      y="43" />
+    <!-- 我的排名 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankText"
+      textFormatStyle="skyTreasureFrame.text_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      x="772"
+      y="67" />
+    <!--	活动开始时间	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.startText"
+      textFormatStyle="skyTreasureFrame.text_fff"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      x="685"
+      y="10"
+      width="230" />
+    <!--活动结束时间		-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.endText"
+      textFormatStyle="skyTreasureFrame.text_fff"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      x="783"
+      y="27"
+      width="230" />
+    <!--  全部领取按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="skytreasure.bagview.ReceiveAllButton"
+      iconStyle="asset.skytreasure.allGet"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="695"
+      y="434"
+      height="48"
+      width="132" />
+    <!-- 整理按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="skytreasure.center.chargeButton"
+      backStyle="asset.skytreasure.charge"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="695"
+      y="434"
+      height="48"
+      width="132" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="skytreasure.bagview.bagScrollPanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,0,4"
+      viewportInnerRectString="0,0,-5,90,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="390"
+      height="62"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="skytreasure.bagHBox"
+      spacing="10"
+      x="0"
+      y="0"
+      width="500" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="skyTreasureFrame.rankView.VBox"
+      spacing="0"
+      x="30"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="skytreasure.rankviewshow.hBox"
+      spacing="20"
+      x="30"
+      y="0"
+      width="440" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="skytreasure.boxView.Item"
+      iconStyle="skytreasure.boxView.ItemIcon"
+      textStyle="skytreasure.boxView.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="skytreasure.boxView.ItemIcon"
+      iconHeight="39"
+      iconWidth="39"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.boxView.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="0"
+      y="25" />
+    <!--  排名奖励展示界面文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.rankView.titleTxt"
+      textFormatStyle="skyTreasureFrame.showView.txt"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="120"
+      x="-10"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.rankView.nameTxt"
+      textFormatStyle="skyTreasureFrame.showView.txt"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="120"
+      x="0"
+      y="82" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="skytreasure.keduValueImg"
+      resourceLink="asset.skytreasure.box1,asset.skytreasure.box2,asset.skytreasure.box3,asset.skytreasure.box4,asset.skytreasure.box5,asset.skytreasure.box6,asset.skytreasure.box7,asset.skytreasure.box8"
+      x="70"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="skytreasure.bagview.pickupButton"
+      backStyle="asset.skytreasure.allGet"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="400"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="skytreasure.center.charge"
+      backStyle="asset.skytreasure.chargeBg"
+      iconStyle="asset.skytreasure.seniorCharge"
+      iconInnerRectString="20,76,11,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="610"
+      y="391"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="skytreasure.center.seniorCharge"
+      backStyle="asset.skytreasure.seniorChargeBg"
+      iconStyle="asset.skytreasure.charge"
+      iconInnerRectString="56,103,12,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="308"
+      y="391"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="skytreasure.rankview.prePage"
+      backStyle="asset.skytreasure.prePage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="10"
+      y="368" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="skytreasure.rankview.nextPage"
+      backStyle="asset.skytreasure.nextPage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="155"
+      y="368" />
+    <!--帮助按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="skyTreasureFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="865"
+      y="-35" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="skyTreasure.help"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="mainbar.TopToolsBar.skyTreasureFrame.helpTxt"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="skyTreasureFrame.rankItemView.selectedHightline"
+      resourceLink=",asset.skytreasure.rankSelecte"
+      width="591"
+      height="33"
+      x="-3"
+      y="5" />
+    <!--我的排名-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankItemView.rankText"
+      textFormatStyle="skyTreasureFrame.rankView.textfarmat1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="31"
+      x="-50"
+      y="36" />
+    <!-- 名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankItemView.nameText"
+      textFormatStyle="skyTreasureFrame.rankView.textfarmat1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="31"
+      x="35"
+      y="36" />
+    <!--积分-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.rankItemView.countText"
+      textFormatStyle="skyTreasureFrame.rankView.textfarmat1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="31"
+      x="110"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="skyTreasureFrame.BoxView.VBox"
+      spacing="10"
+      x="-163"
+      y="-138" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="skytreasure.rankviewshow.vBox1"
+      spacing="10"
+      x="210"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="skytreasure.rankView.hbox2"
+      spacing="10"
+      x="-198"
+      y="-145" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.firstBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.secondBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.thirdBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.fourBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.fiveBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.sixBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.senvenBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.eightBtn"
+      resourceLink="asset.skytreasure.firstBg"
+      tipStyle="skytreasure.view.SkyTreasureBoxShowTip"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="skytreasure.boxviewshow.hBox"
+      spacing="5"
+      x="5"
+      y="30" />
+    <custom
+      classname="skytreasure.view.SkyTreasureIntergalBagView"
+      stylename="skytreasure.SkyTreasureBoxShowView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="skytreasure.BaseItemViewIcon"
+      x="17"
+      y="25"
+      textStyle="skyTreasure.BaseItemText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.bagView.titleTxt"
+      textFormatStyle="skyTreasureFrame.showView.txt"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="120"
+      x="-10"
+      y="10" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="skytreasure.boxShowView.Item"
+      iconStyle="skytreasure.boxShowView.ItemIcon"
+      textStyle="skytreasure.boxShowView.ItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30"
+      x="10"
+      y="10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="skytreasure.boxShowView.ItemIcon"
+      iconHeight="39"
+      iconWidth="39"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <custom
+      classname="skytreasure.view.SkyTreasureBagCellBag"
+      stylename="skytreasure.boxShowView.BagCell"
+      backgroundStyle="core.ItemBack2"
+      iconStyle="skyBagView.BagCellIcon"
+      equipStyle="asset.core.HeroEquipIcon"
+      textStyle="core.BaseItemText"
+      activeStyle="core.EquipActiveBack"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="skyBagView.BagCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="43"
+      iconWidth="43"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.boxShowView.ItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="0"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.boxShowView.titleText"
+      textFormatStyle="skyTreasureFrame.text_ff"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="5"
+      y="10"
+      width="120"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyTreasureFrame.boxShowView.nameText"
+      textFormatStyle="skyTreasureFrame.text_ff"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="5"
+      y="60"
+      width="70"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="skyTreasureFrame.lookReward"
+      tipStyle="skytreasure.view.SkyTreasureRankShowView"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      resourceLink="asset.skytreasure.lookReward"
+      x="858"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.centerView.numberText"
+      textFormatStyle="skyTreasureFrame.text_ff2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="310"
+      y="13"
+      width="300"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.centerView.actionValueText"
+      textFormatStyle="skyTreasureFrame.text_ff3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="570"
+      y="13"
+      width="200"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="skytreasure.center.start"
+      backStyle="asset.skytreasure.center.centerbg"
+      iconStyle="asset.skytreasure.center.startText"
+      iconInnerRectString="37,64,16,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="469"
+      y="387" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="skytreasure.center.stop"
+      backStyle="asset.skytreasure.center.centerbg"
+      iconStyle="asset.skytreasure.center.completeText"
+      iconInnerRectString="34,74,13,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="469"
+      y="387" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="skytreasure.center.speedTip"
+      parentStyle="core.Frame2"
+      confirmStyle="skytreasure.center.AlertConfirmBtn_3"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      describeStyle="skytreasure.center.ThewDescribeTxt"
+      titleStyle="core.FrameTitleText"
+      width="350"
+      height="170"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="10"
+      containerY="25"
+      titleOuterRectPosString="0,-7,1"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="skytreasure.center.AlertConfirmBtn_3"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="115"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.center.ThewDescribeTxt"
+      textFormatStyle="skyTreasureFrame.describeTxt"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="340"
+      height="70"
+      x="-4"
+      y="5" />
+  </components>
+</style>

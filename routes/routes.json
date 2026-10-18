@@ -1,0 +1,2711 @@
+{
+ "bases": {
+  "RES": "http://res1264oas.creaction-network.com:8080/",
+  "TPL": "http://s1264oas.creaction-network.com/xml/",
+  "REQ": "http://s1264oas.creaction-network.com/",
+  "UPLOAD": "http://121.10.143.167:8080/",
+  "AMF": "http://s1264oas.creaction-network.com/messagebroker/amf",
+  "SOCKET": "s1264oas.creaction-network.com",
+  "LANGUAGE": "zh_cn"
+ },
+ "http_endpoints": {
+  "activecheck": [
+   "core_module:managers/ActivityManager.as"
+  ],
+  "activecodeservlet": [
+   "core_module:managers/ActivityManager.as"
+  ],
+  "appraisereplayservlet": [
+   "core_module:yishi/manager/PathManager.as"
+  ],
+  "complaintshandle": [
+   "core_module:yishi/manager/PathManager.as"
+  ],
+  "flashversionservlet": [
+   "core_module:yishi/lunch/StartupResourcesLoader.as"
+  ],
+  "itemlist": [
+   "core_module:yishi/manager/EmailManager.as"
+  ],
+  "kaxinaasservlet": [
+   "core_module:yishi/manager/BaseManager.as"
+  ],
+  "logReuest": [
+   "core_module:logging/ServerLoggerImp.as"
+  ],
+  "login": [
+   "Loading:Loading.as"
+  ],
+  "login2": [
+   "Loading:Loading.as"
+  ],
+  "loginselectlist": [
+   "Loading:Loading.as"
+  ],
+  "maillist": [
+   "core_module:yishi/manager/EmailManager.as"
+  ],
+  "namedservlet": [
+   "core_module:yishi/view/guild/NameView.as"
+  ],
+  "nicknamecheck": [
+   "core_module:yishi/view/community/RenameView.as",
+   "m14:child/attribute/ChildRenameView.as",
+   "m14:pet/property/PetRenameView.as",
+   "m3:map/campaign/view/market/MarketSellFrame.as"
+  ],
+  "questionreplaylist": [
+   "core_module:yishi/manager/PathManager.as"
+  ],
+  "selectjobregister": [
+   "core_module:mainBar/SmallMapBar.as"
+  ],
+  "starlist": [
+   "core_module:yishi/manager/EmailManager.as"
+  ],
+  "updateplayernovice": [
+   "Loading:Loading.as",
+   "Loading:newbie/NewbieSPHelper.as"
+  ],
+  "visualizeregister": [
+   "Loading:register/MainFigureView.as"
+  ]
+ },
+ "path_manager": [
+  {
+   "fn": "nickNamePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{_info.NICK_NAME_PATH}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "forwardSite",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{_info.FOWARDSITE}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "forwardName",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{_info.FOWARDNAME}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "solveResourceClassPath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "slg.resource.effect.{param2}Asset{param1}",
+     "base": "class"
+    }
+   ]
+  },
+  {
+   "fn": "solveHeroAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip{param1}/{param2}.swf",
+     "base": "RES",
+     "manifest_hits": 772,
+     "examples": [
+      "equip/autochess/wizard01/2.swf",
+      "equip/autochess/wizard03/2.swf",
+      "equip/autochess/xlsz01/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveChildAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip/hychild{_loc3_.ResPath}/2.swf",
+     "base": "RES",
+     "manifest_hits": 55,
+     "examples": [
+      "equip/hychild/bloodwarrior01/2.swf",
+      "equip/hychild/bloodwarrior02/2.swf",
+      "equip/hychild/bloodwarrior03/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveWingAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "int",
+    "param3": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip{param1}/{param2}_{param3}.swf",
+     "base": "RES",
+     "manifest_hits": 15105,
+     "examples": [
+      "equip/dragonic/fashion_cloth_dragon_amberdream/4_0.swf",
+      "equip/dragonic/fashion_cloth_dragon_amberdream/4_1.swf",
+      "equip/dragonic/fashion_cloth_dragon_angel/4_0.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getDefaultJobBattleAvatar",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip/mystery_default_body/2.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "solveShowPawnAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}show_pawn/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "solveShowHeroAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "String",
+    "param3": "String",
+    "param4": "String",
+    "param5": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}{param1}{param4}/{param5}.swf",
+     "base": "RES",
+     "manifest_hits": 1353,
+     "examples": [
+      "equip/autochess/wizard01/2.swf",
+      "equip/autochess/wizard03/2.swf",
+      "equip/autochess/xlsz01/2.swf"
+     ]
+    },
+    {
+     "template": "{RES}{param1}{param4}/{param2}/{param3}/{param5}.swf",
+     "base": "RES",
+     "manifest_hits": 329,
+     "examples": [
+      "equip/autochess/wizard01/2.swf",
+      "equip/autochess/wizard03/2.swf",
+      "equip/autochess/xlsz01/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveEffectConfig",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}commandEffectConfig.xml",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "solveRoleClassPath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "String (optional)"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "slg.resource.movie.MovieAsset{param2}{param1}",
+     "base": "class"
+    }
+   ]
+  },
+  {
+   "fn": "LanguagePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "ui/{LANGUAGE}/language.txt",
+     "base": "other"
+    },
+    {
+     "template": "{RES}ui/{LANGUAGE}/language.txt",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "NamesLibPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "ui/{LANGUAGE}/nameslib.txt",
+     "base": "other"
+    },
+    {
+     "template": "{RES}ui/{LANGUAGE}/nameslib.txt",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "libEffectResourceClassPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "slg.resource.effect.effect{param1}",
+     "base": "class"
+    }
+   ]
+  },
+  {
+   "fn": "ZhanPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}zip_dirty.txt",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "AgentZhanPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}proxy_dirty.txt",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "solveRolePath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "String (optional)"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/{param1}/{param2}{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 312,
+     "examples": [
+      "swf/avatar/fashion_cloth_ballet/1_0.swf",
+      "swf/avatar/fashion_cloth_ballet/1_1.swf",
+      "swf/avatar/fashion_cloth_ballet/2_0.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveSkillResPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}skillEffect/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 81,
+     "examples": [
+      "skilleffect/boss004_skill02.swf",
+      "skilleffect/boss016_skill01.swf",
+      "skilleffect/boss018_skill02.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveRoleDefaultPath",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "String",
+    "param3": "int",
+    "param4": "String (optional)"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip/warrior_default_{param2}{param4}/{param3}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    },
+    {
+     "template": "{RES}equip/hunter_default_{param2}{param4}/{param3}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    },
+    {
+     "template": "{RES}equip/wizard_default_{param2}{param4}/{param3}.swf",
+     "base": "RES",
+     "manifest_hits": 2,
+     "examples": [
+      "equip/wizard_default_arms/0.swf",
+      "equip/wizard_default_arms/1.swf"
+     ]
+    },
+    {
+     "template": "{RES}equip/dragonic/dragonman_default_{param2}{param4}/{param3}.swf",
+     "base": "RES",
+     "manifest_hits": 2,
+     "examples": [
+      "equip/dragonic/dragonman_default_body_cloak/0.swf",
+      "equip/dragonic/dragonman_default_body_cloak/1.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getBattleMapPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}sceneIma/{param1}/map{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 17,
+     "examples": [
+      "sceneima/1/map1.swf",
+      "sceneima/10/map10.swf",
+      "sceneima/11/map11.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getTimeStoryResPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}timestory/{param1}",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "resourcePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}",
+     "base": "RES"
+    }
+   ]
+  },
+  {
+   "fn": "CastleServicePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{AMF}",
+     "base": "AMF"
+    }
+   ]
+  },
+  {
+   "fn": "SocktPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{SOCKET}",
+     "base": "SOCKET"
+    }
+   ]
+  },
+  {
+   "fn": "SocketPort",
+   "getter": true,
+   "args": {},
+   "returns": "int",
+   "variants": [
+    {
+     "template": "{PORT}",
+     "base": "PORT"
+    }
+   ]
+  },
+  {
+   "fn": "showHeroEquipPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip_show/male.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "solveEffectPath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/{param1}/{param2}{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 312,
+     "examples": [
+      "swf/avatar/fashion_cloth_ballet/1_0.swf",
+      "swf/avatar/fashion_cloth_ballet/1_1.swf",
+      "swf/avatar/fashion_cloth_ballet/2_0.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getOuterCityMapsData",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}maps/{param1}/{param1}.maps",
+     "base": "RES",
+     "manifest_hits": 58,
+     "examples": [
+      "maps/1/1.maps",
+      "maps/10000/10000.maps",
+      "maps/2/2.maps"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getOuterCityTilesData",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}maps/{param1}/{param1}.titles",
+     "base": "RES",
+     "manifest_hits": 59,
+     "examples": [
+      "maps/1/1.titles",
+      "maps/10000/10000.titles",
+      "maps/2/2.titles"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getOuterCityNoteData",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}maps/{param1}/{param1}.rd",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getOuterCityNotePaths",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}maps/{param1}/{param1}.path",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getMapBackPaths",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/land/{param1}/",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "solveMapPhysicsBySonType",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/build/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 197,
+     "examples": [
+      "mapmaterial/build/100.swf",
+      "mapmaterial/build/10031.swf",
+      "mapmaterial/build/10036.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveLiftCollectMapPhysics",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/mineral/{param2}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    },
+    {
+     "template": "{RES}images/herbs/{param2}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "solveCampaignMovieByUrl",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}{param1}",
+     "base": "RES",
+     "manifest_hits": 52275,
+     "examples": [
+      "audio.swf",
+      "equip/autochess/wizard01/2.swf",
+      "equip/autochess/wizard03/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "solveHeadPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/head/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 10,
+     "examples": [
+      "images/head/101.swf",
+      "images/head/102.swf",
+      "images/head/103.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "mapNameMoviePath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/mapName/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 109,
+     "examples": [
+      "images/mapname/1.png",
+      "images/mapname/100.png",
+      "images/mapname/10001.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "eastSmallCampaignByUrl",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/easter/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 16,
+     "examples": [
+      "icon/easter/1.png",
+      "icon/easter/10.png",
+      "icon/easter/11.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceRoomName",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/name.png",
+     "base": "RES",
+     "manifest_hits": 44,
+     "examples": [
+      "images/instanceimg/101/name.png",
+      "images/instanceimg/102/name.png",
+      "images/instanceimg/103/name.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceRoomIcon",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/icon.jpg",
+     "base": "RES",
+     "manifest_hits": 78,
+     "examples": [
+      "images/instanceimg/101/icon.jpg",
+      "images/instanceimg/102/icon.jpg",
+      "images/instanceimg/103/icon.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceSmallIconPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/small.jpg",
+     "base": "RES",
+     "manifest_hits": 45,
+     "examples": [
+      "images/instanceimg/101/small.jpg",
+      "images/instanceimg/102/small.jpg",
+      "images/instanceimg/103/small.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceBigIconPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/big.jpg",
+     "base": "RES",
+     "manifest_hits": 80,
+     "examples": [
+      "images/instanceimg/101/big.jpg",
+      "images/instanceimg/102/big.jpg",
+      "images/instanceimg/103/big.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "theseusdungeonIconPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/theseusdungeon{param1}",
+     "base": "RES",
+     "manifest_hits": 14,
+     "examples": [
+      "icon/theseusdungeon/battle_01.png",
+      "icon/theseusdungeon/battle_02.png",
+      "icon/theseusdungeon/battle_03.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "planesMapByLandTypeAndSize",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}planeswar/map/{_loc3_.LandType}/{param2}.jpg",
+     "base": "RES",
+     "manifest_hits": 24,
+     "examples": [
+      "planeswar/map/101/10_10.jpg",
+      "planeswar/map/101/12_12.jpg",
+      "planeswar/map/101/3_3.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPlanesIconUrlByTempId",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}planeswar/icon/{_loc2_.Icon}",
+     "base": "RES",
+     "manifest_hits": 26,
+     "examples": [
+      "planeswar/icon/base.png",
+      "planeswar/icon/boss.swf",
+      "planeswar/icon/bosscastle.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPlanesFuncIconByTempId",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}planeswar/funcicon/{_loc2_.Icon}",
+     "base": "RES",
+     "manifest_hits": 2,
+     "examples": [
+      "planeswar/funcicon/1.png",
+      "planeswar/funcicon/2.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getClientLoginPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{_info.CLIENT_LOGIN_PATH}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "getClientLoginName",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{_info.CLIENT_LOGIN_NAME}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "getVersion",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{_info.VERSION}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "getFaceNum",
+   "getter": false,
+   "args": {},
+   "returns": "int",
+   "variants": [
+    {
+     "template": "{_info.FACE_NUM}",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceNormalIconPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/center.jpg",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceOpenIcon",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/open.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "mapInstanceOverIcon",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/InstanceImg/{param1}/over.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "mapPVProomIconPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/PVProom/PVP_1.jpg",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "avatarResourcePath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "int",
+    "param3": "int (optional)"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/avatar{param1}/{param2}.bswf",
+     "base": "RES",
+     "manifest_hits": 676,
+     "examples": [
+      "swf/avatar/dragonic/dragonman_default_body_cloak/0.bswf",
+      "swf/avatar/dragonic/dragonman_default_body_cloak/1.bswf",
+      "swf/avatar/dragonic/dragonman_default_body_cloak_mount/0.bswf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "wingAvatarResourcePath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "int",
+    "param3": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/avatar{param1}/{param2}_{param3}.bswf",
+     "base": "RES",
+     "manifest_hits": 15575,
+     "examples": [
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream/4_0.bswf",
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream/4_1.bswf",
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream_mount/4_0.bswf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getAvatarResourcePath",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "int",
+    "param3": "int",
+    "param4": "String",
+    "param5": "int",
+    "param6": "int",
+    "param7": "String (optional)"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}{param1}",
+     "base": "RES",
+     "manifest_hits": 52275,
+     "examples": [
+      "audio.swf",
+      "equip/autochess/wizard01/2.swf",
+      "equip/autochess/wizard03/2.swf"
+     ]
+    },
+    {
+     "template": "{RES}swf/avatar{param1}/{2}{param7}",
+     "base": "RES",
+     "manifest_hits": 16455,
+     "examples": [
+      "swf/avatar/dragonic/dragonman_default_body_cloak/0.bswf",
+      "swf/avatar/dragonic/dragonman_default_body_cloak/1.bswf",
+      "swf/avatar/dragonic/dragonman_default_body_cloak_mount/0.bswf"
+     ]
+    },
+    {
+     "template": "{RES}swf/avatar{param1}/{4}_{param2}{param7}",
+     "base": "RES",
+     "manifest_hits": 15689,
+     "examples": [
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream/4_0.bswf",
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream/4_1.bswf",
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream_mount/4_0.bswf"
+     ]
+    },
+    {
+     "template": "{RES}swf/avatar{param1}/{param5}_{param2}{param7}",
+     "base": "RES",
+     "manifest_hits": 15683,
+     "examples": [
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream/4_0.bswf",
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream/4_1.bswf",
+      "swf/avatar/dragonic/fashion_cloth_dragon_amberdream_mount/4_0.bswf"
+     ]
+    },
+    {
+     "template": "{RES}swf/avatar{param1}/{param2}{param7}",
+     "base": "RES",
+     "manifest_hits": 16434,
+     "examples": [
+      "swf/avatar/dragonic/dragonman_default_body_cloak/0.bswf",
+      "swf/avatar/dragonic/dragonman_default_body_cloak/1.bswf",
+      "swf/avatar/dragonic/dragonman_default_body_cloak_mount/0.bswf"
+     ]
+    },
+    {
+     "template": "{RES}swf/npc/{param1}{param7}",
+     "base": "RES",
+     "manifest_hits": 87,
+     "examples": [
+      "swf/npc/103.bswf",
+      "swf/npc/110.bswf",
+      "swf/npc/20101.bswf"
+     ]
+    },
+    {
+     "template": "{RES}swf/avatar/mineral_body/{param1}{param7}",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    },
+    {
+     "template": "{RES}swf/avatar/mineral_hair/{param1}{param7}",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "NpcAvatarResourcePath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/npc/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 58,
+     "examples": [
+      "swf/npc/3026.swf",
+      "swf/npc/3027.swf",
+      "swf/npc/3029.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "avatarStandResourceClassPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{param1}Stand",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "avatarWalkResourceClassPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{param1}Walk",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "avatarShowResourceClassPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{param1}Show",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "templatePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}tempinfos.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "timeStoryPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}gametimes.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "versionPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}version.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "backAvatarList",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}avata.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "backResourceList",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}resource.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "orderPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "challengPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}challengeorder.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getMazeOrderPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}tower.xml",
+     "base": "TPL"
+    },
+    {
+     "template": "{TPL}tower2.xml",
+     "base": "TPL"
+    },
+    {
+     "template": "{TPL}tower3.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getSinglePassOrderPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}singlepass.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getHookStatePath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/hook/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "snsTempPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}sns_temp.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "fightStatePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/avatar/fight.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "warFightBuff",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/buff/war.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "gainBuff",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/buff/gain.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getMountAvatar",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "/mount_default",
+     "base": "other"
+    }
+   ]
+  },
+  {
+   "fn": "getGvgBufferIconPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/gvgbuffer/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getDemonBufferIconPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/demonbuffer/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getCardIconPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/powcard{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getCardSwfPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/powcard{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getCardTabPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/powcard/tab/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getCardTabNamePath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/powcard/tabname/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getCardTabDefaultPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/powcard/tab/default.jpg",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getGoldRoadIconPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/goldroad/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 78,
+     "examples": [
+      "icon/goldroad/2014502.png",
+      "icon/goldroad/2050609.png",
+      "icon/goldroad/2050610.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getMagicPubIconPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon{param1}",
+     "base": "RES",
+     "manifest_hits": 7628,
+     "examples": [
+      "icon/0talent_dragon01.png",
+      "icon/0talent_dragon02.png",
+      "icon/0talent_dragon03.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getMagicPubResourcePath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/head/space{param1}",
+     "base": "RES",
+     "manifest_hits": 22,
+     "examples": [
+      "images/head/space/32.swf",
+      "images/head/space/37.swf",
+      "images/head/space/38.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "customerPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{REQ}complaintshandle",
+     "base": "REQ"
+    }
+   ]
+  },
+  {
+   "fn": "customerReplyPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{REQ}questionreplaylist",
+     "base": "REQ"
+    }
+   ]
+  },
+  {
+   "fn": "customerSubmitEvaluatePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{REQ}appraisereplayservlet",
+     "base": "REQ"
+    }
+   ]
+  },
+  {
+   "fn": "customerSubmitImagePath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{UPLOAD}fileupload/upload",
+     "base": "UPLOAD"
+    }
+   ]
+  },
+  {
+   "fn": "getVehicleSkillPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}vehicle/skill/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 8,
+     "examples": [
+      "vehicle/skill/0.swf",
+      "vehicle/skill/13.swf",
+      "vehicle/skill/14.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getVehicleNPCPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}vehicle/NPC/{param1}.bswf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getVehicleAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}vehicle/avatar{param1}/2.swf",
+     "base": "RES",
+     "manifest_hits": 12,
+     "examples": [
+      "vehicle/avatar/vehicle_11/2.swf",
+      "vehicle/avatar/vehicle_12/2.swf",
+      "vehicle/avatar/vehicle_570304/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getVehicleShowAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip_show{param1}/2.png",
+     "base": "RES",
+     "manifest_hits": 8,
+     "examples": [
+      "equip_show/vehicle_11/2.png",
+      "equip_show/vehicle_12/2.png",
+      "equip_show/vehicle_570310/2.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getAppellImgPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/appell/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 150,
+     "examples": [
+      "images/appell/1.png",
+      "images/appell/10.png",
+      "images/appell/100.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPetFollowShowPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip_show{param1}_follow/2.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getPetMorphShowPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip_show{param1}/2.swf",
+     "base": "RES",
+     "manifest_hits": 637,
+     "examples": [
+      "equip_show/activity/pet_amazon/2.swf",
+      "equip_show/activity/pet_gaia/2.swf",
+      "equip_show/activity/wizard/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPetBattleFollowShowPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip{param1}_follow/2.swf",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "equip/pet_crimson_frigg_follow/2.swf",
+      "equip/pet_scarlet_odin_follow/2.swf",
+      "equip/pet_thor_follow/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPetBattleMorphShowPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip{param1}/2.swf",
+     "base": "RES",
+     "manifest_hits": 712,
+     "examples": [
+      "equip/autochess/wizard01/2.swf",
+      "equip/autochess/wizard03/2.swf",
+      "equip/autochess/xlsz01/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getFateWalkPath",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "String (optional)"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/avatar/FateHalo_Attack/{param1}{param2}",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getArtifactShowPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/avatar/legend/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 12,
+     "examples": [
+      "swf/avatar/legend/100.swf",
+      "swf/avatar/legend/1000.swf",
+      "swf/avatar/legend/1100.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getTreasureMostShowPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/avatar/hychild/weapon/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "swf/avatar/hychild/weapon/child_weapon_1.swf",
+      "swf/avatar/hychild/weapon/child_weapon_2.swf",
+      "swf/avatar/hychild/weapon/child_weapon_3.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getFateBattlePath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip/FateHalo_Attack/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getMarryCarPathByJob",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/avatar/marriage/10.bswf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    },
+    {
+     "template": "{RES}swf/avatar/marriage/11.bswf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    },
+    {
+     "template": "{RES}swf/avatar/marriage/00.bswf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getNewbieMovieByJob",
+   "getter": false,
+   "args": {
+    "param1": "String",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/animation/newcomers/{param2}/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getGemMazeOrderPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}gemmaze.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getFishOrderPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}fish.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getRemotePetOrderPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}remotepet.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getChildPveOrderPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}guardpverank.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getFishSwfPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}fish{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getFarmAnimaSwfPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/farm/animal/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 4,
+     "examples": [
+      "icon/farm/animal/cow.swf",
+      "icon/farm/animal/deer.swf",
+      "icon/farm/animal/horse.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getDungeonOrderPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}dungeon.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "petChallengSortPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}crosspet.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getChildShowByJobAndSex1",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip_show/hychild/0/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getChildShowByJobAndGrade",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}equip_show/hychild{_loc3_.ResPath}/2.swf",
+     "base": "RES",
+     "manifest_hits": 55,
+     "examples": [
+      "equip_show/hychild/bloodwarrior01/2.swf",
+      "equip_show/hychild/bloodwarrior02/2.swf",
+      "equip_show/hychild/bloodwarrior03/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getFarmBonFire",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/build/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 197,
+     "examples": [
+      "mapmaterial/build/100.swf",
+      "mapmaterial/build/10031.swf",
+      "mapmaterial/build/10036.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getSkyTrialPortal",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/skytrail/portal{param1}",
+     "base": "RES",
+     "manifest_hits": 7,
+     "examples": [
+      "images/skytrail/portal/1_fire.swf",
+      "images/skytrail/portal/2_water.swf",
+      "images/skytrail/portal/3_elect.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getSkyTrialPortalScene",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/skytrail/scene{param1}",
+     "base": "RES",
+     "manifest_hits": 7,
+     "examples": [
+      "images/skytrail/scene/1_fire.swf",
+      "images/skytrail/scene/2_water.swf",
+      "images/skytrail/scene/3_elect.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getFinalDefenseRes",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/pvz/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getFurniturePath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/furniture/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 123,
+     "examples": [
+      "images/furniture/101001.swf",
+      "images/furniture/101002.swf",
+      "images/furniture/101011.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getArchaeologyDescPicPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon{param1}",
+     "base": "RES",
+     "manifest_hits": 7628,
+     "examples": [
+      "icon/0talent_dragon01.png",
+      "icon/0talent_dragon02.png",
+      "icon/0talent_dragon03.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getAppellPicPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/appell/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 1008,
+     "examples": [
+      "icon/appell/0.png",
+      "icon/appell/1.png",
+      "icon/appell/10.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getcollectionPicPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/collection/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 30,
+     "examples": [
+      "icon/collection/21001.png",
+      "icon/collection/21002.png",
+      "icon/collection/21003.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getRapidViewIcon",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/through/{_loc4_[Math.ceil(param2 / 3)]}/{param1.toString()}.png",
+     "base": "RES",
+     "manifest_hits": 15,
+     "examples": [
+      "icon/through/aperture/1.png",
+      "icon/through/aperture/2.png",
+      "icon/through/aperture/3.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getIslandExploreSkillPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/islandexplore/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 10,
+     "examples": [
+      "icon/islandexplore/601.png",
+      "icon/islandexplore/602.png",
+      "icon/islandexplore/603.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getAlchemicalMineIconPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/alchemical/{param1}",
+     "base": "RES",
+     "manifest_hits": 18,
+     "examples": [
+      "icon/alchemical/101.swf",
+      "icon/alchemical/102.swf",
+      "icon/alchemical/103.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getVehicleAvatarShowPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}vehicle/show{param1}/2.swf",
+     "base": "RES",
+     "manifest_hits": 6,
+     "examples": [
+      "vehicle/show/vehicle_570310/2.swf",
+      "vehicle/show/vehicle_570311/2.swf",
+      "vehicle/show/vehicle_570320/2.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getStarGazingChartUrl",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/stargazing/{param1}/{param2}.jpg",
+     "base": "RES",
+     "manifest_hits": 144,
+     "examples": [
+      "icon/stargazing/0/0.jpg",
+      "icon/stargazing/0/1.jpg",
+      "icon/stargazing/0/10.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPlaneCrisisBackPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/land/planecrisis/land/",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getPlaneCrisisSmallMap",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/land/planecrisis/small/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 3,
+     "examples": [
+      "mapmaterial/land/planecrisis/small/1.png",
+      "mapmaterial/land/planecrisis/small/2.png",
+      "mapmaterial/land/planecrisis/small/3.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getPlaneCrisisBigMap",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/land/planecrisis/line/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 3,
+     "examples": [
+      "mapmaterial/land/planecrisis/line/1.png",
+      "mapmaterial/land/planecrisis/line/2.png",
+      "mapmaterial/land/planecrisis/line/3.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getChildHeadIcon",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon{param1}",
+     "base": "RES",
+     "manifest_hits": 7628,
+     "examples": [
+      "icon/0talent_dragon01.png",
+      "icon/0talent_dragon02.png",
+      "icon/0talent_dragon03.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getSecretSource",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/land/secret/{param1}/{param2}",
+     "base": "RES",
+     "manifest_hits": 24,
+     "examples": [
+      "mapmaterial/land/secret/1/2.swf",
+      "mapmaterial/land/secret/1/3.swf",
+      "mapmaterial/land/secret/1/boss.swf"
+     ]
+    },
+    {
+     "template": "{RES}mapmaterial/land/secret/{param2}",
+     "base": "RES",
+     "manifest_hits": 48,
+     "examples": [
+      "mapmaterial/land/secret/1.swf",
+      "mapmaterial/land/secret/1/2.swf",
+      "mapmaterial/land/secret/1/3.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getMonthCardIconPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/monthcard/{param1}",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getGoddessHeadIcon",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}goddess/view{param1}.png",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "goddess/view/icon/1.png",
+      "goddess/view/icon/2.png",
+      "goddess/view/icon/3.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getGoddessEquipIcon",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}goddess/equip/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getGoddessSmallIcon",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}goddess/small{param1}.png",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "goddess/small1.png",
+      "goddess/small2.png",
+      "goddess/small3.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getGoddessAvaterPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}goddess/view{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "goddess/view/swf/1.swf",
+      "goddess/view/swf/2.swf",
+      "goddess/view/swf/3.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getBattleGoddessHeadPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}goddess/battle/icon/{param1}.png",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "goddess/battle/icon/1.png",
+      "goddess/battle/icon/2.png",
+      "goddess/battle/icon/3.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getBattleGoddessAvatarPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}goddess/battle/swf/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 5,
+     "examples": [
+      "goddess/battle/swf/1.swf",
+      "goddess/battle/swf/2.swf",
+      "goddess/battle/swf/3.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getCrossGuildMapPath",
+   "getter": false,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}mapmaterial/land/crossguild/",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getMonsterExploreMapPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/monsterexplore/{param1}.jpg",
+     "base": "RES",
+     "manifest_hits": 17,
+     "examples": [
+      "images/monsterexplore/1.jpg",
+      "images/monsterexplore/10.jpg",
+      "images/monsterexplore/11.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getMonsterChapterMapPath",
+   "getter": false,
+   "args": {
+    "param1": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/singlecampaign1/{param1}/map/{param1}.swf",
+     "base": "RES",
+     "manifest_hits": 0,
+     "examples": []
+    }
+   ]
+  },
+  {
+   "fn": "getSelfChessKindIcon",
+   "getter": false,
+   "args": {
+    "param1": "Boolean",
+    "param2": "int"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}icon/autochess/{param1 ? \"big/\" : \"small/\"}{param2}.png",
+     "base": "RES",
+     "manifest_hits": 20,
+     "examples": [
+      "icon/autochess/big/101.png",
+      "icon/autochess/big/102.png",
+      "icon/autochess/big/103.png"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "royaltyRankPath",
+   "getter": true,
+   "args": {},
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{TPL}royalty.xml",
+     "base": "TPL"
+    }
+   ]
+  },
+  {
+   "fn": "getForbiddenBossPath",
+   "getter": false,
+   "args": {
+    "param1": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}swf/npc/forbiddenboss/{param1}",
+     "base": "RES",
+     "manifest_hits": 52,
+     "examples": [
+      "swf/npc/forbiddenboss/boss001.swf",
+      "swf/npc/forbiddenboss/boss002.swf",
+      "swf/npc/forbiddenboss/boss003.swf"
+     ]
+    }
+   ]
+  },
+  {
+   "fn": "getCarnivalRes",
+   "getter": false,
+   "args": {
+    "param1": "int",
+    "param2": "String"
+   },
+   "returns": "String",
+   "variants": [
+    {
+     "template": "{RES}images/carnival/{param1}/{param2}.png",
+     "base": "RES",
+     "manifest_hits": 14,
+     "examples": [
+      "images/carnival/101/frame_bg.png",
+      "images/carnival/101/frame_close.png",
+      "images/carnival/101/frame_left.png"
+     ]
+    }
+   ]
+  }
+ ]
+}

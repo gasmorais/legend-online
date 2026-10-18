@@ -1,0 +1,103 @@
+<style
+  name="funpreview.xml"
+  source="ui/zh_cn/swf/funpreview.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="funpreview.describe_t"
+      args="Arial,12,0xe7c88b,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="funpreview.openlevel_t"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.funpreview.thisopenfunTxt"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.funpreview.nextopenfunTxt"
+      x="13"
+      y="140" />
+    <bitmapData
+      resourceLink="asset.funpreview.openlevelBMD"
+      x="15"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.funpreview.openfunBMD"
+      x="15"
+      y="57" />
+    <bitmapData
+      resourceLink="asset.funpreview.openCampaignBMD"
+      x="15"
+      y="94" />
+  </bitmaps>
+  <components>
+    <!--功能预览 Frame-->
+    <component
+      classname="funpreview.FunPreviewFrame"
+      stylename="funpreview.FunPreviewFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="415"
+      height="410"
+      backStyle="funpreview.FrameBack2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="funpreview.FrameBack2"
+      resourceLink="core.FrameBackgoundBase1,core.FrameTitleImage1"
+      imageRectString="-18|-15|0|23|0,222|43|-10|0|9,16|20|53|50|4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="funpreview.openLevelTxt"
+      textFormatStyle="funpreview.openlevel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="130"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="funpreview.openCPTxt"
+      textFormatStyle="funpreview.describe_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="250"
+      height="45"
+      x="110"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="funpreview.FunPreviewBack1"
+      parentStyle="core.describeBackground_style04"
+      width="355"
+      height="125"
+      x="10"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="funpreview.FunPreviewBack2"
+      parentStyle="core.describeBackground_style04"
+      width="355"
+      height="125"
+      x="10"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="funpreview.sureBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.funpreview.surebtnTxt"
+      width="114"
+      height="42"
+      iconInnerRectString="35,44,12,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="125"
+      y="278" />
+  </components>
+</style>

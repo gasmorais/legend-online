@@ -1,0 +1,554 @@
+<style
+  name="sqmemory"
+  source="ui/zh_cn/swf/sqmemory.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.des_t"
+      args="Arial,12,0x702a00,,,,,,left"
+      leading="4"
+      indent="30" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.des2_t"
+      args="Arial,12,0x702a00,,,,,,left"
+      leading="4"
+      indent="45" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.GradientTitleTxt_t"
+      args="Arial,16,0x702a00,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.sqmemory.GradientTitleTxt_f"
+      args="0x664100,0.8,4,4,6" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.sqmemory.page3R2_f"
+      args="0xff6000,1,5,5,6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.page3R1_t"
+      args="Arial,12,0xffe4a4,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.page3R3_t"
+      args="Arial,16,0xffe4a4,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.page3R2_t"
+      args="Arial,24,0xffe4a4,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.page4L1_t"
+      args="Arial,12,0x702a00,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.page8R1_t"
+      args="Arial,12,0x702a00,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.niceName_t"
+      args="Arial,16,0xffe5b5,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.titleT1_t"
+      args="Arial,14,0xffe5b5,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.shareDes_t"
+      args="Arial,20,0xffe5b5,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.shareDesTest_t"
+      args="Arial,12,0x702a00,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.shareNickTest_t"
+      args="Arial,10,0xffe5b5,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sqmemory.shareJpgTitle_t"
+      args="Arial,12,0xffe5b5,,,,,,left"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.sqmemory.timeIcon"
+      x="8"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.sqmemory.timebg"
+      x="0"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.sqmemory.bookbg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.sqmemory.shareBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.sqmemory.point"
+      x="34"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.sqmemory.bossFlg"
+      x="255"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.sqmemory.consotiaFlg"
+      x="283"
+      y="38" />
+    <bitmapData
+      resourceLink="asset.sqmemory.partner"
+      x="293"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.sqmemory.labelBg"
+      x="350"
+      y="92" />
+    <bitmapData
+      resourceLink="asset.sqmemory.leftFllower"
+      x="373"
+      y="110" />
+    <bitmapData
+      resourceLink="asset.sqmemory.rightFllower"
+      x="660"
+      y="110" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="sqmemory.page.SqmemoryPage1"
+      stylename="sqmemory.page.SqmemoryPage1"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage2"
+      stylename="sqmemory.page.SqmemoryPage2"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage3"
+      stylename="sqmemory.page.SqmemoryPage3"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage4"
+      stylename="sqmemory.page.SqmemoryPage4"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage5"
+      stylename="sqmemory.page.SqmemoryPage5"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage6"
+      stylename="sqmemory.page.SqmemoryPage6"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage7"
+      stylename="sqmemory.page.SqmemoryPage7"
+      x="0"
+      y="0" />
+    <custom
+      classname="sqmemory.page.SqmemoryPage8"
+      stylename="sqmemory.page.SqmemoryPage8"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.sqmemory.tilteMc"
+      stylename="asset.sqmemory.tilteMc"
+      x="563"
+      y="372" />
+    <custom
+      classname="asset.sqmemorty.maskMc"
+      stylename="asset.sqmemorty.maskMc"
+      x="92"
+      y="145" />
+    <custom
+      classname="sqmemory.item.SqmemoryHalfSwf"
+      stylename="sqmemory.item.SqmemoryHalfSwf"
+      x="196"
+      y="163" />
+    <custom
+      classname="sqmemory.item.SqmemoryItem"
+      stylename="ui.sqmemory.page1.note1"
+      x="126"
+      y="535" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.page1.vbox"
+      x="600"
+      y="162"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.page2.vbox"
+      x="126"
+      y="162"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.page4.lbox"
+      x="222"
+      y="282"
+      spacing="30" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.page1.rbox"
+      x="605"
+      y="352"
+      spacing="30" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.share.rbox"
+      x="500"
+      y="163"
+      spacing="30" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.share.jpgrbox"
+      x="219"
+      y="106"
+      spacing="5" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.label.LVbox"
+      x="-16"
+      y="5"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.sqmemory.label.RVbox"
+      x="205"
+      y="5"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.sqmemory.reward.list"
+      hSpace="10"
+      vSpace="10"
+      x="37"
+      y="4" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="ui.sqmemory.page4.yilin"
+      x="241"
+      y="643"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <custom
+      classname="sqmemory.item.SqYinLinAvater"
+      stylename="ui.sqmemory.page4.hulin"
+      x="688"
+      y="121"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <custom
+      classname="sqmemory.item.SqYinLinAvater"
+      stylename="ui.sqmemory.page4.shouwei"
+      x="491"
+      y="428"
+      scaleX="0.8"
+      scaleY="0.8" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.shareNickTest"
+      textFormatStyle="ui.sqmemory.shareNickTest_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="78"
+      y="233" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.shareJpgTitle"
+      textFormatStyle="ui.sqmemory.shareJpgTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="76"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.shareDesTest"
+      textFormatStyle="ui.sqmemory.shareDesTest_t"
+      autoSize="none"
+      width="230"
+      height="20"
+      x="34"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.des"
+      textFormatStyle="ui.sqmemory.des_t"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="5"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.shareDes"
+      textFormatStyle="ui.sqmemory.shareDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="30"
+      x="34"
+      y="-2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.des2"
+      textFormatStyle="ui.sqmemory.des2_t"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="5"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.sqmemory.pageBg"
+      resourceLink="asset.sqmemory.bookPage1,asset.sqmemory.bookPage2,asset.sqmemory.bookPage3,asset.sqmemory.bookPage4,asset.sqmemory.bookPage5,asset.sqmemory.bookPage6,asset.sqmemory.bookPage7,asset.sqmemory.bookPage8"
+      x="111"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sqmemory.leftPageBtn"
+      backStyle="asset.sqmemory.leftbtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="341" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sqmemory.rightPageBtn"
+      backStyle="asset.sqmemory.rightbtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1021"
+      y="341" />
+    <component
+      classname="yishi.view.base.PageBar"
+      stylename="ui.sqmomerty.pagebar"
+      preBtnStyle="ui.sqmemory.leftPageBtn"
+      nextBtnStyle="ui.sqmemory.rightPageBtn" />
+    <component
+      classname="sqmemory.SqmemoryMainFrame"
+      stylename="sqmemory.SqmemoryMainFrame"
+      parentStyle="core.Frame1"
+      backStyle="asset.sqmemory.bookbg"
+      containerX="0"
+      containerY="0"
+      closeInnerRectString="29,60,50,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="1121"
+      height="756" />
+    <component
+      classname="sqmemory.SqmemoryShareFrame"
+      stylename="sqmemory.SqmemoryShareFrame"
+      parentStyle="core.Frame1"
+      containerX="0"
+      containerY="0"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,80,70,29,14"
+      moveInnerRectString="376,37,80,0,9"
+      width="1053"
+      height="753" />
+    <component
+      classname="sqmemory.SqmemoryRewardFrame"
+      stylename="sqmemory.SqmemoryRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      closeInnerRectString="29,-10,0,29,14"
+      titleOuterRectPosString="0,-8,1"
+      moveInnerRectString="376,37,10,0,9"
+      width="399"
+      height="280" />
+    <component
+      classname="sqmemory.SqmemoryLabelFrame"
+      stylename="sqmemory.SqmemoryLabelFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      closeInnerRectString="29,-10,0,29,14"
+      titleOuterRectPosString="0,-8,1"
+      moveInnerRectString="399,27,-10,0,9"
+      width="399"
+      height="277" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.sqmemory.GradientTitle"
+      autoSize="none"
+      textFieldStyle="ui.sqmemory.GradientTitleTxt"
+      colors="0xcd8b18,0xfffbb6"
+      filterString="ui.sqmemory.GradientTitleTxt_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="208"
+      y="118"
+      width="250"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.GradientTitleTxt"
+      textFormatStyle="ui.sqmemory.GradientTitleTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="250"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.page3R1"
+      textFormatStyle="ui.sqmemory.page3R1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="158"
+      height="20"
+      x="597"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.page3R3"
+      textFormatStyle="ui.sqmemory.page3R3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="353"
+      height="48"
+      wordWrap="true"
+      x="648"
+      y="530" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.sqmemory.page3R2Gt"
+      autoSize="none"
+      textFieldStyle="ui.sqmemory.page3R2"
+      colors="0xffffff,0xffd972"
+      filterString="ui.sqmemory.page3R2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="607"
+      y="231"
+      width="379"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.page3R2"
+      textFormatStyle="ui.sqmemory.page3R2_t"
+      autoSize="none"
+      width="379"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.page4L1"
+      textFormatStyle="ui.sqmemory.page4L1_t"
+      autoSize="none"
+      width="390"
+      height="20"
+      x="138"
+      y="171" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.page8R1"
+      textFormatStyle="ui.sqmemory.page8R1_t"
+      autoSize="none"
+      width="390"
+      height="20"
+      x="604"
+      y="408" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sqmemory.page8Btn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.sqmemory.reportBtn"
+      iconInnerRectString="37,77,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="719"
+      y="550" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.niceName"
+      textFormatStyle="ui.sqmemory.niceName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="195"
+      height="30"
+      x="221"
+      y="502" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sqmemory.titleT1"
+      textFormatStyle="ui.sqmemory.titleT1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="268"
+      height="30"
+      x="138"
+      y="109" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sqmemory.changeBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.sqmemory.changeLabel"
+      iconInnerRectString="35,78,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="119"
+      y="568" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sqmemory.shareBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.sqmemory.sharebtn"
+      iconInnerRectString="41,76,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="321"
+      y="568" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="ui.sqmemory.ThewCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sqmemory.label.confirmBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.core.ConfirmTxtAsset_01"
+      iconInnerRectString="25,46,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="111"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sqmemory.reward.confirmBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.core.ConfirmTxtAsset_01"
+      iconInnerRectString="25,46,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="112"
+      y="141" />
+  </components>
+</style>

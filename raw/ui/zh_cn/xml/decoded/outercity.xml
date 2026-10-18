@@ -1,0 +1,1100 @@
+<style
+  name="outercity"
+  source="ui/zh_cn/swf/outercity.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.herocell.hero_name_t1"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.herocell.hero_level_t1"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.outercityNameText_t"
+      args="Arial,12,0xFFFFFF,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.outercityNameText_t1"
+      args="Arial,12,0x32dbff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.outercityNameText_t2"
+      args="Arial,12,0xffff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.FrameOutercityNameText_t"
+      args="Arial,14,0xFFF4C6,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.FrameLordText_t"
+      args="Arial,12,0x47E7FF,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.FramePoliteText_t"
+      args="Arial,12,0xFFC869,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.TextInput_t"
+      args="Arial,12,0xFFF4C6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.WildTeamFrameNameText_t"
+      letterSpacing="0"
+      args="Arial,12,0xFFF4C6,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.RemainingTimeFrameText_t"
+      args="Arial,12,0xFFC869" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.OccupationFrameGoldText_t"
+      letterSpacing="1"
+      args="Arial,14,0xFFDC00,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.OccupationFrameGoldText1_t"
+      letterSpacing="1"
+      args="Arial,14,0xFFDC00,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.WildTeamFrameNameText_1"
+      args="Arial,13,0xFFFFFF,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.TextInput_2"
+      args="Arial,14,0xFF6600,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.AttackNameTxt_t"
+      args="Arial,14,0xe7c88b" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.AttackTimeTxt_t"
+      args="Arial,14,0xe7c88b" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.AttackAddTxt_t"
+      args="Arial,12,0xe7c88b" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.outercityConsortiaText_t"
+      args="Arial,12,0xbae800,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="outercity.filter_1"
+      args="0x000000,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.BossInfo.enemyTxt_f"
+      letterSpacing="1"
+      args="Arial,12,0x7ddf26,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.BossInfo.bossInfoTxt_f"
+      letterSpacing="1"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.BossInfo.bossInfoTxt2_f"
+      letterSpacing="1"
+      args="Arial,12,0x999999,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.BossInfo.bossTimeTxt_f"
+      letterSpacing="1"
+      args="Arial,14,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="OuterCityArchaeologyView.leftText_t"
+      letterSpacing="0"
+      args="Arial,15,0xffeb41,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.BossInfo.archaeologyTxt0_f"
+      letterSpacing="1"
+      args="Arial,12,0x84ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercity.BossInfo.archaeologyTxt1_f"
+      letterSpacing="1"
+      args="Arial,12,0xff7e00,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.outercity.transmitBim" />
+    <bitmapData
+      resourceLink="asset.outercity.BorderMaskHAsset" />
+    <bitmapData
+      resourceLink="asset.outercity.BorderMaskVAsset" />
+    <!-- 防御部队文字 -->
+    <bitmapData
+      resourceLink="asset.outercity.DefenseForcesImg" />
+    <!-- 中间线 -->
+    <bitmapData
+      resourceLink="asset.outercity.medianLineImg"
+      x="165"
+      y="10" />
+    <!-- 防御图标 -->
+    <bitmapData
+      resourceLink="asset.outercity.DefenceImgAsset"
+      x="19"
+      y="47" />
+    <!-- 防御时间背景 -->
+    <bitmapData
+      resourceLink="asset.outercity.DefenceBackAsset"
+      x="27"
+      y="54" />
+    <bitmapData
+      resourceLink="asset.outercity.AttackTextBack"
+      x="15"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.outercity.AttackTextBack2"
+      x="15"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.outercity.AttackDescribeBack"
+      x="15"
+      y="67" />
+    <bitmapData
+      resourceLink="asset.outercity.AddBtnBack" />
+    <bitmapData
+      resourceLink="asset.outercity.VipDefenceNamehead02"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outercity.VipDefenceNamehead03"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.outercity.BossInfoViewTitle0"
+      x="10"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.outercity.BossInfoViewTitle1"
+      x="10"
+      y="85" />
+    <bitmapData
+      resourceLink="asset.outercity.BossInfoViewTitle2"
+      x="10"
+      y="200" />
+    <bitmapData
+      resourceLink="asset.outercity.BossSearchRadar" />
+    <bitmapData
+      resourceLink="asset.outercity.BossInfoViewTitle3"
+      x="10"
+      y="260" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 传送动画 -->
+    <custom
+      classname="asset.outercity.TranseferEffAsset"
+      stylename="asset.outercity.TranseferEffAsset" />
+    <!-- 行动目标点动画 -->
+    <custom
+      classname="asset.outercity.CloundAsset"
+      stylename="asset.outercity.CloundAsset" />
+    <custom
+      classname="asset.map.WalkTargetEffectAsset"
+      stylename="asset.outercity.WalkTargetEffectAsset" />
+    <!-- 头像 -->
+    <custom
+      classname="yishi.view.community.HeroCell"
+      stylename="outercity.HeroCell"
+      backStyle="core.SubHeroBack"
+      iconStyle="core.BaseIcon"
+      vocationStyle="core.HeroVocationII"
+      nameStyle="outercity.herocell.HeroNameText"
+      levelStyle="outercity.herocell.HeroLevelText"
+      iconX="5"
+      iconY="5"
+      iconWidth="58"
+      iconHeight="58" />
+    <!-- 士兵拖动格子 -->
+    <custom
+      classname="yishi.view.community.PawnContain"
+      stylename="outercity.PawnBaseCell"
+      backStyle="core.SubHeroBack"
+      iconStyle="core.BaseIcon"
+      nameStyle="core.outercity.OccupationPawnBaseCellNameText"
+      iconX="5"
+      iconY="5"
+      iconWidth="58"
+      iconHeight="58"
+      tipStyle="yishi.view.tips.PawnTip"
+      tipDirctions="7,5,4,6"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="outercity.select.SelectMapArmyEffectAsset"
+      stylename="outercity.select.SelectMapArmyEffectAsset" />
+    <!-- 部队的攻击范围 -->
+    <custom
+      classname="outercity.select.CastleAttckRangeAsset"
+      stylename="outercity.select.CastleAttckRangeAsset" />
+    <!-- 攻击状态 -->
+    <custom
+      classname="asset.outercity.AttackingAsset2"
+      stylename="asset.outercity.AttackingAsset2" />
+    <custom
+      classname="asset.outercity.AttackingAsset3"
+      stylename="asset.outercity.AttackingAsset3" />
+    <custom
+      classname="asset.outercity.transmit"
+      stylename="asset.outercity.transmit" />
+    <custom
+      classname="asset.outercity.TransferOuterCityEffectAsset"
+      stylename="asset.outercity.TransferOuterCityEffectAsset" />
+    <!-- 领主名背景 -->
+    <custom
+      classname="asset.outercity.DefenceNameBg"
+      stylename="outercity.ThaneNamebg"
+      x="9"
+      y="20" />
+    <custom
+      classname="map.outercity.view.bossinfo.OuterCityBossInfoView"
+      stylename="outercity.bossinfo.OuterCityBossInfoView"
+      x="0"
+      y="163" />
+    <custom
+      classname="outercity.boss.BossLightMc2"
+      stylename="outercity.boss.BossLight2"
+      x="0"
+      y="0" />
+    <custom
+      classname="outercity.boss.BossLightMc3"
+      stylename="outercity.boss.BossLight3"
+      x="-5"
+      y="-10" />
+    <custom
+      classname="outercity.boss.BossBox1"
+      stylename="outercity.boss.BossBoxMc1" />
+    <custom
+      classname="outercity.boss.BossBox2"
+      stylename="outercity.boss.BossBoxMc2" />
+    <custom
+      classname="outercity.boss.BossBox3"
+      stylename="outercity.boss.BossBoxMc3" />
+    <custom
+      classname="outercity.boss.BossBox3"
+      stylename="outercity.boss.BossBoxMc4" />
+    <!--	外城考古动画	-->
+    <custom
+      classname="map.outercity.view.archaeology.OuterCityArchaeologyView"
+      stylename="outercity.archaeologyView"
+      y="622" />
+    <custom
+      classname="asset.archaeology.energyMc"
+      stylename="OuterCityArchaeologyView.energyMc"
+      x="29"
+      y="115" />
+    <custom
+      classname="asset.archaeology.redMc"
+      stylename="OuterCityArchaeologyView.redMc"
+      x="0"
+      y="-2" />
+    <custom
+      classname="asset.archaeology.yellowMc"
+      stylename="OuterCityArchaeologyView.yellowMc"
+      x="0"
+      y="-2" />
+    <custom
+      classname="asset.archaeology.greenMc"
+      stylename="OuterCityArchaeologyView.greenMc" />
+    <custom
+      classname="outercity.boss.BossBox3"
+      stylename="outercity.boss.BossBoxMc5" />
+    <custom
+      classname="outercity.boss.BossBox3"
+      stylename="outercity.boss.BossBoxMc6" />
+  </customDisplay>
+  <components>
+    <!-- 英雄名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.herocell.HeroNameText"
+      textFormatStyle="outercity.herocell.hero_name_t1"
+      autoSize="none"
+      filterString="core.normal_f"
+      y="70"
+      height="20"
+      width="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.herocell.HeroLevelText"
+      textFormatStyle="outercity.herocell.hero_level_t1"
+      autoSize="none"
+      filterString="core.normal_f"
+      y="70"
+      height="20"
+      width="32" />
+    <!-- 绑定提示框 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="outercity.AttackCastleAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      containerY="20"
+      confirmStyle="outercity.ComposeConfirmBtn"
+      cancelStyle="outercity.ComposeCancelBtn"
+      checkStyle="outercity.ThewCheckBtn"
+      describeStyle="outercity.AlertDescribe"
+      width="350"
+      height="225" />
+    <!-- 提示框按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercity.ThewCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="80"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercity.ComposeConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="25"
+      y="90"
+      fieldX="8"
+      fieldY="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercity.ComposeCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="160"
+      y="90"
+      fieldX="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.AlertDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="40"
+      width="300"
+      x="0"
+      y="5"
+      wordWrap="true" />
+    <!-- 攻击提示框 -->
+    <component
+      classname="map.outercity.view.frame.AttackAlertFrame"
+      parentStyle="core.Frame4"
+      stylename="outercity.AttackAlertFrame"
+      containerX="20"
+      containerY="42"
+      width="432"
+      height="250" />
+    <!-- outercity.AttackFrameBack -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercity.AttackFrameBack"
+      parentStyle="core.describeBackground_style06"
+      width="390"
+      height="105" />
+    <!--outercity.AttackNameTxt -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.AttackNameTxt"
+      textFormatStyle="outercity.AttackNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="264"
+      height="22"
+      x="118"
+      y="14" />
+    <!--outercity.AttackTimeTxt -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.AttackTimeTxt"
+      textFormatStyle="outercity.AttackTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="18"
+      x="91"
+      y="44" />
+    <!--outercity.AttackLeftCountTxt -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.AttackLeftCountTxt"
+      textFormatStyle="outercity.AttackTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="18"
+      x="91"
+      y="44" />
+    <!-- outercity.AttackAddBtn -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.AttackAddBtnTxt"
+      textFormatStyle="outercity.AttackAddTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.AttackAddBtn"
+      backStyle="asset.outercity.AddBtnBack"
+      textStyle="outercity.AttackAddBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="10,3,4,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="138"
+      height="28"
+      x="154"
+      y="38" />
+    <!-- outercity.AttackSubmitBtn -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.AttackSubmitBtn"
+      parentStyle="core.NewAlertButton"
+      x="62"
+      y="119"
+      backgoundInnerRectString="6,8,6,13"
+      autoCenter="false" />
+    <!-- outercity.AttackCancelBtn -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.AttackCancelBtn"
+      parentStyle="core.NewAlertButton"
+      x="230"
+      y="119"
+      backgoundInnerRectString="6,8,7,13"
+      autoCenter="false" />
+    <!-- 建筑名字文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OutercityNameText"
+      autoSize="none"
+      width="140"
+      height="20"
+      filterString="core.normal_f"
+      parentStyle="core.BaseNameText"
+      y="25"
+      wordWrap="true" />
+    <!-- 建筑工会 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OutercityConsortiaNameText"
+      autoSize="none"
+      width="140"
+      height="18"
+      filterString="core.normal_f"
+      parentStyle="core.BaseNameText" />
+    <!-- 公会名字文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OutercityConsortiaext"
+      textFormatStyle="outercity.outercityConsortiaText_t"
+      autoSize="none"
+      width="140"
+      height="18" />
+    <!-- 防御剩余时间文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.DefensiveTime"
+      textFormatStyle="outercity.outercityNameText_t,outercity.outercityNameText_t1,outercity.outercityNameText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="18"
+      x="43"
+      y="50" />
+    <!-- 建筑弹框名字文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.FrameOutercityNameText"
+      textFormatStyle="outercity.FrameOutercityNameText_t"
+      filterString="core.normal_f"
+      x="14"
+      y="16"
+      autoSize="none"
+      width="150"
+      height="39" />
+    <!-- 建筑弹框领主文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.FrameLordText"
+      textFormatStyle="outercity.FrameLordText_t"
+      filterString="core.normal_f"
+      x="14"
+      y="44" />
+    <!-- 建筑弹框领主文本 改变值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.FrameLordTextInput"
+      textFormatStyle="outercity.TextInput_t"
+      filterString="core.normal_f"
+      x="68"
+      y="44" />
+    <!-- 建筑弹框联盟文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.FramePoliteText"
+      textFormatStyle="outercity.FramePoliteText_t"
+      filterString="core.normal_f"
+      x="14"
+      y="70" />
+    <!-- 建筑弹框联盟文本 改变值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.FramePoliteTextInput"
+      textFormatStyle="outercity.TextInput_t"
+      filterString="core.normal_f"
+      x="68"
+      y="70" />
+    <!-- 野队弹框名字文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.WildTeamFrameNameText"
+      textFormatStyle="outercity.WildTeamFrameNameText_t"
+      filterString="core.normal_f"
+      x="98"
+      y="17" />
+    <!-- 野队弹框剩余时间文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.RemainingTimeFrameText"
+      textFormatStyle="outercity.RemainingTimeFrameText_t"
+      filterString="core.normal_f"
+      x="98"
+      y="42" />
+    <!-- 野队弹框剩余时间文本 改变值-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.RemainingTimeFrameText2"
+      textFormatStyle="outercity.TextInput_t"
+      filterString="core.normal_f"
+      x="40" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="outercity.TimeDownView"
+      timeTxtStyle="outercity.RemainingTimeFrameText2"
+      x="159"
+      y="42" />
+    <!-- 野队弹框占领领主文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OccupationLordsFrameText"
+      textFormatStyle="outercity.RemainingTimeFrameText_t"
+      filterString="core.normal_f"
+      x="98"
+      y="65" />
+    <!-- 野队弹框占领领主文本 改变值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OccupationLordsFrameText2"
+      textFormatStyle="outercity.TextInput_t"
+      filterString="core.normal_f"
+      x="159"
+      y="65" />
+    <!-- 野队弹框黄金文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OccupationFrameGoldText"
+      textFormatStyle="outercity.RemainingTimeFrameText_t"
+      filterString="core.normal_f"
+      x="98"
+      y="88" />
+    <!-- 野队弹框黄金文本 改变值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OccupationFrameGoldText2"
+      textFormatStyle="outercity.OccupationFrameGoldText_t"
+      filterString="core.normal_f"
+      x="159"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.OccupationFrameGoldText3"
+      textFormatStyle="outercity.OccupationFrameGoldText1_t"
+      filterString="core.normal_f"
+      y="88" />
+    <!--  金矿背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outercity.goldBG"
+      resourceLink="core.shop.goodsItemBack3"
+      x="-3"
+      y="18" />
+    <!-- 军队信息弹框>>>>目的地文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.ArmyFrameDestinationText"
+      textFormatStyle="outercity.WildTeamFrameNameText_1"
+      filterString="outercity.filter_1"
+      x="-10"
+      y="10" />
+    <!-- 军队信息弹框>>>>目的地文本 改变-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.ArmyFrameDestinationText2"
+      textFormatStyle="outercity.TextInput_t"
+      filterString="core.normal_f"
+      x="40"
+      y="10" />
+    <!-- 军队信息弹框>>>>领主文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.ArmyFrameLordText"
+      textFormatStyle="outercity.WildTeamFrameNameText_1"
+      filterString="outercity.filter_1"
+      x="-10"
+      y="32" />
+    <!-- 军队信息弹框>>>>领主文本 改变-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.ArmyFrameLordText2"
+      textFormatStyle="outercity.TextInput_t"
+      filterString="core.normal_f"
+      x="40"
+      y="32" />
+    <!-- 军队信息弹框>>>>兵力文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.ArmyFrameTroopsText"
+      textFormatStyle="outercity.FramePoliteText_t"
+      filterString="core.normal_f"
+      x="112"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outercity.ArmyFrameTroopsBG"
+      resourceLink="asset.outercity.ArmyFont"
+      x="-10"
+      y="53" />
+    <!-- 军队信息弹框>>>>兵力文本 改变-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.ArmyFrameTroopsText2"
+      textFormatStyle="outercity.TextInput_2"
+      filterString="core.normal_f"
+      x="40"
+      y="51" />
+    <!-- 地图上的弹出菜单 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.ReturnCastleAsset"
+      resourceLink="outercity.menu.ReturnCastleAsset"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirction="0,4,5"
+      tipGapV="20" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.MoveToAsset"
+      resourceLink="outercity.menu.MoveToAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.InnerAsset"
+      resourceLink="outercity.menu.InnerAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.InfoMAsset"
+      resourceLink="outercity.menu.InfoMAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.FightAsset"
+      resourceLink="outercity.menu.FightAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.GiveUpAsset"
+      resourceLink="outercity.menu.GiveUpAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.FriendAsset"
+      resourceLink="outercity.menu.FriendAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.WriteEmailAsset"
+      resourceLink="outercity.menu.WriteEmailAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="outercity.menu.CallBackAsset"
+      resourceLink="outercity.menu.CallBackAsset"
+      parentStyle="outercity.menu.ReturnCastleAsset" />
+    <!-- 9宫图背景 副本房间右侧栏的大背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercity.frame.TreasureContentBg"
+      parentStyle="core.describeBackground_style04"
+      width="363"
+      height="105"
+      x="-18"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      parentStyle="core.Frame2"
+      stylename="outercity.frame.TreasureFrame"
+      width="400"
+      height="240" />
+    <!-- 资源类野地攻击按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.TreasureAttackBtnAsset"
+      parentStyle="core.RedBtn"
+      x="60"
+      y="115"
+      backgoundInnerRectString="3,8,4,13"
+      autoCenter="false" />
+    <!-- 资源类野地取消按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.TreasureCancleBtnAsset"
+      backgoundInnerRectString="7,8,4,13"
+      parentStyle="core.GreenBtn"
+      x="191"
+      y="115"
+      width="86" />
+    <!-- 野地窗口 -->
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      parentStyle="core.Frame2"
+      stylename="outercity.frame.FieldFrame"
+      width="489"
+      height="254" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercity.frame.FieldBgAsset"
+      parentStyle="core.describeBackground_style04"
+      width="447"
+      height="115"
+      x="-16"
+      y="5" />
+    <!-- 野地攻击按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.FieldAttackBtnAsset"
+      parentStyle="core.RedBtn"
+      x="63"
+      y="126"
+      backgoundInnerRectString="3,8,4,13"
+      autoCenter="false" />
+    <!-- 野地移动按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.FieldMoveBtnAsset"
+      backgoundInnerRectString="6,8,4,13"
+      parentStyle="core.GreenBtn"
+      x="270"
+      y="126"
+      autoCenter="false"
+      width="86" />
+    <!-- 节点窗口 -->
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      parentStyle="core.Frame1"
+      stylename="outercity.frame.CityFrame"
+      width="460"
+      height="250" />
+    <!-- 节点攻击按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.CityAttackBtnAsset"
+      parentStyle="core.RedBtn"
+      x="119"
+      y="128"
+      backgoundInnerRectString="3,18,4,13"
+      autoCenter="false" />
+    <!-- 节点移动按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.CityMoveBtnAsset"
+      parentStyle="core.GreenBtn"
+      x="225"
+      y="127"
+      backgoundInnerRectString="7,8,4,13"
+      width="88"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercity.frame.CityContentBgAsset"
+      parentStyle="core.describeBackground_style04"
+      width="425"
+      height="120"
+      x="0"
+      y="0" />
+    <!-- 军队信息 -->
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      parentStyle="core.Frame2"
+      stylename="outercity.frame.ArmyInfoFrame"
+      width="282"
+      height="308" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercity.frame.ArmyBgAsset"
+      parentStyle="core.describeBackground_style04"
+      width="245"
+      height="70"
+      x="-18"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercity.frame.ArmyListBgAsset"
+      parentStyle="core.describeBackground_style04"
+      width="245"
+      height="100"
+      x="-17"
+      y="75" />
+    <!-- 军队召回按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.BackBtnAsset"
+      parentStyle="core.RedBtn"
+      x="115"
+      y="165" />
+    <!-- 召回按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="outercity.frame.ReturnBtnAsset"
+      parentStyle="core.RedBtn"
+      x="62"
+      y="181"
+      backgoundInnerRectString="3,8,5,13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="outercity.CastleNameVipBg"
+      resourceLink="asset.outercity.VipDefenceNameBg01,asset.outercity.VipDefenceNameBg02,asset.outercity.VipDefenceNameBg03"
+      width="130"
+      height="47"
+      x="10"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outercity.VipIcon"
+      resourceLink="asset.outercity.VipDefenceNamehead02,asset.outercity.VipDefenceNamehead03"
+      x="0"
+      y="10" />
+    <!-- 今日有奖杀怪次数-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.enemyTxt0"
+      textFormatStyle="outercity.BossInfo.enemyTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="18"
+      x="10"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.enemyTxt1"
+      parentStyle="outercity.BossInfo.enemyTxt0"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.enemyTxt2"
+      parentStyle="outercity.BossInfo.enemyTxt0"
+      y="69" />
+    <!-- 地图BOSS信息-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.bossInfoTxt0"
+      textFormatStyle="outercity.BossInfo.bossInfoTxt_f,outercity.BossInfo.bossInfoTxt2_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="18"
+      x="10"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.bossInfoTxt1"
+      parentStyle="outercity.BossInfo.bossInfoTxt0"
+      width="240"
+      x="10"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.bossInfoTxt2"
+      parentStyle="outercity.BossInfo.bossInfoTxt0"
+      width="240"
+      x="10"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.bossInfoTxt3"
+      parentStyle="outercity.BossInfo.bossInfoTxt0"
+      width="240"
+      x="10"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.bossInfoTxt4"
+      parentStyle="outercity.BossInfo.bossInfoTxt0"
+      width="240"
+      x="10"
+      y="185" />
+    <!-- BOSS刷新时间 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.bossTimeTxt"
+      textFormatStyle="outercity.BossInfo.bossTimeTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="18"
+      x="10"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercity.npc.AttackImgButton"
+      backStyle="asset.outercity.AttackImg"
+      x="-50"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outerCity.boss.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="225"
+      y="5" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="outercity.boss.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="map.outercity.view.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercity.BossSearchRadar0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.outercity.BossSearchRadar"
+      x="185"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercity.BossSearchRadar1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.outercity.BossSearchRadar"
+      x="185"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercity.BossSearchRadar2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.outercity.BossSearchRadar"
+      x="185"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercity.BossSearchRadar3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.outercity.BossSearchRadar"
+      x="185"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercity.BossSearchRadar4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.outercity.BossSearchRadar"
+      x="185"
+      y="185" />
+    <!--	外城考古	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OuterCityArchaeologyView.digBtn"
+      backStyle="asset.archaeology.digBtn"
+      y="65"
+      x="670" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OuterCityArchaeologyView.closeBtn"
+      backStyle="asset.archaeology.closeBtn"
+      x="112"
+      y="96" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OuterCityArchaeologyView.helpBtn"
+      backStyle="asset.OuterCityArchaeologyView.helpBtn"
+      x="123"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OuterCityArchaeologyView.searchBtn"
+      backStyle="asset.OuterCityArchaeologyView.searchBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,6"
+      tipGapH="-20"
+      isFollowMouse="false"
+      x="121"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="OuterCityArchaeologyView.mcContiner" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="OuterCityArchaeologyView.leftText"
+      textFormatStyle="OuterCityArchaeologyView.leftText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="47"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.archaeologyTxt0"
+      textFormatStyle="outercity.BossInfo.archaeologyTxt0_f"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="170"
+      height="20"
+      x="10"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercity.BossInfo.archaeologyTxt1"
+      textFormatStyle="outercity.BossInfo.archaeologyTxt1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="10"
+      y="297" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OuterCityArchaeologyView.archaeologyBtn"
+      backStyle="asset.OuterCityArchaeologyView.archaeologyBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,6"
+      tipGapH="-20"
+      isFollowMouse="false"
+      x="-30"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="OuterCityArchaeologyView.stargazingBtn"
+      backStyle="asset.OuterCityArchaeologyView.stargazingBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,6"
+      tipGapH="-20"
+      isFollowMouse="false"
+      x="-30"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.Archaeology.BuyBtn"
+      backStyle="asset.archaeology.buyBtnBg"
+      iconStyle="asset.archaeology.buyBtnFt"
+      iconInnerRectString="20,59,9,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="98"
+      height="34"
+      x="-65"
+      y="101" />
+  </components>
+</style>

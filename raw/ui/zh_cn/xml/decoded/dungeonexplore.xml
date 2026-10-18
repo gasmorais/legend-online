@@ -1,0 +1,1361 @@
+<style
+  name="dungeonexplore"
+  source="ui/zh_cn/swf/dungeonexplore.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.FrameTitile_t"
+      args="Arial,14,0xFFDD83,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.VoucherText_t"
+      args="arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.DungeonExploreBoxView.SortLinkTxt_f"
+      args="Arial,14,0x00ff36,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.DungeonExploreBoxView.countText_f"
+      args="Arial,14,0x95feff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.sort.ItemTextValueStyle1_f"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.sort.titleTextFormat_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.sort.ScoreText_f"
+      args="Arial,14,0xf0eac4,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.sort.sortText_f"
+      args="Arial,14,0xf0eac4,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.EventDsc_t"
+      args="Arial,12,0xedbf83,,,,,,center"
+      leading="2"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonExplore.EventbattleView.NameTxt_t"
+      args="Arial,14,0xeccba6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonExplore.EventbattleView.Type_t"
+      args="Arial,12,0xeccba6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonExplore.EventDieLifeView.Type_t"
+      args="Arial,12,0xeccba6,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonExplore.CardItemSoreTxt_t"
+      args="Arial,12,0x39cdde,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonExplore.CDText_f"
+      args="Arial,14,0x00fe00,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.HelpDsc_t"
+      args="Arial,12,0xFFDD83,,,,,,center"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dungeonexplore.describeText_t"
+      args="Arial,12,0xefd89b,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreMapView.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreMapView.LvBg"
+      x="590"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventLiftView.icon" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventLiftView.NumImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.InfoView.Bg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.InfoView.addImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.DenseFog"
+      y="87" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.Fog" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.BgUp" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.BgDown"
+      x="1"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.DownBtnImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.UpBtnImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.CurrentCount"
+      x="22"
+      y="28" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxBig.Bg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.NumImg0"
+      x="85"
+      y="300" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.NumImg1"
+      x="85"
+      y="239" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.NumImg2"
+      x="82"
+      y="169" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.NumImg3"
+      x="82"
+      y="101" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxSmall.NumImg4"
+      x="82"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxBig.IntergalBg"
+      x="135"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.line"
+      x="0"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.score"
+      x="10"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.sort"
+      x="435"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.sortBg"
+      x="530"
+      y="355" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.IntergalBoxBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.IntergalBoxGeted"
+      x="5"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxBig.BoxIcon"
+      x="142"
+      y="380" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxBig.TreasureImg"
+      x="15"
+      y="375" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxBig.NumImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreBoxBig.FlagImg"
+      x="100"
+      y="390" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.LeftUp" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.Left" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.LeftDown" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.Up" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.RightUp" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.Right" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.RightDown" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventBase.Down" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame1.Bg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame1.Intergal10"
+      x="25"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.Fog1" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.Fog2" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.Fog3" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.Fog4" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreDenseFogView.Fog5" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame1.SorceNumImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame1.SorceImg"
+      x="20"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame3.Bg1" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrameCard.NumImg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExploreGeroView.CannotMoveBg" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.DungeonExplore.HelpImg"
+      x="80" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventLiftView.LeftTxt"
+      x="5" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventLiftView.LeftTxtBgImg"
+      x="-15" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame1.SorceBigImg"
+      x="85"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.DungeonExplore.EventFrame1.SorceNumBigImg" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.DungeonExplore.DungeonExploreBoxBig.BoxEf"
+      stylename="DungeonExplore.DungeonExploreBoxBig.BoxEf"
+      x="135"
+      y="10" />
+    <custom
+      classname="asset.DungeonExplore.GemBoxLight"
+      stylename="DungeonExplore.GemBoxLight"
+      x="-5"
+      y="-10" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreIntergalBoxView"
+      stylename="dungeonexplore.DungeonExploreIntergalBoxView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="dungeonexplore.BaseItemViewIcon"
+      x="20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.BaseItemViewIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="7"
+      y="7" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreEventLeftView"
+      stylename="DungeonExplore.EventListView"
+      x="1190"
+      y="25" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreInfoView"
+      stylename="DungeonExplore.DungeonExploreInfoView"
+      x="455"
+      y="595" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreDenseFogView"
+      stylename="DungeonExplore.DungeonExploreDenseFogView"
+      x="0"
+      y="0" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreBoxView"
+      stylename="DungeonExplore.DungeonExploreBoxView"
+      x="105"
+      y="70" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreBoxBig"
+      stylename="DungeonExplore.DungeonExploreBoxBig"
+      x="0"
+      y="55" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreView"
+      stylename="DungeonExplore.DungeonExploreView"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.GridIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,6"
+      tipGapH="0"
+      tipGapV="0"
+      iconWidth="40"
+      iconHeight="40" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="dungeonexplore.EventFrameItemView"
+      iconStyle="dungeonexplore.EventFrameItemViewIcon"
+      textStyle="dungeonexplore.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="61"
+      profileHeight="61"
+      showProfile="true"
+      width="41"
+      height="41"
+      x="15"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EventFrameItemViewIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EnemyIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="10"
+      y="10" />
+    <custom
+      classname="dungeonexplore.view.eventframe.DungeonBackItemView"
+      stylename="dungeonexplore.DungeonBackItemView0"
+      x="15"
+      y="5" />
+    <custom
+      classname="dungeonexplore.view.eventframe.DungeonBackItemView"
+      stylename="dungeonexplore.DungeonBackItemView1"
+      x="240"
+      y="5" />
+    <custom
+      classname="asset.DungeonExplore.EventFrame5.CardEffect"
+      stylename="dungeonexplore.DieLifeCardEffect0"
+      x="100"
+      y="100" />
+    <custom
+      classname="asset.DungeonExplore.EventFrame5.CardEffect"
+      stylename="dungeonexplore.DieLifeCardEffect1"
+      x="275"
+      y="100" />
+    <custom
+      classname="asset.DungeonExplore.EventFrame5.DieEffect"
+      stylename="dungeonexplore.DieEffect"
+      x="100"
+      y="100" />
+    <custom
+      classname="asset.DungeonExplore.EventFrame5.LifeEffect"
+      stylename="dungeonexplore.LifeEffect"
+      x="275"
+      y="100" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EventDieLifeView.icon0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="62"
+      y="60"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EventDieLifeView.icon1"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="237"
+      y="60"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <custom
+      classname="asset.DungeonExplore.DungeonExplore.HeroDieEffect"
+      stylename="dungeonExplore.HeroDieEffect"
+      x="138"
+      y="42" />
+    <custom
+      classname="asset.DungeonExplore.EventFrame5.4CardEffect"
+      stylename="dungeonExplore.fourCardEffect"
+      x="265"
+      y="95" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      parentStyle="dungeonexplore.EventFrameItemView"
+      stylename="DungeonExplore.EventFrameView.MarkerItem"
+      x="20"
+      y="30" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      parentStyle="dungeonexplore.EventFrameItemView"
+      stylename="DungeonExplore.EventFrameView.CardItem"
+      x="40"
+      y="30" />
+    <custom
+      classname="dungeonexplore.view.eventframe.DungeonItemCardView"
+      stylename="DungeonExplore.EventFrameView.CardItemObj0"
+      x="5"
+      y="35" />
+    <custom
+      classname="dungeonexplore.view.eventframe.DungeonItemCardView"
+      stylename="DungeonExplore.EventFrameView.CardItemObj1"
+      x="130"
+      y="35" />
+    <custom
+      classname="dungeonexplore.view.eventframe.DungeonItemCardView"
+      stylename="DungeonExplore.EventFrameView.CardItemObj2"
+      x="255"
+      y="35" />
+    <custom
+      classname="dungeonexplore.view.eventframe.DungeonItemCardView"
+      stylename="DungeonExplore.EventFrameView.CardItemObj3"
+      x="385"
+      y="35" />
+    <custom
+      classname="dungeonexplore.view.DungeonCannotMoveView"
+      stylename="dungeonexplore.DungeonCannotMoveView"
+      x="-35"
+      y="-140" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.CannotMoveIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,6"
+      tipGapH="0"
+      tipGapV="0"
+      iconWidth="40"
+      iconHeight="40"
+      x="65" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="dungeonexplore.MapBoxtemView"
+      iconStyle="dungeonexplore.EventFrameItemViewIcon"
+      textStyle="dungeonexplore.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      scaleX="0.5"
+      scaleY="0.5"
+      profileWidth="61"
+      profileHeight="61"
+      showProfile="true"
+      width="41"
+      height="41"
+      x="135"
+      y="375" />
+    <custom
+      classname="asset.DungeonExplore.GemBoxLight"
+      stylename="DungeonExplore.MapBoxLight"
+      x="130"
+      y="370"
+      scaleX="0.5"
+      scaleY="0.5" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreSortItemView"
+      stylename="dungeonexplore.sort.sortItemAsset"
+      width="583"
+      height="30" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeonexplore.ShoesItem"
+      x="285"
+      y="55"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="4"
+      tipGapH="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="dungeonexplore.LifeItem"
+      x="375"
+      y="55"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="4"
+      tipGapH="0" />
+    <custom
+      classname="dungeonexplore.view.DungeonExploreSortItemView"
+      stylename="dungeonexplore.sort.DungeonexploreSortItemAsset"
+      width="583"
+      height="30" />
+    <!-- 
+		<custom classname="asset.DungeonExplore.DungeonExploreView.upMc"
+			stylename="dungeonExplore.DungeonExploreView.upMc" x='0' y='20' />
+		<custom classname="asset.DungeonExplore.DungeonExploreView.downMc"
+			stylename="dungeonExplore.DungeonExploreView.downMc" />
+		<custom classname="asset.DungeonExplore.DungeonExploreView.leftMc"
+			stylename="dungeonExplore.DungeonExploreView.leftMc" />
+		<custom classname="asset.DungeonExplore.DungeonExploreView.rightMc"
+			stylename="dungeonExplore.DungeonExploreView.rightMc" />   -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EventLeft.Icon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="20"
+      y="25" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EventFrameSmall.EventIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dungeonexplore.EventFrameSmall.EventIcon1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="10"
+      y="10" />
+    <custom
+      classname="asset.DungeonExplore.DungeonExplore.MoveMc"
+      stylename="dungeonExplore.DungeonExploreView.MoveMc"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.FrameTitleText"
+      textFormatStyle="dungeonexplore.FrameTitile_t"
+      filterString="core.FrameTitile_g"
+      autoSize="none"
+      width="165"
+      height="25"
+      x="598"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      parentStyle="core.whiteItemTipsBg"
+      stylename="dungeonexplore.eventLiftBg"
+      x="0"
+      y="9"
+      width="190"
+      height="110" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DungeonExplore.EventListView.btn"
+      backStyle="asset.DungeonExplore.EventLiftView.BtnBg"
+      iconStyle="asset.DungeonExplore.EventLiftView.BtnTxt"
+      iconInnerRectString="45,59,11,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="110" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="dungeonExplore.InfoView.FindBtn"
+      button="dungeonExplore.FindBtnMc"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5"
+      x="208"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="dungeonExplore.FindBtnMc"
+      resourceLink="asset.DungeonExplore.InfoView.FindBtn"
+      x="30"
+      y="-250" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="dungeonExplore.Infoview.Icon"
+      resourceLink="asset.resourcesBar.VoucherIconAsset,asset.resourcesBar.GiftIconAsset"
+      imageRectString="0|18|0|18|13,82|20|0|17|13"
+      x="26"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonExplore.Infoview.VoucherTxt"
+      textFormatStyle="dungeonexplore.VoucherText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="43"
+      y="57"
+      width="68"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonExplore.Infoview.GiftTxt"
+      textFormatStyle="dungeonexplore.VoucherText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="129"
+      y="57"
+      width="78"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.InfoView.shoesTxt"
+      textFormatStyle="core.FrameTitile_t"
+      filterString="core.FrameTitile_g"
+      autoSize="none"
+      width="65"
+      height="25"
+      x="25"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.InfoView.lifeTxt"
+      textFormatStyle="core.FrameTitile_t"
+      filterString="core.FrameTitile_g"
+      autoSize="none"
+      width="65"
+      height="25"
+      x="25"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dungeonexplore.InfoView.addShoesBtn"
+      backStyle="asset.DungeonExplore.InfoView.addImg"
+      width="28"
+      height="28"
+      x="52"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dungeonexplore.InfoView.addLifeBtn"
+      backStyle="asset.DungeonExplore.InfoView.addImg"
+      width="28"
+      height="28"
+      x="52"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dungeonexplore.DungeonExploreBoxView.DownBtn"
+      backStyle="asset.DungeonExplore.DungeonExploreBoxSmall.DownBtnImg"
+      width="42"
+      height="37"
+      x="72"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dungeonexplore.DungeonExploreBoxView.UpBtn"
+      backStyle="asset.DungeonExplore.DungeonExploreBoxSmall.UpBtnImg"
+      width="42"
+      height="37"
+      x="71"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.DungeonExploreBoxView.SortLinkTxt"
+      textFormatStyle="dungeonexplore.DungeonExploreBoxView.SortLinkTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="25"
+      x="110"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.DungeonExploreBoxView.countText"
+      textFormatStyle="dungeonexplore.DungeonExploreBoxView.countText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="25"
+      x="80"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="dungeonexplore.DungeonexploreSortBg"
+      parentStyle="core.describeBackground_style06"
+      width="680"
+      height="390"
+      x="-15"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dungeonexplore.DungeonexploreListBG"
+      parentStyle="core.describeBackground_style40"
+      width="670"
+      height="330"
+      x="-10"
+      y="10" />
+    <component
+      classname="dungeonexplore.view.DungeonExploreSortFrame"
+      stylename="dungeonexplore.DungeonExploreSortFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="700"
+      height="480" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="dungeonexplore.DungeonexploreSort.ListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,1,-2,0,3"
+      viewportInnerRectString="0,0,5,2,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|dungeonexplore.sort.DungeonexploreSortItemAsset,29,583"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="652"
+      height="300"
+      x="7"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dungeonexplore.sort.HeroRankItemBack02"
+      parentStyle="core.TitleBack_Style888"
+      width="645"
+      height="29"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="dungeonexplore.sort.ItemBg"
+      resourceLink=",dungeonexplore.sort.HeroRankItemBack02"
+      height="25"
+      x="-3"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextValueStyle1"
+      textFormatStyle="dungeonexplore.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextValueStyle2"
+      textFormatStyle="dungeonexplore.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="193"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextValueStyle3"
+      textFormatStyle="dungeonexplore.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="225"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextValueStyle4"
+      textFormatStyle="dungeonexplore.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="355"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="dungeonexplore.sort.ItemTextValueStyle5"
+      textFieldStyle="dungeonexplore.sort.AppellNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="150"
+      x="475"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextStyle1"
+      textFormatStyle="dungeonexplore.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="13"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextStyle2"
+      textFormatStyle="dungeonexplore.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="193"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextStyle3"
+      textFormatStyle="dungeonexplore.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="385"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextStyle4"
+      textFormatStyle="dungeonexplore.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="380"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.ItemTextStyle5"
+      textFormatStyle="dungeonexplore.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="505"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="dungeonexplore.sort.ItemTextStyle2_vip"
+      textFieldStyle="dungeonexplore.sort.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.AppellNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.score"
+      textFormatStyle="dungeonexplore.sort.ScoreText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="25"
+      x="140"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.sort.sort"
+      textFormatStyle="dungeonexplore.sort.sortText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="540"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dungeonexplore.describeBackground_style"
+      resourceLink="asset.dungeonexplore.scale9bg1,asset.dungeonexplore.scale9bg2,asset.dungeonexplore.scale9bg3,asset.dungeonexplore.scale9bg4,asset.dungeonexplore.scale9bg5,asset.dungeonexplore.scale9bg6,asset.dungeonexplore.scale9bg7,asset.dungeonexplore.scale9bg8,asset.dungeonexplore.scale9bg9" />
+    <component
+      classname="dungeonexplore.view.DungeonExploreEventViewBase"
+      stylename="dungeonexplore.DungeonExploreEventViewBase"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="500"
+      backStyle="dungeonexplore.EventFrame.back"
+      height="400"
+      closeInnerRectString="29,-15,-3,29,14"
+      titleOuterRectPosString="0,-5,1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="dungeonexplore.EventFrame.back"
+      resourceLink="dungeonexplore.describeBackground_style,core.FrameTitleImage1"
+      imageRectString="-18|-15|0|23|0,245|19|-5|0|9" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonExploreEvtFrameSmall"
+      stylename="dungeonexplore.eventframe.DungeonExploreEvtFrameSmall"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="274"
+      height="248" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="dungeonexplore.EventDsc"
+      textFormatStyle="dungeonexplore.EventDsc_t"
+      autoSize="none"
+      x="-3"
+      y="95"
+      width="250"
+      height="47"
+      mouseEnabled="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="17"
+      y="41" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonExploreEvtFrameBig"
+      stylename="dungeonexplore.eventframe.DungeonExploreEvtFrameBig"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="520"
+      height="330" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonExploreBattleFrame"
+      stylename="dungeonexplore.eventframe.DungeonExploreBattleFrame"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="465"
+      height="290" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonExploreBlackFrame"
+      stylename="dungeonexplore.eventframe.DungeonExploreBlackFrame"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="490"
+      height="330" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonExpDieLifeFrame"
+      stylename="dungeonexplore.eventframe.DungeonExpDieLifeFrame"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="403"
+      height="375" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonCardFrame"
+      stylename="dungeonexplore.eventframe.DungeonCardFrame"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="560"
+      height="330" />
+    <component
+      classname="dungeonexplore.view.eventframe.DungeonItemCardFrame"
+      stylename="dungeonexplore.eventframe.DungeonItemCardFrame"
+      parentStyle="dungeonexplore.DungeonExploreEventViewBase"
+      width="560"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DungeonExplore.EventbattleView.BattleBtn"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnGreen"
+      iconStyle="asset.DungeonExplore.EventFrame3.BattleTxtImg"
+      iconInnerRectString="59,45,11,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="280"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DungeonExplore.EventbattleView.BuyRoadBtn"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnYellow"
+      iconStyle="asset.DungeonExplore.EventFrame3.BuyRoadTxtImg"
+      iconInnerRectString="58,46,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="40"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DungeonExplore.EventbattleView.JumpBtn"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnRed"
+      iconStyle="asset.DungeonExplore.EventFrame3.JumpTxtImg"
+      iconInnerRectString="59,45,11,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="220"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DungeonExplore.EventbattleView.NameTxt"
+      textFormatStyle="dungeonExplore.EventbattleView.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      x="140"
+      y="35"
+      width="125"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DungeonExplore.EventbattleView.BattleTxt"
+      textFormatStyle="dungeonExplore.EventbattleView.Type_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      x="140"
+      y="65"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DungeonExplore.EventbattleView.TypeTxt"
+      textFormatStyle="dungeonExplore.EventbattleView.Type_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      x="140"
+      y="88"
+      width="125"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DungeonExplore.EventFrameView.Buybtn"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnGlod"
+      iconStyle="asset.DungeonExplore.EventFrame3.BuyTxtImg"
+      iconInnerRectString="30,42,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="95"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="DungeonExplore.EventbattleView.JumpBtn"
+      stylename="DungeonExplore.EventMarketView.JumpBtn"
+      x="70"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DungeonExplore.EventMarketView.OkBtn"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnGreen"
+      iconStyle="asset.DungeonExplore.EventFrame3.OkTxtImg"
+      iconInnerRectString="60,45,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="220"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="DungeonExplore.EventbattleView.JumpBtn"
+      stylename="DungeonExplore.EventDieLifeView.SkipBtn"
+      x="25"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="DungeonExplore.EventMarketView.OkBtn"
+      stylename="DungeonExplore.EventDieLifeView.OkBtn"
+      x="195"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DungeonExplore.EventbattleView.BattleTxt"
+      stylename="DungeonExplore.EventDieLifeView.NameTxt0"
+      textFormatStyle="dungeonExplore.EventDieLifeView.Type_t"
+      x="40"
+      y="35"
+      width="105"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DungeonExplore.EventbattleView.BattleTxt"
+      stylename="DungeonExplore.EventDieLifeView.SorceTxt0"
+      textFormatStyle="dungeonExplore.EventDieLifeView.Type_t"
+      x="40"
+      y="150"
+      width="115"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DungeonExplore.EventbattleView.BattleTxt"
+      stylename="DungeonExplore.EventDieLifeView.NameTxt1"
+      textFormatStyle="dungeonExplore.EventDieLifeView.Type_t"
+      x="220"
+      y="35"
+      width="105"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DungeonExplore.EventbattleView.BattleTxt"
+      stylename="DungeonExplore.EventDieLifeView.SorceTxt1"
+      textFormatStyle="dungeonExplore.EventDieLifeView.Type_t"
+      x="220"
+      y="145"
+      width="105"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnBigRed"
+      iconStyle="asset.DungeonExplore.EventFrame3.OkTxtImg"
+      iconInnerRectString="36,45,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      stylename="DungeonExplore.EventCardView.OkBtn"
+      x="205"
+      y="210" />
+    <component
+      stylename="DungeonExplore.CardItemSoreTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      textFormatStyle="dungeonExplore.CardItemSoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="105"
+      height="20"
+      x="20"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonExplore.fishCDText"
+      textFormatStyle="dungeonExplore.CDText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="5"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="dungeonexplore.sort.ListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,1,-2,0,3"
+      viewportInnerRectString="0,0,5,2,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|dungeonexplore.sort.sortItemAsset,29,583"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="652"
+      height="300"
+      x="7"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      backStyle="asset.DungeonExplore.EventFrame3.BtnBigRed"
+      iconStyle="asset.DungeonExplore.EventFrameCard.BeginImg"
+      iconInnerRectString="36,45,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      stylename="DungeonExplore.EventCardView.BeginBtn"
+      x="205"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dungeonexplore.BackToLifeBtn"
+      backStyle="asset.DungeonExplore.DungeonExplore.BackToLifeBtnImg"
+      x="-20"
+      y="-95"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DungeonExplore.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="28"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dungeonexplore.helpFrameBackground_style"
+      resourceLink="asset.dungeonexplore.help.scale9bg1,asset.dungeonexplore.help.scale9bg2,asset.dungeonexplore.help.scale9bg3,asset.dungeonexplore.help.scale9bg4,asset.dungeonexplore.help.scale9bg5,asset.dungeonexplore.help.scale9bg6,asset.dungeonexplore.help.scale9bg7,asset.dungeonexplore.help.scale9bg8,asset.dungeonexplore.help.scale9bg9" />
+    <component
+      classname="dungeonexplore.view.DungeonExploreHelpFrame"
+      stylename="dungeonexplore.eventframe.DungeonExploreHelpFrame"
+      parentStyle="core.Frame1"
+      height="330"
+      containerX="15"
+      containerY="40"
+      width="500"
+      backStyle="dungeonexplore.HelpFrame.back"
+      closeInnerRectString="29,-20,-8,29,14"
+      titleOuterRectPosString="0,-5,1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="dungeonexplore.HelpFrame.back"
+      resourceLink="dungeonexplore.helpFrameBackground_style,core.FrameTitleImage1"
+      imageRectString="-18|-15|0|23|0,245|19|-5|0|9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.HelpFrame.DscTxt"
+      textFormatStyle="dungeonexplore.HelpDsc_t"
+      filterString="core.FrameTitile_g"
+      autoSize="none"
+      width="530"
+      height="45"
+      wordWrap="true"
+      x="-32"
+      y="228" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="dungeonexplore.EventDescribe"
+      textFormatStyle="dungeonexplore.describeText_t"
+      autoSize="none"
+      x="85"
+      y="45"
+      width="160"
+      height="47"
+      mouseEnabled="false"
+      wordWrap="true" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="dungeonexplore.RiverNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="dungeonexplore.RiverNotAlert_confirmStyle"
+      cancelStyle="dungeonexplore.RiverNotAlert_cancelStyle"
+      checkStyle="dungeonexplore.RiverNotAlertCheckBtn"
+      describeStyle="dungeonexplore.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="dungeonexplore.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="8"
+      containerY="30"
+      usebindPointStyle="dungeonexplore.UseBindPointBtn"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="420"
+      height="210"
+      notJoinActPromptStyle="dungeonexplore.notJoinActPromptTxt"
+      showJoinActPrompt="true" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="dungeonexplore.RiverNotAlert2"
+      parentStyle="worldboss.RiverNotAlert2"
+      confirmStyle="dungeonexplore.RiverNotAlert_confirmStyle_2"
+      cancelStyle="dungeonexplore.RiverNotAlert_cancelStyle_2"
+      checkStyle="dungeonexplore.RiverNotAlertCheckBtn2"
+      describeStyle="dungeonexplore.AlertTextStyle2"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="dungeonexplore.AlertTextStyle2"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="370"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.notJoinActPromptTxt"
+      textFormatStyle="campaign.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="25"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.RiverNotAlert_confirmStyle_2"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="50"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.RiverNotAlert_cancelStyle_2"
+      parentStyle="core.AlertButton_2"
+      x="190"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.RiverNotAlertCheckBtn2"
+      parentStyle="core.ThewCheckBtn"
+      x="110"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.RiverNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="70"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.RiverNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="210"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="40"
+      x="0"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dungeonexplore.AlertTextStyle2"
+      parentStyle="dungeonexplore.AlertTextStyle"
+      width="380" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="dungeonexplore.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DungeonExplore.DungeonExploreMapView.LvBg"
+      resourceLink="asset.DungeonExplore.DungeonExploreMapView.LvBg"
+      scaleGridString="40,5,140,6"
+      width="220"
+      height="49"
+      x="567"
+      y="10" />
+  </components>
+</style>

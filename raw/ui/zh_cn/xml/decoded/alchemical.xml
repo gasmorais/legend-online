@@ -1,0 +1,786 @@
+<style
+  name="alchemical"
+  source="ui/zh_cn/swf/alchemical.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalExploitView.speedLeftText_t"
+      args="Arial,14,0x00c913,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalNeedMaterialItem.needText_t1"
+      args="Arial,13,0x00ff00,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalNeedMaterialItem.needText_t2"
+      args="Arial,13,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeMaterialView.stepBtn.text_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteFormulaItem.formulaName_t1"
+      args="Arial,16,0xe1d093,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteFormulaItem.formulaName_t2"
+      args="Arial,16,0x04EF25,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteFormulaItem.formulaName_t3"
+      args="Arial,16,0x707070,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeCooperationItem.formulaName_t"
+      args="Arial,13,0xfed700,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeCooperationItem.joinName_t"
+      args="Arial,13,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeCooperationItem.processText_t"
+      args="Arial,13,0xfeb300,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeCooperationItem.leftTime_t"
+      args="Arial,13,0xfe0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeCooperationItem.inviteText_t"
+      args="Arial,15,0x00FF00,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteBookView.scoreText_t"
+      args="Arial,16,0xd9aa6a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteBookView.descText_t"
+      args="Arial,16,0xFFF200,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteBookView.lookRewardText_t"
+      args="Arial,15,0x00FFFC,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalScoreRewardView.rewardTitleText_t"
+      args="Arial,13,0x00FFFC,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalScoreRewardView.rewardDescText_t"
+      args="Arial,13,0xe1d093,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AlchemicalMakeNoteBookView.singleBtn.text_t"
+      args="Arial,14,0xCC9966,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.AlchemicalExploitView.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AlchemicalMakeBagCell.lockBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AlchemicalMakeNoteBookView.aboveBack"
+      x="0"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.AlchemicalMakeCooperationItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AlchemicalMakeNoteFormulaItem.selectBack"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="alchemical.AlchemicalExploitView"
+      stylename="AlchemicalFrame.exploitView"
+      x="40"
+      y="15" />
+    <custom
+      classname="alchemical.AlchemicalMakeView"
+      stylename="AlchemicalFrame.makeView"
+      x="40"
+      y="15" />
+    <custom
+      classname="alchemical.AlchemicalMineItem"
+      stylename="AlchemicalExploitView.mineItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="50"
+      tipGapV="20"
+      isFollowMouse="false" />
+    <custom
+      classname="alchemical.makeview.AlchemicalMakeBagView"
+      stylename="AlchemicalMakeView.bagView"
+      x="5"
+      y="412" />
+    <custom
+      classname="alchemical.makeview.AlchemicalMakeMaterialView"
+      stylename="AlchemicalMakeView.materialView"
+      x="5"
+      y="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="AlchemicalMakeBagView.SimpleTileList"
+      vSpace="2"
+      hSpace="2" />
+    <custom
+      classname="alchemical.makeview.AlchemicalMakeBagCell"
+      stylename="AlchemicalMakeBagView.BagCell"
+      parentStyle="core.BaseItemView"
+      iconStyle="AlchemicalMakeBagView.BagCellIcon" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="AlchemicalMakeBagView.BagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="AlchemicalNeedMaterialItem.item"
+      iconStyle="AlchemicalNeedMaterialItem.CellIcon"
+      strengthenX="32"
+      strengthenY="32"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="AlchemicalNeedMaterialItem.CellIcon"
+      parentStyle="core.BaseItemViewIcon"
+      loadingX="32"
+      loadingY="32"
+      iconWidth="64"
+      iconHeight="64"
+      x="0"
+      y="0" />
+    <custom
+      classname="alchemical.makeview.AlchemicalNeedMaterialItem"
+      stylename="AlchemicalMakeMaterialView.needItem1"
+      x="41"
+      y="75" />
+    <custom
+      classname="alchemical.makeview.AlchemicalNeedMaterialItem"
+      stylename="AlchemicalMakeMaterialView.needItem2"
+      x="515"
+      y="69" />
+    <custom
+      classname="alchemical.makeview.AlchemicalNeedMaterialItem"
+      stylename="AlchemicalMakeMaterialView.needItem3"
+      x="41"
+      y="206" />
+    <custom
+      classname="alchemical.makeview.AlchemicalNeedMaterialItem"
+      stylename="AlchemicalMakeMaterialView.needItem4"
+      x="515"
+      y="200" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="AlchemicalMakeMaterialView.catalystItem"
+      parentStyle="core.BaseItemView"
+      x="290"
+      y="42" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="AlchemicalMakeMaterialView.propItem1"
+      iconStyle="AlchemicalMakeMaterialView.propItemIcon"
+      textStyle="AlchemicalMakeMaterialView.propItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="64"
+      profileHeight="64"
+      isShowProfile="true"
+      strengthenX="32"
+      strengthenY="32"
+      x="198"
+      y="124" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="AlchemicalMakeMaterialView.propItemIcon"
+      parentStyle="core.BaseItemViewIcon"
+      loadingX="32"
+      loadingY="32"
+      iconWidth="64"
+      iconHeight="64"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="AlchemicalMakeMaterialView.propItem2"
+      parentStyle="AlchemicalMakeMaterialView.propItem1"
+      x="360"
+      y="124" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="AlchemicalMakeMaterialView.propItem3"
+      parentStyle="AlchemicalMakeMaterialView.propItem1"
+      x="279"
+      y="242" />
+    <custom
+      classname="alchemical.makeview.AlchemicalMakeNoteBookView"
+      stylename="AlchemicalMakeView.noteBookView"
+      x="634"
+      y="25" />
+    <custom
+      classname="alchemical.makeview.AlchemicalMakeCooperationView"
+      stylename="AlchemicalMakeView.cooperationView"
+      x="634"
+      y="25" />
+    <custom
+      classname="alchemical.makeview.AlchemicalMakeNoteFormulaItem"
+      stylename="AlchemicalMakeFormulaBtnItem.FormulaBtnItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapH="20"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <custom
+      classname="asset.AlchemicalMakeMaterialView.catalystMc"
+      stylename="AlchemicalMakeMaterialView.catalystMc"
+      x="315"
+      y="60" />
+  </customDisplay>
+  <components>
+    <component
+      classname="alchemical.AlchemicalFrame"
+      stylename="alchemical.AlchemicalFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="51"
+      width="945"
+      height="620" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="AlchemicalFrame.border"
+      parentStyle="core.describeBackground_style11"
+      width="875"
+      height="515"
+      x="37"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AlchemicalFrame.exploitBtn"
+      selectedStyle="asset.AlchemicalFrame.exploitBtnSelectedBack"
+      unSelectedStyle="asset.AlchemicalFrame.exploitBtnUnselectedBack"
+      selectedIconStyle="asset.AlchemicalFrame.exploitSelectBtn"
+      unselectedIconStyle="asset.AlchemicalFrame.exploitUnSelectBtn"
+      selectedIconInnerRectString="14,15,23,83,13"
+      unselectedIconInnerRectString="14,15,23,83,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-1"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AlchemicalFrame.makeBtn"
+      selectedStyle="asset.AlchemicalFrame.exploitBtnSelectedBack"
+      unSelectedStyle="asset.AlchemicalFrame.exploitBtnUnselectedBack"
+      selectedIconStyle="asset.AlchemicalFrame.makeSelectBtn"
+      unselectedIconStyle="asset.AlchemicalFrame.makeUnSelectBtn"
+      selectedIconInnerRectString="14,15,25,81,13"
+      unselectedIconInnerRectString="14,15,25,81,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-1"
+      y="200" />
+    <!--开采界面-->
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="AlchemicalMineItem.mineImageContiner"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalExploitView.speedLeftText"
+      textFormatStyle="AlchemicalExploitView.speedLeftText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="346"
+      height="20"
+      x="515"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AlchemicalMineItem.speedBtn"
+      backStyle="asset.AlchemicalMineItem.speedBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AlchemicalMineItem.getRewardBtn"
+      backStyle="asset.AlchemicalMineItem.getRewardBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="AlchemicalExploitView.mineContiner"
+      x="0"
+      y="0" />
+    <!--制作界面-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="AlchemicalMakeView.back"
+      resourceLink="asset.AlchemicalMakeView.leftBack,AlchemicalMakeView.splitLine,asset.AlchemicalMakeView.rightBack"
+      imageRectString="0|-3|19,630|0|19,632|0|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="AlchemicalMakeView.splitLine"
+      resourceLink="asset.AlchemicalMakeView.splitLine"
+      scaleGridString="1,1,3,2"
+      width="3"
+      height="506" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="AlchemicalMakeBagView.equipStrengScroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="10,3,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="625"
+      height="95"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalNeedMaterialItem.needText"
+      textFormatStyle="AlchemicalNeedMaterialItem.needText_t1,AlchemicalNeedMaterialItem.needText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="-12"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeMaterialView.propItemText"
+      parentStyle="core.BaseItemText"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-5"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="AlchemicalMakeMaterialView.stepBtn1"
+      selectedStyle="AlchemicalMakeMaterialView.stepBtn1.select01"
+      unSelectedStyle="AlchemicalMakeMaterialView.stepBtn1.unselect01"
+      textStyle="AlchemicalMakeMaterialView.stepBtn.text"
+      backgoundInnerRectString="9,13,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      x="50"
+      y="355" />
+    <!--   未完成的样式   -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="AlchemicalMakeMaterialView.stepBtn1.select01"
+      resourceLink="asset.core.AlertBtnStyle_01,asset.AlchemicalMakeCooperationItem.selectBack"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="AlchemicalMakeMaterialView.stepBtn1.unselect01"
+      resourceLink="asset.core.AlertBtnStyle_01"
+      imageRectString="0|96|0|40|13" />
+    <!--   已完成的样式   -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="AlchemicalMakeMaterialView.stepBtn1.select02"
+      resourceLink="asset.core.AlertBtnStyle_02,asset.AlchemicalMakeCooperationItem.selectBack"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="AlchemicalMakeMaterialView.stepBtn1.unselect02"
+      resourceLink="asset.core.AlertBtnStyle_02"
+      imageRectString="0|96|0|40|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="AlchemicalMakeMaterialView.stepBtn2"
+      parentStyle="AlchemicalMakeMaterialView.stepBtn1"
+      x="190"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="AlchemicalMakeMaterialView.stepBtn3"
+      parentStyle="AlchemicalMakeMaterialView.stepBtn1"
+      x="330"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="AlchemicalMakeMaterialView.stepBtn4"
+      parentStyle="AlchemicalMakeMaterialView.stepBtn1"
+      x="470"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeMaterialView.stepBtn.text"
+      textFormatStyle="AlchemicalMakeMaterialView.stepBtn.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AlchemicalMakeMaterialView.makeBtn"
+      backStyle="asset.AlchemicalMakeMaterialView.makeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="378"
+      y="260" />
+    <!--   右侧界面   -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AlchemicalMakeView.noteBookBtn"
+      selectedStyle="asset.AlchemicalMakeView.noteBookBtnSelectedBack"
+      unSelectedStyle="asset.AlchemicalMakeView.noteBookBtnSUnselectedBack"
+      selectedIconStyle="asset.AlchemicalMakeView.noteBookSelectBtn"
+      unselectedIconStyle="asset.AlchemicalMakeView.noteBookUnSelectBtn"
+      selectedIconInnerRectString="30,60,6,17,13"
+      unselectedIconInnerRectString="30,60,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="635"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AlchemicalMakeView.cooperationBtn"
+      selectedStyle="asset.AlchemicalMakeView.noteBookBtnSelectedBack"
+      unSelectedStyle="asset.AlchemicalMakeView.noteBookBtnSUnselectedBack"
+      selectedIconStyle="asset.AlchemicalMakeView.cooperationSelectBtn"
+      unselectedIconStyle="asset.AlchemicalMakeView.cooperationUnSelectBtn"
+      selectedIconInnerRectString="30,60,2,26,13"
+      unselectedIconInnerRectString="30,60,2,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="750"
+      y="5" />
+    <!--   装备   -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AlchemicalMakeFormulaBtnItem.titleBtn1"
+      backStyle="asset.AlchemicalMakeNoteBookView.equipSelectBack"
+      iconStyle="asset.AlchemicalMakeNoteBookView.equipSelectText"
+      iconInnerRectString="10,42,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--   纹章圣物   -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AlchemicalMakeFormulaBtnItem.titleBtn2"
+      backStyle="asset.AlchemicalMakeNoteBookView.equipSelectBack"
+      iconStyle="asset.AlchemicalMakeNoteBookView.relicSelectText"
+      iconInnerRectString="10,79,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--   神器   -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AlchemicalMakeFormulaBtnItem.titleBtn3"
+      backStyle="asset.AlchemicalMakeNoteBookView.equipSelectBack"
+      iconStyle="AlchemicalMakeNoteBookView.artifactSelectText"
+      iconInnerRectString="10,42,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--   泰坦   -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AlchemicalMakeFormulaBtnItem.titleBtn4"
+      backStyle="asset.AlchemicalMakeNoteBookView.equipSelectBack"
+      iconStyle="asset.AlchemicalMakeNoteBookView.titanSelectText"
+      iconInnerRectString="10,41,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--   圣器   -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AlchemicalMakeFormulaBtnItem.titleBtn5"
+      backStyle="asset.AlchemicalMakeNoteBookView.equipSelectBack"
+      iconStyle="asset.AlchemicalMakeNoteBookView.hallowsSelectText"
+      iconInnerRectString="10,41,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--   护灵   -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AlchemicalMakeFormulaBtnItem.titleBtn6"
+      backStyle="asset.AlchemicalMakeNoteBookView.equipSelectBack"
+      iconStyle="asset.AlchemicalMakeNoteBookView.nursingSpiritSelectText"
+      iconInnerRectString="10,41,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="AlchemicalMakeNoteBookView.btnItemPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,228,0,0,2"
+      vScrollbarInnerRectString="15,-5,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="15"
+      width="228"
+      height="262"
+      x="0"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AlchemicalMakeNoteBookView.btnItemVBox"
+      spacing="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AlchemicalMakeFormulaBtnItem.formulaVbox"
+      spacing="0"
+      x="5"
+      y="34" />
+    <!--   配方信息   -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeNoteFormulaItem.formulaName"
+      textFormatStyle="AlchemicalMakeNoteFormulaItem.formulaName_t1,AlchemicalMakeNoteFormulaItem.formulaName_t2,AlchemicalMakeNoteFormulaItem.formulaName_t3"
+      autoSize="none"
+      width="195"
+      height="20"
+      isAutoFitLength="true"
+      x="10"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeNoteBookView.scoreText"
+      textFormatStyle="AlchemicalMakeNoteBookView.scoreText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="50"
+      x="8"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeNoteBookView.descText"
+      textFormatStyle="AlchemicalMakeNoteBookView.descText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="220"
+      height="60"
+      x="8"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeNoteBookView.lookRewardText"
+      textFormatStyle="AlchemicalMakeNoteBookView.lookRewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="123"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="AlchemicalScoreRewardView.commonTipBg"
+      resourceLink="asset.core.describeBackground_style07"
+      scaleGridString="10,10,250,70"
+      alpha="0.8"
+      width="350"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="AlchemicalScoreRewardView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,335,5,0,2"
+      vScrollbarInnerRectString="15,-5,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="15"
+      width="335"
+      height="400"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AlchemicalScoreRewardView.vbox"
+      spacing="2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalScoreRewardView.rewardTitleText"
+      textFormatStyle="AlchemicalScoreRewardView.rewardTitleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="280"
+      height="20"
+      x="5"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalScoreRewardView.rewardDescText"
+      textFormatStyle="AlchemicalScoreRewardView.rewardDescText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="190"
+      height="20"
+      x="0"
+      y="0" />
+    <!--协作界面-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AlchemicalMakeCooperationView.lookLastPageBtn"
+      backStyle="asset.AlchemicalMakeCooperationView.lookLastPageBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="40"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AlchemicalMakeCooperationView.lookNextPageBtn"
+      backStyle="asset.AlchemicalMakeCooperationView.lookNextPageBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="AlchemicalMakeCooperationView.lookPageBg"
+      resourceLink="asset.core.pageBg"
+      x="82"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeCooperationView.lookPageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="85"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AlchemicalMakeCooperationView.vbox"
+      x="-1"
+      y="9"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="AlchemicalMakeCooperationItem.selectBack"
+      resourceLink="asset.AlchemicalMakeCooperationItem.selectBack"
+      scaleGridString="20,10,30,20"
+      width="233"
+      height="109" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeCooperationItem.formulaName"
+      textFormatStyle="AlchemicalMakeCooperationItem.formulaName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="30"
+      x="10"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeCooperationItem.joinName"
+      textFormatStyle="AlchemicalMakeCooperationItem.joinName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="10"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeCooperationItem.processText"
+      textFormatStyle="AlchemicalMakeCooperationItem.processText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="10"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeCooperationItem.leftTime"
+      textFormatStyle="AlchemicalMakeCooperationItem.leftTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="10"
+      y="69" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeCooperationItem.inviteText"
+      textFormatStyle="AlchemicalMakeCooperationItem.inviteText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="20"
+      x="3"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="AlchemicalMakeMaterialView.addCatalystBtn"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="311"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="AlchemicalMakeCooperationItem.catalystImage"
+      resourceLink="asset.AlchemicalMakeCooperationItem.catalystImage1,asset.AlchemicalMakeCooperationItem.catalystImage2,asset.AlchemicalMakeCooperationItem.catalystImage3"
+      x="100"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="AlchemicalMakeNoteBookView.cooperationBtn"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedIconInnerRectString="0,23,0,23,13"
+      unselectedIconInnerRectString="0,23,0,23,13"
+      textStyle="AlchemicalMakeNoteBookView.singleBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="15"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="AlchemicalMakeNoteBookView.singleBtn"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedIconInnerRectString="0,23,0,23,13"
+      unselectedIconInnerRectString="0,23,0,23,13"
+      textStyle="AlchemicalMakeNoteBookView.singleBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="15"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AlchemicalMakeNoteBookView.singleBtn.text"
+      textFormatStyle="AlchemicalMakeNoteBookView.singleBtn.text_t"
+      filterString="core.normal_f"
+      width="80"
+      height="22"
+      x="23"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="AlchemicalMakeFormulaBtnItem.arrowImage"
+      resourceLink="asset.AlchemicalMakeFormulaBtnItem.arrowImage1,asset.AlchemicalMakeFormulaBtnItem.arrowImage2"
+      x="190"
+      y="12" />
+  </components>
+</style>

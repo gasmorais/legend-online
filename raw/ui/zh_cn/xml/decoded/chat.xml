@@ -1,0 +1,1080 @@
+<style
+  name="chat"
+  source="ui/zh_cn/swf/chat.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.ChatPopTxt_f"
+      args="Arial,14,0x643804,,,,,,center" />
+    <!-- 当前 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_8"
+      args="Arial,12,0xffffff" />
+    <!-- 组队 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_6"
+      args="Arial,12,0x939dff" />
+    <!-- 公会 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_5"
+      args="Arial,12,0x4cd551" />
+    <!-- 世界 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_10"
+      args="Arial,12,0xeb9504" />
+    <!-- 本区大喇叭 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_1"
+      args="Arial,12,0x00d8ff" />
+    <!-- 跨区大喇叭 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_13"
+      args="Arial,12,0xffba01" />
+    <!-- 列表选中文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.list_selected_f"
+      args="Arial,12,0xffefbd" />
+    <!-- 列表普通文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.list_f"
+      args="Arial,12,0xdcb55c" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.ChatOutputChannelText_1"
+      args="Arial,12,0xecdfa1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.ChatOutputChannelText_2"
+      args="Arial,12,0xecdfa1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.ChanelBtnTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.BugleViewTF_1"
+      args="Arial,14,0x00d8ff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.BugleViewTF_2"
+      args="Arial,12,0x00d8ff"
+      leading="2"
+      letterSpacing="0" />
+    <!-- 列表普通文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.list_unselected_f"
+      args="Arial,12,0xdcb55c" />
+    <!-- 列表选中文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.ChatPopTF"
+      args="Arial,12,0x643804,,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="chatII.ChanelBtnTxt_f"
+      args="0x1d1109,1,3,3,5" />
+    <!-- 表情 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.ExpressionList.NameTxt_f"
+      args="Arial,12,0xc1c1c1,,,,,,left" />
+    <!-- 称号 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chat.AppellTextStyle_t"
+      args="Arial,12,0xffffff,true,,,,,left" />
+    <!--团队-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_14"
+      args="Arial,12,0xff8989" />
+    <!-- 外域 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="chatII.InputChannelTF_109"
+      args="Arial,12,0xeb9504" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.chatII.GmIcon" />
+    <bitmapData
+      resourceLink="asset.chatII.BigBugleIcon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chatII.NormalBugleBg" />
+    <bitmapData
+      resourceLink="asset.chatII.FriendIcon"
+      x="22"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.chatII.ConsortiaIcon"
+      x="22"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.chatII.FriendBtnSelectBack"
+      x="3"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chatII.BugleIcon"
+      x="0"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.chatII.CrossBugleIcon2"
+      x="0"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.chat.channel_1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_8"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_12"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_5"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_10"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chat.channel_6"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chatII.ExpressionPanelBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chatII.ExpressionCutOffRule"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.chatII.ExpressionSelected"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="chat.view.ChatBugleViewII"
+      stylename="chatII.ChatBugleViewII"
+      y="0" />
+    <custom
+      classname="chat.view.ChatOutputViewII"
+      stylename="chatII.ChatOutputViewII"
+      y="0" />
+    <custom
+      classname="chat.view.ChatInputViewII"
+      stylename="chatII.ChatInputViewII"
+      y="0" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="chatII.DownShineEffect"
+      x="-58"
+      y="85" />
+    <custom
+      classname="asset.chatII.ChatOutputChannelText"
+      stylename="asset.chatII.ChatOutputChannelText"
+      x="0"
+      y="0" />
+    <!-- 表情 -->
+    <custom
+      classname="asset.chatII.Expression01"
+      stylename="chatII.Expression00" />
+    <custom
+      classname="asset.chatII.Expression02"
+      stylename="chatII.Expression01" />
+    <custom
+      classname="asset.chatII.Expression03"
+      stylename="chatII.Expression02" />
+    <custom
+      classname="asset.chatII.Expression04"
+      stylename="chatII.Expression03" />
+    <custom
+      classname="asset.chatII.Expression05"
+      stylename="chatII.Expression04" />
+    <custom
+      classname="asset.chatII.Expression06"
+      stylename="chatII.Expression05" />
+    <custom
+      classname="asset.chatII.Expression07"
+      stylename="chatII.Expression06" />
+    <custom
+      classname="asset.chatII.Expression08"
+      stylename="chatII.Expression07" />
+    <custom
+      classname="asset.chatII.Expression09"
+      stylename="chatII.Expression08" />
+    <custom
+      classname="asset.chatII.Expression10"
+      stylename="chatII.Expression09" />
+    <custom
+      classname="asset.chatII.Expression11"
+      stylename="chatII.Expression10" />
+    <custom
+      classname="asset.chatII.Expression12"
+      stylename="chatII.Expression11" />
+    <custom
+      classname="asset.chatII.Expression13"
+      stylename="chatII.Expression12" />
+    <custom
+      classname="asset.chatII.Expression14"
+      stylename="chatII.Expression13" />
+    <custom
+      classname="asset.chatII.Expression15"
+      stylename="chatII.Expression14" />
+    <custom
+      classname="asset.chatII.Expression16"
+      stylename="chatII.Expression15" />
+    <custom
+      classname="asset.chatII.Expression17"
+      stylename="chatII.Expression16" />
+    <custom
+      classname="asset.chatII.Expression18"
+      stylename="chatII.Expression17" />
+    <custom
+      classname="asset.chatII.Expression19"
+      stylename="chatII.Expression18" />
+    <custom
+      classname="asset.chatII.Expression20"
+      stylename="chatII.Expression19" />
+    <custom
+      classname="asset.chatII.AppellQualityEffect"
+      stylename="chatII.AppellQualityEffect" />
+    <custom
+      classname="asset.chatII.Appell1"
+      stylename="chatII.Appell1" />
+    <custom
+      classname="asset.chatII.Appell2"
+      stylename="chatII.Appell2" />
+    <custom
+      classname="asset.chatII.Appell3"
+      stylename="chatII.Appell3" />
+    <custom
+      classname="asset.chatII.Appell4"
+      stylename="chatII.Appell4" />
+    <custom
+      classname="asset.chatII.Appell5"
+      stylename="chatII.Appell5" />
+    <custom
+      classname="asset.chatII.Appell6"
+      stylename="chatII.Appell6" />
+    <custom
+      classname="asset.chatII.Appell7"
+      stylename="chatII.Appell7" />
+    <custom
+      classname="asset.chatII.Appell8"
+      stylename="chatII.Appell8" />
+    <custom
+      classname="asset.chatII.Appell9"
+      stylename="chatII.Appell9" />
+    <custom
+      classname="asset.chatII.Appell10"
+      stylename="chatII.Appell10" />
+    <custom
+      classname="asset.chatII.Appell11"
+      stylename="chatII.Appell11" />
+    <custom
+      classname="asset.chatII.Appell12"
+      stylename="chatII.Appell12" />
+    <custom
+      classname="asset.chatII.WORLDMAPLIGHTBg"
+      stylename="chatII.WORLDMAPLIGHTBg" />
+    <custom
+      classname="asset.chatII.Expression21"
+      stylename="chatII.Expression20" />
+    <custom
+      classname="asset.chatII.Expression22"
+      stylename="chatII.Expression21" />
+    <custom
+      classname="asset.chatII.Expression23"
+      stylename="chatII.Expression22" />
+    <custom
+      classname="asset.chatII.Expression24"
+      stylename="chatII.Expression23" />
+    <custom
+      classname="asset.chatII.Expression25"
+      stylename="chatII.Expression24" />
+    <custom
+      classname="asset.chatII.Expression26"
+      stylename="chatII.Expression25" />
+    <custom
+      classname="asset.chatII.Expression27"
+      stylename="chatII.Expression26" />
+    <custom
+      classname="asset.chatII.Expression28"
+      stylename="chatII.Expression27" />
+    <custom
+      classname="asset.chatII.Expression29"
+      stylename="chatII.Expression28" />
+    <custom
+      classname="asset.chatII.Expression30"
+      stylename="chatII.Expression29" />
+    <custom
+      classname="asset.chatII.Expression31"
+      stylename="chatII.Expression30" />
+    <custom
+      classname="asset.chatII.Expression32"
+      stylename="chatII.Expression31" />
+    <custom
+      classname="asset.chatII.Expression33"
+      stylename="chatII.Expression32" />
+    <custom
+      classname="asset.chatII.Expression34"
+      stylename="chatII.Expression33" />
+    <custom
+      classname="asset.chatII.Expression35"
+      stylename="chatII.Expression34" />
+    <custom
+      classname="asset.chatII.Expression36"
+      stylename="chatII.Expression35" />
+    <custom
+      classname="asset.chatII.Expression37"
+      stylename="chatII.Expression36" />
+    <custom
+      classname="asset.chatII.Expression38"
+      stylename="chatII.Expression37" />
+    <custom
+      classname="asset.chatII.Expression39"
+      stylename="chatII.Expression38" />
+    <custom
+      classname="asset.chatII.Expression40"
+      stylename="chatII.Expression39" />
+    <!--	注：去掉顶字表情	-->
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="chatII.VBox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <!-- 输出框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.ChatOutputBack"
+      resourceLink="asset.chatII.ChatBackBg"
+      width="322"
+      height="195"
+      x="5"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatOutputToBottomBtn"
+      backStyle="asset.chatII.ChatOutputToBottomBtn"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="chatII.ChatOutputScrollbar"
+      parentStyle="core.VScrollbar03"
+      unitIncrement="17"
+      x="5"
+      y="3"
+      height="102" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="chatII.ChatOutputChannelBox"
+      x="7"
+      y="124"
+      spacing="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.ChatOutputChannelText"
+      textFormatStyle="chatII.ChatOutputChannelText_1,chatII.ChatOutputChannelText_1,chatII.ChatOutputChannelText_2,chatII.ChatOutputChannelText_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="54"
+      height="20"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.ChatOututChannelBack1"
+      resourceLink="asset.chatII.OutputChannelBack1,asset.chatII.OutputChannelBack2,asset.chatII.OutputChannelBack2,asset.chatII.OutputChannelBack2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatOututChannelBtn1"
+      backStyle="chatII.ChatOututChannelBack1"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatOututChannelBtn2"
+      backStyle="asset.chatII.OutputChannelBack3"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="chatII.ChatOutputAllBtn"
+      unSelectedStyle="chatII.ChatOututChannelBtn1"
+      selectedStyle="chatII.ChatOututChannelBtn2"
+      textStyle="chatII.ChatOutputChannelText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="chatII.ChatOutputWorldBtn"
+      textStyle="chatII.ChatOutputChannelText"
+      parentStyle="chatII.ChatOutputAllBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="chatII.ChatOutputTeamBtn"
+      parentStyle="chatII.ChatOutputWorldBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="chatII.ChatOutputConsortiaBtn"
+      textStyle="asset.chatII.ChatOutputChannelText"
+      parentStyle="chatII.ChatOutputWorldBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="chatII.ChatOutputInfoBtn"
+      parentStyle="chatII.ChatOutputWorldBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatOutputUpBtn"
+      backStyle="asset.chatII.ChatOutputUpBtn"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="275"
+      y="-61" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatOutputDownBtn"
+      backStyle="asset.chatII.ChatOutputDownBtn"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="296"
+      y="-61" />
+    <!-- 输入框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.ChatInputBack1"
+      parentStyle="core.describeBackground_style04"
+      width="320"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.ChatInputBack2"
+      resourceLink="asset.chatII.Inputback"
+      scaleGridString="10,4,304,18"
+      width="192"
+      height="26"
+      x="80"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.InPutTxt"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      width="158"
+      height="20"
+      x="84"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="chatII.ChatInputFriendsBtn"
+      unSelectedStyle="asset.chatII.FriendBtnBack"
+      selectedStyle="asset.chatII.FriendBtnBack"
+      width="19"
+      height="26"
+      autoSizeAble="false"
+      backgoundInnerRectString="1,0,0,1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="268"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatCleanBtn"
+      backStyle="asset.chatII.CleanBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="295"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatExpressionBtn"
+      backStyle="asset.chatII.ExpressionBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="273"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.ChatSendBtn"
+      backStyle="asset.chatII.SendBtnBack"
+      backgoundInnerRectString="1,0,0,1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="244"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.InputChannelBack"
+      resourceLink="asset.chatII.ChatPanelUp,asset.chatII.ChatPanelOver,asset.chatII.ChatPanelOver,asset.chatII.ChatPanelUp"
+      width="59"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.InputChanelTxt"
+      textFormatStyle="chatII.ChanelBtnTxt_t"
+      filterString="chatII.ChanelBtnTxt_f"
+      autoSize="none"
+      width="70"
+      height="22" />
+    <component
+      classname="chat.view.ChatPanelButton"
+      stylename="chatII.InputChannelBtn"
+      backStyle="chatII.InputChannelBack"
+      textStyle="chatII.InputChanelTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,5,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="70"
+      height="26"
+      x="6"
+      y="4" />
+    <!-- 频道选择按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.PanelSelectBtnBack"
+      resourceLink="asset.chatII.PanelSelectedUpBack,asset.chatII.PanelSelectedBack,asset.chatII.PanelSelectedBack,asset.chatII.PanelSelectedBack" />
+    <!-- 频道选择世界按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.WorldText"
+      textFormatStyle="chatII.InputChannelTF_10"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="18"
+      x="88"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelWorldSelectBtn"
+      backStyle="chatII.PanelSelectBtnBack"
+      textStyle="chatII.WorldText"
+      autoSizeAble="false"
+      backgoundInnerRectString="1,0,-2,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="80"
+      height="16"
+      x="7"
+      y="25" />
+    <!-- 频道选择跨区大喇叭按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.CrossBugleText"
+      textFormatStyle="chatII.InputChannelTF_13"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="88"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelCrossBugleSelectBtn"
+      parentStyle="chatII.PanelWorldSelectBtn"
+      textStyle="chatII.CrossBugleText"
+      y="10" />
+    <!-- 频道选择本区大喇叭按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.BugleText"
+      textFormatStyle="chatII.InputChannelTF_1"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="75"
+      height="18"
+      x="88"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelBugleSelectBtn"
+      parentStyle="chatII.PanelWorldSelectBtn"
+      textStyle="chatII.BugleText"
+      y="5" />
+    <!--当前过滤按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.CurrentText"
+      textFormatStyle="chatII.InputChannelTF_8"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelCurrentSelectBtn"
+      parentStyle="chatII.PanelWorldSelectBtn"
+      textStyle="chatII.CurrentText"
+      y="85" />
+    <!-- 频道选择组队按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.TeamText"
+      textFormatStyle="chatII.InputChannelTF_6"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelTeamSelectBtn"
+      parentStyle="chatII.PanelWorldSelectBtn"
+      textStyle="chatII.TeamText"
+      y="45" />
+    <!-- 频道选择公会按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.ConsortiaText"
+      textFormatStyle="chatII.InputChannelTF_5"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelConsortiaSelectBtn"
+      parentStyle="chatII.PanelWorldSelectBtn"
+      textStyle="chatII.ConsortiaText"
+      y="65" />
+    <!-- 滚动大喇叭 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.BugleViewText"
+      textFormatStyle="chatII.BugleViewTF_1,chatII.BugleViewTF_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="540"
+      height="40"
+      y="30"
+      x="68" />
+    <!--大喇叭-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.BugleIcon"
+      resourceLink="asset.chatII.BugleIcon,asset.chatII.MarryBugleIcon1,asset.chatII.MarryBugleIcon2,asset.chatII.CrossBugleIcon2"
+      x="0"
+      y="-3" />
+    <!--大喇叭背景-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.BugleBg"
+      resourceLink="chatII.NormalBugleBg,asset.chatII.RoseBugleBg,chatII.WarlordsBugleBg,chatII.CrossBugleBg,chatII.marryBugleBg,chatII.WORLDMAPLIGHTBg,chatII.SnowRoseBugleBg,chatII.RoseCross"
+      x="-10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.SnowRoseBugleBg"
+      resourceLink="asset.chatII.SnowRoseBugleBg"
+      width="715"
+      x="-35"
+      y="-15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="chatII.marryBugleBg"
+      resourceLink="asset.chatII.marryBack,asset.chatII.marryBigFlower"
+      imageRectString="0|689|15|42|13,6|698|0|71|13"
+      x="50"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.CrossBugleBg"
+      resourceLink="asset.chatII.CrossBugleBg"
+      width="600"
+      height="50"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.NormalBugleBg"
+      resourceLink="asset.chatII.NormalBugleBg"
+      width="650"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.WarlordsBugleBg"
+      resourceLink="asset.chatII.WarlordsBugleBg"
+      x="41"
+      y="-11"
+      width="610" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="chatII.RoseLaceImg"
+      resourceLink="asset.core.LaceStyle04,asset.core.LaceStyle02,asset.core.LaceStyle03,chatII.LaceStyle01,chatII.LaceStyle02"
+      imageRectString="-38|98|-13|24|13,-41|100|15|39|13,467|187|-16|39|13,478|81|-12|26|13,660|100|16|39|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="chatII.LaceStyle01"
+      resourceLink="asset.core.LaceStyle01"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="chatII.LaceStyle02"
+      resourceLink="asset.core.LaceStyle02"
+      scaleX="-1" />
+    <!-- 聊天菜单 -->
+    <!-- 公告选择 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.ItemMenuText"
+      textFormatStyle="chatII.list_unselected_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="103"
+      height="23"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.ItemMenuPanelSelectBtnBack"
+      resourceLink="asset.chatII.PanelSelectedUpBack,asset.chatII.FriendListCellback,asset.chatII.FriendListCellback,asset.chatII.PanelSelectedUpBack" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.chatMessageSelectBtn"
+      backStyle="chatII.ItemMenuPanelSelectBtnBack"
+      textStyle="chatII.ItemMenuText"
+      autoSizeAble="false"
+      backgoundInnerRectString="5,10,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      width="103"
+      height="23"
+      x="0"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.addfriendSelectBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.copyNameSelectBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.blacklistSelectBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.messageSelectBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.consortiaSelectBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.proposeBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.applyJoinBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="175" />
+    <!-- 聊天泡泡背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="chatII.ChatPopAsset"
+      resourceLink="asset.chatII.ChatPopToprAsset,asset.chatII.ChatPopCenterAsset,asset.chatII.ChatPopBottomAsset"
+      width="170"
+      height="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.ChatPopTxt"
+      textFormatStyle="chatII.ChatPopTxt_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="146"
+      height="20"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chatII.BattlechatClean"
+      backStyle="asset.chatII.BattleChatCleanBtn"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      x="288"
+      y="130" />
+    <!-- 好友选择背景  -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.FriendListBack"
+      parentStyle="core.commonTipBg"
+      scaleGridString="10,10,250,70"
+      width="174"
+      height="159" />
+    <!-- ChatListPanel -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="chatII.FriendListBtnSelectBackUp"
+      resourceLink="asset.chatII.FriendListCellback"
+      scaleGridString="10,5,124,11"
+      alpha="0"
+      width="144"
+      height="21" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="chatII.FriendList"
+      parentStyle="core.ComboxListpanel1"
+      backgoundStyle="chatII.FriendListBtnSelectBackUp"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|chatII.FriendCell,24,150"
+      width="168"
+      height="126"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="chatII.FriendListCellback"
+      resourceLink="chatII.FriendListBtnSelectBackUp,asset.chatII.FriendListCellback,asset.chatII.FriendListCellback,chatII.FriendListBtnSelectBackUp" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.FriendListCellText"
+      textFormatStyle="chatII.list_f,chatII.list_selected_f,chatII.list_selected_f,chatII.list_selected_f"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.cell.TextButtonListCellAdapter"
+      stylename="chatII.FriendCell"
+      backStyle="chatII.FriendListCellback"
+      backgoundInnerRectString="6,10,4,5,-1"
+      textStyle="chatII.FriendListCellText"
+      autoSizeAble="false"
+      width="144"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="chat.VipText"
+      colors="0xfff8ad,0xff9c00"
+      alphas="1,1"
+      ratios="60,230"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chat.AppellTextStyle"
+      textFormatStyle="chat.AppellTextStyle_t"
+      mouseEnabled="false"
+      autoSize="left" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="chat.AppellText1"
+      textFieldStyle="chat.AppellTextStyle"
+      colors="0xffffff,0xffac29"
+      alphas="1,1"
+      ratios="30,127" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="chat.AppellText2"
+      textFieldStyle="chat.AppellTextStyle"
+      colors="0xffffff,0xff02e4"
+      alphas="1,1"
+      ratios="30,127" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="chat.AppellText3"
+      textFieldStyle="chat.AppellTextStyle"
+      colors="0xffffff,0x02c6ff"
+      alphas="1,1"
+      ratios="30,127" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="chat.ChatList"
+      vScrollbarStyle="chatII.ChatOutputScrollbar"
+      vScrollbarInnerRectString="0,16,0,17,2"
+      viewportInnerRectString="21,1,0,,5"
+      vScrollProxy="0"
+      vUnitIncrement="18"
+      width="290"
+      height="132"
+      x="7"
+      y="0" />
+    <!-- 表情 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.ExpressionList.NameTxt"
+      textFormatStyle="chatII.ExpressionList.NameTxt_f"
+      x="7"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChatItemMenu.VBox"
+      mouseEnabled="false"
+      strictHeight="20"
+      x="4"
+      y="3"
+      spacing="2"
+      width="88" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="chatII.flower.Image"
+      resourceLink="asset.chatII.marrySmallFlower,chatII.marrySmallFlower.scaleX"
+      mouseChildren="false"
+      mouseEnabled="false"
+      imageRectString="0|296|0|26|13,296|296|87|26|13"
+      x="20"
+      y="-18" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="chatII.marrySmallFlower.scaleX"
+      resourceLink="asset.chatII.marrySmallFlower"
+      scaleX="-1" />
+    <!--  频道选择团队按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelGroupTeamSelectBtn"
+      parentStyle="chatII.PanelWorldSelectBtn"
+      textStyle="chatII.GroupTeamText"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.GroupTeamText"
+      textFormatStyle="chatII.InputChannelTF_14"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="chatII.RoseCross"
+      resourceLink="asset.chatII.RoseCrossBg"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.pkBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="chatII.ExpressionList.ExpressionPanelBg"
+      resourceLink="asset.chatII.ExpressionPanelBg1,asset.chatII.ExpressionPanelBg2,asset.chatII.ExpressionPanelBg3,asset.chatII.ExpressionPanelBg4,asset.chatII.ExpressionPanelBg5,asset.chatII.ExpressionPanelBg6,asset.chatII.ExpressionPanelBg7,asset.chatII.ExpressionPanelBg8,asset.chatII.ExpressionPanelBg9"
+      width="285"
+      height="141" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="chatII.ExpressionList.ExpressionCutOffRule"
+      resourceLink="asset.chatII.ExpressionCutOffRule,asset.chatII.ExpressionCutOffRule"
+      mouseChildren="false"
+      mouseEnabled="false"
+      imageRectString="0|136|0|109|13,135|136|0|109|13"
+      x="7"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="chatII.panel1"
+      vScrollbarStyle="chat.VScrollbar04"
+      viewportInnerRectString="1,295,0,0,2"
+      vScrollbarInnerRectString="287,5,2,71,13"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="285"
+      height="75"
+      x="30"
+      y="5"
+      maximum="20" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="chatII.panel2"
+      vScrollbarStyle="chat.VScrollbar04"
+      viewportInnerRectString="1,295,0,0,2"
+      vScrollbarInnerRectString="287,5,2,31,13"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="285"
+      height="35"
+      x="30"
+      y="-75"
+      maximum="20" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="chat.VScrollbar04"
+      trackStyle="core.Scrollbar04_BackV"
+      thumbStyle="core.Scrollbar04_StepV"
+      decreaseButtonStyle="core.Scrollbar04_Up"
+      increaseButtonStyle="core.Scrollbar04_Down"
+      trackInnerRectString="1,1,0,0,0"
+      thumbAreaInnerRectString="2,1,10,10,0"
+      decreaseButtonInnerRectString="11,11,-1,4,9"
+      increaseButtonInnerRectString="11,11,4,-1,10"
+      orientation="0"
+      thumbMinSize="38"
+      width="5"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.inviteToRideBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="chatII.ChatOutputOutyardBtn"
+      parentStyle="chatII.ChatOutputWorldBtn" />
+    <!-- 频道选择外域按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chatII.OutyardText"
+      textFormatStyle="chatII.InputChannelTF_10"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="18"
+      x="88"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="chatII.PanelOutyardSelectBtn"
+      backStyle="chatII.PanelSelectBtnBack"
+      textStyle="chatII.OutyardText"
+      autoSizeAble="false"
+      backgoundInnerRectString="1,0,-2,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="80"
+      height="16"
+      x="7"
+      y="25" />
+  </components>
+</style>

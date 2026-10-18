@@ -1,0 +1,901 @@
+<style
+  name="svsmap"
+  source="ui/zh_cn/swf/svsmap.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="svs.SvsView.ListBtnTxt_t"
+      args="Arial,14,0x01fd36,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="svs.SvsRankItem.RankTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="svsmap.BlueCountTxt_t"
+      args="Arial,12,0x41c7ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="svsmap.RedCountTxt_t"
+      args="Arial,12,0xff3311,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="svsmap.CountDownTxt_t"
+      args="Arial,12,0xeed28f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="svsmap.SvsInfoTips_t"
+      args="Arial,42,0xFFFFFF,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="svs.EnterWarText04_t"
+      args="Arial,10,0xe4d29c,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.svsmap.svsFrameBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.svsmap.svsFrameVSIcon"
+      x="170"
+      y="320" />
+    <bitmapData
+      resourceLink="asset.svsmap.timeNumBmd" />
+    <bitmapData
+      resourceLink="asset.svsmap.timeNumBmdGold" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="svs.view.warteam.SvsEnterWarLeftView"
+      stylename="svs.SvsEnterWarLeftView"
+      x="2" />
+    <custom
+      classname="svs.view.warteam.SvsEnterWarRightView"
+      stylename="svs.SvsEnterWarRightView"
+      x="385" />
+    <custom
+      classname="asset.svsmap.BuleScoreBar"
+      stylename="svsmap.BuleScoreBar"
+      x="228"
+      y="21" />
+    <custom
+      classname="asset.svsmap.RedScoreBar"
+      stylename="svsmap.RedScoreBar"
+      x="228"
+      y="21" />
+    <custom
+      classname="asset.svsmap.svsTopBg"
+      stylename="svsmap.svsTopBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.svsmap.svsViewOpenTips"
+      stylename="svsmap.svsViewOpenTips"
+      x="120"
+      y="260" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="svs.SvsView.YearSprite"
+      x="360"
+      y="260" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="svs.SvsView.MouthSprite"
+      x="320"
+      y="260" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="svs.SvsView.DaySprite"
+      x="280"
+      y="260" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="svs.SvsView.StartHourSprite"
+      x="450"
+      y="260" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="svs.SvsView.StartMinuteSprite"
+      x="485"
+      y="260" />
+  </customDisplay>
+  <components>
+    <!-- 服战（混沌之战）主界面 -->
+    <component
+      classname="svs.view.SvsFrame"
+      stylename="svs.SvsFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="svs.SvsView.Bg"
+      resourceLink="asset.svsmap.svsViewBg"
+      x="185"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svs.SvsView.JoinBtn"
+      backStyle="asset.svsmap.svsFrameJoinBtnBg"
+      iconStyle="asset.svsmap.svsFrameJoinBtnTxt"
+      iconInnerRectString="41,141,15,38,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="389"
+      y="420" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="svs.SvsView.ShopBtn"
+      backStyle="asset.svsmap.svsFrameShopBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsView.ListBtn"
+      textFormatStyle="svs.SvsView.ListBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="625"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svs.SvsView.RankBtn"
+      backStyle="asset.svsmap.svsFrameSortBtnBg"
+      iconStyle="asset.svsmap.svsFrameSortBtnTxt"
+      iconInnerRectString="8,64,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svs.SvsView.HelpBtn"
+      backStyle="asset.svsmap.svsFrameHelpBtnBg"
+      iconStyle="asset.svsmap.svsFrameHelpBtnTxt"
+      iconInnerRectString="8,64,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="svs.SvsView.SelfServerName"
+      textFieldStyle="svs.SvsView.SelfServerNameTxt"
+      colors="0xffffff,0xffb32e,0x741e0a"
+      filterString="consortia.consortianame_f"
+      alphas="1,1,1"
+      ratios="60,120,230"
+      width="460"
+      height="60"
+      x="0"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsView.SelfServerNameTxt"
+      textFormatStyle="consortia.ConsortiaNameRight_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="460"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="svs.SvsView.MatchServerName"
+      textFieldStyle="svs.SvsView.MatchServerNameTxt"
+      colors="0xffffff,0x15b9e2,0x084dc0"
+      filterString="consortia.consortianame_f"
+      alphas="1,1,1"
+      ratios="60,120,230"
+      width="460"
+      height="60"
+      x="552"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsView.MatchServerNameTxt"
+      textFormatStyle="consortia.ConsortiaNameLeft_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="460"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="svs.SvsView.SvsInfoTips"
+      textFieldStyle="svs.SvsView.SvsInfoTipsTxt"
+      colors="0xffffff,0xffb32e,0x741e0a"
+      filterString="consortia.consortianame_f"
+      alphas="1,1,1"
+      ratios="60,120,230"
+      width="640"
+      height="60"
+      x="180"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsView.SvsInfoTipsTxt"
+      textFormatStyle="svsmap.SvsInfoTips_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="640"
+      height="60" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="svs.HelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="svs.view.SvsFrame.helpContent"
+      titleText="svs.view.SvsFrame.helpTitle"
+      textWidth="363" />
+    <!-- SvsEnterWarFrame -->
+    <component
+      classname="svs.view.warteam.SvsEnterWarFrame"
+      stylename="svs.SvsEnterWarFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      containerY="60"
+      width="536"
+      height="530" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsEnterWarFrame.Bg"
+      resourceLink="core.describeBackground_style04"
+      imageRectString="0|502|0|383|13"
+      x="-20"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svs.AddMemberButton"
+      backStyle="asset.core.AlertBtnStyle_01"
+      parentStyle="gvg.ManagerAddButton"
+      textStyle="gvg.AddMemberButtonText"
+      iconStyle="asset.mainToolBar.TipsAddFriendsIcon"
+      iconInnerRectString="10,20,10,22,13"
+      backgoundInnerRectString="28,0,10,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="177"
+      y="390"
+      width="96"
+      height="40"
+      autoCenter="false" />
+    <!-- SvsEnterWarRightView -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsEnterWarRightView.Bg"
+      resourceLink="core.describeBackground_style04"
+      imageRectString="0|502|0|353|13"
+      x="-20"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="svs.SvsEnterWarRightView.ContentBg"
+      parentStyle="core.describeBackground_style40"
+      width="494"
+      height="338"
+      x="-16"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsEnterWarRightView.TitileGap"
+      resourceLink="asset.svsmap.titleGap,asset.svsmap.titleGap,asset.svsmap.titleGap,asset.svsmap.titleGap"
+      imageRectString="150|18|0|28|13,220|18|0|28|13,310|18|0|28|13,380|18|0|28|13"
+      x="-16"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarRightView.NameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="20"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarRightView.GradesTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="155"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarRightView.StateTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="210"
+      y="35"
+      wordWrap="true"
+      width="90"
+      heigth="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarRightView.TeamTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="310"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarRightView.FightPowerTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="370"
+      y="35"
+      wordWrap="true"
+      width="110"
+      heigth="40" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="svs.SvsEnterWarRightView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="0,0,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="493"
+      height="308"
+      x="-15"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="svs.SvsEnterWarRightView.Vbox"
+      width="500"
+      spacing="2"
+      height="305" />
+    <!-- SvsEnterWarRightItem -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="svs.EnterWarItemBg"
+      resourceLink="asset.gvg.Itembg11,asset.gvg.Itembg21"
+      width="491"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="svs.EnterWarOverBg"
+      parentStyle="core.ItemOver1"
+      width="480"
+      x="-4"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.EnterWarText01_R"
+      textFormatStyle="gvg.Style.EnterWarText01_t1,gvg.Style.EnterWarText01_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="63"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="svs.EnterWarText01_R.GradientText"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="svs.EnterWarText01_R.GradientTextField"
+      width="105"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.EnterWarText01_R.GradientTextField"
+      textFormatStyle="gvg.VipNameTxt_f"
+      autoSize="none"
+      width="105"
+      height="20"
+      x="63"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.EnterWarText02"
+      textFormatStyle="gvg.Style.EnterWarText02"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="155"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.EnterWarText03"
+      textFormatStyle="gvg.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="385"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.EnterWarText04"
+      textFormatStyle="svs.EnterWarText04_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="90"
+      height="20"
+      x="210"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.EnterWarText05"
+      textFormatStyle="gvg.Style.EnterWarText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="315"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="svs.CaptainFlag"
+      resourceLink="asset.core.CaptainIcon"
+      x="7"
+      y="5"
+      width="22"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="svs.EnterWarDelBtn"
+      backStyle="asset.core.deleteBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="455"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="svs.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="152"
+      y="3" />
+    <!-- SvsEnterWarLeftView -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsEnterWarLeftView.Bg"
+      resourceLink="core.describeBackground_style04"
+      imageRectString="0|360|0|353|13"
+      x="-20"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="svs.SvsEnterWarLeftView.ContentBg"
+      parentStyle="core.describeBackground_style40"
+      width="352"
+      height="338"
+      x="-16"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsEnterWarLeftView.TitileGap"
+      resourceLink="asset.svsmap.titleGap,asset.svsmap.titleGap"
+      imageRectString="150|18|0|28|13,220|18|0|28|13"
+      x="-16"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarLeftView.NameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="17"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarLeftView.GradesTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="155"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsEnterWarLeftView.FightPowerTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="225"
+      y="35"
+      width="100"
+      height="36"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="svs.SvsEnterWarLeftView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="0,0,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="348"
+      height="308"
+      x="-15"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="svs.SvsEnterWarLeftView.Vbox"
+      width="349"
+      spacing="2"
+      height="305" />
+    <!--  -->
+    <component
+      classname="svs.view.warteam.SvsEnterWarAddFrame"
+      stylename="svs.SvsEnterWarAddFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      width="925"
+      height="478" />
+    <!--  -->
+    <component
+      classname="svs.view.ranklists.SvsRankListFrame"
+      stylename="svs.SvsRankListFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="20"
+      width="450"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsRankListFrame.Bg"
+      resourceLink="core.describeBackground_style04,asset.warlords.SplitLine,asset.core.pageBg,svs.SvsRankListFrame.MyRankBg"
+      imageRectString="0|427|0|416|13,2|423|312|3|13,179|64|320|33|13,"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsRankListFrame.MyRankBg"
+      resourceLink="svs.SvsRankListFrameMyRankBgBack,asset.warlords.MyRankTxtBg,asset.svsmap.svsRankTxt,asset.warlords.RankTxt,warlords.WarlordsRankFrameTxtBg,asset.warlords.FightTxt,warlords.WarlordsRankFrameTxtBg"
+      imageRectString="0|422|0|55|13,0|146|-9|17|13,0|96|-10|16|13,25|37|25|15|13,66|120|19|27|13,230|43|25|15|13,279|120|19|27|13"
+      x="3"
+      y="359" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="svs.SvsRankListFrameMyRankBgBack"
+      resourceLink="asset.warlords.MyRankBg" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="svs.SvsRankListFrame.ContentBg"
+      parentStyle="core.describeBackground_style40"
+      width="420"
+      height="310"
+      x="4"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="svs.SvsRankListFrame.TitileGap"
+      resourceLink="asset.svsmap.titleGap,asset.svsmap.titleGap"
+      imageRectString="110|18|0|28|13,270|18|0|28|13"
+      x="4"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankListFrame.RankTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="30"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankListFrame.NameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="170"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankListFrame.FightTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="285"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankListFrame.PageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="180"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svs.SvsRankListFrame.PrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="104"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svs.SvsRankListFrame.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="250"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankListFrame.MyRankTxt"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="77"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankListFrame.MyFightTxt"
+      parentStyle="warlords.WarlordsRankFrameMyRankTxt"
+      autoSize="none"
+      width="105"
+      height="20"
+      x="290"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="svs.SvsRankListFrame.ItemVBox"
+      spacing="1"
+      x="5"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="svs.SvsRankItem.ItemGap"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      width="418"
+      height="3"
+      x="0"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="svs.SvsRankItem.RankImg"
+      resourceLink="asset.svsmap.RankNum1,asset.svsmap.RankNum2,asset.svsmap.RankNum3"
+      x="40"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankItem.RankTxt"
+      textFormatStyle="svs.SvsRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankItem.NameTxt"
+      textFormatStyle="svs.SvsRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="120"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svs.SvsRankItem.FightPowerTxt"
+      textFormatStyle="svs.SvsRankItem.RankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="280"
+      y="5" />
+    <!-- 地图 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="svs.SvsView.MemberBtn"
+      backStyle="asset.svsmap.svsMemberBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="svsmap.Winner"
+      resourceLink="asset.svsmap.svsTopParity,asset.svsmap.svsTopBlue,asset.svsmap.svsTopRed"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="213"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svsmap.BlueCountTxt"
+      filterString="core.normal_f"
+      textFormatStyle="svsmap.BlueCountTxt_t"
+      autoSize="none"
+      width="47"
+      height="22"
+      x="8"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svsmap.BlueNameTxt"
+      filterString="core.normal_f"
+      textFormatStyle="svsmap.BlueCountTxt_t"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="55"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svsmap.RedCountTxt"
+      filterString="core.normal_f"
+      textFormatStyle="svsmap.RedCountTxt_t"
+      autoSize="none"
+      width="47"
+      height="22"
+      x="398"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="svsmap.RedNameTxt"
+      filterString="core.normal_f"
+      textFormatStyle="svsmap.RedCountTxt_t"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="295"
+      y="40" />
+    <!-- 第一轮按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn1Selected"
+      backStyle="asset.svsmap.turnSelectedBg"
+      iconStyle="asset.svsmap.turnSelected1"
+      width="95"
+      height="28"
+      iconInnerRectString="13,68,0,29,13"
+      x="-2"
+      y="-5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnUnselected1"
+      width="95"
+      height="28"
+      iconInnerRectString="13,68,0,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtn1"
+      unSelectedStyle="svsmap.TurnBtn1Unselected"
+      selectedStyle="svsmap.TurnBtn1Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="320"
+      y="240" />
+    <!-- 第二轮按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn2Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      x="-2"
+      y="-5"
+      iconStyle="asset.svsmap.turnSelected2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn2Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnUnselected2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtn2"
+      unSelectedStyle="svsmap.TurnBtn2Unselected"
+      selectedStyle="svsmap.TurnBtn2Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="410"
+      y="240" />
+    <!-- 第三轮按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn3Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      x="-2"
+      y="-5"
+      iconStyle="asset.svsmap.turnSelected3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn3Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnUnselected3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtn3"
+      unSelectedStyle="svsmap.TurnBtn3Unselected"
+      selectedStyle="svsmap.TurnBtn3Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="500"
+      y="240" />
+    <!-- 第四轮按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn4Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      x="-2"
+      y="-5"
+      iconStyle="asset.svsmap.turnSelected4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtn4Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnUnselected4" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtn4"
+      unSelectedStyle="svsmap.TurnBtn4Unselected"
+      selectedStyle="svsmap.TurnBtn4Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="590"
+      y="240" />
+    <!-- 第一轮按钮黄金 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold1Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      iconStyle="asset.svsmap.turnGold1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold1Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnGold1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtnGold1"
+      unSelectedStyle="svsmap.TurnBtnGold1Unselected"
+      selectedStyle="svsmap.TurnBtnGold1Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="320"
+      y="240" />
+    <!-- 第二轮按钮黄金 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold2Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      iconStyle="asset.svsmap.turnGold2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold2Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnGold2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtnGold2"
+      unSelectedStyle="svsmap.TurnBtnGold2Unselected"
+      selectedStyle="svsmap.TurnBtnGold2Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="410"
+      y="240" />
+    <!-- 第三轮按钮黄金 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold3Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      iconStyle="asset.svsmap.turnGold3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold3Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnGold3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtnGold3"
+      unSelectedStyle="svsmap.TurnBtnGold3Unselected"
+      selectedStyle="svsmap.TurnBtnGold3Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="500"
+      y="240" />
+    <!-- 第四轮按钮黄金 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold4Selected"
+      parentStyle="svsmap.TurnBtn1Selected"
+      iconStyle="asset.svsmap.turnGold4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="svsmap.TurnBtnGold4Unselected"
+      parentStyle="svsmap.TurnBtn1Unselected"
+      iconStyle="asset.svsmap.turnGold4" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="svsmap.TurnBtnGold4"
+      unSelectedStyle="svsmap.TurnBtnGold4Unselected"
+      selectedStyle="svsmap.TurnBtnGold4Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="590"
+      y="240" />
+    <!--  混沌之战立即战斗-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="svs.SvsView.BeginWarBtn"
+      backStyle="asset.svsmap.svsBeginWarBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="130" />
+  </components>
+</style>

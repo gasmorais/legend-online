@@ -1,0 +1,278 @@
+<style
+  name="allmanexchange"
+  source="ui/zh_cn/swf/allmanexchange.swf">
+  <sets>
+    <!--主界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtTime_t"
+      args="Arial,12,0x00ceff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtTodayCount_t"
+      args="Arial,12,0xedbf83,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtAllScore_t"
+      args="Arial,16,0xfffb8a,,,,,,center"
+      leading="0" />
+    <!--大宝箱 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtSingleProgress_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtExchangeCountStr_t"
+      args="Arial,12,0xedbf83,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtExchangeRemain_t"
+      args="Arial,12,0xb57f57,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtExchangeRemain_t2"
+      args="Arial,12,0xff0000,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtExchangeCount_t"
+      args="Arial,14,0xf9ff95,,,,,,center"
+      leading="0" />
+    <!--小宝箱 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtSingleBoxScore_t"
+      args="Arial,16,0xfffb8a,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.allmanexchange.txtCanGetStr_t"
+      args="Arial,12,0xedbf83,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="allmanexchange_f"
+      args="0xff0000,1,5,5,3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.allmanexchange.img4"
+      x="139"
+      y="374" />
+    <!--大宝箱 -->
+    <bitmapData
+      resourceLink="asset.allmanexchange.img1"
+      x="16"
+      y="147" />
+    <bitmapData
+      resourceLink="asset.allmanexchange.img7"
+      x="110"
+      y="150"
+      width="71"
+      height="25" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="allmanexchange.AllManExchangeFrame.item"
+      parentStyle="core.BaseItemView"
+      x="689"
+      y="4"
+      iconHeight="25"
+      iconWidth="25" />
+  </customDisplay>
+  <components>
+    <!--主界面 -->
+    <component
+      stylename="allmanexchange.AllManExchangeFrame"
+      classname="allmanexchange.AllManExchangeFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="65"
+      width="776"
+      height="537"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,10,25,29,14"
+      moveInnerRectString="0,80,10,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      stylename="allmanexchange.AllManExchangeFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="750"
+      height="429"
+      x="-2"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="allmanexchange.AllManExchangeFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="692"
+      y="-35" />
+    <component
+      stylename="allmanexchange.AllManExchangeFrame.helpFrame"
+      classname="yishi.view.frame.SimpleHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="allmainexchange.str11"
+      titleText="allmainexchange.str12"
+      textWidth="300"
+      isOpenScorll="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtTime"
+      textFormatStyle="ui.allmanexchange.txtTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="145"
+      height="18"
+      x="357"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtTodayCount"
+      textFormatStyle="ui.allmanexchange.txtTodayCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="232"
+      height="22"
+      x="8"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtAllScore"
+      textFormatStyle="ui.allmanexchange.txtAllScore_t"
+      filterString="allmanexchange_f"
+      autoSize="none"
+      width="123"
+      height="20"
+      x="6"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.allmanexchange.pic1"
+      resourceLink="asset.allmanexchange.img6,asset.allmanexchange.img6,asset.allmanexchange.img6,asset.allmanexchange.str2,asset.allmanexchange.str3,asset.allmanexchange.str5,asset.allmanexchange.img5"
+      imageRectString="50|191|193|98|13,280|191|193|98|13,510|191|193|98|13,548|140|17|14|13,171|186|18|16|13,-2|125|358|30|13,120|579|371|22|13"
+      x="0"
+      y="0" />
+    <!--大宝箱 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.allmanexchange.imgBigBox"
+      resourceLink="asset.allmanexchange.icon1,asset.allmanexchange.icon2,asset.allmanexchange.icon3"
+      x="14"
+      y="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtSingleProgress"
+      textFormatStyle="ui.allmanexchange.txtSingleProgress_t"
+      filterString="allmanexchange_f"
+      autoSize="none"
+      width="145"
+      height="18"
+      x="35"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtExchangeCountStr"
+      textFormatStyle="ui.allmanexchange.txtExchangeCountStr_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="18"
+      x="14"
+      y="156" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtExchangeRemain"
+      textFormatStyle="ui.allmanexchange.txtExchangeRemain_t,ui.allmanexchange.txtExchangeRemain_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="218"
+      height="18"
+      x="0"
+      y="219" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtExchangeCount"
+      textFormatStyle="ui.allmanexchange.txtExchangeCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="62"
+      height="18"
+      type="input"
+      restrict="0-9"
+      x="114"
+      y="154" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.allmanexchange.btnExchange"
+      backStyle="asset.allmanexchange.btn1"
+      iconStyle="asset.allmanexchange.str1"
+      iconInnerRectString="17,80,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="54"
+      y="177" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.allmanexchange.btnGetAward"
+      backStyle="asset.allmanexchange.btn2"
+      iconStyle="asset.allmanexchange.str4"
+      iconInnerRectString="16,80,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="54"
+      y="177" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="ui.allmanexchange.mcProgress"
+      resourceLink="asset.allmanexchange.progress"
+      x="9"
+      y="-4" />
+    <!--小宝箱 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.allmanexchange.imgSmallBox"
+      resourceLink="asset.allmanexchange.box1,asset.allmanexchange.box2,asset.allmanexchange.box3"
+      x="12"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtSingleBoxScore"
+      textFormatStyle="ui.allmanexchange.txtSingleBoxScore_t"
+      filterString="allmanexchange_f"
+      autoSize="none"
+      width="68"
+      height="20"
+      x="0"
+      y="74" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.allmanexchange.txtCanGetStr"
+      textFormatStyle="ui.allmanexchange.txtCanGetStr_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="68"
+      height="20"
+      x="66"
+      y="76" />
+  </components>
+</style>

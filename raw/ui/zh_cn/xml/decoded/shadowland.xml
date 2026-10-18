@@ -1,0 +1,320 @@
+<style
+  name="shadowland"
+  source="ui/zh_cn/swf/shadowland.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="shadowLandFrame.txt_t"
+      args="Arial,14,0xf4da94,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="shadowLandNodeItem.nodeIdText_t"
+      args="arial,12,0x957762,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="shadowLandChapterFrame.starItem.text_t"
+      args="arial,16,0xffe400,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="shadowLandFightFrame.txt_t"
+      args="arial,14,0xdecfa4,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ShadowLandFrame.bg"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.ShadowLandMapItem.lockImage"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ShadowLandFrame.icon"
+      x="985"
+      y="18" />
+    <bitmapData
+      resourceLink="asset.ShadowLandChapterFrame.leftBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ShadowLandChapterFrame.line"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ShadowLandNodeItem.bottom"
+      x="0"
+      y="55" />
+    <bitmapData
+      resourceLink="asset.ShadowLandNodeItem.nodeBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ShadowLandNodeItem.selectBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ShadowLandFightFrame.reward"
+      x="22"
+      y="60" />
+    <bitmapData
+      resourceLink="asset.ShadowLandFightFrame.drop"
+      x="60"
+      y="132" />
+    <bitmapData
+      resourceLink="asset.ShadowLandFightFrame.bg"
+      x="3"
+      y="3" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.mapNode.area1"
+      stylename="ShadowLandMapItem.mapMc1" />
+    <custom
+      classname="asset.mapNode.area2"
+      stylename="ShadowLandMapItem.mapMc2" />
+    <custom
+      classname="asset.mapNode.area3"
+      stylename="ShadowLandMapItem.mapMc3" />
+    <custom
+      classname="asset.mapNode.area4"
+      stylename="ShadowLandMapItem.mapMc4" />
+    <custom
+      classname="asset.mapNode.area5"
+      stylename="ShadowLandMapItem.mapMc5" />
+    <custom
+      stylename="shadowLandNodeItem.monsterIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      tipStyle="yishi.view.tips.OneLineTip"
+      iconHeight="48"
+      iconWidth="48"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      loadingX="29"
+      loadingY="29"
+      x="36"
+      y="36" />
+    <custom
+      classname="shadowland.ShadowLandNodeItem"
+      stylename="shadowLandChapterFrame.nodeItem"
+      isFollowMouse="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="shadowLandFightFrame.rewardHBox"
+      spacing="10"
+      x="145"
+      y="43" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="shadowLandFightFrame.dropHBox"
+      spacing="10"
+      x="145"
+      y="115" />
+  </customDisplay>
+  <components>
+    <component
+      classname="shadowland.ShadowLandFrame"
+      stylename="shadowland.ShadowLandFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="26"
+      containerY="70"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="1180"
+      height="770" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="shadowLandFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="1127"
+      height="650" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="shadowLandFrame.mapCon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="shadowLandFrame.txt"
+      textFormatStyle="shadowLandFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="1010"
+      y="18" />
+    <!-- chapter -->
+    <component
+      stylename="shadowland.ShadowLandChapterFrame"
+      classname="shadowland.ShadowLandChapterFrame"
+      containerX="-17"
+      containerY="50"
+      width="1123"
+      height="456"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="shadowLandChapterFrame.bg"
+      resourceLink="asset.ShadowLandChapterFrame.normal,asset.ShadowLandChapterFrame.difficulty" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="shadowLandChapterFrame.normalBtn"
+      unSelectedStyle="asset.ShadowLandChapterFrame.normalUnselectBack"
+      selectedStyle="asset.ShadowLandChapterFrame.normalSelectBack"
+      selectedIconStyle="asset.ShadowLandChapterFrame.normalTxt"
+      unselectedIconStyle="asset.ShadowLandChapterFrame.normalTxt"
+      selectedIconInnerRectString="23,60,60,18,13"
+      unselectedIconInnerRectString="23,60,62,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="112"
+      height="140"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="shadowLandChapterFrame.difficultyBtn"
+      unSelectedStyle="asset.ShadowLandChapterFrame.difficultyUnselectBack"
+      selectedStyle="asset.ShadowLandChapterFrame.difficultySelectBack"
+      selectedIconStyle="asset.ShadowLandChapterFrame.difficultyTxt"
+      unselectedIconStyle="asset.ShadowLandChapterFrame.difficultyTxt"
+      selectedIconInnerRectString="22,63,60,18,13"
+      unselectedIconInnerRectString="22,63,62,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="112"
+      height="140"
+      x="0"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="shadowLandChapterFrame.nodeCon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="shadowLandChapterFrame.backBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.ShadowLandChapterFrame.backTxt"
+      iconInnerRectString="42,48,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="955"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="shadowLandNodeItem.starBit"
+      resourceLink="asset.common.lightStar2"
+      x="48"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="shadowLandNodeItem.nodeIdText"
+      textFormatStyle="shadowLandNodeItem.nodeIdText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="30"
+      y="131" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="shadowLandChapterFrame.boxImage"
+      resourceLink="asset.ShadowLandNodeItem.boxImage1,asset.ShadowLandNodeItem.boxImage2,asset.ShadowLandNodeItem.boxImage3"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-30"
+      isFollowMouse="false"
+      x="955"
+      y="230" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="shadowLandChapterFrame.starItem"
+      firstTxtLink="shadowLandChapterFrame.starItem.text"
+      iconLink="asset.common.lightStar2"
+      layout="right"
+      space="2"
+      x="986"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="shadowLandChapterFrame.starItem.text"
+      textFormatStyle="shadowLandChapterFrame.starItem.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="0"
+      y="0" />
+    <!-- fight -->
+    <component
+      stylename="shadowland.ShadowLandFightFrame"
+      classname="shadowland.ShadowLandFightFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="50"
+      width="450"
+      height="389" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="shadowLandFightFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="425"
+      height="298" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="shadowLandFightFrame.txt"
+      textFormatStyle="shadowLandFightFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="125"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="shadowLandFightFrame.fightBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.ShadowLandFightFrame.fightTxt"
+      iconInnerRectString="46,41,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="shadowLandFightFrame.mopupBtn"
+      backStyle="asset.core.Style45Btn"
+      iconStyle="asset.ShadowLandFightFrame.mopupTxt"
+      iconInnerRectString="38,42,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="shadowLandFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="1080"
+      y="-45" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ShadowLandFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="ShadowLandFrame.helpTxt.text"
+      titleText="ShadowLandFrame.helpTitleText"
+      textWidth="400" />
+  </components>
+</style>

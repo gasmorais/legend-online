@@ -1,0 +1,326 @@
+<style
+  name="countlogin"
+  source="ui/zh_cn/swf/countlogin.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="countlogin.Item.Txt_t"
+      args="Arial,12,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="countlogin.ItemTitke_t"
+      args="Arial,13,0xf9e8c5,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LoginContinueView.timeText_t"
+      args="arial,16,0xd9c17b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LoginContinueItem.dayText_t"
+      args="arial,16,0xf5e8b5,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.countlogin.TitleAsset"
+      x="-2"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.countlogin.LineAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.LoginContinueView.countImage"
+      x="40"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.LoginContinueView.numBitmap" />
+    <bitmapData
+      resourceLink="asset.LoginContinueItem.countImage"
+      x="0"
+      y="4" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="countlogin.DropItem"
+      backgroundStyle="countlogin.DropItemBack"
+      iconStyle="countlogin.DropItemIcon"
+      textStyle="countlogin.DropItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="countlogin.DropItemIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="loginactivity.view.LoginCountView"
+      stylename="LoginActiveFrame.countView"
+      x="0"
+      y="0" />
+    <custom
+      classname="loginactivity.view.LoginContinueView"
+      stylename="LoginActiveFrame.continueView"
+      x="430"
+      y="0" />
+    <custom
+      stylename="LoginContinueView.dayContiner"
+      classname="com.pickgliss.ui.core.Component"
+      x="250"
+      y="28" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="LoginContinueView.itemContiner"
+      paddingH="7"
+      paddingV="0"
+      rowCount="2"
+      columnCount="3"
+      x="10"
+      y="62" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="LoginContinueItem.itemContiner"
+      paddingH="8"
+      paddingV="4"
+      rowCount="2"
+      columnCount="2"
+      x="10"
+      y="30" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="LoginContinueItem.rewardItem"
+      parentStyle="countlogin.DropItem"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="countlogin.CountedTxt_2"
+      resourceLink="asset.core.ReceivedImg"
+      x="326"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="countlogin.DropItemBack"
+      resourceLink="asset.core.goodsItemBack4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="countlogin.DropItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="0"
+      y="22" />
+    <component
+      classname="countlogin.CountLoginFrame"
+      stylename="countlogin.CountFrame"
+      parentStyle="core.Frame1"
+      width="455"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="countlogin.FrameBack"
+      parentStyle="core.describeBackground_style06"
+      width="424"
+      height="385"
+      alpha="0.6"
+      x="-1"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="countlogin.Contain"
+      spacing="3"
+      x="5"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="countlogin.Item.Contain"
+      spacing="-2"
+      x="76"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="countlogin.LoginDate"
+      textFormatStyle="countlogin.ItemTitke_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="0"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="countlogin.Reward"
+      textFormatStyle="countlogin.ItemTitke_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="325"
+      height="20"
+      x="87"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="countlogin.Item.Txt"
+      textFormatStyle="countlogin.Item.Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="0"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="countlogin.Item.Btn"
+      backStyle="asset.core.Style18Btn"
+      iconStyle="asset.countlogin.ReceiveTxtAsset1"
+      iconInnerRectString="22,46,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="322"
+      y="3" />
+    <!-- 登录活动奖励 -->
+    <component
+      classname="loginactivity.LoginActiveFrame"
+      stylename="loginactivity.loginactiveframe"
+      parentStyle="core.Frame1"
+      width="455"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="loginActive.FrameBack"
+      parentStyle="core.describeBackground_style06"
+      width="424"
+      height="385"
+      alpha="0.6"
+      x="-1"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="loginActive.Contain"
+      spacing="3"
+      x="5"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="loginActive.LoginDate"
+      textFormatStyle="countlogin.ItemTitke_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="0"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="loginActive.Reward"
+      textFormatStyle="countlogin.ItemTitke_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="325"
+      height="20"
+      x="87"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="loginActive.Item.Txt"
+      textFormatStyle="countlogin.Item.Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="0"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="loginActive.Item.Contain"
+      spacing="1"
+      x="80"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="loginActive.Item.Btn"
+      backStyle="asset.core.Style18Btn"
+      iconStyle="asset.countlogin.ReceiveTxtAsset1"
+      iconInnerRectString="22,46,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="325"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="loginActive.CountedTxt_2"
+      resourceLink="asset.core.ReceivedImg"
+      x="329"
+      y="-6" />
+    <!-- 登录器登录活动 -->
+    <component
+      classname="desktoploginactive.DeskTopLoginActiveFrame"
+      stylename="desktoploginactive.DeskTopLoginActiveFrame"
+      parentStyle="loginactivity.loginactiveframe"
+      width="455"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LoginContinueView.timeText"
+      textFormatStyle="LoginContinueView.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="22"
+      x="0"
+      y="5" />
+    <component
+      stylename="LoginContinueView.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="375"
+      height="335"
+      x="0"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LoginContinueItem.dayText"
+      textFormatStyle="LoginContinueItem.dayText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="22"
+      x="56"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LoginContinueItem.getBtn"
+      backStyle="asset.LoginContinueItem.getBtn"
+      iconStyle="asset.LoginContinueItem.getBtnIcon"
+      iconInnerRectString="37,43,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="LoginContinueItem.border"
+      parentStyle="core.describeBackground_style06"
+      width="112"
+      height="105"
+      alpha="0.6"
+      x="0"
+      y="20" />
+  </components>
+</style>

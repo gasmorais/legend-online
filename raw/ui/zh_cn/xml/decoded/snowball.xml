@@ -1,0 +1,417 @@
+<style
+  name="snowball"
+  source="ui/zh_cn/swf/snowball.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.snowball.snowT1"
+      args="Arial,14,0xe4d29c,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.snowball.snowT2"
+      args="Arial,14,0xfa9000,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.snowball.titleNameTxt_t"
+      args="Arial,12,0xdecf7c,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.snowball.titleScoreTxt_t"
+      args="Arial,12,0xdecf7c,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.snowball.titleNumTxt_t"
+      args="Arial,12,0xdecf7c,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.snowball.myScoreTxt_t"
+      args="Arial,14,0xffab18,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SnowReportItem.rankTxt_t1"
+      args="Arial,14,0xffde00,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SnowReportItem.rankTxt_t2"
+      args="Arial,14,0xeb1010,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SnowReportItem.rewardTxt_t"
+      args="Arial,14,0x54c9d7,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SnowReportItem.rewardCountText_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.snowball.rdtBack"
+      x="32"
+      y="49" />
+    <bitmapData
+      resourceLink="asset.snowball.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.snowball.st"
+      x="7"
+      y="159" />
+    <bitmapData
+      resourceLink="asset.snowball.light"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.snowball.rewardHbox"
+      spacing="10"
+      x="255"
+      y="433" />
+    <custom
+      classname="map.campaign.view.ui.snowball.item.SnowReportItem"
+      stylename="ui.snowball.title"
+      x="33"
+      y="56" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.snowball.itemList"
+      spacing="1"
+      x="33"
+      y="87" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.snowball.scoreVb"
+      spacing="1"
+      x="32"
+      y="121" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="ui.snowball.SwitchBtn"
+      x="2"
+      y="145" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.snowball.Head"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="31"
+      loadingY="31"
+      iconWidth="62"
+      iconHeight="62"
+      x="65"
+      y="23" />
+    <custom
+      classname="asset.snowVehicle.towerAttackMc"
+      stylename="snowVehicle.towerAttackMc" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="map.campaign.view.ui.snowball.SnowballReportFrame"
+      classname="map.campaign.view.ui.snowball.SnowballReportFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      closeInnerRectString="29,-22,-8,29,14"
+      titleOuterRectPosString="0,-5,1"
+      containerX="0"
+      containerY="25"
+      width="360"
+      height="470" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.snowball.reportBack"
+      resourceLink="core.describeBackground_style11,asset.snowball.rdbBack,asset.snowball.rwTxt"
+      imageRectString="-1|630|-2|452|13,0|626|368|77|13,70|143|400|24|13"
+      x="30"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.sortIdx"
+      textFormatStyle="ui.snowball.snowT1,ui.snowball.snowT2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="82"
+      height="20"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.name"
+      textFormatStyle="ui.snowball.snowT1,ui.snowball.snowT2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="171"
+      height="20"
+      x="85"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.server"
+      textFormatStyle="ui.snowball.snowT1,ui.snowball.snowT2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="257"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.score"
+      textFormatStyle="ui.snowball.snowT1,ui.snowball.snowT2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="406"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.snowNum"
+      textFormatStyle="ui.snowball.snowT1,ui.snowball.snowT2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="119"
+      height="20"
+      x="496"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.titleNameTxt"
+      textFormatStyle="ui.snowball.titleNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="68"
+      height="35"
+      x="29"
+      y="80"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.titleScoreTxt"
+      textFormatStyle="ui.snowball.titleScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="85"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.titleNumTxt"
+      textFormatStyle="ui.snowball.titleNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="109"
+      height="53"
+      x="124"
+      y="80"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.myScoreTxt"
+      textFormatStyle="ui.snowball.myScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="29"
+      y="298" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.dNameTxt"
+      textFormatStyle="ui.snowball.snowT1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="62"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.dScoreTxt"
+      textFormatStyle="ui.snowball.snowT1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="69"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.dNumTxt"
+      textFormatStyle="ui.snowball.snowT1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="136"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.snowball.ExitBtn"
+      backStyle="asset.snowball.ExitBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="480"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.snowball.skillBack"
+      resourceLink="asset.snowball.skillBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.snowballreport.selfBg"
+      resourceLink="asset.snowball.light,ui.scalex.light"
+      imageRectString="0|310|0|27|13,620|310|0|27|13"
+      x="33"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.scalex.light"
+      resourceLink="asset.snowball.light"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ativevehicleBottomBar.NumTxt"
+      textFormatStyle="vehiclemap.numTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="22"
+      x="278"
+      y="26" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ui.snowball.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="snowball.helpTxt"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="450" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.snowballRank.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.snowballReport.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="610"
+      y="10" />
+    <component
+      stylename="SnowballReportFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border3"
+      scaleGridString="10,11,20,13"
+      width="358"
+      height="405"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="SnowballReportFrame.vbox"
+      spacing="2"
+      x="6"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SnowballReportFrame.alertText"
+      textFormatStyle="SnowReportItem.rankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="5"
+      y="410" />
+    <component
+      stylename="SnowReportItem.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border3"
+      scaleGridString="10,11,20,13"
+      width="345"
+      height="96"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SnowReportItem.rankImg"
+      resourceLink="asset.SnowReportItem.rankImg1,asset.SnowReportItem.rankImg2,asset.SnowReportItem.rankImg3,asset.SnowReportItem.rankImg4"
+      x="15"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SnowReportItem.rankTxt"
+      textFormatStyle="SnowReportItem.rankTxt_t1,SnowReportItem.rankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="230"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SnowReportItem.rewardTxt"
+      textFormatStyle="SnowReportItem.rewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="80"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SnowReportItem.rewardCountText"
+      textFormatStyle="SnowReportItem.rewardCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="140"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SnowReportItem.rewardItem"
+      resourceLink="asset.SnowReportItem.rewardItem"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="155"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.snowball.rankTxt"
+      textFormatStyle="ui.snowball.snowT1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="snowball.SnowBallRankView.bg"
+      resourceLink="asset.snowball.bg,asset.snowball.playerInfoImage"
+      imageRectString="0|244|0|335|13,45|176|50|23|13"
+      x="0"
+      y="0" />
+  </components>
+</style>

@@ -1,0 +1,298 @@
+<style
+  name="seminary"
+  source="ui/zh_cn/swf/seminary.swf">
+  <sets>
+    <!--数字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminary.technologyItemLevel_t"
+      args="Arial,14,0xfff2c4,true,,,,,center" />
+    <!--ItemName -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminary.technologyItemName_t"
+      args="Arial,11,0xeae1c9,,,,,,right" />
+    <!--	升级按钮	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminary.technologyItemUpgradeBtnTxt_t"
+      args="Arial,14,0xb3b25d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminary.ownCrystalNum_t"
+      args="Arial,18,0x95feff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminary.ownCrystalNum_t.notEnough"
+      args="Arial,18,0xff0000,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 发光 -->
+    <bitmapData
+      resourceLink="asset.seminary.glowBgImg"
+      x="-6"
+      y="-6" />
+    <!-- newImg -->
+    <bitmapData
+      resourceLink="asset.seminary.newIconImg"
+      x="41"
+      y="4" />
+    <!-- 加速 -->
+    <bitmapData
+      resourceLink="asset.seminary.quickenTxtImg"
+      x="28"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.seminary.bg2Img"
+      width="747" />
+    <bitmapData
+      resourceLink="asset.seminary.bg2Img1"
+      x="44"
+      y="17" />
+    <bitmapData
+      resourceLink="asset.seminary.bg2Img2"
+      x="21"
+      y="10" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="seminary.technologyItem"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="28"
+      iconWidth="59"
+      iconHeight="59"
+      x="12"
+      y="10" />
+    <!-- 科技item -->
+    <custom
+      classname="buildings.seminary.view.TechnologyItem"
+      stylename="seminary.TechnologyItem"
+      tipStyle="yishi.view.tips.TechnologyTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,0,3,5,7"
+      tipGapH="-50"
+      tipGapV="-40" />
+    <!-- 军事列表 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="seminary.MilitaryTechnologyList"
+      x="17"
+      y="107" />
+    <!--	光晶提示	-->
+    <custom
+      classname="mainBar.StripView"
+      stylename="seminary.ResourcesTip"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="7,2,5,4"
+      tipWidth="140"
+      tipGapH="-20"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="16"
+      y="7"
+      contentWidth="140" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="seminary.BlessBtnTip"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="7,2,5,4"
+      tipWidth="140"
+      tipGapH="-20"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="460"
+      y="14"
+      contentWidth="140" />
+  </customDisplay>
+  <components>
+    <!--神学院Frame-->
+    <component
+      classname="buildings.seminary.view.SeminaryFrame"
+      stylename="seminary.SeminaryFrame"
+      parentStyle="buildings.BaseBuildFrame"
+      width="787"
+      height="522" />
+    <!--9宫图背景6-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="seminary.Back1"
+      parentStyle="core.describeBackground_style04"
+      x="3"
+      y="99"
+      width="747"
+      height="326" />
+    <!--科技item背景-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="seminary.technologyItemBg"
+      resourceLink="asset.seminary.TechnologyItemBg1,asset.seminary.TechnologyItemBg2" />
+    <!--数字框-->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="seminary.technologyItemLevelBg"
+      resourceLink="asset.seminary.levelBgImg"
+      x="49"
+      y="55" />
+    <!--数字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminary.technologyItemLevel"
+      autoSize="none"
+      textFormatStyle="seminary.technologyItemLevel_t"
+      filterString="core.normal_f"
+      x="52"
+      y="55"
+      height="18"
+      width="24" />
+    <!--ItemName -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminary.technologyItemName"
+      autoSize="none"
+      textFormatStyle="seminary.technologyItemName_t"
+      filterString="core.normal_f"
+      x="71"
+      y="9"
+      height="60"
+      width="100"
+      wordWrap="true" />
+    <!--	ItemUpgradeBtn	 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="seminary.technologyItemUpgradeBtn"
+      backStyle="asset.seminary.technologyItemUpgradeBtnBg"
+      textStyle="seminary.technologyItemUpgradeBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,0,3,0"
+      width="62"
+      height="24"
+      x="103"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminary.technologyItemUpgradeBtnTxt"
+      textFormatStyle="seminary.technologyItemUpgradeBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="62"
+      height="20" />
+    <!-- ScrollPanel -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="seminary.DescribeScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,15,5,-2,3"
+      viewportInnerRectString="10,2,0,1,5"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="763"
+      height="277"
+      x="9"
+      y="97" />
+    <!--当前水晶数量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminary.ownCrystalNumText"
+      textFormatStyle="seminary.ownCrystalNum_t,seminary.ownCrystalNum_t.notEnough"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="99"
+      y="12" />
+    <!--加速按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="seminary.quickenButton"
+      backStyle="seminary.quickenButtonBg"
+      autoSizeAble="false"
+      x="576"
+      y="7"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="seminary.quickenButtonBg"
+      resourceLink="asset.seminary.quickenBtnImg,asset.seminary.quickenTxtImg" />
+    <!--	帮助	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="seminary.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="700"
+      y="-33" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="seminary.SeminaryHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="buildings.seminary.view.SeminaryFrame.helpContent"
+      titleText="buildings.seminary.view.SeminaryHelpFrame.titleText"
+      textWidth="284" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="seminary.bg2Img"
+      resourceLink="asset.seminary.bg2Img,asset.seminary.bg2Img1,asset.seminary.bg2Img2" />
+    <!--祈福-->
+    <component
+      stylename="seminary.BlessBtnMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.seminary.BlessBtnMc" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="seminary.BlessBtn"
+      button="seminary.BlessBtnMc"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="seminary.PrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="266"
+      y="388" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="seminary.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="417"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="seminary.PageBack"
+      resourceLink="asset.core.TextInputBG2"
+      scaleGridString="10,10,67,10"
+      width="58"
+      x="347"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminary.PageTxt"
+      autoSize="none"
+      textFormatStyle="seminary.technologyItemLevel_t"
+      filterString="core.normal_f"
+      x="350"
+      y="393"
+      height="24"
+      width="50" />
+  </components>
+</style>

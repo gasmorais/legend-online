@@ -1,0 +1,872 @@
+<style
+  name="matelords"
+  source="ui/zh_cn/swf/matelords.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelords.MatelordsFrame.RewardLinkTxt_t"
+      args="Arial,12,0x19d5f1,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelords.MatelordsFrame.ServiceName_t"
+      args="Arial,12,0xdec975,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelords.MatelordsFrame.ReadyTxt_t"
+      args="Arial,14,0xffc000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelords.MatelordsRankFrame.RankTopTips_t"
+      args="Arial,16,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="matelords.MatelordsRankFrame.NotApplyTips_t"
+      args="Arial,16,0xffe400,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.matelords.MatelordsTopItemPlatformBg"
+      x="-55"
+      y="276" />
+    <bitmapData
+      resourceLink="asset.matelords.MatelordsTopItemNameBg"
+      x="-28"
+      y="307" />
+    <bitmapData
+      resourceLink="asset.matelords.PleaseAwaitImg"
+      x="-7"
+      y="314" />
+    <bitmapData
+      resourceLink="asset.matelords.MatelordsFrameUpBg"
+      x="4"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.matelords.MatelordsFrameDownBg"
+      x="4"
+      y="350" />
+    <bitmapData
+      resourceLink="asset.matelords.marchNumberBitmap"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.matelords.betNumBitmap"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.matelords.betTips01"
+      x="40"
+      y="118" />
+    <bitmapData
+      resourceLink="asset.matelords.betTips02"
+      x="100"
+      y="118" />
+    <bitmapData
+      resourceLink="asset.matelords.worshipBg"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="matelords.MatelordsTopItemAvatar"
+      scaleX="1"
+      scaleY="1"
+      x="-70"
+      y="50" />
+    <custom
+      classname="matelords.MatelordsGeneralListCell"
+      stylename="matelords.MatelordsWinPrizesFrameAwardListCell"
+      cellType="2"
+      disObjStyle1="warlords.PrizeListCellOverBg"
+      disObjStyle2="warlords.PrizeListCellVipIcon"
+      disObjStyle3="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle4="warlords.PrizeListCellNameTxt"
+      disObjStyle6="matelords.PrizeListCellGloryIcon"
+      disObjStyle7="warlords.PrizeListCellGoldTxt"
+      disObjStyle8="warlords.PrizeListCellLine" />
+    <custom
+      classname="matelords.MatelordsGeneralListCell"
+      stylename="matelords.MatelordsBetSelectFrameBetListCell"
+      cellType="1"
+      disObjStyle1="warlords.BetListCellVipIcon"
+      disObjStyle2="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle3="warlords.BetListCellNameTxt"
+      disObjStyle4="warlords.BetListCellServerNameTxt"
+      disObjStyle5="warlords.BetListCellLevelIcon"
+      disObjStyle6="warlords.BetListCellLevelTxt"
+      disObjStyle7="warlords.BetListCellFightingCapacityTxt"
+      disObjStyle8="matelords.BetListCellCancelBtn"
+      disObjStyle9="warlords.BetListCellBetImg"
+      disObjStyle10="warlords.BetListCellBetBtn"
+      disObjStyle11="warlords.BetListCellLine"
+      disObjStyle12="warlords.BetListCellOverBg" />
+    <custom
+      classname="matelords.MatelordsGeneralListCell"
+      stylename="matelords.MatelordsRankFrameRankListCell"
+      cellType="1"
+      disObjStyle1="warlords.BetListCellOverBg"
+      disObjStyle2="warlords.RankListCellRankImg"
+      disObjStyle3="warlords.RankListCellRankTxt"
+      disObjStyle4="warlords.RankListCellVipIcon"
+      disObjStyle5="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle6="warlords.RankListCellNameTxt"
+      disObjStyle7="warlords.BetListCellServerNameTxt"
+      disObjStyle8="warlords.RankListCellLevelIcon"
+      disObjStyle9="warlords.BetListCellLevelTxt"
+      disObjStyle10="warlords.RankListCellFightingCapacityTxt"
+      disObjStyle11="warlords.RankListCellWinCountTxt"
+      disObjStyle12="warlords.BetListCellLine" />
+    <!-- 观战列表子项 -->
+    <custom
+      classname="matelords.MatelordsGeneralListCell"
+      stylename="matelords.MatelordsRankFrameBattleViewListCell"
+      cellType="3"
+      disObjStyle1="warlords.BetListCellOverBg"
+      disObjStyle2="warlords.RankListCellRankImg"
+      disObjStyle3="warlords.RankListCellRankTxt"
+      disObjStyle4="warlords.RankListCellVipIcon"
+      disObjStyle5="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle6="warlords.RankListCellNameTxt"
+      disObjStyle7="warlords.BetListCellServerNameTxt"
+      disObjStyle8="warlords.RankListCellLevelIcon"
+      disObjStyle9="warlords.BetListCellLevelTxt"
+      disObjStyle10="warlords.RankListCellFightingCapacityTxt"
+      disObjStyle11="warlords.RankListCellWinCountTxt"
+      disObjStyle12="warlords.BetListCellLine"
+      btnStyle_0="matelords.BattleViewBtn" />
+    <custom
+      classname="matelords.MatelordsGeneralListCell"
+      stylename="matelords.MatelordsBetSelectFrameBetOperListCell"
+      cellType="5"
+      disObjStyle1="warlords.BetOperListCellBtn" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="matelords.betNumContainer"
+      x="40"
+      y="118" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="matelords.MatelordsFrame.TitleContainer"
+      x="0"
+      y="7" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="matelords.MatelordsFrame.MarchWheelContainer"
+      x="407"
+      y="376" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="matelords.MatelordsFrame.MarchTurnContainer"
+      x="510"
+      y="396" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="matelords.sort.RankTips2"
+      resourceLink="asset.sort.RankTips2"
+      x="142"
+      y="463" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="matelords.sort.RankTips3"
+      resourceLink="asset.sort.RankTips3"
+      x="265"
+      y="463" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="matelords.sort.RankTips4"
+      resourceLink="asset.sort.RankTips4"
+      x="10"
+      y="463" />
+  </customDisplay>
+  <components>
+    <component
+      classname="matelords.MatelordsFrame"
+      stylename="matelords.MatelordsFrame"
+      parentStyle="core.Frame1"
+      containerX="18"
+      containerY="62"
+      width="690"
+      height="614" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="matelords.MatelordsFrameUpBgBorder"
+      parentStyle="core.describeBackground_style04"
+      width="653"
+      height="343"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="matelords.MatelordsFrameDownBgBorder"
+      parentStyle="core.describeBackground_style04"
+      width="653"
+      height="157"
+      x="0"
+      y="348" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBetFrame.Arabesquitic"
+      resourceLink="matelords.MatelordsBetFrame.ArabesquiticLT,matelords.MatelordsBetFrame.ArabesquiticRT,matelords.MatelordsBetFrame.ArabesquiticLB,matelords.MatelordsBetFrame.ArabesquiticRB"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsBetFrame.ArabesquiticLT"
+      resourceLink="asset.matelords.MatelordsFrameUpBgArabesquitic"
+      scaleX="1"
+      scaleY="1"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsBetFrame.ArabesquiticRT"
+      resourceLink="asset.matelords.MatelordsFrameUpBgArabesquitic"
+      scaleX="-1"
+      scaleY="1"
+      x="649"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsBetFrame.ArabesquiticLB"
+      resourceLink="asset.matelords.MatelordsFrameUpBgArabesquitic"
+      scaleX="1"
+      scaleY="-1"
+      x="0"
+      y="338" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsBetFrame.ArabesquiticRB"
+      resourceLink="asset.matelords.MatelordsFrameUpBgArabesquitic"
+      scaleX="-1"
+      scaleY="-1"
+      x="649"
+      y="338" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsFrame.TitleImg"
+      resourceLink="asset.warlords.WarlordsFrameTitleBgImg,warlords.WarlordsFrameTitleBgTurnImg"
+      imageRectString="0|199|0|25|13,398|199|0|25|13"
+      x="133"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsFrame.ReadyBg"
+      resourceLink="asset.matelords.MatelordsFrameTips01,asset.matelords.MatelordsFrameTips02,asset.matelords.MatelordsFrameTips03"
+      imageRectString="0|87|0|21|13,0|154|23|22|13,0|161|46|22|13"
+      x="200"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsFrame.ProcessBg"
+      resourceLink="asset.matelords.MatelordsFrame.ProcessBg"
+      x="190"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsFrame.MarchImg"
+      resourceLink="asset.matelords.MatelordsFrameMarchImg"
+      x="271"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsFrame.NextImg"
+      resourceLink="asset.matelords.MatelordsFrameNextImg"
+      x="278"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.NextTxt"
+      textFormatStyle="matelords.MatelordsFrame.ReadyTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="430"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsFrame.FinishImg"
+      resourceLink="asset.matelords.MatelordsFrameFinishImg"
+      x="280"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.ReadyTxt1"
+      textFormatStyle="matelords.MatelordsFrame.ReadyTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="295"
+      y="357" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.ReadyTxt2"
+      parentStyle="matelords.MatelordsFrame.ReadyTxt1"
+      x="360"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.ReadyTxt3"
+      parentStyle="matelords.MatelordsFrame.ReadyTxt1"
+      x="360"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="matelords.MatelordsFrame.ShopBtn"
+      backStyle="asset.matelords.MatelordsFrameShopBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="40"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.HelpLinkTxt"
+      textFormatStyle="matelords.MatelordsFrame.RewardLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="46"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.RankLinkTxt"
+      textFormatStyle="matelords.MatelordsFrame.RewardLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="120"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsFrame.SignupBtn"
+      backStyle="asset.warlords.WarlordsFrameBetBtnBg"
+      iconStyle="asset.matelords.MatelordsFrameSignupBtnTxt"
+      iconInnerRectString="43,101,19,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="330"
+      y="435"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsFrame.JoinBtn"
+      backStyle="asset.warlords.WarlordsFrameBetBtnBg"
+      iconStyle="asset.matelords.MatelordsFrameJoinBtnTxt"
+      iconInnerRectString="49,81,19,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="330"
+      y="435"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsFrame.BetBtn"
+      backStyle="asset.warlords.WarlordsFrameBetBtnBg"
+      iconStyle="asset.warlords.WarlordsFrameBetBtnTxt"
+      iconInnerRectString="8,164,9,40,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="430"
+      y="430"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsFrame.ServiceName"
+      textFormatStyle="matelords.MatelordsFrame.ServiceName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="22"
+      x="1"
+      y="2" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="matelords.MatelordsTopItemDefaultAvatarImg"
+      resourceLink="asset.matelords.MatelordsTopLeftDefault,asset.matelords.MatelordsTopRightDefault"
+      scaleX="1"
+      scaleY="1"
+      x="-130"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsTopItemNickNameTxt"
+      textFormatStyle="warlords.WarlordsTopItemNickNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="127"
+      height="24"
+      isAutoFitLength="true"
+      x="7"
+      y="317" />
+    <!-- 竞猜界面 -->
+    <component
+      classname="matelords.MatelordsBetFrame"
+      stylename="matelords.MatelordsBetFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,60,0,45,1"
+      containerX="16"
+      containerY="48"
+      width="439"
+      height="435" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBetFrame.Bg"
+      resourceLink="warlords.WarlordsBetFrameBgBack1,warlords.WarlordsBetFrameBgBack2,asset.warlords.LastAwardBg,warlords.LastAwardBgTurn,asset.warlords.AwardTotalTxt,asset.warlords.TotalAwardsTxt,warlords.InputBg,asset.warlords.BetNumTxt,warlords.InputBg"
+      imageRectString="0|404|0|345|13,3|398|3|338|13,10|192|10|96|13,392|191|10|96|13,23|210|37|27|13,38|117|84|21|13,128|196|116|22|13,105|71|213|24|13,189|86|212|22|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBetFrame.BgIcon"
+      resourceLink="asset.core.EternalCrystal,asset.core.EternalCrystal,asset.core.EternalCrystal,asset.core.EternalCrystal,asset.core.EternalCrystal,asset.warlords.SplitImgStyle01"
+      imageRectString="232|26|38|26|13,209|26|80|26|13,282|26|212|26|13,136|26|311|26|13,340|26|311|26|13,-4|414|199|2|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsBetFrame.SelectBtn"
+      backStyle="asset.core.Style24Btn"
+      iconStyle="warlords.WarlordsBetFrameFirstSelectBtnIcon"
+      iconInnerRectString="10,71,8,18,13"
+      iconFrameChange="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="158"
+      y="152"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.QuickSelectTxt"
+      textFormatStyle="warlords.WarlordsBetFrameCheckMoreTxt_t,warlords.WarlordsBetFrameCheckMoreTxt_t2"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="312"
+      y="169" />
+    <!-- 竞猜状态 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsBetFrame.CommitBetBtn"
+      backStyle="asset.core.Style25Btn"
+      iconStyle="asset.warlords.CommitBetTxt"
+      iconInnerRectString="29,101,12,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="122"
+      y="261"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.BetNumTxt"
+      textFormatStyle="warlords.WarlordsBetFrameBetNumTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      maxChars="4"
+      restrict="0-9"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="191"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.NumTipTxt"
+      textFormatStyle="warlords.WarlordsBetFrameBetNumTipTxt_t"
+      filterString="core.normal_f"
+      x="140"
+      y="241" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.SucceedTipTxt"
+      textFormatStyle="warlords.WarlordsBetFrameSucceedTipTxt_t"
+      filterString="core.normal_f"
+      x="0"
+      width="147"
+      wordWrap="true"
+      y="306" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.SucceedNumTxt"
+      textFormatStyle="warlords.WarlordsBetFrameLastAwardNumTxt_t3"
+      filterString="core.normal_f"
+      x="160"
+      y="316" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsBetFrame.SucceedTipImg"
+      resourceLink="asset.warlords.QMStyle01"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="-5"
+      tipGapV="-10"
+      isFollowMouse="false"
+      x="175"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.FailTipTxt"
+      textFormatStyle="warlords.WarlordsBetFrameSucceedTipTxt_t"
+      filterString="core.normal_f"
+      x="225"
+      width="120"
+      wordWrap="true"
+      y="306" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsBetFrame.FailNumTxt"
+      textFormatStyle="warlords.WarlordsBetFrameLastAwardNumTxt_t3"
+      filterString="core.normal_f"
+      x="365"
+      y="316" />
+    <!-- 竞猜结算 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBetFrame.ResultBg"
+      resourceLink="warlords.ScaleBgStyle01,asset.warlords.TitleBackStyle01,asset.warlords.WarlordsFrameSplitImg,asset.warlords.ResultAwardImg,asset.core.EternalCrystal"
+      imageRectString="0|367|0|154|13,3|361|1|24|13,221|2|27|176|13,-7|188|172|21|13,185|26|169|26|13" />
+    <!-- 选择下注界面 -->
+    <component
+      classname="matelords.MatelordsBetSelectFrame"
+      stylename="matelords.MatelordsBetSelectFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="48"
+      width="600"
+      height="523" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBetSelectFrame.Bg"
+      resourceLink="core.describeBackground_style04,matelords.MatelordsBetSelectFrame.TitleBg,asset.warlords.SplitLine"
+      imageRectString="0|563|0|432|13,1|562|1|34|13,2|60|383|3|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBetSelectFrame.TitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|562|0|34|13,308|22|3|28|13,407|22|3|28|13" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="matelords.MatelordsBetSelectFrame.BetListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      viewportInnerRectString="1,1,2,-5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|matelords.MatelordsBetSelectFrameBetListCell,35,310"
+      width="552"
+      height="346"
+      x="6"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="matelords.MatelordsBetSelectFrame.BetOperListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      backgoundStyle="core.commonTipBg"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|matelords.MatelordsBetSelectFrameBetOperListCell,22,46"
+      width="50"
+      height="90"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="matelords.BetListCellCancelBtn"
+      backStyle="asset.warlords.BtnStyle01"
+      textStyle="warlords.BetListCellBetBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,0,3,0"
+      width="62"
+      height="24"
+      x="480"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsBetSelectFrameConfirmBtn"
+      backStyle="asset.warlords.BtnStyle02"
+      iconStyle="asset.warlords.ConfirmTxt"
+      iconInnerRectString="9,83,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="232"
+      y="387"
+      autoCenter="false" />
+    <!-- 查看获奖界面 -->
+    <component
+      classname="matelords.MatelordsWinPrizesFrame"
+      stylename="matelords.MatelordsWinPrizesFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="48"
+      width="379"
+      height="490" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="matelords.MatelordsWinPrizesFrameAwardListPanel"
+      backgoundStyle="core.describeBackground_style33"
+      backgoundInnerRectString="3,3,3,3,-1"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|matelords.MatelordsWinPrizesFrameAwardListCell,35,212"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="331"
+      height="309"
+      x="6"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.PrizeListCellGloryIcon"
+      resourceLink="asset.core.EternalCrystal"
+      x="165"
+      y="2" />
+    <!-- 排行榜界面 -->
+    <component
+      classname="matelords.MatelordsRankFrame"
+      stylename="matelords.MatelordsRankFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="45"
+      width="535"
+      height="585" />
+    <!--	观战列表界面	-->
+    <component
+      classname="matelords.MatelordsRankFrame"
+      stylename="matelords.MatelordsBattleViewFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="40"
+      width="625"
+      height="520" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsRankFrame.Bg"
+      resourceLink="core.describeBackground_style04,asset.warlords.SplitLine,matelords.MatelordsRankFrame.MyRankBg"
+      imageRectString="0|516|0|456|13,2|512|382|3|13,"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsRankFrame.MyRankBg"
+      resourceLink="asset.matelords.RankTxt,asset.matelords.FightTxt,warlords.WarlordsRankFrameTxtBg"
+      imageRectString="0|72|19|36|13,257|135|22|22|13,395|114|19|27|13"
+      x="4"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsRankFrame.TitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|517|0|34|13,63|22|3|28|13,334|22|3|28|13,455|22|3|28|13"
+      width="515"
+      height="34"
+      x="1"
+      y="24" />
+    <!-- 观看列表标头 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="matelords.MatelordsBattleViewFrame.TitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|600|0|34|13,63|22|3|28|13,277|22|3|28|13,334|22|3|28|13,455|22|3|28|13,510|22|3|28|13"
+      x="1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrameRankTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="4"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrameNameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="150"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrameFightTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="335"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrameWinCountTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="457"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="matelords.MatelordsRankFrame.RankListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      viewportInnerRectString="1,1,2,-6,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|matelords.MatelordsRankFrameRankListCell,35,307"
+      width="505"
+      height="344"
+      x="6"
+      y="58" />
+    <!-- 观战列表 -->
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="matelords.MatelordsBattleViewFrame.RankListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|matelords.MatelordsRankFrameBattleViewListCell,35,307"
+      width="590"
+      height="344"
+      x="6"
+      y="58" />
+    <!-- 观战按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.BattleViewBtn"
+      backStyle="asset.matelords.cellBtnBg"
+      iconStyle="asset.matelords.viewBattleBtnIcon"
+      width="66"
+      height="29"
+      iconInnerRectString="12,42,8,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="515"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.MatelordsRankFrame.GroupBtn1"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset1"
+      selectedIconStyle="asset.sort.GroupSelectedAsset1"
+      unselectedIconInnerRectString="19,63,4,24,13"
+      selectedIconInnerRectString="15,72,4,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="2"
+      y="-4"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.MatelordsRankFrame.GroupBtn2"
+      parentStyle="matelords.MatelordsRankFrame.GroupBtn1"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset2"
+      selectedIconStyle="asset.sort.GroupSelectedAsset2"
+      unselectedIconInnerRectString="23,51,5,24,13"
+      selectedIconInnerRectString="23,57,3,27,13"
+      x="102"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.MatelordsRankFrame.GroupBtn3"
+      parentStyle="matelords.MatelordsRankFrame.GroupBtn1"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset3"
+      selectedIconStyle="asset.sort.GroupSelectedAsset3"
+      unselectedIconInnerRectString="24,50,5,25,13"
+      selectedIconInnerRectString="22,57,4,27,13"
+      x="200"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="matelords.MatelordsRankFrame.GroupBtn4"
+      parentStyle="matelords.MatelordsRankFrame.GroupBtn1"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset4"
+      selectedIconStyle="asset.sort.GroupSelectedAsset4"
+      unselectedIconInnerRectString="24,53,5,27,13"
+      selectedIconInnerRectString="24,53,5,27,13"
+      x="299"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsRankFrame.RankTips2"
+      resourceLink="asset.sort.RankTips2"
+      x="142"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="matelords.MatelordsRankFrame.RankTips3"
+      resourceLink="asset.sort.RankTips3"
+      x="112"
+      y="459" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="matelords.MatelordsRankFrame.RankGroupTips"
+      resourceLink="asset.sort.GroupAsset1,asset.sort.GroupAsset2,asset.sort.GroupAsset3,asset.sort.GroupAsset4"
+      x="81"
+      y="441" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrame.RankTopTips"
+      textFormatStyle="matelords.MatelordsRankFrame.RankTopTips_t"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="82"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrame.NotApplyTips"
+      textFormatStyle="matelords.MatelordsRankFrame.NotApplyTips_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="88"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrame.UpdateTimeTxt"
+      parentStyle="warlords.WarlordsBetSelectFrameUpdateTimeTxt"
+      autoSize="none"
+      width="500"
+      height="35"
+      x="8"
+      y="405"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrame.MyRankTxt"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="55"
+      height="20"
+      x="76"
+      y="444" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="matelords.MatelordsRankFrame.MyFightTxt"
+      parentStyle="warlords.WarlordsRankFrameMyRankTxt"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="410"
+      y="446" />
+    <!-- 膜拜界面 -->
+    <component
+      classname="matelords.MatelordsWorshipFrame"
+      stylename="matelords.MatelordsWorshipFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="matelords.MatelordsWorshipFrame.WorshipBtn"
+      backStyle="asset.matelords.worshipBtnBg"
+      iconStyle="asset.matelords.worshipBtnTxt"
+      iconInnerRectString="46,104,13,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="-5"
+      tipGapV="-10"
+      isFollowMouse="false"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="matelords.MatelordsWorshipFrame.BackEffect"
+      resourceLink="asset.matelords.worshipEffect" />
+    <!-- 帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="matelords.MatelordsHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="matelords.MatelordsFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="423" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="matelords.MatelordsBetHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="matelords.MatelordsBetFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+  </components>
+</style>

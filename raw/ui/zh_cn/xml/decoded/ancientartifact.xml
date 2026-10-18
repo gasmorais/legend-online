@@ -1,0 +1,1804 @@
+<style
+  name="ancientartifact"
+  source="ui/zh_cn/swf/ancientartifact.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifactSort.noteTxt_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.rareweaponName_t"
+      args="Arial,14,0x38e1f4,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.rareweaponProperText_text"
+      args="Arial,14,0xff238b,true,,,,,center"
+      letterSpacing="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.skillNameText_text"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="2"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.skilllLevelText_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.skillDescText_text"
+      args="Arial,12,0xe4d29c,,,,,,left"
+      leading="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.physicAttackTxt1_text"
+      args="Arial,12,0xe4d29c,,,,,,right"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.physicAttackTxt_text"
+      args="Arial,12,0x6aee60,,,,,,left"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.redBar.progressTxt_t"
+      args="Arial,14,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.hasShenZhuShi_t"
+      args="Arial,14,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.useShenZhuShi_t"
+      args="Arial,14,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AncientArtifactItem.itemName_t"
+      args="Arial,14,0xf6c990,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.advanceBar.progressTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.AdvanceFrame.stoneTxt_t"
+      args="Arial,14,0xffeb11,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.AdvanceFrame.trainCount_t"
+      args="Arial,14,0xffeb11,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.AdvanceFrame.curAddTxt_t"
+      args="Arial,14,0xffeb11,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.AdvanceFrame.curSkillTxt_t"
+      args="Arial,12,0xffeb11,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.AdvanceFrame.noteTxt_t"
+      args="Arial,12,0xff0101,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.StrengthenItem.rateTxt_t"
+      args="Arial,14,0x14bbd9,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.propertyView.needGoodsName_t"
+      args="Arial,14,0xf6ff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.StrengthenItem.propertyName_t"
+      args="Arial,12,0xf6c990,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.AdvanceFrame.ownStoneTxt_t"
+      args="Arial,14,0xfffde9,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientMiddleView.fallItemsLinkTxt_t"
+      args="Arial,12,0x00fffc,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateItemTipsTxt_t"
+      args="Arial,12,0xffe1a7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateValueTxt_t"
+      args="Arial,12,0xffe1a7,,,,,,left"
+      letterSpacing="2"
+      leading="10" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateTitleTxt_t"
+      args="Arial,16,0xFF238B,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateAddValueTxt_t01"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateAddValueTxt_t02"
+      args="Arial,14,0x00ff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateHasCountTxt_t"
+      args="Arial,14,0xffe1a7,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateProseTxt_t"
+      args="Arial,14,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.resonateNeedTrianTxt_t"
+      args="Arial,14,0xffe1a7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryTitleTxt_t"
+      args="Arial,12,0xFF238B,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemTitleTxt_t"
+      args="Arial,14,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemValueTxt_t01"
+      args="Arial,14,0xffffff,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemValueTxt_t02"
+      args="Arial,14,0x00ff00,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryProseTxt_t"
+      args="Arial,14,0xfffbe3,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryHasNumTxt_t"
+      args="Arial,14,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryInputNumTxt_t"
+      args="Arial,14,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryGradeTipsTxt_t"
+      args="Arial,12,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryTipsTxt_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armorySkillTxt_t"
+      args="Arial,12,0x00ffcc,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryDescTipsTxt_t"
+      args="Arial,12,0x00ffcc,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.currentGradeHasNumTxt_t"
+      args="Arial,14,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.currentGradeNeedNumTxt_t"
+      args="Arial,14,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.ThewDescribeTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemValueTxt_t03"
+      args="Arial,14,0x32a2f8,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemValueTxt_t04"
+      args="Arial,14,0xc300ff,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemValueTxt_t05"
+      args="Arial,14,0xff9600,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ancientartifact.armoryItemValueTxt_t06"
+      args="Arial,14,0xce0f0f,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AncientArtifactItem.lvlText_t"
+      args="arial,13,0xffeb11,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AncientArmoryItem.lvlText_t"
+      args="arial,13,0xffeb11,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ancientartifact.middleBg"
+      x="234"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.propertyBg"
+      x="-2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.strengthBg"
+      x="369"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.pageNumBg"
+      x="86"
+      y="385" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.strengthNumBmp"
+      x="375"
+      y="356" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.strengthItemNote"
+      x="375"
+      y="330" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.itemEquip1"
+      x="-8"
+      y="1" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.itemEquip2"
+      x="0"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.fightTxt"
+      x="43"
+      y="375" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.fightNum" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.currentNote"
+      x="16"
+      y="93" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.nextNote"
+      x="291"
+      y="93" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.stoneTxtBmp"
+      x="70"
+      y="229" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.trainCountBmp"
+      x="279"
+      y="227" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.advanceBg"
+      x="2"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.trainCountBg"
+      x="364"
+      y="229" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.strengthNumBg"
+      x="477"
+      y="354" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.strengthIcon"
+      x="457"
+      y="329" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.advanceStar"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.advanceMoon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.advanceSun"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.upGradeViewBack10"
+      x="132"
+      y="152" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.upGradeViewBack06"
+      x="14"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.upGradeViewBack07"
+      x="34"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.upGradeViewBack08"
+      x="5"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.upGradeViewItemBack" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryGradeItemIcon"
+      x="0"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryMaxIcon"
+      x="5"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryNeedIcon"
+      x="6"
+      y="252" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.resonateIs"
+      x="-5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryItemBack"
+      x="-7"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryOtherItemBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryItemBack01"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryItemLock"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryEquipBg01"
+      x="154"
+      y="322" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryDeleteBack01"
+      x="18"
+      y="44" />
+    <bitmapData
+      resourceLink="asset.ancientartifact.armoryDeleteBack02"
+      x="47"
+      y="281" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="ancientartifact.view.AncientPropertyView"
+      stylename="ancientartifact.AncientPropertyView"
+      x="238"
+      y="33" />
+    <custom
+      classname="ancientartifact.view.AncientStrengthenView"
+      stylename="ancientartifact.AncientStrengthenView"
+      x="238"
+      y="33" />
+    <custom
+      classname="ancientartifact.view.AncientMiddleView"
+      stylename="ancientartifact.AncientMiddleView"
+      x="238"
+      y="33" />
+    <custom
+      classname="ancientartifact.view.item.AncientStrengthenItem"
+      stylename="ancientartifact.AncientStrengthenItem" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ancientartifact.fallItemsLinkTxt.Sprite"
+      tipStyle="yishi.view.tips.goods.ArtifactEquipTip"
+      isFollowMouse="false"
+      tipDirctions="7,3,0"
+      tipGapH="40"
+      tipGapV="25"
+      x="7"
+      y="15" />
+    <custom
+      classname="asset.ancientartifact.redProgressBar"
+      stylename="asset.ancientartifact.redProgressBar" />
+    <custom
+      classname="asset.ancientartifact.advanceProgressBar"
+      stylename="asset.ancientartifact.advanceProgressBar"
+      x="19"
+      y="271" />
+    <custom
+      classname="asset.ancientartifact.AddArrowMc"
+      stylename="asset.ancientartifact.AddArrowMc"
+      x="94"
+      y="-27" />
+    <custom
+      classname="asset.ancientartifact.propertyBg"
+      stylename="asset.ancientartifact.propertyBg"
+      x="-2"
+      y="2" />
+    <custom
+      classname="ancientartifact.view.AncientArtifactList"
+      stylename="ancientartifact.AncientArtifactList"
+      x="1"
+      y="37" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ancientartifact.propertyView.skillBaseItemView"
+      iconStyle="ancientartifact.BaseItemViewIcon1"
+      textStyle="ancientartifact.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="60"
+      profileHeight="60"
+      x="378"
+      y="273"
+      iconWidth="60"
+      iconHeight="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.BaseItemViewIcon1"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="60"
+      iconHeight="60"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.BaseItemViewIcon2"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="66"
+      iconHeight="66"
+      loadingX="33"
+      loadingY="33"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.goods.ArtifactEquipTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="10"
+      y="16" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.BaseItemViewIcon3"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="50"
+      iconHeight="50"
+      loadingX="25"
+      loadingY="25"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="225"
+      y="14" />
+    <custom
+      classname="ancientartifact.view.item.AncientResonateItem"
+      stylename="ancientartifact.AncientResonateItem" />
+    <custom
+      classname="ancientartifact.view.item.AncientResonateUpGradeItem"
+      stylename="ancientartifact.AncientResonateUpGradeItem01"
+      x="30"
+      y="25" />
+    <custom
+      classname="ancientartifact.view.item.AncientResonateUpGradeItem"
+      stylename="ancientartifact.AncientResonateUpGradeItem02"
+      x="220"
+      y="25" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.ResonateItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="60"
+      iconHeight="60"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="19"
+      y="19" />
+    <custom
+      classname="ancientartifact.view.AncientArmoryView"
+      stylename="ancientartifact.AncientArmoryView"
+      x="235"
+      y="42" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ancientArmoryView.equipViewList"
+      vSpace="1"
+      hSpace="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientArmoryView.StoreBagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.choseArmoryItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="56"
+      iconHeight="56"
+      loadingX="28"
+      loadingY="28"
+      x="6"
+      y="15" />
+    <custom
+      classname="ancientartifact.view.item.AncientBagCell"
+      stylename="ancientArmoryView.StoreBagCell"
+      tipStyle="yishi.view.tips.AncientArmoryTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="ancientartifact.view.AncientArmoryBagView"
+      stylename="ancientartifact.AncientArmoryBagView"
+      x="375"
+      y="27" />
+    <custom
+      classname="ancientartifact.view.AncientArmoryEquipView"
+      stylename="ancientartifact.AncientArmoryEquipView" />
+    <custom
+      classname="ancientartifact.view.item.AncientArmoryItem"
+      stylename="ancientartifact.AncientArmoryItem"
+      tipStyle="yishi.view.tips.AncientArmoryTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="ancientartifact.view.item.AncientArmoryItem"
+      stylename="ancientartifact.markArmoryItem"
+      tipStyle="yishi.view.tips.AncientArmoryTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="25"
+      y="45" />
+    <custom
+      classname="ancientartifact.view.AncientArmoryMarkView"
+      stylename="ancientartifact.AncientArmoryMarkView" />
+    <custom
+      classname="ancientartifact.view.AncientArmoryGradeView"
+      stylename="ancientartifact.AncientArmoryGradeView" />
+    <custom
+      classname="ancientartifact.view.AcnientCheckList"
+      stylename="ancientartifact.AcnientCheckList"
+      x="11"
+      y="69" />
+    <custom
+      classname="ancientartifact.view.item.AcnientCheckListItem"
+      stylename="ancientartifact.AcnientCheckListItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="1,2"
+      tipGapV="50"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.equipArmoryItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="50"
+      iconHeight="50"
+      loadingX="25"
+      loadingY="25"
+      x="0"
+      y="0" />
+    <custom
+      classname="ancientartifact.view.item.AncientEquipArmoryItem"
+      stylename="ancientartifact.AncientEquipArmoryItem"
+      tipStyle="yishi.view.tips.AncientArmoryTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="ancientartifact.view.AcnientArmoryDeleteView"
+      stylename="ancientartifact.AcnientArmoryDeleteView" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ancientartifact.deleteItemView"
+      backgroundStyle="asset.ancientartifact.armoryItemBack02"
+      iconStyle="ancientartifact.deleteItemViewIcon"
+      textStyle="ancientartifact.deleteItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="false"
+      x="153"
+      y="256" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ancientartifact.deleteItemViewIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="25"
+      loadingY="25"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="3"
+      y="3" />
+  </customDisplay>
+  <components>
+    <component
+      classname="ancientartifact.AncientArtifactFrame"
+      stylename="ancientartifact.AncientArtifactFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="62"
+      width="846"
+      height="565" />
+    <component
+      classname="ancientartifact.AncientAdvanceFrame"
+      stylename="ancientartifact.AncientAdvanceFrame"
+      parentStyle="core.Frame2"
+      containerX="9"
+      containerY="43"
+      width="525"
+      height="445" />
+    <component
+      classname="ancientartifact.AncientEquipFrame"
+      stylename="ancientartifact.AncientEquipFrame"
+      parentStyle="core.Frame2"
+      containerX="9"
+      containerY="43"
+      width="593"
+      height="505" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ancientartifact.bgBorder"
+      parentStyle="core.describeBackground_style11"
+      width="816"
+      height="433"
+      x="-2"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ancientartifact.AncientAdvanceFrame.bg"
+      parentStyle="core.describeBackground_style04"
+      width="504"
+      height="364"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.leftBottomBg"
+      resourceLink="asset.ancientartifact.leftBottomBg"
+      x="2"
+      y="374" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.PropertyBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      selectedIconStyle="asset.ancientartifact.PropertySelectedTxt"
+      unselectedIconStyle="asset.ancientartifact.PropertyUnSelectedTxt"
+      selectedIconInnerRectString="5,82,10,15,13"
+      unselectedIconInnerRectString="5,82,10,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="34"
+      x="48"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.AdvancedBtn"
+      parentStyle="ancientartifact.PropertyBtn"
+      selectedIconStyle="asset.ancientartifact.StrengthenSelectedTxt"
+      unselectedIconStyle="asset.ancientartifact.StrengthenUnSelectedTxt"
+      selectedIconInnerRectString="25,46,10,16,13"
+      unselectedIconInnerRectString="25,46,10,16,13"
+      x="164" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="AncientArtifactItem.PetItemBg"
+      resourceLink="asset.ancientartifact.PetItemNullBg"
+      width="221"
+      height="87"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="AncientArtifactItem.PetItemMouseOver"
+      resourceLink="asset.ancientartifact.rareWeaponItemViewSelectedBg"
+      x="-4"
+      y="-4"
+      width="229"
+      height="102" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.LastPageBtn"
+      backStyle="asset.ancientartifact.PageBtnBg"
+      iconStyle="asset.ancientartifact.LastPageImg"
+      width="69"
+      height="29"
+      x="8"
+      y="385"
+      iconInnerRectString="9,52,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.NextPageBtn"
+      backStyle="asset.ancientartifact.PageBtnBg"
+      iconStyle="asset.ancientartifact.NextPageImg"
+      width="69"
+      height="29"
+      x="152"
+      y="385"
+      iconInnerRectString="9,52,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 页码数字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.PageTextStyle1"
+      parentStyle="shop.PageTextStyle1"
+      x="84"
+      y="389" />
+    <!-- 属性界面 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.rareweaponName"
+      textFormatStyle="ancientartifact.propertyView.rareweaponName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="20"
+      x="0"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.rareweaponProperText"
+      textFormatStyle="ancientartifact.propertyView.rareweaponProperText_text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="200"
+      height="20"
+      x="385"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.rareweaponSkillText"
+      textFormatStyle="ancientartifact.propertyView.rareweaponProperText_text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="200"
+      height="20"
+      x="378"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.skillNameText"
+      textFormatStyle="ancientartifact.propertyView.skillNameText_text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="118"
+      height="36"
+      x="454"
+      y="270"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.skilllLevelText"
+      textFormatStyle="ancientartifact.propertyView.skilllLevelText_t"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="180"
+      height="20"
+      x="454"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.skillDescText"
+      textFormatStyle="ancientartifact.propertyView.skillDescText_text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="203"
+      height="83"
+      x="372"
+      y="344"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.physicAttackTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.physicDefenceTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.magicAttackTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.magicDefenceTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.penetrateTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.parryTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.hpTxt1"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt1_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="386"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.physicAttackTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="454"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.physicDefenceTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="454"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.magicAttackTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="454"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.magicDefenceTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="454"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.penetrateTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="479"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.parryTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="464"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.hpTxt"
+      textFormatStyle="ancientartifact.propertyView.physicAttackTxt_text"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="454"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ancientartifact.propertyView.valueVBox"
+      spacing="6"
+      x="682"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.redBar.progressTxt"
+      textFormatStyle="ancientartifact.redBar.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="150"
+      x="-2"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.hasShenZhuShi"
+      textFormatStyle="ancientartifact.hasShenZhuShi_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="460"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.useShenZhuShi"
+      textFormatStyle="ancientartifact.useShenZhuShi_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      height="20"
+      width="65"
+      x="479"
+      y="357" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.useStoneBtn"
+      backStyle="asset.ancientartifact.strengthBtnBmp"
+      iconStyle="asset.ancientartifact.strengthTxtBmp"
+      iconInnerRectString="14,40,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="437"
+      y="384"
+      offSetY="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.equipBtn"
+      backStyle="asset.ancientartifact.equipBtnBmp"
+      iconStyle="asset.ancientartifact.equipTxtBmp"
+      iconInnerRectString="7,40,16,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="306"
+      y="293" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.unEquipBtn"
+      backStyle="asset.ancientartifact.unEquipBtnBmp"
+      iconStyle="asset.ancientartifact.unEquipTxtBmp"
+      iconInnerRectString="8,39,16,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="306"
+      y="293" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AncientArtifactItem.itemName"
+      textFormatStyle="AncientArtifactItem.itemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="145"
+      x="72"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="AncientArtifactItem.HBox"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ancientartifact.advanceArrowBtn"
+      backStyle="asset.ancientartifact.advanceArrBmp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="279"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.advanceBar.progressTxt"
+      textFormatStyle="ancientartifact.advanceBar.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="93"
+      y="276" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.stoneTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.stoneTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="217"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.trainCount"
+      textFormatStyle="ancientartifact.AdvanceFrame.trainCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="65"
+      type="input"
+      restrict="0-9"
+      x="366"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.AdvanceFrame.advanceBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.ancientartifact.advanceTxtBmp"
+      iconInnerRectString="38,55,13,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="324"
+      y="264" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.curAddTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.curAddTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="117"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.nextAddTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.curAddTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="445"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.curSkillTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.curSkillTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="195"
+      height="96"
+      x="15"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.nextSkillTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.curSkillTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="195"
+      height="96"
+      x="292"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.noteTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.noteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="490"
+      x="7"
+      y="331" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.StrengthenItem.rateTxt"
+      textFormatStyle="ancientartifact.StrengthenItem.rateTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="146"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ancientartifact.propertyView.summonBtn"
+      backStyle="asset.ancientartifact.summonBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="114"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.propertyView.needGoodsName"
+      textFormatStyle="ancientartifact.propertyView.needGoodsName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="20"
+      x="0"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.StrengthenItem.propertyName"
+      textFormatStyle="ancientartifact.StrengthenItem.propertyName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="5"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.AdvanceFrame.ownStoneTxt"
+      textFormatStyle="ancientartifact.AdvanceFrame.ownStoneTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="8"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ancientartifact.advanceMetarialImage"
+      resourceLink="asset.ancientartifact.advanceStar,asset.ancientartifact.advanceMoon,asset.ancientartifact.advanceSun"
+      x="195"
+      y="229" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientMiddleView.fallItemsLinkTxt"
+      textFormatStyle="ancientMiddleView.fallItemsLinkTxt_t"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.resonateBtn"
+      parentStyle="ancientartifact.PropertyBtn"
+      selectedIconStyle="asset.ancientartifact.resonateSelectedTxt"
+      unselectedIconStyle="asset.ancientartifact.resonateUnSelectedTxt"
+      selectedIconInnerRectString="7,77,8,16,13"
+      unselectedIconInnerRectString="7,77,8,16,13"
+      x="280" />
+    <component
+      stylename="ancientartifact.resonateBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.ancientartifact.resonateViewBack,asset.ancientartifact.resonateViewMainItemBack"
+      imageRectString="0|0|19,133|154|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ancientartifact.resonateUpGrade"
+      backStyle="asset.ancientartifact.resonateUpGradeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateItemTipsTxt"
+      textFormatStyle="ancientartifact.resonateItemTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="32"
+      x="-15"
+      y="85"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateTitleTxt"
+      textFormatStyle="ancientartifact.resonateTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="385"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateValueTxt"
+      textFormatStyle="ancientartifact.resonateValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="275"
+      x="385"
+      y="45" />
+    <component
+      classname="ancientartifact.AncientResonateUpGradeFrame"
+      stylename="ancientartifact.AncientResonateUpGradeFrame"
+      parentStyle="core.Frame2"
+      containerX="9"
+      containerY="43"
+      width="415"
+      height="360" />
+    <component
+      stylename="ancientartifact.resonateUpGradeBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.ancientartifact.upGradeViewBack01,asset.ancientartifact.upGradeViewBack02,asset.ancientartifact.upGradeViewBack03,asset.ancientartifact.upGradeViewBack05,asset.ancientartifact.upGradeViewBack11"
+      imageRectString="0|387|0|276|13,103|126|19,76|180|19,181|173|19,168|0|19"
+      x="4"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.resonateUpGradeBtn"
+      backStyle="asset.ancientartifact.armoryInputBack"
+      iconStyle="asset.ancientartifact.upGradeBtnIcon"
+      iconInnerRectString="39,52,11,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="134"
+      y="217" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateAddValueTxt"
+      textFormatStyle="ancientartifact.resonateAddValueTxt_t01,ancientartifact.resonateAddValueTxt_t02"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="36"
+      x="8"
+      y="45"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.resonateItemIcon"
+      resourceLink="asset.ancientartifact.upGradeViewItemBack"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-5"
+      isFollowMouse="false"
+      x="236"
+      y="124" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateHasCountTxt"
+      textFormatStyle="ancientartifact.resonateHasCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="270"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateProseTxt"
+      textFormatStyle="ancientartifact.resonateProseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="189"
+      y="153" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.resonateNeedTrianTxt"
+      textFormatStyle="ancientartifact.resonateNeedTrianTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      type="input"
+      restrict="0-9"
+      x="172"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.armorySelectedBtn"
+      unSelectedStyle="asset.ancientartifact.armoryUnSelectedBtn"
+      selectedStyle="asset.ancientartifact.armorySelectedBtn"
+      selectedIconStyle="asset.ancientartifact.armorySelecteIcon"
+      unselectedIconStyle="asset.ancientartifact.armoryUnSelecteIcon"
+      selectedIconInnerRectString="5,88,0,26,13"
+      unselectedIconInnerRectString="5,88,0,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="95"
+      height="28"
+      x="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.armoryMarkSelectedBtn"
+      parentStyle="ancientartifact.armorySelectedBtn"
+      selectedIconStyle="asset.ancientartifact.armoryMarkSelecteIcon"
+      unselectedIconStyle="asset.ancientartifact.armoryMarkUnSelecteIcon"
+      selectedIconInnerRectString="4,86,5,15,13"
+      unselectedIconInnerRectString="4,86,5,15,13"
+      x="180" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.armoryGradeSelectedBtn"
+      parentStyle="ancientartifact.armorySelectedBtn"
+      selectedIconStyle="asset.ancientartifact.armoryGradeSelecteIcon"
+      unselectedIconStyle="asset.ancientartifact.armoryGradeUnSelecteIcon"
+      selectedIconInnerRectString="9,79,5,15,13"
+      unselectedIconInnerRectString="9,79,5,15,13"
+      x="280" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ancientartifact.armoryDeleteSelectedBtn"
+      parentStyle="ancientartifact.armorySelectedBtn"
+      selectedIconStyle="asset.ancientartifact.armoryDeleteSelecteIcon"
+      unselectedIconStyle="asset.ancientartifact.armoryDeleteUnSelecteIcon"
+      selectedIconInnerRectString="20,63,2,25,13"
+      unselectedIconInnerRectString="20,63,2,25,13"
+      x="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryTitleTxt"
+      textFormatStyle="ancientartifact.armoryTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="400"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryTitleTxt1"
+      textFormatStyle="ancientartifact.armoryTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="32"
+      x="382"
+      y="248"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryTipsTxt"
+      textFormatStyle="ancientartifact.armoryTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="195"
+      height="65"
+      wordWrap="true"
+      x="380"
+      y="278" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armorySkillTxt"
+      textFormatStyle="ancientartifact.armorySkillTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="77"
+      wordWrap="true"
+      x="378"
+      y="338" />
+    <component
+      stylename="ancientartifact.armoryBack"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.ancientartifact.armoryBack01,asset.ancientartifact.armoryBack02"
+      x="0"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ancientArmoryView.equipScrol1"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,200,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="200"
+      height="184"
+      x="0"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ancientArmoryView.equipScrol2"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,200,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="200"
+      height="350"
+      x="0"
+      y="35" />
+    <component
+      stylename="ancientartifact.armoryMarkBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.ancientartifact.armoryExps,asset.ancientartifact.armoryCurrentHasIcon,asset.ancientartifact.armoryMarkCountIcon,asset.ancientartifact.upGradeViewBack05"
+      imageRectString="15|0|19,17|60|19,-10|265|19,84|261|19"
+      x="103"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryItemTitleTxt"
+      textFormatStyle="ancientartifact.armoryItemTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="37"
+      x="6"
+      y="22"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryItemValueTxt"
+      textFormatStyle="ancientartifact.armoryItemValueTxt_t01,ancientartifact.armoryItemValueTxt_t02"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="72"
+      x="19"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.armoryJianTou"
+      resourceLink="asset.ancientartifact.upGradeViewBack11"
+      x="162"
+      y="153" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.armoryMarkItem"
+      resourceLink="asset.ancientartifact.armoryMarkItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-5"
+      isFollowMouse="false"
+      x="191"
+      y="109" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryProseTxt"
+      textFormatStyle="ancientartifact.armoryProseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="22"
+      x="176"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryHasNumTxt"
+      textFormatStyle="ancientartifact.armoryHasNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="22"
+      x="218"
+      y="111" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryInputNumTxt"
+      textFormatStyle="ancientartifact.armoryInputNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="22"
+      type="input"
+      restrict="0-9"
+      x="184"
+      y="316" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.armoryMarkBtn"
+      backStyle="asset.ancientartifact.armoryInputBack"
+      iconStyle="asset.ancientartifact.armoryMarkBtnIcon"
+      iconInnerRectString="24,89,10,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.armoryGradeJianTou"
+      resourceLink="asset.ancientartifact.upGradeViewBack11"
+      x="162"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.armoryGradeBtn"
+      backStyle="asset.ancientartifact.armoryInputBack"
+      iconStyle="asset.ancientartifact.armoryGradeBtnIcon"
+      iconInnerRectString="24,89,10,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryGradeTipsTxt"
+      textFormatStyle="ancientartifact.armoryGradeTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="22"
+      x="0"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.armoryDescTipsTxt"
+      textFormatStyle="ancientartifact.armoryDescTipsTxt_t"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="200"
+      height="20"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.addItemIamge"
+      resourceLink="asset.ancientartifact.armoryItemAdd"
+      x="16"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ancientartifact.checkmenuBg"
+      parentStyle="core.describeBackground_style09"
+      width="100"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ancientartifact.checkVbox"
+      x="2"
+      y="2"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ancientartifact.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,70,0,0,2"
+      vScrollbarInnerRectString="17,8,0,0,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="85"
+      height="180"
+      x="8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ancientartifact.bagEquipBack"
+      parentStyle="core.goods.ItemBack"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ancientartifact.armoryDeleteBtn"
+      backStyle="asset.ancientartifact.armoryInputBack"
+      iconStyle="asset.ancientartifact.armoryDeleteBtnIcon"
+      iconInnerRectString="39,57,8,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.deleteItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="50"
+      x="12"
+      y="46" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="ancientartifact.ArmoryDeleteAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      containerY="38"
+      confirmStyle="ancientartifact.ArmoryDeleteonfirmBtn"
+      cancelStyle="ancientartifact.ArmoryDeleteCancelBtn"
+      checkStyle="ancientartifact.ArmoryDeleteCheckBtn"
+      describeStyle="ancientartifact.ArmoryDeleteDescribe"
+      width="360"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="ancientartifact.ArmoryDeleteCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="115"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="ancientartifact.ArmoryDeleteCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="185"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="ancientartifact.ArmoryDeleteonfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="10"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.ArmoryDeleteDescribe"
+      textFormatStyle="ancientartifact.ThewDescribeTxt_t"
+      autoSize="center"
+      height="35"
+      width="310"
+      x="0"
+      y="12"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="ancientartifact.Strengthen"
+      resourceLink="asset.core.goods.Strengthen"
+      x="25"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.armoryGradeIcon1"
+      resourceLink="asset.ancientartifact.armoryGradeIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-5"
+      isFollowMouse="false"
+      x="98"
+      y="307" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ancientartifact.armoryGradeIcon2"
+      resourceLink="asset.ancientartifact.armoryGradeIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-5"
+      isFollowMouse="false"
+      x="250"
+      y="307" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.currentGradeHasNumTxt"
+      textFormatStyle="ancientartifact.currentGradeHasNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="21"
+      width="65"
+      x="120"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientartifact.currentGradeNeedNumTxt"
+      textFormatStyle="ancientartifact.currentGradeNeedNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="21"
+      width="65"
+      x="270"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AncientArtifactItem.lvlText"
+      textFormatStyle="AncientArtifactItem.lvlText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="65"
+      x="5"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ancientMiddleView.lvlText"
+      parentStyle="AncientArtifactItem.lvlText"
+      x="55"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AncientAdvanceFrame.lvlText"
+      parentStyle="AncientArtifactItem.lvlText"
+      x="115"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AncientResonateItem.selectBtn"
+      backStyle="asset.AncientResonateItem.selectBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="32"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="AncientStrengthenView.strengthIcon"
+      resourceLink="asset.ancientartifact.strengthIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="457"
+      y="329" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AncientArmoryItem.lvlText"
+      textFormatStyle="AncientArmoryItem.lvlText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="65"
+      x="3"
+      y="50" />
+    <component
+      classname="ancientartifact.AncientEquipView"
+      stylename="ancientartifact.AncientEquipView" />
+  </components>
+</style>

@@ -1,0 +1,207 @@
+<style
+  name="playerlevelup"
+  source="ui/zh_cn/swf/playerlevelup.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerlevelup.LevelUpprop_t1"
+      args="Arial,16,0xdeb986,,,,,,left"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerlevelup.LevelUpprop_t2"
+      args="Arial,16,0x00fe06,,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <!-- 领主升级等级文字 -->
+    <bitmapData
+      resourceLink="asset.core.LevelUpNumber" />
+    <bitmapData
+      resourceLink="asset.playerlevelup.NumStyle01" />
+    <!-- 男战 -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_1"
+      x="-43"
+      y="-6" />
+    <!-- 男弓 -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_2" />
+    <!-- 男法 -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_3"
+      x="-37"
+      y="-8" />
+    <!-- 女战  -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_4"
+      x="-22" />
+    <!-- 女弓 -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_5"
+      x="-44"
+      y="-8" />
+    <!-- 女法 -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_6" />
+    <!-- 神秘人 -->
+    <bitmapData
+      resourceLink="asset.playerlevelup.Human_100"
+      x="15"
+      y="53" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.playerlevelup.RoleContainer"
+      stylename="asset.playerlevelup.RoleContainer" />
+    <custom
+      classname="asset.playerlevelup.LevelUpBack"
+      stylename="asset.playerlevelup.LevelUpBack" />
+    <custom
+      classname="asset.playerlevelup.LevelUpAttribute_1"
+      stylename="asset.playerlevelup.LevelUpAttribute_1" />
+    <custom
+      classname="asset.playerlevelup.LevelUpAttribute_2"
+      stylename="asset.playerlevelup.LevelUpAttribute_2" />
+    <custom
+      classname="asset.playerlevelup.LevelUpAttribute_3"
+      stylename="asset.playerlevelup.LevelUpAttribute_3" />
+    <custom
+      classname="asset.playerlevelup.LevelUpAttribute_4"
+      stylename="asset.playerlevelup.LevelUpAttribute_4" />
+    <custom
+      classname="asset.playerlevelup.LelveUpOpenContain"
+      stylename="asset.playerlevelup.LelveUpOpenContain" />
+    <custom
+      classname="asset.playerlevelup.LelveUpLeveltxtContain"
+      stylename="asset.playerlevelup.LelveUpLeveltxtContain"
+      x="127"
+      y="3" />
+    <custom
+      classname="asset.playerlevelup.LelveUpLevelEffect"
+      stylename="asset.playerlevelup.LelveUpLevelEffect" />
+    <custom
+      classname="asset.playerlevelup.LelveUpLevelContain"
+      stylename="asset.playerlevelup.LelveUpLevelContain" />
+    <custom
+      classname="asset.playerlevelup.LelveUpFrameContain"
+      stylename="asset.playerlevelup.LelveUpFrameContain" />
+    <custom
+      classname="asset.playerlevelup.LelveUpVocationContain"
+      stylename="asset.playerlevelup.LelveUpVocationContain" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="playerlevelup.LevelUpItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="60"
+      iconHeight="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="11"
+      y="11" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="playerlevelup.LevelUpItem"
+      iconStyle="playerlevelup.LevelUpItemIcon"
+      x="0"
+      y="0"
+      tipStyle="playerlevelup.MultipleLineTip"
+      tipDirctions="2"
+      tipGapH="0"
+      isFollowMouse="false"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="0"
+      strengthenY="0" />
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="playerlevelup.MultipleLineTip"
+      enableHtml="true"
+      tipWidth="200"
+      contentWidth="200" />
+  </customDisplay>
+  <components>
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="playerlevelup.LevelUpConfirmBtn"
+      backStyle="asset.playerlevelup.LevelUpConfirmBtnBack"
+      iconStyle="asset.playerlevelup.LevelUpConfirmTxt"
+      width="202"
+      height="66"
+      iconInnerRectString="48,110,19,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="526"
+      y="237" />
+    <!--  领主升级-->
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerlevelup.LelveUpLevelBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerlevelup.LelveUpLevelBack0"
+      resourceLink="playerlevelup.LelveUpLeveBg1.scaleX,asset.playerlevelup.LelveUpLeveBg1,playerlevelup.LelveUpLeveBg2.scaleX,asset.playerlevelup.LelveUpLeveBg2"
+      imageRectString="269|269|0|227|13,269|269|0|227|13,269|135|9|218|13,269|135|9|218|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="playerlevelup.LelveUpLeveBg1.scaleX"
+      resourceLink="asset.playerlevelup.LelveUpLeveBg1"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="playerlevelup.LelveUpLeveBg2.scaleX"
+      resourceLink="asset.playerlevelup.LelveUpLeveBg2"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerlevelup.LevelUpAddPropName"
+      textFormatStyle="playerlevelup.LevelUpprop_t1"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerlevelup.LevelUpAddPropValue"
+      textFormatStyle="playerlevelup.LevelUpprop_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="110"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerlevelup.LevelUpVocationTxtStep"
+      resourceLink="asset.playerlevelup.Step01,asset.playerlevelup.Step02,asset.playerlevelup.Step03,asset.playerlevelup.Step04,asset.playerlevelup.Step05,asset.playerlevelup.Step06,asset.playerlevelup.Step07,asset.playerlevelup.Step08,asset.playerlevelup.Step09,asset.playerlevelup.Step10"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerlevelup.LevelUpVocationTxtJob1"
+      resourceLink="asset.playerlevelup.Vocation1_1,asset.playerlevelup.Vocation1_2,asset.playerlevelup.Vocation1_3,asset.playerlevelup.Vocation1_4,asset.playerlevelup.Vocation1_5,asset.playerlevelup.Vocation1_6,asset.playerlevelup.Vocation1_7,asset.playerlevelup.Vocation1_8,asset.playerlevelup.Vocation1_9,asset.playerlevelup.Vocation1_10,asset.playerlevelup.Vocation1_11,asset.playerlevelup.Vocation1_12,asset.playerlevelup.Vocation1_13,asset.playerlevelup.Vocation1_14,asset.playerlevelup.Vocation1_15,asset.playerlevelup.Vocation1_16,asset.playerlevelup.Vocation1_17,asset.playerlevelup.Vocation1_18,asset.playerlevelup.Vocation1_19,asset.playerlevelup.Vocation1_20,asset.playerlevelup.Vocation1_21,asset.playerlevelup.Vocation1_22,asset.playerlevelup.Vocation1_23"
+      x="92"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerlevelup.LevelUpVocationTxtJob2"
+      resourceLink="asset.playerlevelup.Vocation2_1,asset.playerlevelup.Vocation2_2,asset.playerlevelup.Vocation2_3,asset.playerlevelup.Vocation2_4,asset.playerlevelup.Vocation2_5,asset.playerlevelup.Vocation2_6,asset.playerlevelup.Vocation2_7,asset.playerlevelup.Vocation2_8,asset.playerlevelup.Vocation2_9,asset.playerlevelup.Vocation2_10,asset.playerlevelup.Vocation2_11,asset.playerlevelup.Vocation2_12,asset.playerlevelup.Vocation2_13,asset.playerlevelup.Vocation2_14,asset.playerlevelup.Vocation2_15,asset.playerlevelup.Vocation2_16,asset.playerlevelup.Vocation2_17,asset.playerlevelup.Vocation2_18,asset.playerlevelup.Vocation2_19,asset.playerlevelup.Vocation2_20,asset.playerlevelup.Vocation2_21,asset.playerlevelup.Vocation2_22,asset.playerlevelup.Vocation2_23"
+      x="92"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerlevelup.LevelUpVocationTxtJob3"
+      resourceLink="asset.playerlevelup.Vocation3_1,asset.playerlevelup.Vocation3_2,asset.playerlevelup.Vocation3_3,asset.playerlevelup.Vocation3_4,asset.playerlevelup.Vocation3_5,asset.playerlevelup.Vocation3_6,asset.playerlevelup.Vocation3_7,asset.playerlevelup.Vocation3_8,asset.playerlevelup.Vocation3_9,asset.playerlevelup.Vocation3_10,asset.playerlevelup.Vocation3_11,asset.playerlevelup.Vocation3_12,asset.playerlevelup.Vocation3_13,asset.playerlevelup.Vocation3_14,asset.playerlevelup.Vocation3_15,asset.playerlevelup.Vocation3_16,asset.playerlevelup.Vocation3_17,asset.playerlevelup.Vocation3_18,asset.playerlevelup.Vocation3_19,asset.playerlevelup.Vocation3_20,asset.playerlevelup.Vocation3_21,asset.playerlevelup.Vocation3_22,asset.playerlevelup.Vocation3_23"
+      x="92"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerlevelup.LevelUpVocationTxtJob4"
+      resourceLink="asset.playerlevelup.Vocation4_1,asset.playerlevelup.Vocation4_2,asset.playerlevelup.Vocation4_3,asset.playerlevelup.Vocation4_4,asset.playerlevelup.Vocation4_5,asset.playerlevelup.Vocation4_6,asset.playerlevelup.Vocation4_7,asset.playerlevelup.Vocation4_8,asset.playerlevelup.Vocation4_1,asset.playerlevelup.Vocation4_2,asset.playerlevelup.Vocation4_3,asset.playerlevelup.Vocation4_4,asset.playerlevelup.Vocation4_5,asset.playerlevelup.Vocation4_6,asset.playerlevelup.Vocation4_7,asset.playerlevelup.Vocation4_8"
+      x="92"
+      y="0" />
+  </components>
+</style>

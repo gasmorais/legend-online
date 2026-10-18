@@ -1,0 +1,270 @@
+<style
+  name="hallfame"
+  source="ui/zh_cn/swf/hallfame.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="hallfame.leftSelectedBtnText_t1"
+      args="Arial,12,0xffc34f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="hallfame.views.tipTxt_f"
+      args="Arial,12,0xb08b56,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="hallfame.timeTxt_f"
+      args="Arial,12,0xb08b56,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.hallfame.back"
+      x="4"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.hallfame.leftBtnBack1"
+      x="4"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.hallfame.leftBtnBack2"
+      x="4"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.hallfame.leftBtnBack3"
+      x="4"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.hallfame.leftBtnBack4"
+      x="7"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.hallfame.getIcon"
+      x="-10"
+      y="-9" />
+    <bitmapData
+      resourceLink="asset.hallfame.ReceivedImg"
+      x="300"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.hallfame.fightImg"
+      x="90"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.hallfame.fightValue" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="hallfame.views.HallFameRightView"
+      stylename="hallfame.rightView"
+      x="200"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="HallFameBagItem.BaseItemView"
+      iconStyle="HallFameBagItem.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="HallFameBagItem.BaseItemViewText"
+      profileX="1"
+      profileY="1"
+      profileWidth="41"
+      profileHeight="41"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="HallFameBagItem.BaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="41"
+      iconWidth="41"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="21"
+      loadingY="21"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <!--名人堂 Frame-->
+    <component
+      classname="hallfame.HallFameFrame"
+      stylename="hallfame.HallFameFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="67"
+      width="660"
+      height="493" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="hallfame.HallFameFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="628"
+      height="380" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="hallfame.leftVBox"
+      x="8"
+      y="10"
+      spacing="0" />
+    <!-- 左侧按钮 -->
+    <component
+      classname="hallfame.views.HallFameLeftButton"
+      stylename="hallfame.leftSelectedBtn"
+      unSelectedStyle="asset.hallfame.leftBtn1"
+      selectedStyle="asset.hallfame.leftBtn2"
+      textStyle="hallfame.leftSelectedBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="193"
+      height="55"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="hallfame.leftSelectedBtnText"
+      textFormatStyle="hallfame.leftSelectedBtnText_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="16"
+      y="25"
+      width="155"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="hallfame.views.back"
+      resourceLink="asset.hallfame.leftBtnBack1,asset.hallfame.leftBtnBack2,asset.hallfame.leftBtnBack3,asset.hallfame.leftBtnBack4"
+      y="-12"
+      x="-10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="hallfame.views.content"
+      resourceLink="asset.hallfame.leftBtnContent1,asset.hallfame.leftBtnContent2,asset.hallfame.leftBtnContent3,asset.hallfame.leftBtnContent4"
+      y="10"
+      x="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="hallfame.views.tipTxt"
+      textFormatStyle="hallfame.views.tipTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="5"
+      y="52"
+      width="175"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="HallFameBagItem.BaseItemViewText"
+      parentStyle="core.BaseItemText"
+      x="2"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="HallFameBagItem.hBox"
+      x="0"
+      y="0"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="HallFameBagItem.hBox2"
+      x="0"
+      y="50"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="HallFameBagItem.getBtn"
+      backStyle="asset.HallFameBagItem.getBtnBack"
+      iconStyle="asset.HallFameBagItem.getBtnIcon"
+      x="300"
+      y="50"
+      width="105"
+      height="40"
+      iconInnerRectString="32,42,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="hallfame.timeTxt"
+      textFieldStyle="hallfame.timeTxtField"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="400"
+      height="20"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="hallfame.timeTxtField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="400"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="hallfame.fightTxt"
+      textFieldStyle="hallfame.fightTxtField"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="200"
+      height="20"
+      x="10"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="hallfame.fightTxtField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="200"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="hallfame.HallFameFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="570"
+      y="-40" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="hallfame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="hallfame.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="hallfame.lastBtn"
+      backStyle="hallfame.lastBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="52"
+      height="68"
+      x="50"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="hallfame.nextBtn"
+      backStyle="asset.hallfame.nextButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="52"
+      height="68"
+      x="375"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="hallfame.lastBtnBack"
+      resourceLink="asset.hallfame.nextButton"
+      scaleX="-1" />
+  </components>
+</style>

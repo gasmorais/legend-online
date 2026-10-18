@@ -1,0 +1,1136 @@
+<style
+  name="stargazing"
+  source="ui/zh_cn/swf/stargazing.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.pieceTitleText_t"
+      args="Arial,12,0x3fabb8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.forceAddText_t"
+      args="Arial,12,0x3fabb8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.attackText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.defenceText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.magicAttackText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.magicDefenceText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.liveText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.attackText2_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.defenceText2_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.magicAttackText2_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.magicDefenceText2_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.liveText2_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarChartView.starName_t"
+      args="Arial,16,0xe5f6f7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarWishView.normalWishText_t"
+      args="Arial,14,0x26d808,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarWishView.advanceWishText_t"
+      args="Arial,14,0x26d808,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarWishView.starPieceText_t"
+      args="Arial,14,0x26d808,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.starFireText_t"
+      args="Arial,12,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.attackText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.defenceText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.magicAttackText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.magicDefenceText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.liveText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.timesCountText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.precentText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.successRateText_t"
+      args="Arial,14,0xbfd9d7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarGazing.StarForceView.starName_t"
+      args="Arial,16,0xe5f6f7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarWishView.processBar.text_t"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="StarWishView.normalCouponBtn.text_t"
+      args="Arial,14,0xbfcdcf,,,,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      stylename="StarGazing.StarChartView.leftView"
+      classname="stargazing.view.StarPalaceView"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarGazing.StarForceView.leftView"
+      classname="stargazing.view.StarPalaceView"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarGazing.StarGazingFrame.starChartView"
+      classname="stargazing.view.StarChartView"
+      x="37"
+      y="88" />
+    <custom
+      stylename="StarGazing.StarGazingFrame.starWishView"
+      classname="stargazing.view.StarWishView"
+      x="40"
+      y="87" />
+    <custom
+      stylename="StarGazing.StarGazingFrame.starForceView"
+      classname="stargazing.view.StarForceView"
+      x="37"
+      y="88" />
+    <custom
+      stylename="StarWishBallItem.ballMc"
+      classname="asset.StarWishBallItem.ballMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="StarWishView.normalRewardContiner"
+      paddingH="17.5"
+      paddingV="14"
+      rowCount="2"
+      columnCount="5"
+      x="74"
+      y="259" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="StarWishView.advanceRewardContiner"
+      paddingH="32"
+      paddingV="14"
+      rowCount="2"
+      columnCount="3"
+      x="496"
+      y="257" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="StarWishView.rewadItem"
+      iconStyle="StarWishView.rewadItem.GoodsItemIcon"
+      textStyle="StarWishView.rewadItem.text"
+      profileStyle="core.GoodsProfileBG"
+      profileX="6"
+      profileY="7"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="StarWishView.rewadItem.GoodsItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="27"
+      loadingY="27"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="46"
+      iconHeight="46"
+      x="8"
+      y="9" />
+    <custom
+      stylename="StarForceView.starMc0"
+      classname="asset.StarForceView.starMc0"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc1"
+      classname="asset.StarForceView.starMc1"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc2"
+      classname="asset.StarForceView.starMc2"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc3"
+      classname="asset.StarForceView.starMc3"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc4"
+      classname="asset.StarForceView.starMc4"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc5"
+      classname="asset.StarForceView.starMc5"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc6"
+      classname="asset.StarForceView.starMc6"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc7"
+      classname="asset.StarForceView.starMc7"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc8"
+      classname="asset.StarForceView.starMc8"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc9"
+      classname="asset.StarForceView.starMc9"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc10"
+      classname="asset.StarForceView.starMc10"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.starMc11"
+      classname="asset.StarForceView.starMc11"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarForceView.ballMc"
+      classname="asset.StarForceView.ballMc"
+      x="0"
+      y="0" />
+    <custom
+      stylename="StarChartView.chartGirdMc"
+      classname="asset.StarChartView.chartGirdMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="StarChartView.pageHbox"
+      spacing="2"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="StarGazing.StarChartView.chartBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarGazing.chartBack.n0,asset.StarGazing.chartBack.scaleBack,asset.StarGazing.chartBack.n2,asset.StarGazing.chartBack.n3"
+      imageRectString="0|0|19,75|45|19,410|41|19,410|229|19"
+      x="176"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarGazing.StarForceView.littleStarBtn"
+      backStyle="StarGazing.littleStarBtn.littleStarImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="350"
+      y="425" />
+    <component
+      stylename="StarGazing.StarForceView.forceBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarGazing.forceBack.n0,asset.StarGazing.forceBack.n1,asset.StarGazing.chartBack.n2"
+      imageRectString="0|0|19,406|253|19,403|63|19"
+      x="176"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarGazing.StarChartView.useItemBtn"
+      backStyle="StarGazing.useItemBtn.useItemImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="340"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarGazing.StarGazingFrame.starWishBtn"
+      unSelectedStyle="asset.StarGazing.starWishBtn.unSelectedBg"
+      selectedStyle="asset.StarGazing.starWishBtn.selectedBg"
+      selectedIconStyle="asset.StarGazing.starWishBtn.selectedIcon"
+      unselectedIconStyle="asset.StarGazing.starWishBtn.unselectedIcon"
+      selectedIconInnerRectString="10,73,2,28,13"
+      unselectedIconInnerRectString="11,69,2,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="31"
+      x="72"
+      y="58"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarGazing.StarGazingFrame.starChartBtn"
+      unSelectedStyle="asset.StarGazing.starWishBtn.unSelectedBg"
+      selectedStyle="asset.StarGazing.starWishBtn.selectedBg"
+      selectedIconStyle="asset.StarGazing.starChartBtn.selectedIcon"
+      unselectedIconStyle="asset.StarGazing.starChartBtn.unselectedIcon"
+      selectedIconInnerRectString="5,83,8,15,13"
+      unselectedIconInnerRectString="7,78,8,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="31"
+      x="172"
+      y="58"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarGazing.StarGazingFrame.starForceBtn"
+      unSelectedStyle="asset.StarGazing.starWishBtn.unSelectedBg"
+      selectedStyle="asset.StarGazing.starWishBtn.selectedBg"
+      selectedIconStyle="asset.StarGazing.starForceBtn.selectedIcon"
+      unselectedIconStyle="asset.StarGazing.starForceBtn.unselectedIcon"
+      selectedIconInnerRectString="14,62,3,25,13"
+      unselectedIconInnerRectString="15,59,4,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="31"
+      x="272"
+      y="58"
+      autoCenter="false" />
+    <component
+      stylename="StarGazing.StarWishView.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarGazing.wishBack.n0,asset.StarGazing.wishBack.n1,asset.StarGazing.wishBack.n2,asset.StarGazing.wishBack.n3,asset.StarGazing.wishBack.n4,asset.StarGazing.wishBack.n4"
+      imageRectString="0|802|0|481|13,0|249|162|24|13,148|192|232|22|13,508|209|232|21|13,75|96|395|20|13,478|96|395|20|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarGazing.StarWishView.advanceWishBtn"
+      backStyle="StarGazing.advanceWishBtn.advanceWishImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="644"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarGazing.StarWishView.prayBtn"
+      backStyle="StarGazing.prayBtn.prayImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="563"
+      y="174" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarGazing.StarWishView.normalWishBtn"
+      backStyle="StarGazing.normalWishBtn.normalWishImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="292"
+      y="405" />
+    <component
+      stylename="StarGazing.StarForceView.starFireImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.StarGazing.resource.starFireImage"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0,4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="198"
+      y="375" />
+    <component
+      stylename="StarGazing.StarGazingFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="810"
+      height="490"
+      x="36"
+      y="85" />
+    <component
+      stylename="StarGazing.StarWishView.starPieceImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.StarGazing.resource.starPieceImage"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="675"
+      y="180" />
+    <component
+      stylename="stargazing.StarGazingFrame"
+      classname="stargazing.StarGazingFrame"
+      parentStyle="core.Frame1"
+      width="846"
+      height="622"
+      containerX="-19"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="StarGazing.StarPalaceView.vbox"
+      spacing="-3"
+      x="0"
+      y="0" />
+    <component
+      stylename="StarGazing.StarChartView.pieceTitleText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.pieceTitleText_t"
+      width="200"
+      height="35"
+      x="585"
+      y="250"
+      wordWrap="true" />
+    <component
+      stylename="StarGazing.StarChartView.forceAddText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.forceAddText_t"
+      type="dynamic"
+      width="100"
+      height="20"
+      x="685"
+      y="258" />
+    <component
+      stylename="StarGazing.StarChartView.attackText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.attackText_t"
+      type="dynamic"
+      width="180"
+      height="20"
+      x="594"
+      y="72" />
+    <component
+      stylename="StarGazing.StarChartView.defenceText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.defenceText_t"
+      type="dynamic"
+      width="180"
+      height="20"
+      x="594"
+      y="102" />
+    <component
+      stylename="StarGazing.StarChartView.magicAttackText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.magicAttackText_t"
+      type="dynamic"
+      width="180"
+      height="20"
+      x="594"
+      y="132" />
+    <component
+      stylename="StarGazing.StarChartView.magicDefenceText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.magicDefenceText_t"
+      type="dynamic"
+      width="180"
+      height="20"
+      x="594"
+      y="162" />
+    <component
+      stylename="StarGazing.StarChartView.liveText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.liveText_t"
+      type="dynamic"
+      width="180"
+      height="20"
+      x="594"
+      y="192" />
+    <component
+      stylename="StarGazing.StarChartView.attackText2"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.attackText2_t"
+      type="dynamic"
+      width="190"
+      height="20"
+      x="594"
+      y="292" />
+    <component
+      stylename="StarGazing.StarChartView.defenceText2"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.defenceText2_t"
+      type="dynamic"
+      width="190"
+      height="20"
+      x="594"
+      y="320" />
+    <component
+      stylename="StarGazing.StarChartView.magicAttackText2"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.magicAttackText2_t"
+      type="dynamic"
+      width="190"
+      height="20"
+      x="594"
+      y="350" />
+    <component
+      stylename="StarGazing.StarChartView.magicDefenceText2"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.magicDefenceText2_t"
+      type="dynamic"
+      width="190"
+      height="20"
+      x="594"
+      y="380" />
+    <component
+      stylename="StarGazing.StarChartView.liveText2"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.liveText2_t"
+      type="dynamic"
+      width="190"
+      height="20"
+      x="594"
+      y="410" />
+    <component
+      stylename="StarGazing.StarChartView.starName"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarChartView.starName_t"
+      type="dynamic"
+      width="155"
+      height="20"
+      x="310"
+      y="22" />
+    <component
+      stylename="StarGazing.StarWishView.normalWishText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarWishView.normalWishText_t"
+      type="dynamic"
+      width="81"
+      height="18"
+      x="179"
+      y="395" />
+    <component
+      stylename="StarGazing.StarWishView.advanceWishText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarWishView.advanceWishText_t"
+      type="dynamic"
+      width="60"
+      height="18"
+      x="579"
+      y="395" />
+    <component
+      stylename="StarGazing.StarWishView.starPieceText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarWishView.starPieceText_t"
+      type="dynamic"
+      width="80"
+      height="18"
+      x="719"
+      y="208" />
+    <component
+      stylename="StarGazing.StarForceView.starFireText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.starFireText_t"
+      type="dynamic"
+      width="70"
+      height="16"
+      x="327"
+      y="375" />
+    <component
+      stylename="StarGazing.StarForceView.attackText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.attackText_t"
+      type="dynamic"
+      width="185"
+      height="20"
+      x="580"
+      y="94" />
+    <component
+      stylename="StarGazing.StarForceView.defenceText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.defenceText_t"
+      type="dynamic"
+      width="185"
+      height="20"
+      x="580"
+      y="124" />
+    <component
+      stylename="StarGazing.StarForceView.magicAttackText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.magicAttackText_t"
+      type="dynamic"
+      width="185"
+      height="20"
+      x="580"
+      y="154" />
+    <component
+      stylename="StarGazing.StarForceView.magicDefenceText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.magicDefenceText_t"
+      type="dynamic"
+      width="185"
+      height="20"
+      x="580"
+      y="184" />
+    <component
+      stylename="StarGazing.StarForceView.liveText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.liveText_t"
+      type="dynamic"
+      width="185"
+      height="20"
+      x="580"
+      y="214" />
+    <component
+      stylename="StarGazing.StarForceView.timesCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.timesCountText_t"
+      type="dynamic"
+      width="195"
+      height="38"
+      x="580"
+      y="275"
+      wordWrap="true" />
+    <component
+      stylename="StarGazing.StarForceView.precentText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.precentText_t"
+      type="dynamic"
+      width="195"
+      height="38"
+      x="580"
+      y="310"
+      wordWrap="true" />
+    <component
+      stylename="StarGazing.StarForceView.successRateText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.successRateText_t"
+      type="dynamic"
+      width="195"
+      height="38"
+      x="580"
+      y="345"
+      wordWrap="true" />
+    <component
+      stylename="StarGazing.StarForceView.starName"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="StarGazing.StarForceView.starName_t"
+      type="dynamic"
+      width="68"
+      height="20"
+      x="351"
+      y="38" />
+    <!--十二星宫按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn0"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon0"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon0"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn1"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon1"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon1"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn2"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon2"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon2"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn3"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon3"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon3"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn4"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon4"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon4"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn5"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon5"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon5"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn6"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon6"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon6"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn7"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon7"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon7"
+      selectedIconInnerRectString="40,103,5,32,13"
+      unselectedIconInnerRectString="40,103,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn8"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon8"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon8"
+      selectedIconInnerRectString="40,115,5,32,13"
+      unselectedIconInnerRectString="40,115,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn9"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon9"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon9"
+      selectedIconInnerRectString="40,115,5,32,13"
+      unselectedIconInnerRectString="40,115,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn10"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon10"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon10"
+      selectedIconInnerRectString="40,112,5,32,13"
+      unselectedIconInnerRectString="40,112,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="StarPalaceView.starBtn11"
+      selectedStyle="asset.StarPalaceView.starBtn.selectedBg"
+      unSelectedStyle="asset.StarPalaceView.starBtn.unselectedBg"
+      selectedIconStyle="asset.StarPalaceView.starBtn.selectedIcon11"
+      unselectedIconStyle="asset.StarPalaceView.starBtn.unselectedIcon11"
+      selectedIconInnerRectString="40,96,5,32,13"
+      unselectedIconInnerRectString="40,96,5,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <!--	星愿	   -->
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="StarWishView.processBar"
+      backgroundLink="asset.StarWishView.processBarBg"
+      barLink="asset.StarWishView.processBarColor"
+      textStyle="StarWishView.processBar.text"
+      barMargin="18,14,18,14"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="118"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="StarWishView.processBar.text"
+      textFormatStyle="StarWishView.processBar.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="StarWishView.normalCouponBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      textStyle="StarWishView.normalCouponBtn.text"
+      backgoundInnerRectString="25,22,-3,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0,4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="72"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="StarWishView.advanceCouponBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      textStyle="StarWishView.normalCouponBtn.text"
+      backgoundInnerRectString="25,22,-2,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0,4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="479"
+      y="427" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="StarWishView.normalCouponBtn.text"
+      textFormatStyle="StarWishView.normalCouponBtn.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="177"
+      height="50"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="StarGazing.StarWishView.ballContiner"
+      x="50"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="StarWishBallItem.ballImage"
+      resourceLink="asset.StarWishBallItem.ballImage1,asset.StarWishBallItem.ballImage2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="StarWishView.rewadItem.text"
+      parentStyle="core.BaseItemText"
+      x="10"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="StarForceView.firePushBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      textStyle="StarWishView.normalCouponBtn.text"
+      backgoundInnerRectString="25,22,-2,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0,4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="405"
+      y="378" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="StarForceView.mcContiner"
+      x="260"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="StarChartView.chartPieceBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      textStyle="StarWishView.normalCouponBtn.text"
+      backgoundInnerRectString="25,22,1,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0,4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="182"
+      y="384" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="StarChartView.chartBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      textStyle="StarWishView.normalCouponBtn.text"
+      backgoundInnerRectString="25,22,-3,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0,4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="387"
+      y="392" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarChartView.lastBtn"
+      backStyle="StarChartView.lastBtn.back"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      stylename="StarChartView.lastBtn.back"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.StarChartView.nextBtn"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="StarChartView.nextBtn"
+      backStyle="asset.StarChartView.nextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="280"
+      y="0" />
+    <!--	星图页数      -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn1"
+      unSelectedStyle="asset.StarChartView.pageBtn1.UnSelected"
+      selectedStyle="StarChartView.pageBtn1.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn2"
+      unSelectedStyle="asset.StarChartView.pageBtn2.UnSelected"
+      selectedStyle="StarChartView.pageBtn2.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn3"
+      unSelectedStyle="asset.StarChartView.pageBtn3.UnSelected"
+      selectedStyle="StarChartView.pageBtn3.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn4"
+      unSelectedStyle="asset.StarChartView.pageBtn4.UnSelected"
+      selectedStyle="StarChartView.pageBtn4.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn5"
+      unSelectedStyle="asset.StarChartView.pageBtn5.UnSelected"
+      selectedStyle="StarChartView.pageBtn5.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn6"
+      unSelectedStyle="asset.StarChartView.pageBtn6.UnSelected"
+      selectedStyle="StarChartView.pageBtn6.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn7"
+      unSelectedStyle="asset.StarChartView.pageBtn7.UnSelected"
+      selectedStyle="StarChartView.pageBtn7.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn8"
+      unSelectedStyle="asset.StarChartView.pageBtn8.UnSelected"
+      selectedStyle="StarChartView.pageBtn8.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn9"
+      unSelectedStyle="asset.StarChartView.pageBtn9.UnSelected"
+      selectedStyle="StarChartView.pageBtn9.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn10"
+      unSelectedStyle="asset.StarChartView.pageBtn10.UnSelected"
+      selectedStyle="StarChartView.pageBtn10.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn11"
+      unSelectedStyle="asset.StarChartView.pageBtn11.UnSelected"
+      selectedStyle="StarChartView.pageBtn11.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="StarGazing.StarChartView.pageBtn12"
+      unSelectedStyle="asset.StarChartView.pageBtn12.UnSelected"
+      selectedStyle="StarChartView.pageBtn12.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      stylename="StarChartView.pageBtn1.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn1.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn2.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn2.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn3.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn3.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn4.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn4.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn5.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn5.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn6.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn6.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn7.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn7.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn8.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn8.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn9.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn9.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn10.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn10.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn11.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn11.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      stylename="StarChartView.pageBtn12.Selected"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.StarChartView.pageBtn12.UnSelected,asset.StarChartView.pageBtn.Selected"
+      imageRectString="0|0|19,0|0|19" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="StarChartView.chartContiner"
+      x="281"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="StarChartView.chartBorder"
+      resourceLink=",asset.StarChartView.chartBorder1,asset.StarChartView.chartBorder2,asset.StarChartView.chartBorder3,asset.StarChartView.chartBorder4,asset.StarChartView.chartBorder5"
+      x="274"
+      y="64" />
+  </components>
+</style>

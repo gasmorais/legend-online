@@ -1,0 +1,556 @@
+<style
+  name="selectcampaign"
+  source="ui/zh_cn/swf/selectcampaign.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="SelectCP.combox_t"
+      args="Arial,14,0xfff7c4,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SelectCP.AreaListCellTextStyle_t"
+      args="Arial,12,0xffdd9a,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SelectCP.check.fallGoods_t"
+      args="Arial,13,0xfec143,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="selectCP.numTipAsset_t"
+      args="Arial,15,0xfe0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="selectCP.numValueTipAsset_t"
+      args="Arial,18,0xfe0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="selecteCP.chapterTipAsset_t"
+      args="Arial,14,0xbaad89,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="SelectCP.friendsNormal_f"
+      args="0x000000,1,4,4,3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.selectCP.AreaComBoxBg"
+      x="268"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.selectCP.MapShape"
+      smoothing="true" />
+    <!--<bitmapData resourceLink="asset.selectCP.onComboxOverBg"/> x="386" y="13" />-->
+    <bitmapData
+      resourceLink="asset.selectCP.Back"
+      smoothing="true"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.selectCP.NewIcon"
+      smoothing="true"
+      x="112"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.selectCP.Circle"
+      smoothing="true"
+      x="108"
+      y="-6" />
+    <bitmapData
+      resourceLink="asset.selectCP.lastBack"
+      x="95"
+      y="251" />
+    <bitmapData
+      resourceLink="asset.selectCP.SSSBack"
+      x="7"
+      y="140" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="selectcampaign.view.AreaView"
+      stylename="selectCP.AreaView"
+      x="27"
+      y="-2" />
+    <custom
+      classname="selectcampaign.view.SelectCpMapView"
+      stylename="selectCP.MapView"
+      x="-8"
+      y="-6" />
+    <custom
+      classname="selectcampaign.view.CampaignInfoView"
+      stylename="selectCp.InfoView"
+      x="618"
+      y="213" />
+    <custom
+      classname="asset.selectCP.PointEffect"
+      stylename="selectCP.PointEffect"
+      x="-27"
+      y="-20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="selecteCP.MapIcon"
+      iconWidth="262"
+      iconHeight="112"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="57"
+      loadingY="36"
+      x="33"
+      y="75" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="selecteCP.MapNameBmp"
+      x="40"
+      y="92" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="selecteCP.DistrictGoodsCellIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="selecteCP.DistrictGoodsCell"
+      iconStyle="selecteCP.DistrictGoodsCellIcon"
+      textStyle="selecteCP.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="46"
+      profileHeight="46"
+      showProfile="true" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="selecteCP.MopupBtnStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,0"
+      tipGapH="-10"
+      tipGapV="-10"
+      isFollowMouse="false"
+      x="125"
+      y="170" />
+    <custom
+      classname="asset.selectCP.TaskIconMc"
+      stylename="selectCP.TaskIconMc"
+      x="-15"
+      y="-13" />
+    <custom
+      classname="asset.selectCP.ScaleBack"
+      stylename="selectCP.ScaleBack"
+      height="55" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="selectCP.TaskTip"
+      x="0"
+      y="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="asset.selectCP.framestyleCp"
+      stylename="selectCP.framestyleCp"
+      mouseChildren="false"
+      mouseEnabled="false"
+      x="-18"
+      y="-58" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="selectCP.BlackBack"
+      resourceLink="asset.selectCP.BlackBack"
+      y="0"
+      x="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="selectCp.Profile"
+      resourceLink="asset.selectCp.ProfileD,asset.selectCp.ProfileC,asset.selectCp.ProfileB,asset.selectCp.ProfileA,asset.selectCp.ProfileS,asset.selectCp.ProfileSS,asset.selectCp.ProfileSSS"
+      x="122"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="selectCP.MapPoint" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="selectCP.MapWorldIcon" />
+    <component
+      classname="selectcampaign.SelectCampaignFrame"
+      stylename="selectCP.SelectCampaignFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="selectCP.BlackBack"
+      closeInnerRectString="29,-10,-15,29,14"
+      moveInnerRectString="0,30,-40,40,1"
+      titleOuterRectPosString="0,15,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="-14"
+      containerY="16"
+      width="960"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="chapterRewardView.CloseBtn"
+      backStyle="asset.core.closeBtn_style02"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="322"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="selecteCP.chapterPreBtn.Back"
+      resourceLink="asset.selectCP.directionBtnBack,asset.selectCP.directionBtnBack,asset.selectCP.directionBtnBack,asset.selectCP.directionBtnBackGray" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selectCP.CloseBtn"
+      parentStyle="core.CloseBtn"
+      x="950"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selecteCP.chapterPreBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      backStyle="selecteCP.chapterPreBtn.Back"
+      x="270"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selecteCP.chapterNextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      backStyle="selecteCP.chapterPreBtn.Back"
+      scaleX="-1"
+      x="640"
+      y="17" />
+    <!-- Area区域选择 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SelectCP.PrivateChatText"
+      textFormatStyle="SelectCP.combox_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      buttonMode="true"
+      autoSize="none"
+      width="100"
+      height="20"
+      maxChars="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SelectCP.PrivateChatText2"
+      textFormatStyle="SelectCP.combox_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      buttonMode="true"
+      autoSize="none"
+      width="220"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="SelectCP.comboxButton"
+      unSelectedStyle="asset.selectCP.ComboxBtnBack"
+      selectedStyle="asset.selectCP.ComboxBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="135"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SelectCP.comboxButton2"
+      backStyle="SelectCP.comboxButton.Image"
+      x="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SelectCP.comboxButton.Image"
+      resourceLink="selectCP.comBoxBg01,selectCP.comBoxBg02,selectCP.comBoxBg02,selectCP.comBoxBg02"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      width="162"
+      height="32"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selectCP.comBoxBg01"
+      resourceLink="asset.selectCP.comBoxBg01"
+      scaleGridString="15,5,130,6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selectCP.comBoxBg02"
+      resourceLink="asset.selectCP.comBoxBg02"
+      scaleGridString="15,5,130,6" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="SelectCP.AreaCombox"
+      listPanelStyle="SelectCP.AreaListpanel"
+      listInnerRectString="0,35,3,100,18"
+      textStyle="SelectCP.PrivateChatText"
+      textInnerRectString="0,-20,4,1,0"
+      buttonStyle="SelectCP.comboxButton2"
+      width="255"
+      height="32"
+      x="330"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="SelectCP.AreaListpanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="21,0,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|SelectCP.AreaListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.CampaignChapterCellAdapter"
+      stylename="SelectCP.AreaListCell"
+      backStyle="selectCP.ComboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="SelectCP.AreaListCellTextStyle"
+      autoSizeAble="false"
+      width="235"
+      height="22"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="selectCP.ComboxListCellAsset"
+      resourceLink=",asset.selectCP.ComboxListCellAsset,asset.selectCP.ComboxListCellAsset"
+      fillAlphaRect="true"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SelectCP.AreaListCellTextStyle"
+      textFormatStyle="SelectCP.AreaListCellTextStyle_t"
+      filterString="core.filter_01"
+      type="input"
+      autoSize="left"
+      width="200"
+      height="20"
+      y="1" />
+    <!-- 节点信息 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selectCP.mapMask.back"
+      resourceLink="asset.selectCP.mapMaskBg"
+      x="33"
+      y="75"
+      width="262"
+      height="112" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="campaignInfoView.CloseBtn"
+      backStyle="asset.core.closeBtn_style02"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="281"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="selecteCP.NormalBtn"
+      unSelectedStyle="asset.selectCP.selectedBg"
+      selectedStyle="asset.selectCP.selectedBg"
+      selectedIconStyle="asset.selectCP.normalSelected"
+      unselectedIconStyle="asset.selectCP.normalUnSelected"
+      selectedIconInnerRectString="175,70,7,27,13"
+      unselectedIconInnerRectString="165,76,7,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="133"
+      height="47"
+      transparentEnable="true"
+      x="56"
+      y="89"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="selecteCP.HeroBtn"
+      parentStyle="selecteCP.NormalBtn"
+      unSelectedStyle="asset.selectCP.selectedBg"
+      selectedStyle="asset.selectCP.selectedBg"
+      selectedIconStyle="asset.selectCP.heroSelected"
+      unselectedIconStyle="asset.selectCP.herolUnSelected"
+      selectedIconInnerRectString="186,55,5,28,13"
+      unselectedIconInnerRectString="180,59,5,29,13"
+      x="56"
+      y="124" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="selecteCP.checkFallGoods.Text"
+      textFormatStyle="SelectCP.check.fallGoods_t"
+      autoSize="none"
+      width="60"
+      height="25"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="selecteCP.checkFallGoodsBtn"
+      x="35"
+      y="164"
+      width="25"
+      height="25"
+      backStyle="asset.selectCP.checkFallGoods"
+      textStyle="selecteCP.checkFallGoods.Text"
+      autoSizeAble="false"
+      backgoundInnerRectString="21,0,4,4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selecteCP.MopupBtn"
+      backStyle="asset.selectCP.MopupBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,0"
+      tipGapH="-10"
+      tipGapV="-10"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selecteCP.StartBtn"
+      x="210"
+      y="170"
+      backStyle="asset.selectCP.startBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="selecteCP.Profile"
+      parentStyle="core.Profile"
+      x="231"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selecteCP.ProfileTxt"
+      resourceLink="asset.core.ProfileTxt"
+      x="169"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="selecteCP.DistrictGoodsBox"
+      x="43"
+      y="66"
+      spacing="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="selecteCP.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="2"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selecteCP.ChapterRewardBtn1"
+      backStyle="asset.selectCP.ChapterRewardBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="30"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="selecteCP.ChapterRewardBtn2"
+      backStyle="asset.selectCP.ChapterRewardBack"
+      iconStyle="asset.selectCP.ChapterRewardIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="10,75,5,62,13"
+      x="30"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selecteCP.upBack"
+      resourceLink="asset.selectCP.upBack"
+      scaleGridString="10,10,20,20"
+      width="310"
+      height="85"
+      x="16"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selecteCP.downBack"
+      resourceLink="asset.selectCP.downBack"
+      scaleGridString="10,10,20,20"
+      width="310"
+      height="90"
+      x="16"
+      y="162" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="selecteCP.SSSGoodsBox"
+      x="43"
+      y="190"
+      spacing="24" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selectCP.addBtn"
+      backStyle="asset.selectCP.addBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="912"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="selectCP.numTipAsset"
+      textFormatStyle="selectCP.numTipAsset_t"
+      autoSize="none"
+      width="180"
+      height="50"
+      filterString="core.normal_f"
+      x="725"
+      y="4"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="selectCP.numValueTipAsset"
+      textFormatStyle="selectCP.numValueTipAsset_t"
+      autoSize="none"
+      width="60"
+      height="22"
+      filterString="core.normal_f"
+      x="890"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="selectCP.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="905"
+      y="-30" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="selectCP.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="selectCP.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="selecteCP.chapterTipAsset"
+      textFormatStyle="selecteCP.chapterTipAsset_t"
+      autoSize="none"
+      width="285"
+      height="20"
+      filterString="core.normal_f"
+      x="30"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="selectCP.AreaComBoxBg"
+      resourceLink="asset.selectCP.AreaComBoxBg"
+      scaleGridString="80,5,290,6"
+      width="460"
+      height="52"
+      x="225"
+      y="7" />
+  </components>
+</style>

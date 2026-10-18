@@ -1,0 +1,166 @@
+<style
+  name="monthcard"
+  source="ui/zh_cn/swf/monthcard.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonthCardFrame.timeText_t"
+      args="Arial,12,0xf2e4a5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonthCardGiftItem.titleText_t"
+      args="Arial,14,0xf2e4a5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonthCardGiftItem.descText_t"
+      args="Arial,12,0xff0000,,,,,,center" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MonthCardGiftItem.rewardItem"
+      backgroundStyle="MonthCardGiftItem.rewardBack"
+      iconStyle="core.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="core.BaseItemText"
+      lockStyle="core.BagCellLock"
+      showProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="0"
+      strengthenY="0"
+      x="2"
+      y="2" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="MonthCardGiftItem.rewardBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonthCardGiftItem.rewardBack"
+      x="-3"
+      y="-3" />
+    <component
+      stylename="monthcard.MonthCardFrame.frameBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MonthCardFrame.frameBack,asset.MonthCardFrame.frameTitle"
+      imageRectString="0|955|0|517|13,215|520|-25|65|13"
+      x="0"
+      y="0" />
+    <component
+      classname="monthcard.MonthCardFrame"
+      stylename="monthcard.MonthCardFrame"
+      backStyle="monthcard.MonthCardFrame.frameBack"
+      parentStyle="core.Frame2"
+      moveInnerRectString="360,50,25,0,9"
+      titleOuterRectPosString="0,44,1"
+      closeInnerRectString="29,43,2,29,14"
+      containerX="10"
+      containerY="51"
+      moveEnable="false"
+      width="955"
+      height="517" />
+    <component
+      stylename="MonthCardFrame.activeTextImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MonthCardFrame.activeTimeImage,asset.MonthCardFrame.activeRuleImage"
+      imageRectString="315|60|5|18|13,60|52|390|17|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonthCardFrame.giftHbox"
+      x="95"
+      y="40"
+      spacing="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonthCardFrame.timeText"
+      textFormatStyle="MonthCardFrame.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="375"
+      y="5" />
+    <component
+      stylename="MonthCardGiftItem.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MonthCardGiftItem.back,asset.MonthCardGiftItem.titleBack,asset.MonthCardGiftItem.oenGetImage"
+      imageRectString="0|248|0|324|13,38|166|15|32|13,50|136|165|13|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonthCardGiftItem.titleText"
+      textFormatStyle="MonthCardGiftItem.titleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="10"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonthCardGiftItem.descText"
+      textFormatStyle="MonthCardGiftItem.descText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="30"
+      x="10"
+      y="135"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonthCardGiftItem.joinBtn"
+      backStyle="asset.MonthCardGiftItem.joinBtnBack"
+      iconStyle="asset.MonthCardGiftItem.joinBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="16,74,11,21,13"
+      x="65"
+      y="270" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonthCardGiftItem.getBtn"
+      backStyle="asset.MonthCardGiftItem.joinBtnBack"
+      iconStyle="asset.MonthCardGiftItem.getBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="31,45,12,21,13"
+      x="65"
+      y="270" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonthCardGiftItem.rewardPanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-10,4"
+      viewportInnerRectString="3,2,15,60,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="214"
+      height="76"
+      x="12"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonthCardFrame.helpText"
+      textFormatStyle="MonthCardFrame.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="781"
+      height="20"
+      x="10"
+      y="142" />
+    <component
+      stylename="MonthCardFrame.helpContiner"
+      classname="com.pickgliss.ui.core.Component"
+      x="115"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonthCardGiftItem.rewardHbox"
+      x="3"
+      y="0"
+      spacing="-11" />
+  </components>
+</style>

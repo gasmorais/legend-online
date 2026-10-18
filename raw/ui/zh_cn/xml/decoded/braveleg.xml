@@ -1,0 +1,1303 @@
+<style
+  name="braveleg"
+  source="ui/zh_cn/swf/braveleg.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.txt_t"
+      args="Arial,14,0xe2e50d,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.txt1_t"
+      args="Arial,14,0xe2e50d,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.txt2_t"
+      args="Arial,12,0xdcc350,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.txt3_t"
+      args="Arial,12,0xe4d29c,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.txt4_t"
+      args="Arial,12,0xc2a07c,,,,,,left,,,,4"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.txt5_t"
+      args="Arial,12,0xe2e50d,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.PageTextStyle1_t"
+      args="Arial,16,0xfffdf4,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.RankTxt1_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.RankTxt2_t"
+      args="Arial,14,0xe7c88b,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.RankTxt3_t"
+      args="Arial,12,0xc08c38,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.RankTxt4_t"
+      args="Arial,16,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.RankTxt5_t"
+      args="Arial,16,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.RankItemTxt1_t"
+      args="Arial,12,0xe7ed36,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.inviteTxt1_t"
+      args="Arial,16,0xfff0a8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.inviteTxt2_t"
+      args="Arial,16,0xfcc64d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.inviteTxt3_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.TeamTxt1_t"
+      args="Arial,12,0x16ec34,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.TeamTxt2_t"
+      args="Arial,12,0x16ec34,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.TeamTxt3_t"
+      args="Arial,12,0xe99353,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="braveleg.TeamTxt4_t"
+      args="Arial,12,0xdf1310,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.braveleg.RankNum" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="braveleg.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="bravaleg.HeadBg"
+      resourceLink="asset.braveleg.HeadBg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.txt"
+      textFormatStyle="braveleg.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="140"
+      height="43" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="braveleg.BaseButton"
+      backStyle="asset.braveleg.BraveLegBtnBg"
+      textStyle="braveleg.txt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 报名界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="braveleg.SignUpFrameBg"
+      resourceLink="asset.braveleg.SignUpFrameBg" />
+    <component
+      classname="braveleg.BraveLegSignUpFrame"
+      stylename="braveleg.BraveLegSignUpFrame"
+      parentStyle="core.Frame1"
+      backStyle="braveleg.SignUpFrameBg"
+      moveInnerRectString="0,70,15,25,1"
+      closeInnerRectString="29,30,21,29,14"
+      containerX="50"
+      containerY="59"
+      width="1084"
+      height="625" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.SignUpFrameTimeTxt"
+      textFormatStyle="braveleg.txt4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="280"
+      height="120"
+      x="464"
+      y="398"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.SignUpFrameRankBtn"
+      backStyle="asset.braveleg.SignUpRankBtnBg"
+      iconStyle="asset.braveleg.SignUpRankBtnTxt"
+      iconInnerRectString="43,54,12,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false"
+      x="475"
+      y="101" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.SignUpFrameRewardBtn"
+      backStyle="asset.braveleg.SignUpRewardBtnBg"
+      iconStyle="asset.braveleg.SignUpRewardBtnTxt"
+      iconInnerRectString="45,48,6,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="0"
+      isFollowMouse="false"
+      autoCenter="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="619"
+      y="101" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.SignUpFrameSignUpBtn"
+      backStyle="asset.braveleg.BraveLegBtnRBg"
+      iconStyle="asset.braveleg.SignUpBtnTxt"
+      iconInnerRectString="36,43,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="475"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.SignUpFrameCreateTeamBtn"
+      backStyle="asset.braveleg.BraveLegBtnGBg"
+      iconStyle="asset.braveleg.SignUpCreateBtnTxt"
+      iconInnerRectString="23,69,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="619"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="braveleg.SignUpFrameShopBtn"
+      backStyle="asset.braveleg.BraveLegShopBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="531"
+      y="225" />
+    <component
+      classname="yishi.view.community.HeadIconCell"
+      stylename="braveleg.MyHead"
+      backStyle="bravaleg.HeadBg"
+      iconStyle="braveleg.BaseIconView"
+      iconX="12"
+      iconY="12"
+      iconWidth="52"
+      iconHeight="52"
+      x="468"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.MyMedal"
+      parentStyle="braveleg.Medal"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="649"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.MyScoreImg"
+      resourceLink="asset.braveleg.RankScoreImg"
+      x="549"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.MyScoreTxt"
+      textFormatStyle="braveleg.txt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="200"
+      height="18"
+      x="600"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.MyFightImg"
+      resourceLink="asset.braveleg.RankFightImg"
+      x="549"
+      y="61" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.MyFightTxt"
+      textFormatStyle="braveleg.txt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="200"
+      height="18"
+      x="598"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="braveleg.SignUpFrameTopList"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|braveleg.signup.BraveLegTopItem,89,571"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="571"
+      height="446"
+      x="6"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TitleImg"
+      resourceLink="asset.braveleg.TitleImg"
+      x="399"
+      y="-42" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.RankTitleImg"
+      resourceLink="asset.braveleg.RankListTitle"
+      x="118"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeamListTitle"
+      resourceLink="asset.braveleg.TeamListTitle"
+      x="810"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeamListImg1"
+      resourceLink="asset.braveleg.TeamListImg1"
+      x="807"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeamListImg2"
+      resourceLink="asset.braveleg.TeamListImg2"
+      x="901"
+      y="48" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.SignUpPrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="130"
+      y="502" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.SignUpNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="265"
+      y="502" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.SignUpPageBg"
+      resourceLink="asset.core.pageBg"
+      width="64"
+      height="33"
+      x="200"
+      y="500" />
+    <!-- 页码文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.SignUpPageTxt"
+      textFormatStyle="braveleg.PageTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="64"
+      height="20"
+      x="200"
+      y="505" />
+    <!-- 报名排行榜 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.RankNumBg"
+      resourceLink="asset.braveleg.RankNumBg1,asset.braveleg.RankNumBg2,asset.braveleg.RankNumBg3,asset.braveleg.RankNumBg4"
+      x="8"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.Medal"
+      resourceLink="asset.braveleg.Medal0,asset.braveleg.Medal1,asset.braveleg.Medal2,asset.braveleg.Medal3,asset.braveleg.Medal4,asset.braveleg.Medal5" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="braveleg.RankNum"
+      x="48"
+      y="29" />
+    <component
+      classname="yishi.view.community.HeadIconCell"
+      stylename="braveleg.TopItemHead"
+      backStyle="bravaleg.HeadBg"
+      iconStyle="braveleg.BaseIconView"
+      iconX="12"
+      iconY="12"
+      iconWidth="52"
+      iconHeight="52"
+      x="87"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.RankMedal"
+      parentStyle="braveleg.Medal"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="328"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankNameTxt"
+      textFormatStyle="braveleg.txt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="155"
+      height="20"
+      x="169"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.RankScoreImg"
+      resourceLink="asset.braveleg.RankScoreImg"
+      x="169"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankScoreTxt"
+      textFormatStyle="braveleg.txt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="105"
+      height="18"
+      x="221"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.RankFightImg"
+      resourceLink="asset.braveleg.RankFightImg"
+      x="169"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFightTxt"
+      textFormatStyle="braveleg.txt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="105"
+      height="18"
+      x="218"
+      y="62" />
+    <!-- 队伍列表 -->
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="braveleg.TeamList"
+      backgoundInnerRectString="1,1,1,1,-1"
+      viewportInnerRectString="0,-1,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|braveleg.signup.BraveLegTeamItem,28,220"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="220"
+      height="392"
+      x="750"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.TeamListRefreshBtn"
+      backStyle="asset.braveleg.BraveLegBtnYBg"
+      iconStyle="asset.braveleg.TeamListRefreshBtnTxt"
+      iconInnerRectString="32,37,11,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="811"
+      y="480" />
+    <!-- 队伍列表子项 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeamItemNameTxt"
+      textFormatStyle="braveleg.txt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="220"
+      height="16"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeamItemMemberTxt"
+      textFormatStyle="braveleg.txt3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="220"
+      height="16"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeamItemBg"
+      resourceLink="asset.braveleg.TeamItemBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.TeamItemJoinBtn"
+      backStyle="asset.braveleg.TeamItemJoinBtnBg"
+      iconStyle="asset.braveleg.TeamItemJoinBtnTxt"
+      iconInnerRectString="12,25,5,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="86"
+      y="3" />
+    <!-- 队伍界面 -->
+    <component
+      classname="braveleg.BraveLegTeamFrame"
+      stylename="braveleg.BraveLegTeamFrame"
+      parentStyle="core.Frame1"
+      moveInnerRectString="0,70,15,25,1"
+      closeInnerRectString="29,0,21,29,14"
+      containerX="20"
+      containerY="64"
+      width="720"
+      height="515" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="braveleg.frameBorder"
+      resourceLink="asset.braveleg.frameBorder"
+      scaleGridString="28,28,32,32" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="braveleg.TeamFrameBg"
+      resourceLink="asset.braveleg.TeamFrameBg,braveleg.frameBorder"
+      imageRectString="0|676|0|399|13,-5|685|-4|406|13"
+      mouseChildren="false"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeamLeftTitle"
+      resourceLink="asset.braveleg.LeftTitle"
+      x="293"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.LeftTxt"
+      textFormatStyle="braveleg.TeamTxt2_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="140"
+      height="18"
+      x="415"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeamTimeTitle"
+      resourceLink="asset.braveleg.TimeTitle"
+      x="293"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TimeTxt"
+      textFormatStyle="braveleg.TeamTxt2_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="140"
+      height="18"
+      x="467"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.WarnTxt"
+      textFormatStyle="braveleg.TeamTxt4_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="240"
+      height="34"
+      x="293"
+      y="54"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.InspireCountTxt"
+      textFormatStyle="braveleg.TeamTxt1_t"
+      filterString="room.friendsNormal_f"
+      autoSize="left"
+      width="200"
+      height="18"
+      x="290"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.MatrixBtn"
+      backStyle="asset.braveleg.BraveLegBtnGBg"
+      iconStyle="asset.braveleg.MatrixBtnTxt"
+      iconInnerRectString="23,69,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="550"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.InviteBtn"
+      backStyle="asset.braveleg.BraveLegBtnRBg"
+      iconStyle="asset.braveleg.InviteBtnTxt"
+      iconInnerRectString="23,69,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="550"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.GroupTitle1"
+      resourceLink="asset.braveleg.GroupTitle1"
+      x="389"
+      y="121" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.GroupTitle2"
+      resourceLink="asset.braveleg.GroupTitle2"
+      x="389"
+      y="208" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.GroupTitle3"
+      resourceLink="asset.braveleg.GroupTitle3"
+      x="389"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="braveleg.TeammateList"
+      viewportInnerRectString="0,0,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|braveleg.TeammateItemView,98,271"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="271"
+      height="392"
+      x="-1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeamFrameWaitTxt"
+      parentStyle="braveleg.txt"
+      autoSize="left"
+      width="140"
+      height="43"
+      x="452"
+      y="200" />
+    <!-- 队伍界面队员 -->
+    <component
+      classname="braveleg.team.BraveLegTeammateItem"
+      stylename="braveleg.TeammateItemView" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="braveleg.TeammateItemHeadBg"
+      resourceLink="asset.braveleg.TeammateHeadBg" />
+    <component
+      classname="yishi.view.community.HeadIconCell"
+      stylename="braveleg.TeammateItemHead"
+      backStyle="braveleg.TeammateItemHeadBg"
+      iconStyle="braveleg.BaseIconView"
+      iconX="10"
+      iconY="8"
+      iconWidth="55"
+      iconHeight="55"
+      x="15"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.TeammatePos"
+      resourceLink="asset.braveleg.TeammatePosBg1,asset.braveleg.TeammatePosBg2,asset.braveleg.TeammatePosBg3,asset.braveleg.TeammatePosBg4"
+      x="62"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeammateItemTxt"
+      textFormatStyle="braveleg.txt5_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="200"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeammateItemNameTxt"
+      parentStyle="braveleg.TeammateItemTxt"
+      x="98"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeammateItemJobTxt"
+      parentStyle="braveleg.TeammateItemTxt"
+      x="98"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeammateItemScoreTxt"
+      parentStyle="braveleg.TeammateItemTxt"
+      x="98"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.TeammateItemFightTxt"
+      parentStyle="braveleg.TeammateItemTxt"
+      x="98"
+      y="69" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeammateItemMasterBg"
+      resourceLink="asset.braveleg.TeammateMasterBg"
+      x="224" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.TeammateItemMaskBg"
+      resourceLink="asset.braveleg.TeammateMaskBg" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.TeammateItemInfoBtn"
+      backStyle="asset.braveleg.TeammateItemInfoBtnBg"
+      iconStyle="asset.braveleg.TeammateItemInfoBtnTxt"
+      iconInnerRectString="17,61,11,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="braveleg.TeammateItemKickBtn"
+      backStyle="asset.braveleg.TeammateItemKickBtnBg"
+      iconStyle="asset.braveleg.TeammateItemKickBtnTxt"
+      iconInnerRectString="17,61,11,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="31" />
+    <!-- 队伍界面小队队员 -->
+    <component
+      classname="braveleg.team.BraveLegTeammateGroupItem"
+      stylename="braveleg.TeammateGroupItem" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="braveleg.GroupItemHeadBg"
+      resourceLink="asset.braveleg.GroupItemBg"
+      scaleGridString="28,28,34,34"
+      width="64"
+      height="64" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.GroupItemTxt"
+      resourceLink="asset.braveleg.GroupItemTxt"
+      x="2"
+      y="10" />
+    <component
+      classname="yishi.view.community.HeadIconCell"
+      stylename="braveleg.GroupItemHead"
+      iconStyle="braveleg.BaseIconView"
+      iconX="0"
+      iconY="0"
+      iconWidth="55"
+      iconHeight="55"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.GroupPos"
+      resourceLink="asset.braveleg.TeammatePosBg1,asset.braveleg.TeammatePosBg2,asset.braveleg.TeammatePosBg3,asset.braveleg.TeammatePosBg4"
+      x="41"
+      y="39" />
+    <!-- 队伍界面鼓舞 -->
+    <component
+      classname="braveleg.team.BraveLegGroupInspireView"
+      stylename="braveleg.InspireView"
+      x="532"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="braveleg.InspireList"
+      viewportInnerRectString="0,0,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|braveleg.team.BraveLegGroupInspireItem,89,128"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="128"
+      height="267" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.InspireIconBg"
+      resourceLink="asset.braveleg.GroupItemBg"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.InspireBg"
+      resourceLink="asset.braveleg.InspireBg"
+      x="17"
+      y="20" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="braveleg.InspireIcon"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="30"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.InspireNumBg"
+      resourceLink="asset.braveleg.InspireNumBg"
+      x="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.InspireNumTxt"
+      textFormatStyle="braveleg.TeamTxt3_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="25"
+      height="16"
+      x="42"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="braveleg.InspireBtn"
+      backStyle="asset.braveleg.InspireBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="54"
+      y="2" />
+    <!-- 排行榜界面 -->
+    <component
+      classname="braveleg.BraveLegRankFrame"
+      stylename="braveleg.BraveLegRankFrame"
+      parentStyle="core.Frame2"
+      containerX="6"
+      containerY="65"
+      width="535"
+      height="585" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="braveleg.RankFrameScoreBg"
+      resourceLink="asset.braveleg.TxtBg_L,asset.braveleg.TxtBg_M,asset.braveleg.TxtBg_R" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="braveleg.RankFrameBg"
+      resourceLink="core.describeBackground_style04,asset.braveleg.SplitLine"
+      imageRectString="0|516|0|456|13,2|512|382|3|13"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="braveleg.RankFrameTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|517|0|34|13,63|22|3|28|13,334|22|3|28|13,455|22|3|28|13"
+      width="514"
+      height="34"
+      x="1"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameRankTitleTxt"
+      textFormatStyle="braveleg.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="17"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameNameTitleTxt"
+      textFormatStyle="braveleg.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="189"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameFightTitleTxt"
+      textFormatStyle="braveleg.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="376"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFramePointTitleTxt"
+      textFormatStyle="braveleg.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="20"
+      x="459"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="braveleg.RankFrameBottomBg"
+      resourceLink="asset.braveleg.MyRankTitle,asset.braveleg.ScoreTitle,braveleg.RankFrameScoreBg"
+      imageRectString="8|97|3|18|13,303|97|3|16|13,402|114|0|27|13"
+      x="0"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameUpdateTimeTxt"
+      textFormatStyle="braveleg.RankTxt3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="18"
+      x="9"
+      y="398" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameNotApplyTips"
+      textFormatStyle="braveleg.RankTxt4_t"
+      x="112"
+      y="433" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.RankFrameRankGroup"
+      resourceLink="asset.braveleg.GroupFull1,asset.braveleg.GroupFull2,asset.braveleg.GroupFull3,asset.braveleg.GroupFull4,asset.braveleg.GroupFull5,asset.braveleg.GroupFull6"
+      x="80"
+      y="438" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.RankFrameRankTitle"
+      resourceLink="asset.braveleg.RankTitle"
+      x="159"
+      y="438" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameRankTxt"
+      textFormatStyle="braveleg.RankTxt5_t"
+      autoSize="none"
+      width="74"
+      height="23"
+      x="159"
+      y="436" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFrameMyPointTxt"
+      textFormatStyle="braveleg.RankTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="402"
+      y="437" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="braveleg.RankFrameList"
+      backgoundStyle="core.describeBackground_style33"
+      backgoundInnerRectString="3,3,3,3,-1"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|braveleg.RankItemView,34,504"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="504"
+      height="344"
+      x="6"
+      y="42" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="braveleg.RankFramePrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="392" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="braveleg.RankFrameNextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="280"
+      y="392" />
+    <!-- 页码文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankFramePageTxt"
+      textFormatStyle="braveleg.PageTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="230"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconInnerRectString="16,67,8,17,13"
+      selectedIconInnerRectString="16,67,8,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      autoCenter="false"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      y="-18" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn1"
+      parentStyle="braveleg.RankFrameGroupBtn"
+      unselectedIconStyle="asset.braveleg.GroupUnselectedAsset1"
+      selectedIconStyle="asset.braveleg.GroupSelectedAsset1"
+      unselectedIconInnerRectString="16,67,8,17,13"
+      selectedIconInnerRectString="16,67,8,17,13"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn2"
+      parentStyle="braveleg.RankFrameGroupBtn"
+      unselectedIconStyle="asset.braveleg.GroupUnselectedAsset2"
+      selectedIconStyle="asset.braveleg.GroupSelectedAsset2"
+      unselectedIconInnerRectString="18,61,8,17,13"
+      selectedIconInnerRectString="18,61,8,17,13"
+      x="83" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn3"
+      parentStyle="braveleg.RankFrameGroupBtn"
+      unselectedIconStyle="asset.braveleg.GroupUnselectedAsset3"
+      selectedIconStyle="asset.braveleg.GroupSelectedAsset3"
+      unselectedIconInnerRectString="23,56,8,17,13"
+      selectedIconInnerRectString="23,56,8,17,13"
+      x="166" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn4"
+      parentStyle="braveleg.RankFrameGroupBtn"
+      unselectedIconStyle="asset.braveleg.GroupUnselectedAsset4"
+      selectedIconStyle="asset.braveleg.GroupSelectedAsset4"
+      unselectedIconInnerRectString="24,52,8,20,13"
+      selectedIconInnerRectString="24,52,8,20,13"
+      x="249" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn5"
+      parentStyle="braveleg.RankFrameGroupBtn"
+      unselectedIconStyle="asset.braveleg.GroupUnselectedAsset5"
+      selectedIconStyle="asset.braveleg.GroupSelectedAsset5"
+      unselectedIconInnerRectString="23,52,8,17,13"
+      selectedIconInnerRectString="23,52,8,17,13"
+      x="332" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.RankFrameGroupBtn6"
+      parentStyle="braveleg.RankFrameGroupBtn"
+      unselectedIconStyle="asset.braveleg.GroupUnselectedAsset6"
+      selectedIconStyle="asset.braveleg.GroupSelectedAsset6"
+      unselectedIconInnerRectString="23,55,8,17,13"
+      selectedIconInnerRectString="23,55,8,17,13"
+      x="415" />
+    <!-- 排行榜界面玩家 -->
+    <component
+      classname="braveleg.rank.BraveLegRankItemView"
+      stylename="braveleg.RankItemView" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.RankItemRank"
+      resourceLink="asset.braveleg.rank1,asset.braveleg.rank2,asset.braveleg.rank3"
+      x="10"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankItemRankTxt"
+      textFormatStyle="braveleg.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="25"
+      height="16"
+      x="10"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankItemNameTxt"
+      textFormatStyle="braveleg.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="250"
+      height="16"
+      x="60"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankItemFightValTxt"
+      textFormatStyle="braveleg.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="16"
+      x="330"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.RankItemPointTxt"
+      textFormatStyle="braveleg.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="16"
+      x="449"
+      y="7" />
+    <!-- 邀请界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="braveleg.BraveLegInviteFrameBg"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-18|-15|0|23|0" />
+    <component
+      classname="braveleg.BraveLegInviteFrame"
+      stylename="braveleg.BraveLegInviteFrame"
+      parentStyle="core.Frame5"
+      backStyle="braveleg.BraveLegInviteFrameBg"
+      titleOuterRectPosString="0,12,1"
+      width="306"
+      height="442" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="braveleg.InviteListBG"
+      parentStyle="core.describeBackground_style04"
+      width="275"
+      height="303"
+      x="-22"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="braveleg.InviteList"
+      viewportInnerRectString="0,22,0,0,0"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|braveleg.invite.BraveLegInviteItem,30,213"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="18,5,0,0,3"
+      hScrollProxy="0"
+      vScrollProxy="0"
+      vUnitIncrement="10"
+      width="275"
+      height="300"
+      x="-21"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="braveleg.InviteRefreshBtn"
+      parentStyle="core.BrownBtn"
+      textStyle="core.armymanage.ButtonText"
+      backgoundInnerRectString="9,8,5,13"
+      x="75"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.InviteTimeTxt"
+      textFormatStyle="braveleg.TeamTxt2_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="140"
+      height="34"
+      x="160"
+      y="308"
+      wordWrap="true" />
+    <!-- 邀请子项 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.InviteItemNameTxt"
+      textFormatStyle="braveleg.inviteTxt1_t,braveleg.inviteTxt2_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="20"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.InviteItemJobTxt"
+      textFormatStyle="braveleg.inviteTxt3_t,braveleg.inviteTxt4_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="30"
+      height="25"
+      x="120"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="braveleg.InviteItemLevelTxt"
+      textFormatStyle="braveleg.inviteTxt3_t,braveleg.inviteTxt4_t"
+      filterString="room.friendsNormal_f"
+      autoSize="none"
+      width="33"
+      height="20"
+      x="164"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="braveleg.InviteItemInviteBtn"
+      backStyle="asset.braveleg.InviteItemInviteBtnBG"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="205"
+      y="1" />
+    <!-- 阵型调整 -->
+    <component
+      classname="braveleg.BraveLegMatrixFrame"
+      stylename="braveleg.BraveLegMatrixFrame"
+      closestyle="core.TeamSortFrameClose"
+      titleStyle="core.FrameTitleText"
+      backStyle="team.Back"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,-3,1"
+      closeInnerRectString="29,-22,-8,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="350"
+      height="195"
+      containerX="33"
+      containerY="43" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.MatrixBg"
+      resourceLink="asset.braveleg.MatrixBg"
+      x="-25"
+      y="-15" />
+    <component
+      classname="yishi.view.community.HeadIconCell"
+      stylename="braveleg.MatrixHead"
+      backStyle="core.SoldierBack"
+      iconStyle="braveleg.BaseIconView"
+      iconX="6"
+      iconY="6"
+      iconWidth="84"
+      iconHeight="84"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.MatrixFontBtn"
+      unSelectedStyle="asset.braveleg.unselect.btnBack"
+      selectedStyle="asset.braveleg.select.btnBack"
+      unselectedIconStyle="asset.braveleg.unselect.fontBtnText"
+      selectedIconStyle="asset.braveleg.select.fontBtnText"
+      selectedIconInnerRectString="12,74,13,24,13"
+      unselectedIconInnerRectString="12,74,13,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="195"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="braveleg.MatrixBackBtn"
+      unSelectedStyle="asset.braveleg.unselect.btnBack"
+      selectedStyle="asset.braveleg.select.btnBack"
+      unselectedIconStyle="asset.braveleg.unselect.backBtnText"
+      selectedIconStyle="asset.braveleg.select.backBtnText"
+      selectedIconInnerRectString="4,88,13,24,13"
+      unselectedIconInnerRectString="4,88,13,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="90"
+      y="20" />
+    <!-- 技能选择 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="braveleg.SkillBg"
+      parentStyle="core.commonTipBg"
+      width="255"
+      height="100" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="braveleg.SkillHBox"
+      spacing="22"
+      strictWidth="58"
+      strictHeight="58"
+      x="20"
+      y="7" />
+    <component
+      classname="braveleg.team.BraveLegSkillItemView"
+      stylename="braveleg.SkillItem"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      tipStyle="yishi.view.tips.goods.SkillTips" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="braveleg.SkillTitle"
+      resourceLink="asset.braveleg.SkillTitle1,asset.braveleg.SkillTitle2,asset.braveleg.SkillTitle3"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="braveleg.SkillIconBg"
+      resourceLink="asset.braveleg.GroupItemBg"
+      x="0"
+      y="23" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="braveleg.SkillIcon"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="30"
+      loadingY="28"
+      x="4"
+      y="27" />
+  </components>
+</style>

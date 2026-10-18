@@ -1,0 +1,375 @@
+<style
+  name="customizedvip"
+  source="ui/zh_cn/swf/customizedvip.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="CustomizedVipMainFrame.timeText_t"
+      args="Arial,12,0xbaad89,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CustomizedVipRightItem.leftText_t"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CustomizedVipMainFrame.alertText_t"
+      args="Arial,12,0xa7cce9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CustomizedVipRightItem.costItem.text_t"
+      args="Arial,12,0xbaad89,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CustomizedVipBuyFrame.limitText_t"
+      args="Arial,12,0xff0000,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.CustomizedVipRightItem.bg" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRightItem.numbit" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRightItem.sellOutImage"
+      x="370"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRewardItem.rewardBg" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRewardItem.bg" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRewardItem.selectImage" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRewardItem.addImage"
+      x="20"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipFrame.bg" />
+    <bitmapData
+      resourceLink="asset.CustomizedVipRightItem.addImage" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="CustomizedVipRewardItem.goodsItem"
+      iconStyle="CustomizedVipRewardItem.goodsItem.icon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="core.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="48"
+      profileHeight="48"
+      showProfile="false"
+      x="8"
+      y="8" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="CustomizedVipRewardItem.goodsItem.icon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="CustomizedVipFrame.rewardTile"
+      vSpace="-10"
+      hSpace="-8" />
+    <custom
+      classname="asset.CustomizedVipMainFrame.openedMc"
+      stylename="CustomizedVipMainFrame.openedMc" />
+    <custom
+      classname="asset.CustomizedVipMainFrame.noOpenMc"
+      stylename="CustomizedVipMainFrame.noOpenMc"
+      y="10" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="customizedvip.CustomizedVipMainFrame"
+      classname="customizedvip.CustomizedVipMainFrame"
+      parentStyle="core.Frame1"
+      containerX="-20"
+      containerY="50"
+      width="776"
+      height="576"
+      escEnable="false" />
+    <component
+      stylename="CustomizedVipMainFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="745"
+      height="473"
+      x="33"
+      y="10" />
+    <component
+      stylename="CustomizedVipMainFrame.leftBg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.CustomizedVipMainFrame.leftBg,asset.CustomizedVipMainFrame.freeGetBg"
+      imageRectString="0|0|19,10|327|19"
+      x="38"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CustomizedVipMainFrame.vipChargeBtn"
+      backStyle="asset.core.Style20Btn"
+      iconStyle="asset.CustomizedVipMainFrame.vipChargeBtnIcon"
+      iconInnerRectString="47,77,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="75"
+      y="383" />
+    <component
+      stylename="CustomizedVipMainFrame.alertText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="CustomizedVipMainFrame.alertText_t"
+      width="160"
+      height="20"
+      x="75"
+      y="343" />
+    <component
+      stylename="CustomizedVipMainFrame.timeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="CustomizedVipMainFrame.timeText_t"
+      wordWrap="true"
+      width="220"
+      height="40"
+      x="45"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="CustomizedVipMainFrame.levelPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,483,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="50"
+      width="490"
+      height="465"
+      x="285"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="CustomizedVipMainFrame.levelBox"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="CustomizedVipRightItem.levelCon"
+      x="10"
+      y="7" />
+    <component
+      stylename="CustomizedVipRightItem.levelMutiImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.core.SmallPointImg,asset.CustomizedVipMainFrame.customizedTextBg"
+      imageRectString="0|0|19,25|0|19"
+      x="45"
+      y="7" />
+    <component
+      stylename="CustomizedVipRightItem.leftText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="CustomizedVipRightItem.leftText_t"
+      width="220"
+      height="20"
+      x="245"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CustomizedVipRightItem.buyBtn"
+      backStyle="asset.core.Style18Btn"
+      iconStyle="asset.CustomizedVipRightItem.buyBtnIcon"
+      iconInnerRectString="24,44,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="375"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CustomizedVipRightItem.customizedBtn"
+      backStyle="asset.core.TaskGiveupBack"
+      iconStyle="asset.CustomizedVipRightItem.customizedBtnIcon"
+      iconInnerRectString="24,44,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="375"
+      y="80" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="CustomizedVipRightItem.costItem"
+      firstTxtLink="CustomizedVipRightItem.costItem.text"
+      iconLink="asset.core.SmallPointImg"
+      layout="right"
+      space="2"
+      xy="400,55" />
+    <component
+      stylename="CustomizedVipRightItem.costItem.text"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="CustomizedVipRightItem.costItem.text_t"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="CustomizedVipRightItem.rewardHbox"
+      spacing="45"
+      x="35"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="CustomizedVipRightItem.addHbox"
+      spacing="90"
+      x="115"
+      y="88" />
+    <component
+      stylename="customizedvip.CustomizedVipFrame"
+      classname="customizedvip.CustomizedVipFrame"
+      parentStyle="core.Frame2"
+      containerX="6"
+      containerY="41"
+      width="477"
+      height="497" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="CustomizedVipFrame.addImageHbox"
+      autoCenter="true"
+      spacing="90"
+      x="225"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="CustomizedVipFrame.itemHbox"
+      autoCenter="true"
+      spacing="45"
+      x="225"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="CustomizedVipFrame.rewardPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,365,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      width="365"
+      height="120"
+      x="50"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CustomizedVipFrame.sureBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.CustomizedVipFrame.sureBtnIcon"
+      iconInnerRectString="34,50,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="170"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="CustomizedVipRewardItem.selectCon"
+      x="0"
+      y="0" />
+    <component
+      stylename="CustomizedVipFrame.arrow"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.fairycommon.common.arrow"
+      rotationZ="90"
+      x="215"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="CustomizedVipMainFrame.rewardMcCon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,1,7,5,2,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="125"
+      y="245" />
+    <component
+      classname="customizedvip.CustomizedVipBuyFrame"
+      stylename="customizedvip.CustomizedVipBuyFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.quickBuyFrameBg"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-8,1"
+      closeInnerRectString="29,-17,-12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="12"
+      width="271"
+      height="330" />
+    <component
+      stylename="CustomizedVipBuyFrame.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="core.describeBackground_style047,asset.quickbuy.BuyPriceText,asset.quickbuy.BuyNumText,quickbuy.BuyInputBg"
+      imageRectString="0|270|0|280|13,10|83|57|24|13,8|90|93|24|13,96|90|90|29|13"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="CustomizedVipBuyFrame.costItem"
+      firstTxtLink="CustomizedVipRightItem.costItem.text"
+      iconLink="asset.core.SmallPointImg"
+      layout="right"
+      space="2"
+      xy="98,58" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="CustomizedVipBuyFrame.addBtn"
+      backStyle="asset.core.UpButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="21"
+      x="188"
+      y="95" />
+    <!-- 减按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="CustomizedVipBuyFrame.delBtn"
+      parentStyle="quickbuy.AddButton"
+      backStyle="asset.core.DownButton"
+      x="215"
+      y="95" />
+    <!-- 购买数量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CustomizedVipBuyFrame.inputText"
+      textFormatStyle="quickbuy.BuyNumTextStyle_t"
+      autoSize="none"
+      x="100"
+      y="95"
+      height="20"
+      width="76"
+      type="input"
+      restrict="0-9"
+      filterString="quickbuy.BuyNumTextStyle_f" />
+    <component
+      stylename="CustomizedVipBuyFrame.limitText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="CustomizedVipBuyFrame.limitText_t"
+      width="120"
+      height="20"
+      x="40"
+      y="172" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CustomizedVipBuyFrame.sureBtn"
+      backStyle="asset.quickbuy.ShopBuyFrameBuyBtnBg"
+      iconStyle="asset.quickbuy.ShopBuyFrameBuyBtnText"
+      iconInnerRectString="18,78,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="115"
+      height="48"
+      x="80"
+      y="200" />
+  </components>
+</style>

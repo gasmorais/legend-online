@@ -1,0 +1,590 @@
+<style
+  name="quickbuy"
+  source="ui/zh_cn/swf/quickbuy.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.BuyFrameGoodsNameTextStyle_t"
+      args="Arial,14,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.BuyFrameGoodsNameTextStyle_t1"
+      args="Arial,12,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.TotalPriceTextStyle_t"
+      args="Arial,14,0xddcda0,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.TotalPriceTextStyle_tt"
+      args="Arial,14,0xff0000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.BuyNumTextStyle_t"
+      args="Arial,14,0xfffd7d,true,,,,,center" />
+    <!--快捷购买-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.BuyCanTotalTextStyle_t"
+      args="Arial,12,0xffe49c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.BuyCanTotalTextStyle_tt"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.BuyCanTotalValueTextStyle_t"
+      args="Arial,14,0xffe49c,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="quickbuy.BuyNumTextStyle_f"
+      args="0xff3c00,1,3,3,3" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="quickbuy.BuyFrameGoodsNameTextStyle_t_ttt"
+      args="0x402100,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.usebindPointTxt_t"
+      args="Arial,12,0xfffeac,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.LuckNumTextStyle_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FurnitureShopBuyFrame.hasCountText_t1"
+      args="Arial,12,0xffe49c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FurnitureShopBuyFrame.hasCountText_t2"
+      args="Arial,12,0xF70909,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="quickbuy.buyFrame.NowItemGoodsCount_t"
+      args="Arial,14,0xffffff,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <!-- 购买总价 -->
+    <bitmapData
+      resourceLink="asset.quickbuy.BuyPriceText"
+      x="10"
+      y="133" />
+    <!-- 购买数量 -->
+    <bitmapData
+      resourceLink="asset.quickbuy.BuyNumText"
+      x="10"
+      y="162" />
+    <!-- 绑定钻石 -->
+    <bitmapData
+      resourceLink="asset.quickbuy.bindPoint"
+      x="169"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.quickbuy.BuyNumText2"
+      x="10"
+      y="160" />
+    <bitmapData
+      resourceLink="asset.core.consortianewboss.icon"
+      x="0"
+      y="-5" />
+  </bitmaps>
+  <customDisplay>
+    <!-- BuyShop -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="quickbuy.BuyBaseItemView"
+      iconStyle="quickbuy.BuyBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="3"
+      profileY="3"
+      profileWidth="70"
+      profileHeight="70"
+      showProfile="true"
+      x="34"
+      y="47"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="32"
+      strengthenY="32"
+      textStyle="quickbuy.BaseItemText" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="quickbuy.BuyBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="70"
+      iconWidth="70"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="35"
+      loadingY="35"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="26"
+      y="44" />
+    <custom
+      classname="map.campaign.view.house.FurnitureBagCell"
+      stylename="FurnitureShopBuyFrame.FurnitureBagCell"
+      backgroundStyle="FurnitureShopBuyFrame.FurnitureBagCellBack"
+      iconStyle="FurnitureShopBuyFrame.FurnitureBagCellIcon"
+      textStyle="FurnitureShopBuyFrame.FurnitureBagCellText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="70"
+      profileHeight="70"
+      strengthenX="24"
+      strengthenY="24"
+      x="32"
+      y="50" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="FurnitureShopBuyFrame.FurnitureBagCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="70"
+      iconWidth="70"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FurnitureShopBuyFrame.FurnitureBagCellText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="24"
+      y="49" />
+  </customDisplay>
+  <components>
+    <!--购买Frame-->
+    <component
+      classname="yishi.view.frame.BuyFrameI"
+      stylename="quickbuy.buyFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveEnable="false"
+      width="286" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="quickbuy.BuyFrameBg"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-18|-15|0|23|0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="quickbuy.SelfBuyFrameBack"
+      resourceLink="asset.quickbuy.BuyFrameBaseBack,asset.quickbuy.BuyPriceText,asset.quickbuy.BuyNumText,quickbuy.BuyInputBg"
+      imageRectString="0|283|0|281|13,10|88|133|25|13,10|94|165|28|13,96|87|159|30|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="quickbuy.FriendBuyFrameBack"
+      resourceLink="asset.quickbuy.PresentFrameBaseBack,asset.quickbuy.BuyPriceText,asset.quickbuy.BuyNumText,quickbuy.BuyInputBg" />
+    <!-- 输入框 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="quickbuy.BuyInputBg"
+      resourceLink="asset.core.TextInputBG2"
+      x="96"
+      y="159" />
+    <!--选择按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="quickbuy.SelfSelectedBackBtn"
+      unSelectedStyle="asset.quickbuy.Buycheckstyle_2.UnSelected"
+      selectedStyle="asset.quickbuy.Buycheckstyle_2.Selected"
+      selectedIconStyle="asset.quickbuy.unselectedBackTxt"
+      unselectedIconStyle="asset.quickbuy.unselectedBackTxt"
+      selectedIconInnerRectString="20,77,0,22,13"
+      unselectedIconInnerRectString="20,77,0,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="26"
+      displacement="false"
+      x="24"
+      y="11"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="quickbuy.FriendSelectedBackBtn"
+      unSelectedStyle="asset.quickbuy.Buycheckstyle_2.UnSelected"
+      selectedStyle="asset.quickbuy.Buycheckstyle_2.Selected"
+      selectedIconStyle="asset.quickbuy.Present.unselectedBackTxt"
+      unselectedIconStyle="asset.quickbuy.Present.unselectedBackTxt"
+      selectedIconInnerRectString="20,97,1,18,13"
+      unselectedIconInnerRectString="20,97,1,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="26"
+      displacement="false"
+      x="130"
+      y="11"
+      autoCenter="false" />
+    <!-- 确定购买按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="quickbuy.selfConfirmBtn"
+      backStyle="asset.quickbuy.ShopBuyFrameBuyBtnBg"
+      iconStyle="asset.quickbuy.ShopBuyFrameBuyBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="134"
+      height="45"
+      x="129"
+      y="230"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      iconInnerRectString="16,78,12,21,13" />
+    <!--加入购物车-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="quickbuy.selfAddToShopCartBtn"
+      backStyle="asset.quickbuy.ShopBuyFrameAddBtnBg"
+      iconStyle="asset.quickbuy.ShopBuyFrameAddBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="115"
+      height="48"
+      x="10"
+      y="227"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      iconInnerRectString="16,78,12,21,13" />
+    <!-- 确定赠送按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="quickbuy.FriendConfirmBtn"
+      backStyle="asset.quickbuy.PresentSubmitBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="134"
+      height="45"
+      x="69"
+      y="203" />
+    <!-- 加按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="quickbuy.AddButton"
+      backStyle="asset.core.UpButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="21"
+      x="188"
+      y="163" />
+    <!-- 减按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="quickbuy.DeleteButton"
+      parentStyle="quickbuy.AddButton"
+      backStyle="asset.core.DownButton"
+      x="215" />
+    <!-- 购买数量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BuyNumTextStyle"
+      textFormatStyle="quickbuy.BuyNumTextStyle_t"
+      autoSize="none"
+      x="100"
+      y="163"
+      height="20"
+      width="76"
+      type="input"
+      restrict="0-9"
+      filterString="quickbuy.BuyNumTextStyle_f" />
+    <!--购买支付类型-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="quickbuy.ShopPayType"
+      resourceLink="asset.core.SmallPointImg,asset.core.SmallGiftImg,asset.core.SmallGoldIcon,asset.core.contributionImg,asset.core.medalImg,asset.core.MazeCoinlImg,asset.core.AresHeart,asset.core.BackPLayer,asset.core.sealOfKing,asset.core.sealOfKing,asset.core.LeagueMedalIcon,asset.core.guild,asset.core.AthenaTear,,,,asset.core.pokerScoreIcon,asset.core.outyardImg,quickbuy.redCrystalImg,asset.shop.glory,asset.core.YellowIcon,asset.core.isLandExploreMedal,asset.core.assaultwarMedal,asset.core.pumpingJoyCoupon,shop.GodsMarking,,,,asset.core.copyConsortiaImg,asset.core.apex.money,asset.core.crossGuildCoin,asset.core.antaeus.icon1,asset.core.airGardenPropIconImage,,,,asset.core.flameTempleIconImage,asset.core.duskAreaIconImage,quickbuy.demonroadShopCoin,asset.core.darkMazeCoin,asset.core.consortianewboss.icon,asset.core.theseuspvp.fighticon,asset.core.yeargoldIcon,asset.core.yearboxkeyicon,asset.core.minosCoin,asset.core.chesspvpCoin,asset.core.childnswarIcon,asset.vipShopView.CurrencyIcon"
+      y="134" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BuyGoodsNameStyle"
+      textFormatStyle="quickbuy.BuyFrameGoodsNameTextStyle_t"
+      x="113"
+      y="39"
+      autoSize="none"
+      width="168"
+      height="60"
+      wordWrap="true" />
+    <!-- 购买总价 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.TotalPriceTextStyle"
+      textFormatStyle="quickbuy.TotalPriceTextStyle_t,quickbuy.TotalPriceTextStyle_tt"
+      autoSize="none"
+      x="96"
+      y="134"
+      height="20"
+      width="124" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BuyCanTotalTextStyle"
+      textFormatStyle="quickbuy.BuyCanTotalTextStyle_t,quickbuy.BuyCanTotalTextStyle_tt"
+      x="115"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BuyCanTotalValueTextStyle"
+      textFormatStyle="quickbuy.BuyCanTotalValueTextStyle_t"
+      x="200"
+      y="74" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BuyCanOneTextStyle"
+      textFormatStyle="quickbuy.BuyCanTotalTextStyle_t,quickbuy.BuyCanTotalTextStyle_tt"
+      x="110"
+      y="99"
+      width="130"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.BuyCanOneValueTextStyle"
+      textFormatStyle="quickbuy.BuyCanTotalValueTextStyle_t"
+      x="153"
+      y="98" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.useBindPointTextStyle"
+      textFormatStyle="quickbuy.BuyCanTotalTextStyle_t,quickbuy.BuyCanTotalTextStyle_tt"
+      x="115"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.usebindPointTxt"
+      textFormatStyle="quickbuy.usebindPointTxt_t"
+      filterString="core.normal_f" />
+    <!-- 优先使用绑定钻石的选项框 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="quickbuy.useBindPointBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      textStyle="quickbuy.usebindPointTxt"
+      fieldX="28"
+      fieldY="3"
+      x="38"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.useBindPoint_notJoinActTxt"
+      parentStyle="core.useBindPoint_notJoinActTxt"
+      x="30"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FashionAllBuyFrame.notJoinActTxt"
+      parentStyle="core.useBindPoint_notJoinActTxt"
+      x="31"
+      y="139" />
+    <component
+      stylename="yishi.view.frame.discount.discountui"
+      classname="yishi.view.frame.discount.DiscountUI"
+      x="283"
+      y="1" />
+    <!--打折选择按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="quickbuy.discountSelfSelectedBtn"
+      unSelectedStyle="asset.quickbuy.Buycheckstyle_2.UnSelected"
+      selectedStyle="asset.quickbuy.Buycheckstyle_2.Selected"
+      selectedIconStyle="asset.quickbuy.unknown"
+      unselectedIconStyle="asset.quickbuy.unknown"
+      selectedIconInnerRectString="20,60,-21,60,13"
+      unselectedIconInnerRectString="20,60,-21,60,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="60"
+      displacement="false"
+      x="3"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="quickbuy.discountScrollPanel"
+      vScrollbarStyle="quickbuy.VScrollbar03"
+      vScrollbarInnerRectString="20,0,-3,0,3"
+      viewportInnerRectString="0,2,0,2,5"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      x="8"
+      y="45"
+      width="252"
+      height="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.discountItemDes"
+      multiline="true"
+      wordWrap="true"
+      textFormatStyle="quickbuy.BuyFrameGoodsNameTextStyle_t1"
+      x="83"
+      y="0"
+      autoSize="none"
+      width="145"
+      height="95" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="quickbuy.VScrollbar03"
+      trackStyle="core.Scrollbar03_Back"
+      thumbStyle="core.Scrollbar03_Step"
+      decreaseButtonStyle="core.Scrollbar03_Up"
+      increaseButtonStyle="core.Scrollbar03_Down"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="3,3,16,16,0"
+      decreaseButtonInnerRectString="16,16,0,0,9"
+      increaseButtonInnerRectString="16,16,0,0,10"
+      orientation="0"
+      thumbMinSize="23"
+      width="16"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.ActiveStateTextStyle"
+      parentStyle="shop.ActiveStateTextStyle"
+      x="220"
+      y="113" />
+    <component
+      classname="yishi.view.frame.BingoBuyFrame"
+      stylename="bingo.buyFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveEnable="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="quickbuy.BingoBuyFrameBack"
+      resourceLink="asset.quickbuy.BuyFrameBaseBack,asset.quickbuy.BuyPriceText,asset.quickbuy.BuyNumText,quickbuy.BuyInputBg,quickbuy.BuyInputBg1,quickbuy.BuyInputBg2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="quickbuy.BuyInputBg1"
+      resourceLink="asset.core.TextInputBG2"
+      scaleX="0.45"
+      x="128"
+      y="191" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="quickbuy.BuyInputBg2"
+      resourceLink="asset.core.TextInputBG2"
+      scaleX="0.45"
+      x="172"
+      y="190" />
+    <!-- 幸运数字1 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.LuckNumTextStyle1"
+      parentStyle="quickbuy.BuyNumTextStyle"
+      textFormatStyle="quickbuy.LuckNumTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="122"
+      y="196"
+      height="20"
+      width="50" />
+    <!-- 幸运数字2 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.LuckNumTextStyle2"
+      parentStyle="quickbuy.BuyNumTextStyle"
+      textFormatStyle="quickbuy.LuckNumTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="166"
+      y="196"
+      height="20"
+      width="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="quickbuy.redCrystalImg"
+      resourceLink="asset.core.redCrystalImg"
+      x="0"
+      y="-4" />
+    <component
+      classname="yishi.view.frame.FurnitureShopBuyFrame"
+      stylename="quickbuy.FurnitureShopBuyFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.quickBuyFrameBg"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-8,1"
+      closeInnerRectString="29,-17,-12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="12"
+      width="271"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="FurnitureShopBuyFrame.ShopPayType"
+      resourceLink="asset.core.EternalCrystal"
+      y="134" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="FurnitureShopBuyFrame.FurnitureBagCellBack"
+      parentStyle="core.goods.ItemBack2"
+      width="70"
+      height="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FurnitureShopBuyFrame.hasCountText"
+      textFormatStyle="FurnitureShopBuyFrame.hasCountText_t1,FurnitureShopBuyFrame.hasCountText_t2"
+      x="115"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="quickbuy.buyFrame.NowItemGoodsCount"
+      textFormatStyle="quickbuy.buyFrame.NowItemGoodsCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="64"
+      height="20"
+      x="32"
+      y="96" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="quickbuy.SelfBuyFrameBack2"
+      resourceLink="asset.quickbuy.BuyFrameBaseBack,asset.quickbuy.BuyPriceText,asset.quickbuy.BuyNumText2,quickbuy.BuyInputBg" />
+    <component
+      classname="yishi.view.frame.WishPoolShopBuyFrame"
+      stylename="quickbuy.WishPoolShopBuyFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.quickBuyFrameBg"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-8,1"
+      closeInnerRectString="29,-17,-12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="12"
+      width="271"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="WishPoolShopFrame.ShopPayType"
+      resourceLink="asset.core.wishpoolScoreIconImage"
+      y="134" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="quickbuy.demonroadShopCoin"
+      resourceLink="asset.core.demonroadShopCoin"
+      scaleX="0.5"
+      scaleY="0.5"
+      x="-1"
+      y="-6" />
+  </components>
+</style>

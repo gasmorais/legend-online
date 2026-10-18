@@ -1,0 +1,105 @@
+<style
+  name="chest"
+  source="ui/zh_cn/swf/chest.swf">
+  <!-- 通关结算 -->
+  <sets />
+  <bitmaps>
+    <!-- 数字切图 -->
+    <bitmapData
+      resourceLink="asset.chest.battleinvite.BattleInviteNumberAsset" />
+    <bitmapData
+      resourceLink="asset.chest.battleinvite.WashTxtAsset"
+      x="65"
+      y="23" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.chest.BackMc"
+      stylename="chest.BackMc" />
+    <custom
+      classname="asset.chest.FlopMovieAsset"
+      stylename="chest.ContentMc"
+      x="311"
+      y="89" />
+    <custom
+      classname="asset.chest.ItemEffect"
+      stylename="chest.ItemEffect" />
+    <custom
+      classname="yishi.view.component.TimerButton"
+      stylename="chest.TimerBtn"
+      backStyle="asset.core.Style13Btn"
+      timeStyle="chest.TimerBtnTxt"
+      iconStyle="asset.chest.battleinvite.WashTxtAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-40"
+      y="-3" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chest.GoodsNameTxt"
+      textFormatStyle="core.hero_name_t1,core.hero_name_t2,core.hero_name_t3,core.hero_name_t4,core.hero_name_t5"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="100"
+      height="60"
+      x="7"
+      y="90"
+      wordWrap="true"
+      autoDisplay="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chest.NickNameTxt"
+      textFormatStyle="core.songti_style_05"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      x="0"
+      y="158"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chest.OtherNameTxt"
+      textFormatStyle="core.chest.OtherNameTxt_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      x="0"
+      y="158"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="chest.ChestOKBtn"
+      backStyle="asset.core.Style12Btn"
+      iconStyle="asset.core.ConfirmTxtAsset_02"
+      iconInnerRectString="83,63,18,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="chest.ChestExitBtn"
+      backStyle="asset.core.Style12Btn"
+      iconStyle="asset.chest.battleinvite.ExitTxtAsset"
+      iconInnerRectString="64,103,18,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="chest.ChestAgainBtn"
+      backStyle="asset.core.Style13Btn"
+      iconStyle="asset.chest.battleinvite.AgainTxtAsset"
+      iconInnerRectString="64,105,20,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chest.TimerBtnTxt"
+      textFormatStyle="core.TimerNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="121"
+      y="20"
+      width="40"
+      height="30" />
+  </components>
+</style>

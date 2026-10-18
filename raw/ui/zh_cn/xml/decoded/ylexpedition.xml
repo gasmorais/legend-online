@@ -1,0 +1,799 @@
+<style
+  name="ylexpedition"
+  source="ui/zh_cn/swf/ylexpedition.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.cleftNum_t"
+      args="Arial,14,0xffea00,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.ydNodeTime_t"
+      args="Arial,12,0xff0000,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.ydNodeDes_t1"
+      args="Arial,12,0xffea00,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.ydNodeDes_t2"
+      args="Arial,12,0x00ff00,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.dkPoint_t"
+      args="Arial,14,0xdecfa4,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.rwPoint_t"
+      args="Arial,14,0xdecfa4,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.rwExp_t"
+      args="Arial,14,0xf0bf84,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.zzNodeDes_t"
+      args="Arial,12,0xC4B29F,,,,,,left"
+      leading="4"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.zzNodeTitleDes_t"
+      args="Arial,16,0xffefbd,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.ydzzExp_t"
+      args="Arial,12,0xfcf2c6,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.ydzzState_t"
+      args="Arial,18,0xFFEA00,,,,,,left"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.ydzzLeftTime_t"
+      args="Arial,12,0xfcf2c6,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedtionLeft.stateName_t_1"
+      args="Arial,12,0xffe400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedtionLeft.stateName_t_2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedtionLeft.stateName_t_3"
+      args="Arial,12,0xFFEA00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ylexpedition.UpdateTime.redTxt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.ylexpedition.needResText_t"
+      letterSpacing="1"
+      args="arial,14,0xFCF2C6,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ylexdition.main.mask"
+      x="23"
+      y="-11" />
+    <bitmapData
+      resourceLink="asset.ylexdition.dk.bigBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ylexdition.dk.hasActiveFlg"
+      x="126"
+      y="242" />
+    <bitmapData
+      resourceLink="asset.ylexdition.dk.Ft1"
+      x="27"
+      y="33" />
+    <bitmapData
+      resourceLink="asset.ylexdition.dk.Ft2"
+      x="50"
+      y="94" />
+    <bitmapData
+      resourceLink="asset.ylexdition.dk.line"
+      x="0"
+      y="208" />
+    <bitmapData
+      resourceLink="asset.ylexdition.dk.Ft3"
+      x="50"
+      y="163" />
+    <bitmapData
+      resourceLink="asset.ylexdition.rw.bigBg"
+      x="0"
+      y="0"
+      height="290" />
+    <bitmapData
+      resourceLink="asset.ylexdition.rw.ft3"
+      x="52"
+      y="162" />
+    <bitmapData
+      resourceLink="asset.ylexdition.rw.ft1"
+      x="52"
+      y="48" />
+    <bitmapData
+      resourceLink="asset.ylexdition.rw.ft2"
+      x="52"
+      y="115" />
+    <bitmapData
+      resourceLink="asset.ylexdition.zz.bigBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ylexdition.yd.alphaBg"
+      x="157"
+      y="129" />
+    <bitmapData
+      resourceLink="asset.ylexdition.proBar"
+      x="5"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.ylexpition.ingFlg"
+      x="28"
+      y="-60" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="ylex.view.YLExpedtionMainView"
+      stylename="ui.ylexpedition.view1"
+      x="0"
+      y="0" />
+    <custom
+      classname="ylex.view.YLExpeditionItem"
+      stylename="ui.ylexpedition.yd2"
+      x="145"
+      y="273" />
+    <custom
+      classname="ylex.view.YLExpeditionItem"
+      stylename="ui.ylexpedition.yd1"
+      x="114"
+      y="117" />
+    <custom
+      classname="asset.ylexdition.main.ydMc"
+      stylename="asset.ylexdition.main.ydMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.ylexdition.node.needDefendMc"
+      stylename="asset.ylexdition.node.needDefendMc"
+      x="34"
+      y="-49"
+      mouseEnable="false" />
+    <custom
+      classname="asset.ylexdition.node.defendCompletMc"
+      stylename="asset.ylexdition.node.defendCompletMc"
+      x="28"
+      y="-59"
+      mouseEnable="false" />
+    <custom
+      classname="asset.ylexdition.node.defendingMc"
+      stylename="asset.ylexdition.node.defendingMc"
+      x="38"
+      y="-50" />
+    <custom
+      classname="asset.ylexdition.node.ftMc"
+      stylename="asset.ylexdition.node.ftMc"
+      x="-29"
+      y="6" />
+    <custom
+      classname="ylex.view.YLExpeditionItem"
+      stylename="ui.ylexpedition.yd3"
+      x="358"
+      y="357" />
+    <custom
+      classname="ylex.view.YLXepedtionFightInfoView"
+      stylename="ui.ylexpedition.view4"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.ylexpedition.dkRewardBox1"
+      spacing="0"
+      x="215"
+      y="79" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.ylexpedition.dkRewardBox2"
+      spacing="0"
+      x="220"
+      y="149" />
+    <custom
+      classname="ylex.view.YLExpedetionRewardView"
+      stylename="ui.ylexpedition.view5"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.ylexpedition.rwHbox1"
+      spacing="0"
+      x="195"
+      y="36" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.ylexpedition.rwHbox2"
+      spacing="0"
+      x="205"
+      y="104" />
+    <custom
+      classname="ylex.view.YLExpeditionChooseView"
+      stylename="ui.ylexpedition.view3"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.ylexpedition.zzNodeVbox"
+      spacing="0"
+      x="12"
+      y="131" />
+    <custom
+      classname="ylex.view.YLEepedtionYeildView"
+      stylename="ui.ylexpedition.view2"
+      x="65"
+      y="5" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.ylexpedition.ydzzRwBox"
+      spacing="0"
+      x="500"
+      y="371" />
+    <custom
+      classname="ylex.view.YLExpedtionLeftListView"
+      stylename="ylex.view.YLExpedtionLeftListView"
+      x="0"
+      y="0" />
+    <custom
+      classname="ylex.view.YLExpedtionLeftItemView"
+      stylename="ylex.view.YLExpedtionLeftItemView"
+      tipStyle="yishi.view.tips.ChildPatrolItemTip"
+      isFollowMouse="false"
+      tipDirctions="1,4,6,5,2,7,0,3"
+      tipGapH="-20"
+      tipGapV="0" />
+    <custom
+      classname="asset.ChildPatrolTowerExpView.levelMc"
+      stylename="ui.ylexpedtion.ydexp.levelMc"
+      x="315"
+      y="85" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.ylexpidtionyd.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="80"
+      iconHeight="80"
+      y="348"
+      x="216" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.ylexpidtionyd.zjheadIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="80"
+      iconHeight="80"
+      y="18"
+      x="65" />
+    <custom
+      classname="ylex.view.YLExpedtionBigNodeItem"
+      stylename="ylex.view.YLExpedtionBigNodeItem"
+      x="313"
+      y="159" />
+    <custom
+      classname="ylex.view.YLExpedtionHeadInfoView"
+      stylename="ylex.view.YLExpedtionHeadInfoView"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="ui.ylexpedition.progressBar"
+      x="171"
+      y="35" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.ylexpedition.yddescVbox"
+      spacing="0"
+      x="0"
+      y="20" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.ylexpedition.mianBg"
+      resourceLink="asset.ylexdition.main.bg,asset.ylexdition.main.restNum"
+      imageRectString="0|0|19,587|466|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.cleftNum"
+      textFormatStyle="ui.ylexpedition.cleftNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="72"
+      height="19"
+      x="775"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.ylexpedition.longBtn"
+      backStyle="asset.ylexdition.main.longBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="599"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.ylexpedition.backBtn"
+      backStyle="asset.ylexdition.main.btnBg"
+      iconStyle="asset.ylexdition.main.xlBtn"
+      iconInnerRectString="18,77,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="46"
+      y="436" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.ydNodeTime"
+      textFormatStyle="ui.ylexpedition.ydNodeTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="18"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.ydNodeDes"
+      textFormatStyle="ui.ylexpedition.ydNodeDes_t1,ui.ylexpedition.ydNodeDes_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="18"
+      x="33"
+      y="89" />
+    <component
+      classname="ylex.YLExpeditionMainFrame"
+      stylename="ylex.YLExpeditionMainFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="26"
+      containerY="70"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="900"
+      height="625" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.ylexpedition.dkActiveBtn"
+      backStyle="asset.ylexdition.dk.activeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="171"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.dkPoint"
+      textFormatStyle="ui.ylexpedition.dkPoint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="171"
+      y="219" />
+    <component
+      classname="ylex.YLExpedtionFightInfoFrame"
+      stylename="ylex.YLExpedtionFightInfoFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.FrameBg2"
+      closeInnerRectString="29,10,10,29,14"
+      containerX="16"
+      moveInnerRectString="376,37,10,0,9"
+      width="535"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.ylexpedition.rwSigleBtn"
+      backStyle="asset.ylexdition.rw.btn1bg"
+      iconStyle="asset.ylexdition.rw.btn1"
+      iconInnerRectString="35,75,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="228" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.ylexpedition.rwDoubleBtn"
+      backStyle="asset.ylexdition.rw.btn2bg"
+      iconStyle="asset.ylexdition.rw.btn2"
+      iconInnerRectString="14,112,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="232"
+      y="228" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.rwPoint"
+      textFormatStyle="ui.ylexpedition.rwPoint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="209"
+      y="212" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.rwExp"
+      textFormatStyle="ui.ylexpedition.rwExp_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="18"
+      x="178"
+      y="164" />
+    <component
+      classname="ylex.YLEpedtionRewardFrame"
+      stylename="ylex.YLEpedtionRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.FrameBg2"
+      closeInnerRectString="29,10,10,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="460"
+      height="390"
+      containerX="16" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.ylexpedition.zzNodeBg"
+      resourceLink="asset.ylexdition.dk.zzUnSelectedBtn,asset.ylexdition.dk.zzSelectedBtn"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.ylexpedition.zzNodeFlg"
+      resourceLink="asset.ylexdition.dk.zzBingLi1,asset.ylexdition.dk.zzBingLi2,asset.ylexdition.dk.zzBingLi3"
+      x="48"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.zzNodeDes"
+      textFormatStyle="ui.ylexpedition.zzNodeDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="310"
+      height="40"
+      x="162"
+      y="8"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.zzNodeTitleDes"
+      textFormatStyle="ui.ylexpedition.zzNodeTitleDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="310"
+      height="60"
+      x="173"
+      y="54" />
+    <component
+      classname="ylex.YLExpedtionChooseFrame"
+      stylename="ylex.YLExpedtionChooseFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.FrameBg2"
+      closeInnerRectString="29,10,15,29,14"
+      containerX="16"
+      moveInnerRectString="376,37,10,0,9"
+      width="535"
+      height="450" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.ylexpedition.ydmainBg"
+      resourceLink="asset.ylexdition.ydBigBg,asset.ylexdition.ydRwBg,asset.ylexdition.ydRwTitle,asset.ylexdition.yd.img1,asset.ylexdition.main.yd,asset.ylexdition.yd.img2,asset.ylexdition.ydNeedExp,asset.ylexdition.yd.headBg,asset.ylexdition.ydbottomBg,asset.ylexdition.ydftBg,asset.ylexdition.yd.img3"
+      imageRectString="138|562|25|418|13,382|279|343|90|13,428|177|332|30|13,191|93|32|94|13,175|95|45|61|13,-47|164|8|18|13,341|180|54|18|13,197|119|339|98|13,138|561|442|58|13,142|219|307|26|13,171|174|309|18|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.ylexpedition.ydLvBg2"
+      resourceLink="asset.ylexdition.ydArrow"
+      imageRectString="200|13|19"
+      x="183"
+      y="141" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.ylexpedition.gotoZZBtn"
+      backStyle="asset.ylexdition.main.btnBg"
+      iconStyle="asset.ylexdition.yd.zzBtn"
+      iconInnerRectString="33,49,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="571"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.ydzzExp"
+      textFormatStyle="ui.ylexpedition.ydzzExp_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="337"
+      height="20"
+      x="153"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.ydzzState"
+      textFormatStyle="ui.ylexpedition.ydzzState_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="116"
+      height="22"
+      x="581"
+      y="467" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.ydzzLeftTime"
+      textFormatStyle="ui.ylexpedition.ydzzLeftTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="196"
+      height="20"
+      x="153"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.ylexpedition.ydzzSoild"
+      resourceLink="asset.ylexdition.bl.small1,asset.ylexdition.bl.small2,asset.ylexdition.bl.small3"
+      x="195"
+      y="334" />
+    <component
+      classname="ylex.YLXpedtionYeildFrame"
+      stylename="ylex.YLXpedtionYeildFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="820"
+      height="625" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ui.ylexpedition.YLExpeditionMainFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      x="-2"
+      y="-6"
+      width="850"
+      height="512" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ui.ylexpedition.YLEpedtionRewardFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      x="-2"
+      y="-5"
+      width="426"
+      height="300" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ui.ylexpedition.YLExpedtionChooseFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      x="-2"
+      y="-5"
+      width="506"
+      height="350" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ui.ylexpedition.YLExpedtionFightInfoFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      x="-2"
+      y="-4"
+      width="506"
+      height="300" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ui.ylexpedition.YLXpedtionYeildFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      x="3"
+      y="6"
+      width="770"
+      height="505" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.ylexpedition.YLXpedtionYeildFrame.zhuzhaBtn"
+      selectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.light"
+      unSelectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.dark"
+      selectedIconStyle="asset.ylexdition.tab1Selected"
+      unselectedIconStyle="asset.ylexdition.tab1Unselected"
+      selectedIconInnerRectString="37,44,7,18,13"
+      unselectedIconInnerRectString="37,44,7,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.ylexdition.main.ydft"
+      resourceLink="asset.ChildPatrolHallTowerView.towerTextBack,asset.ylexdition.main.ydft"
+      imageRectString="0|154|0|30|13,3|42|9|16|13"
+      x="28"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedtion.ydlvTxt"
+      parentStyle="ChildPatrolHallTowerView.levelText"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="85"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedtion.ydidTxt"
+      parentStyle="ChildPatrolHallTowerView.numberText"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="70"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedtion.ydexpTxt"
+      parentStyle="ChildPatrolTowerExpView.expText"
+      y="92"
+      x="437" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.ylexpedition.rewardZZBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.ylexdition.rw.btn1"
+      iconInnerRectString="21,75,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="571"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.ylexdition.yd.chooseHeadBg"
+      resourceLink="asset.ylexdition.yd.headBg"
+      x="45"
+      y="9" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ui.ylexpedtion.ydid.sneakTime"
+      timeTxtStyle="ui.ylexpedition.ydNodeTime"
+      x="-49"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.ylexdition.main.ydBigft"
+      resourceLink="asset.ChildPatrolHallTowerView.towerTextBack,asset.ChildPatrolHallTowerView.towerText100"
+      imageRectString="0|154|0|30|13,0|111|0|32|13"
+      x="24"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedtion.ydlvBigTxt"
+      parentStyle="ChildPatrolHallTowerView.levelText"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="130"
+      y="109" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedtionLeft.stateName"
+      textFormatStyle="ui.ylexpedtionLeft.stateName_t_1,ui.ylexpedtionLeft.stateName_t_2,ui.ylexpedtionLeft.stateName_t_3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="35"
+      wordWrap="true"
+      x="84"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.ylexpedition.ydRestCdBtn"
+      backStyle="asset.ylexpedtion.restCdFtBg"
+      iconStyle="asset.ylexpedtion.restCdFt"
+      iconInnerRectString="3,51,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="82"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.ylexpedition.rwPtImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="310"
+      y="211" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.ylexpedition.dkPtImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="288"
+      y="218" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ui.ylexpidtionyd.UpdateTime"
+      timeTxtStyle="ChildPatrolLeftItemView.UpdateTime.text"
+      x="327"
+      y="475" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ui.ylexpedition.ydRestCdTime"
+      timeTxtStyle="ylexpedition.UpdateTime.redTxt"
+      x="83"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.progressBarTxt"
+      parentStyle="ChildPatrolTowerExpView.expText"
+      y="0"
+      x="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexdtion.ydVboxDesText"
+      textFormatStyle="ChildPatrolTowerAffectView.towerCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ui.ylexpedition.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="ui.ylexpedition.helpFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.ylexpedition.HelpBtn"
+      parentStyle="ChildPatrolHallFrame.HelpBtn"
+      x="802"
+      y="-49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ylexpedition.UpdateTime.redTxt"
+      parentStyle="ChildPatrolLeftItemView.UpdateTime.text"
+      textFormatStyle="ylexpedition.UpdateTime.redTxt_t" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpidtionyd.preTimeTxt"
+      parentStyle="ChildPatrolLeftItemView.UpdateTime.text"
+      x="327"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.attackText"
+      textFormatStyle="ui.ylexpedition.ydNodeTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="20"
+      x="170"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.ylexpedition.needResText"
+      textFormatStyle="ui.ylexpedition.needResText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="65"
+      y="165" />
+  </components>
+</style>

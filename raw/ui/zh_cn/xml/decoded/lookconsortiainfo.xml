@@ -1,0 +1,224 @@
+<style
+  name="lookconsortiainfo"
+  source="ui/zh_cn/swf/lookconsortiainfo.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle_t"
+      args="Arial,12,0xdacba2,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="lookconsortiainfo.InfoFrameDiscriptionTextStyle_t"
+      args="arial,12,0xc7b079,,,,,,left"
+      leading="5"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <!--公会信息Frame-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameTxtBg"
+      x="0"
+      y="0" />
+    <!-- 名称：.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameNameTxtImg"
+      x="-11"
+      y="17" />
+    <!-- 会长：.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameChairmanTxtImg"
+      x="150"
+      y="17" />
+    <!-- 等级.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameLevelTxtImg"
+      x="-11"
+      y="46" />
+    <!-- 财富1.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameWealthTxtImg"
+      x="150"
+      y="46" />
+    <!-- 人数1.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameNumTxtImg"
+      x="-11"
+      y="76" />
+    <!-- 荣誉1.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameHonorTxtImg"
+      x="150"
+      y="76" />
+    <!-- 公会介绍.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameDiscriptionBg"
+      x="108"
+      y="114" />
+    <!-- 条.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameLineImg"
+      x="-5"
+      y="136" />
+    <!-- 字背景.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameWordBg"
+      x="36"
+      y="115" />
+    <!-- 申请加入.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameJoinTxtImg"
+      x="0"
+      y="0" />
+    <!-- 后背景.png.png-->
+    <bitmapData
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameBg"
+      x="-17"
+      y="111" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <!--公会信息Frame-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameBg"
+      resourceLink="core.FrameBackgoundBase2,core.FameBottomImage,core.FrameTitleImage2"
+      imageRectString="-18|-15|0|23|0,16|20|53|41|4,232|17|17|0|9" />
+    <component
+      classname="consortia.view.club.ConsortiaInfoFrame"
+      stylename="lookconsortiainfoe.ConsortiaInfoFrame"
+      parentStyle="core.Frame2"
+      backStyle="lookconsortiainfo.ConsortiaInfoFrameBg"
+      moveEnable="true"
+      width="378"
+      height="381"
+      containerY="46" />
+    <!--9宫图背景6-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameDescribeBackground"
+      parentStyle="core.describeBackground_style06"
+      x="-19"
+      y="4"
+      width="343"
+      height="236" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg"
+      resourceLink="lookconsortiainfo.ConsortiaInfoFrameTxtBg1,lookconsortiainfo.ConsortiaInfoFrameTxtBg2,lookconsortiainfo.ConsortiaInfoFrameTxtBg3,lookconsortiainfo.ConsortiaInfoFrameTxtBg4,lookconsortiainfo.ConsortiaInfoFrameTxtBg5,lookconsortiainfo.ConsortiaInfoFrameTxtBg6"
+      imageRectString="44|100|11|26|2,210|100|11|26|2,44|100|41|26|2,210|100|41|26|2,44|100|71|26|2,210|100|71|26|2" />
+    <!--输入框-->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg1"
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameTxtBg"
+      x="34"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg2"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameTxtBg1"
+      x="204"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg3"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameTxtBg1"
+      x="34"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg4"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameTxtBg1"
+      x="204"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg5"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameTxtBg1"
+      x="34"
+      y="76" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtBg6"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameTxtBg1"
+      x="204"
+      y="76" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameTxtImg"
+      resourceLink="asset.lookconsortiainfo.consortia.infoFrameNameTxtImg,asset.lookconsortiainfo.consortia.infoFrameChairmanTxtImg,asset.lookconsortiainfo.consortia.infoFrameLevelTxtImg,asset.lookconsortiainfo.consortia.infoFrameWealthTxtImg,asset.lookconsortiainfo.consortia.infoFrameNumTxtImg,asset.lookconsortiainfo.consortia.infoFrameHonorTxtImg" />
+    <!--文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle"
+      textFormatStyle="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle_t"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="47"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameChairmanTextStyle"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle"
+      x="212"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameLevelTextStyle"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle"
+      x="47"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameWealthTextStyle"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle"
+      x="212"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameNumTextStyle"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle"
+      x="47"
+      y="76" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.ConsortiaInfoFrameHonorTextStyle"
+      parentStyle="lookconsortiainfo.ConsortiaInfoFrameNameTextStyle"
+      x="212"
+      y="76" />
+    <component
+      classname="com.pickgliss.ui.text.TextArea"
+      stylename="lookconsortiainfo.InfoFrameTextArea"
+      vScrollbarStyle="core.InfoFrameVScrollbar04"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="20,-12,-1,-39,3"
+      viewportInnerRectString="0,12,0,-40,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      x="-6"
+      y="150"
+      width="316"
+      height="48"
+      textStyle="lookconsortiainfo.InfoFrameDiscriptionTextStyle" />
+    <!--公会公告-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lookconsortiainfo.InfoFrameDiscriptionTextStyle"
+      textFormatStyle="lookconsortiainfo.InfoFrameDiscriptionTextStyle_t"
+      width="336"
+      multiline="true"
+      wordWrap="true" />
+    <!-- 申请加入按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="lookconsortiainfo.InfoFrameApplyBtn"
+      backStyle="asset.core.consortia.infoFrameBtnBg"
+      iconStyle="asset.lookconsortiainfo.consortia.infoFrameJoinTxtImg"
+      iconInnerRectString="28,81,9,24,13"
+      x="89"
+      y="250"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+  </components>
+</style>

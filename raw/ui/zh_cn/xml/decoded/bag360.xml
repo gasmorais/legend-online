@@ -1,0 +1,146 @@
+<style
+  name="bag360"
+  source="ui/zh_cn/swf/bag360.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="bag360.Item.Txt_t"
+      args="Arial,14,0xf6b600,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bag360.ItemTitke_t"
+      args="Arial,14,0xf9e8c5,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.bag360.TitleAsset"
+      x="-2"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.bag360.LineAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.bag360.levelBmp"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="bag360.DropItem"
+      backgroundStyle="bag360.DropItemBack"
+      iconStyle="bag360.DropItemIcon"
+      textStyle="bag360.DropItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="bag360.DropItemIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="bag360.CountedTxt_2"
+      resourceLink="asset.core.ReceivedImg"
+      x="326"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="bag360.DropItemBack"
+      resourceLink="asset.core.goodsItemBack4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bag360.DropItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="0"
+      y="22" />
+    <component
+      classname="bag360.Bag360Frame"
+      stylename="bag360.Bag360Frame"
+      parentStyle="core.Frame1"
+      width="455"
+      height="450" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="bag360.FrameBack"
+      parentStyle="core.describeBackground_style06"
+      width="424"
+      height="340"
+      alpha="0.6"
+      x="-1"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="bag360.Contain"
+      spacing="3"
+      x="5"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="bag360.Item.Contain"
+      spacing="1"
+      x="84"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bag360.Level"
+      textFormatStyle="bag360.ItemTitke_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="85"
+      height="20"
+      x="2"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bag360.Reward"
+      textFormatStyle="bag360.ItemTitke_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="325"
+      height="20"
+      x="87"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bag360.Item.Txt"
+      textFormatStyle="bag360.Item.Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="35"
+      height="20"
+      x="38"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bag360.Item.Btn"
+      backStyle="asset.core.Style18Btn"
+      iconStyle="asset.bag360.ReceiveTxtAsset1"
+      iconInnerRectString="22,46,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="322"
+      y="3" />
+  </components>
+</style>

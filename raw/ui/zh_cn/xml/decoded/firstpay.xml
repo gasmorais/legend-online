@@ -1,0 +1,275 @@
+<style
+  name="firstpay"
+  source="ui/zh_cn/swf/firstpay.swf">
+  <sets>
+    <set
+      args="0x000000,1,3,3,100"
+      stylename="castle.TimeBoxFilter_1"
+      type="flash.filters.GlowFilter" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="firstpay.levelLimit1TextField_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.firstpay.BackAsset1" />
+    <bitmapData
+      resourceLink="asset.firstpay.BackAsset2" />
+    <bitmapData
+      resourceLink="asset.firstpay.RoleAsset"
+      x="279"
+      y="-56" />
+    <bitmapData
+      resourceLink="asset.firstpay.PayBtnBackAsset" />
+    <bitmapData
+      resourceLink="asset.firstpay.PayBtnTxtAsset" />
+    <bitmapData
+      resourceLink="asset.firstpay.TitleBackAsset"
+      x="158"
+      y="185" />
+    <bitmapData
+      resourceLink="asset.firstpay.IconAsset" />
+    <bitmapData
+      resourceLink="asset.firstpay.RewardBackAsset" />
+    <bitmapData
+      resourceLink="asset.firstpay.ValueAsset"
+      x="200"
+      y="202" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="firstpay.Item"
+      iconStyle="firstpay.ItemIcon"
+      textStyle="firstpay.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="firstpay.ItemIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="firstpay.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="38" />
+  </customDisplay>
+  <components>
+    <!-- closestyle="core.CloseBtn" backStyle="firstpay.FirstPayFrameBack" closeInnerRectString="29,3,-45,29,14" 
+			moveInnerRectString="0,80,0,25,1" -->
+    <component
+      classname="firstpay.FirstpayFrame"
+      stylename="firstpay.FirstFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,25,-38,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="17"
+      containerY="48"
+      width="592"
+      height="441" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="firstpay.FirstPayFrameBack"
+      resourceLink="asset.firstpay.bg,asset.firstpay.RoleAsset,asset.firstpay.payMoneytxt,asset.firstpay.getWeaponBg,asset.firstpay.getWeaponTxt,asset.firstpay.giftbg,asset.firstpay.ValueAsset"
+      imageRectString="0|562|0|352|13,-71|253|-45|394|13,94|372|3|61|13,132|354|78|73|13,198|217|90|49|13,48|507|227|115|13,242|133|232|16|13" />
+    <component
+      stylename="firstpay.PayBtn"
+      classname="com.pickgliss.ui.controls.BaseButton"
+      backStyle="asset.firstpay.payBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="228"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="firstpay.weapon01"
+      resourceLink="asset.firstpay.weapon1"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="507"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="firstpay.weapon02"
+      resourceLink="asset.firstpay.weapon2"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="503"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="firstpay.weapon03"
+      resourceLink="asset.firstpay.weapon3"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="507"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="firstpay.itemEffect"
+      resourceLink="asset.firstpay.light"
+      x="58"
+      y="253" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="firstpay.itemEffect02"
+      resourceLink="asset.firstpay.effect02"
+      y="253" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="firstpay.FirstPayFrameBack2"
+      resourceLink="firstpay.FirstPayFrame1,firstpay.FirstPayFrame2,firstpay.FirstPayFrame3,firstpay.FirstPayFrame4"
+      imageRectString="270|180|0|-135|9,270|180|0|405|9,270|180|360|-135|9,270|180|360|405|9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.FirstPayFrame1"
+      resourceLink="asset.firstpay.BackAsset2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.FirstPayFrame2"
+      resourceLink="asset.firstpay.BackAsset2"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.FirstPayFrame3"
+      resourceLink="asset.firstpay.BackAsset2"
+      scaleY="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.FirstPayFrame4"
+      resourceLink="asset.firstpay.BackAsset2"
+      scaleY="-1"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="firstpay.RewardBack"
+      resourceLink="firstpay.RewardBack1,firstpay.RewardBack2"
+      imageRectString="252|99|0|-120|9,252|99|0|384|9"
+      width="504"
+      height="178"
+      x="0"
+      y="206" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.RewardBack1"
+      resourceLink="asset.firstpay.RewardBackAsset" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.RewardBack2"
+      resourceLink="asset.firstpay.RewardBackAsset"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.HotIcon"
+      resourceLink="asset.core.HotIconImg"
+      x="-35"
+      y="-54" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="firstpay.ItemBox"
+      x="68"
+      y="264"
+      spacing="8" />
+    <custom
+      classname="asset.firstpay.ButtonEffect"
+      stylename="firstpay.ButtonEffect"
+      x="21"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="firstpay.RewardItemBack"
+      resourceLink="asset.firstpay.IconAsset"
+      x="-4"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="firstpay.EquiptLightEffect"
+      resourceLink="asset.firstpay.EquiptLightEffect" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="firstpay.levelLimitBack"
+      resourceLink="asset.firstpay.levelBack,asset.firstpay.levelBack"
+      imageRectString="0|55|0|16|13,68|55|0|16|13"
+      x="23"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="firstpay.levelLimit1"
+      colors="0xfcc6c6,0xbf0000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="firstpay.levelLimit1TextField"
+      mouseEnabled="false"
+      width="100"
+      height="20"
+      x="20"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="firstpay.levelLimit1TextField"
+      textFormatStyle="firstpay.levelLimit1TextField_t"
+      autoSize="none"
+      width="70"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="firstpay.levelLimit2"
+      parentStyle="firstpay.levelLimit1"
+      x="88"
+      y="275" />
+    <!-- 
+		<component classname="com.pickgliss.ui.image.Image" stylename="firstpay.FirstPayFrame1"
+			resourceLink="asset.firstpay.BackAsset2"
+		/>
+		<component classname="com.pickgliss.ui.image.Image" stylename="firstpay.FirstPayFrame2"
+			resourceLink="asset.firstpay.BackAsset2" scaleX="-1"
+		/>
+		<component classname="com.pickgliss.ui.image.Image" stylename="firstpay.FirstPayFrame3"
+			resourceLink="asset.firstpay.BackAsset2" scaleY="-1"
+		/>
+		<component classname="com.pickgliss.ui.image.Image" stylename="firstpay.FirstPayFrame4"
+			resourceLink="asset.firstpay.BackAsset2" scaleY="-1" scaleX="-1" 
+		/>
+		
+		
+		 -->
+    <!-- 
+		<component classname="com.pickgliss.ui.image.MutipleImage" stylename="firstpay.FirstPayFrameBack"
+			resourceLink="asset.firstpay.BackAsset1,firstpay.FirstPayFrameBack2" imageRectString="535|348|6|0|9,540|360|0|0|9" 
+		/>
+		 -->
+  </components>
+</style>

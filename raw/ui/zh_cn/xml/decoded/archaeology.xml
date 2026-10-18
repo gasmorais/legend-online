@@ -1,0 +1,578 @@
+<style
+  name="archaeology"
+  source="ui/zh_cn/swf/archaeology.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyFrame.expText_t"
+      args="Arial,12,0xe7c88b,,,,,,center"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyFrame.FrameTitile_t"
+      args="Arial,15,0xFFDD83,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="archaeology.ArchaeologyCellAdapterTextStyle_t"
+      args="Arial,12,0xffdd9a,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyMakeLeftView.ComboxText_t"
+      args="Arial,13,0xe7d5ad,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t1"
+      args="Arial,14,0xf5e07d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t2"
+      args="Arial,14,0x78ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t3"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t4"
+      args="Arial,12,0xf5e07d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t5"
+      args="Arial,12,0x78ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t6"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t7"
+      args="Arial,12,0xf5e07d,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t8"
+      args="Arial,12,0x78ff00,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t9"
+      args="Arial,12,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyLeftItem.itemNameText_t10"
+      args="Arial,12,0x707070,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyMakeRightView.itemNameText_t"
+      args="Arial,16,0xfeb300,,,,,,center"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyBookItem.bookName_t"
+      args="Arial,14,0xdcb36a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyBookItem.rewardText_t"
+      args="Arial,13,0xe7ca87,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyBookItem.needBookText_t1"
+      args="Arial,14,0xccc73d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyBookItem.needBookText_t2"
+      args="Arial,14,0x898585,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyMakeRightView.descText_t"
+      args="Arial,12,0x725031,,,,,,center"
+      leading="2"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyMakeRightView.processText_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.archaeologyFrame.back" />
+    <bitmapData
+      resourceLink="asset.ArchaeologyWorldMapView.mapBack"
+      x="30"
+      y="98" />
+    <bitmapData
+      resourceLink="asset.archaeologyView.back"
+      x="30"
+      y="98" />
+    <bitmapData
+      resourceLink="asset.ArchaeologyBookItem.itemBack" />
+    <bitmapData
+      resourceLink="asset.ArchaeologyBookItem.hasGetImage"
+      x="275"
+      y="85" />
+    <bitmapData
+      resourceLink="asset.archaeologyFrame.exchangeImage"
+      x="19"
+      y="504" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.ArchaeologyFrame.expBar"
+      stylename="ArchaeologyFrame.expBar" />
+    <custom
+      classname="archaeology.ArchaeologyWorldMapView"
+      stylename="ArchaeologyFrame.worldView" />
+    <custom
+      classname="archaeology.ArchaeologyMakeView"
+      stylename="ArchaeologyFrame.makeView" />
+    <custom
+      classname="archaeology.ArchaeologyMakeLeftView"
+      stylename="ArchaeologyMakeView.leftView" />
+    <custom
+      classname="archaeology.ArchaeologyMakeRightView"
+      stylename="ArchaeologyMakeView.rightView"
+      x="245"
+      y="100" />
+    <custom
+      classname="asset.ArchaeologyMakeRightView.processBar"
+      stylename="ArchaeologyMakeRightView.processBar"
+      x="188"
+      y="325" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ArchaeologyMakeRightView.rewardItem"
+      parentStyle="core.BaseItemView"
+      profileX="0"
+      profileY="0"
+      x="230"
+      y="270" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ArchaeologyBookItem.baseItem"
+      parentStyle="core.BaseItemView"
+      profileX="0"
+      profileY="0" />
+    <custom
+      classname="map.campaign.view.house.FurnitureBagCell"
+      stylename="ArchaeologyBookItem.FurnitureBagCell"
+      backgroundStyle="core.ItemBack2"
+      iconStyle="ArchaeologyBookItem.FurnitureBagCellIcon"
+      textStyle="core.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ArchaeologyBookItem.FurnitureBagCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="43"
+      iconWidth="43"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+  </customDisplay>
+  <components>
+    <!--考古主 Frame-->
+    <component
+      classname="archaeology.ArchaeologyFrame"
+      stylename="archaeology.ArchaeologyFrame"
+      closestyle="ArchaeologyBookFrame.CloseBtn"
+      titleStyle="ArchaeologyFrame.FrameTitleText"
+      backStyle="asset.archaeologyFrame.back"
+      closeInnerRectString="29,23,78,29,14"
+      moveInnerRectString="200,300,20,40,1"
+      titleOuterRectPosString="0,40,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="-14"
+      containerY="16"
+      width="845"
+      height="555" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyFrame.FrameTitleText"
+      textFormatStyle="ArchaeologyFrame.FrameTitile_t"
+      filterString="core.FrameTitile_g" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyFrame.bookBtn"
+      backStyle="asset.archaeologyFrame.bookBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="28"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyFrame.expText"
+      textFormatStyle="ArchaeologyFrame.expText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="10"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="ArchaeologyWorldMapView.MapAreaContainer"
+      resourceLink="asset.ArchaeologyWorldMapView.MapAreaContainer"
+      x="440"
+      y="309" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ArchaeologyMakeView.returnMapBtn"
+      backStyle="asset.archaeologyView.commonBtnImage"
+      iconStyle="asset.archaeologyView.returnText"
+      iconInnerRectString="14,66,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="745"
+      y="485" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ArchaeologyMakeLeftView.btnVbox"
+      x="30"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="ArchaeologyMakeLeftView.listPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="16,-13,0,0,3"
+      viewportInnerRectString="0,0,0,0,0"
+      vScrollProxy="1"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|archaeology.ArchaeologyLeftItem,22,180"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="190"
+      height="125"
+      x="5" />
+    <component
+      classname="archaeology.ArchaeologyLeftItem"
+      stylename="archaeology.ArchaeologyLeftItem"
+      selectedStyle="archaeology.ArchaeologyLeftItemBg2"
+      unSelectedStyle="archaeology.ArchaeologyLeftItemBg1"
+      textStyle="ArchaeologyLeftItem.itemNameText"
+      iconStyle="ArchaeologyLeftItem.ComposeGoodsSwitchIcon"
+      numberStyle="ArchaeologyLeftItem.canMakeText"
+      backgoundInnerRectString="0,10,0,5,-1"
+      autoSizeAble="false"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ArchaeologyLeftItem.ComposeGoodsSwitchIcon"
+      resourceLink="asset.ArchaeologyLeftItem.Plus,asset.ArchaeologyLeftItem.Minus"
+      x="6"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="archaeology.ArchaeologyLeftItemBg1"
+      resourceLink="asset.archaeology.ArchaeologyLeftItemBg"
+      alpha="0"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="archaeology.ArchaeologyLeftItemBg2"
+      resourceLink="asset.archaeology.ArchaeologyLeftItemBg"
+      y="-2"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyLeftItem.itemNameText"
+      textFormatStyle="ArchaeologyLeftItem.itemNameText_t1,ArchaeologyLeftItem.itemNameText_t2,ArchaeologyLeftItem.itemNameText_t3,ArchaeologyLeftItem.itemNameText_t4,ArchaeologyLeftItem.itemNameText_t5,ArchaeologyLeftItem.itemNameText_t6,ArchaeologyLeftItem.itemNameText_t10"
+      filterString="core.filter_01"
+      autoSize="none"
+      isAutoFitLength="true"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyLeftItem.canMakeText"
+      textFormatStyle="ArchaeologyLeftItem.itemNameText_t7,ArchaeologyLeftItem.itemNameText_t8,ArchaeologyLeftItem.itemNameText_t9"
+      filterString="core.filter_01"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="140" />
+    <!--	右侧界面	 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyMakeRightView.itemNameText"
+      textFormatStyle="ArchaeologyMakeRightView.itemNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="98"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyMakeRightView.descText"
+      textFormatStyle="ArchaeologyMakeRightView.descText_t"
+      autoSize="none"
+      height="120"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyMakeRightView.processText"
+      textFormatStyle="ArchaeologyMakeRightView.processText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="270"
+      y="328" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyMakeRightView.rechargeBtn"
+      backStyle="asset.archaeologyView.rechargeBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="210"
+      y="370" />
+    <!--	图鉴界面		-->
+    <component
+      classname="archaeology.ArchaeologyBookFrame"
+      stylename="archaeology.ArchaeologyBookFrame"
+      closestyle="ArchaeologyBookFrame.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="asset.ArchaeologyBookFrame.back"
+      closeInnerRectString="29,13,8,29,14"
+      moveInnerRectString="0,30,0,40,1"
+      titleOuterRectPosString="0,10,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="-14"
+      containerY="16"
+      width="412"
+      height="602" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyBookFrame.CloseBtn"
+      backStyle="asset.ArchaeologyBookFrame.CloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyBookFrame.lookLastPageBtn"
+      backStyle="asset.ArchaeologyBookFrame.lookLastPageBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="538" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyBookFrame.lookNextPageBtn"
+      backStyle="asset.ArchaeologyBookFrame.lookNextPageBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="265"
+      y="538" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ArchaeologyBookFrame.lookPageBg"
+      resourceLink="asset.core.pageBg"
+      x="190"
+      y="530" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyBookFrame.lookPageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="195"
+      y="536" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ArchaeologyBookFrame.vbox"
+      x="37"
+      y="32"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyBookItem.getBtn"
+      backStyle="asset.ArchaeologyBookItem.getBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="270"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyBookItem.bookName"
+      textFormatStyle="ArchaeologyBookItem.bookName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="355"
+      height="20"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyBookItem.condictionText"
+      textFormatStyle="ArchaeologyBookItem.rewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="2"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyBookItem.rewardText"
+      textFormatStyle="ArchaeologyBookItem.rewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="2"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyBookItem.needBookText"
+      textFormatStyle="ArchaeologyBookItem.needBookText_t1,ArchaeologyBookItem.needBookText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ArchaeologyBookItem.textbox"
+      x="5"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ArchaeologyBookItem.rewardHbox"
+      x="60"
+      y="100"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ArchaeologyFrame.expContiner"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7"
+      tipGapH="-20"
+      tipGapV="0"
+      x="304"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="775"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ArchaeologyBookItem.textContiner"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7"
+      tipGapH="-10"
+      tipGapV="-5" />
+    <!--	自由草原 	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ArchaeologyMakeLeftView.map1Btn"
+      unSelectedStyle="asset.archaeology.leftBtnBack.dark"
+      selectedStyle="asset.archaeology.leftBtnBack.light"
+      selectedIconStyle="asset.ArchaeologyMakeLeftView.map1Text1"
+      unselectedIconStyle="asset.ArchaeologyMakeLeftView.map1Text2"
+      selectedIconInnerRectString="68,82,9,20,13"
+      unselectedIconInnerRectString="68,82,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--	迷雾森林 	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ArchaeologyMakeLeftView.map2Btn"
+      unSelectedStyle="asset.archaeology.leftBtnBack.dark"
+      selectedStyle="asset.archaeology.leftBtnBack.light"
+      selectedIconStyle="asset.ArchaeologyMakeLeftView.map2Text1"
+      unselectedIconStyle="asset.ArchaeologyMakeLeftView.map2Text2"
+      selectedIconInnerRectString="43,130,9,21,13"
+      unselectedIconInnerRectString="43,130,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--	无尽沼泽 	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ArchaeologyMakeLeftView.map3Btn"
+      unSelectedStyle="asset.archaeology.leftBtnBack.dark"
+      selectedStyle="asset.archaeology.leftBtnBack.light"
+      selectedIconStyle="asset.ArchaeologyMakeLeftView.map3Text1"
+      unselectedIconStyle="asset.ArchaeologyMakeLeftView.map3Text2"
+      selectedIconInnerRectString="46,126,9,20,13"
+      unselectedIconInnerRectString="46,126,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--	死亡沙漠 	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ArchaeologyMakeLeftView.map4Btn"
+      unSelectedStyle="asset.archaeology.leftBtnBack.dark"
+      selectedStyle="asset.archaeology.leftBtnBack.light"
+      selectedIconStyle="asset.ArchaeologyMakeLeftView.map4Text1"
+      unselectedIconStyle="asset.ArchaeologyMakeLeftView.map4Text2"
+      selectedIconInnerRectString="48,124,9,20,13"
+      unselectedIconInnerRectString="48,124,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--	试炼之地 	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ArchaeologyMakeLeftView.map5Btn"
+      unSelectedStyle="asset.archaeology.leftBtnBack.dark"
+      selectedStyle="asset.archaeology.leftBtnBack.light"
+      selectedIconStyle="asset.ArchaeologyMakeLeftView.map5Text1"
+      unselectedIconStyle="asset.ArchaeologyMakeLeftView.map5Text2"
+      selectedIconInnerRectString="35,145,9,21,13"
+      unselectedIconInnerRectString="35,145,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--	全地图 	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ArchaeologyMakeLeftView.mapAllBtn"
+      unSelectedStyle="asset.archaeology.leftBtnBack.dark"
+      selectedStyle="asset.archaeology.leftBtnBack.light"
+      selectedIconStyle="asset.ArchaeologyMakeLeftView.mapAllText1"
+      unselectedIconStyle="asset.ArchaeologyMakeLeftView.mapAllText2"
+      selectedIconInnerRectString="48,119,9,20,13"
+      unselectedIconInnerRectString="48,119,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="ArchaeologyFrame.checkButton"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="89"
+      y="503" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ArchaeologyMakeRightView.stargazingBtn"
+      backStyle="asset.ArchaeologyMakeRightView.stargazingBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      supportTipsWhenGray="true"
+      x="-5"
+      y="-5" />
+  </components>
+</style>

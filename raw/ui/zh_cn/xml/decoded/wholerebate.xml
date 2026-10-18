@@ -1,0 +1,172 @@
+<style
+  name="wholerebate"
+  source="ui/zh_cn/swf/wholerebate.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="wholerebate.WholeRebateFrame.timeTxt_t"
+      args="Arial,14,0xcccccc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wholerebate.WholeRebateFrame.ruleTxt_t"
+      args="Arial,12,0xf7cfa1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wholerebate.ChargeView.rebateDiamond_t"
+      args="Arial,14,0x5af5ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wholerebate.ChargeView.needCharge_t"
+      args="Arial,14,0x5af5ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wholerebate.ChargeView.progresstxt_t"
+      args="Arial,14,0x5af5ff,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.wholerebate.chargeView.num" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="wholerebate.WholeRebateFrame.chargeView"
+      classname="wholerebate.ChargeView"
+      x="97"
+      y="226" />
+    <custom
+      classname="asset.wholerebate.ProgressView"
+      stylename="wholerebate.ProgressView"
+      x="6"
+      y="113" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="wholerebate.ChargeView.progresstxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="wholerebate.ChargeView.progresstxt_t"
+      type="dynamic"
+      width="200"
+      height="20"
+      x="86"
+      y="124" />
+    <component
+      stylename="wholerebate.chargeView.percent"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.wholerebate.chargeView.percent"
+      x="387"
+      y="41" />
+    <component
+      stylename="wholerebate.ChargeView.diamondPic"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.wholerebate.diamondPic"
+      x="406"
+      y="86" />
+    <component
+      stylename="wholerebate.chrageBG.n2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.wholerebate.chrageBG.n2"
+      x="22"
+      y="101" />
+    <component
+      stylename="wholerebate.ChargeView.DiamonTxtPic"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.wholerebate.DiamonTxtPic"
+      x="405"
+      y="40" />
+    <component
+      stylename="wholerebate.ChargeView.chargeBg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.wholerebate.chrageBG.n0,asset.wholerebate.chrageBG.n1"
+      imageRectString="0|0|19,22|15|19"
+      x="0"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wholerebate.ChargeView.chargeIconBtn"
+      backStyle="asset.wholerebate.chargeIconBtn.chargeBtnBg"
+      iconStyle="asset.wholerebate.chargeIconBtn.icon"
+      iconInnerRectString="29,56,8,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="356"
+      y="106" />
+    <component
+      stylename="wholerebate.WholeRebateFrame.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.wholerebate.bg.n0,asset.wholerebate.bg.n1,asset.wholerebate.bg.funnyTime,asset.wholerebate.bg.funnyRule"
+      imageRectString="168|33|19,0|0|19,244|53|19,244|91|19"
+      x="-137"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wholerebate.WholeRebateFrame.getRebateIconBtn"
+      backStyle="asset.wholerebate.getRebate.btnBg"
+      iconStyle="asset.wholerebate.getRebate.icon"
+      iconInnerRectString="27,103,8,39,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="259"
+      y="312" />
+    <component
+      stylename="wholerebate.ChargeView.Congratulation"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.wholerebate.Congratulation"
+      x="-4"
+      y="-91" />
+    <component
+      stylename="wholerebate.WholeRebateFrame"
+      classname="wholerebate.WholeRebateFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="0"
+      width="622"
+      height="430" />
+    <component
+      stylename="wholerebate.ChargeView.rebateDiamond"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="wholerebate.ChargeView.rebateDiamond_t"
+      type="dynamic"
+      width="70"
+      height="20"
+      x="353"
+      y="85" />
+    <component
+      stylename="wholerebate.ChargeView.needCharge"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="wholerebate.ChargeView.needCharge_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="222"
+      y="100" />
+    <component
+      stylename="wholerebate.WholeRebateFrame.timeTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="wholerebate.WholeRebateFrame.timeTxt_t"
+      type="dynamic"
+      width="393"
+      height="23"
+      x="177"
+      y="72" />
+    <component
+      stylename="wholerebate.WholeRebateFrame.ruleTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="wholerebate.WholeRebateFrame.ruleTxt_t"
+      type="dynamic"
+      wordWrap="true"
+      width="468"
+      height="163"
+      x="118"
+      y="128" />
+  </components>
+</style>

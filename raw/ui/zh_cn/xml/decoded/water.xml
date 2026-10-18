@@ -1,0 +1,572 @@
+<style
+  name="water"
+  source="ui/zh_cn/swf/water.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.playerName_t"
+      args="Arial,14,0xffc515,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.playerName_t1"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.playerName_t2"
+      args="Arial,14,0xffae00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.playerName_t3"
+      args="Arial,14,0xff9600,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.level_t"
+      args="Arial,12,0xffee2f,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.page_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.waterexp_t"
+      args="Arial,12,0xfff7c9,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.expMax_t"
+      args="Arial,14,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.favorate_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="water.favorate_f"
+      args="0xb01111,1,5,5,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.LogFrameNameTextStyle_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.LogTypeText_t1"
+      args="Arial,12,0xb0ff98,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.LogTypeText_t2"
+      args="Arial,12,0xffd48a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.LogTextStyle_t"
+      letterSpacing="0"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="water.LogTextStyle_f"
+      args="0x000000,1,2,2,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.AlertStyle_t"
+      letterSpacing="0"
+      args="Arial,14,0xFFD200,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.pickcount_t"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="water.waterConfitm_t"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <!-- 树 -->
+    <bitmapData
+      resourceLink="asset.water.Tree"
+      x="55"
+      y="105" />
+    <!-- 列表页码背景 -->
+    <bitmapData
+      resourceLink="asset.core.PageNumBack2"
+      x="80"
+      y="354" />
+    <!-- 好感度图标 -->
+    <bitmapData
+      resourceLink="asset.water.FavorateIcon" />
+    <!-- 水果图标 -->
+    <bitmapData
+      resourceLink="asset.water.FruteIcon" />
+    <!-- 水果图标 -->
+    <bitmapData
+      resourceLink="asset.water.WaterExpBack" />
+    <bitmapData
+      resourceLink="asset.water.WaterExpProgressImg"
+      x="45"
+      y="16" />
+    <!-- 可充能图标 -->
+    <bitmapData
+      resourceLink="asset.water.WaterStateImg"
+      x="-4"
+      y="-13" />
+    <!-- 可收获图标 -->
+    <bitmapData
+      resourceLink="asset.water.PickStateImg"
+      x="3"
+      y="-1" />
+    <!--虚线.png-->
+    <bitmapData
+      resourceLink="asset.water.LogtFrameLine" />
+    <bitmapData
+      resourceLink="asset.water.TreeExpImg"
+      x="86"
+      y="36" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 浇水界面 -->
+    <custom
+      classname="water.view.WaterView"
+      stylename="water.WaterView"
+      x="-1"
+      y="-6" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="water.PlayerIcon"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="28"
+      loadingY="27"
+      x="3"
+      y="8" />
+    <!-- 列表界面 -->
+    <custom
+      classname="water.view.WaterFriendListView"
+      stylename="water.FriendList"
+      x="551"
+      y="4" />
+    <!-- 列表界面 -->
+    <custom
+      classname="water.view.FarmFriendItem"
+      stylename="water.FarmFriendItem"
+      back="water.FriendItemButton"
+      nameTextStyle="water.ItemNameText"
+      favorateIconStyle="water.FavorateIcon"
+      favorateTextStyle="water.ItemFavorateText"
+      stateIconStyle="farm.FarmStateImg"
+      width="196"
+      height="22" />
+    <custom
+      classname="water.view.FruteItem"
+      stylename="water.FruteItem1"
+      index="1"
+      x="177"
+      y="147" />
+    <custom
+      classname="water.view.FruteItem"
+      stylename="water.FruteItem2"
+      index="2"
+      x="106"
+      y="214" />
+    <custom
+      classname="water.view.FruteItem"
+      stylename="water.FruteItem3"
+      index="3"
+      x="191"
+      y="202" />
+    <custom
+      classname="water.view.FruteItem"
+      stylename="water.FruteItem4"
+      index="4"
+      x="296"
+      y="153" />
+    <custom
+      classname="water.view.FruteItem"
+      stylename="water.FruteItem5"
+      index="5"
+      x="331"
+      y="209" />
+    <custom
+      classname="water.view.WaterExpItem"
+      stylename="water.WaterExpView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="10"
+      y="188" />
+    <custom
+      classname="water.view.PlayerTreeExpView"
+      stylename="water.TreeExpView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,2,3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="11"
+      y="13" />
+    <custom
+      classname="water.view.PlayerTreeExpView"
+      stylename="water.FriendTreeExpView"
+      parentStyle="water.TreeExpView"
+      x="11"
+      y="77" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="water.WaterStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5"
+      y="355" />
+    <!-- 经验条遮罩位置 -->
+    <custom
+      classname="flash.geom.Point"
+      stylename="water.shapeMask"
+      x="155"
+      y="20" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="water.TreeShapeMask"
+      x="125"
+      y="20" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="water.WaterExpMask"
+      x="138"
+      y="20" />
+    <!-- 树tips -->
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="water.treeTips"
+      tipWidth="250" />
+  </customDisplay>
+  <components>
+    <!--浇水Frame-->
+    <component
+      classname="water.view.WaterFrame"
+      stylename="water.WaterFrame"
+      parentStyle="buildings.BaseBuildFrame"
+      width="786"
+      height="485" />
+    <!-- 友好度图标 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="water.FavorateIcon"
+      resourceLink="asset.water.FavorateIcon"
+      tipDirctions="0,2,3"
+      tipGapV="0"
+      tipStyle="yishi.view.tips.FavourTip"
+      isFollowMouse="false"
+      x="135"
+      y="3" />
+    <!-- 玩家名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.PlayerNameText"
+      textFormatStyle="water.playerName_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="22"
+      y="18" />
+    <!-- 最大浇水值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.WaterProgressText"
+      textFormatStyle="water.waterexp_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="20"
+      x="70"
+      y="12" />
+    <!-- 领主名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.PlayerNameTxt"
+      textFormatStyle="water.playerName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="86"
+      y="17" />
+    <!-- 神树等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.WaterLevelTxt"
+      textFormatStyle="water.level_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="65"
+      y="45" />
+    <!--树的总经验 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.TreeExpMaxTxt"
+      textFormatStyle="water.expMax_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="96"
+      height="20"
+      x="101"
+      y="35" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="water.FriendList.help"
+      parentStyle="water.WaterBtn"
+      backStyle="asset.core.HelpButton_01"
+      x="723"
+      y="8" />
+    <!-- 列表页码值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.ListPageText"
+      textFormatStyle="water.page_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="44"
+      height="20"
+      x="80"
+      y="355" />
+    <!-- 首页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="water.ListFirstBtn"
+      backStyle="asset.water.FirstPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="10"
+      y="355" />
+    <!-- 尾页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="water.ListLastBtn"
+      backStyle="asset.water.LastPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="160"
+      y="355" />
+    <!-- 列表前页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="water.ListPreBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="65"
+      y="355"
+      scaleX="-1"
+      scaleY="1" />
+    <!-- 列表后页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="water.ListNextBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="130"
+      y="355" />
+    <!-- 列表Item -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="water.FriendItemButton"
+      resourceLink="water.ItemSelectedBack,water.ItemUnSelectedBack" />
+    <!-- 名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.ItemNameText"
+      textFormatStyle="water.playerName_t1,water.playerName_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="25"
+      y="0" />
+    <!-- 好感度 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.ItemFavorateText"
+      textFormatStyle="water.favorate_t"
+      filterString="water.favorate_f"
+      autoSize="none"
+      width="24"
+      height="18"
+      x="155"
+      y="4" />
+    <!-- ListBox-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="water.ListBox"
+      x="3"
+      y="42"
+      spacing="4" />
+    <!-- Item按钮未选中 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="water.ItemUnSelectedBack"
+      resourceLink="asset.water.ItemSelected"
+      alpha="0" />
+    <!--Item按钮选中 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="water.ItemSelectedBack"
+      resourceLink="asset.water.ItemSelected" />
+    <!--日志Frame-->
+    <component
+      classname="water.view.WaterLogFrame"
+      stylename="water.LogFrame"
+      parentStyle="core.Frame2"
+      width="545"
+      height="430"
+      containerX="27"
+      containerY="43" />
+    <!--	标题背景	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="water.TitleBarBack"
+      resourceLink="water.TitleBack,water.TitleSplit"
+      imageRectString="0|523|0|32|13,400|22|2|28|13"
+      x="-17"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="water.TitleBack"
+      parentStyle="core.TitleBack_Style01"
+      width="523"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="water.TitleSplit"
+      resourceLink="asset.core.TitleBack_Style01_S" />
+    <!--  日志背景6-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="water.LogFrameDescribeBackground"
+      parentStyle="core.describeBackground_style06"
+      x="-19"
+      y="1"
+      width="527"
+      height="347" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="water.LogFrameBg"
+      resourceLink="asset.water.LogFrameBg"
+      scaleGridString="1,1,500,3"
+      x="-16"
+      y="35"
+      width="521"
+      height="310" />
+    <!--事件标题文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.LogFrameNameTextStyle"
+      textFormatStyle="water.LogFrameNameTextStyle_t"
+      filterString="water.LogTextStyle_f"
+      height="20"
+      x="137"
+      y="12" />
+    <!--发生时间-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.LogFrameTimeTextStyle"
+      parentStyle="water.LogFrameNameTextStyle"
+      x="390" />
+    <!-- 事件列表 -->
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="water.LogListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,-2,-3,6,3"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      viewportInnerRectString="0,0,0,3,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|water.view.WaterLogItem,28,509"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="516"
+      height="307"
+      x="-14"
+      y="38" />
+    <!-- 事件文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.LogTypeText"
+      textFormatStyle="water.LogTypeText_t1,water.LogTypeText_t2"
+      filterString="core.normal_f"
+      x="14"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.LogTextStyle"
+      textFormatStyle="water.LogTextStyle_t"
+      filterString="water.LogTextStyle_f"
+      height="20"
+      x="84"
+      y="3" />
+    <!-- 事件时间文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.LogTimeText"
+      textFormatStyle="water.LogTextStyle_t"
+      height="20"
+      x="400"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="water.waterHelperBack"
+      parentStyle="core.describeBackground_style04"
+      x="-18"
+      y="4"
+      width="326"
+      height="171" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="water.waterConfitm"
+      textFormatStyle="water.waterConfitm_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="5"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="water.waterHelperBtn"
+      parentStyle="core.GreenBtn"
+      textStyle="water.waterConfitm"
+      x="106"
+      y="177" />
+    <component
+      classname="water.view.WaterHelp"
+      stylename="water.waterHelperFrame"
+      parentStyle="core.Frame2"
+      width="364"
+      height="312" />
+  </components>
+</style>

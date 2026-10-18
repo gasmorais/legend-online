@@ -1,0 +1,142 @@
+<style
+  name="molong"
+  source="ui/zh_cn/swf/molong.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="molong.nameTextStyle"
+      args="Arial,12,0x39cdde,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="molong.nameTextStyle2"
+      args="Arial,24,0xffe827,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="molong.nameTextStyle2.boxCountdown"
+      args="Arial,18,0xffe827,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.molong.num" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="molong.headIconCell"
+      parentStyle="core.PreviewSmallIconCell"
+      buttonMode="true"
+      x="-19"
+      y="-3" />
+    <custom
+      classname="asset.molong.shaiziMC"
+      stylename="molong.shaiziMC"
+      x="33"
+      y="31" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="asset.molong.moneyMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.molong.moneyFlash"
+      y="-40"
+      x="-40" />
+    <component
+      stylename="asset.molong.textTipMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.molong.textTip"
+      y="-40"
+      x="-40" />
+    <component
+      stylename="asset.molong.shaiziEffectMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.molong.effect01MC"
+      y="21"
+      x="67" />
+    <component
+      classname="map.campaign.view.ui.molong.ShaiziView"
+      stylename="molong.shaiziView"
+      parentStyle="molong.Frame2"
+      width="594"
+      height="363" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="molong.Frame2"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="36"
+      containerY="56"
+      width="500"
+      height="300" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="molong.bg"
+      resourceLink="asset.molong.bg"
+      x="-28"
+      y="-13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="molong.numDownBg"
+      resourceLink="asset.molong.numDown"
+      x="-8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="molong.btnOk"
+      backStyle="asset.core.Style23Btn"
+      iconStyle="asset.molong.touzhiIcon"
+      iconInnerRectString="23,46,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="158"
+      width="88"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="molong.roleName"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="molong.nameTextStyle"
+      x="17"
+      y="131"
+      autoSize="none"
+      width="100"
+      height="74"
+      filterString="battle.HeroNameTxt_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="molong.countDown"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="molong.nameTextStyle2"
+      x="198"
+      y="6"
+      autoSize="none"
+      width="100"
+      height="32"
+      filterString="battle.HeroNameTxt_f" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="molong.mutipleShaizi"
+      x="33"
+      y="31"
+      resourceLink="asset.molong.shaizi1,asset.molong.shaizi2,asset.molong.shaizi3,asset.molong.shaizi4,asset.molong.shaizi5,asset.molong.shaizi6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="molong.countDownBox"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="molong.nameTextStyle2.boxCountdown"
+      x="260"
+      y="-2"
+      autoSize="none"
+      width="100"
+      height="32"
+      filterString="battle.HeroNameTxt_f" />
+  </components>
+</style>

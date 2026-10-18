@@ -1,0 +1,515 @@
+<style
+  name="finalroad"
+  source="ui/zh_cn/swf/finalroad.swf">
+  <sets>
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="finalRoadFrame.titleTxt.text_f"
+      args="0xff6000,0.2,6,6,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadFrame.titleTxt.text_t"
+      args="arial,12,0xFF6000,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadFrame.descTxt_t"
+      args="arial,14,0xedbf83,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadLevelFrame.numTxt.text_t"
+      args="arial,14,0xff6000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadLevelFrame.lastNumTxt_t"
+      args="arial,12,0xa88a67,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadLevelFrame.pointTxt_t"
+      args="arial,14,0xbaad89,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadLevelItem.txt_t"
+      args="arial,14,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadBuffFrame.txt_t"
+      args="arial,14,0xedbf83,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finalRoadItem.popBtnTxt_t"
+      args="宋体,16,0xffd8b2,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.finalRoadFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.finalRoadFrame.itemSelected"
+      x="-8"
+      y="-8" />
+    <bitmapData
+      resourceLink="asset.finalRoadFrame.itemLock"
+      x="-5"
+      y="100" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelFrame.rewardsImg"
+      x="137"
+      y="490" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelItem.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelItem.selectedBg"
+      x="-10"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelItem.bottomBg1"
+      x="0"
+      y="292"
+      width="243" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelItem.bottomBg2"
+      x="-120"
+      y="292" />
+    <bitmapData
+      resourceLink="asset.finalRoadLevelItem.rewardsImg"
+      x="10"
+      y="300" />
+    <bitmapData
+      resourceLink="asset.finalRoadFrame.title2"
+      x="-15"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.finalRoadFrame.title3"
+      x="-5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.finalRoadFrame.title4"
+      x="-32"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="finalRoadFrame.itemBoxs"
+      spacing="35"
+      x="125"
+      y="70" />
+    <custom
+      classname="asset.finalRoadLevelFrame.progressMc"
+      stylename="finalRoadLevelFrame.progressMc"
+      x="138"
+      y="544" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="finalRoadLevelFrame.hBox"
+      spacing="15"
+      x="45"
+      y="77" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finalRoadLevelItem.icon"
+      iconX="3"
+      iconY="3"
+      iconWidth="236"
+      iconHeight="282"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="20"
+      loadingHeight="20"
+      loadingX="125"
+      loadingY="150"
+      x="3"
+      y="3" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="finalRoadLevelItem.hBox"
+      spacing="15"
+      x="120"
+      y="325"
+      autoCenter="true" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="finalRoadLevelItem.baseItemView"
+      fashionTextY="60"
+      fashionIconY="60"
+      iconStyle="finalRoadLevelItem.baseItemView.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="finalRoadLevelItem.baseItemViewText"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finalRoadLevelItem.baseItemView.BaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="1"
+      iconHeight="60"
+      iconWidth="60"
+      y="1" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="finalRoadBuffFrame.vBox"
+      x="0"
+      y="0"
+      spacing="2" />
+  </customDisplay>
+  <components>
+    <component
+      classname="finalroad.FinalRoadFrame"
+      stylename="finalroad.FinalRoadFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="16"
+      containerY="65"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,27,10,0,9"
+      width="900"
+      height="655" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="finalRoadFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="1007"
+      height="607" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="finalRoadFrame.titleTxt"
+      textFieldStyle="finalRoadFrame.titleTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="finalRoadFrame.titleTxt.text_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="348"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadFrame.titleTxt.text"
+      textFormatStyle="finalRoadFrame.titleTxt.text_t"
+      autoSize="none"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadFrame.descTxt"
+      textFormatStyle="finalRoadFrame.descTxt_t"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="40"
+      y="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadFrame.numTxt"
+      textFormatStyle="finalRoadFrame.descTxt_t"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="450"
+      y="480" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finalRoadFrame.rightBtn"
+      backStyle="asset.finalRoadFrame.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="772"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finalRoadFrame.leftBtn"
+      backStyle="asset.finalRoadFrame.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="240"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="finalRoadItem.bg"
+      resourceLink="asset.finalRoadFrame.item1,asset.finalRoadFrame.item2,asset.finalRoadFrame.item3,asset.finalRoadFrame.item4"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="finalRoadItem.titleBg"
+      resourceLink="asset.finalRoadFrame.title1,asset.finalRoadFrame.title2,asset.finalRoadFrame.title3,asset.finalRoadFrame.title4"
+      x="50"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadItem.challengeBtn"
+      backStyle="asset.finalRoadFrame.btnBg"
+      iconStyle="asset.finalRoadFrame.challengeTxt"
+      iconInnerRectString="25,66,50,22,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="29"
+      y="206" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadItem.continueBtn"
+      backStyle="asset.finalRoadFrame.btnBg"
+      iconStyle="asset.finalRoadFrame.continueTxt"
+      iconInnerRectString="28,64,45,36,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="29"
+      y="216" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadFrame.buyBtn"
+      backStyle="asset.finalRoadFrame.buyBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="825"
+      y="480" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finalRoadFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="815"
+      y="-50" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="finalRoadFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="finalRoadFrame.helperFrame.helpTxt.text"
+      titleText="finalRoadFrame.helperFrame.HelpTitle.text"
+      textWidth="363" />
+    <!-- 关卡界面 -->
+    <component
+      classname="finalroad.FinalRoadLevelFrame"
+      stylename="finalroad.FinalRoadLevelFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="51"
+      width="890"
+      height="755" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="finalRoadLevelFrame.titleImg"
+      resourceLink="asset.finalRoadFrame.title1,asset.finalRoadFrame.title2,asset.finalRoadFrame.title3,asset.finalRoadFrame.title4"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="355"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="finalRoadLevelFrame.titleTxt"
+      textFieldStyle="finalRoadLevelFrame.titleTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="finalRoadFrame.titleTxt.text_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="418"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadLevelFrame.titleTxt.text"
+      textFormatStyle="finalRoadFrame.titleTxt.text_t"
+      autoSize="none"
+      width="100"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadLevelFrame.buffBtn"
+      backStyle="asset.finalRoadLevelFrame.buffBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="8"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="finalRoadLevelFrame.back"
+      resourceLink="asset.finalRoadLevelFrame.bg1,asset.finalRoadLevelFrame.bg2,asset.finalRoadLevelFrame.bg3"
+      x="12"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="finalRoadLevelFrame.numTxt"
+      textFieldStyle="finalRoadLevelFrame.numTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="finalRoadFrame.titleTxt.text_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="274"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadLevelFrame.numTxt.text"
+      textFormatStyle="finalRoadLevelFrame.numTxt.text_t"
+      autoSize="none"
+      width="30"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadLevelFrame.challengeBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.finalRoadFrame.challengeTxt"
+      iconInnerRectString="53,45,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="360"
+      y="585" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadLevelFrame.againBtn"
+      backStyle="asset.core.greenBack150"
+      iconStyle="asset.finalRoadLevelFrame.againBtnTxt"
+      iconInnerRectString="36,77,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="228"
+      y="595" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finalRoadLevelFrame.giveUpBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.finalRoadLevelFrame.giveUpBtnTxt"
+      iconInnerRectString="36,78,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="475"
+      y="595" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadLevelFrame.lastNumTxt"
+      textFormatStyle="finalRoadLevelFrame.lastNumTxt_t"
+      autoSize="none"
+      width="160"
+      height="40"
+      wordWrap="true"
+      x="70"
+      y="600" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="finalRoadLevelFrame.pointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="276"
+      y="578" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadLevelFrame.pointTxt"
+      textFormatStyle="finalRoadLevelFrame.pointTxt_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="298"
+      y="578" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="finalRoadLevelItem.propertyIcon"
+      resourceLink="asset.finalRoadLevelItem.property1,asset.finalRoadLevelItem.property2,asset.finalRoadLevelItem.property3"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadLevelItem.txt"
+      textFormatStyle="finalRoadLevelItem.txt_t"
+      autoSize="none"
+      width="230"
+      height="60"
+      x="6"
+      y="330"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadLevelItem.baseItemViewText"
+      parentStyle="core.BaseItemText"
+      x="15"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="finalRoadLevelFrame.bossIcon"
+      resourceLink="asset.finalRoadLevelFrame.bossIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="670"
+      y="506" />
+    <!-- 增益效果界面 -->
+    <component
+      classname="finalroad.FinalRoadBuffFrame"
+      stylename="finalroad.FinalRoadBuffFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="51"
+      width="330"
+      height="525" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="finalRoadBuffFrame.bg"
+      parentStyle="army.BagBack"
+      width="310"
+      height="435"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="finalRoadBuffFrame.spanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,295,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="295"
+      height="415"
+      x="5"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadBuffFrame.txt"
+      textFormatStyle="finalRoadBuffFrame.txt_t"
+      autoSize="none"
+      width="280"
+      height="40"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="finalRoadItem.popBtn"
+      backStyle="asset.finalRoad.mopopBtnBg"
+      textStyle="finalRoadItem.popBtnTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="115"
+      height="46"
+      backgoundInnerRectString="0,8,10,13"
+      x="28"
+      y="324" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finalRoadItem.popBtnTxt"
+      textFormatStyle="finalRoadItem.popBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="46" />
+  </components>
+</style>

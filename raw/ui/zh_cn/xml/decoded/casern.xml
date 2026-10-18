@@ -1,0 +1,155 @@
+<style
+  name="casern"
+  source="ui/zh_cn/swf/casern.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="carsern.RecruitTitle_t"
+      args="Arial,14,0xfff4c6,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="casern.PawnDepict_t"
+      args="Arial,12,0xFFFFFF" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="casern.PawnInfo_t"
+      args="Arial,12,0xFF0000,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!--info背景-->
+    <bitmapData
+      resourceLink="asset.casern.ItemBgImg"
+      x="70"
+      y="-1"
+      width="529" />
+    <bitmapData
+      resourceLink="asset.casern.headFrameImg" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 产量明细面板 -->
+    <custom
+      classname="yishi.view.community.PawnTileList"
+      stylename="casern.PawnTileList"
+      x="4"
+      y="-1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="casern.RecruitPawnIcon"
+      tipStyle="yishi.view.tips.PawnTip"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="58"
+      iconWidth="61"
+      loadingWidth="5"
+      loadingHeight="5"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      loadingX="29"
+      loadingY="30"
+      x="5"
+      y="4" />
+  </customDisplay>
+  <components>
+    <!--兵营主Frame-->
+    <component
+      classname="buildings.casern.view.CasernFrame"
+      stylename="casern.CasernFrame"
+      parentStyle="buildings.BaseBuildFrame"
+      width="665"
+      height="482" />
+    <!-- 兵营列表背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="casern.ListBackground"
+      parentStyle="core.describeBackground_style03"
+      x="2"
+      y="100"
+      width="630"
+      height="274" />
+    <!-- 兵营列表 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="casern.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,0,-3,0,3"
+      viewportInnerRectString="0,2,0,2,5"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      x="3"
+      y="106"
+      width="620"
+      height="267" />
+    <!-- 招募按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="casern.RecruitPawnBtnTextStyle"
+      textFormatStyle="core.RecruitPawnButton_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="casern.RecruitPawnBtn"
+      parentStyle="core.BrownBtn"
+      textStyle="casern.RecruitPawnBtnTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="15,6,6,13"
+      x="512"
+      y="20" />
+    <!-- 升级按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="casern.UpgradeBtn"
+      parentStyle="core.GreenBtn"
+      textStyle="casern.RecruitPawnBtnTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="22,6,6,13"
+      x="423"
+      y="20" />
+    <!-- 兵标题 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="casern.PawnTitle"
+      textFormatStyle="carsern.RecruitTitle_t"
+      filterString="core.normal_f"
+      x="86"
+      y="13" />
+    <!-- 士兵等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="casern.PawnLevel"
+      textFormatStyle="carsern.RecruitTitle_t"
+      filterString="core.normal_f"
+      x="200"
+      y="13" />
+    <!-- 兵描述 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="casern.PawnDepict"
+      textFormatStyle="casern.PawnDepict_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="86"
+      y="31"
+      width="336"
+      height="40"
+      wordWrap="true" />
+    <!-- 消息 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="casern.PawnInfo"
+      textFormatStyle="casern.PawnInfo_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="420"
+      y="23"
+      width="170"
+      height="22" />
+  </components>
+</style>

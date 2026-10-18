@@ -1,0 +1,158 @@
+<style
+  name="petboss"
+  source="ui/zh_cn/swf/petboss.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetbossItem.nameText_t"
+      args="Arial,14,0x00d6d9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetbossItem.timeText_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetbossItem.describeText_t"
+      args="Arial,12,0x377db3,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetbossItem..freshTimeTxt_f"
+      args="Arial,12,0xe3b911,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetbossItem.nextBossAlert_t"
+      args="Arial,14,0xffde00,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.petboss.unknown.icon" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petBoss.icon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="32"
+      loadingY="32"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="10"
+      y="15" />
+  </customDisplay>
+  <components>
+    <!-- 内页 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetbossItem.unknownIcon"
+      resourceLink="asset.petboss.unknown.icon"
+      x="10"
+      y="15" />
+    <component
+      classname="petboss.PetBossFrame"
+      stylename="petboss.PetBossFrame"
+      parentStyle="core.Frame2"
+      width="428"
+      height="270"
+      containerX="9"
+      containerY="45" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PetbossItem.bg"
+      resourceLink="asset.petboss.bg,asset.petboss.nameBack"
+      imageRectString="0|396|0|88|13,74|131|10|23|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetbossItem.nameText"
+      textFormatStyle="PetbossItem.nameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="78"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetbossItem.timeText"
+      textFormatStyle="PetbossItem.timeText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="17"
+      x="84"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetbossItem.describeText"
+      textFormatStyle="PetbossItem.describeText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="220"
+      height="53"
+      x="77"
+      y="36"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetbossItem.Btn"
+      backStyle="asset.petboss.gonow"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="298"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetBossFrame.bg"
+      parentStyle="core.describeBackground_style06"
+      width="406"
+      height="185"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetBossFrame.Vbox"
+      x="4"
+      y="4"
+      spacing="2" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="PetbossItem.StartTime"
+      timeTxtStyle="PetbossItem.StartTimeText"
+      x="320"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetbossItem.StartTimeText"
+      textFormatStyle="PetbossItem..freshTimeTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetbossItem.nextBossAlert"
+      textFormatStyle="PetbossItem.nextBossAlert_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="17"
+      x="84"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetbossItem.leftTime"
+      textFormatStyle="PetbossItem.nextBossAlert_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="17"
+      x="267"
+      y="15" />
+  </components>
+</style>

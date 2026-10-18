@@ -1,0 +1,6847 @@
+{
+ "enums": {
+  "pos_type": {
+   "description_pt": "Tipo de nó/objeto de mapa (PhysicInfo.types; CampaignNodeMsg.master_type; MapNodeInfos.MasterType).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:6",
+   "applies_to": [
+    "MapNodeInfos.MasterType"
+   ],
+   "values": [
+    {
+     "code": 0,
+     "name": "village",
+     "label_pt": "Vila",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:6"
+    },
+    {
+     "code": 1,
+     "name": "castle",
+     "label_pt": "Castelo",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:8"
+    },
+    {
+     "code": 2,
+     "name": "stronghold",
+     "label_pt": "Fortaleza",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:10"
+    },
+    {
+     "code": 20,
+     "name": "resource",
+     "label_pt": "Recurso (campo)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:12"
+    },
+    {
+     "code": 21,
+     "name": "npc",
+     "label_pt": "NPC",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:14"
+    },
+    {
+     "code": 22,
+     "name": "treasure",
+     "label_pt": "Tesouro",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:16"
+    },
+    {
+     "code": 40,
+     "name": "copy_start",
+     "label_pt": "Ponto de nascimento/início",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:18"
+    },
+    {
+     "code": 41,
+     "name": "copy_end",
+     "label_pt": "Fim/saída",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:20"
+    },
+    {
+     "code": 42,
+     "name": "copy_npc",
+     "label_pt": "NPC de instância/gatilho",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:22"
+    },
+    {
+     "code": 51,
+     "name": "submit_goods",
+     "label_pt": "Entregar itens",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:24"
+    },
+    {
+     "code": 52,
+     "name": "pass_card",
+     "label_pt": "Cartão de passagem",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:26"
+    },
+    {
+     "code": 53,
+     "name": "attack_handler",
+     "label_pt": "Gatilho de ataque",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:28"
+    },
+    {
+     "code": 61,
+     "name": "copy_handler",
+     "label_pt": "NPC de diálogo/interação",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:30"
+    },
+    {
+     "code": 62,
+     "name": "copy_map_send",
+     "label_pt": "Portal para outro mapa",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:32"
+    },
+    {
+     "code": 63,
+     "name": "copy_node_send",
+     "label_pt": "Teleporte no mesmo mapa",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:34"
+    },
+    {
+     "code": 64,
+     "name": "copy_ai",
+     "label_pt": "IA de instância",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:36"
+    },
+    {
+     "code": 67,
+     "name": "move_npc",
+     "label_pt": "NPC móvel",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:38"
+    },
+    {
+     "code": 71,
+     "name": "copy_logo",
+     "label_pt": "Logo",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:40"
+    },
+    {
+     "code": 81,
+     "name": "static",
+     "label_pt": "Estático",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:42"
+    },
+    {
+     "code": 91,
+     "name": "collection",
+     "label_pt": "Coleta",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:44"
+    },
+    {
+     "code": 92,
+     "name": "fall_chest",
+     "label_pt": "Baú caído",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:46"
+    },
+    {
+     "code": 100,
+     "name": "unknow",
+     "label_pt": "Desconhecido",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:48"
+    },
+    {
+     "code": 101,
+     "name": "robot",
+     "label_pt": "Robô",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:50"
+    },
+    {
+     "code": 111,
+     "name": "hook_node",
+     "label_pt": "Nó de gancho",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:78"
+    },
+    {
+     "code": 121,
+     "name": "die_crossing",
+     "label_pt": "Travessia da morte",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:52"
+    },
+    {
+     "code": 131,
+     "name": "enemy_crossing",
+     "label_pt": "Travessia inimiga",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:54"
+    },
+    {
+     "code": 141,
+     "name": "tower_defence",
+     "label_pt": "Defesa de torre",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:56"
+    },
+    {
+     "code": 151,
+     "name": "bomber_man",
+     "label_pt": "Bomberman",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:58"
+    },
+    {
+     "code": 161,
+     "name": "copy_npc_handler",
+     "label_pt": "Gatilho de NPC",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:60"
+    },
+    {
+     "code": 171,
+     "name": "copy_node_send2",
+     "label_pt": "Teleporte 2 (portal)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:62"
+    },
+    {
+     "code": 181,
+     "name": "treasure_hunter",
+     "label_pt": "Caça ao tesouro",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:64"
+    },
+    {
+     "code": 191,
+     "name": "steel_vice",
+     "label_pt": "Aço: vice",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:80"
+    },
+    {
+     "code": 192,
+     "name": "steel_door",
+     "label_pt": "Aço: porta",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:82"
+    },
+    {
+     "code": 193,
+     "name": "steel_tower",
+     "label_pt": "Aço: torre",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:84"
+    },
+    {
+     "code": 194,
+     "name": "steel_city_center",
+     "label_pt": "Aço: centro",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:86"
+    },
+    {
+     "code": 195,
+     "name": "steel_energy_crystal",
+     "label_pt": "Aço: cristal",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:88"
+    },
+    {
+     "code": 196,
+     "name": "steel_monster",
+     "label_pt": "Aço: monstro",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:90"
+    },
+    {
+     "code": 197,
+     "name": "steel_destination",
+     "label_pt": "Aço: destino",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:92"
+    },
+    {
+     "code": 201,
+     "name": "movie",
+     "label_pt": "Animação de cenário",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:66"
+    },
+    {
+     "code": 202,
+     "name": "unreal_shooting_boss",
+     "label_pt": "Tiro: chefe",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:94"
+    },
+    {
+     "code": 203,
+     "name": "unreal_shooting_buff",
+     "label_pt": "Tiro: buff",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:96"
+    },
+    {
+     "code": 204,
+     "name": "unreal_shooting_monster",
+     "label_pt": "Tiro: monstro",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:98"
+    },
+    {
+     "code": 205,
+     "name": "unreal_shooting_soldier",
+     "label_pt": "Tiro: soldado",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:100"
+    },
+    {
+     "code": 206,
+     "name": "unreal_shooting_tower",
+     "label_pt": "Tiro: torre",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:102"
+    },
+    {
+     "code": 207,
+     "name": "air_garden_bed",
+     "label_pt": "Jardim aéreo: canteiro",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:104"
+    },
+    {
+     "code": 1001,
+     "name": "farm_big_fire",
+     "label_pt": "Fazenda: fogueira grande",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:68"
+    },
+    {
+     "code": 1002,
+     "name": "farm_small_fire",
+     "label_pt": "Fazenda: fogueira pequena",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:70"
+    },
+    {
+     "code": 1003,
+     "name": "pet_boss_monster",
+     "label_pt": "Chefe de pet",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:72"
+    },
+    {
+     "code": 1101,
+     "name": "transport_car",
+     "label_pt": "Carro de transporte",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:74"
+    },
+    {
+     "code": 1102,
+     "name": "mineral_car",
+     "label_pt": "Carro de minério",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:76"
+    },
+    {
+     "code": 99998,
+     "name": "active_snow",
+     "label_pt": "Neve (evento)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:106"
+    },
+    {
+     "code": 99999,
+     "name": "steel_props",
+     "label_pt": "Aço: adereços",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/PosType.as:108"
+    }
+   ]
+  },
+  "node_state": {
+   "description_pt": "Estado de nó de mapa (CampaignNodeMsg.state).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:6",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 0,
+     "name": "none",
+     "label_pt": "Removido",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:6"
+    },
+    {
+     "code": 1,
+     "name": "exist",
+     "label_pt": "Normal",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:8"
+    },
+    {
+     "code": 2,
+     "name": "friendly",
+     "label_pt": "Amigável",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:10"
+    },
+    {
+     "code": 4,
+     "name": "fighting",
+     "label_pt": "Em combate",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:12"
+    },
+    {
+     "code": 8,
+     "name": "destroyed",
+     "label_pt": "Destruído",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:14"
+    },
+    {
+     "code": 9,
+     "name": "hide",
+     "label_pt": "Oculto",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:16"
+    },
+    {
+     "code": 16,
+     "name": "state2",
+     "label_pt": "Estado 2",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:18"
+    },
+    {
+     "code": 17,
+     "name": "state3",
+     "label_pt": "Estado 3",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:20"
+    },
+    {
+     "code": 19,
+     "name": "bonfire_off",
+     "label_pt": "Fogueira apagada",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:22"
+    },
+    {
+     "code": 20,
+     "name": "bonfire_on",
+     "label_pt": "Fogueira acesa",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/NodeState.as:24"
+    }
+   ]
+  },
+  "space_node_type": {
+   "description_pt": "Tipo de nó do mapa espacial (SpaceNodeType).",
+   "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:6",
+   "applies_to": [
+    "MapNodeInfos.MasterType"
+   ],
+   "values": [
+    {
+     "code": 0,
+     "name": "static",
+     "label_pt": "Estático",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:6"
+    },
+    {
+     "code": 1,
+     "name": "movement",
+     "label_pt": "Móvel/patrulha",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:8"
+    },
+    {
+     "code": 2,
+     "name": "param_transfer",
+     "label_pt": "Transferência por parâmetro",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:10"
+    },
+    {
+     "code": 40,
+     "name": "born_point",
+     "label_pt": "Ponto de nascimento",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:10"
+    },
+    {
+     "code": 42,
+     "name": "trigger",
+     "label_pt": "Gatilho",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:12"
+    },
+    {
+     "code": 62,
+     "name": "transfer",
+     "label_pt": "Transferência",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:14"
+    },
+    {
+     "code": 191,
+     "name": "treasure_map",
+     "label_pt": "Mapa do tesouro",
+     "source_ref": "decompiled/core_module/scripts/map/space/data/SpaceNodeType.as:16"
+    }
+   ]
+  },
+  "army_state": {
+   "description_pt": "Estado do exército no mapa.",
+   "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:10",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 0,
+     "name": "waiting",
+     "label_pt": "Parado",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:10"
+    },
+    {
+     "code": 1,
+     "name": "moving",
+     "label_pt": "Andando",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:12"
+    },
+    {
+     "code": 2,
+     "name": "fight",
+     "label_pt": "Lutando",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:14"
+    },
+    {
+     "code": 3,
+     "name": "battle_pending",
+     "label_pt": "Batalha pendente",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:16"
+    },
+    {
+     "code": 4,
+     "name": "recalling",
+     "label_pt": "Voltando",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:18"
+    },
+    {
+     "code": 6,
+     "name": "campaign",
+     "label_pt": "Em campanha",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/ArmyState.as:20"
+    }
+   ]
+  },
+  "titles_cell_value": {
+   "description_pt": "Valor de uma célula \"{x}_{y}\" no .titles (grade de 20 px). Campanha/espacial: truthy = andável. Cidade externa: truthy = obstáculo (convenção oposta).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/data/MapInfo.as:171",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 0,
+     "name": "blocked",
+     "label_pt": "Ausente/0 = bloqueado (campanha)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/findPath/FindPath8.as:248"
+    },
+    {
+     "code": 1,
+     "name": "walkable_zone_1",
+     "label_pt": "Andável; zona 1 do mapa de aço",
+     "source_ref": "decompiled/m3/scripts/map/campaign/CampaignMapController.as:1334"
+    },
+    {
+     "code": 2,
+     "name": "barrier",
+     "label_pt": "Barreira: andável a pé, bloqueia veículo (FindPath8 modo veículo)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/data/MapInfo.as:209"
+    },
+    {
+     "code": 3,
+     "name": "walkable_zone_3_home",
+     "label_pt": "Andável; zona 3 do aço / casa (canFix)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/findPath/FindPath8.as:290"
+    },
+    {
+     "code": 4,
+     "name": "translucent",
+     "label_pt": "Andável; corpo do exército fica semitransparente (alpha 0.5)",
+     "source_ref": "decompiled/m3/scripts/map/campaign/view/physics/CampaignArmyView.as:2140"
+    },
+    {
+     "code": 10000,
+     "name": "debug_mark",
+     "label_pt": "Marca temporária de debug (PathWalkLayer)",
+     "source_ref": "decompiled/m3/scripts/map/internals/view/layer/PathWalkLayer.as:151"
+    }
+   ]
+  },
+  "movie_target_type": {
+   "description_pt": "Alvo de animação de mapa (PlayerMovieMsg).",
+   "source_ref": "decompiled/m3/scripts/map/internals/constant/MovieTargetType.as:6",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 0,
+     "name": "node",
+     "label_pt": "Nó",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/MovieTargetType.as:6"
+    },
+    {
+     "code": 1,
+     "name": "army",
+     "label_pt": "Exército",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/MovieTargetType.as:8"
+    },
+    {
+     "code": 2,
+     "name": "win_conditions",
+     "label_pt": "Condições de vitória",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/MovieTargetType.as:10"
+    },
+    {
+     "code": 3,
+     "name": "movie_map_name",
+     "label_pt": "Nome do mapa",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/MovieTargetType.as:12"
+    }
+   ]
+  },
+  "create_campaign_type": {
+   "description_pt": "Tipo de entrada em campanha (createType 3 mostra tela de carregamento).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/constant/CreateCampaignType.as:6",
+   "applies_to": [],
+   "values": [
+    {
+     "code": -1,
+     "name": "campaign_game",
+     "label_pt": "Jogo de campanha",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/CreateCampaignType.as:14"
+    },
+    {
+     "code": 1,
+     "name": "create",
+     "label_pt": "Criar",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/CreateCampaignType.as:6"
+    },
+    {
+     "code": 2,
+     "name": "enter",
+     "label_pt": "Entrar",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/CreateCampaignType.as:8"
+    },
+    {
+     "code": 3,
+     "name": "trans",
+     "label_pt": "Transferir",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/CreateCampaignType.as:10"
+    },
+    {
+     "code": 4,
+     "name": "invent",
+     "label_pt": "Convite",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/CreateCampaignType.as:12"
+    }
+   ]
+  },
+  "fog_grid_type": {
+   "description_pt": "Raio de revelação da névoa em anéis hexagonais (células 110×86 px).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/constant/FogGridType.as:6",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 1,
+     "name": "open_one",
+     "label_pt": "1 anel",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/FogGridType.as:6"
+    },
+    {
+     "code": 2,
+     "name": "open_two",
+     "label_pt": "2 anéis (câmera/teleporte)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/FogGridType.as:8"
+    },
+    {
+     "code": 3,
+     "name": "open_three",
+     "label_pt": "3 anéis",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/FogGridType.as:10"
+    },
+    {
+     "code": 4,
+     "name": "open_four",
+     "label_pt": "4 anéis (andando)",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/FogGridType.as:12"
+    },
+    {
+     "code": 5,
+     "name": "open_five",
+     "label_pt": "5 anéis",
+     "source_ref": "decompiled/core_module/scripts/map/internals/constant/FogGridType.as:14"
+    }
+   ]
+  },
+  "move_speed": {
+   "description_pt": "Velocidade em px por quadro (SpeedEnumerate); jogador montado = 7·(100+bônus de montaria)/100.",
+   "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:6",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 7,
+     "name": "player",
+     "label_pt": "Jogador",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:6"
+    },
+    {
+     "code": 5,
+     "name": "marry_car",
+     "label_pt": "Carro de casamento",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:8"
+    },
+    {
+     "code": 6,
+     "name": "npc_chase",
+     "label_pt": "NPC perseguindo",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:10"
+    },
+    {
+     "code": 4,
+     "name": "npc_random_move",
+     "label_pt": "NPC andando aleatório",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:12"
+    },
+    {
+     "code": 1,
+     "name": "demon_normal",
+     "label_pt": "Demônio normal",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:14"
+    },
+    {
+     "code": 2,
+     "name": "demon_special",
+     "label_pt": "Demônio especial / NPC do espaço",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/SpeedEnumerate.as:16"
+    }
+   ]
+  },
+  "base_castle_son_type": {
+   "description_pt": "Arte do castelo no mapa-mundo (mapmaterial/build/<sonType>.swf).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/data/BaseCastle.as:29",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 100,
+     "name": "unoccupied",
+     "label_pt": "Desocupado",
+     "source_ref": "decompiled/core_module/scripts/map/internals/data/BaseCastle.as:29"
+    },
+    {
+     "code": 201,
+     "name": "normal",
+     "label_pt": "Normal",
+     "source_ref": "decompiled/core_module/scripts/map/internals/data/BaseCastle.as:29"
+    },
+    {
+     "code": 202,
+     "name": "vip_view",
+     "label_pt": "Visual VIP",
+     "source_ref": "decompiled/core_module/scripts/map/internals/data/BaseCastle.as:29"
+    }
+   ]
+  },
+  "map_updated_type": {
+   "description_pt": "MapUpdatedMsg.updated_type (U_C_MAPDATA_SYNC 140).",
+   "source_ref": "decompiled/core_module/scripts/yishi/service/managers/SocketManager.as:181",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 1,
+     "name": "wild_land",
+     "label_pt": "Terra selvagem",
+     "source_ref": "decompiled/core_module/scripts/yishi/service/managers/SocketManager.as:181"
+    },
+    {
+     "code": 2,
+     "name": "castle",
+     "label_pt": "Castelo",
+     "source_ref": "decompiled/core_module/scripts/yishi/service/managers/SocketManager.as:181"
+    },
+    {
+     "code": 3,
+     "name": "army",
+     "label_pt": "Exército",
+     "source_ref": "decompiled/core_module/scripts/yishi/service/managers/SocketManager.as:181"
+    }
+   ]
+  },
+  "avatar_resource_type": {
+   "description_pt": "Tipo de avatar no mapa.",
+   "source_ref": "decompiled/m3/scripts/map/internals/constant/AvatarResourceType.as:6",
+   "applies_to": [],
+   "values": [
+    {
+     "code": 1,
+     "name": "player_army",
+     "label_pt": "Exército do jogador",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/AvatarResourceType.as:6"
+    },
+    {
+     "code": 2,
+     "name": "npc",
+     "label_pt": "NPC",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/AvatarResourceType.as:8"
+    },
+    {
+     "code": 3,
+     "name": "mineral_car",
+     "label_pt": "Carro de minério",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/AvatarResourceType.as:10"
+    }
+   ]
+  },
+  "node_resource_type": {
+   "description_pt": "Recurso de nó (MapNodeInfos.Resource / CampaignNodeMsg.resource): 1 = avatar andante (NpcLayer), senão prédio swf.",
+   "source_ref": "decompiled/m3/scripts/map/internals/constant/NodeResourceType.as:6",
+   "applies_to": [
+    "MapNodeInfos.Resource"
+   ],
+   "values": [
+    {
+     "code": 1,
+     "name": "image",
+     "label_pt": "Imagem/avatar",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/NodeResourceType.as:6"
+    },
+    {
+     "code": 2,
+     "name": "movie",
+     "label_pt": "Movie",
+     "source_ref": "decompiled/m3/scripts/map/internals/constant/NodeResourceType.as:8"
+    }
+   ]
+  }
+ },
+ "fields": {},
+ "point_kinds": [
+  {
+   "name": "copy_start",
+   "label_pt": "Nó de início de campanha (nascimento)",
+   "source": "server_message",
+   "where": "CampaignNodeMsg master_type 40",
+   "units": "grid20",
+   "description_pt": "Fallback de spawn quando cur_pos está fora do mapa (CampaignMapView.setStartPoint).",
+   "source_ref": "decompiled/core_module/scripts/map/campaign/data/CampaignMapModel.as:716"
+  },
+  {
+   "name": "copy_end",
+   "label_pt": "Nó de fim/saída de campanha",
+   "source": "server_message",
+   "where": "CampaignNodeMsg master_type 41",
+   "units": "grid20",
+   "description_pt": "Ponto final da instância.",
+   "source_ref": "decompiled/core_module/scripts/map/campaign/data/CampaignMapModel.as:746"
+  },
+  {
+   "name": "scene_movie",
+   "label_pt": "Animação de cenário (.maps movies/tops)",
+   "source": "map_file",
+   "where": ".maps moviesData/topsData {url,x,y,rotation,scaleX?,scaleY?}",
+   "units": "px",
+   "description_pt": "Vira nó falso tipo 201 em x/20; movies na camada 0, tops na camada 2.",
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/CampaignMainBuidingLayer.as:162"
+  },
+  {
+   "name": "walkable_cell",
+   "label_pt": "Célula andável",
+   "source": "map_file",
+   "where": ".titles chave \"{x}_{y}\"",
+   "units": "grid20",
+   "description_pt": "Contorno define a borda andável.",
+   "source_ref": "decompiled/m3/scripts/map/internals/scenePathSearcher/PathMapHitTester.as:27"
+  },
+  {
+   "name": "archaeology_node",
+   "label_pt": "Nó de arqueologia",
+   "source": "server_message",
+   "where": "ArchaeologyNodeMsg x,y (297)",
+   "units": "grid20",
+   "description_pt": "Só se mapId < 100 e nível ≥ 15.",
+   "source_ref": "decompiled/m3/scripts/map/outercity/OuterCityController.as:458"
+  }
+ ],
+ "hardcoded_points": [
+  {
+   "context": "castle_client_building",
+   "name": "template 150701 (id -7)",
+   "x": 249,
+   "y": 429,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:286"
+  },
+  {
+   "context": "castle_client_building",
+   "name": "template 150901 (id -9)",
+   "x": 1000,
+   "y": 170,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:286"
+  },
+  {
+   "context": "castle_client_building",
+   "name": "template 160101 (id -28)",
+   "x": 495,
+   "y": 442,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:286"
+  },
+  {
+   "context": "castle_client_building",
+   "name": "template 170101 (id -29)",
+   "x": 77,
+   "y": 239,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:286"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "gold (imposto)",
+   "x": 453,
+   "y": 135,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "rob",
+   "x": 122,
+   "y": 283,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "dye (laboratório)",
+   "x": 222,
+   "y": 283,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "maze",
+   "x": 390,
+   "y": 440,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "magicHotel",
+   "x": 614,
+   "y": 442,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "pick (casa)",
+   "x": 1130,
+   "y": 190,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "catHouse",
+   "x": 1130,
+   "y": 190,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_operate_bubble",
+   "name": "seminary",
+   "x": 790,
+   "y": 145,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m4/scripts/castle/view/layer/CastleWalkLayer.as:499"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 522,
+   "y": 722,
+   "extra": {
+    "npc_type": 1,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:42"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #2",
+   "x": 606,
+   "y": 672,
+   "extra": {
+    "npc_type": 1,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:42"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #3",
+   "x": 671,
+   "y": 633,
+   "extra": {
+    "npc_type": 1,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:42"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #4",
+   "x": 704,
+   "y": 614,
+   "extra": {
+    "npc_type": 1,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:42"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #5",
+   "x": 753,
+   "y": 643,
+   "extra": {
+    "npc_type": 1,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:42"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #6",
+   "x": 780,
+   "y": 650,
+   "extra": {
+    "npc_type": 1,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:42"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 578,
+   "y": 325,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #2",
+   "x": 630,
+   "y": 355,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #3",
+   "x": 690,
+   "y": 390,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #4",
+   "x": 744,
+   "y": 425,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #5",
+   "x": 676,
+   "y": 474,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #6",
+   "x": 747,
+   "y": 520,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #7",
+   "x": 825,
+   "y": 568,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #8",
+   "x": 918,
+   "y": 622,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #9",
+   "x": 977,
+   "y": 655,
+   "extra": {
+    "npc_type": 2,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:43"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 357,
+   "y": 400,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #2",
+   "x": 407,
+   "y": 428,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #3",
+   "x": 437,
+   "y": 455,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #4",
+   "x": 508,
+   "y": 498,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #5",
+   "x": 567,
+   "y": 533,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #6",
+   "x": 530,
+   "y": 557,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #7",
+   "x": 490,
+   "y": 582,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #8",
+   "x": 437,
+   "y": 615,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #9",
+   "x": 384,
+   "y": 646,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #10",
+   "x": 340,
+   "y": 624,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #11",
+   "x": 283,
+   "y": 590,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #12",
+   "x": 248,
+   "y": 568,
+   "extra": {
+    "npc_type": 3,
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:44"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 1080,
+   "y": 578,
+   "extra": {
+    "npc_type": 6,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:45"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #2",
+   "x": 972,
+   "y": 649,
+   "extra": {
+    "npc_type": 6,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:45"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #3",
+   "x": 917,
+   "y": 609,
+   "extra": {
+    "npc_type": 6,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:45"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #4",
+   "x": 1030,
+   "y": 540,
+   "extra": {
+    "npc_type": 6,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:45"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #5",
+   "x": 971,
+   "y": 505,
+   "extra": {
+    "npc_type": 6,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:45"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 729,
+   "y": 602,
+   "extra": {
+    "npc_type": 5,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:46"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #2",
+   "x": 804,
+   "y": 551,
+   "extra": {
+    "npc_type": 5,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:46"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #3",
+   "x": 780,
+   "y": 533,
+   "extra": {
+    "npc_type": 5,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:46"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #4",
+   "x": 925,
+   "y": 450,
+   "extra": {
+    "npc_type": 5,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:46"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 620,
+   "y": 407,
+   "extra": {
+    "npc_type": 7,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:47"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 1136,
+   "y": 770,
+   "extra": {
+    "npc_type": 4,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:48"
+  },
+  {
+   "context": "castle_npc_path",
+   "name": "castle_npc_path #1",
+   "x": 379,
+   "y": 1002,
+   "extra": {
+    "npc_type": 8,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m4/scripts/yishi/ai/AiPlayerConfig.as:49"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #1",
+   "x": 2800,
+   "y": 2360,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #2",
+   "x": 2820,
+   "y": 2380,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #3",
+   "x": 2840,
+   "y": 2400,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #4",
+   "x": 2860,
+   "y": 2380,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #5",
+   "x": 2880,
+   "y": 2360,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #6",
+   "x": 2900,
+   "y": 2340,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #7",
+   "x": 2920,
+   "y": 2320,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #8",
+   "x": 2940,
+   "y": 2300,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #9",
+   "x": 3000,
+   "y": 2240,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #10",
+   "x": 2120,
+   "y": 1800,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #11",
+   "x": 2140,
+   "y": 1820,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #12",
+   "x": 2160,
+   "y": 1840,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #13",
+   "x": 2180,
+   "y": 1820,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #14",
+   "x": 2200,
+   "y": 1800,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #15",
+   "x": 1740,
+   "y": 2040,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #16",
+   "x": 1760,
+   "y": 2020,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 16
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #17",
+   "x": 1780,
+   "y": 1960,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 17
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #18",
+   "x": 1780,
+   "y": 2000,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 18
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "space_robot_spawn",
+   "name": "space_robot_spawn #19",
+   "x": 1800,
+   "y": 1980,
+   "extra": {
+    "units": "px (célula×20)",
+    "ordinal": 19
+   },
+   "source_ref": "decompiled/core_module/scripts/yishi/manager/SpaceTemplateManager.as:56"
+  },
+  {
+   "context": "novice_start",
+   "name": "newbieProcess ≤ 11300 (facing 270)",
+   "x": 3000,
+   "y": 1080,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/CampaignWalkView.as:516"
+  },
+  {
+   "context": "novice_start",
+   "name": "11400 (facing 280)",
+   "x": 1285,
+   "y": 1045,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/CampaignWalkView.as:516"
+  },
+  {
+   "context": "novice_start",
+   "name": "11500..12500 (facing 280)",
+   "x": 1320,
+   "y": 860,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/CampaignWalkView.as:516"
+  },
+  {
+   "context": "novice_start",
+   "name": "14000 (facing 350)",
+   "x": 1340,
+   "y": 700,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/CampaignWalkView.as:516"
+  },
+  {
+   "context": "fixed_npc_view",
+   "name": "nodeId 1000202",
+   "x": -300,
+   "y": 3490,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/NpcLayer.as:159"
+  },
+  {
+   "context": "single_campaign_npc",
+   "name": "single_campaign_npc #1",
+   "x": 390,
+   "y": 355,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/singlecampaign/SingleCampaignUIView.as:33"
+  },
+  {
+   "context": "single_campaign_npc",
+   "name": "single_campaign_npc #2",
+   "x": 580,
+   "y": 415,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/singlecampaign/SingleCampaignUIView.as:33"
+  },
+  {
+   "context": "single_campaign_npc",
+   "name": "single_campaign_npc #3",
+   "x": 770,
+   "y": 365,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/singlecampaign/SingleCampaignUIView.as:33"
+  },
+  {
+   "context": "single_campaign_npc",
+   "name": "single_campaign_npc #4",
+   "x": 1025,
+   "y": 370,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/singlecampaign/SingleCampaignUIView.as:33"
+  },
+  {
+   "context": "bloody_box_offset",
+   "name": "bloody_box_offset #1",
+   "x": 10,
+   "y": -60,
+   "extra": {
+    "relative_to": "bornPoint (exército)",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/bloody/BloodyManager.as:65"
+  },
+  {
+   "context": "bloody_box_offset",
+   "name": "bloody_box_offset #2",
+   "x": 10,
+   "y": 60,
+   "extra": {
+    "relative_to": "bornPoint (exército)",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/bloody/BloodyManager.as:65"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #1",
+   "x": 0,
+   "y": 350,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #2",
+   "x": 175,
+   "y": 304,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #3",
+   "x": 304,
+   "y": 175,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #4",
+   "x": 350,
+   "y": 0,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #5",
+   "x": 304,
+   "y": -175,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #6",
+   "x": 175,
+   "y": -304,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #7",
+   "x": 0,
+   "y": -350,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #8",
+   "x": -175,
+   "y": -304,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #9",
+   "x": -304,
+   "y": -175,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #10",
+   "x": -350,
+   "y": 0,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #11",
+   "x": -304,
+   "y": 175,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #12",
+   "x": -175,
+   "y": 304,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #13",
+   "x": -210,
+   "y": -315,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #14",
+   "x": 0,
+   "y": -315,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "molong_box_ring",
+   "name": "molong_box_ring #15",
+   "x": -315,
+   "y": 0,
+   "extra": {
+    "relative_to": "bossPos×20; vetor×350",
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/m3/scripts/map/campaign/mediator/molong/MolongManager.as:64"
+  },
+  {
+   "context": "world_map_entry",
+   "name": "targetPoint ao abrir a cidade externa",
+   "x": 5000,
+   "y": 5000,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/controler/WorldMapControler.as:94"
+  },
+  {
+   "context": "marry_car_ai_center",
+   "name": "marry_car_ai_center #1",
+   "x": 370,
+   "y": 339,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/map/space/view/layer/SpaceNpcLayer.as:133"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 1",
+   "x": 1100,
+   "y": 168,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 2",
+   "x": 806,
+   "y": 342,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 3",
+   "x": 1395,
+   "y": 342,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 4",
+   "x": 1100,
+   "y": 448,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 5",
+   "x": 542,
+   "y": 510,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 6",
+   "x": 1658,
+   "y": 511,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 7",
+   "x": 306,
+   "y": 726,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 8",
+   "x": 777,
+   "y": 726,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 9",
+   "x": 1100,
+   "y": 726,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 10",
+   "x": 1424,
+   "y": 726,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 11",
+   "x": 1895,
+   "y": 727,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 12",
+   "x": 542,
+   "y": 947,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 13",
+   "x": 1100,
+   "y": 1005,
+   "extra": {
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 14",
+   "x": 1658,
+   "y": 946,
+   "extra": {
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 15",
+   "x": 807,
+   "y": 1110,
+   "extra": {
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 16",
+   "x": 1395,
+   "y": 1111,
+   "extra": {
+    "ordinal": 16
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "secret_war_node",
+   "name": "nó 17",
+   "x": 1101,
+   "y": 1284,
+   "extra": {
+    "ordinal": 17
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/war2023/SecretWarModel.as:17"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #1",
+   "x": 73,
+   "y": 1499,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #2",
+   "x": 313,
+   "y": 1661,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #3",
+   "x": 366,
+   "y": 1264,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #4",
+   "x": 1036,
+   "y": 1633,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #5",
+   "x": 740,
+   "y": 697,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #6",
+   "x": 1162,
+   "y": 782,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #7",
+   "x": 1812,
+   "y": 834,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #8",
+   "x": 2085,
+   "y": 763,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #9",
+   "x": 2287,
+   "y": 1454,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_mount_slot",
+   "name": "farm_mount_slot #10",
+   "x": 2146,
+   "y": 1549,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmMountLayer.as:13"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #1",
+   "x": 904,
+   "y": 388,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #2",
+   "x": 1020,
+   "y": 452,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #3",
+   "x": 1176,
+   "y": 530,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #4",
+   "x": 1307,
+   "y": 596,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #5",
+   "x": 1176,
+   "y": 530,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #6",
+   "x": 1020,
+   "y": 452,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #7",
+   "x": 876,
+   "y": 545,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #8",
+   "x": 703,
+   "y": 661,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_0",
+   "name": "farm_walk_path_0 #9",
+   "x": 623,
+   "y": 723,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:27"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #1",
+   "x": 904,
+   "y": 388,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #2",
+   "x": 1020,
+   "y": 452,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #3",
+   "x": 876,
+   "y": 545,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #4",
+   "x": 703,
+   "y": 661,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #5",
+   "x": 623,
+   "y": 723,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #6",
+   "x": 703,
+   "y": 661,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #7",
+   "x": 876,
+   "y": 545,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #8",
+   "x": 1020,
+   "y": 452,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #9",
+   "x": 1176,
+   "y": 530,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_walk_path_1",
+   "name": "farm_walk_path_1 #10",
+   "x": 1307,
+   "y": 596,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:28"
+  },
+  {
+   "context": "farm_marry_tree",
+   "name": "farm_marry_tree #1",
+   "x": 2312,
+   "y": 695,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmWalkLayer.as:41"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #1",
+   "x": 45,
+   "y": 270,
+   "extra": {
+    "area": 0,
+    "row": 0,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #2",
+   "x": 90,
+   "y": 235,
+   "extra": {
+    "area": 0,
+    "row": 0,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #3",
+   "x": 145,
+   "y": 210,
+   "extra": {
+    "area": 0,
+    "row": 0,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #4",
+   "x": 245,
+   "y": 260,
+   "extra": {
+    "area": 0,
+    "row": 0,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #5",
+   "x": 155,
+   "y": 425,
+   "extra": {
+    "area": 0,
+    "row": 0,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #6",
+   "x": 85,
+   "y": 370,
+   "extra": {
+    "area": 0,
+    "row": 0,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #1",
+   "x": 75,
+   "y": 335,
+   "extra": {
+    "area": 0,
+    "row": 1,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #2",
+   "x": 130,
+   "y": 288,
+   "extra": {
+    "area": 0,
+    "row": 1,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #3",
+   "x": 180,
+   "y": 260,
+   "extra": {
+    "area": 0,
+    "row": 1,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #4",
+   "x": 235,
+   "y": 225,
+   "extra": {
+    "area": 0,
+    "row": 1,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #5",
+   "x": 305,
+   "y": 210,
+   "extra": {
+    "area": 0,
+    "row": 1,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #6",
+   "x": 130,
+   "y": 376,
+   "extra": {
+    "area": 0,
+    "row": 1,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #1",
+   "x": 180,
+   "y": 314,
+   "extra": {
+    "area": 0,
+    "row": 2,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #2",
+   "x": 295,
+   "y": 275,
+   "extra": {
+    "area": 0,
+    "row": 2,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #3",
+   "x": 356,
+   "y": 243,
+   "extra": {
+    "area": 0,
+    "row": 2,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #4",
+   "x": 180,
+   "y": 388,
+   "extra": {
+    "area": 0,
+    "row": 2,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #5",
+   "x": 233,
+   "y": 365,
+   "extra": {
+    "area": 0,
+    "row": 2,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #6",
+   "x": 286,
+   "y": 335,
+   "extra": {
+    "area": 0,
+    "row": 2,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #1",
+   "x": 355,
+   "y": 305,
+   "extra": {
+    "area": 0,
+    "row": 3,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #2",
+   "x": 400,
+   "y": 260,
+   "extra": {
+    "area": 0,
+    "row": 3,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #3",
+   "x": 240,
+   "y": 430,
+   "extra": {
+    "area": 0,
+    "row": 3,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #4",
+   "x": 305,
+   "y": 390,
+   "extra": {
+    "area": 0,
+    "row": 3,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #5",
+   "x": 360,
+   "y": 358,
+   "extra": {
+    "area": 0,
+    "row": 3,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #6",
+   "x": 415,
+   "y": 330,
+   "extra": {
+    "area": 0,
+    "row": 3,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #1",
+   "x": 470,
+   "y": 295,
+   "extra": {
+    "area": 0,
+    "row": 4,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #2",
+   "x": 288,
+   "y": 475,
+   "extra": {
+    "area": 0,
+    "row": 4,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #3",
+   "x": 350,
+   "y": 436,
+   "extra": {
+    "area": 0,
+    "row": 4,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #4",
+   "x": 401,
+   "y": 399,
+   "extra": {
+    "area": 0,
+    "row": 4,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #5",
+   "x": 458,
+   "y": 367,
+   "extra": {
+    "area": 0,
+    "row": 4,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "farm_animal_slot",
+   "name": "farm_animal_slot #6",
+   "x": 525,
+   "y": 336,
+   "extra": {
+    "area": 0,
+    "row": 4,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/farm/view/FarmAnimalLayer.as:27"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 264,
+   "y": 451,
+   "extra": {
+    "route": "1_10",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 268,
+   "y": 523,
+   "extra": {
+    "route": "1_10",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 397,
+   "y": 621,
+   "extra": {
+    "route": "1_10",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 306,
+   "y": 382,
+   "extra": {
+    "route": "1_2",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 382,
+   "y": 285,
+   "extra": {
+    "route": "1_2",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 332,
+   "y": 424,
+   "extra": {
+    "route": "1_4",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 428,
+   "y": 484,
+   "extra": {
+    "route": "1_4",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 538,
+   "y": 566,
+   "extra": {
+    "route": "1_4",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 471,
+   "y": 247,
+   "extra": {
+    "route": "2_3",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 598,
+   "y": 248,
+   "extra": {
+    "route": "2_3",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 646,
+   "y": 206,
+   "extra": {
+    "route": "2_3",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 442,
+   "y": 285,
+   "extra": {
+    "route": "2_5",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 551,
+   "y": 328,
+   "extra": {
+    "route": "2_5",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 629,
+   "y": 416,
+   "extra": {
+    "route": "2_5",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 749,
+   "y": 233,
+   "extra": {
+    "route": "3_6",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 857,
+   "y": 294,
+   "extra": {
+    "route": "3_6",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 749,
+   "y": 199,
+   "extra": {
+    "route": "3_11",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 876,
+   "y": 156,
+   "extra": {
+    "route": "3_11",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 1088,
+   "y": 266,
+   "extra": {
+    "route": "3_11",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 531,
+   "y": 608,
+   "extra": {
+    "route": "4_10",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 412,
+   "y": 631,
+   "extra": {
+    "route": "4_10",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 594,
+   "y": 606,
+   "extra": {
+    "route": "4_7",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 684,
+   "y": 666,
+   "extra": {
+    "route": "4_7",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 801,
+   "y": 667,
+   "extra": {
+    "route": "4_7",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 621,
+   "y": 566,
+   "extra": {
+    "route": "4_5",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 681,
+   "y": 438,
+   "extra": {
+    "route": "4_5",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 744,
+   "y": 413,
+   "extra": {
+    "route": "5_6",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 869,
+   "y": 317,
+   "extra": {
+    "route": "5_6",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 770,
+   "y": 446,
+   "extra": {
+    "route": "5_8",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 962,
+   "y": 542,
+   "extra": {
+    "route": "5_8",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 932,
+   "y": 299,
+   "extra": {
+    "route": "6_11",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 985,
+   "y": 255,
+   "extra": {
+    "route": "6_11",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 1081,
+   "y": 273,
+   "extra": {
+    "route": "6_11",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 967,
+   "y": 310,
+   "extra": {
+    "route": "6_9",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 1159,
+   "y": 463,
+   "extra": {
+    "route": "6_9",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 821,
+   "y": 696,
+   "extra": {
+    "route": "7_10",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 636,
+   "y": 738,
+   "extra": {
+    "route": "7_10",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 490,
+   "y": 717,
+   "extra": {
+    "route": "7_10",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #4",
+   "x": 394,
+   "y": 672,
+   "extra": {
+    "route": "7_10",
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 891,
+   "y": 635,
+   "extra": {
+    "route": "7_8",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 984,
+   "y": 572,
+   "extra": {
+    "route": "7_8",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 1063,
+   "y": 546,
+   "extra": {
+    "route": "8_9",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 1137,
+   "y": 541,
+   "extra": {
+    "route": "8_9",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 1199,
+   "y": 478,
+   "extra": {
+    "route": "8_9",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #1",
+   "x": 1245,
+   "y": 440,
+   "extra": {
+    "route": "9_11",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #2",
+   "x": 1221,
+   "y": 357,
+   "extra": {
+    "route": "9_11",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_path",
+   "name": "outyard_route_path #3",
+   "x": 1174,
+   "y": 278,
+   "extra": {
+    "route": "9_11",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:526"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 1",
+   "x": 286,
+   "y": 403,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 2",
+   "x": 419,
+   "y": 253,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 3",
+   "x": 706,
+   "y": 187,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 4",
+   "x": 569,
+   "y": 577,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 5",
+   "x": 714,
+   "y": 420,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 6",
+   "x": 908,
+   "y": 295,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 7",
+   "x": 844,
+   "y": 651,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 8",
+   "x": 1024,
+   "y": 549,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 9",
+   "x": 1214,
+   "y": 449,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 10",
+   "x": 297,
+   "y": 643,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_route_node",
+   "name": "nó 11",
+   "x": 1179,
+   "y": 214,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardRouteView.as:546"
+  },
+  {
+   "context": "outyard_land_offset",
+   "name": "MapId 1",
+   "x": -513,
+   "y": -103,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardLandView.as:59"
+  },
+  {
+   "context": "outyard_land_offset",
+   "name": "MapId 2",
+   "x": -372,
+   "y": -818,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardLandView.as:59"
+  },
+  {
+   "context": "outyard_land_offset",
+   "name": "MapId 3",
+   "x": -1716,
+   "y": -644,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardLandView.as:59"
+  },
+  {
+   "context": "outyard_land_offset",
+   "name": "MapId 4",
+   "x": -1510,
+   "y": -11,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardLandView.as:59"
+  },
+  {
+   "context": "outyard_land_offset",
+   "name": "MapId 5",
+   "x": -991,
+   "y": -472,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardLandView.as:59"
+  },
+  {
+   "context": "outyard_land_offset",
+   "name": "MapId 6",
+   "x": -1162,
+   "y": -1085,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/scene/OutyardLandView.as:59"
+  },
+  {
+   "context": "outyard_figure",
+   "name": "outyard_figure #1",
+   "x": 1,
+   "y": 113,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/OutyardFrame.as:81"
+  },
+  {
+   "context": "outyard_figure",
+   "name": "outyard_figure #2",
+   "x": 312,
+   "y": 84,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/OutyardFrame.as:81"
+  },
+  {
+   "context": "outyard_figure",
+   "name": "outyard_figure #3",
+   "x": 342,
+   "y": 346,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/OutyardFrame.as:81"
+  },
+  {
+   "context": "outyard_figure",
+   "name": "outyard_figure #4",
+   "x": 11,
+   "y": 385,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/OutyardFrame.as:81"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #1",
+   "x": 267,
+   "y": 320,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #2",
+   "x": 409,
+   "y": 406,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #3",
+   "x": 402,
+   "y": 236,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #4",
+   "x": 543,
+   "y": 322,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #5",
+   "x": 675,
+   "y": 399,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #6",
+   "x": 813,
+   "y": 398,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "outyard_shuttle",
+   "name": "outyard_shuttle #7",
+   "x": 950,
+   "y": 397,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m11/scripts/outyard/shuttle/OutyardShuttleView.as:91"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #1",
+   "x": 287,
+   "y": 207,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #2",
+   "x": 245,
+   "y": 265,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #3",
+   "x": 202,
+   "y": 317,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #4",
+   "x": 152,
+   "y": 367,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #5",
+   "x": 496,
+   "y": 207,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #6",
+   "x": 458,
+   "y": 265,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #7",
+   "x": 412,
+   "y": 317,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "self_chess_slot",
+   "name": "self_chess_slot #8",
+   "x": 362,
+   "y": 367,
+   "extra": {
+    "battle_pos": "3,6,9,12,1,4,7,10",
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m3/scripts/chess/SelfChessHeroTeamView.as:33"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #1",
+   "x": 208,
+   "y": 90,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #2",
+   "x": 268,
+   "y": 92,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #3",
+   "x": 324,
+   "y": 93,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #4",
+   "x": 380,
+   "y": 95,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #5",
+   "x": 435,
+   "y": 93,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #6",
+   "x": 495,
+   "y": 95,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #7",
+   "x": 557,
+   "y": 94,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #8",
+   "x": 615,
+   "y": 93,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #9",
+   "x": 665,
+   "y": 94,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #10",
+   "x": 722,
+   "y": 92,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #11",
+   "x": 732,
+   "y": 117,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #12",
+   "x": 740,
+   "y": 143,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #13",
+   "x": 752,
+   "y": 168,
+   "extra": {
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #14",
+   "x": 768,
+   "y": 194,
+   "extra": {
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #15",
+   "x": 780,
+   "y": 226,
+   "extra": {
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #16",
+   "x": 800,
+   "y": 260,
+   "extra": {
+    "ordinal": 16
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #17",
+   "x": 815,
+   "y": 305,
+   "extra": {
+    "ordinal": 17
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #18",
+   "x": 832,
+   "y": 342,
+   "extra": {
+    "ordinal": 18
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #19",
+   "x": 852,
+   "y": 390,
+   "extra": {
+    "ordinal": 19
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #20",
+   "x": 768,
+   "y": 390,
+   "extra": {
+    "ordinal": 20
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #21",
+   "x": 688,
+   "y": 390,
+   "extra": {
+    "ordinal": 21
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #22",
+   "x": 602,
+   "y": 390,
+   "extra": {
+    "ordinal": 22
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #23",
+   "x": 508,
+   "y": 390,
+   "extra": {
+    "ordinal": 23
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #24",
+   "x": 418,
+   "y": 390,
+   "extra": {
+    "ordinal": 24
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #25",
+   "x": 333,
+   "y": 390,
+   "extra": {
+    "ordinal": 25
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #26",
+   "x": 248,
+   "y": 390,
+   "extra": {
+    "ordinal": 26
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #27",
+   "x": 165,
+   "y": 390,
+   "extra": {
+    "ordinal": 27
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #28",
+   "x": 75,
+   "y": 390,
+   "extra": {
+    "ordinal": 28
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #29",
+   "x": 95,
+   "y": 342,
+   "extra": {
+    "ordinal": 29
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #30",
+   "x": 112,
+   "y": 302,
+   "extra": {
+    "ordinal": 30
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #31",
+   "x": 132,
+   "y": 262,
+   "extra": {
+    "ordinal": 31
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #32",
+   "x": 148,
+   "y": 228,
+   "extra": {
+    "ordinal": 32
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #33",
+   "x": 160,
+   "y": 195,
+   "extra": {
+    "ordinal": 33
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #34",
+   "x": 175,
+   "y": 172,
+   "extra": {
+    "ordinal": 34
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #35",
+   "x": 186,
+   "y": 142,
+   "extra": {
+    "ordinal": 35
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "gold_road_cell",
+   "name": "gold_road_cell #36",
+   "x": 200,
+   "y": 119,
+   "extra": {
+    "ordinal": 36
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/goldroad/GoldRoadModel.as:34"
+  },
+  {
+   "context": "perkin_lab_pit",
+   "name": "perkin_lab_pit #1",
+   "x": 495,
+   "y": 280,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/perkinlab/PerkinLabModel.as:38"
+  },
+  {
+   "context": "perkin_lab_pit",
+   "name": "perkin_lab_pit #2",
+   "x": 400,
+   "y": 28,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/perkinlab/PerkinLabModel.as:38"
+  },
+  {
+   "context": "perkin_lab_pit",
+   "name": "perkin_lab_pit #3",
+   "x": 115,
+   "y": 132,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/perkinlab/PerkinLabModel.as:38"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #1",
+   "x": 256,
+   "y": 238,
+   "extra": {
+    "area": 1,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #2",
+   "x": 239,
+   "y": 372,
+   "extra": {
+    "area": 1,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #3",
+   "x": 330,
+   "y": 444,
+   "extra": {
+    "area": 1,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #4",
+   "x": 462,
+   "y": 405,
+   "extra": {
+    "area": 1,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #5",
+   "x": 517,
+   "y": 303,
+   "extra": {
+    "area": 1,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #6",
+   "x": 648,
+   "y": 237,
+   "extra": {
+    "area": 1,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #7",
+   "x": 619,
+   "y": 371,
+   "extra": {
+    "area": 1,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #8",
+   "x": 682,
+   "y": 468,
+   "extra": {
+    "area": 1,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #9",
+   "x": 796,
+   "y": 404,
+   "extra": {
+    "area": 1,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #10",
+   "x": 893,
+   "y": 341,
+   "extra": {
+    "area": 1,
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #11",
+   "x": 908,
+   "y": 213,
+   "extra": {
+    "area": 1,
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #12",
+   "x": 796,
+   "y": 161,
+   "extra": {
+    "area": 1,
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #1",
+   "x": 355,
+   "y": 263,
+   "extra": {
+    "area": 2,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #2",
+   "x": 382,
+   "y": 345,
+   "extra": {
+    "area": 2,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #3",
+   "x": 479,
+   "y": 364,
+   "extra": {
+    "area": 2,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #4",
+   "x": 564,
+   "y": 288,
+   "extra": {
+    "area": 2,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #5",
+   "x": 674,
+   "y": 304,
+   "extra": {
+    "area": 2,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #6",
+   "x": 640,
+   "y": 405,
+   "extra": {
+    "area": 2,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #7",
+   "x": 731,
+   "y": 482,
+   "extra": {
+    "area": 2,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #8",
+   "x": 836,
+   "y": 456,
+   "extra": {
+    "area": 2,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #9",
+   "x": 891,
+   "y": 371,
+   "extra": {
+    "area": 2,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #10",
+   "x": 863,
+   "y": 277,
+   "extra": {
+    "area": 2,
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #11",
+   "x": 779,
+   "y": 225,
+   "extra": {
+    "area": 2,
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #12",
+   "x": 682,
+   "y": 175,
+   "extra": {
+    "area": 2,
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #1",
+   "x": 320,
+   "y": 510,
+   "extra": {
+    "area": 3,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #2",
+   "x": 427,
+   "y": 491,
+   "extra": {
+    "area": 3,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #3",
+   "x": 491,
+   "y": 408,
+   "extra": {
+    "area": 3,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #4",
+   "x": 427,
+   "y": 335,
+   "extra": {
+    "area": 3,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #5",
+   "x": 416,
+   "y": 252,
+   "extra": {
+    "area": 3,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #6",
+   "x": 510,
+   "y": 202,
+   "extra": {
+    "area": 3,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #7",
+   "x": 622,
+   "y": 215,
+   "extra": {
+    "area": 3,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #8",
+   "x": 688,
+   "y": 292,
+   "extra": {
+    "area": 3,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #9",
+   "x": 784,
+   "y": 369,
+   "extra": {
+    "area": 3,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #10",
+   "x": 897,
+   "y": 303,
+   "extra": {
+    "area": 3,
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #11",
+   "x": 881,
+   "y": 189,
+   "extra": {
+    "area": 3,
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #12",
+   "x": 798,
+   "y": 125,
+   "extra": {
+    "area": 3,
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #1",
+   "x": 449,
+   "y": 220,
+   "extra": {
+    "area": 4,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #2",
+   "x": 339,
+   "y": 278,
+   "extra": {
+    "area": 4,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #3",
+   "x": 393,
+   "y": 361,
+   "extra": {
+    "area": 4,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #4",
+   "x": 477,
+   "y": 426,
+   "extra": {
+    "area": 4,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #5",
+   "x": 578,
+   "y": 471,
+   "extra": {
+    "area": 4,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #6",
+   "x": 706,
+   "y": 420,
+   "extra": {
+    "area": 4,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #7",
+   "x": 633,
+   "y": 318,
+   "extra": {
+    "area": 4,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #8",
+   "x": 577,
+   "y": 216,
+   "extra": {
+    "area": 4,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #9",
+   "x": 694,
+   "y": 167,
+   "extra": {
+    "area": 4,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #10",
+   "x": 733,
+   "y": 277,
+   "extra": {
+    "area": 4,
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #11",
+   "x": 790,
+   "y": 395,
+   "extra": {
+    "area": 4,
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #12",
+   "x": 846,
+   "y": 285,
+   "extra": {
+    "area": 4,
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #1",
+   "x": 442,
+   "y": 389,
+   "extra": {
+    "area": 5,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #2",
+   "x": 413,
+   "y": 503,
+   "extra": {
+    "area": 5,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #3",
+   "x": 524,
+   "y": 529,
+   "extra": {
+    "area": 5,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #4",
+   "x": 655,
+   "y": 489,
+   "extra": {
+    "area": 5,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #5",
+   "x": 754,
+   "y": 427,
+   "extra": {
+    "area": 5,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #6",
+   "x": 713,
+   "y": 324,
+   "extra": {
+    "area": 5,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #7",
+   "x": 570,
+   "y": 326,
+   "extra": {
+    "area": 5,
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #8",
+   "x": 524,
+   "y": 239,
+   "extra": {
+    "area": 5,
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #9",
+   "x": 612,
+   "y": 167,
+   "extra": {
+    "area": 5,
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #10",
+   "x": 710,
+   "y": 234,
+   "extra": {
+    "area": 5,
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #11",
+   "x": 810,
+   "y": 262,
+   "extra": {
+    "area": 5,
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "guild_fb_node",
+   "name": "guild_fb_node #12",
+   "x": 771,
+   "y": 156,
+   "extra": {
+    "area": 5,
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/fb/GuildFBMainUIView.as:56"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #1",
+   "x": 227,
+   "y": 356,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #2",
+   "x": 227,
+   "y": 650,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #3",
+   "x": 640,
+   "y": 240,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #4",
+   "x": 640,
+   "y": 540,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #5",
+   "x": 640,
+   "y": 830,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #6",
+   "x": 1028,
+   "y": 240,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #7",
+   "x": 1028,
+   "y": 540,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #8",
+   "x": 1028,
+   "y": 830,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #9",
+   "x": 1400,
+   "y": 196,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #10",
+   "x": 1400,
+   "y": 410,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #11",
+   "x": 1400,
+   "y": 650,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_left",
+   "name": "cross_guild_tower_left #12",
+   "x": 1400,
+   "y": 880,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:21"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #1",
+   "x": 1456,
+   "y": 356,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #2",
+   "x": 1456,
+   "y": 650,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #3",
+   "x": 1100,
+   "y": 240,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #4",
+   "x": 1100,
+   "y": 540,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #5",
+   "x": 1100,
+   "y": 830,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #6",
+   "x": 720,
+   "y": 240,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #7",
+   "x": 720,
+   "y": 540,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #8",
+   "x": 720,
+   "y": 830,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #9",
+   "x": 323,
+   "y": 196,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #10",
+   "x": 323,
+   "y": 410,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #11",
+   "x": 323,
+   "y": 650,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "cross_guild_tower_right",
+   "name": "cross_guild_tower_right #12",
+   "x": 323,
+   "y": 880,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m6/scripts/consortia/view/crossguild/war/CrossGuildWarTowerView.as:23"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #1",
+   "x": 376,
+   "y": 128,
+   "extra": {
+    "portal_count": 1,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #1",
+   "x": 265,
+   "y": 128,
+   "extra": {
+    "portal_count": 2,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #2",
+   "x": 516,
+   "y": 128,
+   "extra": {
+    "portal_count": 2,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #1",
+   "x": 130,
+   "y": 153,
+   "extra": {
+    "portal_count": 3,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #2",
+   "x": 378,
+   "y": 103,
+   "extra": {
+    "portal_count": 3,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #3",
+   "x": 631,
+   "y": 153,
+   "extra": {
+    "portal_count": 3,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #1",
+   "x": 34,
+   "y": 157,
+   "extra": {
+    "portal_count": 4,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #2",
+   "x": 267,
+   "y": 106,
+   "extra": {
+    "portal_count": 4,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #3",
+   "x": 496,
+   "y": 106,
+   "extra": {
+    "portal_count": 4,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #4",
+   "x": 721,
+   "y": 157,
+   "extra": {
+    "portal_count": 4,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #1",
+   "x": 34,
+   "y": 147,
+   "extra": {
+    "portal_count": 5,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #2",
+   "x": 212,
+   "y": 189,
+   "extra": {
+    "portal_count": 5,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #3",
+   "x": 385,
+   "y": 114,
+   "extra": {
+    "portal_count": 5,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #4",
+   "x": 557,
+   "y": 189,
+   "extra": {
+    "portal_count": 5,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #5",
+   "x": 731,
+   "y": 147,
+   "extra": {
+    "portal_count": 5,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #1",
+   "x": 52,
+   "y": 172,
+   "extra": {
+    "portal_count": 6,
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #2",
+   "x": 280,
+   "y": 26,
+   "extra": {
+    "portal_count": 6,
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #3",
+   "x": 480,
+   "y": 26,
+   "extra": {
+    "portal_count": 6,
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #4",
+   "x": 248,
+   "y": 244,
+   "extra": {
+    "portal_count": 6,
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #5",
+   "x": 513,
+   "y": 244,
+   "extra": {
+    "portal_count": 6,
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "sky_box_road_checkpoint",
+   "name": "sky_box_road_checkpoint #6",
+   "x": 706,
+   "y": 172,
+   "extra": {
+    "portal_count": 6,
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m11/scripts/skyboxroad/view/SkyBoxRoadView.as:18"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #1",
+   "x": 80,
+   "y": 550,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #2",
+   "x": 285,
+   "y": 555,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #3",
+   "x": 490,
+   "y": 513,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #4",
+   "x": 545,
+   "y": 414,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #5",
+   "x": 346,
+   "y": 433,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #6",
+   "x": 152,
+   "y": 413,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #7",
+   "x": 102,
+   "y": 318,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #8",
+   "x": 293,
+   "y": 316,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #9",
+   "x": 498,
+   "y": 314,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #10",
+   "x": 560,
+   "y": 226,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #11",
+   "x": 363,
+   "y": 206,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #12",
+   "x": 142,
+   "y": 206,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #13",
+   "x": 180,
+   "y": 119,
+   "extra": {
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #14",
+   "x": 383,
+   "y": 98,
+   "extra": {
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_node",
+   "name": "glory_road_node #15",
+   "x": 550,
+   "y": 76,
+   "extra": {
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:110"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #1",
+   "x": 155,
+   "y": 535,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #2",
+   "x": 566,
+   "y": 503,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #3",
+   "x": 295,
+   "y": 430,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #4",
+   "x": 186,
+   "y": 317,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #5",
+   "x": 544,
+   "y": 290,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #6",
+   "x": 298,
+   "y": 223,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_box",
+   "name": "glory_road_box #7",
+   "x": 257,
+   "y": 123,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:168"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #1",
+   "x": 368,
+   "y": 548,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #2",
+   "x": 489,
+   "y": 411,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #3",
+   "x": 109,
+   "y": 399,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #4",
+   "x": 379,
+   "y": 337,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #5",
+   "x": 500,
+   "y": 222,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #6",
+   "x": 108,
+   "y": 186,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "glory_road_buff",
+   "name": "glory_road_buff #7",
+   "x": 466,
+   "y": 105,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m9/scripts/gloryroad/GloryRoadFrame.as:204"
+  },
+  {
+   "context": "shadow_land_area",
+   "name": "shadow_land_area #1",
+   "x": 99,
+   "y": 13,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandFrame.as:33"
+  },
+  {
+   "context": "shadow_land_area",
+   "name": "shadow_land_area #2",
+   "x": 36,
+   "y": 285,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandFrame.as:33"
+  },
+  {
+   "context": "shadow_land_area",
+   "name": "shadow_land_area #3",
+   "x": 436,
+   "y": 178,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandFrame.as:33"
+  },
+  {
+   "context": "shadow_land_area",
+   "name": "shadow_land_area #4",
+   "x": 394,
+   "y": -2,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandFrame.as:33"
+  },
+  {
+   "context": "shadow_land_area",
+   "name": "shadow_land_area #5",
+   "x": 685,
+   "y": 70,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandFrame.as:33"
+  },
+  {
+   "context": "shadow_land_chapter",
+   "name": "shadow_land_chapter #1",
+   "x": 155,
+   "y": 20,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandChapterFrame.as:61"
+  },
+  {
+   "context": "shadow_land_chapter",
+   "name": "shadow_land_chapter #2",
+   "x": 295,
+   "y": 120,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandChapterFrame.as:61"
+  },
+  {
+   "context": "shadow_land_chapter",
+   "name": "shadow_land_chapter #3",
+   "x": 430,
+   "y": 20,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandChapterFrame.as:61"
+  },
+  {
+   "context": "shadow_land_chapter",
+   "name": "shadow_land_chapter #4",
+   "x": 565,
+   "y": 110,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandChapterFrame.as:61"
+  },
+  {
+   "context": "shadow_land_chapter",
+   "name": "shadow_land_chapter #5",
+   "x": 690,
+   "y": 20,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandChapterFrame.as:61"
+  },
+  {
+   "context": "shadow_land_chapter",
+   "name": "shadow_land_chapter #6",
+   "x": 830,
+   "y": 120,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m11/scripts/shadowland/ShadowLandChapterFrame.as:61"
+  },
+  {
+   "context": "spirit_expedition_area",
+   "name": "spirit_expedition_area #1",
+   "x": 760,
+   "y": 311,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionFrame.as:58"
+  },
+  {
+   "context": "spirit_expedition_area",
+   "name": "spirit_expedition_area #2",
+   "x": 665,
+   "y": 0,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionFrame.as:58"
+  },
+  {
+   "context": "spirit_expedition_area",
+   "name": "spirit_expedition_area #3",
+   "x": 485,
+   "y": 298,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionFrame.as:58"
+  },
+  {
+   "context": "spirit_expedition_area",
+   "name": "spirit_expedition_area #4",
+   "x": 397,
+   "y": 0,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionFrame.as:58"
+  },
+  {
+   "context": "spirit_expedition_area",
+   "name": "spirit_expedition_area #5",
+   "x": 0,
+   "y": 280,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionFrame.as:58"
+  },
+  {
+   "context": "spirit_expedition_area",
+   "name": "spirit_expedition_area #6",
+   "x": 2,
+   "y": -1,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionFrame.as:58"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #1",
+   "x": 140,
+   "y": 20,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #2",
+   "x": 225,
+   "y": 130,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #3",
+   "x": 295,
+   "y": 20,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #4",
+   "x": 380,
+   "y": 130,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #5",
+   "x": 465,
+   "y": 20,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #6",
+   "x": 550,
+   "y": 130,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #7",
+   "x": 620,
+   "y": 20,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #8",
+   "x": 700,
+   "y": 130,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #9",
+   "x": 775,
+   "y": 20,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "spirit_expedition_chapter",
+   "name": "spirit_expedition_chapter #10",
+   "x": 865,
+   "y": 130,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m14/scripts/childspiritexpedition/SpiritExpeditionChapterFrame.as:57"
+  },
+  {
+   "context": "cat_courtyard_slot",
+   "name": "cat_courtyard_slot #1",
+   "x": 45,
+   "y": 80,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/cathouse/CatCourtyard.as:16"
+  },
+  {
+   "context": "cat_courtyard_slot",
+   "name": "cat_courtyard_slot #2",
+   "x": 510,
+   "y": 80,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/cathouse/CatCourtyard.as:16"
+  },
+  {
+   "context": "cat_courtyard_slot",
+   "name": "cat_courtyard_slot #3",
+   "x": 295,
+   "y": 225,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/cathouse/CatCourtyard.as:16"
+  },
+  {
+   "context": "cat_courtyard_slot",
+   "name": "cat_courtyard_slot #4",
+   "x": 45,
+   "y": 325,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/cathouse/CatCourtyard.as:16"
+  },
+  {
+   "context": "cat_courtyard_slot",
+   "name": "cat_courtyard_slot #5",
+   "x": 520,
+   "y": 330,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/cathouse/CatCourtyard.as:16"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #1",
+   "x": -15,
+   "y": 115,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #2",
+   "x": 30,
+   "y": 10,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #3",
+   "x": 105,
+   "y": 202,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #4",
+   "x": 67,
+   "y": 115,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #5",
+   "x": 153,
+   "y": 115,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #6",
+   "x": 218,
+   "y": 115,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #7",
+   "x": 288,
+   "y": 115,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #8",
+   "x": 335,
+   "y": 202,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #9",
+   "x": 250,
+   "y": 10,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #10",
+   "x": 320,
+   "y": 55,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #11",
+   "x": 358,
+   "y": 115,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #12",
+   "x": 415,
+   "y": 115,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #13",
+   "x": 471,
+   "y": 202,
+   "extra": {
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #14",
+   "x": 530,
+   "y": 175,
+   "extra": {
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #15",
+   "x": 462,
+   "y": 80,
+   "extra": {
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #16",
+   "x": 430,
+   "y": 10,
+   "extra": {
+    "ordinal": 16
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "planes_war_layer_item",
+   "name": "planes_war_layer_item #17",
+   "x": 555,
+   "y": 115,
+   "extra": {
+    "ordinal": 17
+   },
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarLayerMapFrame.as:30"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 1",
+   "x": 100,
+   "y": 300,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 2",
+   "x": 200,
+   "y": 360,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 3",
+   "x": 300,
+   "y": 420,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 4",
+   "x": 300,
+   "y": 300,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 5",
+   "x": 400,
+   "y": 360,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 6",
+   "x": 400,
+   "y": 240,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 7",
+   "x": 500,
+   "y": 420,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 8",
+   "x": 500,
+   "y": 300,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 9",
+   "x": 500,
+   "y": 180,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 10",
+   "x": 600,
+   "y": 360,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 11",
+   "x": 600,
+   "y": 240,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 12",
+   "x": 700,
+   "y": 420,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 13",
+   "x": 700,
+   "y": 300,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 14",
+   "x": 700,
+   "y": 180,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 15",
+   "x": 800,
+   "y": 360,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 16",
+   "x": 800,
+   "y": 240,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 16
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 17",
+   "x": 900,
+   "y": 420,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 17
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 18",
+   "x": 900,
+   "y": 300,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 18
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 19",
+   "x": 900,
+   "y": 180,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 19
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 20",
+   "x": 1000,
+   "y": 360,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 20
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 21",
+   "x": 1000,
+   "y": 240,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 21
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "dark_maze_node",
+   "name": "nó 22",
+   "x": 1100,
+   "y": 300,
+   "extra": {
+    "px_formula": "(100·ix, 480−60·iy)",
+    "ordinal": 22
+   },
+   "source_ref": "decompiled/core_module/scripts/mvc/module/darkmaze/DarkMazeModel.as:97"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 0",
+   "x": 160,
+   "y": 155,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 1",
+   "x": 250,
+   "y": 155,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 2",
+   "x": 340,
+   "y": 155,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 3",
+   "x": 430,
+   "y": 155,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 4",
+   "x": 520,
+   "y": 155,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 5",
+   "x": 610,
+   "y": 155,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 6",
+   "x": 700,
+   "y": 155,
+   "extra": {
+    "ordinal": 7
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 7",
+   "x": 790,
+   "y": 155,
+   "extra": {
+    "ordinal": 8
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 8",
+   "x": 880,
+   "y": 155,
+   "extra": {
+    "ordinal": 9
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 9",
+   "x": 160,
+   "y": 246,
+   "extra": {
+    "ordinal": 10
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 10",
+   "x": 250,
+   "y": 246,
+   "extra": {
+    "ordinal": 11
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 11",
+   "x": 340,
+   "y": 246,
+   "extra": {
+    "ordinal": 12
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 12",
+   "x": 430,
+   "y": 246,
+   "extra": {
+    "ordinal": 13
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 13",
+   "x": 520,
+   "y": 246,
+   "extra": {
+    "ordinal": 14
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 14",
+   "x": 610,
+   "y": 246,
+   "extra": {
+    "ordinal": 15
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 15",
+   "x": 700,
+   "y": 246,
+   "extra": {
+    "ordinal": 16
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 16",
+   "x": 790,
+   "y": 246,
+   "extra": {
+    "ordinal": 17
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 17",
+   "x": 880,
+   "y": 246,
+   "extra": {
+    "ordinal": 18
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 18",
+   "x": 160,
+   "y": 337,
+   "extra": {
+    "ordinal": 19
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 19",
+   "x": 250,
+   "y": 337,
+   "extra": {
+    "ordinal": 20
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 20",
+   "x": 340,
+   "y": 337,
+   "extra": {
+    "ordinal": 21
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 21",
+   "x": 430,
+   "y": 337,
+   "extra": {
+    "ordinal": 22
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 22",
+   "x": 520,
+   "y": 337,
+   "extra": {
+    "ordinal": 23
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 23",
+   "x": 610,
+   "y": 337,
+   "extra": {
+    "ordinal": 24
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 24",
+   "x": 700,
+   "y": 337,
+   "extra": {
+    "ordinal": 25
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 25",
+   "x": 790,
+   "y": 337,
+   "extra": {
+    "ordinal": 26
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 26",
+   "x": 880,
+   "y": 337,
+   "extra": {
+    "ordinal": 27
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 27",
+   "x": 160,
+   "y": 428,
+   "extra": {
+    "ordinal": 28
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 28",
+   "x": 250,
+   "y": 428,
+   "extra": {
+    "ordinal": 29
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 29",
+   "x": 340,
+   "y": 428,
+   "extra": {
+    "ordinal": 30
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 30",
+   "x": 430,
+   "y": 428,
+   "extra": {
+    "ordinal": 31
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 31",
+   "x": 520,
+   "y": 428,
+   "extra": {
+    "ordinal": 32
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 32",
+   "x": 610,
+   "y": 428,
+   "extra": {
+    "ordinal": 33
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 33",
+   "x": 700,
+   "y": 428,
+   "extra": {
+    "ordinal": 34
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 34",
+   "x": 790,
+   "y": 428,
+   "extra": {
+    "ordinal": 35
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 35",
+   "x": 880,
+   "y": 428,
+   "extra": {
+    "ordinal": 36
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 36",
+   "x": 160,
+   "y": 519,
+   "extra": {
+    "ordinal": 37
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 37",
+   "x": 250,
+   "y": 519,
+   "extra": {
+    "ordinal": 38
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 38",
+   "x": 340,
+   "y": 519,
+   "extra": {
+    "ordinal": 39
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 39",
+   "x": 430,
+   "y": 519,
+   "extra": {
+    "ordinal": 40
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 40",
+   "x": 520,
+   "y": 519,
+   "extra": {
+    "ordinal": 41
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 41",
+   "x": 610,
+   "y": 519,
+   "extra": {
+    "ordinal": 42
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 42",
+   "x": 700,
+   "y": 519,
+   "extra": {
+    "ordinal": 43
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 43",
+   "x": 790,
+   "y": 519,
+   "extra": {
+    "ordinal": 44
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "theseus_dungeon_cell",
+   "name": "célula 44",
+   "x": 880,
+   "y": 519,
+   "extra": {
+    "ordinal": 45
+   },
+   "source_ref": "decompiled/m11/scripts/dungenexploration/DungenexploFrame.as:113"
+  },
+  {
+   "context": "alchemy_mine_slot",
+   "name": "alchemy_mine_slot #1",
+   "x": 110,
+   "y": 90,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m14/scripts/alchemical/AlchemicalExploitView.as:56"
+  },
+  {
+   "context": "alchemy_mine_slot",
+   "name": "alchemy_mine_slot #2",
+   "x": 375,
+   "y": 90,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m14/scripts/alchemical/AlchemicalExploitView.as:56"
+  },
+  {
+   "context": "alchemy_mine_slot",
+   "name": "alchemy_mine_slot #3",
+   "x": 640,
+   "y": 90,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m14/scripts/alchemical/AlchemicalExploitView.as:56"
+  },
+  {
+   "context": "alchemy_mine_slot",
+   "name": "alchemy_mine_slot #4",
+   "x": 110,
+   "y": 280,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m14/scripts/alchemical/AlchemicalExploitView.as:56"
+  },
+  {
+   "context": "alchemy_mine_slot",
+   "name": "alchemy_mine_slot #5",
+   "x": 375,
+   "y": 280,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m14/scripts/alchemical/AlchemicalExploitView.as:56"
+  },
+  {
+   "context": "alchemy_mine_slot",
+   "name": "alchemy_mine_slot #6",
+   "x": 640,
+   "y": 280,
+   "extra": {
+    "ordinal": 6
+   },
+   "source_ref": "decompiled/m14/scripts/alchemical/AlchemicalExploitView.as:56"
+  },
+  {
+   "context": "magic_card_slot",
+   "name": "slot 1",
+   "x": 32,
+   "y": 37,
+   "extra": {
+    "ordinal": 1
+   },
+   "source_ref": "decompiled/m5/scripts/magicCard/view/MagicCardSlotView.as:144"
+  },
+  {
+   "context": "magic_card_slot",
+   "name": "slot 2",
+   "x": 425,
+   "y": 37,
+   "extra": {
+    "ordinal": 2
+   },
+   "source_ref": "decompiled/m5/scripts/magicCard/view/MagicCardSlotView.as:144"
+  },
+  {
+   "context": "magic_card_slot",
+   "name": "slot 3",
+   "x": 32,
+   "y": 237,
+   "extra": {
+    "ordinal": 3
+   },
+   "source_ref": "decompiled/m5/scripts/magicCard/view/MagicCardSlotView.as:144"
+  },
+  {
+   "context": "magic_card_slot",
+   "name": "slot 4",
+   "x": 425,
+   "y": 237,
+   "extra": {
+    "ordinal": 4
+   },
+   "source_ref": "decompiled/m5/scripts/magicCard/view/MagicCardSlotView.as:144"
+  },
+  {
+   "context": "magic_card_slot",
+   "name": "centro",
+   "x": 204,
+   "y": 160,
+   "extra": {
+    "ordinal": 5
+   },
+   "source_ref": "decompiled/m5/scripts/magicCard/view/MagicCardSlotView.as:144"
+  }
+ ],
+ "map_file_formats": [
+  {
+   "file": ".maps (floorData)",
+   "structure_pt": "floorData[chunk \"cx,cy\"][camada = baseNum][] = {url, x, y, rotation, baseNum}; baseNum 101 = fundo repetido; só baseNum > 101 é desenhado, em ordem numérica; rotation obrigatório (graus); x,y = canto sup. esq. em px absolutos. Mapas > 5000 px usam blocos com chave módulo 5000 (A/B).",
+   "fields": [
+    {
+     "name": "url",
+     "type": "string",
+     "meaning_pt": "imagem relativa (mapmaterial/floor/...)"
+    },
+    {
+     "name": "x",
+     "type": "int",
+     "meaning_pt": "px"
+    },
+    {
+     "name": "y",
+     "type": "int",
+     "meaning_pt": "px"
+    },
+    {
+     "name": "rotation",
+     "type": "number",
+     "meaning_pt": "graus; 0 = copyPixels"
+    },
+    {
+     "name": "baseNum",
+     "type": "int",
+     "meaning_pt": "camada/z (101 = fundo)"
+    }
+   ],
+   "source_ref": "decompiled/m3/scripts/map/internals/view/layer/MapRenderLayer.as:95"
+  },
+  {
+   "file": ".maps (moviesData/topsData)",
+   "structure_pt": "{chunk \"cx,cy\": [{url, x, y, rotation, scaleX?, scaleY?}]} — swf de animação de cenário; movies abaixo, tops acima do avatar.",
+   "fields": null,
+   "source_ref": "decompiled/m3/scripts/map/campaign/view/layer/CampaignMainBuidingLayer.as:162"
+  },
+  {
+   "file": ".titles (valores)",
+   "structure_pt": "\"{gx}_{gy}\" → int: ausente/0 bloqueado; 1/3/4 zonas do mapa de aço; 2 barreira (bloqueia veículo); 4 semitransparente. Na cidade externa a convenção é inversa: truthy = obstáculo.",
+   "fields": null,
+   "source_ref": "decompiled/core_module/scripts/map/internals/data/MapInfo.as:171"
+  }
+ ],
+ "formulas": [
+  {
+   "name": "grid_to_px",
+   "expression": "px = célula · 20",
+   "description_pt": "Conversão da grade de caminhada para pixels (MapPhysics).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/data/MapPhysics.as:52"
+  },
+  {
+   "name": "display_coordinate",
+   "expression": "exibido = célula / 2.5 = px / 50",
+   "description_pt": "Coordenada mostrada na UI e no minimapa (MapGrid.getConvertWidth; SmallMapBar).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/constant/MapGrid.as:17"
+  },
+  {
+   "name": "chunk_key",
+   "expression": "chave = floor(x/1000) + ',' + floor(y/1000)",
+   "description_pt": "Blocos de 1000 px do .maps e da paginação do mapa-mundo ('_' em grid_str).",
+   "source_ref": "decompiled/core_module/scripts/map/internals/utils/Utils.as:82"
+  },
+  {
+   "name": "instance_tile_grid",
+   "expression": "tiles_x = ceil(W/300); tiles_y = ceil(H/300); url = mapmaterial/land/<MapFileId>/tile_<x>_<y>.jpg",
+   "description_pt": "Fundo de instâncias/espacial (BgModel).",
+   "source_ref": "decompiled/m3/scripts/com/road/yishi/bg/model/BgModel.as:36"
+  },
+  {
+   "name": "world_tile_grid",
+   "expression": "célula = floor(p/512); tile_<x>_<y>.jpg|.png.atf com pasta = mapId",
+   "description_pt": "Fundo dos mundos 1–5 (20×20 tiles).",
+   "source_ref": "decompiled/m3/scripts/map/internals3D/mapbackground/model/MapBackgroundBaseModel3D.as:13"
+  },
+  {
+   "name": "campaign_camera_clamp",
+   "expression": "x = max(min(x,-10), stageW>W ? (stageW-W)/2 : stageW-W); idem y",
+   "description_pt": "Limite da câmera em campanha (offsets negativos).",
+   "source_ref": "decompiled/m3/scripts/map/campaign/helper/mapview/CampaignMapCenterCheckHelper.as:20"
+  },
+  {
+   "name": "outer_city_camera_clamp",
+   "expression": "mapView.x ∈ [stageW − W, −30]; mapView.y ∈ [stageH − H, 0]",
+   "description_pt": "Limite da câmera na cidade externa.",
+   "source_ref": "decompiled/m3/scripts/map/outercity/helper/mapview/MapViewHelper.as:23"
+  },
+  {
+   "name": "bg_layer_clamp",
+   "expression": "x ∈ [stageW − W·scale, 0] (0 se menor que o palco); zoom 0.75–1",
+   "description_pt": "Limite do BgLayer (espacial/instâncias).",
+   "source_ref": "decompiled/m3/scripts/com/road/yishi/bg/BgLayer.as:114"
+  },
+  {
+   "name": "fog_hex",
+   "expression": "célula 110×86 px; linhas ímpares deslocadas 55; índice = linha·ceil(W/110) + coluna",
+   "description_pt": "Névoa hexagonal de campanha.",
+   "source_ref": "decompiled/core_module/scripts/map/campaign/data/CampaignMapModel.as:355"
+  },
+  {
+   "name": "secret_hex",
+   "expression": "x = 240 + 106·col − (linha ímpar ? 53 : 0); y = 160 + 70.5·linha",
+   "description_pt": "Hexágonos do Eremitério (SecretMapDataTemplates.MapDatas).",
+   "source_ref": "decompiled/m3/scripts/secretadventure/map/SecretSonMapView.as:154"
+  },
+  {
+   "name": "planes_war_cell",
+   "expression": "px = célula·100 + 300 (camadas); exército em célula·100+50; extensão (COL+6)·100 × (ROW+6)·100",
+   "description_pt": "Mapa da Guerra dos Planos (PlanesLayers.Size 'C_R').",
+   "source_ref": "decompiled/m3/scripts/planeswar/view/PlanesWarMapView.as:82"
+  },
+  {
+   "name": "crisis_minimap",
+   "expression": "mx = (X − offX)·bitmapW/(w − 2·offX)",
+   "description_pt": "Minimapa da Crise; mapa 2659×2320, offsets 305/90 (config crisis_map_coordinate).",
+   "source_ref": "decompiled/m3/scripts/crisis/ui/PlaneCrisisSmallMapView.as:102"
+  },
+  {
+   "name": "minos_grid",
+   "expression": "célula de 91 px, grade 16×10, mapa 1451×875",
+   "description_pt": "Mapa do Minos.",
+   "source_ref": "decompiled/m6/scripts/consortia/view/minos/ui/MinosMapViewUI.as:163"
+  },
+  {
+   "name": "move_speed_px",
+   "expression": "quadros = distância / velocidade; velocidade = 7 (montado: 7·(100+bônus)/100) px/quadro",
+   "description_pt": "Movimento no mapa.",
+   "source_ref": "decompiled/core_module/scripts/map/internals/utils/ArmySpeedUtils.as:14"
+  },
+  {
+   "name": "handler_range",
+   "expression": "losango de raio HandlerRange células (só andáveis); interação a ≤ max(2, range) ou range+2",
+   "description_pt": "Alcance de interação com nós.",
+   "source_ref": "decompiled/core_module/scripts/map/internals/data/SpaceNode.as:81"
+  },
+  {
+   "name": "battle_grid",
+   "expression": "x = col·150 + base ± [0,−40,−80,−120][row]; y = 570 + 60·row; base 295 (esq.) / 905 (dir.)",
+   "description_pt": "Grade de batalha 3×4.",
+   "source_ref": "decompiled/core_module/scripts/battle/utils/BattleUtils.as:124"
+  },
+  {
+   "name": "battle_camera",
+   "expression": "cena = clamp(stageW,1000,1500) × clamp(stageH,600,900); CAMERA_X = 650; CAMERA_Y = 900 − altura/2",
+   "description_pt": "Câmera de batalha.",
+   "source_ref": "decompiled/m10/scripts/battle/view/BattleView.as:104"
+  }
+ ],
+ "systems": []
+}

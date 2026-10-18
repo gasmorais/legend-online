@@ -1,0 +1,230 @@
+<style
+  name="childesal"
+  source="ui/zh_cn/swf/childesal.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="childesal.countNumTxt_t"
+      args="Arial,14,0xeee095,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childesal.countNumTxt02_t"
+      args="Arial,12,0xffffff,,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.childesal.Bgback"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childesal.lineBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childesal.getStar"
+      x="13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childesal.progressBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childesal.count"
+      x="16"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childesal.refreshBtnBack"
+      x="0"
+      y="0"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.childesal.progressShow"
+      x="20"
+      y="143" />
+    <bitmapData
+      resourceLink="asset.childesal.refreshReward"
+      x="18"
+      y="10"
+      scaleX="1"
+      scaleY="1"
+      height="20"
+      width="125" />
+    <bitmapData
+      resourceLink="asset.childesal.refreshIcon"
+      x="0"
+      y="0"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.childesal.top"
+      x="15"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childesal.starIcon"
+      x="0"
+      y="62" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childesal.topHbox"
+      spacing="20"
+      x="50"
+      y="40" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="childesal.centerHbox"
+      x="49"
+      y="175" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childesal.downHbox"
+      spacing="15"
+      x="19"
+      y="300" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="childesal.itemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="21"
+      loadingY="21"
+      x="1"
+      y="1"
+      iconWidth="40"
+      iconHeight="40" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="childesal.itemView"
+      iconStyle="childesal.itemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="42"
+      profileHeight="42"
+      showProfile="false"
+      x="0"
+      y="15" />
+    <custom
+      classname="asset.childesal.itemEffect"
+      stylename="asset.childesal.itemEffect"
+      x="-5"
+      y="-7" />
+  </customDisplay>
+  <components>
+    <component
+      classname="childesal.ChildesalFrame"
+      stylename="childesal.ChildesalFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="40"
+      titleOuterRectPosString="0,26,1"
+      width="545"
+      height="518" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="childesal.lineBack"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="510"
+      height="412" />
+    <component
+      stylename="childesal.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="childesal.lineBack,asset.childesal.Bgback,asset.childesal.lineBit,asset.childesal.getStar,asset.childesal.progressBack,asset.childesal.count,asset.childesal.bagStarIcon"
+      imageRectString="-2|510|-2|412|13,0|506|0|407|13,4|496|228|2|13,13|135|91|22|13,14|480|118|33|13,26|99|242|24|13,146|21|93|20|13"
+      x="5"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="childesal.landNodeImage"
+      resourceLink="asset.childesal.itemIcon1,asset.childesal.itemIcon2,asset.childesal.itemIcon3,asset.childesal.itemIcon4,asset.childesal.itemIcon5,asset.childesal.itemIcon6,asset.childesal.itemIcon7,asset.childesal.itemIcon8,asset.childesal.itemIcon9,asset.childesal.itemIcon10,asset.childesal.itemIcon11,asset.childesal.itemIcon12,asset.childesal.itemIcon13,asset.childesal.itemIcon14,asset.childesal.itemIcon15,asset.childesal.itemIcon16,asset.childesal.itemIcon17,asset.childesal.itemIcon18,asset.childesal.itemIcon19,asset.childesal.itemIcon20"
+      x="4"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childesal.countNumTxt01"
+      textFormatStyle="childesal.countNumTxt_t"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="175"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childesal.countNumTxt02"
+      textFormatStyle="childesal.countNumTxt_t"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="125"
+      y="268" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="childesal.refreshIconBtn"
+      backStyle="asset.childesal.refreshBtnBack"
+      iconStyle="asset.childesal.refreshIcon"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="28,99,10,17,13"
+      x="60"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="childesal.refreshRewardBtn"
+      backStyle="asset.childesal.refreshBtnBack"
+      iconStyle="asset.childesal.refreshReward"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="16,125,10,20,13"
+      x="290"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childesal.helpBtn2"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="470"
+      y="-15" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="childesal.ChildesalHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="childseal.helpTxt"
+      titleText="childseal.HelpTitle"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childesal.countNumTxt2"
+      textFormatStyle="childesal.countNumTxt02_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childesal.countNumTxt03"
+      textFormatStyle="childesal.countNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="15"
+      y="60" />
+  </components>
+</style>

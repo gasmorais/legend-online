@@ -1,0 +1,1383 @@
+<style
+  name="vehicle"
+  source="ui/zh_cn/swf/vehicle.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="VehicleStateView.Txt01_t"
+      args="Arial,14,0xffebc5,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daimonLeftView.NameTxt_t"
+      args="Arial,16,0xf3ff2d,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daimonLeftView.HpTxt_t"
+      args="Arial,14,0x50ea3c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daimonLeftView.HpTxt2_t"
+      args="Arial,14,0xfff7d0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daimonLeftView.SkillDescTxt_t"
+      args="Arial,12,0x50ea3c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daimonItemView.NameTxt_t"
+      args="Arial,12,0xf3e9c1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daimonBottomView.GradeTxt_t"
+      args="Arial,14,0x99f131,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonTrialLeftView.NameTxt_t"
+      args="Arial,14,0xf3ff2d,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonTrialLeftView.InfoTxt_t"
+      args="Arial,12,0x50ea3c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonTrialBottomView.DescTxt_t"
+      leading="0"
+      args="Arial,12,0xd7b476,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonTrialBottomView.DescTxt2_t"
+      indent="100"
+      args="Arial,12,0xb9985f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="VehicleRoom.TeamNumTxt_t"
+      args="Arial,12,0x08dfff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="VehicleRoom.CaptainNameTxt_t"
+      args="Arial,12,0x08dfff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="VehicleRoom.timeTxt_t"
+      bold="false"
+      args="Arial,36,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonSkillTip.NameTxt_t1"
+      args="Arial,14,0x38ccd9,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonSkillTip.NameTxt_t2"
+      args="Arial,14,0x38ccd9,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonSkillTip.DescTxt_t"
+      indent="0"
+      leading="0"
+      args="Arial,12,0xecdb05,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonInfoTip.NameTxt_t"
+      args="Arial,12,0xf3e9c1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonInfoTip.ValueTxt_t"
+      leading="3"
+      args="Arial,12,0xfff7d0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonInfoTip.DescTxt_t"
+      leading="0"
+      args="Arial,12,0x50ea3c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonRoomSearchFrame.SearchRoomIdText_t"
+      args="Arial,12,0xefbd61,,,,,,right"
+      letterSpacing="0"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.gradeTxt_t"
+      args="Arial,12,0xffee2f,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.scoreValueTxt_t"
+      args="Arial,12,0xffebc5,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.hpTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.numTxt_t"
+      args="Arial,14,0xffa600,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.redScoreTxt_t"
+      args="Arial,12,0xfecc1f,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.teamGrade_t"
+      args="Arial,12,0xffba14,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.teamNameTxt_t"
+      args="Arial,12,0xfff3b2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap_right.numTxt_yellow"
+      args="Arial,12,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap_right.numTxt_blue"
+      args="Arial,12,0x0190ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap_right.numTxt_green"
+      args="Arial,12,0x0b8110,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap_right.numTxt_white"
+      args="Arial,12,0xffebc5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap_right.mysort_t"
+      args="Arial,14,0xfea100,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap.myscore_t"
+      args="Arial,14,0xfea100,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehiclemap_right.returnBtnTxt_t"
+      args="Arial,14,0xfdf9ae,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonInfoTip.TitleTxt_t"
+      args="Arial,14,0xf3ff2d,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DaimonInfoTip.ConditionTxt_t"
+      args="Arial,12,0xecdb07,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehicle.sortitem.IndexTxt_t"
+      args="Arial,14,0xffebc5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehicle.sortitem.ScoreTxt_t"
+      args="Arial,14,0xffebc5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="VehicleBossDownTimeView.downTimeTxt_t"
+      leading="0"
+      args="Arial,12,0xa3dbff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vehicle.VehicleTechTxt_t"
+      args="Arial,14,0xffea00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ActiveVehicleBoxTip.DescTxt_t"
+      leading="6"
+      args="Arial,12,0xecdb05,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.vehicle.CurrentWaveIcon"
+      x="38"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.vehicle.LastMonsterNumIcon"
+      x="38"
+      y="37" />
+    <bitmapData
+      resourceLink="asset.vehicle.NextWaveTimeIcon"
+      x="12"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.vehicle.SkillClosed"
+      x="-2"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.vehicle.LearnSkillFlag"
+      x="8"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.daimon.NameBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.daimontrial.StartBtnBg"
+      x="425"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.vehicleroom.TeamNum"
+      x="84"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vehicleroom.CaptainName"
+      x="84"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.vehicleroom.Bg"
+      x="14"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.daimon.ItemLight"
+      x="-2"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.daimon.ItemSelected"
+      x="2"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.daimontrial.CountTxt"
+      x="120"
+      y="92" />
+    <bitmapData
+      resourceLink="asset.daimontrial.Line"
+      x="306"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.BottomBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.ScoreTxt"
+      x="165"
+      y="39" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.GradeBack"
+      x="133"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.TeamText"
+      x="30"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.TeamBloodBack"
+      x="1"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.TeamNullBack"
+      x="12"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.TeamCountNum" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.HurtNumber" />
+    <bitmapData
+      resourceLink="asset.vehiclemap.AddNumber" />
+    <bitmapData
+      resourceLink="asset.vehicle.RuneImg"
+      width="50"
+      height="50" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="crossBottomBar.towerImg"
+      resourceLink="asset.vehiclemap.TowerImg"
+      x="0"
+      y="0" />
+    <custom
+      stylename="asset.vehicle.VehicleBarrelAsset"
+      classname="asset.vehicle.VehicleBarrelAsset" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="DaimonTrial.StartBtn"
+      back="roomPVP.RoomRightStartBtnBack"
+      button="DaimonTrialBottomView.StartBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="439"
+      y="12" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="DaimonTrial.CancelBtn"
+      back="roomPVP.RoomRightCancelBtnBack"
+      button="DaimonTrialBottomView.CancelBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="439"
+      y="12" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DaimonLeftView.SkillItemView"
+      tipStyle="yishi.view.tips.DaimonSkillTip"
+      isFollowMouse="false"
+      tipDirctions="7,3,6,4,0,5"
+      tipGapV="0"
+      tipGapH="0"
+      iconWidth="44"
+      iconHeight="44"
+      x="139"
+      y="293"
+      width="44"
+      height="44" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehiclemap.headView"
+      x="76"
+      y="0"
+      scaleX="0.4"
+      scaleY="0.4" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehiclemap.skill01"
+      tipStyle="yishi.view.tips.DaimonSkillTip"
+      isFollowMouse="false"
+      tipDirctions="7,3,6,4,0,5"
+      tipGapV="0"
+      tipGapH="0"
+      iconWidth="44"
+      iconHeight="44"
+      x="340"
+      y="38"
+      width="44"
+      height="44" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehiclemap.skill02"
+      tipStyle="yishi.view.tips.DaimonSkillTip"
+      isFollowMouse="false"
+      tipDirctions="7,3,6,4,0,5"
+      tipGapV="0"
+      tipGapH="0"
+      iconWidth="44"
+      iconHeight="44"
+      x="396"
+      y="38"
+      width="44"
+      height="44" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehiclemap.skill03"
+      tipStyle="yishi.view.tips.DaimonSkillTip"
+      isFollowMouse="false"
+      tipDirctions="7,3,6,4,0,5"
+      tipGapV="0"
+      tipGapH="0"
+      iconWidth="44"
+      iconHeight="44"
+      x="472"
+      y="26"
+      width="44"
+      height="44" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehiclemap.teamHead"
+      iconWidth="85"
+      iconHeight="45"
+      x="0"
+      y="-3"
+      width="85"
+      height="45" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehiclemap.buffIcon"
+      iconWidth="24"
+      iconHeight="24"
+      x="0"
+      y="0"
+      width="24"
+      height="24"
+      tipStyle="com.map.vehicle.view.tips.VehicleBuffTip"
+      isFollowMouse="false"
+      tipDirctions="0,4,5"
+      tipGapV="0"
+      tipGapH="0" />
+    <custom
+      classname="asset.vehiclemap.SelectedEffect"
+      stylename="asset.vehiclemap.SelectedEffect"
+      width="312"
+      height="146"
+      y="-25" />
+    <custom
+      classname="vehicle.daimon.view.VehicleItemView"
+      stylename="vehicle.VehicleItemView"
+      tipStyle="vehicle.daimontrial.view.DaimonInfoTip"
+      isFollowMouse="false"
+      tipDirctions="1,1,6,5,2,7,0,3"
+      tipGapV="0"
+      tipGapH="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="vehiclemap.hpComponent"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false"
+      height="20"
+      width="155"
+      x="158"
+      y="63" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DaimonLeftView.MapView"
+      iconWidth="306"
+      iconHeight="236"
+      x="0"
+      y="0"
+      width="306"
+      height="236" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ActiveVehicleArmyView.skillBufferIcon"
+      iconWidth="36"
+      iconHeight="36" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="DaimonTrialBottomView.StartBtn"
+      resourceLink="asset.daimontrial.RoomRightStartBtn" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="DaimonTrialBottomView.CancelBtn"
+      resourceLink="asset.daimontrial.RoomRightCancelBtn" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="VehicleSkillListView.BackGround"
+      parentStyle="core.describeBackground_style04"
+      width="172"
+      height="172"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="VehicleStateView.BackGround"
+      parentStyle="core.describeBackground_style04"
+      width="180"
+      height="90"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="VehicleStateView.Txt01"
+      textFormatStyle="VehicleStateView.Txt01_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="114"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="VehicleSkillIcon.CloseBtn"
+      backStyle="asset.vehicle.CloseBtn"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="32"
+      y="-10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vehicle.SkillItemView"
+      tipStyle="yishi.view.tips.DaimonSkillTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      iconWidth="44"
+      iconHeight="44" />
+    <component
+      classname="vehicle.daimon.DaimonFrame"
+      stylename="vehicle.DaimonFrame"
+      parentStyle="core.Frame1"
+      width="790"
+      height="540" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="daimonFrame.BgBorder"
+      parentStyle="core.describeBackground_style13"
+      width="753"
+      height="430"
+      x="3"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daimonFrame.BgBorder2"
+      parentStyle="core.describeBackground_style11"
+      width="745"
+      height="352"
+      x="7"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daimonLeftView.NameTxt"
+      textFormatStyle="daimonLeftView.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="25"
+      x="12"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daimonLeftView.HpTxt"
+      textFormatStyle="daimonLeftView.HpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daimonLeftView.HpTxt2"
+      textFormatStyle="daimonLeftView.HpTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daimonLeftView.SkillDescTxt"
+      textFormatStyle="daimonLeftView.SkillDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="25"
+      x="11"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daimonItemView.NameTxt"
+      textFormatStyle="daimonItemView.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="144"
+      height="25"
+      x="0"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daimonFrame.describeBackground_style01"
+      resourceLink="asset.daimon.style01_scale9bg1,asset.daimon.style01_scale9bg2,asset.daimon.style01_scale9bg3,asset.daimon.style01_scale9bg4,asset.daimon.style01_scale9bg5,asset.daimon.style01_scale9bg6,asset.daimon.style01_scale9bg7,asset.daimon.style01_scale9bg8,asset.daimon.style01_scale9bg9"
+      width="747"
+      height="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daimonBottomView.GradeTxt"
+      textFormatStyle="daimonBottomView.GradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="30"
+      x="96"
+      y="29" />
+    <component
+      classname="vehicle.daimontrial.DaimonTrialFrame"
+      stylename="vehicle.DaimonTrialFrame"
+      parentStyle="core.Frame1"
+      containerX="14"
+      containerY="65"
+      width="623"
+      height="510" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="DaimonTrialLeftView.MapImage"
+      resourceLink="asset.daimontrial.map01" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="DaimonTrialLeftView.MapNameImage"
+      resourceLink="asset.daimontrial.mapname01"
+      x="10"
+      y="209" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonTrialLeftView.NameTxt"
+      textFormatStyle="DaimonTrialLeftView.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="25"
+      x="10"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonTrialLeftView.InfoTxt"
+      textFormatStyle="DaimonTrialLeftView.InfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="165"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DaimonTrialLeftView.ChangeBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.daimontrial.ChangeTxt"
+      iconInnerRectString="27,47,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="170"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="DaimonTrialFrame.Back"
+      parentStyle="core.describeBackground_style11"
+      width="583"
+      height="405"
+      x="4"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daimonFrame.describeBackground_style02"
+      resourceLink="asset.daimon.style02_scale9bg1,asset.daimon.style02_scale9bg2,asset.daimon.style02_scale9bg3,asset.daimon.style02_scale9bg4,asset.daimon.style02_scale9bg5,asset.daimon.style02_scale9bg6,asset.daimon.style02_scale9bg7,asset.daimon.style02_scale9bg8,asset.daimon.style02_scale9bg9"
+      width="575"
+      height="160" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DaimonTrialLeftView.FindBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.daimontrial.FindRoomTxt"
+      iconInnerRectString="11,76,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="321"
+      y="80"
+      width="100"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DaimonTrialLeftView.CreateBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.daimontrial.CreateRoomTxt"
+      iconInnerRectString="11,76,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="321"
+      y="27"
+      width="100"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonTrialBottomView.DescTxt"
+      textFormatStyle="DaimonTrialBottomView.DescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="100"
+      x="10"
+      y="5"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonTrialBottomView.DescTxt2"
+      textFormatStyle="DaimonTrialBottomView.DescTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="290"
+      height="140"
+      x="10"
+      y="5"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.PasswardBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.vehicleroom.PasswardTxt"
+      iconInnerRectString="26,78,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="223"
+      y="481" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.TeamBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.vehicleroom.TeamMgrTxt"
+      iconInnerRectString="27,77,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="349"
+      y="481" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.InviteBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.vehicleroom.InviteTxt"
+      iconInnerRectString="42,47,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="474"
+      y="481" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.ChangeBtn"
+      backStyle="asset.core.MiddleBlueBtn"
+      iconStyle="asset.vehicleroom.ChangeVehicleTxt"
+      iconInnerRectString="19,78,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="605"
+      y="481" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.StartBtn"
+      backStyle="asset.vehicleroom.StartBg"
+      iconStyle="asset.vehicleroom.StartTxt"
+      iconInnerRectString="33,117,18,55,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="728"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.ReadyBtn"
+      parentStyle="VehicleRoom.StartBtn"
+      iconStyle="asset.vehicleroom.ReadyTxt" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="VehicleRoom.CancelBtn"
+      parentStyle="VehicleRoom.StartBtn"
+      backStyle="asset.vehicleroom.CancelBg"
+      iconStyle="asset.vehicleroom.CancelTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="VehicleRoom.TeamNumTxt"
+      textFormatStyle="VehicleRoom.TeamNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="25"
+      x="184"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="VehicleRoom.CaptainNameTxt"
+      textFormatStyle="VehicleRoom.CaptainNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="25"
+      x="210"
+      y="33" />
+    <component
+      classname="vehicle.room.VehicleRoomFrame"
+      stylename="vehicle.VehicleRoomFrame"
+      parentStyle="colosseum.ColosseumFrame" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="VehicleItemView.OverImage"
+      resourceLink="asset.daimon.ItemLight,asset.daimon.ItemSelected" />
+    <component
+      classname="vehicle.daimontrial.DaimonRoomSearchFrame"
+      stylename="daimontrial.DaimonRoomSearchFrame"
+      parentStyle="core.Frame2"
+      width="355"
+      height="250" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="VehicleRoom.timeTxt"
+      colors="0xfff8ad,0xffd800,0xff9c00"
+      alphas="1,1,1"
+      ratios="0,68,255"
+      filterString="core.normal_f"
+      textFieldStyle="VehicleRoom.timeTxt_f"
+      mouseEnabled="false"
+      x="324"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="VehicleRoom.timeTxt_f"
+      textFormatStyle="VehicleRoom.timeTxt_t"
+      autoSize="none"
+      width="200"
+      height="41"
+      x="15"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DaimonSkillTip.totalVBox"
+      x="5"
+      y="5"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonSkillTip.NameTxt1"
+      textFormatStyle="DaimonSkillTip.NameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="175"
+      height="30"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonSkillTip.NameTxt2"
+      textFormatStyle="DaimonSkillTip.NameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="30"
+      x="40"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonSkillTip.DescTxt"
+      textFormatStyle="DaimonSkillTip.DescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="175"
+      height="65"
+      x="0"
+      y="0"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonInfoTip.TitleTxt"
+      textFormatStyle="DaimonInfoTip.TitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="12"
+      y="10"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonInfoTip.ConditionTxt"
+      textFormatStyle="DaimonInfoTip.ConditionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="168"
+      height="100"
+      x="12"
+      y="149"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonInfoTip.NameTxt"
+      textFormatStyle="DaimonInfoTip.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="12"
+      y="35"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonInfoTip.ValueTxt"
+      textFormatStyle="DaimonInfoTip.ValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="100"
+      x="83"
+      y="34"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonInfoTip.DescTxt"
+      textFormatStyle="DaimonInfoTip.DescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="168"
+      height="100"
+      x="12"
+      y="110"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DaimonLeftView.BgBorder2"
+      parentStyle="core.describeBackground_style13"
+      width="200"
+      height="345"
+      x="93"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="DaimonTrialRightView.BgBorder2"
+      parentStyle="core.describeBackground_style11"
+      width="271"
+      height="240"
+      x="-2"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DaimonRoomSearchFrame.SearchRoomIdText"
+      textFormatStyle="DaimonRoomSearchFrame.SearchRoomIdText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="90"
+      x="0"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.gradeTxt"
+      textFormatStyle="vehiclemap.gradeTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="22"
+      x="136"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.scoreValueTxt"
+      textFormatStyle="vehiclemap.scoreValueTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="80"
+      x="233"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.hpTxt"
+      textFormatStyle="vehiclemap.hpTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="155"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.numTxt"
+      textFormatStyle="vehiclemap.numTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="22"
+      x="485"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.redScoreTxt"
+      textFormatStyle="vehiclemap.redScoreTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="80"
+      x="101"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.blueScoreTxt"
+      textFormatStyle="vehiclemap.redScoreTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="80"
+      x="205"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vehiclemap.HideBtn"
+      backStyle="asset.core.HideBtnIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="6"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.teamGrade"
+      textFormatStyle="vehiclemap.teamGrade_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="25"
+      x="12"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.teamNameTxt"
+      textFormatStyle="vehiclemap.teamNameTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="80"
+      x="4"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vehiclemap.teamFlag"
+      resourceLink="asset.vehiclemap.RedFlag,asset.vehiclemap.BlueFlag"
+      x="65"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="vehiclemap.timeTxt"
+      colors="0xfff8ad,0xffd800,0xff9c00"
+      alphas="1,1,1"
+      ratios="0,68,255"
+      filterString="core.normal_f"
+      textFieldStyle="vehiclemap.timeTxt_f"
+      mouseEnabled="false"
+      x="70"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap.timeTxt_f"
+      textFormatStyle="VehicleRoom.timeTxt_t"
+      autoSize="none"
+      width="200"
+      height="41"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vehiclemap.exitBtn"
+      backStyle="asset.vehiclemap.ExitVehicle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5"
+      x="407"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap_right.numTxt"
+      textFormatStyle="vehiclemap_right.numTxt_yellow,vehiclemap_right.numTxt_blue,vehiclemap_right.numTxt_green,vehiclemap_right.numTxt_white"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="20"
+      x="-12"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap_right.nameTxt"
+      parentStyle="vehiclemap_right.numTxt"
+      autoSize="none"
+      height="20"
+      width="85"
+      x="30"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap_right.scoreTxt"
+      parentStyle="vehiclemap_right.numTxt"
+      autoSize="none"
+      height="20"
+      width="80"
+      x="109"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="vehiclemap_right.returnBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      textStyle="vehiclemap_right.returnBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="1,80,9,20"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="102"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="vehiclemap_right.sortBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      textStyle="vehiclemap_right.returnBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="2,80,9,20"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-2"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap_right.returnBtnTxt"
+      textFormatStyle="vehiclemap_right.returnBtnTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="96"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vehiclemap_right.back"
+      parentStyle="core.describeBackground_style04"
+      width="210"
+      height="270"
+      x="-14"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap_right.mysort"
+      textFormatStyle="vehiclemap_right.mysort_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="100"
+      x="2"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehiclemap_right.myscore"
+      textFormatStyle="vehiclemap.myscore_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="100"
+      x="78"
+      y="122" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="vehicle.helpFrame1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="vehicle.helpTxt01"
+      titleText="vehicle.helpFrame1.title"
+      textWidth="453" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vehiclemap.AddBtn"
+      backStyle="asset.vehiclemap.TeamNullBack"
+      iconStyle="asset.vehiclemap.AddPlayerBtn"
+      iconInnerRectString="19,28,9,27,13"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="2"
+      y="0" />
+    <component
+      classname="com.map.vehicle.view.VehicleAccountFrame"
+      stylename="vehicle.VehicleAccountFrame"
+      parentStyle="core.Frame1"
+      width="462"
+      height="485" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vehicle.SortListBg"
+      parentStyle="core.describeBackground_style04"
+      width="430"
+      height="283" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vehicle.SortListTitle"
+      resourceLink="asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="65|22|3|28|13,280|22|3|28|13"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehicle.TitleTxt"
+      textFormatStyle="sort.sortText_t"
+      filterString="core.normal_f"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="vehicle.sortlist.ScrollPanel"
+      parentStyle="pvpmap.sortlist.ScrollPanel"
+      vScrollProxy="2"
+      width="415"
+      height="270"
+      x="-6"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vehicle.ItemBgImage"
+      resourceLink="pvpmap.SortItemBg2,pvpmap.SortItemBg1"
+      width="415" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehicle.sortitem.IndexTxt"
+      textFormatStyle="vehicle.sortitem.IndexTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="10"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehicle.sortitem.ScoreTxt"
+      textFormatStyle="vehicle.sortitem.ScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="277"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vehicle.sortBg"
+      parentStyle="daimonFrame.describeBackground_style02"
+      width="422"
+      height="72" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vehicle.Image3"
+      resourceLink="asset.vehiclemap.Image3"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="-5"
+      x="298"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vehicle.Image4"
+      resourceLink="asset.vehiclemap.Image4"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="-5"
+      x="150"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vehicle.Image5"
+      resourceLink="asset.vehiclemap.Image5"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="-5"
+      x="15"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DaimonRightView.DaimonTrialBtn"
+      backStyle="asset.core.AuctionBtnBack"
+      iconStyle="asset.daimon.ChangeTxt"
+      iconInnerRectString="27,51,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="337"
+      y="293" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="VehicleBossDownTimeView.back"
+      parentStyle="core.describeBackground_style04"
+      width="250"
+      height="70"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="VehicleBossDownTimeView.downTimeTxt"
+      textFormatStyle="VehicleBossDownTimeView.downTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="60"
+      x="13"
+      y="8"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vehicel.redScreen"
+      resourceLink="asset.vehiclemap.RedScreenBMD"
+      scaleGridString="60,60,70,70" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="vehicle.ChatPopBottom"
+      resourceLink="asset.chatII.ChatPopLeftBottom2,asset.chatII.ChatPopMid2,asset.chatII.ChatPopRight2"
+      width="205"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="vehicle.ChatPopLeft"
+      resourceLink="asset.chatII.ChatPopLeftLeft2,asset.chatII.ChatPopMid2,asset.chatII.ChatPopRight2"
+      width="380"
+      height="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vehicle.VehicleTechTxt"
+      textFormatStyle="vehicle.VehicleTechTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="55"
+      height="20"
+      x="39"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vehicle.VehicleTechBg"
+      resourceLink="asset.daimon.VehicleTechBg,asset.daimon.VehicleTech"
+      imageRectString="0|97|0|46|13,5|39|0|42|13"
+      tipStyle="yishi.view.tips.DaimonSkillTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,6,4,0,5"
+      tipGapV="0"
+      tipGapH="0"
+      width="97"
+      height="46"
+      x="0"
+      y="291" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="crossBottomBar.exitBtn"
+      backStyle="asset.vehiclemap.ExitImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="28"
+      height="27"
+      x="535"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="map.buffIcon"
+      iconWidth="24"
+      iconHeight="24"
+      x="0"
+      y="0"
+      width="24"
+      height="24"
+      tipStyle="yishi.view.tips.MapVehicleBuffTip"
+      isFollowMouse="false"
+      tipDirctions="0,4,5"
+      tipGapV="0"
+      tipGapH="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vehicle.giftBoxImg"
+      resourceLink="asset.vehicle.giftBoxImg1,asset.vehicle.giftBoxImg2,asset.vehicle.giftBoxImg3,asset.vehicle.giftBoxImg4,asset.vehicle.giftBoxImg5,asset.vehicle.RuneImg,asset.vehicle.RuneImg,asset.vehicle.RuneImg"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="-5"
+      x="296"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vehiclemap_right.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="-30"
+      y="55" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="vehiclemap_right.SimpleHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="vehiclemap.view.SimpleHelpFrame.helpContent"
+      titleText="vehicle.helpFrame1.title"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ActiveVehicleBoxTip.DescTxt"
+      textFormatStyle="ActiveVehicleBoxTip.DescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      x="0"
+      y="0"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ActiveVehicleArmyView.hasHbox"
+      spacing="2"
+      autoCenter="true" />
+  </components>
+</style>

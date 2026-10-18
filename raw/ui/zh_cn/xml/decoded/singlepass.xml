@@ -1,0 +1,871 @@
+<style
+  name="singlepass"
+  source="ui/zh_cn/swf/singlepass.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.PrevFloorBtnTxt_t"
+      args="Arial,16,0xecdfa1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.OrderLinkTxt_t"
+      args="Arial,12,0x04ef25" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.order.titleTextFormat_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.order.ItemTextValueStyle1_f"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.order.ItemTextValueStyle2_f"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.order.ItemTextValueStyle3_f"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.LeftCountTxtField_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.TollgateTitleTxtField_t"
+      args="Arial,16,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.order.SinglePassOrderCloseBtnTextStyle_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.bugle.BugleCountTxt_t"
+      args="Arial,16,0xfff4c2,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.hornHasNumTxt_t"
+      args="Arial,12,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="singlepass.bugle.PointsTxt_t"
+      args="Arial,16,0xeee095,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.singlepass.BgAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.singlepass.BtnJudgeAsset"
+      x="26"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.singlepass.CardBgAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.singlepass.CardRewardAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.singlepass.CardJudgeBgAsset"
+      x="94"
+      y="138" />
+    <bitmapData
+      resourceLink="asset.singlepass.CardRightAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.singlepass.CardLightAsset"
+      x="-9"
+      y="-9" />
+    <bitmapData
+      resourceLink="asset.singlepass.CountNumberAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.singlepass.BugleIconAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.singlepass.BugleSkipTxtAsset"
+      x="680"
+      y="335" />
+    <bitmapData
+      resourceLink="asset.singlepass.BugleItemLightAsset"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="singlepass.SinglePassTollgateView"
+      stylename="singlepass.SinglePassTollgateView"
+      x="0"
+      y="0" />
+    <custom
+      classname="singlepass.order.SinglePassOrderItemView"
+      stylename="singlepass.order.SinglePassOrderItemAsset"
+      width="383"
+      height="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="singlepass.SinglePassCardItemView.Icon"
+      iconX="3"
+      iconY="3"
+      iconWidth="230"
+      iconHeight="280"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="20"
+      loadingHeight="20"
+      loadingX="115"
+      loadingY="140"
+      x="5"
+      y="3" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="singlepass.LeftCountSprite"
+      x="642"
+      y="9" />
+    <custom
+      classname="singlepass.view.SinglePassView"
+      stylename="singlepass.SinglePassView"
+      x="3"
+      y="3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="singlepass.GuardTip"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      x="5"
+      y="5" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="singlepass.RewardTip"
+      tipStyle="yishi.view.tips.SinglePassRewardTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      x="5"
+      y="55" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="singlepass.CardHitArea"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.singlepass.FlopMovieAsset"
+      stylename="singlepass.bugle.ContentMc"
+      x="250"
+      y="0" />
+    <custom
+      classname="asset.singlepass.ItemEffect"
+      stylename="singlepass.bugle.ItemEffect" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="singlepass.bugle.GoodsItem"
+      iconStyle="singlepass.bugle.GoodsItemIcon"
+      textStyle="singlepass.bugle.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="52"
+      profileHeight="52"
+      showProfile="true"
+      x="26"
+      y="60"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="0"
+      strengthenY="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="singlepass.bugle.GoodsItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="24"
+      loadingY="24"
+      x="2"
+      y="2" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="singlepass.bugle.CostContainer"
+      x="0"
+      y="130" />
+  </customDisplay>
+  <components>
+    <!-- 天穹之径 -->
+    <!-- SinglePassFrame -->
+    <component
+      classname="singlepass.SinglePassFrame"
+      stylename="singlepass.SinglePassFrame"
+      parentStyle="core.Frame1"
+      moveInnerRectString="0,60,0,45,1"
+      containerX="13"
+      containerY="65"
+      width="715"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="singlepass.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="640"
+      y="-47" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="singlepass.SinglePassHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="singlepass.view.SinglePassHelpFrame.helpContent"
+      titleText="singlepass.view.SinglePassHelpFrame.title"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="singlepass.ScaleBg"
+      parentStyle="core.describeBackground_style13"
+      x="0"
+      y="0"
+      width="688"
+      height="440" />
+    <!-- SinglePassView -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="singlepass.ChapterRewardBtn1"
+      backStyle="asset.singlepass.ChapterRewardBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.SinglePassRewardTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="30"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.ChapterRewardBtn2"
+      backStyle="asset.singlepass.ChapterRewardBack"
+      iconStyle="asset.singlepass.ChapterRewardIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="10,75,5,62,13"
+      tipStyle="yishi.view.tips.SinglePassRewardTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="30"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn1"
+      backStyle="asset.singlepass.BtnBgAsset"
+      iconStyle="asset.singlepass.BtnIconAsset1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="11,17,8,23,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn2"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset2"
+      iconInnerRectString="10,18,8,23,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn3"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset3"
+      iconInnerRectString="11,17,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn4"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset4"
+      iconInnerRectString="10,18,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn5"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset5"
+      iconInnerRectString="11,17,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn6"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset6"
+      iconInnerRectString="11,17,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn7"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset7"
+      iconInnerRectString="10,18,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn8"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset8"
+      iconInnerRectString="11,17,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn9"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset9"
+      iconInnerRectString="11,17,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.TollgateBtn10"
+      parentStyle="singlepass.TollgateBtn1"
+      iconStyle="asset.singlepass.BtnIconAsset10"
+      iconInnerRectString="4,30,8,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.PrevFloorBtn"
+      backStyle="asset.core.Style14Btn"
+      iconStyle="asset.singlepass.PrevBtnTxtAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="7,60,2,26,13"
+      width="75"
+      height="31"
+      x="245"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.NextFloorBtn"
+      parentStyle="singlepass.PrevFloorBtn"
+      iconStyle="asset.singlepass.NextBtnTxtAsset"
+      x="365" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.PrevFloorBtnTxt"
+      textFormatStyle="singlepass.PrevFloorBtnTxt_t" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.OrderLinkTxt"
+      textFormatStyle="singlepass.OrderLinkTxt_t"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="620"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="singlepass.LeftCountTxt"
+      textFieldStyle="singlepass.LeftCountTxtField"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      width="80"
+      height="22"
+      x="530"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.LeftCountTxtField"
+      textFormatStyle="singlepass.LeftCountTxtField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="80"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="singlepass.TollgateTitleBg"
+      resourceLink="asset.core.frameTitleImage2"
+      alpha="0.5"
+      x="225"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="singlepass.TollgateTitleTxt"
+      textFieldStyle="singlepass.TollgateTitleTxtField"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      width="80"
+      height="22"
+      x="271"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.TollgateTitleTxtField"
+      textFormatStyle="singlepass.TollgateTitleTxtField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="80"
+      height="22" />
+    <!-- SinglePassCardView -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="singlepass.SinglePassCardView.PrevTollgateBtn"
+      backStyle="singlepass.CardLeftAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="45"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="singlepass.CardLeftAsset"
+      resourceLink="asset.singlepass.CardRightAsset"
+      scaleX="-1"
+      x="52" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="singlepass.SinglePassCardView.NextTollgateBtn"
+      backStyle="asset.singlepass.CardRightAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="590"
+      y="130" />
+    <!-- SinglePassCardItemView -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="singlepass.SinglePassCardItemView.Guard"
+      resourceLink="asset.singlepass.CardGuardAsset1,asset.singlepass.CardGuardAsset2,asset.singlepass.CardGuardAsset3,asset.singlepass.CardGuardAsset4,asset.singlepass.CardGuardAsset5,asset.singlepass.CardGuardAsset6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="singlepass.SinglePassCardItemView.Judge"
+      resourceLink="asset.singlepass.CardJudgeAsset1,asset.singlepass.CardJudgeAsset2,asset.singlepass.CardJudgeAsset3,asset.singlepass.CardJudgeAsset4,asset.singlepass.CardJudgeAsset5"
+      x="155"
+      y="200" />
+    <!-- 天穹之径排行榜 -->
+    <component
+      classname="singlepass.order.SinglePassOrderFrame"
+      stylename="singlepass.order.SinglePassOrderFrame"
+      parentStyle="core.Frame2"
+      width="467"
+      height="458"
+      containerX="15"
+      containerY="48" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="singlepass.order.SinglePassOrderBack1"
+      parentStyle="core.describeBackground_style13"
+      width="435"
+      height="369" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="singlepass.singlePassOrderBack2"
+      parentStyle="core.describeBackground_style40"
+      width="430"
+      height="304"
+      x="3"
+      y="2" />
+    <!-- SinglePassOrderView -->
+    <!-- 
+		<component classname="com.pickgliss.ui.image.MutipleImage" stylename="singlepass.order.OrderItemBack1"
+			resourceLink="asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S" 
+			imageRectString="105|22|3|28|13,290|22|3|28|13"
+			x="4" y="3"
+		/>
+		 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.ItemTextStyle1"
+      textFormatStyle="singlepass.order.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="4"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.ItemTextStyle2"
+      textFormatStyle="singlepass.order.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="105"
+      height="20"
+      x="103"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.ItemTextStyle3"
+      textFormatStyle="singlepass.order.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="94"
+      height="20"
+      x="261"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="singlepass.order.PlayerListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,1,-2,0,3"
+      viewportInnerRectString="0,0,5,2,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|singlepass.order.SinglePassOrderItemAsset,29,383"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="420"
+      height="262"
+      x="7"
+      y="38" />
+    <!-- SinglePassOrderItemView -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="singlepass.HeroRankItemBack"
+      parentStyle="core.TitleBack_Style888"
+      width="409"
+      height="29"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="singlepass.HeroRankItemBack02"
+      parentStyle="singlepass.HeroRankItemBack"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="singlepass.order.ItemBg"
+      resourceLink=",singlepass.HeroRankItemBack02"
+      height="25"
+      x="-3"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.ItemTextValueStyle1"
+      textFormatStyle="singlepass.order.ItemTextValueStyle1_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="50"
+      height="20"
+      x="19"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.ItemTextValueStyle2"
+      textFormatStyle="singlepass.order.ItemTextValueStyle2_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="165"
+      height="20"
+      x="75"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.ItemTextValueStyle3"
+      textFormatStyle="singlepass.order.ItemTextValueStyle3_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="150"
+      height="34"
+      x="247"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="singlepass.order.ItemTextStyle2_vip"
+      textFieldStyle="singlepass.order.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="75"
+      y="5"
+      width="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="165"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="singlepass.order.SinglePassOrderCloseBtn"
+      backStyle="asset.core.Style14Btn"
+      textStyle="singlepass.order.SinglePassOrderCloseBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="19,0,4,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="75"
+      height="31"
+      x="179"
+      y="321" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.order.SinglePassOrderCloseBtnText"
+      textFormatStyle="singlepass.order.SinglePassOrderCloseBtnTextStyle_t" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="singlepass.order.ItemLine"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|250|0|2|13,331|80|0|2|13"
+      y="30" />
+    <!-- SinglePassBugleFrame -->
+    <component
+      classname="singlepass.bugle.SinglePassBugleFrame"
+      stylename="singlepass.SinglePassBugleFrame"
+      parentStyle="core.Frame1"
+      backStyle="asset.singlepass.BugleBgAsset"
+      closestyle="singlepass.SinglePassBugleFrameCloseBtn"
+      closeInnerRectString="26,148,0,26,14"
+      moveInnerRectString="0,210,0,45,1"
+      containerX="-78"
+      containerY="35"
+      width="880"
+      height="516" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="singlepass.SinglePassBugleFrameCloseBtn"
+      backStyle="asset.singlepass.CloseBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="singlepass.bugle.HelpButton"
+      backStyle="asset.singlepass.HelpBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="750"
+      y="-35" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="singlepass.SinglePassBugleHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="singlepass.view.SinglePassBugleHelpFrame.helpContent"
+      titleText="singlepass.view.SinglePassBugleHelpFrame.title"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.bugle.GoodsNameTxt"
+      textFormatStyle="core.hero_name_t1,core.hero_name_t2,core.hero_name_t3,core.hero_name_t4,core.hero_name_t5"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="105"
+      height="60"
+      x="0"
+      y="30"
+      wordWrap="true"
+      autoDisplay="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="singlepass.bugle.BugleIcon"
+      resourceLink="asset.singlepass.BugleIconAsset"
+      x="660"
+      y="356" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.bugle.BugleCountTxt"
+      textFormatStyle="singlepass.bugle.BugleCountTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="685"
+      y="356" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="singlepass.bugle.SkipBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      textStyle="singlepass.bugle.SkipBtnTxt"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      fieldX="20"
+      fieldY="0"
+      x="660"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.bugle.SkipBtnTxt"
+      textFormatStyle="singlepass.PrevFloorBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      alpha="0"
+      width="60"
+      height="22"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.bugle.StartBtn"
+      backStyle="asset.singlepass.BugleBtnBgAsset"
+      iconStyle="asset.singlepass.BugleStartTxtAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="65,62,15,30,13"
+      tipStyle="yishi.view.tips.SinglePassRewardTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="400"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.bugle.AgainBtn"
+      parentStyle="singlepass.bugle.StartBtn"
+      iconStyle="asset.singlepass.BugleAgainTxtAsset"
+      iconInnerRectString="34,124,15,30,13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="singlepass.getHornBtnBG"
+      resourceLink="asset.singlepass.getHornBtnBg01,asset.singlepass.getHornBtnBg02"
+      imageRectString="35|116|9|38|13,0|55|0|55|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="singlepass.getHornBtn"
+      backStyle="singlepass.getHornBtnBG"
+      iconStyle="asset.singlepass.getHornBtnBgTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="50,90,22,14,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="-6"
+      tipGapV="-10"
+      x="6"
+      y="381"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.hornHasNumTxt"
+      textFormatStyle="singlepass.hornHasNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="31"
+      height="20"
+      x="20"
+      y="417" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.bugle.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="10"
+      y="36"
+      autoDisplay="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="singlepass.BugleItemCostBg"
+      resourceLink="asset.singlepass.BugleItemCostBgAsset"
+      x="-7"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.bugle.PointsTxt"
+      textFormatStyle="singlepass.bugle.PointsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="22"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="singlepass.bugle.PointsIcon"
+      resourceLink="asset.core.SmallPointImg"
+      x="4"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.bugle.ItemsTxt"
+      textFormatStyle="singlepass.bugle.PointsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="20"
+      x="72"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="singlepass.bugle.ItemsIcon"
+      resourceLink="asset.singlepass.BugleIconAsset"
+      x="49"
+      y="0" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="singlepass.RiverNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="singlepass.RiverNotAlert_confirmStyle"
+      cancelStyle="singlepass.RiverNotAlert_cancelStyle"
+      checkStyle="singlepass.RiverNotAlertCheckBtn"
+      describeStyle="singlepass.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="singlepass.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="8"
+      containerY="30"
+      usebindPointStyle="singlepass.UseBindPointBtn"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="400"
+      height="210"
+      notJoinActPromptStyle="singlepass.notJoinActPromptTxt"
+      showJoinActPrompt="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.notJoinActPromptTxt"
+      textFormatStyle="campaign.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="25"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="singlepass.RiverNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="70"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="singlepass.RiverNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="210"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="singlepass.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="40"
+      x="0"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="singlepass.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="singlepass.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="55" />
+  </components>
+</style>

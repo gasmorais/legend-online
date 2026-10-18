@@ -1,0 +1,521 @@
+<style
+  name="castle"
+  source="ui/zh_cn/swf/castle.swf">
+  <sets>
+    <!-- 建筑描述文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.BuildNameTxt_t"
+      args="Arial,12,0xffffe2,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.BuildLevelTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.CurrentTxt_t"
+      args="Arial,12,0xe1e1e1,"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.CurrentValueTxt_t"
+      args="Arial,12,0x9bff24,"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.ResourceValueTxt_t"
+      args="Arial,12,0xe9d0a4,"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.DialogName_t"
+      args="Arial,14,0xfafa84,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="castle.DialogContent_t"
+      args="Arial,14,0xffffcb,"
+      letterSpacing="1"
+      leading="8" />
+    <set
+      args="0x000000,1,3,3,100"
+      stylename="castle.TimeBoxFilter_1"
+      type="flash.filters.GlowFilter" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="core.BuyNumTextStyle_f"
+      args="0xff3c00,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="core.BuyNumTextStyle_t"
+      args="Arial,14,0xfffd7d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mineField.remainCount_t"
+      args="Arial,12,0xe7c88b,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mineField.remainCountNum_t"
+      args="Arial,12,0xfff600,true,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <!--背景-->
+    <bitmapData
+      resourceLink="asset.castle.InnerCityBgAsset1" />
+    <bitmapData
+      resourceLink="asset.castle.InnerCityBgAsset2" />
+    <!--建筑框-->
+    <bitmapData
+      resourceLink="asset.castle.buildingBoxImg"
+      x="20" />
+    <!--升级文字-->
+    <bitmapData
+      resourceLink="asset.castle.upgradeImg"
+      x="28"
+      y="9" />
+    <!--store.png-->
+    <bitmapData
+      resourceLink="asset.castle.InnerCityStoreIcon" />
+    <!--arena.png-->
+    <bitmapData
+      resourceLink="asset.castle.InnerCityArenaIcon" />
+    <bitmapData
+      resourceLink="asset.castle.TimeIcon"
+      x="370"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.castle.ResourceIcon"
+      x="200"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_1"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_3"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_4"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_5"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_6"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_7"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIcon_8"
+      x="78"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.castle.BuildNameBack1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.castle.BuildNameBack2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.castle.DialogIconBack"
+      x="65"
+      y="107" />
+    <bitmapData
+      resourceLink="asset.castle.BorderMaskVAsset" />
+    <bitmapData
+      resourceLink="asset.castle.BorderMaskHAsset" />
+    <bitmapData
+      resourceLink="asset.castle.SeminaryAsset" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.castle.DialogIconMask"
+      stylename="castle.DialogIconMask"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.castle.BgAnimalAsset"
+      stylename="castle.BgAnimal" />
+    <custom
+      classname="asset.castle.BuildLevelUpEffectMC"
+      stylename="castle.BuildLevelUpEffectMC" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="castle.BuildIcon"
+      tipDirctions="7,5,2,6,4,1"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.BuildTip"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="35"
+      loadingY="35"
+      iconWidth="70"
+      iconHeight="65"
+      x="27"
+      y="8" />
+    <!-- 可操作动画 -->
+    <custom
+      classname="asset.castle.HasOperEffect1"
+      stylename="castle.HasOperEffect"
+      x="440"
+      y="130" />
+  </customDisplay>
+  <components>
+    <!-- 内城背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.InnerCityBg1"
+      resourceLink="asset.castle.InnerCityBgAsset1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.InnerCityBg2"
+      resourceLink="asset.castle.InnerCityBgAsset2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="castle.NameBack1"
+      resourceLink="asset.castle.BuildNameBack1"
+      scaleGridString="20,5,60,12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="castle.NameBack2"
+      resourceLink="asset.castle.BuildNameBack2"
+      scaleGridString="10,0,28,24" />
+    <!-- 建筑描述名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.BuildNameTxt1"
+      textFormatStyle="castle.BuildNameTxt_t"
+      filterString="castle.TimeBoxFilter_1"
+      autoSize="left"
+      width="42"
+      height="20"
+      x="21"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.BuildLevelTxt"
+      textFormatStyle="castle.BuildLevelTxt_t"
+      filterString="castle.TimeBoxFilter_1"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="4"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.BuildNameTxt2"
+      textFormatStyle="castle.BuildNameTxt_t"
+      filterString="castle.TimeBoxFilter_1"
+      x="5"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.DialogName"
+      textFormatStyle="castle.DialogName_t"
+      filterString="castle.TimeBoxFilter_1"
+      x="240"
+      y="164" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.DialogContent"
+      textFormatStyle="castle.DialogContent_t"
+      filterString="castle.TimeBoxFilter_1"
+      autoSize="none"
+      width="370"
+      height="80"
+      multiline="true"
+      wordWrap="true"
+      x="236"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="castle.DialogBtn"
+      backStyle="asset.castle.DialogBtn"
+      x="598"
+      y="142"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.RoleDialogArror"
+      resourceLink="asset.core.RoleDialogArror"
+      x="217"
+      y="140" />
+    <!--基础的建筑弹框Frame-->
+    <component
+      classname="buildings.BaseBuildFrame"
+      stylename="buildings.BaseBuildFrame"
+      parentStyle="core.Frame1"
+      width="400"
+      height="435" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="castle.DescribeBackground"
+      parentStyle="core.describeBackground_style04"
+      x="116"
+      y="5"
+      width="206"
+      height="71" />
+          /&gt;
+          <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="castle.UpgradeBuildBtn"
+      backStyle="asset.core.UpgradeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="630"
+      y="14" /><!--间隔线9宫格--><component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="castle.LineBg"
+      parentStyle="core.SpliceLine_01"
+      y="81" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.CurrentTxt"
+      textFormatStyle="castle.CurrentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="124"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.CurrentValueTxt"
+      textFormatStyle="castle.CurrentValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="185"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.NextTxt"
+      textFormatStyle="castle.CurrentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="124"
+      y="32" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.NextValueTxt"
+      textFormatStyle="castle.CurrentValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="185"
+      y="32" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.ResourceTxt"
+      textFormatStyle="castle.CurrentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="124"
+      y="52" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.TimeTxt"
+      textFormatStyle="castle.CurrentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="276"
+      y="52" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.ResourceValueTxt"
+      textFormatStyle="castle.ResourceValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="275"
+      y="52" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.TimeValueTxt"
+      textFormatStyle="castle.ResourceValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="64"
+      height="20"
+      x="395"
+      y="52" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="castle.MaxGrade"
+      textFormatStyle="tips.buildnextgrade_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="235"
+      y="40" /><!-- 购买数量 --><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.BuyNumTextStyle"
+      textFormatStyle="core.BuyNumTextStyle_t"
+      autoSize="none"
+      x="100"
+      y="163"
+      height="20"
+      width="76"
+      type="input"
+      restrict="0-9"
+      filterString="core.BuyNumTextStyle_f" /><!--公会信息Frame--><component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="core.ConsortiaInfoFrameBg"
+      resourceLink="core.FrameBackgoundBase2,core.FameBottomImage,core.FrameTitleImage2"
+      imageRectString="-18|-15|0|23|0,16|20|53|58|4,229|17|17|0|9" /><component
+      classname="gvg.view.test.TestGvg"
+      stylename="core.TestGvg"
+      parentStyle="core.Frame2"
+      backStyle="core.ConsortiaInfoFrameBg"
+      moveEnable="true"
+      width="350"
+      height="150" /><component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="castle.DialogIconBack"
+      parentStyle="core.style29_scale9bg"
+      width="400"
+      height="145"
+      x="217"
+      y="147" /><component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="castle.alchemyBtn"
+      backStyle="asset.core.alchemyBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="410"
+      y="14" /><component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="castle.soulBtn"
+      backStyle="asset.core.soulBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="403"
+      y="14" /><!--紫晶矿场 Frame--><component
+      classname="mineField.MineFieldFrame"
+      stylename="mineField.MineFieldFrame"
+      parentStyle="core.Frame2"
+      width="352"
+      height="482"
+      containerX="10"
+      containerY="40"
+      titleOuterRectPosString="0,13,1" /><component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="mineField.backLine"
+      width="330"
+      height="397"
+      x="0"
+      y="5"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9" /><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mineField.contentBack"
+      resourceLink="asset.minefield.contentBack"
+      x="3"
+      y="8" /><!-- 下部背景 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mineField.bottomBg"
+      resourceLink="asset.minefield.bottomBg"
+      x="2"
+      y="337" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mineField.remainCount"
+      textFormatStyle="mineField.remainCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="20"
+      x="50"
+      y="316" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mineField.remainCountNum"
+      textFormatStyle="mineField.remainCountNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="20"
+      x="255"
+      y="316" /><component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mineField.mineFieldEnterBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.minefield.field"
+      width="114"
+      height="42"
+      iconInnerRectString="16,81,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="39"
+      y="348" /><component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mineField.mineFieldShopBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.minefield.shop"
+      width="114"
+      height="42"
+      iconInnerRectString="16,81,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="177"
+      y="348" /><custom
+      classname="mainBar.StripView"
+      stylename="castle.SeminaryStripView"
+      x="696"
+      y="-58"
+      tipStyle="yishi.view.tips.WaterTreeTip"
+      tipDirctions="6,7,5,4"
+      tipGapV="-160"
+      tipGapH="-5"
+      isFollowMouse="false" /><!-- 提示图标/放大镜 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.maze"
+      resourceLink="asset.castle.maze"
+      x="-2"
+      y="-3" /><!-- 提示图标/金币 (2) --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.gold"
+      resourceLink="asset.castle.gold"
+      x="-7"
+      y="-5" /><!-- 提示图标/可收获 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.pick"
+      resourceLink="asset.castle.pick"
+      x="-5"
+      y="-8" /><!-- 提示图标/矿车 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.mineCar"
+      resourceLink="asset.castle.mineCar"
+      x="-3"
+      y="-6" /><!-- 提示图标/掠夺 (2) --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.rob"
+      resourceLink="asset.castle.rob"
+      x="-5"
+      y="-7" /><!-- 提示图标/猫屋 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.catHouse"
+      resourceLink="asset.castle.catHouse"
+      x="-4"
+      y="-5" /><!-- 提示图标/药瓶 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.dye"
+      resourceLink="asset.castle.dye"
+      x="-5"
+      y="-7" /><!-- 提示图标/指南针 --><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.magicHotel"
+      resourceLink="asset.castle.magicHotel"
+      x="-4"
+      y="-7" /><!--提示图标/神学院--><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="castle.seminary"
+      resourceLink="asset.castle.seminary"
+      x="-4"
+      y="-7" /></components>
+</style>

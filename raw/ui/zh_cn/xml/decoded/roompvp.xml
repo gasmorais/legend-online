@@ -1,0 +1,306 @@
+<style
+  name="roompvp"
+  source="ui/zh_cn/swf/roompvp.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_1"
+      args="Arial,14,0xffe505,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_2"
+      args="Arial,14,0xdacba2,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_3"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_4"
+      args="Arial,12,0xffa535,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_6"
+      args="Arial,30,0xfff4c2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_7"
+      args="Arial,12,0xbae800,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_8"
+      args="Arial,12,0xfcc64d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_9"
+      args="Arial,24,0xfff4c2,true,,,,,center"
+      letterSpacing="4" />
+    <set
+      type="flash.filters.ColorMatrixFilter"
+      stylename="roomPVP.GrayFilter"
+      args="0.5,0.69,0.31,0,0,0.5,0.69,0.31,0,0,0.5,0.69,0.31,0,0,0,0,0,1,0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="roomPVP.normal_f_2"
+      args="0xff0000,1,3,3,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.format_10"
+      args="Arial,14,0xFFF4C2,true,,,,,center"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <!-- 房间右边框 -->
+    <bitmapData
+      resourceLink="asset.roomPVP.timeBG"
+      x="22"
+      y="276"
+      width="258" />
+    <bitmapData
+      resourceLink="asset.roomPVP.timeFontBG"
+      x="44"
+      y="307" />
+    <bitmapData
+      resourceLink="asset.roomPVP.RoomNumberFont"
+      x="33"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.roomPVP.playerNumberFont"
+      x="176"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.roomPVP.BackBmp"
+      x="28"
+      y="21"
+      width="247"
+      height="322" />
+    <bitmapData
+      resourceLink="asset.roomPVP.RankTips1"
+      x="45"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.roomPVP.RankTips2"
+      x="0"
+      y="15" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="room.view.pvp.PVPRoomView"
+      stylename="roomPVP.PVPRoomView"
+      x="0"
+      y="0" />
+    <custom
+      classname="room.view.pvp.PVPRoomRightView"
+      stylename="roomPVP.PVPRoomRightView"
+      x="700"
+      y="10" />
+    <custom
+      classname="room.view.anteroom.PVPAnteroomView"
+      stylename="roomPVP.AnteroomView" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="roomPVP.PlayerFigure_4"
+      x="1220"
+      y="120" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="roomPVP.PlayerFigure_3"
+      x="990"
+      y="187" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="roomPVP.PlayerFigure_2"
+      x="700"
+      y="187" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="roomPVP.PlayerFigure_1"
+      x="430"
+      y="120" />
+    <custom
+      classname="asset.baseroom.RoomPosReady"
+      stylename="asset.baseroom.RoomPosReady" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="roomPVP.NodeSp"
+      x="21"
+      y="79" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="roomPVP.roomRight.StartBtn"
+      back="roomPVP.RoomRightStartBtnBack"
+      button="roomPVP.RoomRightStartBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="352"
+      backStyle="asset.baseroom.RoomRightStartBtn" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="roomPVP.roomRight.ReadyBtn"
+      back="roomPVP.RoomRightStartBtnBack"
+      button="roomPVP.RoomRightReadyBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="352"
+      backStyle="asset.baseroom.RoomRightReadyBtn"
+      parentStyle="roomPVP.roomRight.StartBtn" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="roomPVP.roomRight.CancelBtn"
+      back="roomPVP.RoomRightCancelBtnBack"
+      button="roomPVP.RoomRightCancelBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="352"
+      backStyle="asset.baseroom.RoomRightCancelBtn"
+      parentStyle="roomPVP.roomRight.StartBtn" />
+    <custom
+      classname="asset.roomPVP.RoomRightBG"
+      stylename="asset.roomPVP.RoomRightBG"
+      x="2"
+      y="-140" />
+    <custom
+      classname="room.view.RoomReadyTopView"
+      stylename="roomPVP.RoomReadyTopView" />
+  </customDisplay>
+  <components>
+    <!-- 准备按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="roomPVP.RoomRightReadyBtn"
+      resourceLink="asset.baseroom.RoomRightReadyBtn" />
+    <!-- 取消按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="roomPVP.RoomRightCancelBtnBack"
+      resourceLink="asset.baseroom.RoomRightCancelBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="roomPVP.RoomRightCancelBtn"
+      resourceLink="asset.baseroom.RoomRightCancelBtn" />
+    <!-- 开始按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="roomPVP.RoomRightStartBtnBack"
+      resourceLink="asset.baseroom.RoomRightStartBtnBack"
+      x="61"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="roomPVP.RoomRightStartBtn"
+      resourceLink="asset.baseroom.RoomRightStartBtn" />
+    <!-- pvp -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="roomPVP.roomRight.PvpLockBtn"
+      parentStyle="core.checkBtnStyle_3"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-10"
+      x="-10"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="roomPVP.roomRight.InviteBtn"
+      backStyle="asset.baseroom.RoomRightInviteBtn"
+      x="15"
+      y="377"
+      parentStyle="roomPVP.roomRight.StartBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="roomPVP.roomRight.TeamSortBtn"
+      parentStyle="roomPVP.roomRight.InviteBtn"
+      backStyle="asset.baseroom.RoomRightSortBtn"
+      x="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.roomRight.roomNumber"
+      textFormatStyle="roomPVP.format_2"
+      filterString="core.normal_f"
+      x="83"
+      y="35"
+      width="84"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.roomRight.roomPeopleNumber"
+      x="241"
+      parentStyle="roomPVP.roomRight.roomNumber" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.roomRight.titleTxt"
+      textFormatStyle="roomPVP.format_1"
+      filterString="roomPVP.normal_f_2"
+      x="115"
+      y="11"
+      width="84"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.anterRoom.nameTxt"
+      textFormatStyle="room.format_white,room.format_Green,room.format_Blue"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="-245"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.anterRoom.consortiaTxt"
+      textFormatStyle="room.format_white,room.format_Green,room.format_Blue"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="-245"
+      width="200"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.roomRight.timeTxt"
+      textFormatStyle="roomPVP.format_6"
+      filterString="core.normal_f"
+      x="29"
+      y="282"
+      autoSize="none"
+      width="246"
+      height="50" />
+    <!-- 联赛排名 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="roomPVP.anterRoom.RankGroupTips"
+      resourceLink="asset.roomPVP.RankGroup1,asset.roomPVP.RankGroup2,asset.roomPVP.RankGroup3,asset.roomPVP.RankGroup4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomPVP.anterRoom.RankTxt"
+      textFormatStyle="roomPVP.format_10"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="40"
+      y="10"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="roomPVP.roomRight.StartBtn"
+      backStyle="asset.baseroom.RoomRightStartBtn"
+      x="178"
+      y="375"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,roomPVP.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="roomPVP.roomRight.ReadyBtn"
+      backStyle="asset.baseroom.RoomRightReadyBtn"
+      parentStyle="roomPVP.roomRight.StartBtn"
+      x="142"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="roomPVP.roomRight.CancelBtn"
+      backStyle="asset.baseroom.RoomRightCancelBtn"
+      parentStyle="roomPVP.roomRight.StartBtn"
+      x="142"
+      y="352" />
+  </components>
+</style>

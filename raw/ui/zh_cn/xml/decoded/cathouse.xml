@@ -1,0 +1,230 @@
+<style
+  name="cathouse"
+  source="ui/zh_cn/swf/cathouse.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="cathouse.materialTxt_t1"
+      args="Arial,12,0xe1d598,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cathouse.materialTxt_t2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cathouse.exchangeItemName_t"
+      args="Arial,14,0xfedd00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cathouse.exchangeItemNum_t"
+      args="Arial,12,0x3cfe00,,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.cathouse.numBg"
+      x="-6"
+      y="-4" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="cathouse.CatCourtyard"
+      stylename="cathouse.CatCourtyard"
+      x="2"
+      y="2" />
+    <custom
+      classname="cathouse.CatHouseCurrencyBar"
+      stylename="cathouse.CatHouseCurrencyBar"
+      x="12"
+      y="10" />
+    <custom
+      classname="cathouse.CatHouseCurrencyItem"
+      stylename="cathouse.CatHouseCurrencyItem" />
+    <custom
+      classname="cathouse.CatObjectPutConatiner"
+      stylename="cathouse.CatObjectPutConatiner" />
+    <custom
+      classname="asset.cathouse.cycle"
+      stylename="cathouse.CatToyBlock.cycle" />
+    <custom
+      classname="cathouse.CatHouseExchangeItem"
+      stylename="cathouse.CatHouseExchangeItem" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="cathouse.btnsContainer"
+      x="530"
+      y="432" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="cathouse.fortuneCatCountContainer"
+      x="40"
+      y="-12" />
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="cathouse.MultipleLineTip"
+      enableHtml="true"
+      contentWidth="150" />
+    <custom
+      classname="yishi.view.tips.CatRewardTips"
+      stylename="cathouse.CatRewardTips" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="cathouse.ItemBaseItemView"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      tipStyle="yishi.view.tips.CatToyTips"
+      iconStyle="shop.ItemBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="12"
+      y="12" />
+  </customDisplay>
+  <components>
+    <!-- 按钮 -->
+    <component
+      classname="cathouse.CatHouseFrame"
+      stylename="cathouse.CatHouseFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="62"
+      width="786"
+      height="620" />
+    <component
+      classname="cathouse.CatHouseExchangeFame"
+      stylename="cathouse.CatHouseExchangeFame"
+      parentStyle="core.Frame1"
+      containerX="3"
+      containerY="31"
+      backStyle="cathouse.CatHouseExchangeFame.bg"
+      closestyle="cathouse.CloseBtn"
+      closeInnerRectString="28,-5,-5,28,14"
+      moveInnerRectString="0,80,10,35,1"
+      titleOuterRectPosString="0,9,1"
+      width="395"
+      height="454" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cathouse.CatHouseExchangeFame.bg"
+      resourceLink="cathouse.CatHouseExchangeFame.back,asset.cathouse.ExchangeTitleBack"
+      imageRectString="0|0|0|0|0,96|204|6|26|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="cathouse.CatHouseExchangeFame.back"
+      resourceLink="asset.cathouse.ExchangeScaleBack"
+      scaleGridString="5,5,50,50"
+      width="395"
+      height="454" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="cathouse.CloseBtn"
+      backStyle="asset.cathouse.ExchangeCloseBtn" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="cathouse.border"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="750"
+      height="515" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="cathouse.materialIcon"
+      resourceLink="asset.cathouse.muban,asset.cathouse.masheng,asset.cathouse.rongbu,asset.cathouse.baozhi,asset.cathouse.mianhua,asset.cathouse.yumao,asset.cathouse.maobohe,asset.core.SmallGoldIcon,asset.core.SmallPointImg,asset.cathouse.GiftIconAsset"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cathouse.materialTxt"
+      textFormatStyle="cathouse.materialTxt_t1,cathouse.materialTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="25"
+      y="1"
+      width="33"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="catHouse.toyEventIcon"
+      resourceLink="asset.cathouse.toyRepairEvent" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cathouse.exchangeItemName"
+      textFormatStyle="cathouse.exchangeItemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="123"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cathouse.exchangeItemBtn"
+      backStyle="asset.cathouse.ExchangeBtnImg"
+      iconStyle="asset.cathouse.ExchangeTxtImg"
+      iconInnerRectString="19,48,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="291"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cathouse.plantItemBtn"
+      backStyle="asset.cathouse.ExchangeBtnImg"
+      iconStyle="asset.cathouse.PlantTxtImg"
+      iconInnerRectString="19,48,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="291"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="catHouse.exchangeItemHBox"
+      x="83"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cathouse.courtyardLayBtn"
+      backStyle="asset.cathouse.layBtnImg"
+      iconStyle="asset.cathouse.layTxtImg"
+      iconInnerRectString="29,54,12,25,13"
+      offSetY="-2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="35"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cathouse.courtyardRemoveBtn"
+      backStyle="asset.cathouse.removeBtnImg"
+      iconStyle="asset.cathouse.removeTxtImg"
+      iconInnerRectString="29,54,12,25,13"
+      offSetY="-2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="35"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cathouse.courtyardHarvestBtn"
+      backStyle="asset.cathouse.harvestBtnImg"
+      iconStyle="asset.cathouse.harvestTxtImg"
+      iconInnerRectString="29,54,12,25,13"
+      offSetY="-2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="35"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cathouse.exchangeItemNum"
+      textFormatStyle="cathouse.exchangeItemNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="226"
+      y="56" />
+  </components>
+</style>

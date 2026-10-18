@@ -1,0 +1,236 @@
+<style
+  name="foisonhorn"
+  source="ui/zh_cn/swf/foisonhorn.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHornFrame.timeTxt_t"
+      args="Arial,12,0x16f01b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHornFrame.totalCountTxt_t"
+      args="Arial,15,0x16f01b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHornFrame.ruleTxt_t"
+      args="Arial,12,0xdacc93,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHorn.tips.titleTxt_t"
+      args="Arial,14,0xffdd83,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHorn.tips.contentTxt_t"
+      args="Arial,12,0x878685,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHorn.tips.goodsTxt_t"
+      args="Arial,12,0x878685,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHornItem.processText_t1"
+      args="arial,12,0x16F01B,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="foisonHornItem.processText_t2"
+      args="arial,12,0xff0000,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.FoisonHornFrame.frameBack"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.FoisonHornFrame.frameTitle"
+      x="130"
+      y="-135" />
+    <bitmapData
+      resourceLink="asset.FoisonHornFrame.timeBmp"
+      x="280"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.FoisonHornFrame.ruleBmp"
+      x="280"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.FoisonHornFrame.countBmp"
+      x="10"
+      y="370" />
+    <bitmapData
+      resourceLink="asset.FoisonHornFrame.rewardIcon"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="foisonhorn.FoisonHornItem"
+      stylename="foisonhorn.FoisonHornItem" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="foisonHornFrame.rewardStripView"
+      x="93"
+      y="45"
+      tipStyle="yishi.view.tips.FoisonHornRewardTips"
+      tipDirctions="3"
+      tipGapV="0"
+      tipGapH="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="foisonHornItem.itemView"
+      iconStyle="foisonHornItem.itemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="3"
+      profileY="3"
+      profileWidth="55"
+      profileHeight="55"
+      showProfile="true"
+      x="0"
+      y="0"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="foisonHornItem.itemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="28"
+      loadingY="28"
+      x="3"
+      y="3" />
+  </customDisplay>
+  <components>
+    <component
+      classname="foisonhorn.FoisonHornFrame"
+      stylename="foisonhorn.FoisonHornFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="68"
+      width="710"
+      height="520" />
+    <component
+      stylename="foisonHornFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="673"
+      height="402"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="foisonHornItem.activatingBtn"
+      backStyle="asset.FoisonHornFrame.activatingBtnBmp"
+      iconStyle="asset.FoisonHornFrame.activatingBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="0,64,0,29,13"
+      x="0"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="foisonHornItem.activatedBtn"
+      backStyle="asset.FoisonHornFrame.activatedBtnBmp"
+      iconStyle="asset.FoisonHornFrame.activatedBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="0,64,0,29,13"
+      x="0"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHornFrame.timeTxt"
+      textFormatStyle="foisonHornFrame.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="20"
+      x="280"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHornFrame.totalCountTxt"
+      textFormatStyle="foisonHornFrame.totalCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="170"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHornFrame.ruleTxt"
+      textFormatStyle="foisonHornFrame.ruleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="200"
+      wordWrap="true"
+      x="280"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHorn.tips.titleTxt"
+      textFormatStyle="foisonHorn.tips.titleTxt_t"
+      filterString="core.normal_f"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHorn.tips.contentTxt"
+      textFormatStyle="foisonHorn.tips.contentTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="10"
+      y="27"
+      width="360"
+      wordWrap="true"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHorn.tips.goodsTxt"
+      textFormatStyle="foisonHorn.tips.goodsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="55"
+      wordWrap="true"
+      width="360"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="foisonHornItem.processText"
+      textFormatStyle="foisonHornItem.processText_t1,foisonHornItem.processText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="0"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="foisonHornFrame.activeBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.FoisonHornFrame.activatingBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="33,64,8,29,13"
+      x="400"
+      y="348" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="foisonHornFrame.hasActiveBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.FoisonHornFrame.activatedBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="33,64,8,29,13"
+      x="400"
+      y="348" />
+  </components>
+</style>

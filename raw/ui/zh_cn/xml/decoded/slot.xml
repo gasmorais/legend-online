@@ -1,0 +1,211 @@
+<style
+  name="slot"
+  source="ui/zh_cn/swf/slot.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="slot.slotFrame.participateDayText_t"
+      args="Arial,14,0xfbf0d0,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.slot.slotFrame.daysbmp"
+      x="165"
+      y="226" />
+    <bitmapData
+      resourceLink="asset.slot.numberpng" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_0"
+      x="74"
+      y="111" />
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_1"
+      x="118"
+      y="111" />
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_2"
+      x="168"
+      y="111" />
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_3"
+      x="214"
+      y="111" />
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_4"
+      x="264"
+      y="111" />
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_5"
+      x="312"
+      y="111" />
+    <custom
+      classname="asset.slot.slotResult1"
+      stylename="asset.slot.slotResult_6"
+      x="356"
+      y="111" />
+    <custom
+      classname="asset.slot.pull"
+      stylename="asset.slot.pull" />
+    <custom
+      classname="asset.slot.light"
+      stylename="asset.slot.light" />
+  </customDisplay>
+  <components>
+    <component
+      classname="slot.SlotFrame"
+      stylename="slot.SlotFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="slot.slotFrameBG"
+      moveInnerRectString="120,120,15,35,1"
+      titleOuterRectPosString="0,18,1"
+      closeInnerRectString="29,34,29,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="35"
+      containerY="40"
+      width="549"
+      height="472" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="slot.slotFrameBG"
+      resourceLink="asset.slot.slotFrameBG" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="slot.slotFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="425"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="slot.slotFrame.rewardTxtImage"
+      resourceLink="asset.slot.slotFrame.rewardTxt"
+      x="37"
+      y="287" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="slot.slotFrame.rewardValueBg"
+      resourceLink="asset.slot.slotFrame.rewardValueBg"
+      x="35"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="slot.slotFrame.getRewardBtn"
+      backStyle="asset.slot.slotFrame.getRewardBtnBg"
+      iconStyle="asset.slot.slotFrame.getRewardBtnTXT"
+      iconInnerRectString="39,108,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="144"
+      y="338" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="slot.slotFrame.addBtnBg"
+      resourceLink="asset.slot.slotFrame.addBtnBg"
+      scaleGridString="10,5,40,6"
+      width="75"
+      height="26" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="slot.slotFrame.addBtn"
+      backStyle="slot.slotFrame.addBtnBg"
+      iconStyle="asset.slot.slotFrame.addBtnTxt"
+      iconInnerRectString="6,39,1,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="222" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="slot.slotFrame.rollBtn"
+      backStyle="asset.core.Style18Btn"
+      textStyle="core.outercity.OccupationPawnBaseCellNameText"
+      autoSizeAble="false"
+      backgoundInnerRectString="15,8,9,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="37"
+      x="366"
+      y="7" />
+    <component
+      classname="yishi.view.component.MovieButton2"
+      stylename="slot.slotFrame.pullBtn"
+      movie="asset.slot.pull"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="52"
+      height="219"
+      x="393"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="slot.slotFrame.participateDayTxt"
+      textFormatStyle="slot.slotFrame.participateDayText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="64"
+      x="234"
+      y="226" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="slot.useBindAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      checkStyle="slot.useBindAlert.checkBtn"
+      describeStyle="slot.useBindAlert.describe"
+      confirmStyle="slot.AlertConfirmBtn"
+      cancelStyle="slot.AlertCancleBtn"
+      width="300"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="slot.useBindAlert.checkBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="5"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="slot.useBindAlert.describe"
+      parentStyle="core.ThewDescribeTxt"
+      width="250"
+      height="50"
+      autoSize="left"
+      x="42"
+      y="-18" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="slot.AlertConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="10"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="slot.AlertCancleBtn"
+      parentStyle="core.AlertButton_2"
+      x="145"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="slot.rewardType"
+      resourceLink="asset.slot.gold,asset.slot.soul,asset.slot.guangjing,asset.slot.diamond"
+      x="400"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="slot.noticeTxt"
+      colors="0xfff8ad,0xfff8ad"
+      alphas="1,1"
+      ratios="0,255"
+      x="55"
+      y="35" />
+  </components>
+</style>

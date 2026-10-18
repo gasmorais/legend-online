@@ -1,0 +1,1716 @@
+{
+ "player": {
+  "player_id": 1,
+  "nick_name": "Jogador",
+  "sex": 1,
+  "pic": 1,
+  "camp": 1,
+  "grades": 60,
+  "job": 1,
+  "novice_process": 99900,
+  "server_name": "Local",
+  "point": 1000,
+  "gift_token": 0,
+  "state": 0,
+  "fighting_capacity": 25000,
+  "bag_count": 48,
+  "consortia_id": 0,
+  "gp": 0,
+  "weary": 100
+ },
+ "rules": [
+  {
+   "on": 20001,
+   "req": "LoginReqMsg",
+   "send": [
+    {
+     "code": 3,
+     "msg": "PlayerMsg",
+     "data": "$player"
+    }
+   ],
+   "set": {
+    "mount": 1003
+   }
+  },
+  {
+   "on": 8224,
+   "req": "PlayerDataMsg",
+   "if": {
+    "user": true,
+    "castle": null,
+    "build": null
+   },
+   "send": [
+    {
+     "code": 6,
+     "msg": "LoginStateMsg",
+     "data": {
+      "player_id": "$player.player_id",
+      "state": 0
+     }
+    },
+    {
+     "code": 4595,
+     "msg": "RoomEnterMsg",
+     "data": {
+      "result": 1,
+      "player": [
+       {
+        "room_id": 10000,
+        "player_id": "$player.player_id",
+        "nick_name": "$player.nick_name",
+        "grades": "$player.grades",
+        "sex": "$player.sex",
+        "campaign_id": 10000,
+        "cur_pos_x": 175,
+        "cur_pos_y": 98,
+        "online_state": true,
+        "hero_id": 1,
+        "army_id": 1,
+        "template_id": 1,
+        "head_id": 1,
+        "fighting_capacity": "$player.fighting_capacity",
+        "server_name": "$player.server_name",
+        "player_state": 0,
+        "army_state": 0,
+        "arm": "",
+        "cloth": "",
+        "wing": "",
+        "hat": "",
+        "fashion_arm": "",
+        "fashion_cloth": "",
+        "is_vip": false,
+        "hide": false,
+        "mount_tempId": "$var.mount",
+        "mount_grade": 1
+       }
+      ]
+     },
+     "delay": 300
+    }
+   ]
+  },
+  {
+   "on": 8224,
+   "req": "PlayerDataMsg",
+   "if": {
+    "castle": true
+   },
+   "send": [
+    {
+     "code": 4245,
+     "msg": "SNSInfoMsg",
+     "data": {}
+    },
+    {
+     "code": 4233,
+     "msg": "VersionMsg",
+     "data": {}
+    },
+    {
+     "code": 4160,
+     "msg": "SystemPropertyMsg",
+     "data": {
+      "sys_curtime": "$nowdt",
+      "sys_starTime": "2026-01-01 00:00:00",
+      "sys_millisecond": "$nowms"
+     }
+    },
+    {
+     "code": 4173,
+     "msg": "",
+     "data": {}
+    },
+    {
+     "code": 4176,
+     "msg": "",
+     "data": {}
+    },
+    {
+     "code": 4156,
+     "msg": "",
+     "data": {}
+    },
+    {
+     "code": 4157,
+     "msg": "",
+     "data": {}
+    },
+    {
+     "code": 150,
+     "msg": "ArmyMsg",
+     "data": {
+      "army_id": 1,
+      "player_id": "$player.player_id",
+      "nick_name": "$player.nick_name",
+      "map_id": 0,
+      "cur_pos_x": 0,
+      "cur_pos_y": 0,
+      "state": 0,
+      "type": 1,
+      "armyPawn": [
+       {
+        "id": 1,
+        "army_id": 1,
+        "sites": 0,
+        "son_type": 2004,
+        "tempate_id": 2006,
+        "own_pawns": 30,
+        "fight_pos": 1,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "army_id": 1,
+        "sites": 1,
+        "son_type": 0,
+        "tempate_id": 0,
+        "own_pawns": 0,
+        "fight_pos": 0,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       }
+      ],
+      "simple_hero_info": {
+       "hero_id": 1,
+       "nick_name": "$player.nick_name",
+       "tempate_id": 1,
+       "player_id": "$player.player_id",
+       "hp": 900,
+       "blood": 900,
+       "total_power": 30,
+       "total_agility": 20,
+       "total_intellect": 15,
+       "total_captain": 120,
+       "total_physique": 25,
+       "total_phy_attack": 180,
+       "total_phy_defence": 90,
+       "total_magic_attack": 60,
+       "total_magic_defence": 70,
+       "total_force_hit": 20,
+       "total_parry": 15,
+       "total_conat_army": 30,
+       "total_live": 900,
+       "base_power": 30,
+       "base_agility": 20,
+       "base_intellect": 15,
+       "base_captain": 120,
+       "base_physique": 25,
+       "base_phy_attack": 180,
+       "base_phy_defence": 90,
+       "base_magic_attack": 60,
+       "base_magic_defence": 70,
+       "base_force_hit": 20,
+       "base_parry": 15,
+       "base_conat_army": 30,
+       "base_live": 900,
+       "fight_pos": 2,
+       "skill_index": 0,
+       "head_id": 1,
+       "grade": "$player.grades",
+       "skill_script": "10711,10811",
+       "fast_key": "",
+       "fighting_capacity": "$player.fighting_capacity",
+       "server_name": "$player.server_name",
+       "arm": "",
+       "cloth": "",
+       "wing": "",
+       "hat": "",
+       "fashion_arm": "",
+       "fashion_cloth": ""
+      },
+      "consortia_id": 0,
+      "consortia_name": "",
+      "fightingCapacity": "$player.fighting_capacity",
+      "grades": "$player.grades",
+      "job": "$player.job",
+      "hero_tempId": 1,
+      "arm": "",
+      "cloth": "",
+      "wing": "",
+      "hat": "",
+      "fashion_arm": "",
+      "fashion_cloth": "",
+      "server_name": "$player.server_name",
+      "is_vip": false,
+      "mount_tempId": "$var.mount",
+      "mount_grade": 1
+     }
+    },
+    {
+     "code": 4426,
+     "msg": "MountInfoMsg",
+     "data": {
+      "mount_tempId": 1000,
+      "power": 0,
+      "intellect": 0,
+      "physique": 0,
+      "agility": 0,
+      "speed": 30,
+      "power_gp": 0,
+      "intellect_gp": 0,
+      "physique_gp": 0,
+      "agility_gp": 0,
+      "mount_totalGp": 0,
+      "level_max": 10,
+      "discount": 0,
+      "mount_starLv": 0,
+      "addPointCount": 1,
+      "refining_soul_power_grade": 0,
+      "refining_soul_intellect_grade": 0,
+      "refining_soul_physique_grade": 0,
+      "refining_soul_agility_grade": 0,
+      "refining_soul_exp": 0
+     }
+    },
+    {
+     "code": 4177,
+     "msg": "DaySignInfoMsg",
+     "data": {
+      "signTimes": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+      "signCycle": 30,
+      "resetDate": "$nowdt",
+      "rewardTag": 0,
+      "op": 0,
+      "todayIndex": 1
+     }
+    },
+    {
+     "code": 4905,
+     "msg": "MagicCardInfoListMsg",
+     "data": {
+      "cardInfos": []
+     }
+    },
+    {
+     "code": 4153,
+     "msg": "BaseCastleMsg",
+     "data": {
+      "id": 1,
+      "map_id": 1,
+      "pos_x": 100,
+      "pos_y": 100,
+      "template_id": 151101,
+      "type": 0,
+      "occupy_player_id": "$player.player_id",
+      "occupy_player_name": "$player.nick_name"
+     }
+    },
+    {
+     "code": 4154,
+     "msg": "BuildingInfoListMsg",
+     "data": {
+      "result": true,
+      "building": []
+     }
+    }
+   ]
+  },
+  {
+   "on": 8224,
+   "req": "PlayerDataMsg",
+   "send": []
+  },
+  {
+   "on": 8688,
+   "send": [
+    {
+     "code": 4595,
+     "msg": "RoomEnterMsg",
+     "data": {
+      "result": 1,
+      "player": [
+       {
+        "room_id": 10000,
+        "player_id": "$player.player_id",
+        "nick_name": "$player.nick_name",
+        "grades": "$player.grades",
+        "sex": "$player.sex",
+        "campaign_id": 10000,
+        "cur_pos_x": 175,
+        "cur_pos_y": 98,
+        "online_state": true,
+        "hero_id": 1,
+        "army_id": 1,
+        "template_id": 1,
+        "head_id": 1,
+        "fighting_capacity": "$player.fighting_capacity",
+        "server_name": "$player.server_name",
+        "player_state": 0,
+        "army_state": 0,
+        "arm": "",
+        "cloth": "",
+        "wing": "",
+        "hat": "",
+        "fashion_arm": "",
+        "fashion_cloth": "",
+        "is_vip": false,
+        "hide": false,
+        "mount_tempId": "$var.mount",
+        "mount_grade": 1
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 5026,
+   "req": "RoomReqMsg",
+   "send": [
+    {
+     "code": 13,
+     "msg": "RoomListRspMsg",
+     "data": {
+      "room": [
+       {
+        "room_id": 501,
+        "campaignId": 5902,
+        "master_id": 2,
+        "name": "Templo de Tara - venha!",
+        "count": 1,
+        "capacity": 4,
+        "room_state": 0,
+        "room_type": 0,
+        "masterName": "Arthur",
+        "masterServerName": "Local"
+       },
+       {
+        "room_id": 502,
+        "campaignId": 9014,
+        "master_id": 3,
+        "name": "Pântano da Praga",
+        "count": 3,
+        "capacity": 4,
+        "room_state": 0,
+        "room_type": 0,
+        "masterName": "Lia",
+        "masterServerName": "Local"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 5023,
+   "req": "RoomReqMsg",
+   "set": {
+    "room_id": 777,
+    "campaign_id": 5902
+   },
+   "send": [
+    {
+     "code": 12,
+     "msg": "RoomMsg",
+     "data": {
+      "room_id": "$var.room_id",
+      "campaignId": "$var.campaign_id",
+      "master_id": "$player.player_id",
+      "name": "Sala do Jogador",
+      "count": 2,
+      "capacity": 4,
+      "room_state": 0,
+      "room_type": 0,
+      "masterName": "$player.nick_name",
+      "masterServerName": "Local"
+     }
+    },
+    {
+     "code": 120,
+     "msg": "RoomPlayerListMsg",
+     "data": {
+      "state": 0,
+      "roomPlayer": [
+       {
+        "room_id": "$var.room_id",
+        "count": 2,
+        "current_room_index": 0,
+        "player_state": 0,
+        "hero_id": 1,
+        "player_id": "$player.player_id",
+        "grades": "$player.grades",
+        "nick_name": "$player.nick_name",
+        "sex": "$player.sex",
+        "template_id": 1,
+        "army_id": 1,
+        "fighting_capacity": "$player.fighting_capacity",
+        "online_state": true
+       },
+       {
+        "room_id": "$var.room_id",
+        "count": 2,
+        "current_room_index": 1,
+        "player_state": 1,
+        "hero_id": 2,
+        "player_id": 2,
+        "grades": 80,
+        "nick_name": "Arthur",
+        "sex": 1,
+        "template_id": 2,
+        "army_id": 2,
+        "fighting_capacity": 15000,
+        "online_state": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 5024,
+   "req": "RoomReqMsg",
+   "set": {
+    "room_id": "$req.room_id",
+    "campaign_id": 5902
+   },
+   "send": [
+    {
+     "code": 12,
+     "msg": "RoomMsg",
+     "data": {
+      "room_id": "$var.room_id",
+      "campaignId": "$var.campaign_id",
+      "master_id": "$player.player_id",
+      "name": "Sala do Jogador",
+      "count": 2,
+      "capacity": 4,
+      "room_state": 0,
+      "room_type": 0,
+      "masterName": "$player.nick_name",
+      "masterServerName": "Local"
+     }
+    },
+    {
+     "code": 120,
+     "msg": "RoomPlayerListMsg",
+     "data": {
+      "state": 0,
+      "roomPlayer": [
+       {
+        "room_id": "$var.room_id",
+        "count": 2,
+        "current_room_index": 0,
+        "player_state": 0,
+        "hero_id": 1,
+        "player_id": "$player.player_id",
+        "grades": "$player.grades",
+        "nick_name": "$player.nick_name",
+        "sex": "$player.sex",
+        "template_id": 1,
+        "army_id": 1,
+        "fighting_capacity": "$player.fighting_capacity",
+        "online_state": true
+       },
+       {
+        "room_id": "$var.room_id",
+        "count": 2,
+        "current_room_index": 1,
+        "player_state": 1,
+        "hero_id": 2,
+        "player_id": 2,
+        "grades": 80,
+        "nick_name": "Arthur",
+        "sex": 1,
+        "template_id": 2,
+        "army_id": 2,
+        "fighting_capacity": 15000,
+        "online_state": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 5034,
+   "req": "RoomReqMsg",
+   "set": {
+    "campaign_id": "$req.campaign_id"
+   },
+   "send": [
+    {
+     "code": 32,
+     "msg": "RoomMsg",
+     "data": {
+      "room_id": "$var.room_id",
+      "campaignId": "$var.campaign_id",
+      "master_id": "$player.player_id",
+      "name": "Sala do Jogador",
+      "count": 2,
+      "capacity": 4,
+      "room_state": 0,
+      "room_type": 0,
+      "masterName": "$player.nick_name",
+      "masterServerName": "Local"
+     }
+    }
+   ]
+  },
+  {
+   "on": 5036,
+   "req": "RoomReqMsg",
+   "send": [
+    {
+     "code": 120,
+     "msg": "RoomPlayerListMsg",
+     "data": {
+      "state": 0,
+      "roomPlayer": [
+       {
+        "room_id": "$var.room_id",
+        "count": 2,
+        "current_room_index": 0,
+        "player_state": 0,
+        "hero_id": 1,
+        "player_id": "$player.player_id",
+        "grades": "$player.grades",
+        "nick_name": "$player.nick_name",
+        "sex": "$player.sex",
+        "template_id": 1,
+        "army_id": 1,
+        "fighting_capacity": "$player.fighting_capacity",
+        "online_state": true
+       },
+       {
+        "room_id": "$var.room_id",
+        "count": 2,
+        "current_room_index": 1,
+        "player_state": 1,
+        "hero_id": 2,
+        "player_id": 2,
+        "grades": 80,
+        "nick_name": "Arthur",
+        "sex": 1,
+        "template_id": 2,
+        "army_id": 2,
+        "fighting_capacity": 15000,
+        "online_state": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 5039,
+   "req": "CampaignReqMsg",
+   "set": {
+    "campaign_id": 5902
+   },
+   "send": [
+    {
+     "code": 125,
+     "msg": "RoomCreatedMsg",
+     "data": {
+      "created_type": 1,
+      "campignId": 5902,
+      "room": {
+       "room_id": "$var.room_id",
+       "campaignId": 5902,
+       "master_id": "$player.player_id",
+       "name": "Sala do Jogador",
+       "count": 2,
+       "capacity": 4,
+       "room_state": 3,
+       "room_type": 0,
+       "masterName": "$player.nick_name",
+       "masterServerName": "Local"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "on": 5025,
+   "send": [
+    {
+     "code": 22,
+     "msg": "",
+     "data": {}
+    }
+   ]
+  },
+  {
+   "on": "push:campaign",
+   "set": {
+    "room_id": 777,
+    "campaign_id": 5902
+   },
+   "send": [
+    {
+     "code": 125,
+     "msg": "RoomCreatedMsg",
+     "data": {
+      "created_type": 1,
+      "campignId": 5902,
+      "room": {
+       "room_id": "$var.room_id",
+       "campaignId": 5902,
+       "master_id": "$player.player_id",
+       "name": "Sala do Jogador",
+       "count": 2,
+       "capacity": 4,
+       "room_state": 3,
+       "room_type": 0,
+       "masterName": "$player.nick_name",
+       "masterServerName": "Local"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "on": "push:army",
+   "send": [
+    {
+     "code": 150,
+     "msg": "ArmyMsg",
+     "data": {
+      "army_id": 1,
+      "player_id": "$player.player_id",
+      "nick_name": "$player.nick_name",
+      "map_id": 0,
+      "cur_pos_x": 0,
+      "cur_pos_y": 0,
+      "state": 0,
+      "type": 1,
+      "armyPawn": [
+       {
+        "id": 1,
+        "army_id": 1,
+        "sites": 0,
+        "son_type": 2004,
+        "tempate_id": 2006,
+        "own_pawns": 30,
+        "fight_pos": 1,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "army_id": 1,
+        "sites": 1,
+        "son_type": 0,
+        "tempate_id": 0,
+        "own_pawns": 0,
+        "fight_pos": 0,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       }
+      ],
+      "simple_hero_info": {
+       "hero_id": 1,
+       "nick_name": "$player.nick_name",
+       "tempate_id": 1,
+       "player_id": "$player.player_id",
+       "hp": 900,
+       "blood": 900,
+       "total_power": 30,
+       "total_agility": 20,
+       "total_intellect": 15,
+       "total_captain": 120,
+       "total_physique": 25,
+       "total_phy_attack": 180,
+       "total_phy_defence": 90,
+       "total_magic_attack": 60,
+       "total_magic_defence": 70,
+       "total_force_hit": 20,
+       "total_parry": 15,
+       "total_conat_army": 30,
+       "total_live": 900,
+       "base_power": 30,
+       "base_agility": 20,
+       "base_intellect": 15,
+       "base_captain": 120,
+       "base_physique": 25,
+       "base_phy_attack": 180,
+       "base_phy_defence": 90,
+       "base_magic_attack": 60,
+       "base_magic_defence": 70,
+       "base_force_hit": 20,
+       "base_parry": 15,
+       "base_conat_army": 30,
+       "base_live": 900,
+       "fight_pos": 2,
+       "skill_index": 0,
+       "head_id": 1,
+       "grade": "$player.grades",
+       "skill_script": "10711,10811",
+       "fast_key": "",
+       "fighting_capacity": "$player.fighting_capacity",
+       "server_name": "$player.server_name",
+       "arm": "",
+       "cloth": "",
+       "wing": "",
+       "hat": "",
+       "fashion_arm": "",
+       "fashion_cloth": ""
+      },
+      "consortia_id": 0,
+      "consortia_name": "",
+      "fightingCapacity": "$player.fighting_capacity",
+      "grades": "$player.grades",
+      "job": "$player.job",
+      "hero_tempId": 1,
+      "arm": "",
+      "cloth": "",
+      "wing": "",
+      "hat": "",
+      "fashion_arm": "",
+      "fashion_cloth": "",
+      "server_name": "$player.server_name",
+      "is_vip": false
+     }
+    }
+   ]
+  },
+  {
+   "on": "push:space",
+   "send": [
+    {
+     "code": 4595,
+     "msg": "RoomEnterMsg",
+     "data": {
+      "result": 1,
+      "player": [
+       {
+        "room_id": 10000,
+        "player_id": "$player.player_id",
+        "nick_name": "$player.nick_name",
+        "grades": "$player.grades",
+        "sex": "$player.sex",
+        "campaign_id": 10000,
+        "cur_pos_x": 175,
+        "cur_pos_y": 98,
+        "online_state": true,
+        "hero_id": 1,
+        "army_id": 1,
+        "template_id": 1,
+        "head_id": 1,
+        "fighting_capacity": "$player.fighting_capacity",
+        "server_name": "$player.server_name",
+        "player_state": 0,
+        "army_state": 0,
+        "arm": "",
+        "cloth": "",
+        "wing": "",
+        "hat": "",
+        "fashion_arm": "",
+        "fashion_cloth": "",
+        "is_vip": false,
+        "hide": false,
+        "mount_tempId": "$var.mount",
+        "mount_grade": 1
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "on": 8529,
+   "req": "MountEditMsg",
+   "if": {
+    "op": 3,
+    "param1": 1
+   },
+   "set": {
+    "mount": 1003
+   },
+   "send": [
+    {
+     "code": 150,
+     "msg": "ArmyMsg",
+     "data": {
+      "army_id": 1,
+      "player_id": "$player.player_id",
+      "nick_name": "$player.nick_name",
+      "map_id": 0,
+      "cur_pos_x": 0,
+      "cur_pos_y": 0,
+      "state": 0,
+      "type": 1,
+      "armyPawn": [
+       {
+        "id": 1,
+        "army_id": 1,
+        "sites": 0,
+        "son_type": 2004,
+        "tempate_id": 2006,
+        "own_pawns": 30,
+        "fight_pos": 1,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "army_id": 1,
+        "sites": 1,
+        "son_type": 0,
+        "tempate_id": 0,
+        "own_pawns": 0,
+        "fight_pos": 0,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       }
+      ],
+      "simple_hero_info": {
+       "hero_id": 1,
+       "nick_name": "$player.nick_name",
+       "tempate_id": 1,
+       "player_id": "$player.player_id",
+       "hp": 900,
+       "blood": 900,
+       "total_power": 30,
+       "total_agility": 20,
+       "total_intellect": 15,
+       "total_captain": 120,
+       "total_physique": 25,
+       "total_phy_attack": 180,
+       "total_phy_defence": 90,
+       "total_magic_attack": 60,
+       "total_magic_defence": 70,
+       "total_force_hit": 20,
+       "total_parry": 15,
+       "total_conat_army": 30,
+       "total_live": 900,
+       "base_power": 30,
+       "base_agility": 20,
+       "base_intellect": 15,
+       "base_captain": 120,
+       "base_physique": 25,
+       "base_phy_attack": 180,
+       "base_phy_defence": 90,
+       "base_magic_attack": 60,
+       "base_magic_defence": 70,
+       "base_force_hit": 20,
+       "base_parry": 15,
+       "base_conat_army": 30,
+       "base_live": 900,
+       "fight_pos": 2,
+       "skill_index": 0,
+       "head_id": 1,
+       "grade": "$player.grades",
+       "skill_script": "10711,10811",
+       "fast_key": "",
+       "fighting_capacity": "$player.fighting_capacity",
+       "server_name": "$player.server_name",
+       "arm": "",
+       "cloth": "",
+       "wing": "",
+       "hat": "",
+       "fashion_arm": "",
+       "fashion_cloth": ""
+      },
+      "consortia_id": 0,
+      "consortia_name": "",
+      "fightingCapacity": "$player.fighting_capacity",
+      "grades": "$player.grades",
+      "job": "$player.job",
+      "hero_tempId": 1,
+      "arm": "",
+      "cloth": "",
+      "wing": "",
+      "hat": "",
+      "fashion_arm": "",
+      "fashion_cloth": "",
+      "server_name": "$player.server_name",
+      "is_vip": false,
+      "mount_tempId": "$var.mount",
+      "mount_grade": 1
+     }
+    }
+   ]
+  },
+  {
+   "on": 8529,
+   "req": "MountEditMsg",
+   "if": {
+    "op": 3,
+    "param1": null
+   },
+   "set": {
+    "mount": 0
+   },
+   "send": [
+    {
+     "code": 150,
+     "msg": "ArmyMsg",
+     "data": {
+      "army_id": 1,
+      "player_id": "$player.player_id",
+      "nick_name": "$player.nick_name",
+      "map_id": 0,
+      "cur_pos_x": 0,
+      "cur_pos_y": 0,
+      "state": 0,
+      "type": 1,
+      "armyPawn": [
+       {
+        "id": 1,
+        "army_id": 1,
+        "sites": 0,
+        "son_type": 2004,
+        "tempate_id": 2006,
+        "own_pawns": 30,
+        "fight_pos": 1,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "army_id": 1,
+        "sites": 1,
+        "son_type": 0,
+        "tempate_id": 0,
+        "own_pawns": 0,
+        "fight_pos": 0,
+        "pawnLive": [
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 60,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 8,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         },
+         {
+          "temp_data": 0,
+          "effect_Per": 0,
+          "effect_Data": 0,
+          "bag_Per": 0,
+          "bag_Data": 0,
+          "star_Per": 0,
+          "star_Data": 0,
+          "powcard_Per": 0,
+          "powcard_Data": 0,
+          "skill_Per": 0,
+          "skill_Data": 0,
+          "base_Join": 0
+         }
+        ]
+       }
+      ],
+      "simple_hero_info": {
+       "hero_id": 1,
+       "nick_name": "$player.nick_name",
+       "tempate_id": 1,
+       "player_id": "$player.player_id",
+       "hp": 900,
+       "blood": 900,
+       "total_power": 30,
+       "total_agility": 20,
+       "total_intellect": 15,
+       "total_captain": 120,
+       "total_physique": 25,
+       "total_phy_attack": 180,
+       "total_phy_defence": 90,
+       "total_magic_attack": 60,
+       "total_magic_defence": 70,
+       "total_force_hit": 20,
+       "total_parry": 15,
+       "total_conat_army": 30,
+       "total_live": 900,
+       "base_power": 30,
+       "base_agility": 20,
+       "base_intellect": 15,
+       "base_captain": 120,
+       "base_physique": 25,
+       "base_phy_attack": 180,
+       "base_phy_defence": 90,
+       "base_magic_attack": 60,
+       "base_magic_defence": 70,
+       "base_force_hit": 20,
+       "base_parry": 15,
+       "base_conat_army": 30,
+       "base_live": 900,
+       "fight_pos": 2,
+       "skill_index": 0,
+       "head_id": 1,
+       "grade": "$player.grades",
+       "skill_script": "10711,10811",
+       "fast_key": "",
+       "fighting_capacity": "$player.fighting_capacity",
+       "server_name": "$player.server_name",
+       "arm": "",
+       "cloth": "",
+       "wing": "",
+       "hat": "",
+       "fashion_arm": "",
+       "fashion_cloth": ""
+      },
+      "consortia_id": 0,
+      "consortia_name": "",
+      "fightingCapacity": "$player.fighting_capacity",
+      "grades": "$player.grades",
+      "job": "$player.job",
+      "hero_tempId": 1,
+      "arm": "",
+      "cloth": "",
+      "wing": "",
+      "hat": "",
+      "fashion_arm": "",
+      "fashion_cloth": "",
+      "server_name": "$player.server_name",
+      "is_vip": false,
+      "mount_tempId": "$var.mount",
+      "mount_grade": 1
+     }
+    }
+   ]
+  }
+ ]
+}

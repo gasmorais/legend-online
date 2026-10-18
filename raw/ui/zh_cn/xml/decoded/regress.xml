@@ -1,0 +1,224 @@
+<style
+  name="regress"
+  source="ui/zh_cn/swf/regress.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.chargeCanTakeCountTxt_t"
+      args="Arial,14,0x00FEFE,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.takedCountTxt_t"
+      args="Arial,14,0x00FEFE,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.canTakeTotalCountTxt_t"
+      args="Arial,14,0x00FEFE,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.regressItem.titleTxt_t1"
+      args="Arial,14,0xDCBB05,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.regressItem.titleTxt_t2"
+      args="Arial,14,0x6ADC05,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.regressItem.takedCountTxt_t"
+      args="Arial,14,0x00FEFE,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="regress.noOpenContentTxt_t"
+      args="Arial,20,0xED1818,true,,,,,center"
+      letterSpacing="5"
+      leading="5" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.regress.regressBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.regress.returnNote"
+      x="17"
+      y="259" />
+    <bitmapData
+      resourceLink="asset.regress.canReceiveNote"
+      x="22"
+      y="320" />
+    <bitmapData
+      resourceLink="asset.regress.regressLineBg"
+      x="20"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.regress.regressBottomBg"
+      x="3"
+      y="401" />
+    <bitmapData
+      resourceLink="asset.regress.receivedBmp"
+      x="286"
+      y="-5" />
+    <bitmapData
+      resourceLink="asset.regress.receivedNote"
+      x="18"
+      y="361" />
+    <bitmapData
+      resourceLink="asset.regress.regressLeftBg"
+      x="7"
+      y="6" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="regress.RegressItem"
+      stylename="regress.RegressItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="regress.RegressItem.Sprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="regress.pointIcon1"
+      resourceLink="asset.regress.GiftIconAsset"
+      x="210"
+      y="332" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="regress.pointIcon2"
+      resourceLink="asset.regress.GiftIconAsset"
+      x="188"
+      y="371" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="regress.pointIcon3"
+      resourceLink="asset.regress.GiftIconAsset"
+      x="281"
+      y="371" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="regress.pointIcon4"
+      resourceLink="asset.regress.GiftIconAsset"
+      x="245"
+      y="9" />
+  </customDisplay>
+  <components>
+    <component
+      classname="regress.RegressFrame"
+      stylename="regress.RegressFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="61"
+      width="728"
+      height="573" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="regress.BagBack"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="693"
+      height="472"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="regress.rechargeBtn"
+      backStyle="asset.regress.rechargeBtnBmp"
+      iconStyle="asset.regress.rechargeTxtBmp"
+      iconInnerRectString="14,138,12,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="89"
+      y="207"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="regress.receiveBtn"
+      backStyle="asset.regress.receiveBtnBmp"
+      iconStyle="asset.regress.receiveTxtBmp"
+      iconInnerRectString="2,62,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="289"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="regress.receiveBtn1"
+      backStyle="asset.regress.receiveBtnBmp1"
+      iconStyle="asset.regress.receiveTxtBmp"
+      iconInnerRectString="3,62,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="248"
+      y="327"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.chargeCanTakeCountTxt"
+      textFormatStyle="regress.chargeCanTakeCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="141"
+      y="333"
+      width="89"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.takedCountTxt"
+      textFormatStyle="regress.takedCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="116"
+      y="372"
+      width="89"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.canTakeTotalCountTxt"
+      textFormatStyle="regress.canTakeTotalCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="199"
+      y="372"
+      width="89"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.regressItem.titleTxt"
+      textFormatStyle="regress.regressItem.titleTxt_t1,regress.regressItem.titleTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="38"
+      y="9"
+      width="204"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.regressItem.takedCountTxt"
+      textFormatStyle="regress.regressItem.takedCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="183"
+      y="9"
+      width="89"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.remainTimeText"
+      parentStyle="funnyRightView.remainTimeText"
+      autoSize="none"
+      x="181"
+      y="430"
+      width="329"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="regress.noOpenContentTxt"
+      textFormatStyle="regress.noOpenContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      x="161"
+      y="140"
+      width="400"
+      height="140" />
+  </components>
+</style>

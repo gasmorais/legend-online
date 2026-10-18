@@ -1,0 +1,48 @@
+<style
+  name="worldmap"
+  source="ui/zh_cn/swf/worldmap.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldmap.SendText_t"
+      args="Arial,14,0xfff2d0,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 地图01.jpg -->
+    <bitmapData
+      resourceLink="asset.worldmap.Bg"
+      x="22"
+      y="23" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.worldmap.MapAreaContainerMask"
+      stylename="asset.worldmap.MapAreaContainerMask"
+      x="22"
+      y="23" />
+  </customDisplay>
+  <components>
+    <!--Frame-->
+    <component
+      classname="worldmap.WorldMapFrame"
+      stylename="worldmap.WorldMapFrame"
+      closestyle="core.CloseBtn"
+      backStyle="asset.worldmap.MapFrameBg"
+      closeInnerRectString="29,10,8,29,14"
+      moveInnerRectString="0,30,0,45,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="15"
+      containerY="40"
+      width="1000"
+      height="600" />
+    <!-- MapAreaContainer-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="worldmap.MapAreaContainer"
+      resourceLink="asset.worldmap.MapAreaContainer"
+      x="485"
+      y="259" />
+  </components>
+</style>

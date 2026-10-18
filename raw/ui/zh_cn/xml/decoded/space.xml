@@ -1,0 +1,595 @@
+<style
+  name="space"
+  source="ui/zh_cn/swf/space.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceDialogFrame.NpcNameText_t"
+      args="Arial,14,0xfafa84,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceDialogFrame.ContentText_t"
+      args="Arial,12,0xe4daac,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceDialogFrame.OptionItem_t1"
+      args="Arial,14,0x00fffc,,,,,,left"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceDialogFrame.OptionItem_t2"
+      args="Arial,14,0xfffc00,,,,,,left"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceMapFrame.OptionBtnTxt_t"
+      args="Arial,12,0xfef8e0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceMapFrame.NodeNameTxt_t"
+      args="Arial,12,0xfffd4f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceMapFrame.NodeListTxt_t"
+      args="Arial,11,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceMapFrame.NodeListTypeTxt_t"
+      args="Arial,11,0xffd83e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceDialogFrame.OptionItem_t3"
+      args="Arial,14,0x00fffc,,,,,,left"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceDialogFrame.OptionItem_t4"
+      args="Arial,14,0xfffc00,,,,,,left"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="spaceNpcView.crossGuildTxt.text_t"
+      args="Arial,12,0xfffd4f,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="spaceNpcView.serverTxt.text_t"
+      args="Arial,12,0xfffd4f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="spaceBuildingLayer.guildName.text_t"
+      args="Arial,36,0xfffd4f,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="spaceBuildingLayer.guildName_f"
+      args="0x210e81,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.BattleCDView.ContentText_t"
+      args="Arial,30,0xe4daac,,,,,,left"
+      leading="10" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceMapFrame.NodeNameTxt_t1"
+      args="Arial,12,0xfffd4f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.space.SpaceMapFrame.NodeNameTxt_t2"
+      args="Arial,12,0xce0f0f,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.space.SpaceDialogFrame.SelectedBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceDialogFrame.Arrow"
+      x="2"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.MapOptionBg"
+      x="6"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.TitleAsset1"
+      x="11"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.TitleAsset2"
+      x="630"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.MapImg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.MapImg20001"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.MapImg20002"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.MapImg20003"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.MapImg20004"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.SelfAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.NPCAsset"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.SpaceMapFrame.PathPoint"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.reward200Txt"
+      x="200" />
+    <bitmapData
+      resourceLink="asset.space.reward50Txt"
+      x="35" />
+    <bitmapData
+      resourceLink="asset.common.SpaceMapFrame.PathPoint"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.space.BattleViewCDFrame.exitBtnTitle" />
+    <bitmapData
+      resourceLink="asset.space.BattleViewCDFrame.exitBtnBg" />
+    <bitmapData
+      resourceLink="asset.space.BattleViewCDFrame.cdTitle"
+      x="150"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.map.KingGuildEffect"
+      stylename="spaceBuildingLayer.guildEffect"
+      x="4905"
+      y="2065"
+      scaleY="0.7" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="spaceBuildingLayer.guildKingImg"
+      resourceLink="asset.map.KingGuild"
+      x="4800"
+      y="2020" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="asset.space.SpaceMapFrame.Container"
+      x="6"
+      y="-5" />
+    <custom
+      classname="asset.space.SpaceMapFrame.WalkTarget"
+      stylename="map.space.SpaceMapFrame.WalkTarget" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="map.space.view.frame.SpaceDialogFrame.NPCIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="120"
+      loadingY="153"
+      x="-240"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="space.ringTask.DropItem"
+      iconStyle="space.ringTask.DropItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="30"
+      profileHeight="30"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="space.ringTask.DropItemIcon"
+      iconHeight="30"
+      iconWidth="30"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="15"
+      loadingY="15"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="map.space.SpaceMapFrame.Container"
+      x="6"
+      y="-5" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="map.space.SpaceMapFrame.FrameBg"
+      resourceLink="asset.space.SpaceMapFrame.FrameBg"
+      scaleGridString="10,10,50,51" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="map.space.SpaceMapFrame.CloseBtn"
+      parentStyle="core.CloseBtn"
+      backStyle="asset.core.SellItemClose" />
+    <component
+      classname="map.space.view.frame.SpaceMapFrame"
+      stylename="map.space.SpaceMapFrame"
+      parentStyle="core.Frame1"
+      backStyle="map.space.SpaceMapFrame.FrameBg"
+      closeInnerRectString="23,0,-2,23,14"
+      moveInnerRectString="684,10,0,-15,9"
+      titleOuterRectPosString="0,26,1"
+      containerX="4"
+      containerY="4"
+      closestyle="map.space.SpaceMapFrame.CloseBtn"
+      width="837"
+      height="370" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="map.space.SpaceMapFrame.LeftBg"
+      resourceLink="asset.space.SpaceMapFrame.PanelBg"
+      scaleGridString="10,10,32,33"
+      x="-2"
+      y="0"
+      width="516"
+      height="492" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="map.space.SpaceMapFrame.RightBg"
+      resourceLink="asset.space.SpaceMapFrame.PanelBg"
+      scaleGridString="10,10,32,33"
+      x="503"
+      y="0"
+      width="266"
+      height="492" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.SpaceMapFrame.OptionBtnTxt"
+      textFormatStyle="map.space.SpaceMapFrame.OptionBtnTxt_t"
+      width="50"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="map.space.SpaceMapFrame.OptionBtn1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_6.Selected"
+      textStyle="map.space.SpaceMapFrame.OptionBtnTxt"
+      backgoundInnerRectString="25,22,2,23,13"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.BuyAvartarTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="132"
+      y="15"
+      width="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="map.space.SpaceMapFrame.OptionBtn2"
+      parentStyle="map.space.SpaceMapFrame.OptionBtn1"
+      x="222" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="map.space.SpaceMapFrame.OptionBtn3"
+      parentStyle="map.space.SpaceMapFrame.OptionBtn1"
+      x="286" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.TransferBtnBg"
+      resourceLink="asset.space.SpaceMapFrame.TransferAsset1,asset.space.SpaceMapFrame.TransferAsset2,asset.space.SpaceMapFrame.TransferAsset2,asset.space.SpaceMapFrame.TransferAsset1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="map.space.SpaceMapFrame.TransferBtn"
+      backStyle="map.space.SpaceMapFrame.TransferBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.NPCBtnBg"
+      resourceLink="asset.space.SpaceMapFrame.NPCAsset1,asset.space.SpaceMapFrame.NPCAsset2,asset.space.SpaceMapFrame.NPCAsset2,asset.space.SpaceMapFrame.NPCAsset1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="map.space.SpaceMapFrame.NPCBtn"
+      backStyle="map.space.SpaceMapFrame.NPCBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="map.space.SpaceMapFrame.RightTitleLine"
+      resourceLink="asset.space.SpaceMapFrame.LineBgImg"
+      scaleGridString="10,0,154,2"
+      width="260"
+      x="512"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="map.space.SpaceMapFrame.MapNodeItemBg"
+      parentStyle="taskTrace.ItemBack1"
+      width="260"
+      height="36"
+      y="-7"
+      x="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.SpaceMapFrame.MapNodeItem.NameTxt"
+      textFormatStyle="map.space.SpaceMapFrame.NodeListTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="130"
+      height="20"
+      x="4"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.SpaceMapFrame.MapNodeItem.TypeTxtField"
+      textFormatStyle="map.space.SpaceMapFrame.NodeListTypeTxt_t"
+      autoSize="none"
+      width="125"
+      height="20"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.space.SpaceMapFrame.MapNodeItem.TypeTxt"
+      colors="0xfff3d7,0xffd83e"
+      alphas="1,1"
+      ratios="60,180"
+      filterString="core.normal2_f"
+      textFieldStyle="map.space.SpaceMapFrame.MapNodeItem.TypeTxtField"
+      mouseEnabled="false"
+      width="180"
+      height="20"
+      x="130"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="map.space.SpaceMapFrame.MapNodeItem.Line"
+      resourceLink="asset.space.SpaceMapFrame.LineBgImg"
+      scaleGridString="10,0,154,2"
+      width="260"
+      x="0"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="map.space.SpaceMapFrame.VScrollbar"
+      parentStyle="core.VScrollbar06"
+      width="15"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="map.space.SpaceMapFrame.MapNodeList"
+      vScrollbarStyle="map.space.SpaceMapFrame.VScrollbar"
+      vScrollbarInnerRectString="15,1,1,1,3"
+      viewportInnerRectString="0,0,0,0,0"
+      vScrollProxy="0"
+      vUnitIncrement="18"
+      width="273"
+      height="454"
+      x="512"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="map.space.SpaceDialogFrame.FrameBg"
+      resourceLink="asset.space.SpaceDialogFrame.FrameBg1,asset.space.SpaceDialogFrame.FrameBg2,asset.space.SpaceDialogFrame.FrameBg3"
+      width="594"
+      height="210" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="map.space.SpaceDialogFrame.CloseBtn"
+      parentStyle="core.CloseBtn"
+      backStyle="asset.space.SpaceDialogFrame.CloseBtn" />
+    <component
+      classname="map.space.view.frame.SpaceDialogFrame"
+      stylename="map.space.SpaceDialogFrame"
+      closestyle="map.space.SpaceDialogFrame.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="map.space.SpaceDialogFrame.FrameBg"
+      closeInnerRectString="26,80,-2,26,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="80"
+      containerY="23"
+      width="594"
+      height="210" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.SpaceDialogFrame.NpcNameText"
+      textFormatStyle="map.space.SpaceDialogFrame.NpcNameText_t"
+      filterString="core.normal_f"
+      width="380"
+      height="20"
+      x="35"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.SpaceDialogFrame.ContentText"
+      textFormatStyle="map.space.SpaceDialogFrame.ContentText_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="380"
+      x="35"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.DialogOptionItem.TitleText"
+      textFormatStyle="map.space.SpaceDialogFrame.OptionItem_t1,map.space.SpaceDialogFrame.OptionItem_t2"
+      autoSize="left"
+      filterString="core.normal_f"
+      height="20"
+      x="20"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="map.space.DialogOptionItem.OptionBtn"
+      textStyle="map.space.DialogOptionItem.TitleText"
+      autoSizeAble="false"
+      backgoundInnerRectString="20,8,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconStyle="asset.space.SpaceDialogFrame.Arrow"
+      iconInnerRectString="2,12,9,9,13"
+      displacement="false"
+      width="394"
+      height="24"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="map.space.SpaceMapFrame.MemberBtnBg"
+      resourceLink="asset.space.SpaceMapFrame.MemberAsset1,asset.space.SpaceMapFrame.MemberAsset2,asset.space.SpaceMapFrame.MemberAsset2,asset.space.SpaceMapFrame.MemberAsset1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="map.space.SpaceMapFrame.MemberBtn"
+      backStyle="map.space.SpaceMapFrame.MemberBtnBg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="spaceNpcView.crossGuildTxt.text"
+      textFormatStyle="spaceNpcView.crossGuildTxt.text_t"
+      autoSize="none"
+      width="120"
+      x="0"
+      y="0"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="spaceNpcView.crossGuildTxt"
+      textFieldStyle="spaceNpcView.crossGuildTxt.text"
+      colors="0xffffff,0x60f9ff,0x0084c9"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,100,180"
+      x="-60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="spaceNpcView.serverTxt.text"
+      textFormatStyle="spaceNpcView.serverTxt.text_t"
+      autoSize="none"
+      width="120"
+      x="0"
+      y="0"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="spaceNpcView.serverTxt"
+      textFieldStyle="spaceNpcView.serverTxt.text"
+      colors="0xffffff,0x60f9ff,0x0084c9"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,100,180"
+      x="-60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="spaceBuildingLayer.guildName.text"
+      textFormatStyle="spaceBuildingLayer.guildName.text_t"
+      autoSize="none"
+      width="600"
+      x="0"
+      y="0"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="spaceBuildingLayer.guildName"
+      textFieldStyle="spaceBuildingLayer.guildName.text"
+      filterString="spaceBuildingLayer.guildName_f"
+      colors="0xffffff,0x00fff6,0x0096ff,0x0042ff,0x00b181"
+      alphas="1,1,1,1,1"
+      ratios="10,70,150,190,220"
+      x="4615"
+      y="2065"
+      width="600"
+      height="45" />
+    <!-- 战斗观看CD -->
+    <component
+      classname="map.space.view.frame.BattleCDViewFrame"
+      stylename="map.space.view.frame.BattleCDViewFrame"
+      closestyle="map.space.SpaceDialogFrame.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="map.space.SpaceDialogFrame.FrameBg"
+      closeInnerRectString="26,80,-2,26,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="80"
+      containerY="23"
+      width="594"
+      height="210" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="map.space.view.frame.BattleCDViewBtn"
+      backStyle="asset.space.BattleViewCDFrame.exitBtnBg"
+      iconStyle="asset.space.BattleViewCDFrame.exitBtnTitle"
+      iconInnerRectString="22,89,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.view.frame.BattleCDViewTxt"
+      textFormatStyle="map.space.BattleCDView.ContentText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="80"
+      x="185"
+      y="65" />
+    <component
+      classname="map.space.view.frame.SpacePkAlertFrame"
+      stylename="space.SpacePkAlertFrame"
+      submitButtonStyle="core.AlertButtonConfirm_1"
+      cancelButtonStyle="core.AlertButtonCancel_1"
+      buttonToBottom="40"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="core.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="20"
+      containerY="40"
+      frameMiniW="285"
+      frameMiniH="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.space.SpaceMapFrame.NodeNameTxt"
+      textFormatStyle="map.space.SpaceMapFrame.NodeNameTxt_t1,map.space.SpaceMapFrame.NodeNameTxt_t2"
+      autoSize="center"
+      filterString="core.normal_f"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="map.GodsEveningMapFrame.bg"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="631"
+      height="422" />
+  </components>
+</style>

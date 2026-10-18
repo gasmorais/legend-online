@@ -1,0 +1,211 @@
+<style
+  name="pvp"
+  source="ui/zh_cn/swf/pvp.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvp.Describe_t"
+      args="Arial,12,0xfdf4c7,,,,,,left"
+      leading="5"
+      indent="28"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PvpHeroItemView.Txt_t"
+      args="Arial,12,0xfdf4c7,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.pvp.Back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.pvp.SingleIcon"
+      x="107"
+      y="29" />
+    <bitmapData
+      resourceLink="asset.pvp.MultiIcon"
+      x="98"
+      y="28" />
+    <bitmapData
+      resourceLink="asset.pvp.TextBack"
+      x="25"
+      y="203" />
+    <bitmapData
+      resourceLink="asset.pvp.Mask"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="pvp.view.PvPSingleView"
+      stylename="pvp.SingleView"
+      x="368" />
+    <custom
+      classname="pvp.view.PvPMultiView"
+      stylename="pvp.MultiView"
+      x="25" />
+  </customDisplay>
+  <components>
+    <component
+      classname="pvp.PvPFrame"
+      stylename="pvp.PvPFrame"
+      parentStyle="core.Frame1"
+      containerX="10"
+      containerY="52"
+      width="455"
+      height="530" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvp.DescribeText"
+      textFormatStyle="pvp.Describe_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="260"
+      height="120"
+      multiline="true"
+      wordWrap="true"
+      x="60"
+      y="204" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pvp.SingleStart"
+      backStyle="asset.pvp.StartBtnBack"
+      iconStyle="asset.pvp.StartBtnTxt"
+      iconInnerRectString="23,89,10,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="371" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pvp.MultiStart"
+      parentStyle="pvp.SingleStart"
+      backStyle="asset.pvp.EnterBtnBack"
+      iconStyle="asset.pvp.EnterBtnTxt"
+      iconInnerRectString="39,58,12,23,13"
+      x="200"
+      y="371" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pvp.ShopBtn"
+      backStyle="asset.pvp.ShopBtnBack"
+      iconStyle="asset.pvp.ShopBtnTxt"
+      iconInnerRectString="23,89,10,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="32"
+      y="371" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PvpSortListView.Title"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|544|0|32|13,134|22|3|28|13,241|22|3|28|13,334|22|3|28|13,417|22|3|28|13"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PvpSortListView.TitleTxt"
+      textFormatStyle="sort.sortText_t"
+      filterString="core.normal_f"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.frame.PvpHeroFrame"
+      stylename="worldboss.PvpHeroFrame"
+      parentStyle="core.Frame1"
+      containerX="9"
+      containerY="51"
+      moveInnerRectString="200,27,20,0,9"
+      width="570"
+      height="488" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PvpHeroFrame.Title"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|535|0|32|13,134|22|3|28|13,233|22|3|28|13,342|22|3|28|13"
+      x="7"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="PvpHeroFrame.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-2,-2,6,3"
+      viewportInnerRectString="0,0,5,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|PvpHeroFrame.PvpHeroItemView,32,410,false"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="525"
+      height="270"
+      vUnitIncrement="20"
+      x="9"
+      y="51" />
+    <custom
+      classname="map.campaign.pvp.view.PvpHeroItemView"
+      stylename="PvpHeroFrame.PvpHeroItemView"
+      width="410"
+      height="31" />
+    <!-- 跨服英雄榜 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="PvpHeroFrame.itemBgGray"
+      parentStyle="core.TitleBack_Style777"
+      x="2"
+      y="0"
+      height="32"
+      width="410" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="PvpHeroFrame.itemBgLight"
+      parentStyle="core.TitleBack_Style888"
+      x="1"
+      y="0"
+      height="30"
+      width="515" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PvpHeroFrame.itemBg"
+      resourceLink="PvpHeroFrame.itemBgGray,PvpHeroFrame.itemBgLight"
+      width="515" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PvpHeroItemView.Txt00"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="128"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PvpHeroItemView.Txt01"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="105"
+      x="135"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PvpHeroItemView.Txt02"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="88"
+      x="240"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PvpHeroItemView.Txt03"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="170"
+      x="335"
+      y="7"
+      multiline="true"
+      wordWrap="true" />
+  </components>
+</style>

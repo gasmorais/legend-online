@@ -1,0 +1,369 @@
+<style
+  name="oldbacker"
+  source="ui/zh_cn/swf/oldbacker.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="oldbacker.viewMsgText01_t"
+      args="Arial,14,0xffffff,,,,,,left"
+      leading="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="oldbacker.viewMsgText02_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="oldbacker.viewMsgText03_t"
+      args="Arial,14,0x00ff18,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="oldbacker.viewMsgText04_t"
+      args="Arial,14,0xffcc33,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="oldbacker.viewMsgText05_t"
+      args="Arial,14,0xffcc33,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="oldbacker.viewMsgText06_t"
+      args="Arial,14,0xffffff,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.oldbacker.oldbackerViewLine03"
+      x="0"
+      y="85" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="oldbacker.view.OldBackerMsgView"
+      stylename="oldbacker.OldBackerMsgView"
+      x="5"
+      y="30" />
+    <custom
+      classname="oldbacker.view.OldBackerInputView"
+      stylename="oldbacker.OldBackerInputView1"
+      x="339"
+      y="330" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="oldbackerRewardItem.HBox"
+      spacing="3"
+      x="10"
+      y="30" />
+    <custom
+      classname="oldbacker.view.OldBackerRewardView"
+      stylename="oldbacker.OldBackerRewardView"
+      x="5"
+      y="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="oldbackerview.rewardViewBaseIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      iconWidth="50"
+      iconHeight="50"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      loadingX="25"
+      loadingY="25"
+      tipGapV="0"
+      tipGapH="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="oldbackerview.rewardViewBaseItem"
+      backgroundStyle="asset.oldbacker.FarmeGoodsBack"
+      textStyle="oldbacker.viewMsgText06"
+      iconStyle="oldbackerview.rewardViewBaseIcon"
+      lockStyle="core.BagCellLock"
+      profileStyle="core.GoodsProfileBG"
+      profileX="2"
+      profileY="2"
+      profileWidth="48"
+      profileHeight="48"
+      showProfile="true"
+      x="20"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="oldbacker.OldBackerFrame"
+      stylename="oldbacker.OldBackerFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="62"
+      width="730"
+      height="550" />
+    <component
+      classname="oldbacker.OldBackerNewFrame"
+      stylename="oldbacker.OldBackerNewFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="62"
+      width="730"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="oldbacker.9CornerBg"
+      parentStyle="core.describeBackground_style11"
+      width="698"
+      height="420"
+      x="0"
+      y="27" />
+    <component
+      stylename="oldbacker.backMc"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.oldbacker.FarmeBack01,asset.oldbacker.FarmeBack02"
+      x="2"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn01"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected01"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected01"
+      selectedIconInnerRectString="18,55,5,24,13"
+      unselectedIconInnerRectString="18,55,5,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="31"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn02"
+      parentStyle="oldbacker.frameTabBtn01"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected02"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected02"
+      selectedIconInnerRectString="20,50,4,27,13"
+      unselectedIconInnerRectString="20,50,4,27,13"
+      x="100" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn03"
+      parentStyle="oldbacker.frameTabBtn01"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected03"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected03"
+      selectedIconInnerRectString="5,81,10,14,13"
+      unselectedIconInnerRectString="5,81,10,14,13"
+      x="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn04"
+      parentStyle="oldbacker.frameTabBtn01"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected04"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected04"
+      selectedIconInnerRectString="17,58,5,24,13"
+      unselectedIconInnerRectString="17,58,5,24,13"
+      x="300" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn05"
+      parentStyle="oldbacker.frameTabBtn01"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected05"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected05"
+      selectedIconInnerRectString="16,58,5,24,13"
+      unselectedIconInnerRectString="16,58,5,24,13"
+      x="300" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn06"
+      parentStyle="oldbacker.frameTabBtn01"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected06"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected06"
+      selectedIconInnerRectString="2,89,5,26,13"
+      unselectedIconInnerRectString="2,89,5,26,13"
+      x="400" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="oldbacker.frameTabBtn07"
+      parentStyle="oldbacker.frameTabBtn01"
+      selectedIconStyle="asset.oldbacker.FarmeTabIconSelected07"
+      unselectedIconStyle="asset.oldbacker.FarmeTabIconUnSelected07"
+      selectedIconInnerRectString="12,66,7,20,13"
+      unselectedIconInnerRectString="12,66,7,20,13"
+      x="500" />
+    <component
+      stylename="oldbacker.viewBack01"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.oldbacker.FarmeBack04,asset.oldbacker.FarmeBack03,asset.oldbacker.oldbackerViewLine01,asset.oldbacker.oldbackerViewLine02"
+      imageRectString="0|4|19,245|0|19,8|292|19,8|367|19"
+      x="13"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="oldbacker.viewMsgText01"
+      textFormatStyle="oldbacker.viewMsgText01_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="415"
+      height="300"
+      wordWrap="true"
+      x="265"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="oldbacker.viewMsgText02"
+      textFormatStyle="oldbacker.viewMsgText02_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="250"
+      height="25"
+      x="11"
+      y="339" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn01"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon01"
+      iconInnerRectString="18,130,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn02"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon02"
+      iconInnerRectString="18,130,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="485"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn03"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon04"
+      iconInnerRectString="25,114,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn04"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon05"
+      iconInnerRectString="35,94,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="383"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="oldbacker.viewMsgText03"
+      textFormatStyle="oldbacker.viewMsgText03_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="250"
+      height="25"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="oldbacker.viewMsgText04"
+      textFormatStyle="oldbacker.viewMsgText04_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="455"
+      height="25"
+      x="110"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="oldbacker.viewMsgText05"
+      textFormatStyle="oldbacker.viewMsgText05_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="400"
+      height="25"
+      x="10"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn05"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon06"
+      iconInnerRectString="18,44,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="583"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn06"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon03"
+      iconInnerRectString="12,55,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="583"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn07"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon07"
+      iconInnerRectString="35,94,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="388"
+      y="339" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn08"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon07"
+      iconInnerRectString="35,94,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="388"
+      y="364" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewBtn09"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack02"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon09"
+      iconInnerRectString="35,94,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="388"
+      y="364" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="oldbacker.viewReturnBtn"
+      backStyle="asset.oldbacker.oldbackerFarmeBtnBack"
+      iconStyle="asset.oldbacker.oldbackerFarmeBtnIcon08"
+      iconInnerRectString="15,50,8,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="598"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="oldbacker.rewardVbox"
+      x="2"
+      y="2"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="oldbacker.rewardScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,675,27,387,13"
+      vScrollbarInnerRectString="17,8,0,0,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="698"
+      height="412"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="oldbacker.viewMsgText06"
+      textFormatStyle="oldbacker.viewMsgText06_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="42"
+      height="25"
+      x="7"
+      y="29" />
+  </components>
+</style>

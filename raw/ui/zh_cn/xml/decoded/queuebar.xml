@@ -1,0 +1,426 @@
+<style
+  name="queuebar"
+  source="ui/zh_cn/swf/queuebar.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.AlertTextStyle_t"
+      args="Arial,14,0xFFefbd,,,,,,center"
+      leading="3"
+      letterSpacing="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.TitText_t1"
+      args="Arial,12,0x00aeef,,,,,,left"
+      leading="3"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.TitText_t2"
+      args="Arial,12,0x04ef25,,,,,,left"
+      leading="3"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.TitText_t3"
+      args="Arial,12,0xffffff,,,,,,left"
+      leading="3"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.GetRewardText_t"
+      args="Arial,12,0xf8fe02,,,true,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.TotalNumTxt_f"
+      args="Arial,12,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.VipTextStyle_t"
+      args="Arial,12,0xfff600,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.VipTxt_t"
+      args="Arial,12,0xffff00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.AlertText_2_Style_t"
+      args="Arial,14,0xFFefbd,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.AlertText_3_Style_t"
+      args="Arial,14,0xFFefbd,true,,,,,right"
+      leading="3"
+      letterSpacing="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.AlertText_3_Style_t_2"
+      args="Arial,14,0xFF0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="queueBar.AlertText_3_Style_t_4"
+      args="Arial,12,0xFF0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroRoadGiftFrame.descTxt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <!--Item背景-->
+    <bitmapData
+      resourceLink="asset.queueBar.itemBgImg"
+      y="2" />
+    <!--科技Ico图片-->
+    <bitmapData
+      resourceLink="asset.queueBar.tecIcoImg" />
+    <!--建筑Ico图片-->
+    <bitmapData
+      resourceLink="asset.queueBar.buildIcoImg" />
+    <!--建筑Ico图片-->
+    <bitmapData
+      resourceLink="asset.queueBar.colosseumimg" />
+    <!--建筑Ico图片-->
+    <bitmapData
+      resourceLink="asset.queueBar.alchemyIcoImg" />
+    <!--	计数Bg	-->
+    <bitmapData
+      resourceLink="asset.core.totalBg"
+      x="109"
+      y="-14" />
+    <!-- 免费冷却提示 -->
+    <bitmapData
+      resourceLink="asset.queueBar.tipsImg"
+      x="40"
+      y="147" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="queueBar.ItemMc"
+      x="-63"
+      y="5" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="queueBar.itemBgImg"
+      resourceLink="asset.queueBar.itemBgImg"
+      scaleGridString="5,5,190,15"
+      width="315"
+      height="21"
+      x="0"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="queueBar.Back"
+      resourceLink="asset.core.QueueBack"
+      scaleGridString="5,5,190,15"
+      alpha="0.25"
+      width="322"
+      height="131"
+      wwidth="217"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.VipTxt"
+      textFormatStyle="queueBar.VipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="20"
+      x="132"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.HideBtn"
+      backStyle="asset.core.HideBtnIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="99"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="queueBar.Vbox"
+      x="0"
+      y="-27"
+      spacing="0" />
+    <component
+      classname="mainBar.view.ChoosePayTypeFrame"
+      stylename="queueBar.ChoosePayTypeFrame"
+      parentStyle="core.Frame2"
+      width="364"
+      height="215" />
+    <component
+      classname="mainBar.view.VipCoolDownFrame"
+      stylename="queueBar.VipCoolDownFrame"
+      parentStyle="core.QuickBuyFrame"
+      width="310"
+      height="195" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="queueBar.GiftBack"
+      resourceLink="asset.resourcesBar.GiftBack"
+      x="208"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="queueBar.VoucherBack"
+      resourceLink="asset.resourcesBar.VoucherBack"
+      x="65"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="queueBar.CheckButton1"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="39"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="queueBar.CheckButton2"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="181"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="queueBar.QuickCodeButton"
+      parentStyle="core.ConfitmSellConfitmBtn"
+      x="20"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="queueBar.CloseButton"
+      parentStyle="core.ConfitmSellCancelBtn"
+      x="178"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.AlertTextStyle_2"
+      textFormatStyle="queueBar.AlertText_2_Style_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="40"
+      y="8"
+      width="220"
+      height="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.AlertTextStyle"
+      textFormatStyle="queueBar.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="350"
+      height="25"
+      x="-28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.AlertPromotTextStyle"
+      textFormatStyle="queueBar.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="305"
+      height="50"
+      wordWrap="true"
+      x="-5"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.PointTextStyle"
+      textFormatStyle="queueBar.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="80"
+      height="20"
+      x="95"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.PointTextStyle_2"
+      textFormatStyle="queueBar.AlertText_3_Style_t_2"
+      filterString="core.normal_f"
+      width="30"
+      height="20"
+      x="227"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.GiftTextStyle"
+      parentStyle="queueBar.PointTextStyle"
+      autoSize="left"
+      width="100"
+      x="240"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.VipCoolTextStyle"
+      textFormatStyle="queueBar.VipTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="200"
+      height="20"
+      x="30"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="queueBar.IcoImg"
+      resourceLink="asset.queueBar.tecIcoImg,asset.queueBar.buildIcoImg,asset.queueBar.colosseumimg,asset.queueBar.alchemyIcoImg,asset.queueBar.activeIcoImg"
+      x="3"
+      y="3" />
+    <!--titText-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.TitText"
+      textFormatStyle="queueBar.TitText_t1,queueBar.TitText_t2,queueBar.TitText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="5"
+      y="7"
+      width="300"
+      height="22" />
+    <!--时间Text-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.TimeText"
+      parentStyle="queueBar.TitText"
+      autoSize="none"
+      width="66"
+      x="138" />
+    <!--时间Text-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.TimeTextOrder"
+      parentStyle="queueBar.TitText"
+      autoSize="none"
+      width="180"
+      x="115" />
+    <!--	计数Text	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.TotalNumTxt"
+      textFormatStyle="queueBar.TotalNumTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="18"
+      x="113"
+      y="-10" />
+    <!--开始按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.StartBtn"
+      backStyle="asset.queueBar.startBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="190"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.GetRewardText"
+      textFormatStyle="queueBar.GetRewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="180"
+      y="2"
+      width="50"
+      height="20" />
+    <!-- 优先使用绑定钻石 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="queuebar.useBindPointBtn"
+      parentStyle="core.useBindPointBtn"
+      x="60"
+      y="77" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.promptTxt"
+      textFormatStyle="queueBar.AlertText_3_Style_t_4"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="59"
+      y="57"
+      width="120"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.expBackBtn"
+      backStyle="asset.queueBar.expBackBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="40"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="queueBar.VScrollbar04"
+      trackStyle="core.Scrollbar04_BackV"
+      thumbStyle="core.Scrollbar04_StepV"
+      decreaseButtonStyle="core.Scrollbar04_Up"
+      increaseButtonStyle="core.Scrollbar04_Down"
+      trackInnerRectString="-303,297,0,0,0"
+      thumbAreaInnerRectString="-302,298,10,10,0"
+      decreaseButtonInnerRectString="10,10,0,-301,9"
+      increaseButtonInnerRectString="10,10,-301,0,10"
+      orientation="0"
+      thumbMinSize="38"
+      width="23"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="queueBar.ScrollPanel"
+      vScrollbarStyle="queueBar.VScrollbar04"
+      vScrollbarInnerRectString="11,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="300"
+      height="128"
+      x="0"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.heroRoadBtn"
+      backStyle="asset.queueBar.heroRoadBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="115"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.upgradePresentBtn"
+      backStyle="asset.queueBar.upgradePresentBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="210"
+      y="203" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.heroRoadBtn2"
+      backStyle="asset.queueBar.heroRoadBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="120"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="queueBar.popBtn"
+      backStyle="asset.queueBar.popBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="90"
+      y="235" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="queueBar.countTime"
+      timeTxtStyle="queueBar.countTime.text"
+      x="102"
+      y="288" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="queueBar.countTime.text"
+      textFormatStyle="heroRoadGiftFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+  </components>
+</style>

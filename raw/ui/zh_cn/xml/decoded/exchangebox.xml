@@ -1,0 +1,348 @@
+<style
+  name="exchangebox"
+  source="ui/zh_cn/swf/exchangebox.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExchangeBoxFrame.leftCostText_t"
+      args="arial,16,0xeae1c9,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExchangeBoxFrame.leftBuyText_t"
+      args="Arial,12,0xffe400,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExchangeBoxFrame.alertText_t"
+      args="Arial,11,0x4fd648,,,,,,center"
+      leading="0"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ExchangeBoxFrame.NumBmpData" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BulePowerItem"
+      stylename="ExchangeBoxFrame.collectBar"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions=",7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="250"
+      x="235"
+      y="48" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ExchangeBoxFrame.hotItem"
+      parentStyle="core.BaseItemView"
+      profileX="0"
+      profileY="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ExchangeBoxFrame.getItem1"
+      parentStyle="core.BaseItemView"
+      iconStyle="ExchangeBoxFrame.getItemViewIcon1"
+      textStyle="ExchangeBoxFrame.BaseItemText"
+      profileWidth="60"
+      profileHeight="60"
+      profileX="0"
+      profileY="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ExchangeBoxFrame.getItemViewIcon1"
+      parentStyle="core.BaseItemViewIcon"
+      iconHeight="60"
+      iconWidth="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="40" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ExchangeBoxFrame.getItem2"
+      parentStyle="core.BaseItemView"
+      iconStyle="ExchangeBoxFrame.getItemViewIcon2"
+      profileWidth="45"
+      profileHeight="45"
+      profileX="0"
+      profileY="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ExchangeBoxFrame.getItemViewIcon2"
+      parentStyle="core.BaseItemViewIcon"
+      iconHeight="45"
+      iconWidth="45" />
+    <custom
+      classname="asset.ExchangeBoxFrame.buyResultMc0_0"
+      stylename="ExchangeBoxFrame.buyResultMc0_0"
+      x="173"
+      y="95" />
+    <custom
+      classname="asset.ExchangeBoxFrame.buyResultMc0_1"
+      stylename="ExchangeBoxFrame.buyResultMc0_1"
+      x="173"
+      y="95" />
+    <custom
+      classname="asset.ExchangeBoxFrame.buyResultMc2_0"
+      stylename="ExchangeBoxFrame.buyResultMc2_0"
+      x="470"
+      y="97" />
+    <custom
+      classname="asset.ExchangeBoxFrame.buyResultMc1_0"
+      stylename="ExchangeBoxFrame.buyResultMc1_0"
+      x="173"
+      y="95" />
+    <custom
+      classname="asset.ExchangeBoxFrame.buyResultMc1_1"
+      stylename="ExchangeBoxFrame.buyResultMc1_1"
+      x="173"
+      y="95" />
+    <custom
+      classname="asset.ExchangeBoxFrame.buyResultMc3_0"
+      stylename="ExchangeBoxFrame.buyResultMc3_0"
+      x="470"
+      y="97" />
+  </customDisplay>
+  <components>
+    <!-- Frame-->
+    <component
+      classname="exchangebox.ExchangeBoxFrame"
+      stylename="exchangebox.ExchangeBoxFrame"
+      parentStyle="core.Frame1"
+      width="577"
+      height="538"
+      containerX="13"
+      containerY="40"
+      titleOuterRectPosString="0,26,1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ExchangeBoxFrame.border"
+      parentStyle="core.describeBackground_style06"
+      width="524"
+      height="430"
+      alpha="0.6"
+      x="12"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ExchangeBoxFrame.back"
+      resourceLink="asset.ExchangeBoxFrame.back1,asset.ExchangeBoxFrame.back2"
+      x="15"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ExchangeBoxFrame.viewBack"
+      resourceLink="ExchangeBoxFrame.viewBack.fashion,ExchangeBoxFrame.viewBack.mount"
+      x="290"
+      y="60" />
+    <!--  时装   -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ExchangeBoxFrame.viewBack.fashion"
+      resourceLink="asset.viewBack.fashionLeftBack,asset.viewBack.fashionRightBack,asset.viewBack.fashionText1,asset.viewBack.fashionText2,ExchangeBoxFrame.viewBack.customImage,asset.viewBack.customFashionText"
+      imageRectString="0|251|0|347|13,300|251|0|347|13,60|130|8|25|13,310|236|8|30|13,0|35|0|42|13,3|244|190|45|13" />
+    <!--  坐骑   -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ExchangeBoxFrame.viewBack.mount"
+      resourceLink="asset.viewBack.mountLeftBack,asset.viewBack.mountRightBack,asset.viewBack.mountText1,asset.viewBack.mountText2,ExchangeBoxFrame.viewBack.customImage,asset.viewBack.custommountText"
+      imageRectString="0|251|0|347|13,300|251|0|347|13,70|117|11|20|13,337|179|11|23|13,0|35|0|42|13,7|239|190|49|13" />
+    <!--  通用    -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ExchangeBoxFrame.viewBack.customImage"
+      resourceLink="asset.viewBack.preCustomImage,asset.viewBack.preCustomImage,asset.core.SmallPointImg,asset.core.SmallPointImg,asset.viewBack.hotBack,asset.viewBack.hotText,asset.viewBack.lightImage"
+      imageRectString="55|64|168|23|13,350|64|168|23|13,175|23|165|21|13,470|23|165|21|13,302|117|190|25|13,327|35|193|17|13,0|244|193|42|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExchangeBoxFrame.fashionBookBtn"
+      backStyle="ExchangeBoxFrame.fashionSwitchBtn.back"
+      iconStyle="asset.exchangeBox.fashionBookText"
+      iconInnerRectString="49,91,15,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="50"
+      y="35"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ExchangeBoxFrame.fashionSwitchBtn.back"
+      resourceLink="asset.core.Style11Btn,asset.exchange.fashionSwitchImage"
+      imageRectString="0|151|0|50|13,17|36|7|32|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExchangeBoxFrame.mountBookBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.exchangeBox.mountBookText"
+      iconInnerRectString="10,130,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="50"
+      y="35"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExchangeBoxFrame.oneLeftBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.ExchangeBoxFrame.oneLeftBtnText"
+      iconInnerRectString="15,86,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="295"
+      y="360"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExchangeBoxFrame.oneKeyBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.ExchangeBoxFrame.oneKeyBtnText"
+      iconInnerRectString="10,94,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="420"
+      y="360"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExchangeBoxFrame.oneRightBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.ExchangeBoxFrame.oneLeftBtnText"
+      iconInnerRectString="15,86,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="657"
+      y="360"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.leftCostText"
+      textFormatStyle="ExchangeBoxFrame.leftCostText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="410"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.rightCostText"
+      textFormatStyle="ExchangeBoxFrame.leftCostText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="710"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.leftBuyText"
+      textFormatStyle="ExchangeBoxFrame.leftBuyText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="20"
+      x="295"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.rightBuyText"
+      textFormatStyle="ExchangeBoxFrame.leftBuyText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="20"
+      x="595"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.alertText"
+      textFormatStyle="ExchangeBoxFrame.alertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="77"
+      x="295"
+      y="310"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ExchangeBoxFrame.hotHbox"
+      spacing="10"
+      x="640"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ExchangeBoxFrame.moreBuyContiner"
+      x="456"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ExchangeBoxFrame.leftMcImage"
+      resourceLink="asset.ExchangeBoxFrame.fashionLeftMcImage,asset.ExchangeBoxFrame.mountLeftMcImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="340"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ExchangeBoxFrame.rightMcImage"
+      resourceLink="asset.ExchangeBoxFrame.fashionRightMcImage,asset.ExchangeBoxFrame.mountRightMcImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="637"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.fashionKeyCountTxt"
+      textFormatStyle="ExchangeBoxFrame.leftBuyText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="162"
+      height="38"
+      x="686"
+      y="246"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExchangeBoxFrame.mountKeyCountTxt"
+      textFormatStyle="ExchangeBoxFrame.leftBuyText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="40"
+      wordWrap="true"
+      multiline="true"
+      x="706"
+      y="246" />
+  </components>
+</style>

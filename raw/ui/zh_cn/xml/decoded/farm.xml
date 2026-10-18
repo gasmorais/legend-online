@@ -1,0 +1,2683 @@
+<style
+  name="farm"
+  source="ui/zh_cn/swf/farm.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmResourcesViewGoldTxt_t1"
+      args="Arial,14,0xe9d0a4,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmResourcesViewGoldTxt_t2"
+      args="Arial,14,0xff0004,,,,,,left" />
+    <!-- FarmShopFrame -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemNameTxt_t1"
+      args="Arial,12,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemNameTxt_t2"
+      args="Arial,12,0x59cd41" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemNameTxt_t3"
+      args="Arial,12,0x32a2f8" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemNameTxt_t4"
+      args="Arial,12,0xa838f7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemNameTxt_t5"
+      args="Arial,12,0xeb9504" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemNameTxt_t6"
+      args="Arial,12,0xce0f0f" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemBuffTxt_t"
+      args="Arial,12,0xdac98e"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemPriceTxt_t"
+      args="Arial,14,0xddcda0,true"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemTimeTxt_t"
+      args="Arial,12,0xe9d0a4,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmShopItemUnreachTxt_t"
+      args="Arial,12,0xbe0202,,,,,,left"
+      leading="0" />
+    <!-- 建筑名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.BuildNameTxt_t"
+      args="Arial,12,0xffffe2,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.BuildLevelTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      letterSpacing="0" />
+    <!-- 农场经验 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmExp"
+      args="Arial,14,0xffcc66,true,,,,,left" />
+    <!-- 滤镜 -->
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="farm.FarmShopItemUnreachTxt_gf"
+      args="0x000000,1,2,2,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.PetNameTxt_t"
+      args="Arial,12,0xeddb95,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.PetLvTxt_t"
+      args="Arial,12,0xfffbe2,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.PetGradeTxt_t"
+      args="Arial,12,0xfffbe2,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.PetTitleTxt_t"
+      args="Arial,14,0x21d8ff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MarryTreeView.progress.text_t"
+      args="Arial,12,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="MarryTreeView.progress.text_f"
+      args="0x120f0c,1,1,1,1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.make.ComposeGoodsNumTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.make.NeedGoldNumTxt_t"
+      args="Arial,16,0xffeb11,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.make.NeedGoodsNumTxt_t"
+      args="Arial,12,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.mount.noMount_t"
+      args="Arial,16,0xffeb11,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.mount.noonlinefirend_t"
+      args="Arial,16,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.bigbon.statusTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.BonCDTime.leftTimeTxt_t"
+      args="Arial,16,0x34dbe1,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.FarmBonCdTimeView.Txt_t"
+      args="Arial,15,0x4cf8ff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="farm.view.invidedTxt_t"
+      args="Arial,14,0x45ff1a,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FarmShopFrame.ComboxText_t"
+      args="Arial,13,0xe7d5ad,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FarmShopFrame.ListCellTextStyle_t"
+      args="Arial,12,0xffdd9a,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FarmEnterNewFrame.farmText.text_t"
+      args="Arial,15,0xffffff,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 光晶 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmResourcesViewCrystalImg"
+      x="0"
+      y="0" />
+    <!-- 黄金 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmResourcesViewGoldImg"
+      x="0"
+      y="0" />
+    <!-- 礼金 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmResourcesViewGiftImg"
+      x="0"
+      y="0" />
+    <!-- 战魂 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmResourcesViewSoulImg"
+      x="0"
+      y="0" />
+    <!-- 钻石 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmResourcesViewDiamondImg"
+      x="0"
+      y="0" />
+    <!-- FarmLandItem -->
+    <!-- 未开放 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmLandItemUnopenImg"
+      x="13"
+      y="-23" />
+    <!-- 有虫 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmLandItemWormImg"
+      x="1"
+      y="-7" />
+    <!-- 有草 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmLandItemGrassImg"
+      x="-2"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.farm.FarmLandItemFeedImg"
+      x="4"
+      y="-4" />
+    <!-- 有草II -->
+    <bitmapData
+      resourceLink="asset.farm.FarmLandItemGrassImgII" />
+    <!-- 可收获 -->
+    <bitmapData
+      resourceLink="asset.farm.FarmLandItemPickImg"
+      x="1"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.farm.FriendListTitleAsset"
+      x="102"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.farm.FriendListAsset"
+      x="7"
+      y="184" />
+    <!-- FarmShopFrame -->
+    <bitmapData
+      resourceLink="asset.farm.FarmShopItemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.farm.FarmShopBindTipImg"
+      x="246"
+      y="345" />
+    <bitmapData
+      resourceLink="asset.farm.FriendListArrow"
+      x="6"
+      y="5" />
+    <!-- FarmTopLayer -->
+    <bitmapData
+      resourceLink="asset.farm.BarrierImg1"
+      x="947"
+      y="625" />
+    <bitmapData
+      resourceLink="asset.farm.BarrierImg2"
+      x="457"
+      y="512" />
+    <bitmapData
+      resourceLink="asset.farm.marryTree2"
+      x="33"
+      y="48" />
+    <bitmapData
+      resourceLink="asset.farm.marryCircleIcon"
+      x="7"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.farm.make.makeFrameBg"
+      x="4"
+      y="195" />
+    <bitmapData
+      resourceLink="asset.farm.make.makeFrameBgCheek"
+      x="6"
+      y="195" />
+    <bitmapData
+      resourceLink="asset.farm.make.NeedGlodImg"
+      x="227"
+      y="325" />
+    <bitmapData
+      resourceLink="asset.farm.make.processingFrameBg"
+      x="0"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.farm.make.processTipsImg"
+      x="180"
+      y="160" />
+    <bitmapData
+      resourceLink="asset.farm.invide.InvideTxt"
+      x="60"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.farm.invide.InvideTxtBg"
+      x="20"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.farm.invide.InvideItemLine"
+      width="300"
+      x="0"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.farm.BonCDTimeBG" />
+    <!-- bitmapData resourceLink="asset.farm.BonCDTimeTxtImg" x='65' y='11'/ -->
+    <bitmapData
+      resourceLink="asset.farm.FarmFriendListView.titleback"
+      x="-3"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.farm.FarmFriendListView.back" />
+    <bitmapData
+      resourceLink="asset.PastureView.railingImage"
+      x="10"
+      y="295" />
+    <bitmapData
+      resourceLink="asset.FarmEnterNewFrame.back"
+      x="-10"
+      y="20" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 背景层 -->
+    <custom
+      classname="asset.farm.Windmill"
+      stylename="farm.Windmill"
+      x="1385"
+      y="171" />
+    <custom
+      classname="asset.farm.Waterwheel"
+      stylename="farm.Waterwheel"
+      x="829"
+      y="311" />
+    <!-- 坐骑展示层 -->
+    <custom
+      classname="farm.view.FarmMountLayer"
+      stylename="farm.FarmMountLayer"
+      x="0"
+      y="0" />
+    <custom
+      classname="farm.view.FarmAnimalArea"
+      stylename="farm.FarmAnimalArea1"
+      x="172"
+      y="212" />
+    <!-- FarmLandItem -->
+    <custom
+      classname="asset.farm.LandItemBack"
+      stylename="farm.LandItemBack"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.farm.LandItemHitArea"
+      stylename="farm.LandItem.hitMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="farm.FarmLandItemCropIcon"
+      tipStyle="yishi.view.tips.CropTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="10"
+      tipGapH="-120"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="59"
+      loadingY="70"
+      x="13"
+      y="-22" />
+    <!-- 神树可操作动画 -->
+    <custom
+      classname="asset.farm.HasOperEffect"
+      stylename="farm.TreeHasOperEffect"
+      x="103"
+      y="142" />
+    <!-- 可操作动画 -->
+    <custom
+      classname="asset.farm.HasOperEffect"
+      stylename="farm.HasOperEffect"
+      x="41"
+      y="20" />
+    <!-- 可操作动画 -->
+    <custom
+      classname="asset.farm.HasOperEffect"
+      stylename="MarryTree.HasOperEffect"
+      x="135"
+      y="35" />
+    <!-- 经验增加动画 -->
+    <custom
+      classname="asset.farm.ExpEffect"
+      stylename="farm.ExpEffect"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="69"
+      y="-50" />
+    <!-- 成熟动画 -->
+    <custom
+      classname="asset.farm.MatureEffect"
+      stylename="farm.MatureEffect"
+      x="46"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="farm.FarmShopItemGoodItem"
+      iconStyle="farm.FarmShopItemGoodItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="17"
+      y="17" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="farm.FarmShopItemGoodItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="25"
+      loadingY="25"
+      x="1"
+      y="1" />
+    <!-- FarmBagFrame -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MarryTreeFosterFrame.DoubleItem"
+      iconStyle="MarryTreeFosterFrame.FarmBagCellIcon1"
+      profileStyle="core.GoodsProfileBG"
+      profileX="3"
+      profileY="3"
+      profileWidth="43"
+      profileHeight="43"
+      showProfile="true"
+      x="101"
+      y="19" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MarryTreeFosterFrame.InComeItem"
+      iconStyle="MarryTreeFosterFrame.InComeIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="30"
+      profileHeight="30"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MarryTreeFosterFrame.InComeIcon"
+      iconHeight="30"
+      iconWidth="30"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="2"
+      loadingHeight="2"
+      loadingX="15"
+      loadingY="15"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="farm.cell.MarryTreeBagCell"
+      stylename="MarryTreeFosterFrame.MarryTreeBagCell1"
+      backgroundStyle="MarryTreeFosterFrame.ItemBack1"
+      iconStyle="MarryTreeFosterFrame.FarmBagCellIcon1"
+      textStyle="core.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="43"
+      profileHeight="43"
+      profileX="3"
+      profileY="3"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MarryTreeFosterFrame.FarmBagCellIcon1"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="3"
+      y="3" />
+    <custom
+      classname="farm.cell.MarryTreeBagCell"
+      stylename="MarryTreeFosterFrame.MarryTreeBagCell2"
+      backgroundStyle="MarryTreeFosterFrame.ItemBack2"
+      iconStyle="MarryTreeFosterFrame.FarmBagCellIcon2"
+      textStyle="core.BaseItemText"
+      profileStyle="farm.FarmBagCellProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MarryTreeFosterFrame.FarmBagCellIcon2"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MarryTreeFosterFrame.ItemContainer1"
+      vSpace="0"
+      hSpace="0"
+      x="285"
+      y="168" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MarryTreeFosterFrame.ItemContainer2"
+      vSpace="0"
+      hSpace="0"
+      x="297"
+      y="15" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="farm.FarmBagFrameItemContainer"
+      vSpace="1"
+      hSpace="0" />
+    <custom
+      classname="farm.cell.FarmBagCell"
+      stylename="farm.FarmBagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="farm.FarmBagCellIcon"
+      textStyle="core.BaseItemText"
+      profileStyle="farm.FarmBagCellProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="farm.FarmBagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="FarmPetListItemView.HeadIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="3"
+      y="3" />
+    <custom
+      classname="asset.farm.PetBottom2"
+      stylename="farm.PetBottom2"
+      x="0"
+      y="-1" />
+    <custom
+      classname="asset.farm.PetBottomEffect"
+      stylename="farm.PetBottomEffect"
+      x="-2"
+      y="9"
+      alpha="0.8" />
+    <custom
+      classname="asset.farm.PetBottomEffect"
+      stylename="farm.PetBottomEffect2"
+      x="-2"
+      y="36"
+      alpha="0.3" />
+    <custom
+      classname="farm.view.FarmWalkLayer"
+      stylename="farm.FarmWalkLayer"
+      x="-455"
+      y="370" />
+    <!-- 建筑层 -->
+    <custom
+      classname="farm.view.FarmBuildLayer"
+      stylename="farm.FarmBuildLayer"
+      x="400"
+      y="700" />
+    <!-- 住所层 -->
+    <custom
+      classname="farm.view.FarmHouseLayer"
+      stylename="farm.FarmHouseLayer"
+      x="1000"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.make.plusImg0"
+      resourceLink="asset.farm.make.PlusImg"
+      x="170"
+      y="250" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.make.plusImg1"
+      resourceLink="asset.farm.make.PlusImg"
+      x="300"
+      y="250" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.make.ItemBg0"
+      resourceLink="asset.farm.make.ItemBg"
+      x="80"
+      y="225" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.make.ItemBg1"
+      resourceLink="asset.farm.make.ItemBg"
+      x="210"
+      y="225" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.make.ItemBg2"
+      resourceLink="asset.farm.make.ItemBg"
+      x="335"
+      y="225" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.make.LockImg"
+      resourceLink="asset.farm.make.LockImg"
+      x="353"
+      y="235" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.NeedGoldImg"
+      resourceLink="asset.farm.make.NeedGlodImg"
+      x="245"
+      y="325" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.plusImg0"
+      resourceLink="asset.farm.make.PlusImg"
+      x="170"
+      y="105" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.plusImg1"
+      resourceLink="asset.farm.make.PlusImg"
+      x="300"
+      y="105" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.ItemBg0"
+      resourceLink="asset.farm.make.ItemBg"
+      x="80"
+      y="80" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.ItemBg1"
+      resourceLink="asset.farm.make.ItemBg"
+      x="210"
+      y="80" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.ItemBg2"
+      resourceLink="asset.farm.make.ItemBg"
+      x="335"
+      y="80" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.ItemBg3"
+      resourceLink="asset.farm.make.ItemBg"
+      x="210"
+      y="220" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.process.LockImg"
+      resourceLink="asset.farm.make.LockImg"
+      x="353"
+      y="90" />
+    <custom
+      classname="asset.farm.animal.AnimalBg0"
+      stylename="farm.animal.bg0"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.farm.animal.AnimalBg1"
+      stylename="farm.animal.bg1"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="farm.make.composeBagSimpleTileList"
+      vSpace="3"
+      hSpace="5" />
+    <custom
+      classname="farm.view.make.FarmMakeBagCell"
+      stylename="farm.make.FarmMakeComposeGoodItem"
+      backgroundStyle="farm.FarmMakeComposeBagCellBG"
+      iconStyle="farm.make.FarmMakeComposeGoodItemIcon"
+      textStyle="core.BaseItemText"
+      width="69"
+      height="70"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="farm.make.FarmMakeComposeGoodItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="35"
+      loadingY="35"
+      x="4"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="farm.make.FarmMakeComposeNeedGoodItemIcon0"
+      iconStyle="farm.make.FarmMakeComposeGoodItemIcon"
+      profileX="0"
+      profileY="0"
+      profileWidth="64"
+      profileHeight="64"
+      showProfile="false"
+      x="82"
+      y="226" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="farm.make.FarmMakeComposeNeedGoodItemIcon1"
+      iconStyle="farm.make.FarmMakeComposeGoodItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="64"
+      profileHeight="64"
+      showProfile="false"
+      x="212"
+      y="225" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="farm.make.FarmMakeComposeNeedGoodItemIcon2"
+      iconStyle="farm.make.FarmMakeComposeGoodItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="64"
+      profileHeight="64"
+      showProfile="false"
+      x="337"
+      y="226" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.MakeFrame.NumBg0"
+      resourceLink="asset.farm.make.ComposeGoodsCountBg"
+      x="127"
+      y="276" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.MakeFrame.NumBg1"
+      resourceLink="asset.farm.make.ComposeGoodsCountBg"
+      x="257"
+      y="276" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.MakeFrame.NumBg2"
+      resourceLink="asset.farm.make.ComposeGoodsCountBg"
+      x="382"
+      y="276" />
+    <custom
+      classname="farm.view.FarmInvideItem"
+      stylename="farm.FarmInvideItem" />
+    <custom
+      classname="asset.farm.AnimalHasOperEffect"
+      stylename="farm.AnimalHasOperEffect"
+      x="-20"
+      y="-75" />
+    <!-- 养殖区栅栏上 -->
+    <custom
+      classname="asset.farm.animal.AnimalBg0FenceUp"
+      stylename="farm.animal0.AnimalBg0FenceUp"
+      x="33"
+      y="-19" />
+    <!-- 养殖区栅栏下 -->
+    <custom
+      classname="asset.farm.animal.AnimalBg0FenceDown"
+      stylename="farm.animal0.AnimalBg0FenceDown"
+      x="10"
+      y="160" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.FarmBuildLayer.AnimalTipsImg0"
+      resourceLink="asset.farm.LandUpImg" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="farm.FarmBuildLayer.AnimalTipsImg1"
+      resourceLink="asset.farm.LandUpImg" />
+    <custom
+      classname="asset.farm.randomMc"
+      stylename="farm.randomMc" />
+    <!-- 新家园 -->
+    <custom
+      classname="water.view.FarmFriendListView"
+      stylename="HomeFrame.friendListView"
+      x="636"
+      y="18" />
+    <!-- 神树层 -->
+    <custom
+      classname="water.view.WaterView"
+      stylename="farm.FarmWaterLayer"
+      x="385"
+      y="10" />
+    <custom
+      classname="farm.newview.FarmView"
+      stylename="HomeFrame.farmView" />
+    <custom
+      classname="farm.newview.PastureView"
+      stylename="HomeFrame.pastureView" />
+    <custom
+      classname="farm.view.FarmInfoView"
+      stylename="HomeFrame.farmInfoView" />
+    <!-- 农田层 -->
+    <custom
+      classname="farm.view.FarmLandLayer"
+      stylename="farm.FarmLandLayer"
+      x="135"
+      y="195" />
+    <!-- 姻缘神树 -->
+    <custom
+      classname="farm.view.marrytree.MarryTreeView"
+      stylename="PastureView.marryTree"
+      x="385"
+      y="25" />
+    <!-- 动物层 -->
+    <custom
+      classname="farm.view.FarmAnimalLayer"
+      stylename="farm.FarmAnimalLayer" />
+    <!-- 动物活动区域 -->
+    <custom
+      classname="farm.view.FarmAnimalArea"
+      stylename="farm.FarmAnimalArea0" />
+    <custom
+      classname="asset.pasture.lineArea"
+      stylename="PastureView.lineArea"
+      x="295"
+      y="255" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MarryTreeFosterFrame.MarryTreeBagCell3"
+      backgroundStyle="MarryTreeFosterFrame.ItemBack2"
+      iconStyle="MarryTreeFosterFrame.FarmBagCellIcon2"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      textStyle="core.BaseItemText"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MarryTreeFosterFrame.ItemContainer3"
+      vSpace="0"
+      hSpace="0"
+      x="285"
+      y="84" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MarryTreeFosterFrame.ItemContainer4"
+      vSpace="0"
+      hSpace="0"
+      x="32"
+      y="104" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="HouseUIView.navigationBtnStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+  </customDisplay>
+  <components>
+    <!-- 农场背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="farm.Skin"
+      resourceLink="asset.farm.FarmMap" />
+    <!-- FarmFriendListView -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="farm.FriendListBack"
+      resourceLink="asset.farm.FriendListBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="farm.FriendListBackAsset"
+      resourceLink="asset.farm.FriendListBackAsset"
+      x="30"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="farm.FarmResourcesViewBg"
+      resourceLink="asset.farm.FarmResourcesViewBg"
+      x="0"
+      y="0" />
+    <!-- FarmBuildLayer -->
+    <!-- 建筑名背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.BuildNameBg2"
+      parentStyle="core.BuildNameBg"
+      width="75"
+      height="24"
+      x="963"
+      y="-618" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.BuildNameBg3"
+      parentStyle="farm.BuildNameBg2"
+      x="1340"
+      y="-654" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.TreeNameBg"
+      parentStyle="farm.BuildNameBg2"
+      x="79"
+      y="29"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.BuildNameBg4"
+      parentStyle="core.BuildNameBg"
+      width="75"
+      height="24"
+      x="768"
+      y="-278" />
+    <!-- 建筑名 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.BuildNameTxt2"
+      textFormatStyle="farm.BuildNameTxt_t"
+      filterString="core.normal_f"
+      x="972"
+      y="-614" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.BuildNameTxt3"
+      textFormatStyle="farm.BuildNameTxt_t"
+      filterString="core.normal_f"
+      x="1350"
+      y="-650" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.TreeNameTxt"
+      parentStyle="farm.BuildNameTxt2"
+      x="90"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.BuildNameTxt4"
+      textFormatStyle="farm.BuildNameTxt_t"
+      filterString="core.normal_f"
+      x="777"
+      y="-274" />
+    <!-- 背包 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmBuildLayerBagBtn"
+      parentStyle="farm.FarmBuildLayerLandUpBtn"
+      backStyle="asset.farm.FarmBagImg"
+      tipStyle="yishi.view.tips.WaterTreeTip"
+      tipGapH="-40"
+      tipGapV="-180"
+      x="1215"
+      y="-694" />
+    <!-- 商店 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmBuildLayerShopBtn"
+      parentStyle="farm.FarmBuildLayerLandUpBtn"
+      backStyle="asset.farm.FarmShopImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapH="-100"
+      tipGapV="-100"
+      x="860"
+      y="-600" />
+    <!-- 魔法工坊 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmBuildLayerMakeBtn"
+      parentStyle="farm.FarmBuildLayerLandUpBtn"
+      backStyle="asset.farm.FarmMakeImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapH="-100"
+      tipGapV="-100"
+      x="628"
+      y="-423" />
+    <!-- 饲料工坊 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmBuildLayerProcessingBtn"
+      parentStyle="farm.FarmBuildLayerLandUpBtn"
+      backStyle="asset.farm.FarmProcessingImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapH="-100"
+      tipGapV="-100"
+      x="746"
+      y="-608" />
+    <!-- FarmLandLayer -->
+    <component
+      classname="farm.view.FarmLandItem"
+      stylename="farm.FarmLandItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="-48"
+      tipGapH="-50"
+      isFollowMouse="false" />
+    <!-- FarmOperMenu -->
+    <!-- 加速按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmLandItemAccelerateBtn"
+      backStyle="asset.farm.OperTipBgSmall"
+      iconStyle="asset.farm.FarmLandItemAccelerateBtnImg"
+      iconInnerRectString="6,27,5,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="10"
+      y="-25" />
+    <!-- 铲除按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmLandItemClearBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      iconStyle="asset.farm.FarmLandItemClearBtnImg"
+      iconInnerRectString="7,32,-5,34,13"
+      x="50"
+      y="-25" />
+    <!-- FarmToolbar -->
+    <!-- 我的农场按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmToolbarMyFarmBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.farm.FarmToolbarMyFarmBtnTxt"
+      iconInnerRectString="6,127,3,44,13"
+      x="0"
+      y="0" />
+    <!-- FarmInfoView -->
+    <!-- 日志按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmInfoViewLogBtn"
+      backStyle="asset.farm.FarmInfoViewLogBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="54"
+      y="91" />
+    <!-- FarmResourcesView -->
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmHelpBtn"
+      backStyle="asset.farm.FarmHelpBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="128"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmResourcesViewGoldTxt"
+      textFormatStyle="farm.FarmResourcesViewGoldTxt_t1,farm.FarmResourcesViewGoldTxt_t2"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="19"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmResourcesViewCrystalTxt"
+      parentStyle="farm.FarmResourcesViewGoldTxt"
+      x="22"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmResourcesViewSoulTxt"
+      parentStyle="farm.FarmResourcesViewGoldTxt"
+      x="22"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmResourcesViewGiftTxt"
+      parentStyle="farm.FarmResourcesViewGoldTxt"
+      x="21"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmResourcesViewDiamondTxt"
+      parentStyle="farm.FarmResourcesViewGoldTxt"
+      x="20"
+      y="2" />
+    <component
+      classname="mainBar.StripView"
+      stylename="farm.FarmResourcesViewGoldContainer"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="6,7,4,5"
+      tipGapH="-30"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="58"
+      y="3" />
+    <component
+      classname="mainBar.StripView"
+      stylename="farm.FarmResourcesViewCrystalContainer"
+      parentStyle="farm.FarmResourcesViewGoldContainer"
+      x="144"
+      y="1" />
+    <component
+      classname="mainBar.StripView"
+      stylename="farm.FarmResourcesViewSoulContainer"
+      parentStyle="farm.FarmResourcesViewGoldContainer"
+      x="232"
+      y="2" />
+    <component
+      classname="mainBar.StripView"
+      stylename="farm.FarmResourcesViewGiftContainer"
+      parentStyle="farm.FarmResourcesViewGoldContainer"
+      x="322"
+      y="1" />
+    <component
+      classname="mainBar.StripView"
+      stylename="farm.FarmResourcesViewDiamondContainer"
+      parentStyle="farm.FarmResourcesViewGoldContainer"
+      x="409"
+      y="1" />
+    <!-- FarmShopItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmShopItemNameTxt"
+      textFormatStyle="farm.FarmShopItemNameTxt_t1,farm.FarmShopItemNameTxt_t2,farm.FarmShopItemNameTxt_t3,farm.FarmShopItemNameTxt_t4,farm.FarmShopItemNameTxt_t5,farm.FarmShopItemNameTxt_t6"
+      filterString="core.normal_f"
+      isAutoFitLength="true"
+      autoSize="none"
+      width="180"
+      x="16"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmShopItemBuffTxt"
+      textFormatStyle="farm.FarmShopItemBuffTxt_t"
+      filterString="core.normal_f"
+      width="150"
+      multiline="true"
+      wordWrap="true"
+      x="84"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmShopItemPriceTxt"
+      textFormatStyle="farm.FarmShopItemPriceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="205"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmShopItemTimeTxt"
+      textFormatStyle="farm.FarmShopItemTimeTxt_t"
+      filterString="core.normal_f"
+      x="277"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmShopItemProfitTxt"
+      textFormatStyle="farm.FarmShopItemTimeTxt_t"
+      filterString="core.normal_f"
+      x="373"
+      y="14"
+      isAutoFitLength="true"
+      autoSize="none"
+      width="123"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmShopItemUnreachTxt"
+      textFormatStyle="farm.FarmShopItemUnreachTxt_t"
+      filterString="farm.FarmShopItemUnreachTxt_gf"
+      autoSize="none"
+      wordWrap="true"
+      width="182"
+      height="20"
+      x="490"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmShopItemBuyBtn"
+      backStyle="asset.core.ShopBuyBtn"
+      iconStyle="asset.core.ShopBuyTxt"
+      iconInnerRectString="19,40,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="527"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="farm.FarmShopItemOverBg"
+      parentStyle="shop.MouseOver1"
+      mouseEnabled="false"
+      mouseChildren="false"
+      width="267"
+      height="110"
+      x="0"
+      y="-3" />
+    <!-- FarmBagFrame -->
+    <component
+      classname="farm.FarmBagFrame"
+      stylename="farm.FarmBagFrame"
+      parentStyle="core.Frame2"
+      containerX="18"
+      containerY="41"
+      width="249"
+      moveEnable="false"
+      height="382" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="farm.FarmBagFrameScaleBg"
+      parentStyle="core.describeBackground_style11"
+      width="215"
+      height="250"
+      x="-1"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="farm.FarmBagFrameScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="-5,16,-4,0,0"
+      vUnitIncrement="8"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="198"
+      height="232"
+      x="10"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="farm.FarmBagCellProfileBG"
+      parentStyle="core.GoodsProfileBG"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmBagFrameShopBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.farm.FarmShopTxtImg"
+      iconInnerRectString="34,86,13,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="34"
+      y="251" />
+    <!-- FarmFriendItem -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="farm.FarmStateImg"
+      resourceLink=",asset.farm.CanStealImg,asset.farm.CanGivePowerImg,asset.farm.CanReviveImg,asset.farm.CanWormImg,asset.farm.CanWeedImg,asset.farm.FarmLandItemFeedImgSmall,asset.farm.IllImg,asset.farm.AnxietyImg,asset.farm.HarvestImg,asset.farm.HungerImg"
+      x="170"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.PetTitleTxt"
+      textFormatStyle="farm.PetTitleTxt_t"
+      filterString="core.normal_f"
+      width="150"
+      height="22"
+      x="9"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.PetNameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="150"
+      height="22"
+      x="65"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.PetLvTxt"
+      textFormatStyle="farm.PetLvTxt_t"
+      filterString="core.normal_f"
+      width="25"
+      height="22"
+      x="65"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.PetGradeTxt"
+      textFormatStyle="farm.PetGradeTxt_t"
+      filterString="core.normal_f"
+      width="25"
+      height="22"
+      x="80"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="farm.PetVBox"
+      isStrictHeight="true"
+      strictHeight="55"
+      x="0"
+      y="0"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.CancelPetBtn"
+      backStyle="asset.farm.PetChangeBack"
+      iconStyle="asset.farm.PetCancelTxt"
+      width="50"
+      height="26"
+      x="-25"
+      y="37"
+      iconInnerRectString="9,32,6,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.ChangePetBtn"
+      backStyle="asset.farm.PetChangeBack"
+      iconStyle="asset.farm.PetChangeTxt"
+      width="50"
+      height="26"
+      x="-25"
+      y="-70"
+      iconInnerRectString="9,32,6,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="farm.view.FarmPetSelectMeun"
+      stylename="farm.FarmPetSelectMeun"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="240"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="FarmPetSelectMeun.back"
+      parentStyle="core.commonTipBg"
+      width="225"
+      height="238"
+      x="-19"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="FarmPetListItemView.Line"
+      resourceLink="asset.core.tipsLineImg"
+      scaleGridString="10,0,222,1"
+      width="138"
+      x="44"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="FarmPetListItemView.Back"
+      parentStyle="core.describeBackground_style04"
+      x="51"
+      y="0"
+      width="164"
+      height="56" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="FarmPetSelectMeun.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="13,-2,0,0,3"
+      viewportInnerRectString="0,0,0,0,0"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="230"
+      height="285"
+      x="-14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="FarmPetListItemView.HeadBorder"
+      resourceLink="core.shop.goodsItemBack2"
+      scaleGridString="20,20,40,40"
+      width="56"
+      height="56"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="FarmPetListItemView.MouseOver"
+      parentStyle="shop.MouseOver1"
+      width="225"
+      height="72"
+      y="-9"
+      x="-5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="farm.PetBottom"
+      resourceLink="asset.farm.PetBottom,farm.PetBottom2,farm.PetBottom3"
+      x="0"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="farm.PetBottom3"
+      resourceLink="farm.PetBottom2,farm.PetBottomEffect" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FarmPetLandView.ClickParticeTxt"
+      textFieldStyle="FarmPetLandView.ClickParticeTxt.TxtField"
+      colors="0xffffff,0xfeed2f,0xdc8f34"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="-50"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FarmPetLandView.ClickParticeTxt.TxtField"
+      textFormatStyle="map.style.HonerTxt14"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="FarmPetSelectMeun.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-2,-2,6,3"
+      viewportInnerRectString="0,0,5,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|farm.FarmPetListItemView,60,220,false"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="425"
+      height="270"
+      vUnitIncrement="20"
+      x="9"
+      y="51" />
+    <component
+      classname="farm.view.FarmPetListItemView"
+      stylename="farm.FarmPetListItemView" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="MarryTreeView.Tree"
+      resourceLink="asset.farm.marryTree,asset.farm.marryTree1"
+      x="55"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MarryTreeView.feedBtn"
+      backStyle="asset.farm.PetChangeBack"
+      iconStyle="asset.farm.marryFeedIcon"
+      iconInnerRectString="8,34,5,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="50"
+      height="26"
+      x="497"
+      y="191" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="MarryTreeView.progressBack"
+      resourceLink="asset.farm.marryStateBg,asset.farm.marryStateImage,asset.farm.marryProgerssBack"
+      imageRectString="-20|225|-1|38|13,-15|67|1|29|13,53|148|6|25|13"
+      x="31"
+      y="131" />
+    <component
+      classname="yishi.view.base.Progress"
+      stylename="MarryTreeView.progress"
+      progressStyle="asset.farm.marryProgerss"
+      progressTextStyle="MarryTreeView.progress.text"
+      x="90"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MarryTreeView.progress.text"
+      textFormatStyle="MarryTreeView.progress.text_t"
+      filterString="MarryTreeView.progress.text_f"
+      autoSize="none"
+      width="134"
+      height="16"
+      x="0"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MarryTreeFosterFrame.ItemBack1"
+      resourceLink="asset.marry.fosterGrid1"
+      scaleGridString="5,5,35,35"
+      width="48"
+      height="48" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MarryTreeFosterFrame.ItemBack2"
+      resourceLink="asset.marry.fosterGrid2"
+      scaleGridString="5,5,35,35"
+      width="45"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MarryTreeFosterFrame.incomeHbox"
+      x="85"
+      y="193"
+      spacing="0"
+      strictWidth="34" />
+    <!--魔法工坊 -->
+    <component
+      classname="farm.view.make.FarmMakeFrame"
+      stylename="farm.FarmMakeFrame"
+      parentStyle="core.Frame1"
+      moveEnable="true"
+      width="515"
+      height="540" />
+    <!--背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.FarmMakeFrame.BG"
+      parentStyle="core.describeBackground_style09"
+      x="0"
+      y="40"
+      width="480"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="farm.makeFrame.btnHbox"
+      spacing="-5"
+      x="10"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="farm.makeFrame.AllBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.farm.make.selectedAllBtn"
+      unselectedIconStyle="asset.farm.make.unSelectedAllBtn"
+      selectedIconInnerRectString="25,47,7,19,13"
+      unselectedIconInnerRectString="25,47,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="farm.makeFrame.EssenceBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.farm.make.selectedEssenceBtn"
+      unselectedIconStyle="asset.farm.make.unSelectedEssenceBtn"
+      selectedIconInnerRectString="30,41,7,20,13"
+      unselectedIconInnerRectString="30,40,7,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="farm.makeFrame.MilkTeaBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.farm.make.selectedMilkTeaBtn"
+      unselectedIconStyle="asset.farm.make.unSelectedMilkTeaBtn"
+      selectedIconInnerRectString="33,32,7,19,13"
+      unselectedIconInnerRectString="33,32,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="farm.makeFrame.MagicBoxBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.farm.make.selectedMagicBoxBtn"
+      unselectedIconStyle="asset.farm.make.unSelectedMagicBoxBtn"
+      selectedIconInnerRectString="1,98,8,19,13"
+      unselectedIconInnerRectString="1,98,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="110"
+      height="34"
+      y="1" />
+    <!-- 制造按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.makeFrame.MakeBtn"
+      backStyle="asset.farm.make.makeBtnBg"
+      iconStyle="asset.farm.make.makeBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="50"
+      iconInnerRectString="50,59,14,23,13"
+      x="171"
+      y="365" />
+    <!-- 前一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.make.ComposePrePageBtn"
+      backStyle="asset.farm.make.PrePageBtn"
+      x="105"
+      y="320"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <!-- 后一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.make.ComposeNextPageBtn"
+      backStyle="asset.farm.make.NextPageBtn"
+      x="185"
+      y="320"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="farm.make.ComposeMatetialView.NumBg"
+      resourceLink="asset.farm.make.ComposeNumBg"
+      x="135"
+      y="322" />
+    <!-- 合成数量文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.make.ComposeGoodsNumTxt"
+      textFormatStyle="farm.make.ComposeGoodsNumTxt_t"
+      type="input"
+      restrict="0-9"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="140"
+      y="325"
+      width="40"
+      height="20" />
+    <!-- 所需黄金文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.make.NeedGoldNumTxt"
+      textFormatStyle="farm.make.NeedGoldNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="360"
+      y="325"
+      width="100"
+      height="20" />
+    <!--饲料工坊 -->
+    <component
+      classname="farm.view.make.FarmProcessingFrame"
+      stylename="farm.FarmProcessingFrame"
+      parentStyle="core.Frame1"
+      moveEnable="true"
+      width="500"
+      height="535" />
+    <!--背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.FarmProcessingFrame.BG"
+      parentStyle="core.describeBackground_style09"
+      x="-7"
+      y="40"
+      width="480"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="farm.processingFrame.FeedBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.farm.make.selectedFeedBtn"
+      unselectedIconStyle="asset.farm.make.unSelectedFeedBtn"
+      selectedIconInnerRectString="29,42,7,19,13"
+      unselectedIconInnerRectString="30,40,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="farm.processingFrame.OtherBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.farm.make.selectedOtherBtn"
+      unselectedIconStyle="asset.farm.make.unSelectedOtherBtn"
+      selectedIconInnerRectString="29,41,7,19,13"
+      unselectedIconInnerRectString="30,40,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <!-- 加工按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="FarmProcessingFrame.processBtn"
+      backStyle="asset.farm.make.makeBtnBg"
+      iconStyle="asset.farm.make.processBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="50"
+      iconInnerRectString="50,53,14,22,13"
+      x="170"
+      y="365" />
+    <!-- 前一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.process.ComposePrePageBtn"
+      x="105"
+      y="320"
+      parentStyle="farm.make.ComposePrePageBtn" />
+    <!-- 后一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.process.ComposeNextPageBtn"
+      parentStyle="farm.make.ComposeNextPageBtn"
+      x="185"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="farm.process.ComposeMatetialView.NumBg"
+      parentStyle="farm.make.ComposeMatetialView.NumBg"
+      x="135"
+      y="322" />
+    <!-- 合成数量文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.process.ComposeGoodsNumTxt"
+      parentStyle="farm.make.ComposeGoodsNumTxt"
+      x="140"
+      y="325" />
+    <!-- 所需黄金文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.process.NeedGoldNumTxt"
+      parentStyle="farm.make.NeedGoldNumTxt"
+      x="320"
+      y="325" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="Farm.makeCompose.panel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="10,-76,0,0,3"
+      viewportInnerRectString="1,475,2,145,13"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="385"
+      height="145"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.FarmMakeComposeBagCellBG"
+      parentStyle="core.goods.ItemBack2"
+      resourceLink="asset.farm.make.ComposeGoodsBg"
+      width="69"
+      height="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.makeFrame.countNeedGoodsTxt0"
+      textFormatStyle="farm.make.NeedGoodsNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="88"
+      y="275"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.makeFrame.countNeedGoodsTxt1"
+      textFormatStyle="farm.make.NeedGoodsNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="217"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.makeFrame.countNeedGoodsTxt2"
+      textFormatStyle="farm.make.NeedGoodsNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="342"
+      y="275" />
+    <!-- 饥饿按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmAnimalItemHungerBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      iconStyle="asset.farm.farmanimalitem.HungerImg"
+      iconInnerRectString="7,32,-5,34,13"
+      x="0"
+      y="0" />
+    <!-- 疾病按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmAnimalItemIllBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      iconStyle="asset.farm.farmanimalitem.IllImg"
+      iconInnerRectString="7,32,-5,34,13"
+      x="0"
+      y="0" />
+    <!-- 收获按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmAnimalItemHarvestBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      iconStyle="asset.farm.farmanimalitem.HarvestImg"
+      iconInnerRectString="7,32,-5,34,13"
+      x="0"
+      y="0" />
+    <!-- 焦虑按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmAnimalItemAnxietyBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      iconStyle="asset.farm.farmanimalitem.AnxietyImg"
+      iconInnerRectString="7,32,-5,34,13"
+      x="0"
+      y="0" />
+    <!-- 卖出按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.FarmAnimalItemSaleBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      iconStyle="asset.farm.farmanimalitem.SaleImg"
+      iconInnerRectString="5,27,3,27,13"
+      x="60"
+      y="-25" />
+    <!--邀请好友 -->
+    <component
+      classname="farm.view.FarmInvideFrame"
+      stylename="farm.FarmInvideFrame"
+      parentStyle="core.Frame2"
+      moveEnable="true"
+      width="390"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="farm.invide.itemExchangeVbox"
+      x="5"
+      y="38"
+      spacing="9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.invide.InvideBg"
+      parentStyle="core.describeBackground_style06"
+      x="-28"
+      y="-10"
+      width="371"
+      height="281" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="farm.Invide.SelectButton"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="226"
+      y="-4" />
+    <!-- 列表页码值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.invide.ListPageText"
+      textFormatStyle="water.page_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="44"
+      height="20"
+      x="135"
+      y="230" />
+    <!-- 首页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.invide.ListFirstBtn"
+      backStyle="asset.water.FirstPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="70"
+      y="230" />
+    <!-- 尾页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.invide.ListLastBtn"
+      backStyle="asset.water.LastPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="220"
+      y="230" />
+    <!-- 列表前页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.invide.ListPreBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="125"
+      y="230"
+      scaleX="-1"
+      scaleY="1" />
+    <!-- 列表后页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.invide.ListNextBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="190"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.invide.ItemNameText"
+      textFormatStyle="water.playerName_t1,water.playerName_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="35"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="farm.invide.okBtn"
+      backStyle="asset.core.SmallBrownBtn"
+      textStyle="pet.SubmitText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="27"
+      backgoundInnerRectString="4,8,5,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="124"
+      y="281" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.invide.InvideFirendBtn"
+      backStyle="asset.farm.invide.InvideBonfireBtnImg"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="60"
+      height="59"
+      x="-6"
+      y="-11" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.DiceNormalBtn"
+      backStyle="asset.farm.DiceNormalBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="1"
+      tipGapH="10"
+      tipGapV="-50"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.SitDownBtn"
+      backStyle="asset.farm.SitDownBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="1"
+      tipGapH="10"
+      tipGapV="-50"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.autoPickBtn"
+      backStyle="asset.farm.autoPickBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="farm.view.FarmAnimalItem"
+      stylename="farm.FarmAnimalItem" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="farm.FarmAnimalItem.AnimalContent"
+      tipStyle="yishi.view.tips.CropTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="50"
+      tipGapH="-50"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="farm.MountBottom"
+      resourceLink="asset.farm.SitDownMountImg"
+      x="0"
+      y="27" />
+    <component
+      classname="farm.view.FarmMountSelectMenu"
+      stylename="farm.FarmMountSelectMenu"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="240"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="farm.CancelMountBtn"
+      parentStyle="farm.CancelPetBtn"
+      x="20"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.MountNameTxt"
+      parentStyle="farm.PetNameTxt"
+      x="5"
+      y="-77" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.animalTips.bg0"
+      parentStyle="farm.BuildNameBg2"
+      x="-119"
+      y="434"
+      width="115"
+      height="34" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.animalTips.bg1"
+      parentStyle="farm.BuildNameBg2"
+      x="351"
+      y="-486" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.animalAreaNameTxt0"
+      parentStyle="farm.BuildNameTxt1"
+      x="-118"
+      y="438"
+      width="120"
+      height="40"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.animalAreaNameTxt1"
+      parentStyle="farm.BuildNameTxt1"
+      x="374"
+      y="-482" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.farmMakeFarme.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="434"
+      y="-30" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="farm.farmmakefarme.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="farm.farmmakefarme.helpContent"
+      titleText="public.help"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.mount.nomountTxt"
+      textFormatStyle="farm.mount.noMount_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="-15"
+      y="0"
+      width="220"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.mount.noonlinefirendTxt"
+      textFormatStyle="farm.mount.noonlinefirend_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="-25"
+      y="40"
+      width="366"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="farm.mount.animalTipsImgContent0"
+      x="-181"
+      y="466"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="20" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="farm.mount.animalTipsImgContent1"
+      x="261"
+      y="-471"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.bigbon.statusBtn"
+      backStyle="asset.farm.FarmBonStatusBtnImg"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="59"
+      height="61"
+      x="20"
+      y="-45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.bigbon.statusTxt"
+      textFormatStyle="farm.bigbon.statusTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="20"
+      y="10"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.BonCDTime.leftTimeTxt"
+      textFormatStyle="farm.BonCDTime.leftTimeTxt_t"
+      filterString="core.normal_f"
+      x="300"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.FarmBonCdTimeView.Txt"
+      textFormatStyle="farm.FarmBonCdTimeView.Txt_t"
+      filterString="core.normal_f"
+      x="80"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.view.invidedTxt"
+      textFormatStyle="farm.view.invidedTxt_t"
+      filterString="core.normal_f"
+      x="247"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="HouseUIView.myHouseBtn"
+      parentStyle="farm.FarmLandItemAccelerateBtn"
+      backStyle="asset.farm.FarmToolbarMyFarmBtnBg"
+      iconStyle="asset.farm.FarmToolbarMyHouseBtnTxt"
+      iconInnerRectString="15,65,11,19,13"
+      x="0"
+      y="0" />
+    <!-- 新版家园 -->
+    <component
+      classname="farm.newview.HomeFrame"
+      stylename="farm.newview.HomeFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      width="885"
+      height="625" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="HomeFrame.border"
+      parentStyle="core.describeBackground_style09"
+      x="5"
+      y="11"
+      width="840"
+      height="505" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="HomeFrame.back"
+      resourceLink="home.farm.back,home.pasture.back"
+      x="11"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="home.farm.back"
+      resourceLink="asset.home.farmback,asset.home.common.corner,asset.home.common.spiltLine"
+      imageRectString="0|619|0|488|13,0|220|373|115|13,617|6|-3|495|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="home.pasture.back"
+      resourceLink="asset.home.pastureback,asset.home.common.corner,asset.home.common.spiltLine"
+      imageRectString="0|619|0|488|13,0|220|373|115|13,617|6|-3|495|13" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HomeFrame.quickHarvestBtn"
+      backStyle="asset.HomeFrame.quickHarvestBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="670"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HomeFrame.returnHomeBtn"
+      backStyle="asset.HomeFrame.returnHomeBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="670"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HomeFrame.homeShopBtn"
+      backStyle="asset.HomeFrame.homeShopBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="15"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HomeFrame.magicMakeBtn"
+      backStyle="asset.HomeFrame.magicMakeBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="90"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HomeFrame.homeStoreBtn"
+      backStyle="asset.HomeFrame.homeStoreBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="165"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="HomeFrame.gotoFarmBtn"
+      backStyle="asset.farm.gotoFarmBack"
+      iconStyle="asset.HomeFrame.gotoFarmBtnText"
+      iconInnerRectString="22,75,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="275"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="HomeFrame.gotoPastureBtn"
+      backStyle="asset.farm.gotoFarmBack"
+      iconStyle="asset.HomeFrame.gotoPastureBtnText"
+      iconInnerRectString="22,75,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="275"
+      y="25" />
+    <!-- 新农场 -->
+    <!-- 土地升级 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="farm.FarmBuildLayerLandUpBtn"
+      backStyle="asset.farm.LandUpImg"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.LandUpTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="-40"
+      tipGapV="-40"
+      isFollowMouse="false"
+      x="560"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="farm.BuildNameBg1"
+      resourceLink="farm.BuildNameBg2,asset.core.BuildLevelBg"
+      imageRectString="0|122|0|24|13,4|18|4|16|13"
+      x="505"
+      y="252" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.BuildNameTxt1"
+      textFormatStyle="farm.BuildNameTxt_t"
+      filterString="core.normal_f"
+      x="526"
+      y="254" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="farm.BuildLevelTxt"
+      textFormatStyle="farm.BuildLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="508"
+      y="254" />
+    <!-- 牧场区 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PastureView.animalBoardImage"
+      resourceLink="asset.farm.LandUpImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="535"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PastureView.animalUpNameBg"
+      resourceLink="farm.BuildNameBg2,asset.core.BuildLevelBg"
+      imageRectString="0|110|0|24|13,4|35|4|16|13"
+      x="520"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PastureView.animalUpNameTxt"
+      textFormatStyle="farm.BuildNameTxt_t"
+      filterString="core.normal_f"
+      x="560"
+      y="339" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PastureView.animalUpLevelTxt"
+      textFormatStyle="farm.BuildLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="517"
+      y="339" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HouseUIView.farmBtn"
+      backStyle="asset.HouseUIView.farmBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HouseUIView.pastureBtn"
+      backStyle="asset.HouseUIView.pastureBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HouseUIView.bonfireBtn"
+      backStyle="asset.HouseUIView.bonfireBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="980"
+      y="56" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HouseUIView.catHouseBtn"
+      backStyle="asset.HouseUIView.catHouseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MarryTreeView.land"
+      backStyle="asset.farm.marryLand"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,1,2,3,4,5,6,7"
+      isFollowMouse="false"
+      x="468"
+      y="158" />
+    <!-- 新农场商店背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="farm.shopFrameTableBg"
+      resourceLink="asset.farm.shopBg_scale9bg1,asset.farm.shopBg_scale9bg2,asset.farm.shopBg_scale9bg3,asset.farm.shopBg_scale9bg4,asset.farm.shopBg_scale9bg5,asset.farm.shopBg_scale9bg6,asset.farm.shopBg_scale9bg7,asset.farm.shopBg_scale9bg8,asset.farm.shopBg_scale9bg9"
+      x="2"
+      y="30"
+      width="689"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.shopBg"
+      parentStyle="core.describeBackground_style04"
+      x="2"
+      y="30"
+      width="689"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="farm.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="710"
+      height="408"
+      x="-12"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="farm.scrollPanel2"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,2,4,-2,3"
+      viewportInnerRectString="0,17,2,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="273"
+      height="77"
+      x="-79"
+      y="12" />
+    <!-- 选择下拉框 1 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FarmShopFrame.comboxButton"
+      unSelectedStyle="farm.shopComboBox"
+      selectedStyle="farm.shopComboBox"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="3"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="farm.shopComboBox"
+      resourceLink="asset.farm.shopComboBox"
+      scaleGridString="30,31,20,21"
+      width="227"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FarmShopFrame.ComboxText"
+      textFormatStyle="FarmShopFrame.ComboxText_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="true"
+      buttonMode="true"
+      autoSize="none"
+      isAutoFitLength="true"
+      width="160"
+      height="20"
+      maxChars="14" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="FarmShopFrame.Combox1"
+      listPanelStyle="FarmShopFrame.Listpanel1"
+      listInnerRectString="5,33,0,-150,18"
+      textStyle="FarmShopFrame.ComboxText"
+      textInnerRectString="7,20,5,1,0"
+      buttonStyle="FarmShopFrame.comboxButton"
+      direction="1"
+      enableHtml="true"
+      width="184"
+      height="26"
+      x="363"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="FarmShopFrame.Listpanel1"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,5,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|FarmShopFrame.SalePreviewSelectCell1,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.SalePreviewSelectCellAdapter"
+      stylename="FarmShopFrame.SalePreviewSelectCell1"
+      backStyle="FarmShopFrame.ComboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="FarmShopFrame.ListCellTextStyle"
+      autoSizeAble="false"
+      width="184"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="FarmShopFrame.ComboxListCellAsset"
+      resourceLink=",asset.farm.shopComboBoxSelected,asset.farm.shopComboBoxSelected"
+      fillAlphaRect="true"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FarmShopFrame.ListCellTextStyle"
+      textFormatStyle="FarmShopFrame.ListCellTextStyle_t"
+      filterString="core.filter_01"
+      type="input"
+      autoSize="none"
+      width="210"
+      height="22"
+      y="1" />
+    <!-- 选择下拉框 2 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="FarmShopFrame.Combox2"
+      listPanelStyle="FarmShopFrame.Listpanel2"
+      listInnerRectString="5,33,0,-50,18"
+      textStyle="FarmShopFrame.ComboxText"
+      textInnerRectString="7,20,5,1,0"
+      buttonStyle="FarmShopFrame.comboxButton"
+      direction="1"
+      enableHtml="true"
+      width="239"
+      height="26"
+      x="98"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="FarmShopFrame.Listpanel2"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,5,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|FarmShopFrame.SalePreviewSelectCell2,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.SalePreviewSelectCellAdapter"
+      stylename="FarmShopFrame.SalePreviewSelectCell2"
+      backStyle="FarmShopFrame.ComboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="FarmShopFrame.ListCellTextStyle"
+      autoSizeAble="false"
+      width="184"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="HouseUIView.navigationBtn"
+      backStyle="asset.HouseUIView.navigationBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="FarmEnterNewFrame.farmBtn"
+      backStyle="asset.FarmEnterNewFrame.farmBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="575"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="FarmEnterNewFrame.pastureBtn"
+      backStyle="asset.FarmEnterNewFrame.pastureBtn"
+      parentStyle="FarmEnterNewFrame.farmBtn"
+      x="-8"
+      y="253" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="FarmEnterNewFrame.boatBtn"
+      backStyle="asset.FarmEnterNewFrame.boatBtn"
+      parentStyle="FarmEnterNewFrame.farmBtn"
+      x="358"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="FarmEnterNewFrame.catBtn"
+      backStyle="asset.FarmEnterNewFrame.catBtn"
+      parentStyle="FarmEnterNewFrame.farmBtn"
+      x="107"
+      y="143" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="FarmEnterNewFrame.homeBtn"
+      backStyle="asset.FarmEnterNewFrame.homeBtn"
+      parentStyle="FarmEnterNewFrame.farmBtn"
+      x="587"
+      y="70" />
+    <component
+      classname="farm.FarmEnterNewFrame"
+      stylename="farm.FarmEnterNewFrame"
+      parentStyle="core.Frame1"
+      containerX="28"
+      containerY="43"
+      width="838"
+      height="610" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="FarmEnterNewFrame.nameBack"
+      resourceLink="asset.FarmEnterNewFrame.nameBack,asset.FarmEnterNewFrame.nameBack,asset.FarmEnterNewFrame.nameBack,asset.FarmEnterNewFrame.nameBack"
+      imageRectString="10|115|225|28|13,355|160|48|28|13,645|115|40|28|13,565|115|325|28|13" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FarmEnterNewFrame.farmText"
+      colors="0xffe138,0xff9d33"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal_f"
+      textFieldStyle="FarmEnterNewFrame.farmText.text"
+      width="120"
+      height="22"
+      x="560"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FarmEnterNewFrame.farmText.text"
+      textFormatStyle="FarmEnterNewFrame.farmText.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FarmEnterNewFrame.pastureText"
+      parentStyle="FarmEnterNewFrame.farmText"
+      x="2"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FarmEnterNewFrame.boatText"
+      parentStyle="FarmEnterNewFrame.farmText"
+      x="352"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FarmEnterNewFrame.catText"
+      parentStyle="FarmEnterNewFrame.farmText"
+      x="122"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FarmEnterNewFrame.homeText"
+      parentStyle="FarmEnterNewFrame.farmText"
+      x="640"
+      y="45" />
+  </components>
+</style>

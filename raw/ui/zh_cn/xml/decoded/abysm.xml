@@ -1,0 +1,240 @@
+<style
+  name="abysm"
+  source="ui/zh_cn/swf/abysm.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="abysm.maxLayerTxt_t"
+      args="Arial,14,0xffc600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="abysm.tipsTxt_t"
+      args="Arial,12,0xc7ad9e,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="abysm.layerTxt_t"
+      args="Arial,20,0xffc119,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.abysm.itemMask"
+      x="1"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.abysm.layerNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.abysm.itemBack"
+      x="1"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.abysm.bg3"
+      x="46"
+      y="87" />
+    <bitmapData
+      resourceLink="asset.abysm.bg4"
+      x="609"
+      y="87" />
+    <bitmapData
+      resourceLink="asset.abysm.rewardBg"
+      x="40"
+      y="360" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="abysm.layerSprite"
+      x="425"
+      y="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="abysm.childIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="35"
+      loadingY="31"
+      iconWidth="45"
+      iconHeight="45"
+      x="0"
+      y="5" />
+    <custom
+      classname="abysm.view.AbysmChildView"
+      stylename="abysm.AbysmChildView"
+      x="667"
+      y="150" />
+    <custom
+      classname="asset.abysm.choseItemEffect"
+      stylename="abysm.choseItemEffect"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="abysm.bossIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="45"
+      loadingY="31"
+      iconWidth="50"
+      iconHeight="50"
+      x="2"
+      y="2" />
+    <custom
+      classname="abysm.view.AbysmBossView"
+      stylename="abysm.AbysmBossView"
+      x="300"
+      y="199" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="abysm.rewardItem"
+      parentStyle="core.BaseItemView"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="abysm.frameBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.abysm.back,asset.abysm.bg0,asset.abysm.bg1,asset.abysm.layerEndIcon,asset.abysm.layerStartIcon,asset.abysm.bg2"
+      imageRectString="0|900|0|613|13,86|163|163|22|13,59|230|522|29|13,468|62|80|34|13,391|29|80|30|13,664|130|158|33|13"
+      x="0"
+      y="0" />
+    <component
+      classname="abysm.AbysmFrame"
+      stylename="abysm.AbysmFrame"
+      backStyle="abysm.frameBack"
+      parentStyle="core.Frame2"
+      moveInnerRectString="360,50,25,0,9"
+      titleOuterRectPosString="0,44,1"
+      closeInnerRectString="29,18,37,29,14"
+      containerX="10"
+      containerY="51"
+      width="900"
+      height="613" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="abysm.childHeadImages"
+      resourceLink="asset.abysm.itemHandleBack,asset.abysm.itemNormalBack0,asset.abysm.itemNormalBack1,asset.abysm.itemNormalBack2,asset.abysm.itemSealBack0,asset.abysm.itemSealBack1,asset.abysm.itemSealBack2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="abysm.childSetBtn"
+      backStyle="asset.abysm.setBtnBack"
+      iconStyle="asset.abysm.setBtnIcon"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="4,106,13,22,13"
+      x="665"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="abysm.chalengeBtn"
+      backStyle="asset.abysm.chalengeBtnBack"
+      iconStyle="asset.abysm.chalengeBtnIcon"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="25,66,12,19,13"
+      x="665"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="abysm.maxLayerTxt"
+      textFormatStyle="abysm.maxLayerTxt_t"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="80"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="abysm.tipsTxt"
+      textFormatStyle="abysm.tipsTxt_t"
+      autoSize="none"
+      multiline="true"
+      width="120"
+      height="60"
+      x="95"
+      y="155"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="abysm.layerTxt"
+      textFormatStyle="abysm.layerTxt_t"
+      autoSize="none"
+      width="60"
+      height="35"
+      x="140"
+      y="167" />
+    <component
+      classname="childabysm.ChildAbysmFormationFrame"
+      stylename="childabysm.ChildAbysmFormationFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="290,290,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="650"
+      height="470" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="abysm.ChildrenIconStrip"
+      tipStyle="yishi.view.tips.ChildrenFigureTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="20"
+      tipGapV="-20"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="abysm.bossIconStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-20"
+      isFollowMouse="false" />
+    <component
+      stylename="abysm.frameBack2"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.abysm.back2,asset.abysm.bg0,asset.abysm.bg1,asset.abysm.layerEndIcon,asset.abysm.layerStartIcon,asset.abysm.bg2"
+      imageRectString="0|0|19,96|163|19,59|522|19,473|77|19,391|77|19,664|157|19"
+      x="0"
+      y="0" />
+    <component
+      classname="abysm.HellAbysmFrame"
+      stylename="abysm.HellAbysmFrame"
+      backStyle="abysm.frameBack2"
+      parentStyle="core.Frame2"
+      moveInnerRectString="360,50,25,0,9"
+      titleOuterRectPosString="0,44,1"
+      closeInnerRectString="29,18,37,29,14"
+      containerX="10"
+      containerY="51"
+      width="900"
+      height="613" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="abysm.rewardTitle"
+      textFormatStyle="abysm.maxLayerTxt_t"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="98"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="abysm.rewardHbox"
+      autoCenter="true"
+      spacing="5"
+      x="158"
+      y="400" />
+  </components>
+</style>

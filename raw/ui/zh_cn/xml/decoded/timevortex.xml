@@ -1,0 +1,848 @@
+<style
+  name="timevortex"
+  source="ui/zh_cn/swf/timevortex.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexAreaView.tipsTxt_t1"
+      args="Arial,14,0x3dff01,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexAreaView.tipsTxt_t2"
+      args="Arial,14,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexPointView.lairdNameTxt_t"
+      args="Arial,12,0x07eff8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexPointView.lairdServerNameTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexCrackFrame.crackTipsTxt_t"
+      args="Arial,16,0xffb400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexCrackTeamItemView.nameTxt_t1"
+      args="Arial,14,0xc7b57d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexCrackTeamItemView.nameTxt_t2"
+      args="Arial,14,0xc7b57d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexCrackTeamItemView.countTxt_t1"
+      args="Arial,14,0xc7b57d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timevortex.TimeVortexCrackTeamItemView.countTxt_t2"
+      args="Arial,14,0xc7b57d,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.timevortex.crackWaitTipsNumberAsset" />
+    <bitmapData
+      resourceLink="asset.timevortex.blackBack"
+      x="-20"
+      y="5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="timevortex.view.TimeVortexAreaView"
+      stylename="timevortex.TimeVortexFrame.areaView" />
+    <custom
+      classname="timevortex.view.TimeVortexMapView"
+      stylename="timevortex.TimeVortexAreaView.timeVortexMapView" />
+    <custom
+      classname="asset.timevortex.frameCover"
+      stylename="timevortex.TimeVortexMapView.frameCover"
+      mouseEnabled="false"
+      mouseChildren="false"
+      x="-37"
+      y="-50" />
+    <custom
+      classname="asset.timevortex.frameBorder"
+      stylename="timevortex.TimeVortexMapView.frameBorder"
+      mouseEnabled="false"
+      mouseChildren="false"
+      x="-37"
+      y="-50" />
+    <custom
+      classname="asset.timevortex.pointEffect"
+      stylename="timevortex.TimeVortexMapView.pointEffect"
+      x="-27"
+      y="-20" />
+    <custom
+      classname="asset.timevortex.crackEffect"
+      stylename="timevortex.TimeVortexMapView.crackEffect"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.timevortex.scaleBack"
+      stylename="timevortex.TimeVortexPointView.scaleBack" />
+    <custom
+      classname="timevortex.view.TimeVortexShowAvatar"
+      stylename="timevortex.TimeVortexPointView.bossAvatar"
+      mouseEnabled="false"
+      mouseChildren="false"
+      x="0"
+      y="21" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="timevortex.TimeVortexPointView.lairdAvatar"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="0.4"
+      scaleY="0.4"
+      x="-63"
+      y="-70" />
+    <custom
+      classname="timevortex.view.TimeVortexShowAvatar"
+      stylename="timevortex.TimeVortexChallengeFrame.bossAvatar"
+      mouseEnabled="false"
+      mouseChildren="false"
+      x="137"
+      y="215" />
+    <custom
+      classname="timevortex.view.TimeVortexRewardView"
+      stylename="timevortex.TimeVortexChallengeFrame.bossRewardView1"
+      x="100"
+      y="260" />
+    <custom
+      classname="timevortex.view.TimeVortexRewardView"
+      stylename="timevortex.TimeVortexChallengeFrame.bossRewardView2"
+      x="100"
+      y="322" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdAvatar"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="0.6"
+      scaleY="0.6"
+      x="330"
+      y="70" />
+    <custom
+      classname="timevortex.view.TimeVortexRewardView"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdRewardView1"
+      x="383"
+      y="260" />
+    <custom
+      classname="timevortex.view.TimeVortexRewardView"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdRewardView2"
+      x="383"
+      y="322" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="timevortex.TimeVortexRewardView.BaseItemView"
+      backgroundStyle="core.fallGoods.HeroBagEquipBack"
+      iconStyle="timevortex.TimeVortexRewardView.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="core.BaseItemText"
+      profileX="3"
+      profileY="3"
+      profileWidth="48"
+      profileHeight="48"
+      showProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="timevortex.TimeVortexRewardView.BaseItemViewIcon"
+      iconHeight="51"
+      iconWidth="51"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="26"
+      loadingY="26"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="timevortex.TimeVortexCrackFrame.crackAvatar"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="1"
+      scaleY="1"
+      x="65"
+      y="80" />
+    <custom
+      classname="timevortex.view.TimeVortexCrackRewardView"
+      stylename="timevortex.TimeVortexCrackFrame.crackRewardView"
+      x="440"
+      y="45" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="timevortex.TimeVortexCrackRewardView.BaseItemView"
+      backgroundStyle="timevortex.TimeVortexCrackRewardView.BaseItemBack"
+      iconStyle="timevortex.TimeVortexCrackRewardView.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="timevortex.TimeVortexCrackRewardView.BaseItemText"
+      profileX="3"
+      profileY="3"
+      profileWidth="58"
+      profileHeight="58"
+      showProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="timevortex.TimeVortexCrackRewardView.BaseItemViewIcon"
+      iconHeight="61"
+      iconWidth="61"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="26"
+      loadingY="26"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="timevortex.TimeVortexCrackTeamWaitView.countDownTxtContainer"
+      x="217"
+      y="23" />
+    <custom
+      classname="timevortex.view.TimeVortexCrackDefendRewardView"
+      stylename="timevortex.TimeVortexCrackDefendRewardView"
+      x="0"
+      y="0" />
+    <custom
+      classname="timevortex.view.TimeVortexCrackRewardView"
+      stylename="timevortex.TimeVortexCrackDefendRewardView.rewardView"
+      x="28"
+      y="38" />
+    <custom
+      classname="timevortex.view.TimeVortexDragonItemView"
+      stylename="timevortex.view.TimeVortexDragonItemView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false" />
+    <custom
+      classname="timevortex.view.TimeVortexDragonView"
+      stylename="timevortex.TimeVortexFrame.dragonView" />
+  </customDisplay>
+  <components>
+    <component
+      classname="timevortex.TimeVortexFrame"
+      stylename="timevortex.TimeVortexFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="asset.timevortex.blackBack"
+      closeInnerRectString="29,10,-5,29,14"
+      moveInnerRectString="0,30,-40,40,1"
+      titleOuterRectPosString="0,15,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="-14"
+      containerY="16"
+      width="945"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="timevortex.TimeVortexFrame.SelectedTab01"
+      unSelectedStyle="asset.timevortex.tabBtnBackUnSelect"
+      selectedStyle="asset.timevortex.tabBtnBackSelect"
+      selectedIconStyle="asset.timevortex.tabBtnIconDragonSelect"
+      unselectedIconStyle="asset.timevortex.tabBtnIconDragonUnSelect"
+      selectedIconInnerRectString="0,45,17,80,13"
+      unselectedIconInnerRectString="0,45,17,80,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="40"
+      height="122"
+      x="-57"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="timevortex.TimeVortexFrame.SelectedTab02"
+      unSelectedStyle="asset.timevortex.tabBtnBackUnSelect"
+      selectedStyle="asset.timevortex.tabBtnBackSelect"
+      selectedIconStyle="asset.timevortex.tabBtnIconTimeSelect"
+      unselectedIconStyle="asset.timevortex.tabBtnIconTimeUnSelect"
+      selectedIconInnerRectString="10,20,0,120,13"
+      unselectedIconInnerRectString="10,20,2,120,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="40"
+      height="122"
+      x="-57"
+      y="179" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexAreaView.chapterNameBg"
+      resourceLink="asset.timevortex.chapterNameBgAsset"
+      x="365"
+      y="470" />
+    <component
+      stylename="timevortex.TimeVortexFrame.titleMc"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.timevortex.dragonTitleIcon,asset.timevortex.titleImgAsset"
+      x="386"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexFrame.bragonViewBg"
+      resourceLink="asset.timevortex.dragonViewBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timevortex.view.TimeVortexDragonItemView.changeBtn"
+      backStyle="asset.timevortex.dragonBtnBack"
+      iconStyle="asset.timevortex.dragonChangeBtnIcon"
+      iconInnerRectString="36,65,8,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="401"
+      y="429" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="timevortex.TimeVortexAreaView.chapterNameImg"
+      resourceLink="asset.timevortex.chapterName1,asset.timevortex.chapterName2,asset.timevortex.chapterName3,asset.timevortex.chapterName4,asset.timevortex.chapterName5,asset.timevortex.chapterName6,asset.timevortex.chapterName7"
+      x="407"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexAreaView.tipsImg"
+      resourceLink="asset.timevortex.tipsImgAsset"
+      x="35"
+      y="500" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexAreaView.tipsTxt"
+      textFormatStyle="timevortex.TimeVortexAreaView.tipsTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="180"
+      y="500" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="timevortex.TimeVortexAreaView.prevChapterBtn"
+      backStyle="asset.timevortex.chapterBtnAsset"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="timevortex.TimeVortexAreaView.nextChapterBtn"
+      backStyle="timevortex.TimeVortexAreaView.nextChapterBtnImg"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="910"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexAreaView.nextChapterBtnImg"
+      resourceLink="asset.timevortex.chapterBtnAsset"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="timevortex.TimeVortexMapView.mapWorldIcon" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="timevortex.TimeVortexPointView.mapPoint" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="timevortex.TimeVortexPointView.nameTxt"
+      colors="0xfdff78,0xffd000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="timevortex.TimeVortexPointView.nameTxt_TextField"
+      mouseEnabled="false"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexPointView.nameTxt_TextField"
+      textFormatStyle="core.map.NpcNameFont_vip"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="timevortex.TimeVortexPointView.defaultAvatar"
+      resourceLink="asset.timevortex.dragonicDefault,asset.timevortex.hunterDefault,asset.timevortex.wizardDefault,asset.timevortex.warriorDefault"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="0.5"
+      scaleY="0.5"
+      x="-90"
+      y="-89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexPointView.lairdNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="-110"
+      y="-90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexPointView.lairdServerNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdServerNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="-110"
+      y="-110" />
+    <component
+      classname="timevortex.TimeVortexChallengeFrame"
+      stylename="timevortex.TimeVortexChallengeFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="62"
+      width="586"
+      height="553" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="timevortex.TimeVortexChallengeFrame.border"
+      parentStyle="core.describeBackground_style11"
+      width="550"
+      height="447"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.back"
+      resourceLink="asset.timevortex.backAsset"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.bossTitleImg"
+      resourceLink="asset.timevortex.bossTitleImgAsset"
+      x="75"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.bossTipsImg1"
+      resourceLink="asset.timevortex.bossTipsImgAsset1"
+      x="23"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.bossTipsImg2"
+      resourceLink="asset.timevortex.bossTipsImgAsset2"
+      x="5"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.bossTipsImg3"
+      resourceLink="asset.timevortex.bossTipsImgAsset3"
+      x="0"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexChallengeFrame.bossTipsTxt"
+      textFormatStyle="timevortex.TimeVortexAreaView.tipsTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="178"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.bossRewardStateImg"
+      resourceLink="asset.timevortex.bossRewardStateImgAsset"
+      x="140"
+      y="260" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timevortex.TimeVortexChallengeFrame.bossFightBtn"
+      backStyle="asset.timevortex.bossFightBtnBg"
+      iconStyle="asset.timevortex.bossFightBtnTxt"
+      iconInnerRectString="32,50,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="16"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timevortex.TimeVortexChallengeFrame.bossMopupBtn"
+      backStyle="asset.timevortex.bossMopupBtnBg"
+      iconStyle="asset.timevortex.bossMopupBtnTxt"
+      iconInnerRectString="33,49,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="142"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTitleImg"
+      resourceLink="asset.timevortex.lairdTitleImgAsset"
+      x="363"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="313"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdServerNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdServerNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="313"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTipsImg1"
+      resourceLink="asset.timevortex.lairdTipsImgAsset1"
+      x="300"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTipsImg2"
+      resourceLink="asset.timevortex.lairdTipsImgAsset2"
+      x="277"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTipsImg3"
+      resourceLink="asset.timevortex.lairdTipsImgAsset3"
+      x="277"
+      y="332" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTipsImg4"
+      resourceLink="asset.timevortex.lairdTipsImgAsset4"
+      x="298"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTipsTxt1"
+      textFormatStyle="timevortex.TimeVortexAreaView.tipsTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="452"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdTipsTxt2"
+      textFormatStyle="timevortex.TimeVortexAreaView.tipsTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="452"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdFightBtn"
+      backStyle="asset.timevortex.lairdFightBtnBg"
+      iconStyle="asset.timevortex.lairdFightBtnTxt"
+      iconInnerRectString="32,50,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="291"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timevortex.TimeVortexChallengeFrame.lairdRevengeBtn"
+      backStyle="asset.timevortex.bossMopupBtnBg"
+      iconStyle="asset.timevortex.lairdRevengeBtnTxt"
+      iconInnerRectString="32,49,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="417"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="timevortex.TimeVortexChallengeFrame.defaultAvatar"
+      resourceLink="asset.timevortex.dragonicDefault,asset.timevortex.hunterDefault,asset.timevortex.wizardDefault,asset.timevortex.warriorDefault"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="290"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexShowAvatar.bossNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="-100"
+      y="-130" />
+    <component
+      classname="timevortex.TimeVortexCrackFrame"
+      stylename="timevortex.TimeVortexCrackFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="62"
+      width="776"
+      height="493" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="timevortex.TimeVortexCrackFrame.border"
+      parentStyle="core.describeBackground_style11"
+      width="741"
+      height="383"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.back"
+      resourceLink="asset.timevortex.crackBack"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTitleBg"
+      resourceLink="asset.timevortex.crackTitleBg"
+      x="100"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTitleImg"
+      resourceLink="asset.timevortex.crackTitleImg"
+      x="152"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexCrackFrame.crackNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="102"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexCrackFrame.crackServerNameTxt"
+      textFormatStyle="timevortex.TimeVortexPointView.lairdServerNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      selectable="false"
+      mouseEnabled="false"
+      mouseWheelEnabled="false"
+      width="200"
+      height="20"
+      x="102"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="timevortex.TimeVortexCrackFrame.crackRewardBtn"
+      backStyle="asset.timevortex.crackRewardBtn"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="340"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTipsImg1"
+      resourceLink="asset.timevortex.crackTipsImg1"
+      x="485"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTipsImg2"
+      resourceLink="asset.timevortex.crackTipsImg2"
+      x="500"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTipsImg3"
+      resourceLink="asset.timevortex.crackTipsImg3"
+      x="477"
+      y="260" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexCrackFrame.crackTipsTxt"
+      textFormatStyle="timevortex.TimeVortexCrackFrame.crackTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="602"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTeamTitleImg1"
+      resourceLink="asset.timevortex.crackTeamTitleImg1"
+      x="450"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTeamTitleImg2"
+      resourceLink="asset.timevortex.crackTeamTitleImg2"
+      x="580"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackFrame.crackTeamInfoLine"
+      resourceLink="asset.timevortex.crackTeamLine"
+      x="410"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="timevortex.TimeVortexCrackFrame.crackTeamVBox"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="timevortex.TimeVortexCrackFrame.crackTeamScrollPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,15,0,0,0"
+      vScrollbarInnerRectString="15,0,3,2,3"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="320"
+      height="70"
+      x="410"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timevortex.TimeVortexCrackFrame.crackFightBtn"
+      backStyle="asset.timevortex.crackBtnBg"
+      iconStyle="asset.timevortex.crackBtnTxt"
+      iconInnerRectString="49,128,17,37,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="460"
+      y="296" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="timevortex.TimeVortexCrackFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="697"
+      y="-39" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="timevortex.TimeVortexCrackRewardView.BaseItemBack"
+      parentStyle="core.goods.ItemBack"
+      width="63"
+      height="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexCrackRewardView.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="55"
+      x="4"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackTeamItemView.leaderImg"
+      resourceLink="asset.timevortex.crackTeamLeader"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexCrackTeamItemView.nameTxt"
+      textFormatStyle="timevortex.TimeVortexCrackTeamItemView.nameTxt_t1,timevortex.TimeVortexCrackTeamItemView.nameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="23"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timevortex.TimeVortexCrackTeamItemView.countTxt"
+      textFormatStyle="timevortex.TimeVortexCrackTeamItemView.countTxt_t1,timevortex.TimeVortexCrackTeamItemView.countTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="166"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackTeamItemView.line"
+      resourceLink="asset.timevortex.crackTeamLine"
+      x="0"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackTeamWaitView.tipsImg"
+      resourceLink="asset.timevortex.crackWaitTipsImg"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.frame.TimeOutInviteFrame"
+      stylename="timevortex.TimeOutInviteFrame"
+      moveInnerRectString="0,25,0,40,1"
+      moveEnable="true"
+      width="330"
+      height="120"
+      x="546"
+      y="131" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="timevortex.TimeVortexCrackDefendRewardView.bg"
+      resourceLink="asset.timevortex.crackDefendRewardBg"
+      scaleGridString="6,6,10,12"
+      width="335"
+      height="110" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackDefendRewardView.titleBg"
+      resourceLink="asset.timevortex.crackRewardTitleBg"
+      x="-35"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timevortex.TimeVortexCrackDefendRewardView.titleImg"
+      resourceLink="asset.timevortex.crackRewardTitleImg"
+      x="60"
+      y="10" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="timevortex.TimeVortexCrackFrame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="timevortex.TimeVortexCrackFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+  </components>
+</style>

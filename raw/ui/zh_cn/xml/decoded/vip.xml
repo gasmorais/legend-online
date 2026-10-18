@@ -1,0 +1,1483 @@
+<style
+  name="vip"
+  source="ui/zh_cn/swf/vip.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.giftReceiveBtnText_t"
+      args="Arial,12,0xfbf0d0,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.name_t"
+      args="Arial,14,0xfbf0d0,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.time_t"
+      args="Arial,14,0xfbf0d0,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.ExpTxt_t"
+      args="Arial,14,0xfbf0d0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.prompt_t"
+      args="Arial,14,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.promptPoint_t"
+      args="Arial,12,0xffff00,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.needPromptPoint_t"
+      args="Arial,14,0xfbf0d0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.currentPointTxt_t"
+      args="Arial,14,0xfbf0d0,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.VIPPromptTxt_t"
+      args="Arial,14,0xFFFF00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.needPointTxt_t"
+      args="Arial,14,0xfbf0d0,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.VipOpenItemNane_t"
+      args="Arial,16,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.comboxButton1Txt_t"
+      args="Arial,12,0xffeda7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.Combox1_TextStyle_t"
+      args="Arial,12,0xdad8b6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.VipGiftPromptTxt_t"
+      args="Arial,16,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.VipGiftNameTxt_t"
+      args="Arial,13,0xfff8d0,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.gradeListTxt_t"
+      args="Arial,14,0xfbf0d0,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.VipPrivilegeFramePrivilegeTitleTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.VipPrivilegeFramePrivilegeContentTxt_t"
+      args="Arial,12,0xf5e3b1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipOpenViewTxt_red"
+      args="Arial,12,0xff0b2d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipOpenViewTxt_yellow"
+      args="Arial,12,0xfedd00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopView.progressTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopView.pageTxt_t"
+      letterSpacing="1"
+      args="Arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopItem.name_t"
+      args="Arial,14,0xeae1c9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopItem.currency_t"
+      args="Arial,14,0xbaad89,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopItem.noDiscountCurrency_t"
+      args="Arial,14,0xbe001f,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopItem.tip_t1"
+      args="宋体,12,0xbe0202,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopItem.tip_t2"
+      args="宋体,12,0xea7e02,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipShopView.CurrencyTxt_t"
+      args="Arial,18,0xfacf56,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.vip.VipGradeNunber"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vip.VipFrameTimeBg"
+      x="110"
+      y="46" />
+    <bitmapData
+      resourceLink="asset.vip.FrameVipIcon01"
+      x="9"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.vip.FrameVipIcon00"
+      x="9"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.vip.FrameVipIcon"
+      x="9"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.vip.CurrentPointtxtBg"
+      x="20"
+      y="205" />
+    <bitmapData
+      resourceLink="asset.vip.friendNameBg"
+      x="8"
+      y="125" />
+    <bitmapData
+      resourceLink="asset.vip.friendNameBack"
+      x="125"
+      y="120" />
+    <bitmapData
+      resourceLink="asset.vip.friendRepeatBg"
+      x="34"
+      y="164" />
+    <bitmapData
+      resourceLink="asset.vip.vipFramePromptBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vip.vipFrameExpBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip1"
+      x="150"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip2"
+      x="210"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip3"
+      x="270"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip4"
+      x="330"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip5"
+      x="392"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip6"
+      x="453"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip7"
+      x="514"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip8"
+      x="575"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeVip9"
+      x="635"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeItemLight" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeCrossIcon"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeConfirmbg"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeItemLine" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeItem1"
+      width="65" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeItem2"
+      width="65" />
+    <bitmapData
+      resourceLink="asset.vip.GradePrivilegeItem3"
+      width="65" />
+    <!-- VIP礼包 -->
+    <bitmapData
+      resourceLink="asset.vip.VipGiftTopBg"
+      x="-20"
+      y="7"
+      width="265" />
+    <bitmapData
+      resourceLink="asset.vip.VipGiftBottomBg"
+      x="-20"
+      y="7"
+      width="265" />
+    <bitmapData
+      resourceLink="asset.countlogin.VipLineAsset"
+      x="-17"
+      y="103"
+      width="521" />
+    <!-- VIPItem -->
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemHalfBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemThrOneBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.vip.OpenViprebatetBg"
+      x="168"
+      y="-5" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemIconBg"
+      x="8"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemIcon01"
+      x="12"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemIcon03"
+      x="12"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemIcon06"
+      x="12"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipSeftTxtBg"
+      x="5"
+      y="143" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemOverHalf"
+      x="-7"
+      y="-6" />
+    <bitmapData
+      resourceLink="asset.vip.OpenVipItemOverThrOne"
+      x="-7"
+      y="-6" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.vip.vipFrameExp"
+      stylename="asset.vip.vipFrameExp" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="vip.vipGifItem"
+      backgroundStyle="vip.vipGiftItemBack"
+      iconStyle="vip.vipGifItemIcon"
+      textStyle="vip.vipGiftItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vip.vipGifItemIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="25"
+      loadingY="25"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="vip.VIPView"
+      stylename="vip.VIPView"
+      y="20" />
+    <custom
+      classname="vip.VIPShopView"
+      stylename="vip.VIPShopView"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="vip.vipShopItem.goodsItem"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="vip.vipShopItem.goodsIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="true"
+      x="31"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="vip.vipShopItem.goodsIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="65"
+      iconWidth="65"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <!--vip Frame-->
+    <component
+      classname="vip.VIPFrame"
+      stylename="vip.VIPFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="71"
+      width="593"
+      height="612" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.vipFrameBack"
+      resourceLink="vip.vipFrameScaleBorder,asset.vip.FrameContentBg0,vip.vipFrameContentBg0ScaleX,asset.vip.FrameContentBg1,vip.vipFrameContentBg1ScaleX"
+      imageRectString="0|564|0|488|13,3|279|3|482|13,561|279|3|482|13,3|280|103|281|13,563|280|103|281|13"
+      x="-6"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vip.vipFrameScaleBorder"
+      parentStyle="core.describeBackground_style11"
+      height="488" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipFrameContentBg0ScaleX"
+      resourceLink="asset.vip.FrameContentBg0"
+      scaleX="-1"
+      height="482" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipFrameContentBg1ScaleX"
+      resourceLink="asset.vip.FrameContentBg1"
+      scaleX="-1"
+      y="103" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipFrameTime"
+      textFormatStyle="vip.time_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="230"
+      y="48"
+      width="85"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipFramePrompt"
+      textFormatStyle="vip.prompt_t"
+      filterString="core.filter_01,core.normal_f"
+      autoSize="none"
+      x="15"
+      y="2"
+      width="530"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipFramePromptPoint"
+      textFormatStyle="vip.promptPoint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="8"
+      y="230"
+      width="540"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.needPromptPointTxt"
+      textFormatStyle="vip.needPromptPoint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="136"
+      y="177"
+      height="20"
+      width="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.VIPPromptTxt"
+      textFormatStyle="vip.VIPPromptTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="123"
+      y="97"
+      height="20"
+      width="400" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.currentPointTxt"
+      textFormatStyle="vip.currentPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="157"
+      y="207"
+      height="20"
+      width="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.LevelTxt"
+      textFormatStyle="vip.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="145"
+      y="20"
+      height="20"
+      width="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.ExpTxt"
+      textFormatStyle="vip.ExpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="161"
+      y="19"
+      height="20"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.needPointTxt"
+      textFormatStyle="vip.needPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="66"
+      y="56"
+      height="20"
+      width="55" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.PrivilegeBtn"
+      backStyle="asset.core.Style20Btn"
+      iconStyle="asset.vip.VipPrivilegeTxt"
+      iconInnerRectString="28,111,11,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="386"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.GiftBagBtn"
+      backStyle="asset.core.Style22Btn"
+      iconStyle="asset.vip.VipGiftBagTxt"
+      iconInnerRectString="14,140,10,45,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="88"
+      y="292" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.OpenVipBtn"
+      backStyle="asset.core.Style21Btn"
+      iconStyle="asset.vip.VipOpenVipTxt"
+      iconInnerRectString="13,158,8,45,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="181"
+      y="294" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.RenewVipBtn"
+      backStyle="asset.core.Style21Btn"
+      iconStyle="asset.vip.VipRenewVipTxt"
+      iconInnerRectString="13,158,8,45,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="181"
+      y="292" />
+    <!-- 自己按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.SelfBtnUnselected"
+      backStyle="asset.vip.VipUnselectedBg"
+      iconStyle="asset.vip.VipSelfTxtUnselected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="103"
+      height="32"
+      iconInnerRectString="14,77,12,16,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.SelfBtnSelected"
+      backStyle="asset.vip.VipSelectedBg"
+      iconStyle="asset.vip.VipSelfTxtSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="103"
+      height="37"
+      y="-4"
+      iconInnerRectString="12,77,15,16,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.SelfBtn"
+      unSelectedStyle="vip.SelfBtnUnselected"
+      selectedStyle="vip.SelfBtnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="37"
+      y="95" />
+    <!-- 朋友按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.FriendBtnUnselected"
+      backStyle="asset.vip.VipUnselectedBg"
+      iconStyle="asset.vip.VipFriendTxtUnselected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="103"
+      height="32"
+      iconInnerRectString="12,77,12,16,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.FriendBtnSelected"
+      backStyle="asset.vip.VipSelectedBg"
+      iconStyle="asset.vip.VipFriendTxtSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="103"
+      height="37"
+      y="-4"
+      iconInnerRectString="14,77,15,16,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.FriendBtn"
+      unSelectedStyle="vip.FriendBtnUnselected"
+      selectedStyle="vip.FriendBtnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="143"
+      y="95" />
+    <!--	帮助	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vip.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="507"
+      y="-48" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="vip.VIPHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="vip.VIPFrame.helpContent"
+      titleText="vip.VIPFrame.helpTitle"
+      textWidth="353" />
+    <!-- 特权 -->
+    <component
+      classname="vip.VipPrivilegeFrame"
+      stylename="vip.VipPrivilegeFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="64"
+      width="663"
+      height="492" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipPrivilegeFrameMultipleBg"
+      resourceLink="vip.VipPrivilegeFrameScaleBorder,asset.vip.VipPrivilegeFramePrivilegeContentBg,vip.VipPrivilegeFramePrivilegeContentBgScaleX"
+      imageRectString="0|627|0|384|13,197|213|36|343|13,623|213|36|343|13" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vip.VipPrivilegeFrameScaleBorder"
+      parentStyle="core.describeBackground_style11" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vip.VipPrivilegeFramePrivilegeImgBorder"
+      parentStyle="core.describeBackground_style11" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.VipPrivilegeFramePrivilegeContentBgScaleX"
+      resourceLink="asset.vip.VipPrivilegeFramePrivilegeContentBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.VipPrivilegeFramePrivilegeImg"
+      resourceLink="asset.vip.VipPrivilegeFramePrivilegeImg1,asset.vip.VipPrivilegeFramePrivilegeImg2,asset.vip.VipPrivilegeFramePrivilegeImg3,asset.vip.VipPrivilegeFramePrivilegeImg4,asset.vip.VipPrivilegeFramePrivilegeImg5,asset.vip.VipPrivilegeFramePrivilegeImg6,asset.vip.VipPrivilegeFramePrivilegeImg7,asset.vip.VipPrivilegeFramePrivilegeImg8,asset.vip.VipPrivilegeFramePrivilegeImg9"
+      x="4"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="vip.VipPrivilegeFramePrivilegeTitleGradientTxt"
+      autoSize="none"
+      width="142"
+      textFieldStyle="vip.VipPrivilegeFramePrivilegeTitleTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="309"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.VipPrivilegeFramePrivilegeTitleTxt"
+      textFormatStyle="vip.VipPrivilegeFramePrivilegeTitleTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="142"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vip.VipPrivilegeFramePreBtn"
+      backStyle="asset.vip.VipPrivilegeFramePreBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="242"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vip.VipPrivilegeFrameNextBtn"
+      backStyle="asset.vip.VipPrivilegeFrameNextBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="513"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.TextArea"
+      stylename="vip.VipPrivilegeFramePrivilegeContentTextArea"
+      vScrollbarStyle="core.InfoFrameVScrollbar04"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="20,-5,-1,-45,3"
+      viewportInnerRectString="0,12,0,-40,0"
+      vScrollProxy="0"
+      vUnitIncrement="15"
+      hScrollProxy="2"
+      textStyle="vip.VipPrivilegeFramePrivilegeContentTxt"
+      editable="false"
+      enable="false"
+      width="398"
+      height="238"
+      x="215"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.VipPrivilegeFramePrivilegeContentTxt"
+      textFormatStyle="vip.VipPrivilegeFramePrivilegeContentTxt_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      selectable="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.gradeItemTxt"
+      textFormatStyle="vip.gradeListTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="61"
+      height="20"
+      x="0"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.gradeItemLeftTxt"
+      textFormatStyle="vip.gradeListTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="138"
+      height="20"
+      x="5"
+      y="8"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.gradeItemRightTxt"
+      textFormatStyle="vip.gradeListTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="0"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="vip.VipComboxBox"
+      stylename="vip.Combox"
+      listPanelStyle="vip.ComboxListpanel"
+      listInnerRectString="32,33,30,100,18"
+      textStyle="vip.Combox1_TextStyle"
+      textInnerRectString="-253,236,30,-25,0"
+      friendBtnStyle="vip.FriendsButton"
+      consortiaBtnStyle="vip.UnionButton"
+      width="180"
+      height="25"
+      buttonStyle="vip.ComboxFriendsButton"
+      x="385"
+      y="96" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="vip.VipSearchListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|vip.comboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="176"
+      height="156" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="vip.ComboxListpanel"
+      backgoundStyle="asset.vip.WriteVipComboxBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="118,13,-2,102,13"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|vip.comboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="yishi.view.adapter.EmailSelectedListAdapter"
+      stylename="vip.comboxListCell"
+      backStyle="vip.comboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="core.Combox1_TextStyle"
+      autoSizeAble="false"
+      width="138"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.comboxListCellAsset"
+      resourceLink=",vip.comboxItembgB,vip.comboxItembgB"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vip.comboxItembgB"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.Combox1_TextStyle"
+      textFormatStyle="vip.Combox1_TextStyle_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      restrict="^ "
+      width="160"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.comboxButton1Txt"
+      textFormatStyle="vip.comboxButton1Txt_t"
+      filterString="core.normal_f" />
+    <!-- 好友按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="vip.FriendsButton"
+      unSelectedStyle="vip.FriendsUnselectedBg"
+      selectedStyle="vip.FriendsSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-2"
+      y="104"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.FriendsUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.FriendsSelectedBg"
+      resourceLink="vip.friendsButtonSelectedImg,asset.core.friendsFriendImg" />
+    <!-- 公会按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="vip.UnionButton"
+      unSelectedStyle="vip.UnionUnselectedBg"
+      selectedStyle="vip.UnionSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.UnionSelectedBg"
+      resourceLink="vip.friendsButtonSelectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.UnionUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.friendsButtonSelectedImg"
+      resourceLink="asset.core.friendsButtonSelectedImg"
+      scaleY="-1"
+      y="24" />
+    <!-- 好友列表按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="vip.ComboxFriendsButton"
+      unSelectedStyle="vip.ComboxFriendsBtnAsset1"
+      selectedStyle="vip.ComboxFriendsBtnAsset2"
+      textStyle="vip.comboxButton1Txt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-65"
+      y="25"
+      fieldX="34"
+      fieldY="5"
+      width="87"
+      height="29"
+      autoSizeAble="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.ComboxFriendsBtnAsset1"
+      resourceLink="vip.ComboxFriendsUnselectedBg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.ComboxFriendsBtnAsset2"
+      resourceLink="vip.ComboxFriendsSelectedBg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.ComboxFriendsSelectedBg"
+      resourceLink="asset.vip.friendsButtonImg,asset.vip.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.ComboxFriendsUnselectedBg"
+      resourceLink="asset.vip.friendsButtonImg,asset.vip.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="asset.vip.friendsFriendImg"
+      resourceLink="asset.core.friendsFriendImg"
+      x="5"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.OpenSelfViewPrivilegeContentMultipleBg"
+      resourceLink="asset.vip.OpenSelfViewPrivilegeContentBg,vip.OpenSelfViewPrivilegeContentBgScaleX,asset.vip.OpenSelfViewPrivilegeTitleBarImg"
+      imageRectString="0|269|0|175|13,538|269|0|175|13,141|396|1|44|13"
+      x="6"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.OpenSelfViewPrivilegeContentBgScaleX"
+      resourceLink="asset.vip.OpenSelfViewPrivilegeContentBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="vip.OpenSelfViewPrivilegeTitleGradientTxt"
+      parentStyle="vip.VipPrivilegeFramePrivilegeTitleGradientTxt"
+      x="242"
+      y="91" />
+    <component
+      classname="com.pickgliss.ui.text.TextArea"
+      stylename="vip.OpenSelfViewPrivilegeContentTextArea"
+      parentStyle="vip.VipPrivilegeFramePrivilegeContentTextArea"
+      width="385"
+      height="84"
+      x="155"
+      y="124" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.OpenSelfViewPrivilegeImg"
+      resourceLink="asset.vip.OpenSelfViewPrivilegeImg1,asset.vip.OpenSelfViewPrivilegeImg2,,asset.vip.OpenSelfViewPrivilegeImg4"
+      x="14"
+      y="87" />
+    <!-- vip礼包 -->
+    <component
+      classname="vip.VipGiftFrame"
+      stylename="vip.VipGiftFrame"
+      parentStyle="core.Frame1"
+      containerX="35"
+      containerY="61"
+      width="565"
+      height="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.VipGiftPromptTxt"
+      textFormatStyle="vip.VipGiftPromptTxt_t"
+      filterString="core.normal_f"
+      x="57"
+      y="12"
+      width="350"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.VipGiftNameTxt"
+      textFormatStyle="vip.VipGiftNameTxt_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      x="400"
+      y="-2"
+      width="120"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vip.VipGiftBackground"
+      parentStyle="core.describeBackground_style06"
+      x="-23"
+      y="3"
+      width="537"
+      height="176" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.VipOpenItemNane"
+      textFormatStyle="vip.VipOpenItemNane_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="75"
+      height="50"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="vip.VipOpenItemNane06"
+      textFieldStyle="vip.VipOpenItemNane"
+      colors="0xfac4ff,0xb304e5"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="72"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="vip.VipOpenItemNane03"
+      textFieldStyle="vip.VipOpenItemNane"
+      colors="0xfeffc4,0xe5ad04"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="72"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="vip.VipOpenItemNane01"
+      textFieldStyle="vip.VipOpenItemNane"
+      colors="0xc4dcff,0x0459e5"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="72"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="vip.Item.Contain"
+      spacing="8"
+      x="62"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipGiftItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="7"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vip.vipGiftItemBack"
+      resourceLink="asset.core.goodsItemBack4" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="vip.giftReceiveBtn"
+      backStyle="asset.core.Style18Btn"
+      textStyle="vip.giftReceiveBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="15,90,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="116"
+      height="37"
+      x="408"
+      y="7"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.giftReceiveBtnText"
+      textFormatStyle="vip.giftReceiveBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="90"
+      x="17"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="vip.vipFrameExp"
+      tipStyle="yishi.view.tips.WaterTreeTip"
+      tipDirctions="7,0,3"
+      tipGapV="0"
+      isFollowMouse="false"
+      resourceLink="asset.vip.vipFrameExp"
+      x="94"
+      y="8" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="vip.vipFrameRefreshAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="vip.vipFrameRefreshAlert_confirmStyle"
+      cancelStyle="vip.vipFrameRefreshAlert_cancelStyle"
+      checkStyle="vip.vipFrameRefreshAlertCheckBtn"
+      describeStyle="vip.vipFrameRefreshAlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="vip.vipFrameRefreshAlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="13"
+      containerY="30"
+      frameMiniW="305"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="280"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="vip.vipFrameRefreshAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="15"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="vip.vipFrameRefreshAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="140"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipFrameRefreshAlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="275"
+      height="50"
+      x="-11"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="vip.vipFrameRefreshAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="85"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipOpenViewTxt"
+      textFormatStyle="vip.vipOpenViewTxt_red,vip.vipOpenViewTxt_yellow"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="185"
+      height="50"
+      x="0"
+      y="10" />
+    <!-- vip1按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected1"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg1"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected1"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg1"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn1"
+      unSelectedStyle="vip.VipBtnUnSelected1"
+      selectedStyle="vip.VipBtnSelected1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected2"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg2"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected2"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg2"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn2"
+      unSelectedStyle="vip.VipBtnUnSelected2"
+      selectedStyle="vip.VipBtnSelected2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="69"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected3"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg3"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected3"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg3"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn3"
+      unSelectedStyle="vip.VipBtnUnSelected3"
+      selectedStyle="vip.VipBtnSelected3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="136"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected4"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg4"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected4"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg4"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn4"
+      unSelectedStyle="vip.VipBtnUnSelected4"
+      selectedStyle="vip.VipBtnSelected4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="204"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected5"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg5"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected5"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg5"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn5"
+      unSelectedStyle="vip.VipBtnUnSelected5"
+      selectedStyle="vip.VipBtnSelected5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="272"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected6"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg6"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected6"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg6"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn6"
+      unSelectedStyle="vip.VipBtnUnSelected6"
+      selectedStyle="vip.VipBtnSelected6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="340"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected7"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg7"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected7"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg7"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn7"
+      unSelectedStyle="vip.VipBtnUnSelected7"
+      selectedStyle="vip.VipBtnSelected7"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="406"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected8"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg8"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected8"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg8"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn8"
+      unSelectedStyle="vip.VipBtnUnSelected8"
+      selectedStyle="vip.VipBtnSelected8"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="471"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnUnSelected9"
+      resourceLink="asset.vip.VipPrivilegeFrameDark,asset.vip.VipPrivilegeFrameImg9"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.VipBtnSelected9"
+      resourceLink="asset.vip.VipPrivilegeFrameLight,asset.vip.VipPrivilegeFrameImg9"
+      imageRectString="0|94|0|30|13,25|49|3|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="vip.VipPrivilegeBtn9"
+      unSelectedStyle="vip.VipBtnUnSelected9"
+      selectedStyle="vip.VipBtnSelected9"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="535"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="vip.VIPFrame.vipBtn"
+      selectedStyle="asset.vipframe.BtnSelectBack"
+      unSelectedStyle="asset.vipframe.BtnUnSelectBack"
+      selectedIconStyle="asset.vipframe.VipBtnSelectTxt"
+      unselectedIconStyle="asset.vipframe.VipBtnUnSelectTxt"
+      selectedIconInnerRectString="39,29,10,17,13"
+      unselectedIconInnerRectString="39,28,10,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="vip.VIPFrame.ShopBtn"
+      selectedStyle="asset.vipframe.BtnSelectBack"
+      unSelectedStyle="asset.vipframe.BtnUnSelectBack"
+      selectedIconStyle="asset.vipframe.ShopBtnSelectTxt"
+      unselectedIconStyle="asset.vipframe.ShopBtnUnSelectTxt"
+      selectedIconInnerRectString="13,89,8,22,13"
+      unselectedIconInnerRectString="18,84,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="vip.VIPFrame.hbox"
+      x="0"
+      y="-15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="vip.vipShopView.bg"
+      resourceLink="vip.vipFrameScaleBorder,asset.vip.FrameContentBg0,vip.vipFrameContentBg0ScaleX,asset.vip.FrameContentBg1,vip.vipFrameContentBg1ScaleX"
+      imageRectString="0|564|0|493|13,3|279|3|490|13,561|279|3|490|13,3|280|103|305|13,563|280|103|300|13"
+      x="-6"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.bgScaleX"
+      resourceLink="asset.vipShopView.bg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.CenterBg"
+      resourceLink="asset.vipShopView.centerBg"
+      x="-3"
+      y="97" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.BottomBg"
+      resourceLink="asset.vipShopView.bottomBg"
+      x="0"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.vipShopView.currentLevelIcon"
+      resourceLink="asset.vipShopView.level0,asset.vipShopView.level1,asset.vipShopView.level2,asset.vipShopView.level3,asset.vipShopView.level4,asset.vipShopView.level5"
+      x="17"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="vip.vipShopView.nextLevelIcon"
+      resourceLink="asset.vipShopView.level0,asset.vipShopView.level1,asset.vipShopView.level2,asset.vipShopView.level3,asset.vipShopView.level4,asset.vipShopView.level5"
+      x="425"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopView.LevelTxt"
+      textFormatStyle="vip.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="30"
+      x="175"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopView.progressTxt"
+      textFormatStyle="vip.vipShopView.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="150"
+      x="222"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="vip.vipShopView.expMcImage"
+      tipStyle="yishi.view.tips.WaterTreeTip"
+      tipDirctions="7,0,3"
+      tipGapV="0"
+      isFollowMouse="false"
+      resourceLink="asset.vipShopView.exp"
+      x="124"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.CurrencyBg"
+      resourceLink="asset.vipShopView.CurrencyBg"
+      x="20"
+      y="433" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.CurrencyIcon"
+      resourceLink="asset.vipShopView.CurrencyIcon"
+      x="31"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.CurrencyName"
+      resourceLink="asset.vipShopView.CurrencyName"
+      x="57"
+      y="441" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopView.CurrencyTxt"
+      textFormatStyle="vip.vipShopView.CurrencyTxt_t"
+      autoSize="none"
+      width="115"
+      height="25"
+      x="126"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.vipShopView.LastPageBtn"
+      backStyle="asset.vipShopView.pageBtnBg"
+      iconStyle="asset.vipShopView.pageBtnLast"
+      iconInnerRectString="10,42,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="330"
+      y="438" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.vipShopView.NextPageBtn"
+      backStyle="asset.vipShopView.pageBtnBg"
+      iconStyle="asset.vipShopView.pageBtnNext"
+      iconInnerRectString="10,42,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="470"
+      y="438" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopView.PageBg"
+      resourceLink="asset.vipShopView.pageBg"
+      x="405"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopView.pageTxt"
+      textFormatStyle="vip.vipShopView.pageTxt_t"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="410"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vip.vipShopView.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="507"
+      y="-70" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="vip.vipShopView.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="vip.vipShopView.HelpFrame.content"
+      titleText="vip.vipShopView.HelpFrame.title"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="vip.vipShopItem.bg"
+      resourceLink="asset.vipShopItem.bg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopItem.name"
+      textFormatStyle="vip.vipShopItem.name_t"
+      autoSize="none"
+      width="170"
+      height="45"
+      x="100"
+      y="20"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopItem.noDiscountCurrency"
+      textFormatStyle="vip.vipShopItem.noDiscountCurrency_t"
+      autoSize="none"
+      width="55"
+      height="25"
+      x="103"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopItem.currency"
+      textFormatStyle="vip.vipShopItem.currency_t"
+      autoSize="none"
+      width="55"
+      height="25"
+      x="103"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.vipShopItem.exchangeBtn"
+      backStyle="asset.vipShopItem.exchangeBtnbg"
+      iconStyle="asset.vipShopItem.exchangeBtnTxt"
+      iconInnerRectString="15,36,7,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="185"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipShopItem.tip"
+      textFormatStyle="vip.vipShopItem.tip_t1,vip.vipShopItem.tip_t2"
+      filterString="shop.UpGradeButtonTextStyle_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="100"
+      y="40" />
+  </components>
+</style>

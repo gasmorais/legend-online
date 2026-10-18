@@ -1,0 +1,556 @@
+<style
+  name="perkinlab"
+  source="ui/zh_cn/swf/perkinlab.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabSelectItem.timeText_t"
+      args="Arial,12,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabEventFrame.EventFrameNameTextStyle_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="PerkinLabEventFrame.UpGradeButtonTextStyle_f"
+      args="0x000000,1,2,2,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabEventItem.typeTextStyle_t1"
+      args="Arial,12,0xb0ff98,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabEventItem.typeTextStyle_t2"
+      args="Arial,12,0xffd48a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabEventItem.nameTextStyle_t"
+      letterSpacing="0"
+      args="Arial,12,0xe4d29c,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabRobView.refreshText_t"
+      letterSpacing="0"
+      args="Arial,13,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabRobView.robText_t"
+      letterSpacing="0"
+      args="Arial,12,0xebd7b0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabKengView.robNameText_t"
+      letterSpacing="0"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabFrame.lvlText_t"
+      letterSpacing="0"
+      args="Arial,12,0xffde00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabRobView.cdTxt.txt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.PerkinLabFrame.back"
+      x="5"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.perkinLab.eventFrameLine"
+      width="720" />
+    <bitmapData
+      resourceLink="asset.PerkinLabKengView.lookBack" />
+    <bitmapData
+      resourceLink="asset.PerkinLabKengView.robOverImage" />
+    <bitmapData
+      resourceLink="asset.PerkinLabRobView.robBack"
+      x="705"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.PerkinLabKengView.robBtnImage"
+      x="66"
+      y="85" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="perkinlab.PerkinLabBuildView"
+      stylename="PerkinLabFrame.buildView" />
+    <custom
+      classname="perkinlab.PerkinLabRobView"
+      stylename="PerkinLabFrame.robView" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc1_0"
+      stylename="PerkinLabKengView.kengMc1_0" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc2_0"
+      stylename="PerkinLabKengView.kengMc2_0" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc3_0"
+      stylename="PerkinLabKengView.kengMc3_0" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc1_1"
+      stylename="PerkinLabKengView.kengMc1_1" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc2_1"
+      stylename="PerkinLabKengView.kengMc2_1" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc3_1"
+      stylename="PerkinLabKengView.kengMc3_1" />
+    <custom
+      classname="asset.PerkinLabRobView.refreshMc"
+      stylename="PerkinLabRobView.refreshMc"
+      x="0"
+      y="7" />
+    <custom
+      classname="asset.PerkinLabRobView.victoryMc"
+      stylename="PerkinLabRobView.victoryMc"
+      rotation="270" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc0"
+      stylename="PerkinLabKengView.kengMc0" />
+    <custom
+      classname="asset.PerkinLabKengView.kengMc1"
+      stylename="PerkinLabKengView.kengMc1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="perkinlab.PerkinLabFrame"
+      stylename="perkinlab.PerkinLabFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      width="1045"
+      height="725" />
+    <component
+      classname="perkinlab.PerkinLabSelectFrame"
+      stylename="perkinlab.PerkinLabSelectFrame"
+      parentStyle="core.Frame1"
+      backStyle="perkinlab.PerkinLabSelectFrame.back"
+      containerX="15"
+      containerY="40"
+      moveEnable="false"
+      closestyle="PerkinLabSelectFrame.CloseBtn"
+      closeInnerRectString="43,52,-3,46,14"
+      width="520"
+      height="280" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabSelectFrame.CloseBtn"
+      backStyle="asset.PerkinLabSelectFrame.CloseBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PerkinLabSelectFrame.hbox"
+      x="25"
+      y="-10"
+      spacing="15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="perkinlab.PerkinLabSelectFrame.back"
+      resourceLink="asset.PerkinLabSelectFrame.back,asset.PerkinLabSelectFrame.title"
+      imageRectString="0|479|0|220|13,175|122|0|21|13" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="PerkinLabFrame.border"
+      parentStyle="core.describeBackground_style11"
+      width="1010"
+      height="612"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabFrame.logBtn"
+      backStyle="asset.PerkinLabFrame.logBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="15"
+      y="547" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabFrame.helpBtn"
+      backStyle="asset.PerkinLabFrame.helpBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="100"
+      y="546" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabFrame.selfBtn"
+      backStyle="asset.PerkinLabFrame.selfBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="745"
+      y="500" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PerkinLabFrame.robBtn"
+      backStyle="asset.PerkinLabFrame.robBtnBack"
+      iconStyle="asset.PerkinLabFrame.robBtnText"
+      iconInnerRectString="6,105,52,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="871"
+      y="487"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabKengView.buildBtn"
+      backStyle="asset.PerkinLabKengView.buildBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PerkinLabKengView.getRewardBtn"
+      backStyle="asset.PerkinLabKengView.getRewardBtnBack"
+      iconStyle="asset.PerkinLabKengView.getRewardBtnImage"
+      iconInnerRectString="12,34,12,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="208"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PerkinLabSelectItem.labIcon1"
+      resourceLink="asset.PerkinLabSelectItem.labIcon1,asset.PerkinLabSelectItem.labText1"
+      imageRectString="0|102|0|112|13,24|54|80|17|13"
+      tipStyle="yishi.view.tips.PerkinLabKengTip"
+      tipDirctions="0"
+      tipGapV="10"
+      tipGapH="10"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PerkinLabSelectItem.labIcon2"
+      resourceLink="asset.PerkinLabSelectItem.labIcon2,asset.PerkinLabSelectItem.labText2"
+      imageRectString="0|102|0|112|13,28|49|80|17|13"
+      tipStyle="yishi.view.tips.PerkinLabKengTip"
+      tipDirctions="0"
+      tipGapV="10"
+      tipGapH="10"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PerkinLabSelectItem.labIcon3"
+      resourceLink="asset.PerkinLabSelectItem.labIcon3,asset.PerkinLabSelectItem.labText3"
+      imageRectString="0|102|0|111|13,12|79|80|20|13"
+      tipStyle="yishi.view.tips.PerkinLabKengTip"
+      tipDirctions="0"
+      tipGapV="10"
+      tipGapH="10"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PerkinLabSelectItem.sureBtn"
+      backStyle="asset.PerkinLabSelectItem.sureBtnBack"
+      iconStyle="asset.PerkinLabSelectItem.sureBtnText"
+      iconInnerRectString="15,37,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="18"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabSelectItem.timeText"
+      textFormatStyle="PerkinLabSelectItem.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="105"
+      x="-28"
+      y="115" />
+    <!--	实验室日志	-->
+    <component
+      classname="perkinlab.PerkinLabEventFrame"
+      stylename="PerkinLabFrame.PerkinLabEventFrame"
+      parentStyle="core.Frame2"
+      moveEnable="false"
+      containerX="28"
+      containerY="43"
+      width="800"
+      height="430" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PerkinLabEventFrame.Background"
+      parentStyle="core.describeBackground_style06"
+      x="-19"
+      y="1"
+      width="778"
+      height="347" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PerkinLabEventFrame.eventFrameBg"
+      resourceLink="asset.perkinLab.eventFrameBg"
+      scaleGridString="1,1,500,3"
+      x="-16"
+      y="35"
+      width="772"
+      height="310" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PerkinLabEventFrame.TitleBarBack"
+      resourceLink="PerkinLabEventFrame.TitleBack,PerkinLabEventFrame.TitleSplit"
+      imageRectString="0|774|0|32|13,600|22|3|28|13"
+      x="-17"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="PerkinLabEventFrame.TitleBack"
+      parentStyle="core.TitleBack_Style01"
+      width="774"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PerkinLabEventFrame.TitleSplit"
+      resourceLink="asset.core.TitleBack_Style01_S" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabEventFrame.EventFrameNameTextStyle"
+      textFormatStyle="PerkinLabEventFrame.EventFrameNameTextStyle_t"
+      filterString="PerkinLabEventFrame.UpGradeButtonTextStyle_f"
+      height="20"
+      x="220"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabEventFrame.EventFrameTimeTextStyle"
+      parentStyle="consortia.EventFrameNameTextStyle"
+      x="585" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="PerkinLabEventFrame.EventListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,-2,-3,6,3"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      viewportInnerRectString="0,0,0,3,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|perkinlab.PerkinLabEventItem,28,509"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="765"
+      height="311"
+      x="-14"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabEventItem.typeTextStyle"
+      textFormatStyle="PerkinLabEventItem.typeTextStyle_t1,PerkinLabEventItem.typeTextStyle_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="138"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabEventItem.nameTextStyle"
+      textFormatStyle="PerkinLabEventItem.nameTextStyle_t"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      height="20"
+      x="132"
+      y="5"
+      width="400" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabEventItem.timeTextStyle"
+      textFormatStyle="PerkinLabEventItem.nameTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="615"
+      y="3" />
+    <!--	掠夺	-->
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PerkinLabKengView.lookPlayerContiner"
+      x="48"
+      y="242" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabKengView.robNameText"
+      textFormatStyle="PerkinLabKengView.robNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="15"
+      y="2" />
+    <!--		<component classname="com.pickgliss.ui.controls.BaseButton" stylename="PerkinLabKengView.robBtn" -->
+    <!--			backStyle="asset.PerkinLabKengView.robBtnImage" -->
+    <!--			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"-->
+    <!--			tipStyle="yishi.view.tips.OneLineTip" tipDirctions="7,6" isFollowMouse="false" -->
+    <!--		/>-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabKengView.lookBtn"
+      backStyle="asset.PerkinLabKengView.lookBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      tipGapH="-10"
+      tipGapV="-10"
+      x="110"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PerkinLabRobView.refrshBtn"
+      backStyle="asset.PerkinLabFrame.robBtnBack"
+      iconStyle="asset.PerkinLabRobView.refrshBtnText"
+      iconInnerRectString="13,93,52,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="870"
+      y="487"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabRobView.robText"
+      textFormatStyle="PerkinLabRobView.robText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="740"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabRobView.refreshText"
+      textFormatStyle="PerkinLabRobView.refreshText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="20"
+      x="850"
+      y="595" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="PerkinLabRobView.UpdateTime"
+      timeTxtStyle="PerkinLabRobView.UpdateTime.text"
+      x="932"
+      y="595" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabRobView.UpdateTime.text"
+      textFormatStyle="PerkinLabRobView.refreshText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PerkinLabKengView.tipContiner"
+      tipStyle="yishi.view.tips.PerkinLabKengTip"
+      tipDirctions="4,6,5,7"
+      isFollowMouse="false"
+      tipGapH="-50"
+      tipGapV="-70" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PerkinLabKengView.curViewContainer" />
+    <!-- 帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PerkinLabFrame.PerkinHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PerkinLabFrame.PerkinHelpFrame.helpContent"
+      titleText="PerkinLabFrame.PerkinHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PerkinLabRobView.victoryContiner"
+      tipStyle="yishi.view.tips.PerkinLabVictoryTip"
+      tipDirctions="2,7,1"
+      isFollowMouse="false"
+      tipGapH="40"
+      tipGapV="-70"
+      x="960"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PerkinLabFrame.expContiner"
+      tipStyle="yishi.view.tips.PerkinLabExpTips"
+      tipDirctions="7,2,3,6,5"
+      isFollowMouse="false"
+      tipGapH="70"
+      tipGapV="65"
+      x="40"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PerkinLabFrame.expBack"
+      resourceLink="asset.PerkinLabFrame.expBack,asset.PerkinLabFrame.expBall,asset.PerkinLabFrame.expText"
+      imageRectString="0|0|19,13|8|19,82|42|19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabFrame.lvlText"
+      textFormatStyle="PerkinLabFrame.lvlText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="170"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PerkinLabRobView.cdTxt"
+      textFieldStyle="PerkinLabRobView.cdTxt.txt"
+      colors="0xffffff,0xfffcd6,0xdba30d"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,80,255"
+      x="760"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabRobView.cdTxt.txt"
+      textFormatStyle="PerkinLabRobView.cdTxt.txt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PerkinLabRobView.coolDownBtn"
+      backStyle="asset.queueBar.startBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="835"
+      y="67" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="PerkinLabFrame.progressBar"
+      backgroundLink="asset.PerkinLabFrame.progressBarBg"
+      barLink="asset.PerkinLabFrame.progressBarColor"
+      textStyle="RavePartyScoreView.gradeBar.text"
+      barMargin="0,0,0,0"
+      x="90"
+      y="25" />
+  </components>
+</style>

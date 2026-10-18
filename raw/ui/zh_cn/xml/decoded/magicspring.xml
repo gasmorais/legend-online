@@ -1,0 +1,507 @@
+<style
+  name="magicspring"
+  source="ui/zh_cn/swf/magicspring.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.greenHasCountText_t"
+      args="Arial,14,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.purpleHasCountText_t"
+      args="Arial,14,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.redHasCountText_t"
+      args="Arial,14,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.greenNeedCountText_t"
+      args="Arial,14,0xf0ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.purpleNeedCountText_t"
+      args="Arial,14,0xf0ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.redNeedCountText_t"
+      args="Arial,14,0xf0ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.selectBufferText_t"
+      args="Arial,12,0xf0ff00,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.totalBufferText_t"
+      args="Arial,12,0xd1c9b1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.bufferTimeText_t"
+      args="Arial,12,0x005991,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpringFormulaLeftItem.nameText_t1"
+      args="Arial,12,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpringFormulaLeftItem.nameText_t2"
+      args="Arial,12,0xF0FF00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpringSlotItem.openBtn.text_t"
+      args="Arial,12,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpringSlotItem.timeText_t"
+      args="Arial,12,0x24e1ed,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.dustHasCountText_t"
+      args="Arial,14,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.hornHasCountText_t"
+      args="Arial,14,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicSpring.MagicSpringFrame.featherHasCountText_t"
+      args="Arial,14,0xd1c9b1,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.MagicSpringFormulaLeftItem.selectBg"
+      x="-13"
+      y="-5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.MagicSpringFrame.springMc"
+      stylename="MagicSpringFrame.springMc"
+      x="295"
+      y="82" />
+    <custom
+      classname="asset.MagicSpringFrame.makeSuccessMc"
+      stylename="MagicSpringFrame.makeSuccessMc"
+      x="505"
+      y="318" />
+    <custom
+      classname="magicspring.MagicSpringFormulaLeftView"
+      stylename="MagicSpringFrame.leftView"
+      x="90"
+      y="100" />
+    <custom
+      classname="magicspring.MagicSpringSlotTopView"
+      stylename="MagicSpringFrame.topView"
+      x="285"
+      y="70" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MagicSpringFormulaLeftItem.formulaIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="60"
+      iconHeight="60"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="30"
+      y="25" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MagicSpringFrame.selectIcon"
+      parentStyle="MagicSpringFormulaLeftItem.formulaIcon"
+      x="472"
+      y="260" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MagicSpringSlotItem.bufferIcon"
+      parentStyle="MagicSpringFormulaLeftItem.formulaIcon"
+      x="8"
+      y="8" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="MagicSpring.MagicSpringFrame.mBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MagicSpring.mBack.back,MagicSpring.mBack.rightTextback,asset.MagicSpring.mBack.formulaImage,asset.MagicSpring.mBack.buffTitleImage,asset.MagicSpring.mBack.hasCountBack1,asset.MagicSpring.mBack.hasCountBack1,asset.MagicSpring.mBack.hasCountBack1,asset.MagicSpring.mBack.hasCountBack1,asset.MagicSpring.mBack.hasCountBack1,asset.MagicSpring.mBack.hasCountBack1"
+      imageRectString="0|930|0|522|13,720|203|125|277|13,63|118|22|26|13,746|152|130|21|13,834|84|483|31|13,724|84|483|31|13,614|84|483|31|13,834|84|433|31|13,724|84|433|31|13,614|84|433|31|13"
+      x="40"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MagicSpring.mBack.rightTextback"
+      resourceLink="asset.MagicSpring.mBack.rightTextback"
+      scaleGridString="30,70,40,90"
+      width="203"
+      height="337" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MagicSpring.MagicSpringFrame.makeBtn"
+      backStyle="asset.MagicSpring.makeBtn.n1"
+      iconStyle="asset.MagicSpring.makeBtn.icon"
+      iconInnerRectString="26,104,10,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="428"
+      y="508" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="937"
+      height="529"
+      x="37"
+      y="61" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.redHasImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.redHasImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="859"
+      y="535" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.redNeedImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.redHasImage"
+      x="542"
+      y="456" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.greenHasImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.greenHasImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="639"
+      y="535" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.greenNeedImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.greenHasImage"
+      x="402"
+      y="456" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.purpleHasImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.purpleHasImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="749"
+      y="535" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.purpleNeedImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.purpleHasImage"
+      x="472"
+      y="456" />
+    <component
+      stylename="magicspring.MagicSpringFrame"
+      classname="magicspring.MagicSpringFrame"
+      parentStyle="core.Frame1"
+      containerX="-20"
+      containerY="0"
+      escEnable="false"
+      width="975"
+      height="635" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.greenHasCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.greenHasCountText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="674"
+      y="553" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.purpleHasCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.purpleHasCountText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="782"
+      y="553" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.redHasCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.redHasCountText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="890"
+      y="553" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.greenNeedCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.greenNeedCountText_t"
+      type="dynamic"
+      width="45"
+      height="20"
+      x="438"
+      y="472" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.purpleNeedCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.purpleNeedCountText_t"
+      type="dynamic"
+      width="45"
+      height="20"
+      x="509"
+      y="472" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.redNeedCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.redNeedCountText_t"
+      type="dynamic"
+      width="45"
+      height="20"
+      x="576"
+      y="472" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.selectBufferText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.selectBufferText_t"
+      type="dynamic"
+      width="299"
+      height="45"
+      x="356"
+      y="213"
+      wordWrap="true" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.totalBufferText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.totalBufferText_t"
+      type="dynamic"
+      width="192"
+      height="296"
+      x="769"
+      y="225"
+      wordWrap="true" />
+    <component
+      stylename="MagicSpring.MagicSpringFrame.bufferTimeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.bufferTimeText_t"
+      type="dynamic"
+      width="128"
+      height="20"
+      x="440"
+      y="330" />
+    <component
+      stylename="MagicSpringFormulaLeftView.pageBar"
+      classname="yishi.view.base.PageBar"
+      preBtnStyle="MagicSpringFrame.pageBar.preBtn"
+      nextBtnStyle="MagicSpringFrame.pageBar.nextBtn"
+      x="35"
+      y="10" />
+    <component
+      stylename="MagicSpringFrame.pageBar.preBtn"
+      classname="com.pickgliss.ui.controls.BaseButton"
+      backStyle="asset.MagicSpringFrame.pageBar.preBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      stylename="MagicSpringFrame.pageBar.nextBtn"
+      classname="com.pickgliss.ui.controls.BaseButton"
+      backStyle="asset.MagicSpringFrame.pageBar.nextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MagicSpringFormulaLeftView.itemVbox"
+      spacing="-8"
+      x="10"
+      y="35" />
+    <component
+      stylename="MagicSpringFormulaLeftItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpringFormulaLeftItem.nameText_t1,MagicSpringFormulaLeftItem.nameText_t2"
+      type="dynamic"
+      width="64"
+      height="35"
+      x="29"
+      y="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MagicSpringSlotTopView.slotHbox"
+      spacing="8"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MagicSpringSlotItem.closeBtn"
+      backStyle="asset.core.closeBtn_style03"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="60"
+      y="-2" />
+			/&gt;
+		<component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="MagicSpringSlotItem.openBtn"
+      backStyle="asset.MagicSpringSlotItem.openBtnBack"
+      textStyle="MagicSpringSlotItem.openBtn.text"
+      autoSizeAble="false"
+      backgoundInnerRectString="1,8,2,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="24"
+      x="4"
+      y="70" /><component
+      stylename="MagicSpringSlotItem.openBtn.text"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpringSlotItem.openBtn.text_t"
+      type="dynamic"
+      width="68"
+      height="20" /><component
+      stylename="MagicSpringSlotItem.bufferNameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpringFormulaLeftItem.nameText_t1"
+      type="dynamic"
+      width="64"
+      height="35"
+      x="6"
+      y="25"
+      wordWrap="true" /><component
+      stylename="MagicSpringSlotItem.lockImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpringSlotItem.lockImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="8"
+      y="8" /><component
+      stylename="MagicSpringSlotItem.timeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpringSlotItem.timeText_t"
+      type="dynamic"
+      width="70"
+      height="20"
+      x="4"
+      y="70" /><component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MagicSpring.MagicSpringFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="930"
+      y="15" /><component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="MagicSpringFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="MagicSpringFrame.helperFrame.helpTxt.text"
+      titleText="MagicSpringFrame.helperFrame.HelpTitle.text"
+      textWidth="363" /><component
+      stylename="MagicSpring.MagicSpringFrame.dustHasImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.DustHasImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="639"
+      y="485" /><component
+      stylename="MagicSpring.MagicSpringFrame.hornHasImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.HornHasImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="749"
+      y="485" /><component
+      stylename="MagicSpring.MagicSpringFrame.featherHasImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MagicSpring.resource.FeatherHasImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="859"
+      y="485" /><component
+      stylename="MagicSpring.MagicSpringFrame.dustHasCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.dustHasCountText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="674"
+      y="503" /><component
+      stylename="MagicSpring.MagicSpringFrame.hornHasCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.hornHasCountText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="782"
+      y="503" /><component
+      stylename="MagicSpring.MagicSpringFrame.featherHasCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MagicSpring.MagicSpringFrame.featherHasCountText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="890"
+      y="503" /><component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="MagicSpring.MagicSpringFrame.NeedImage"
+      resourceLink="asset.MagicSpring.resource.greenHasImage,asset.MagicSpring.resource.purpleHasImage,asset.MagicSpring.resource.redHasImage,asset.MagicSpring.resource.DustHasImage,asset.MagicSpring.resource.HornHasImage,asset.MagicSpring.resource.FeatherHasImage"
+      x="402"
+      y="456" /></components>
+</style>

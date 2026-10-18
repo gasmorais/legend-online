@@ -1,0 +1,322 @@
+<style
+  name="continuepayrebate"
+  source="ui/zh_cn/swf/continuepayrebate.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="continuePayRebate.payText_t"
+      args="Arial,14,0x43fd48,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="continuePayRebate.chestItem.finishDay_t"
+      args="Arial,13,0x81ff35,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="continuePayRebate.countDown_t"
+      args="Arial,13,0xf7ae00,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.continuePayRebate.rewardItem.Num" />
+    <bitmapData
+      resourceLink="asset.continuePayRebate.chestPayItem.Num" />
+    <bitmapData
+      resourceLink="asset.continuePayRebate.chestItem.money" />
+    <bitmapData
+      resourceLink="asset.continuePayRebate.topBack"
+      y="10" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="continuePayRebate.view.ContinuePayRebateChestView"
+      stylename="continuePayRebate.view.ContinuePayRebateChestView"
+      y="132" />
+    <custom
+      classname="continuePayRebate.view.ContinuePayRebateRewardView"
+      stylename="continuePayRebate.view.ContinuePayRebateRewardView"
+      x="425"
+      y="132" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="continuePayRebate.rewardItem.numSP"
+      x="69"
+      y="9" />
+    <custom
+      classname="cell.view.starbag.StarBagCell"
+      stylename="continuePayRebate.rewardItem.StarBagCell"
+      parentStyle="payreward.StarBagCell"
+      backgroundStyle="asset.continuePayRebate.rewardItem.starCellBg" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="continuePayRebate.chestPayItem.numSP"
+      x="18"
+      y="-11" />
+    <custom
+      classname="continuePayRebate.view.ContinuePayRebateChestPayItem"
+      stylename="continuePayRebate.chestPayItem.num0"
+      x="102"
+      y="16" />
+    <custom
+      classname="continuePayRebate.view.ContinuePayRebateChestPayItem"
+      stylename="continuePayRebate.chestPayItem.num1"
+      x="204"
+      y="16" />
+    <custom
+      classname="continuePayRebate.view.ContinuePayRebateChestPayItem"
+      stylename="continuePayRebate.chestPayItem.num2"
+      x="307"
+      y="16" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="continuePayRebate.chestItem.monetSP"
+      x="12"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="continuePayRebate.ContinuePayRebateRewardItem.itemView"
+      iconStyle="continuePayRebate.ContinuePayRebateRewardItem.itemViewIcon"
+      textStyle="ContinuePayRebateRewardItem.itemViewIconText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="continuePayRebate.ContinuePayRebateRewardItem.itemViewIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="continuePayRebate.ContinuePayRebateFrame"
+      stylename="continuePayRebate.ContinuePayRebateFrame"
+      parentStyle="core.Frame1"
+      width="753"
+      height="555" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ContinuePayRebateFrame.border"
+      parentStyle="core.describeBackground_style09"
+      width="728"
+      height="457"
+      x="-5"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="continuePayRebate.payBtn"
+      backStyle="asset.continuePayRebate.btnBack"
+      iconStyle="asset.continuePayRebate.btnText"
+      iconInnerRectString="8,101,11,27,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="593"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="continuePayRebate.countDown"
+      textFormatStyle="continuePayRebate.countDown_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="24"
+      x="10"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="continuePayRebate.payText"
+      textFormatStyle="continuePayRebate.payText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="24"
+      x="345"
+      y="107" />
+    <!--连冲返利宝箱 - 累计充值宝箱 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="continuePayRebate.chest.back"
+      resourceLink="continuePayRebate.chest.backImage,asset.continuePayRebate.chest.topBack,asset.continuePayRebate.chest.payCountTxt"
+      imageRectString="0|421|0|321|13,3|415|3|35|13,2|101|10|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="continuePayRebate.chest.backImage"
+      parentStyle="core.describeBackground_style06" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="continuePayRebate.chestPayItem.back"
+      resourceLink="asset.continuePayRebate.chestPayItem.back"
+      x="4"
+      y="-8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="continuePayRebate.chest.vbox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="continuePayRebate.chest.panel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-9,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="415"
+      height="280"
+      x="-7"
+      y="38" />
+    <!--连冲返利宝箱 - 累计充值宝箱Item -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="continuePayRebate.chestItem.back"
+      resourceLink="asset.continuePayRebate.chestItem.back,asset.continuePayRebate.chestItem.lowTxt,asset.continuePayRebate.chestItem.mediumTxt,asset.continuePayRebate.chestItem.highTxt"
+      imageRectString="0|400|0|93|13,118|60|70|15|13,217|64|70|15|13,310|84|70|18|13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="continuePayRebate.chestItem.hbox"
+      x="110"
+      y="6"
+      spacing="11" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="continuePayRebate.chestItem.ingot"
+      resourceLink="asset.continuePayRebate.chestItem.ingot"
+      x="0"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="continuePayRebate.chestIcon.cheseIcon"
+      backStyle="asset.continuePayRebate.chestIcon.cheseIcon"
+      isFollowMouse="true"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="12"
+      y="0"
+      tipStyle="yishi.view.tips.ContinuePayRebateChestIconTip" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="continuePayRebate.chestIcon.rewardState"
+      resourceLink="asset.continuePayRebate.chestIcon.rewardState"
+      x="-5"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="continuePayRebate.chestItem.finishDay"
+      textFormatStyle="continuePayRebate.chestItem.finishDay_t"
+      filterString="core.normal_f"
+      width="100"
+      hight="36"
+      wordWrap="true"
+      x="2"
+      y="56" />
+    <!--连冲返利宝箱 - 每日充值宝箱 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="continuePayRebate.reward.back"
+      resourceLink="continuePayRebate.chest.backImage,asset.continuePayRebate.reward.topBack,asset.continuePayRebate.reward.toptext"
+      imageRectString="0|294|0|320|13,3|288|3|35|13,62|168|10|21|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="continuePayRebate.reward.vbox"
+      x="0"
+      y="0"
+      spacing="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="continuePayRebate.reward.panel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-16,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="280"
+      height="277"
+      x="-8"
+      y="38" />
+    <!--连冲返利宝箱 - 每日充值宝箱Item -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="continuePayRebate.rewardItem.back"
+      resourceLink="asset.continuePayRebate.rewardItem.back,asset.continuePayRebate.rewardItem.text"
+      imageRectString="0|275|0|95|13,5|252|10|20|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="continuePayRebate.rewardItem.hbox"
+      x="14"
+      y="37"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="continuePayRebate.rewardItem.rewardBtn"
+      backStyle="asset.continuePayRebate.rewardItem.rewardBtnback"
+      iconStyle="asset.continuePayRebate.rewardItem.btnTxt"
+      iconInnerRectString="17,52,10,16,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="180"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="continuePayRebate.rewardItem.rewardState"
+      resourceLink="asset.continuePayRebate.chestIcon.rewardState"
+      x="175"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ContinuePayRebateRewardItem.itemViewIconText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="3"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="continuePayRebate.simpleReward.panel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-5,4"
+      viewportInnerRectString="0,0,-5,90,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="134"
+      height="50"
+      x="17"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="continuePayRebate.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="670"
+      y="-30" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="continuePayRebate.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="continuePayRebate.helperFrame.helpTxt.text"
+      titleText="continuePayRebate.helperFrame.HelpTitle.text"
+      textWidth="363" />
+  </components>
+</style>

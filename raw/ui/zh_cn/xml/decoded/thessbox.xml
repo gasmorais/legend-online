@@ -1,0 +1,1074 @@
+<style
+  name="thessbox"
+  source="ui/zh_cn/swf/thessbox.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.numTxt_t"
+      args="Arial,14,0xedbf83,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.left1Txt_t"
+      args="Arial,14,0xff9600,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.left2Txt_t"
+      args="Arial,14,0x000000,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.left3Txt_t"
+      args="Arial,14,0xff0000,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.levelTxt_t"
+      args="Arial,16,0xfff772,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.sknameTxt_t"
+      args="Arial,14,0x2aa4e3,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.skDesTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.rkNameTxt_t"
+      args="Arial,14,0xffa200,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.rkPassTxt_t"
+      args="Arial,14,0xffa200,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.RankTxt2_t"
+      args="宋体,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.selfRankTxt_t"
+      args="宋体,14,0xffa200,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.skCdTxt_t"
+      args="Arial,14,0xffffff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.addnTxt_t"
+      args="Arial,14,0xffcc00,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.addSKdesTxt_t"
+      args="Arial,14,0xffcc00,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.addSKNkTxt_t"
+      args="Arial,14,0xffcc00,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.chapt1_t"
+      args="Arial,12,0xFFDF5F,true,,,,,center"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.chapt2_t"
+      args="Arial,14,0xffdf5f,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.threeOfTxt_t"
+      args="Arial,12,0xff8726,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.skdesBigTxt_t"
+      args="宋体,14,0xd2bca0,,,,,,left"
+      letterSpacing="0"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.thessbox.addIconSkTxt_t"
+      args="宋体,14,0xD2BCA0,,,,,,left"
+      letterSpacing="1"
+      leading="6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="thessbox.glv.txt_t"
+      args="Arial,12,0xff8726,,,,,,center"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.thessbox.chooseLight"
+      x="-4"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.thessbox.skIconBg"
+      x="24"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.thessbox.proFt"
+      x="414"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.thessbox.mainBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.thessbox.gotoBg"
+      x="219"
+      y="321" />
+    <bitmapData
+      resourceLink="asset.thessbox.leftBg1"
+      x="0"
+      y="-49" />
+    <bitmapData
+      resourceLink="asset.thessbox.skBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.tgessbox.r1"
+      x="16"
+      y="21" />
+    <bitmapData
+      resourceLink="asset.tgessbox.r2"
+      x="16"
+      y="21" />
+    <bitmapData
+      resourceLink="asset.tgessbox.r3"
+      x="16"
+      y="21" />
+    <bitmapData
+      resourceLink="asset.tgessbox.r4"
+      x="16"
+      y="21" />
+    <bitmapData
+      resourceLink="asset.thessbox.bagImg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.thessbox.selfRankImg"
+      x="376"
+      y="427" />
+    <bitmapData
+      resourceLink="asset.thessbox.ArrowImg"
+      x="213"
+      y="91" />
+    <bitmapData
+      resourceLink="asset.thessbox.chapter1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.thessbox.chapter2"
+      x="6"
+      y="38" />
+    <bitmapData
+      resourceLink="asset.thessbox.chapter6"
+      x="143"
+      y="69" />
+    <bitmapData
+      resourceLink="asset.thessbox.hasGet"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.thessbox.glv"
+      x="7"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="thessbox.glv.BaseItemView"
+      iconStyle="feedBackFrame.ItemBaseItemViewIcon"
+      hasGetStyle="asset.thessbox.glv"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="51"
+      profileHeight="51"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.thessbox.capterIcon"
+      iconHeight="132"
+      iconWidth="252"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="126"
+      loadingY="66"
+      x="5"
+      y="39" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.thessbox.leftIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="25"
+      loadingY="25"
+      x="74"
+      y="101" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.thessbox.skicon"
+      iconHeight="46"
+      iconWidth="46"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="23"
+      loadingY="23"
+      x="28"
+      y="27" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.thessbox.rankRhBox"
+      spacing="0"
+      x="486"
+      y="13"
+      autoCenter="true" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.thessbox.rankBox"
+      spacing="0"
+      x="71"
+      y="113" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.thessbox.skDesVbox"
+      spacing="5"
+      x="71"
+      y="113" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.thessbox.skBgicon"
+      iconHeight="56"
+      iconWidth="56"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="23"
+      loadingY="23"
+      x="2"
+      y="2"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.thessbox.leftRewardList"
+      vSpace="5"
+      hSpace="5"
+      y="39"
+      x="14" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.thessbox.skBagList"
+      vSpace="10"
+      hSpace="20" />
+    <custom
+      classname="thessbox.view.ThessBoxSkillCell"
+      stylename="ui.thessbox.skCell1"
+      x="49"
+      y="60" />
+    <custom
+      classname="thessbox.view.ThessBoxSkillCell"
+      stylename="ui.thessbox.skCell2"
+      x="169"
+      y="60" />
+    <custom
+      classname="thessbox.view.ThessBoxSkillCell"
+      stylename="ui.thessbox.skCell3"
+      x="290"
+      y="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.thessbox.addnIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="42"
+      y="32"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="thessbox.ui.ThessBoxAddNUI"
+      stylename="ui.thessbox.addNSK1"
+      x="124"
+      y="160" />
+    <custom
+      classname="thessbox.ui.ThessBoxAddNUI"
+      stylename="ui.thessbox.addNSK2"
+      x="300"
+      y="160" />
+    <custom
+      classname="thessbox.ui.ThessBoxAddNUI"
+      stylename="ui.thessbox.addNSK3"
+      x="471"
+      y="160" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.thessbox.addSkIcon2"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="35"
+      y="116" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="ui.thessbox.SwitchBtn"
+      x="210"
+      y="89" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.thessbox.fristCapHbox"
+      spacing="5"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.thessbox.ch2Hbox"
+      spacing="5"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.base.HRollItemPanel"
+      stylename="ui.thessbox.mainRoll"
+      x="-12"
+      y="4" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.thessbox.mainRollHbox"
+      x="20"
+      y="0"
+      spacing="5"
+      strictWidth="265" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="thessbox.chapter.BaseItemView"
+      iconStyle="feedBackFrame.ItemBaseItemViewIcon"
+      hasGetStyle="asset.thessbox.hasGet"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="51"
+      profileHeight="51"
+      showProfile="true"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.thessbox.sortBtn"
+      backStyle="asset.thessbox.sortImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="634"
+      y="29"
+      width="65"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.numTxt"
+      textFormatStyle="ui.thessbox.numTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="21"
+      x="291"
+      y="441" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.thessbox.gotoBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.thessbox.gotoImg"
+      iconInnerRectString="34,77,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="281"
+      y="367" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.thessbox.leftBg"
+      resourceLink="asset.thessbox.lft3,asset.thessbox.lft2,asset.thessbox.lft1"
+      imageRectString="0|240|0|266|13,0|210|0|31|13,27|163|5|24|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.left1Txt"
+      textFormatStyle="ui.thessbox.left1Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="195"
+      height="53"
+      x="11"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.left2Txt"
+      textFormatStyle="ui.thessbox.left2Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="195"
+      height="110"
+      x="11"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.left3Txt"
+      textFormatStyle="ui.thessbox.left3Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="193"
+      height="20"
+      x="11"
+      y="325" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.levelTxt"
+      textFormatStyle="ui.thessbox.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="188"
+      height="24"
+      x="8"
+      y="-38" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.thessbox.rightBtn1"
+      backStyle="asset.thessbox.skbagImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0"
+      width="65"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.thessbox.rightBtn2"
+      backStyle="asset.thessbox.skdesImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="85"
+      width="65"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.sknameTxt"
+      textFormatStyle="ui.thessbox.sknameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="184"
+      height="21"
+      x="97"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.skDesTxt"
+      textFormatStyle="ui.thessbox.skDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="344"
+      height="50"
+      x="97"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.thessbox.rankitemBg"
+      resourceLink="asset.thessbox.scbImg"
+      scaleGridString="10,10,50,50"
+      width="568"
+      height="74"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.rkNameTxt"
+      textFormatStyle="ui.thessbox.rkNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="159"
+      height="20"
+      x="114"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.rkPassTxt"
+      textFormatStyle="ui.thessbox.rkPassTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="287"
+      y="32" />
+    <component
+      classname="thessbox.ThessBoxMainFrame"
+      stylename="ui.thessbox.ThessBoxMainFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="852"
+      height="564" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="thessbox.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="thessbox.helpContent"
+      titleText="consortia.crossGuild.helpTitle"
+      width="650"
+      textWidth="550" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="thesstbox.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      x="764"
+      y="-32" />
+    <component
+      stylename="ui.thessbox.ThessBoxRankFrame"
+      classname="thessbox.ThessBoxRankFrame"
+      parentStyle="core.Frame2"
+      containerX="5"
+      containerY="45"
+      width="621"
+      height="545"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,60,10,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="thessbox.rankBack"
+      parentStyle="core.describeBackground_style40"
+      width="600"
+      height="456"
+      x="5"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="thessbox.RankFrameTitleBg"
+      resourceLink="asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="113|22|3|28|13,284|22|3|28|13,400|22|3|28|13"
+      width="514"
+      height="34"
+      x="1"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="thessbox.RankFrame.RankTxt"
+      textFormatStyle="ui.thessbox.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="12"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="thessbox.RankFrame.nickTxt"
+      textFormatStyle="ui.thessbox.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="122"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="thessbox.RankFrame.layerTxt"
+      textFormatStyle="ui.thessbox.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="292"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="thessbox.RankFrame.rewardTxt"
+      textFormatStyle="ui.thessbox.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="402"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.rankScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,588,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      width="588"
+      height="416"
+      x="6"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.selfRankTxt"
+      textFormatStyle="ui.thessbox.selfRankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="487"
+      y="431" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.rankIdxTxt"
+      textFormatStyle="ui.thessbox.selfRankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="12"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.thessbox.passBtn"
+      unSelectedStyle="asset.thessbox.unSelectedBack"
+      selectedStyle="asset.thessbox.selectedBack"
+      unselectedIconStyle="asset.thessbox.unSelectedBuff"
+      selectedIconStyle="asset.thessbox.SelectedBuff"
+      unselectedIconInnerRectString="22,69,6,21,13"
+      selectedIconInnerRectString="22,72,6,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="17"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.thessbox.actBtn"
+      unSelectedStyle="asset.thessbox.unSelectedBack"
+      selectedStyle="asset.thessbox.selectedBack"
+      unselectedIconStyle="asset.thessbox.UnSelectedAct"
+      selectedIconStyle="asset.thessbox.SelectedAct"
+      unselectedIconInnerRectString="22,69,6,21,13"
+      selectedIconInnerRectString="22,72,6,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="132"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.skDesPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,476,0,0,2"
+      vScrollbarInnerRectString="15,3,0,0,3"
+      vScrollProxy="0"
+      width="470"
+      height="378"
+      x="5"
+      y="40" />
+    <component
+      stylename="ui.thessbox.ThessBoxSkillDesFrame"
+      classname="thessbox.ThessBoxSkillDesFrame"
+      parentStyle="core.Frame2"
+      containerX="5"
+      containerY="45"
+      width="487"
+      height="512"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,60,10,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.skCdTxt"
+      textFormatStyle="ui.thessbox.skCdTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="134"
+      height="21"
+      x="311"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.thessbox.ItemBack"
+      parentStyle="core.goods.ItemBack"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.thessbox.pos1"
+      resourceLink="asset.thessbox.skbagBg"
+      x="42"
+      y="53"
+      scaleX="1"
+      width="76"
+      height="76" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.thessbox.pos2"
+      resourceLink="asset.thessbox.skbagBg"
+      x="162"
+      y="53"
+      scaleX="1"
+      width="76"
+      height="76" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.thessbox.pos3"
+      resourceLink="asset.thessbox.skbagBg"
+      x="283"
+      y="53"
+      scaleX="1"
+      width="76"
+      height="76" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.skBagPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,340,0,0,2"
+      vScrollbarInnerRectString="15,3,0,0,3"
+      vScrollProxy="0"
+      width="340"
+      height="242"
+      x="34"
+      y="176" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.thessbox.skNameTxt1"
+      textFieldStyle="forbiddenBossFrame.bossTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="ui.bossName.Txt_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="113"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.thessbox.skNameTxt2"
+      textFieldStyle="forbiddenBossFrame.bossTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="ui.bossName.Txt_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="112"
+      y="150" />
+    <component
+      stylename="ui.thessbox.ThessBoxSkillBagFrame"
+      classname="thessbox.ThessBoxSkillBagFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="40"
+      width="625"
+      height="522"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,60,10,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.thessbox.equipFlg"
+      resourceLink="asset.thessbox.hasEquipImg"
+      x="0"
+      y="6"
+      scaleX="1"
+      width="64"
+      height="44" />
+    <component
+      stylename="ui.thessbox.ThessBoxDropFrame"
+      classname="thessbox.ThessBoxDropFrame"
+      parentStyle="core.Frame2"
+      backStyle="flash.display.Sprite"
+      containerX="10"
+      containerY="40"
+      width="700"
+      height="512"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-70,130,100,29,14"
+      moveInnerRectString="70,100,90,50,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.thessbox.addMianBg"
+      resourceLink="asset.thessbox.chImg5,asset.thessbox.chImg4,asset.thessbox.chImg2,asset.thessbox.chImg3,asset.thessbox.chImg1,asset.thessbox.chImg6"
+      imageRectString="0|789|100|314|13,51|654|0|237|13,301|153|83|38|13,451|90|94|21|13,208|90|93|21|13,105|529|126|190|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.thessbox.addnd2"
+      resourceLink="asset.thessbox.addnImg1"
+      scaleGridString="6,6,50,50"
+      width="128"
+      height="88"
+      x="8"
+      y="111" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.addnTxt"
+      textFormatStyle="ui.thessbox.addnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="20"
+      x="12"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.thessbox.addMBg"
+      resourceLink="asset.thessbox.addSkImg3,asset.thessbox.addSkImg2,asset.thessbox.addSkImg1,asset.thessbox.addSkImg4"
+      imageRectString="71|0|19,100|106|19,116|17|19,0|95|19"
+      x="-71"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.addSKdesTxt"
+      textFormatStyle="ui.thessbox.addSKdesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="24"
+      x="32"
+      y="239" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.addSKNkTxt"
+      textFormatStyle="ui.thessbox.addSKNkTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="100"
+      y="136" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="thessbox.chNBack"
+      resourceLink="asset.thessbox.scbImg"
+      scaleGridString="10,10,50,50"
+      width="142"
+      height="123"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.thessbox.leftBagBtn"
+      backStyle="asset.thessbox.skbagImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="79"
+      y="185"
+      width="65"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.addIconSkTxt"
+      textFormatStyle="ui.thessbox.addIconSkTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="100"
+      multiline="true"
+      wordWrap="true"
+      x="16"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.adSkscrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,126,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      width="110"
+      height="82"
+      x="12"
+      y="114" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.skdesBigTxt"
+      textFormatStyle="ui.thessbox.skdesBigTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="183"
+      height="20"
+      multiline="true"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.skDesBigPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,188,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      width="188"
+      height="377"
+      x="398"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.thessbox.ftmg"
+      resourceLink="asset.thessbox.hideImg,asset.thessbox.exportImg"
+      x="212"
+      y="117" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.chapt1"
+      textFormatStyle="ui.thessbox.chapt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="251"
+      height="19"
+      x="3"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.chapt2"
+      textFormatStyle="ui.thessbox.chapt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="241"
+      height="19"
+      x="13"
+      y="273" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.thessbox.gotoFtBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.thessbox.gotoImg"
+      iconInnerRectString="34,77,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="60"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.thessbox.rtBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.thessbox.chapter5"
+      iconInnerRectString="38,75,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="60"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.thessbox.chapter.leftBtn"
+      backStyle="asset.thessbox.chapter3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="5"
+      y="183"
+      width="34"
+      height="74" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.thessbox.chapter.rightBtn"
+      backStyle="asset.thessbox.chapter4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="805"
+      y="183"
+      width="34"
+      height="74" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.thessbox.ChaptertitleTxt"
+      textFieldStyle="finalRoadFrame.titleTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="finalRoadFrame.titleTxt.text_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="40"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.fristPanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,0,4"
+      viewportInnerRectString="0,0,0,0,0"
+      hScrollProxy="0"
+      width="237"
+      height="70"
+      x="14"
+      y="202" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.thessbox.prePanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,0,4"
+      viewportInnerRectString="0,0,0,0,0"
+      hScrollProxy="0"
+      width="237"
+      height="70"
+      x="14"
+      y="299" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.thessbox.chooseBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.thessbox.confirmBtn"
+      iconInnerRectString="49,50,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="300"
+      y="329" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.thessbox.threeOfTxt"
+      textFormatStyle="ui.thessbox.threeOfTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="242"
+      height="21"
+      x="253"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="thessbox.glv.txt"
+      textFormatStyle="thessbox.glv.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="0"
+      y="53" />
+  </components>
+</style>

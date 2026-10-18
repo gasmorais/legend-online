@@ -1,0 +1,311 @@
+<style
+  name="superlottery"
+  source="ui/zh_cn/swf/superlottery.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="superlottery.trunText_t"
+      args="Arial,16,0xf9c85f,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="superlottery.pointTxt_t"
+      args="Arial,12,0xfcf2c6,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="superlottery.sendPointTxt_t"
+      args="Arial,12,0xfcf2c6,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="superlottery.CardNameTxt_t"
+      args="Arial,12,0xfff4d3,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.superlottery.leftBG" />
+    <bitmapData
+      resourceLink="asset.superlottery.RightBG" />
+    <bitmapData
+      resourceLink="asset.superlottery.leftUpTitle"
+      x="75"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.superlottery.leftDownTitle"
+      x="80"
+      y="233" />
+    <bitmapData
+      resourceLink="asset.superlottery.RightUpTitle"
+      x="195"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.superlottery.AwardBox0"
+      x="82"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.superlottery.AwardBox1"
+      x="270"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.superlottery.AwardTxt0"
+      x="115"
+      y="180" />
+    <bitmapData
+      resourceLink="asset.superlottery.AwardTxt1"
+      x="310"
+      y="180" />
+    <bitmapData
+      resourceLink="asset.superlottery.ChooseOkBtnImg" />
+    <bitmapData
+      resourceLink="asset.superlottery.ChooseOkBgImg"
+      x="-30"
+      y="-15" />
+    <bitmapData
+      resourceLink="asset.superlottery.getAwardImg" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="superlottery.SuperLotteryTodayView"
+      stylename="superlottery.SuperLotteryTodayView"
+      x="-3"
+      y="15" />
+    <custom
+      classname="superlottery.SuperLotteryView"
+      stylename="superlottery.SuperLotteryView"
+      x="262"
+      y="15" />
+    <custom
+      classname="asset.superlottery.AwardBoxLight0"
+      stylename="superlottery.AwardBoxLight0"
+      x="85"
+      y="75" />
+    <custom
+      classname="asset.superlottery.AwardBoxLight1"
+      stylename="superlottery.AwardBoxLight1"
+      x="296"
+      y="88" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.pointIcon0"
+      resourceLink="asset.resourcesBar.GiftIconAsset"
+      x="153"
+      y="200" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.pointIcon1"
+      resourceLink="asset.resourcesBar.GiftIconAsset"
+      x="340"
+      y="200" />
+    <custom
+      classname="asset.superlottery.lightMc"
+      stylename="superlottery.lightMc0"
+      x="80"
+      y="275" />
+    <custom
+      classname="asset.superlottery.lightMc"
+      stylename="superlottery.lightMc1"
+      x="280"
+      y="275" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.sendPointIcon"
+      resourceLink="asset.resourcesBar.VoucherIconAsset"
+      x="45"
+      y="420" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.sendGoldIcon"
+      resourceLink="asset.resourcesBar.GoldIconAsset"
+      x="200"
+      y="420" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.todayCard"
+      x="40"
+      y="70" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.todayStar"
+      x="150"
+      y="70" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.getAwardImg0"
+      resourceLink="asset.superlottery.getAwardImg"
+      x="65"
+      y="335" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="superlottery.getAwardImg1"
+      resourceLink="asset.superlottery.getAwardImg"
+      x="175"
+      y="335" />
+  </customDisplay>
+  <components>
+    <component
+      classname="superlottery.SuperLotteryFrame"
+      stylename="superlottery.SuperLotteryFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="745"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="superLottery.Frame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="670"
+      y="-22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="superlottery.trunText"
+      textFormatStyle="superlottery.trunText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="230"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="superlottery.pointTxt0"
+      textFormatStyle="superlottery.pointTxt_t"
+      autoSize="none"
+      width="135"
+      height="22"
+      x="20"
+      y="199" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="superlottery.pointTxt1"
+      textFormatStyle="superlottery.pointTxt_t"
+      autoSize="none"
+      width="135"
+      height="22"
+      x="205"
+      y="199" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="superlottery.cardSelectBtn"
+      backStyle="asset.superlottery.cardBtnImg"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="75"
+      y="268" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="superlottery.starSelectBtn"
+      backStyle="asset.superlottery.starBtnImg"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="275"
+      y="268" />
+    <!--单选按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="superlottery.sendPointBtn"
+      selectedIconStyle="asset.core.checkstyle_2.Selected"
+      unselectedIconStyle="asset.core.checkstyle_2.UnSelected"
+      selectedIconInnerRectString="0,22,0,23,13"
+      unselectedIconInnerRectString="0,22,0,23,13"
+      textStyle="superlottery.sendPointTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="23"
+      x="20"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="superlottery.sendGoldBtn"
+      parentStyle="superlottery.sendPointBtn"
+      x="175"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="superlottery.sendPointTxt"
+      textFormatStyle="superlottery.sendPointTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="23"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="superlottery.okBtn"
+      backStyle="asset.superlottery.okBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DarkFilter,core.GrayFilter"
+      x="320"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="superlottery.cardName0"
+      textFormatStyle="superlottery.CardNameTxt_t"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="25"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="superlottery.cardName1"
+      parentStyle="superlottery.cardName0"
+      x="25"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="superlottery.starName0"
+      parentStyle="superlottery.cardName0"
+      x="140"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="superlottery.starName1"
+      parentStyle="superlottery.cardName0"
+      x="140"
+      y="390" />
+    <component
+      classname="superlottery.SuperLotteryChooseFrame"
+      stylename="superlottery.chooseFrame"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="36"
+      containerY="56"
+      width="520"
+      height="530"
+      closestyle="core.CloseBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="superlottery.ChooseOkBtn"
+      backStyle="asset.superlottery.ChooseOkBtnImg"
+      x="145"
+      y="370" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="superlottery.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="superlottery.helpStr"
+      titleText="public.help"
+      textWidth="383" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="superlottery.cardStarBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      isFollowMouse="false" />
+  </components>
+</style>

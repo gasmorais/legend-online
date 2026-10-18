@@ -1,0 +1,946 @@
+<style
+  name="poker"
+  source="ui/zh_cn/swf/poker.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.playerNameTxt_t1"
+      args="Arial,12,0xe1d598,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.playerNameTxt_t2"
+      args="Arial,12,0x4ac72d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.hasChipsTxt_t"
+      args="Arial,14,0xfcdea8,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.downChipsTxt_t"
+      args="Arial,14,0xffff02,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.exchangeNote_t"
+      args="Arial,14,0xffff02,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.exchangeTxt_t"
+      args="Arial,14,0xffff02,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.poolChipsNote_t"
+      args="Arial,12,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.poolChipsTxt_t"
+      args="Arial,14,0xffff02,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.raiseTxt_t"
+      args="Arial,12,0xfcdea8,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.foldTxt_t"
+      args="Arial,12,0xfcdea8,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.timeTxt_t"
+      args="Arial,30,0xfff4c2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.desLayerTxt_t"
+      args="Arial,14,0xfcdea8,,,,,,left"
+      letterSpacing="0"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.PrizesNameTxt_t"
+      args="Arial,14,0xfcdea8,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.PrizesNameTxt_t1"
+      args="Arial,14,0xfcdea8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.PrizesTitleTxt_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.waitStartTimeTxt_t"
+      args="Arial,25,0xffff02,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.overTimeTxt_t"
+      args="Arial,14,0xdd0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poker.countdownTxt_t"
+      args="Arial,14,0xdd0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.poker.back"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.poker.bottomNote"
+      x="145"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.poker.poolChipBg" />
+    <bitmapData
+      resourceLink="asset.poker.playerNameBg"
+      x="-3"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.poker.playerHeadBg" />
+    <bitmapData
+      resourceLink="asset.poker.chipSmallBg"
+      x="11"
+      y="-50" />
+    <bitmapData
+      resourceLink="asset.poker.chipsIcon" />
+    <bitmapData
+      resourceLink="asset.poker.chipIcon" />
+    <bitmapData
+      resourceLink="asset.poker.chipinBtn" />
+    <bitmapData
+      resourceLink="asset.poker.dealerImg"
+      x="-25"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.poker.pattern1"
+      x="8"
+      y="34" />
+    <bitmapData
+      resourceLink="asset.poker.pattern2"
+      x="8"
+      y="34" />
+    <bitmapData
+      resourceLink="asset.poker.pattern3"
+      x="8"
+      y="34" />
+    <bitmapData
+      resourceLink="asset.poker.pattern4"
+      x="8"
+      y="34" />
+    <bitmapData
+      resourceLink="asset.poker.patternsBtn" />
+    <bitmapData
+      resourceLink="asset.poker.handPatterns" />
+    <bitmapData
+      resourceLink="asset.poker.chipIconBg"
+      x="1"
+      y="98" />
+    <bitmapData
+      resourceLink="asset.poker.Inputback" />
+    <bitmapData
+      resourceLink="asset.poker.thumbBg"
+      x="98"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.poker.timeBG" />
+    <bitmapData
+      resourceLink="asset.poker.timeFontBG"
+      x="30"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.poker.SplitLine"
+      x="2"
+      y="257"
+      width="481" />
+    <bitmapData
+      resourceLink="asset.poker.followImg" />
+    <bitmapData
+      resourceLink="asset.poker.allinImg" />
+    <bitmapData
+      resourceLink="asset.poker.quitImg" />
+    <bitmapData
+      resourceLink="asset.poker.checkImg" />
+    <bitmapData
+      resourceLink="asset.poker.raiseImg" />
+    <bitmapData
+      resourceLink="asset.poker.foldIcon"
+      x="45"
+      y="10"
+      rotation="45" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="poker.PokerLayer"
+      stylename="poker.PokerLayer"
+      x="3"
+      y="2" />
+    <custom
+      classname="poker.PokerPoolView"
+      stylename="poker.PokerPoolView"
+      x="370"
+      y="202" />
+    <custom
+      classname="poker.PokerCardView"
+      stylename="poker.PokerCardView" />
+    <custom
+      classname="poker.PokerScrollView"
+      stylename="poker.PokerScrollView"
+      x="747"
+      y="530" />
+    <custom
+      classname="poker.PokerExchangeView"
+      stylename="poker.PokerExchangeView"
+      x="5"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="poker.PokerPlayerIcon"
+      iconHeight="85"
+      iconWidth="85"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="25"
+      loadingHeight="25"
+      loadingX="42"
+      loadingY="42"
+      x="6"
+      y="4" />
+    <custom
+      classname="asset.poker.cardNumRed"
+      stylename="poker.cardNum1"
+      x="0"
+      y="3" />
+    <custom
+      classname="asset.poker.cardNumBlack"
+      stylename="poker.cardNum2"
+      x="0"
+      y="3" />
+    <custom
+      classname="asset.poker.cardNumRed"
+      stylename="poker.cardNum3"
+      x="0"
+      y="3" />
+    <custom
+      classname="asset.poker.cardNumBlack"
+      stylename="poker.cardNum4"
+      x="0"
+      y="3" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.poolSprite" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.poolCardSprite"
+      x="20"
+      y="93" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.cardsSprite"
+      x="-15"
+      y="-60" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.playCardSprite" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.scrollSprite"
+      x="2"
+      y="8" />
+    <custom
+      classname="asset.poker.cardStack"
+      stylename="poker.cardStack" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="poker.cashImgStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      isFollowMouse="false"
+      tipDirctions="0,3,6,5,4,7"
+      x="410"
+      y="405" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="poker.coreImgStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      isFollowMouse="false"
+      tipDirctions="0,3,6,5,4,7"
+      x="570"
+      y="407" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.timeSprite"
+      x="719"
+      y="541" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.timeSprite1"
+      x="690"
+      y="118" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="poker.chipBgSprite" />
+  </customDisplay>
+  <components>
+    <component
+      classname="poker.PokerFrame"
+      stylename="poker.PokerFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="62"
+      width="1155"
+      height="745" />
+    <component
+      classname="poker.PokerExchangeFrame"
+      stylename="poker.PokerExchangeFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="340"
+      height="236" />
+    <component
+      classname="poker.PokerPrizesFrame"
+      stylename="poker.PokerPrizesFrame"
+      parentStyle="core.Frame2"
+      containerX="0"
+      containerY="32"
+      width="580"
+      height="365" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="poker.PokerTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|560|0|34|13,93|22|3|28|13,200|22|3|28|13,310|22|3|28|13"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="poker.desLayerBack"
+      resourceLink="asset.poker.TitleBackStyle1_bg1,asset.poker.TitleBackStyle1_bg2,asset.poker.TitleBackStyle1_bg3,asset.poker.TitleBackStyle1_bg4,asset.poker.TitleBackStyle1_bg5,asset.poker.TitleBackStyle1_bg6,asset.poker.TitleBackStyle1_bg7,asset.poker.TitleBackStyle1_bg8,asset.poker.TitleBackStyle1_bg9"
+      width="495"
+      height="145"
+      x="317"
+      y="471" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poker.PokerPrizesBackground"
+      parentStyle="core.describeBackground_style04"
+      width="560"
+      height="250"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="poker.itemBgGray"
+      parentStyle="core.TitleBack_Style777"
+      width="560"
+      height="38"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="poker.itemBgLight"
+      parentStyle="core.TitleBack_Style888"
+      width="560"
+      height="38"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesTitleNameTxt"
+      textFormatStyle="poker.PrizesTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="8"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesTitleCashTxt"
+      parentStyle="poker.PrizesTitleNameTxt"
+      x="102"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesTitleScoreTxt"
+      parentStyle="poker.PrizesTitleNameTxt"
+      x="200"
+      y="17"
+      wordWrap="true"
+      width="132"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesTitlePatternsTxt"
+      parentStyle="poker.PrizesTitleNameTxt"
+      x="380"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="poker.PrizesVBox"
+      x="11"
+      y="42"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesNameTxt"
+      textFormatStyle="poker.PrizesNameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="-2"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesCashTxt"
+      textFormatStyle="poker.PrizesNameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="20"
+      x="90"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesScoreTxt"
+      textFormatStyle="poker.PrizesNameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="210"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesHandTypeTxt"
+      textFormatStyle="poker.PrizesNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="450"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="poker.actionFrameImage"
+      resourceLink="asset.poker.followImg,asset.poker.allinImg,asset.poker.quitImg,asset.poker.checkImg,asset.poker.raiseImg" />
+    <!-- 开始游戏 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="poker.startGameBtn"
+      backStyle="asset.poker.pokerLayerBg"
+      iconStyle="asset.poker.startGameBtn"
+      iconInnerRectString="44,95,18,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="466"
+      y="132"
+      offSetY="-3" />
+    <!-- 兑换筹码 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="poker.exchangeGameBtn"
+      backStyle="asset.poker.pokerLayerBg"
+      iconStyle="asset.poker.exchangeGameBtn"
+      iconInnerRectString="44,94,18,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="464"
+      y="228"
+      offSetY="-3" />
+    <!-- 积分商城 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="poker.pointsGameBtn"
+      backStyle="asset.poker.pokerLayerBg"
+      iconStyle="asset.poker.pointsGameBtn"
+      iconInnerRectString="44,95,18,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="467"
+      y="323"
+      offSetY="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.playerNameTxt"
+      textFormatStyle="poker.playerNameTxt_t1,poker.playerNameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="6"
+      y="78"
+      width="89"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.hasChipsTxt"
+      textFormatStyle="poker.hasChipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="25"
+      y="101"
+      width="55"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.downChipsTxt"
+      textFormatStyle="poker.downChipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="28"
+      y="-47"
+      width="65"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.cashTxt"
+      textFormatStyle="poker.downChipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="39"
+      y="13"
+      width="65"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.coreTxt"
+      textFormatStyle="poker.downChipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="39"
+      y="13"
+      width="65"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.poolPointBg"
+      resourceLink="asset.poker.poolChipBg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.poolChipsNote"
+      textFormatStyle="poker.poolChipsNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="65"
+      y="115"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.poolChipsTxt"
+      textFormatStyle="poker.poolChipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="153"
+      y="115"
+      width="65"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.timeTxt"
+      textFormatStyle="poker.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="50"
+      x="69"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.overTimeTxt"
+      textFormatStyle="poker.overTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="22"
+      x="259"
+      y="481" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.waitStartTimeTxt"
+      textFormatStyle="poker.waitStartTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="50"
+      x="710"
+      y="535" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.desLayerTxt"
+      textFormatStyle="poker.desLayerTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      x="334"
+      y="492"
+      width="466"
+      height="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.handTypeTxt"
+      textFormatStyle="poker.playerNameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="-17"
+      width="89"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poker.Inputback"
+      resourceLink="asset.poker.chipSmallBg"
+      scaleGridString="5,5,10,10"
+      width="87"
+      height="25"
+      x="139"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.chipIcon"
+      resourceLink="asset.poker.chipIcon"
+      x="200"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.pointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="199"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poker.cashTxtBg"
+      resourceLink="asset.poker.chipSmallBg"
+      scaleGridString="5,5,10,10"
+      width="87"
+      height="25"
+      x="30"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poker.coreTxtBg"
+      resourceLink="asset.poker.chipSmallBg"
+      scaleGridString="5,5,10,10"
+      width="87"
+      height="25"
+      x="26"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.exchangeNote"
+      textFormatStyle="poker.exchangeNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="-15"
+      y="31"
+      width="155"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.exchangeTxt1"
+      textFormatStyle="poker.exchangeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="154"
+      y="30"
+      width="100"
+      height="20"
+      type="input"
+      restrict="0-9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.exchangeTxt2"
+      textFormatStyle="poker.exchangeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="154"
+      y="65"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.chipIcon1"
+      resourceLink="asset.poker.chipIcon"
+      x="6"
+      y="101" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.cashImg"
+      resourceLink="asset.poker.chipsIcon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.coreImg"
+      resourceLink="asset.poker.pokerLayerCore" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="poker.view.confirmStyle"
+      parentStyle="worldboss.RiverNotAlert_confirmStyle"
+      x="40"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="poker.view.cancelStyle"
+      parentStyle="worldboss.RiverNotAlert_cancelStyle"
+      x="175"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="poker.BagBack"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="1120"
+      height="640"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="poker.PokerExchangeBack"
+      parentStyle="core.describeBackground_style11"
+      width="322"
+      height="158"
+      x="-7"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="poker.PokerPrizesConfirmBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.core.ConfirmTxtAsset_01"
+      iconInnerRectString="10,78,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="221"
+      y="259"
+      autoCenter="false"
+      width="110"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.PrizesConfirmDownTxt"
+      textFormatStyle="poker.PrizesTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="300"
+      y="267" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="poker.chipsIcon"
+      resourceLink="asset.poker.chipsIcon"
+      x="-14"
+      y="-60" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.raiseBtn1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      textStyle="poker.raiseTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="12,75,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-38"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.raiseBtn2"
+      backStyle="asset.core.AlertBtnStyle_02"
+      textStyle="poker.raiseTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="12,75,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="265"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.checkBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      textStyle="poker.raiseTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="12,75,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-38"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.raiseTxt"
+      textFormatStyle="poker.raiseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.foldBtn1"
+      backStyle="asset.poker.chipinBtn"
+      textStyle="poker.foldTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="4,8,5,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="49"
+      height="26"
+      x="88"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.foldTxt"
+      textFormatStyle="poker.foldTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.foldBtn2"
+      parentStyle="poker.foldBtn1"
+      x="158"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.foldBtn3"
+      parentStyle="poker.foldBtn1"
+      x="227"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.foldBtn4"
+      parentStyle="poker.foldBtn1"
+      x="295"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.allinBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      textStyle="poker.raiseTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="12,75,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-38"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.allinBtn1"
+      parentStyle="poker.allinBtn"
+      x="179"
+      y="69" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.abandonBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      textStyle="poker.raiseTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="12,75,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-38"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poker.patternBtn"
+      backStyle="asset.poker.patternsBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poker.expressionBtn"
+      backStyle="asset.poker.expressionBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="610" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poker.quickerBtn"
+      backStyle="asset.poker.quickerBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="280"
+      y="612" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poker.thumbBtn"
+      backStyle="asset.poker.thumbBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poker.scrollAddBtn"
+      backStyle="asset.poker.scrollAddBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="231"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poker.scrollSubtraBtn"
+      backStyle="asset.poker.scrollSubtraBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="78"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="poker.quitBtn"
+      backStyle="asset.poker.quitBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1036"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="poker.addfriendSelectBtn"
+      parentStyle="chatII.chatMessageSelectBtn"
+      textStyle="poker.ItemMenuText"
+      width="175"
+      height="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.ItemMenuText"
+      parentStyle="chatII.ItemMenuText"
+      width="175" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poker.countdownTxt"
+      textFormatStyle="poker.countdownTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="25"
+      y="26"
+      width="350"
+      height="25" />
+    <!-- 德州回合信息 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poker.chatBg"
+      resourceLink="asset.core.describeBackground_style07"
+      scaleGridString="10,10,250,70"
+      alpha="0.5"
+      width="245"
+      height="125"
+      x="0"
+      y="510" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="poker.chatScroll"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="8,7,0,10,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="245"
+      height="125"
+      x="0"
+      y="510" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="poker.chatVBox"
+      x="0"
+      y="0"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="poker.PokerPrizesItem.cardBox"
+      x="310"
+      y="4"
+      spacing="0" />
+  </components>
+</style>

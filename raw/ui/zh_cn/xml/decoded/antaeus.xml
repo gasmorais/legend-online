@@ -1,0 +1,504 @@
+<style
+  name="antaeus"
+  source="ui/zh_cn/swf/antaeus.swf">
+  <sets>
+    <!-- 主界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtName_t"
+      args="Arial,14,0x01dcfc,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtCount_t"
+      args="Arial,14,0xe7d800,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txt1_t"
+      args="Arial,12,0xff7c00,false,,true,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txt2_t"
+      args="Arial,12,0xff7c00,false,,true,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txt3_t"
+      args="Arial,12,0xff7c00,false,,true,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txt4_t"
+      args="Arial,12,0xff7c00,false,,true,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txt5_t"
+      args="Arial,12,0xff7c00,false,,true,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txt6_t"
+      args="Arial,12,0xff7c00,false,,true,,,left"
+      leading="0" />
+    <!-- 下面框 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtInvite_t"
+      args="Arial,12,0xea9516,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtCount2_t"
+      args="Arial,12,0x22c1fb,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtCost_t"
+      args="Arial,16,0xebe8c5,true,,,,,center"
+      leading="0" />
+    <!-- 玩家列表 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtListPlayerPower1"
+      args="Arial,12,0xffe400,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtListPlayerPower2"
+      args="Arial,12,0xff9600,true,,,,,center"
+      leading="0" />
+    <!-- tip1 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtTip1Name_t"
+      args="Arial,12,0x01dcfc,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtTip1Star_t"
+      args="Arial,14,0xE3940C,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.antaeus.txtTip1Item_t"
+      args="Arial,12,0xe9c68c,,,,,,left"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <!-- 通用数字 -->
+    <bitmapData
+      resourceLink="asset.antaeus.num1" />
+    <bitmapData
+      resourceLink="asset.antaeus.num2" />
+    <bitmapData
+      resourceLink="asset.antaeus.num3" />
+    <!-- 主界面 -->
+    <bitmapData
+      resourceLink="asset.antaeus.strFP"
+      x="344"
+      y="137" />
+    <bitmapData
+      resourceLink="asset.antaeus.str2"
+      x="613"
+      y="143" />
+    <bitmapData
+      resourceLink="asset.antaeus.str3"
+      x="601"
+      y="351" />
+    <bitmapData
+      resourceLink="asset.antaeus.str4"
+      x="646"
+      y="495" />
+    <bitmapData
+      resourceLink="asset.antaeus.str7"
+      x="599"
+      y="213" />
+    <bitmapData
+      resourceLink="asset.antaeus.str1"
+      x="599"
+      y="281" />
+    <bitmapData
+      resourceLink="asset.antaeus.str8"
+      x="600"
+      y="422" />
+    <bitmapData
+      resourceLink="asset.antaeus.bg"
+      x="92"
+      y="113" />
+    <bitmapData
+      resourceLink="asset.antaeus.border"
+      x="40"
+      y="39" />
+    <bitmapData
+      resourceLink="asset.antaeus.title"
+      x="389"
+      y="65" />
+    <!-- 下面框 -->
+    <bitmapData
+      resourceLink="asset.antaeus.img1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.antaeus.strInvited"
+      x="28"
+      y="36" />
+    <!-- 角色列表 -->
+    <bitmapData
+      resourceLink="asset.antaeus.str6"
+      x="53"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.antaeus.str5"
+      x="85"
+      y="15" />
+    <!-- tip1 -->
+    <bitmapData
+      resourceLink="asset.antaeus.tip.line"
+      x="0"
+      y="26" />
+  </bitmaps>
+  <customDisplay></customDisplay>
+  <components>
+    <!--主界面 -->
+    <component
+      stylename="antaeus.AntaeusFrame"
+      classname="antaeus.AntaeusFrame"
+      parentStyle="core.Frame1"
+      containerX="-78"
+      containerY="-55"
+      width="861"
+      height="652"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,0,20,29,14"
+      moveInnerRectString="0,80,10,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="antaeus.vbox"
+      x="93"
+      y="122"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="antaeus.hbox"
+      x="351"
+      y="553"
+      spacing="10" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.propertyIcon1"
+      iconX="3"
+      iconY="3"
+      iconWidth="46"
+      iconHeight="46"
+      x="759"
+      y="131" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.propertyIcon2"
+      iconX="3"
+      iconY="3"
+      iconWidth="46"
+      iconHeight="46"
+      x="759"
+      y="199" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.propertyIcon3"
+      iconX="3"
+      iconY="3"
+      iconWidth="46"
+      iconHeight="46"
+      x="759"
+      y="269" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.propertyIcon4"
+      iconX="3"
+      iconY="3"
+      iconWidth="46"
+      iconHeight="46"
+      x="759"
+      y="338" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.propertyIcon5"
+      iconX="3"
+      iconY="3"
+      iconWidth="46"
+      iconHeight="46"
+      x="759"
+      y="405" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.propertyIcon6"
+      iconX="3"
+      iconY="3"
+      iconWidth="46"
+      iconHeight="46"
+      x="759"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.antaeus.btnSign"
+      backStyle="asset.antaeus.btnBlue"
+      iconStyle="asset.antaeus.str9"
+      iconInnerRectString="21,72,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="796"
+      y="578" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.antaeus.btnRight"
+      backStyle="asset.antaeus.btnRight"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="752"
+      y="578" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.antaeus.btnLeft"
+      backStyle="asset.antaeus.btnLeft"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="306"
+      y="577" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.antaeus.btnShop"
+      backStyle="asset.antaeus.btnShop"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="497"
+      y="448" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtName"
+      textFormatStyle="ui.antaeus.txtName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="198"
+      height="18"
+      x="310"
+      y="477" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtSite"
+      textFormatStyle="ui.antaeus.txtName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="198"
+      height="18"
+      x="310"
+      y="498" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtCount"
+      textFormatStyle="ui.antaeus.txtCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="198"
+      height="18"
+      x="310"
+      y="518" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txt1"
+      textFormatStyle="ui.antaeus.txt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="124"
+      height="38"
+      x="810"
+      y="136"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txt2"
+      textFormatStyle="ui.antaeus.txt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="111"
+      height="38"
+      x="810"
+      y="200"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txt3"
+      textFormatStyle="ui.antaeus.txt3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="111"
+      height="63"
+      x="810"
+      y="265"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txt4"
+      textFormatStyle="ui.antaeus.txt4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="109"
+      height="38"
+      x="810"
+      y="340"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txt5"
+      textFormatStyle="ui.antaeus.txt5_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="111"
+      height="38"
+      x="810"
+      y="410"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txt6"
+      textFormatStyle="ui.antaeus.txt6_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="109"
+      height="43"
+      x="810"
+      y="480"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="antaeus.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="880"
+      y="80" />
+    <!-- 下面框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtInvite"
+      textFormatStyle="ui.antaeus.txtInvite_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="122"
+      height="38"
+      x="0"
+      y="-2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtCount2"
+      textFormatStyle="ui.antaeus.txtCount2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="123"
+      height="38"
+      x="0"
+      y="26"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtCost"
+      textFormatStyle="ui.antaeus.txtCost_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="21"
+      x="29"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.antaeus.money"
+      resourceLink="asset.core.SmallPointImg"
+      x="72"
+      y="60" />
+    <!-- 角色列表 -->
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="antaeus.playerIcon"
+      iconX="3"
+      iconY="3"
+      iconWidth="40"
+      iconHeight="40"
+      x="7"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtListPlayerPower"
+      textFormatStyle="ui.antaeus.txtListPlayerPower1,ui.antaeus.txtListPlayerPower2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="35"
+      x="53"
+      y="7"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.antaeus.imgBtn"
+      resourceLink="asset.antaeus.btnList1,asset.antaeus.btnList2,asset.antaeus.btnList3,asset.antaeus.btnList4"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.antaeus.imgInvited"
+      resourceLink="asset.antaeus.strInvited"
+      imageRectString="0|0|19"
+      x="33"
+      y="-3" />
+    <!-- tip1 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtTip1Name"
+      textFormatStyle="ui.antaeus.txtTip1Name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="20"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtTip1Star"
+      textFormatStyle="ui.antaeus.txtTip1Star_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="153"
+      height="20"
+      x="20"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.antaeus.txtTip1Item"
+      textFormatStyle="ui.antaeus.txtTip1Item_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="16"
+      x="20"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.antaeus.tipbg1"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="175" />
+    <!--帮助界面 -->
+    <component
+      classname="antaeus.AntaeusHelpFrame"
+      stylename="antaeus.AntaeusHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="antaeus.help"
+      titleText="antaeus.help.title"
+      textWidth="600"
+      isOpenScorll="true" />
+  </components>
+</style>

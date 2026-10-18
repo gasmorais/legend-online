@@ -1,0 +1,223 @@
+<style
+  name="phone"
+  source="ui/zh_cn/swf/phone.swf">
+  <sets>
+    <!-- 手机任务按钮 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_1"
+      args="Arial,12,0xffefc4,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_2"
+      args="Arial,16,0xfef8e0,false,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_3"
+      args="Arial,16,0xfef8e0,false,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_4"
+      args="Arial,14,0x24c028,false,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_5"
+      args="Arial,14,0xff0000,false,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_6"
+      args="Arial,12,0xfff000,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="task.phoneTaskText_t_7"
+      args="Arial,12,0xfff000,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.task.TaskPhoneInputback"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.task.TaskPhoneBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.task.TaskPhoneNumber"
+      x="82"
+      y="60" />
+    <bitmapData
+      resourceLink="asset.task.TaskPhoneCheckNum"
+      x="28"
+      y="40" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.task.TaskPhoneHalo"
+      stylename="asset.task.TaskPhoneHalo"
+      x="-3"
+      y="-3" />
+  </customDisplay>
+  <components>
+    <!-- 手机任务发送按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.phoneNumSendBtn"
+      backStyle="asset.task.TaskPhoneBtnBack1"
+      iconStyle="asset.task.TaskPhoneSend"
+      iconInnerRectString="24,45,6,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="338"
+      y="53" />
+    <!-- 手机任务验证按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.checkBtn"
+      backStyle="asset.task.TaskPhoneBtnBack1"
+      iconStyle="asset.task.TaskPhoneCheck"
+      iconInnerRectString="24,45,6,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="316"
+      y="32" />
+    <!-- 手机任务重新发送按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.reSendBtn"
+      backStyle="asset.task.TaskPhoneBtnBack1"
+      iconStyle="asset.task.TaskPhoneGoback"
+      iconInnerRectString="24,45,6,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="416"
+      y="32" />
+    <!-- 手机任务输入框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.phoneNumInputText"
+      textFormatStyle="task.phoneTaskText_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      width="160"
+      height="30"
+      x="170"
+      y="59"
+      maxChars="11" />
+    <!-- 手机任务验证框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.identifyNumInputText"
+      textFormatStyle="task.phoneTaskText_t_3"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      width="160"
+      height="30"
+      x="136"
+      y="39"
+      maxChars="6" />
+    <!-- 手机任务提示栏 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.phoneNumTip"
+      textFormatStyle="task.phoneTaskText_t_4"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="250"
+      height="23"
+      x="166"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.identifyNumTip1"
+      textFormatStyle="task.phoneTaskText_t_4"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="250"
+      height="23"
+      x="28"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.identifyNumTip2"
+      textFormatStyle="task.phoneTaskText_t_5"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="210"
+      height="40"
+      x="305"
+      y="64"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.timerText1"
+      textFormatStyle="task.phoneTaskText_t_6"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="25"
+      height="23"
+      x="340"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.timerText2"
+      textFormatStyle="task.phoneTaskText_t_7"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="61"
+      height="23"
+      x="362"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.timerText3"
+      textFormatStyle="task.phoneTaskText_t_6"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="25"
+      height="23"
+      x="317"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="task.timerText4"
+      textFormatStyle="task.phoneTaskText_t_7"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="dynamic"
+      width="61"
+      height="23"
+      x="339"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="asset.task.InputbackImage1"
+      resourceLink="asset.task.TaskPhoneInputback"
+      x="167"
+      y="57"
+      width="165" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="asset.task.InputbackImage2"
+      resourceLink="asset.task.TaskPhoneInputback"
+      x="133"
+      y="36"
+      width="165" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="asset.task.TaskPhoneBtnBackImage1"
+      resourceLink="asset.task.TaskPhoneBtnBack2"
+      x="338"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="asset.task.TaskPhoneBtnBackImage2"
+      resourceLink="asset.task.TaskPhoneBtnBack2"
+      x="316"
+      y="32" />
+  </components>
+</style>

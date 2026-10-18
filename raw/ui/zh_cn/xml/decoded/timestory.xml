@@ -1,0 +1,274 @@
+<style
+  name="timestory"
+  source="ui/zh_cn/swf/timestory.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="timestory.TimeTxt_t"
+      args="Arial,16,0x000000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timestory.UpdateBtnText_t"
+      args="Arial,14,0xfff9de,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="timestory.TimeTxt_f"
+      args="0xfbfbbb,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timestory.UpdateBroadCastDate_t"
+      args="Arial,14,0xffeb79,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timestory.UpdateBroadCastContent_t"
+      args="Arial,14,0xbf9048,,,,,,left"
+      letterSpacing="1"
+      leading="7" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.timestory.PageBackMiddle" />
+    <bitmapData
+      resourceLink="asset.timestory.PageBackSpace" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdateDateAsset"
+      x="220"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdateTitleBg" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdateContentAsset"
+      x="19"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdatePreAsset"
+      x="19"
+      y="5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="timestory.Contain"
+      x="113"
+      y="19" />
+    <custom
+      classname="asset.timestory.UpdateBroadCastBack"
+      stylename="timestory.UpdateBroadCastBack"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="timestory.TimeStoryFrame"
+      stylename="timestory.TimeStoryFrame"
+      parentStyle="core.Frame1"
+      closestyle="timestory.TimeStoryFrameCloseBtn"
+      backStyle="timestory.TimeStoryFrameBack"
+      closeInnerRectString="54,-14,13,40,14"
+      moveInnerRectString="0,80,0,25,1"
+      titleOuterRectPosString="0,2,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="14"
+      containerY="38"
+      width="881"
+      height="564" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="timestory.TimeStoryFrameBack"
+      resourceLink="asset.timestory.TimeStoryFrameBack1,asset.timestory.TimeStoryFrameTitle"
+      imageRectString="0|0|0|0|0,288|58|-8|-1|9" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="timestory.TimeStoryFrameCloseBtn"
+      backStyle="asset.timestory.TimeStoryFrameCloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timestory.TimeTxt"
+      textFormatStyle="timestory.TimeTxt_t"
+      filterString="timestory.TimeTxt_f"
+      autoSize="none"
+      width="250"
+      height="25"
+      x="58"
+      y="-9" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="timestory.AlertBtn"
+      unSelectedStyle="asset.timestory.ModuleUnselectedBack"
+      selectedStyle="asset.timestory.ModuleSelectedBack"
+      selectedIconStyle="asset.timestory.Alerts"
+      unselectedIconStyle="asset.timestory.Alerts"
+      selectedIconInnerRectString="0,89,0,74,13"
+      unselectedIconInnerRectString="0,89,0,74,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="16"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="timestory.ActiveBtn"
+      parentStyle="timestory.AlertBtn"
+      selectedIconStyle="asset.timestory.Active"
+      unselectedIconStyle="asset.timestory.Active"
+      x="16"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="timestory.CartoonBtn"
+      parentStyle="timestory.AlertBtn"
+      selectedIconStyle="asset.timestory.Cartoon"
+      unselectedIconStyle="asset.timestory.Cartoon"
+      x="16"
+      y="197" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="timestory.RewardBtn"
+      parentStyle="timestory.AlertBtn"
+      selectedIconStyle="asset.timestory.Reward"
+      unselectedIconStyle="asset.timestory.Reward"
+      x="16"
+      y="282" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timestory.PrePageBtn"
+      backStyle="asset.timestory.PageBtnBack"
+      iconStyle="asset.timestory.PrePage"
+      iconInnerRectString="19,59,7,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="157"
+      y="454" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timestory.NextPageBtn"
+      parentStyle="timestory.PrePageBtn"
+      iconStyle="asset.timestory.NextPage"
+      iconInnerRectString="19,58,8,20,13"
+      x="691"
+      y="454" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="timestory.PageBox"
+      x="270"
+      y="460"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="timestory.FirstPageBack"
+      resourceLink="asset.timestory.PageBackPre"
+      x="260"
+      y="402" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="timestory.LastPageBack"
+      resourceLink="asset.timestory.PageBackPre"
+      scaleX="-1"
+      x="572"
+      y="402" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="timestory.PageBackSpace"
+      resourceLink="asset.timestory.PageBackSpace"
+      scaleGridString="2,0,10,28"
+      width="358"
+      height="28"
+      x="295"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="timestory.PageLastback"
+      resourceLink="asset.timestory.PageFirstback"
+      scaleX="-1"
+      x="28" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="timestory.FirstPageBtn"
+      unSelectedStyle="asset.timestory.PageFirstback"
+      selectedStyle="asset.timestory.PageSelectedback"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="timestory.LastPageBtn"
+      unSelectedStyle="timestory.PageLastback"
+      selectedStyle="asset.timestory.PageSelectedback"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="timestory.PageBtn"
+      unSelectedStyle="asset.timestory.PageMiddileback"
+      selectedStyle="asset.timestory.PageSelectedback"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="timestory.UpdateBtn"
+      backStyle="asset.timestory.TimeStoryUpdateBtn"
+      textStyle="timestory.UpdateBtnText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="85"
+      height="30"
+      backgoundInnerRectString="0,8,5,13"
+      x="621"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timestory.UpdateBtnText"
+      textFormatStyle="timestory.UpdateBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="82"
+      height="20" />
+    <!-- 更新公告 -->
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="timestory.UpdateBroadCastScrollBar"
+      parentStyle="core.VScrollbar03" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="timestory.UpdateBroadCastScroll"
+      vScrollbarStyle="timestory.UpdateBroadCastScrollBar"
+      vScrollbarInnerRectString="16,0,0,0,3"
+      viewportInnerRectString="0,0,0,0,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="718"
+      height="424" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timestory.UpdateBroadCastDate"
+      textFormatStyle="timestory.UpdateBroadCastDate_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="245"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timestory.UpdateBroadCastContent"
+      textFormatStyle="timestory.UpdateBroadCastContent_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="550"
+      x="18"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="timestory.eggImage"
+      resourceLink="asset.timestory.eggImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="5,2,7"
+      x="21"
+      y="399" />
+  </components>
+</style>

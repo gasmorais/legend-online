@@ -1,0 +1,343 @@
+<style
+  name="guidetask"
+  source="ui/zh_cn/swf/guidetask.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="guidetask.daynumTxt_t"
+      args="Arial,16,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guidetask.taskDescTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guidetask.openLvTxt_t"
+      args="Arial,14,0xe40d0d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guidetask.taskNotComplete_t"
+      args="Arial,14,0xe40d0d,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guidetask.taskComplete_t"
+      args="Arial,14,0x43bf17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guidetask.recommendTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.guidetask.getIcon"
+      x="-4"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.guidetask.btnBack"
+      x="4"
+      y="4"
+      height="403" />
+    <bitmapData
+      resourceLink="asset.guidetask.taskBg" />
+    <bitmapData
+      resourceLink="asset.guidetask.line" />
+    <bitmapData
+      resourceLink="asset.guidetask.completeFalg"
+      x="326"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.guidetask.completeTaskImg"
+      x="11"
+      y="1" />
+    <bitmapData
+      resourceLink="asset.guidetask.leveltitleBg" />
+    <bitmapData
+      resourceLink="asset.guidetask.upgradeLevelImg"
+      x="93"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.core.ReceivedImg"
+      x="0"
+      y="75" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="guidetask.DropItem"
+      iconStyle="guidetask.DropItemIcon"
+      textStyle="guidetask.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="guidetask.DropItemIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="15"
+      loadingY="15"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <!-- 七日目标Frame -->
+    <component
+      classname="guidetask.GuideTaskFrame"
+      stylename="guidetask.GuideTaskFrame"
+      parentStyle="core.Frame1"
+      containerX="19"
+      containerY="68"
+      width="665"
+      height="528" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="guidetask.btnTxt01"
+      textFieldStyle="guidetask.daynumTxt"
+      colors="0xfcf24f,0xc4731c"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="70"
+      height="26"
+      x="50"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.daynumTxt"
+      textFormatStyle="guidetask.daynumTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="70"
+      height="26" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="guidetask.btnTxt02"
+      textFieldStyle="guidetask.daynumTxt"
+      colors="0xfffccc,0xffde00"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="70"
+      height="26"
+      x="50"
+      y="18" />
+    <component
+      classname="guidetask.GuideTaskButton"
+      stylename="guidetask.GuideTaskButton"
+      unSelectedStyle="asset.guidetask.btnBack01"
+      selectedStyle="asset.guidetask.btnBack02"
+      textStyle="guidetask.daynumTxt_t"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="193"
+      height="55"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="guidetask.dayNumBtnVBox"
+      x="3"
+      y="9"
+      strictHeight="59"
+      width="200"
+      spacing="-3" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="guidetask.bg01"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="627"
+      height="411" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="guidetask.gap"
+      resourceLink="asset.guidetask.gap,asset.guidetask.gap"
+      imageRectString="0|8|0|213|13,0|8|204|200|13"
+      x="194"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="guidetask.bg.scaleX"
+      resourceLink="asset.guidetask.taskBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="guidetask.taskBg"
+      resourceLink="asset.guidetask.taskBg,guidetask.bg.scaleX"
+      imageRectString="0|211|0|403|13,422|-211|0|403|13"
+      x="201"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="guidetask.selectedHightline.image"
+      parentStyle="core.TitleBack_Style888"
+      width="422"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="guidetask.itemline"
+      resourceLink="asset.guidetask.line,asset.guidetask.line"
+      imageRectString="0|211|0|1|13,200|211|0|1|13"
+      y="40"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="guidetask.taskTypeIcon"
+      resourceLink="asset.guidetask.icon01,asset.guidetask.icon02,asset.guidetask.icon03,asset.guidetask.icon04,asset.guidetask.icon05,asset.guidetask.icon06,asset.guidetask.icon07,asset.guidetask.icon08,asset.guidetask.icon09,asset.guidetask.icon10,asset.guidetask.icon11,asset.guidetask.icon12,asset.guidetask.icon13,asset.guidetask.icon14,asset.guidetask.icon15,asset.guidetask.icon16,asset.guidetask.icon17,asset.guidetask.icon18,asset.guidetask.icon19,asset.guidetask.icon20,asset.guidetask.icon21,asset.guidetask.icon22,asset.guidetask.icon23,asset.guidetask.icon24,asset.guidetask.icon25,asset.guidetask.icon26,asset.guidetask.icon27"
+      x="17"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.taskDescTxt"
+      textFormatStyle="guidetask.taskDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="190"
+      height="20"
+      x="55"
+      y="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.openLvTxt"
+      textFormatStyle="guidetask.openLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="60"
+      height="20"
+      x="249"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.taskFlagTxt"
+      textFormatStyle="guidetask.taskNotComplete_t,guidetask.taskComplete_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="70"
+      height="40"
+      x="352"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="guidetask.taskItemVBox"
+      width="420"
+      spacing="0"
+      x="201"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="guidetask.rewardHBox"
+      height="45"
+      spacing="18"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="guidetask.rewardButton"
+      backStyle="asset.guidetask.rewardBtnBg"
+      iconStyle="asset.guidetask.rewardTxt"
+      iconInnerRectString="35,87,10,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="247"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="guidetask.levelVBox"
+      width="420"
+      spacing="0"
+      x="0"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="guidetask.leveltitlebg.scaleX"
+      resourceLink="asset.guidetask.leveltitleBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="guidetask.leveltitleBGImage"
+      resourceLink="asset.guidetask.leveltitleBg,guidetask.leveltitlebg.scaleX"
+      imageRectString="0|211|0|46|13,422|-211|0|46|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="guidetask.purposeBtn"
+      backStyle="guidetask.purposeBtnBg"
+      iconStyle="asset.guidetask.purposeTxt"
+      iconInnerRectString="13,65,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="282" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.levelDescTxt"
+      parentStyle="guidetask.taskDescTxt"
+      x="19"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.recommendTxt"
+      textFormatStyle="guidetask.recommendTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="70"
+      height="26" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="guidetask.recommendTxt_2"
+      textFieldStyle="guidetask.recommendTxt"
+      colors="0xffff79,0xe2a000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="70"
+      height="26"
+      x="216"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="guidetask.gotoBtn"
+      backStyle="asset.guidetask.gotoBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="325"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="guidetask.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="577"
+      y="-46" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="guidetask.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="guidetask.GuideTaskFrame.helpFrame.helpHtmlTxt"
+      titleText="guidetask.GuideTaskFrame.helpFrame.titleText"
+      textWidth="263" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guidetask.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="38"
+      x="4"
+      y="23" />
+  </components>
+</style>

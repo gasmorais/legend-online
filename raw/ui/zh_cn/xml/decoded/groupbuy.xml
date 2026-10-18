@@ -1,0 +1,502 @@
+<style
+  name="groupbuy"
+  source="ui/zh_cn/swf/groupbuy.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.oldprice_t"
+      args="Arial,14,0x999999,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.alerttxt"
+      args="Arial,14,0xFFefbd,,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.listitemname_t1"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.listitemname_t2"
+      args="Arial,12,0x52e734,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.listitemname_t3"
+      args="Arial,12,0x32a2f8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.listitemname_t4"
+      args="Arial,12,0xa838f7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.listitemname_t5"
+      args="Arial,12,0xff8000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.t6"
+      args="Arial,14,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.t7"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.txt_t"
+      args="Arial,14,0xffefbd,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="groupbuy.tipsGooddes_t"
+      args="Arial,12,0xffffff"
+      leading="5"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.groupbuy.tuangouicon"
+      x="-1"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.groupbuy.zijianqu"
+      x="43"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.groupbuy.zijiansmall" />
+    <bitmapData
+      resourceLink="asset.groupbuy.zijianbig"
+      y="159" />
+    <bitmapData
+      resourceLink="asset.groupbuy.jiesuan" />
+    <bitmapData
+      resourceLink="asset.groupbuy.rengou" />
+    <bitmapData
+      resourceLink="asset.groupbuy.zizuanshisbig"
+      x="23"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.groupbuy.zizuanshismall" />
+    <bitmapData
+      resourceLink="asset.groupbuy.num1" />
+    <bitmapData
+      resourceLink="asset.groupbuy.num2" />
+    <bitmapData
+      resourceLink="asset.groupbuy.num3" />
+    <bitmapData
+      resourceLink="asset.groupbuy.num4" />
+    <bitmapData
+      resourceLink="asset.groupbuy.goodsbg" />
+    <bitmapData
+      resourceLink="asset.groupbuy.zuanshibig" />
+    <bitmapData
+      resourceLink="asset.groupbuy.groupbuyitembgOver" />
+    <bitmapData
+      resourceLink="asset.groupbuy.xiantiao" />
+    <bitmapData
+      resourceLink="asset.groupbuy.fanhuan" />
+    <bitmapData
+      resourceLink="asset.groupbuy.miandian" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.groupbuy.bg"
+      stylename="groupbuy.bgMC"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.groupbuy.progressBar"
+      stylename="groupbuy.progressbar"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="groupbuy.BaseItemView"
+      iconStyle="firstpay.ItemIcon"
+      textStyle="firstpay.BaseItemText"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30"
+      x="54"
+      y="111" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="groupbuy.jingbaojiaC"
+      x="268"
+      y="123" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="groupbuy.quanfubuyC"
+      x="275"
+      y="162" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="groupbuy.jianzuanC"
+      x="60"
+      y="-2" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="groupbuy.dazheC"
+      x="410"
+      y="109" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="groupbuy.fanhuizuanshiC"
+      x="152"
+      y="80" />
+  </customDisplay>
+  <components>
+    <component
+      classname="funny.groupbuy.GroupBuyView"
+      stylename="groupbuy.groupBuyView"
+      x="200"
+      y="3" />
+    <component
+      classname="funny.view.FunnyLeftButton"
+      stylename="groupbuy.btnGroupbuy"
+      parentStyle="funnyFrame.leftSelectedBtn"
+      width="193"
+      height="55"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="groupbuy.btnRengou"
+      backStyle="asset.groupbuy.choujiangBg"
+      iconStyle="asset.groupbuy.btnRengou"
+      x="167"
+      y="300"
+      width="199"
+      height="73"
+      iconInnerRectString="29,142,20,35,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.buyNumtxtfieldstyle"
+      textFormatStyle="groupbuy.t6"
+      autoSize="left"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="groupbuy.mineYirengouNum"
+      textFieldStyle="groupbuy.buyNumtxtfieldstyle"
+      colors="0xffff49,0xffae00,0xffd624"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="56"
+      y="313"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="groupbuy.mineGonghuafeiNum"
+      parentStyle="groupbuy.mineYirengouNum"
+      x="66"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.rengouovertxt"
+      textFormatStyle="funnyRightView.remainTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="47"
+      y="387"
+      width="406"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.oldpricetxt"
+      textFormatStyle="groupbuy.oldprice_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="130"
+      y="102"
+      height="25"
+      width="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.listItem.name1"
+      textFormatStyle="groupbuy.listitemname_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="172"
+      height="20"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.listItem.name2"
+      textFormatStyle="groupbuy.listitemname_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="172"
+      height="20"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.listItem.name3"
+      textFormatStyle="groupbuy.listitemname_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="172"
+      height="20"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.listItem.name4"
+      textFormatStyle="groupbuy.listitemname_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="172"
+      height="20"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.listItem.name5"
+      textFormatStyle="groupbuy.listitemname_t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="192"
+      height="20"
+      x="0"
+      y="4" />
+    <component
+      classname="funny.groupbuy.GroupBuyListBar"
+      stylename="groupbuy.groupBuyListBar"
+      x="4"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="groupbuy.scrollPanel"
+      vScrollbarStyle="groupbuy.VScrollbar02"
+      vScrollbarInnerRectString="20,0,0,0,3"
+      viewportInnerRectString="0,0,0,2,5"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="2"
+      x="0"
+      y="0"
+      width="193"
+      height="174" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="groupbuy.VScrollbar02"
+      trackStyle="core.Scrollbar02_Back"
+      thumbStyle="core.Scrollbar02_Step"
+      decreaseButtonStyle="core.Scrollbar02_Up"
+      increaseButtonStyle="core.Scrollbar02_Down"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="0,0,11,11,0"
+      decreaseButtonInnerRectString="10,10,0,0,9"
+      increaseButtonInnerRectString="10,10,0,0,10"
+      orientation="0"
+      thumbMinSize="23"
+      width="18"
+      height="174" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="groupbuy.btnchoujiang"
+      backStyle="asset.groupbuy.choujiang"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      enableHtml="false"
+      iconFrameChange="true"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0"
+      height="73"
+      width="236"
+      x="148"
+      y="298" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.buyNumtxtfieldstyle2"
+      textFormatStyle="groupbuy.t7"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="groupbuy.buyNumTxt1"
+      textFieldStyle="groupbuy.buyNumtxtfieldstyle2"
+      colors="0xffff49,0xffae00,0xffd624"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="-29"
+      y="-17"
+      width="84"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="groupbuy.buyNumTxt2"
+      parentStyle="groupbuy.buyNumTxt1"
+      x="109"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="groupbuy.buyNumTxt3"
+      parentStyle="groupbuy.buyNumTxt1"
+      x="244"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="groupbuy.buyNumTxt4"
+      parentStyle="groupbuy.buyNumTxt1"
+      x="380"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.huodetxt"
+      textFormatStyle="core.AlertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="35"
+      y="7"
+      height="25"
+      width="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.txt1"
+      textFormatStyle="core.AlertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="0"
+      height="50"
+      width="370"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.txt2"
+      textFormatStyle="core.AlertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="28"
+      height="25"
+      width="160" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuy.txt3"
+      textFormatStyle="groupbuy.alerttxt"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="163"
+      y="28"
+      height="25"
+      width="131" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="groupbuy.checktips"
+      x="404"
+      y="327"
+      tipStyle="groupbuy.checktips.tips"
+      tipGapV="0"
+      height="21"
+      width="91"
+      tipGapH="0" />
+    <custom
+      classname="yishi.view.tips.goods.GroupbuyCheckTips"
+      stylename="groupbuy.checktips.tips"
+      enableHtml="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="groupbuychecktips.txt"
+      textFormatStyle="groupbuy.tipsGooddes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="36"
+      width="176"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="groupbuy.helpbtn"
+      backStyle="asset.core.HelpBtnStyle_02"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="480"
+      y="93" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="groupbuy.Alert"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="10"
+      containerY="25"
+      width="390"
+      height="192" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="groupbuy.Alert2"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="35"
+      containerY="20"
+      width="390"
+      height="163" />
+    <component
+      classname="dayguide.GroupLuckFrame"
+      stylename="dayguide.GroupLuckFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="47"
+      width="335"
+      height="545" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="groupbuy.btnJiesuan"
+      backStyle="asset.groupbuy.choujiangBg"
+      iconStyle="asset.groupbuy.btnJiesuan"
+      x="182"
+      y="305"
+      width="184"
+      height="63"
+      iconInnerRectString="30,141,20,35,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="groupbuy.btnZhuanpan"
+      iconStyle="asset.groupbuy.choujiang"
+      backStyle="asset.funny.rechargeBack"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="core.HtmlMultipleLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipWidth="300"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false"
+      iconInnerRectString="26,114,7,32,13"
+      height="42"
+      width="163"
+      x="359"
+      y="315" />
+  </components>
+</style>

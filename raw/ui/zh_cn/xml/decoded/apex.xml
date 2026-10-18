@@ -1,0 +1,2022 @@
+<style
+  name="apex"
+  source="ui/zh_cn/swf/apex.swf">
+  <sets>
+    <!-- 主界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="apex.hall.linkAwardTxt_t"
+      args="Arial,12,0x00E1F9,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="apex.hall.nickNameTxt_t"
+      args="Arial,16,0x00E1F9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="apex.hall.playerServerNameTxt_t"
+      args="Arial,16,0x00E1F9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtHallTimeStart_t"
+      args="Arial,12,0xF89337,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtHallTimeGuess_t"
+      args="Arial,12,0xF89337,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTime_t"
+      args="Arial,12,0xd2a353,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtCondition_t"
+      args="Arial,12,0xd2a353,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtCost_t"
+      args="Arial,12,0xd2a353,,,,,,left"
+      leading="0" />
+    <!-- 竞猜界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessLastBig_t"
+      args="Arial,16,0xc0b69b,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessStr1_t"
+      args="Arial,14,0xc0b69b,true,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessStr2_t"
+      args="Arial,12,0xF93A3F,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessStr3_t"
+      args="Arial,14,0xc0b69b,true,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessPlayerName_t"
+      args="Arial,14,0xc5a700,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessTimeCountDown_t"
+      args="Arial,12,0x56f539,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessMyCount_t"
+      args="Arial,14,0xFEDA7F,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessCount_t"
+      args="Arial,16,0xc0b69b,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessSsuccessGet_t"
+      args="Arial,12,0xb2a68c,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessFailGet_t"
+      args="Arial,12,0xb2a68c,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessBtnAward_t"
+      args="Arial,12,0x1fdcef,,,true,,,left"
+      leading="0" />
+    <!-- 竞猜界面列表 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemStr1_t"
+      args="Arial,12,0xc4bca7,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemStr2_t"
+      args="Arial,12,0xc4bca7,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemStr3_t"
+      args="Arial,12,0xc4bca7,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemRank_t"
+      args="Arial,12,0xf8da7a,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemFightPower_t"
+      args="Arial,12,0xf8da7a,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemStrArea_t"
+      args="Arial,12,0xfdf8f2,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessItemPlayerName_t"
+      args="Arial,14,0xf8da7a,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessTurn_t"
+      args="Arial,16,0xc0b69b,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessRank_t"
+      args="Arial,16,0xc0b69b,true,,,,,left"
+      leading="0" />
+    <!-- 竞猜确认界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessDetailInput_t"
+      args="Arial,14,0xcab796,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtGuessDetailHint_t"
+      args="Arial,12,0xf00a00,,,,,,left"
+      leading="10" />
+    <!-- 排行榜 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankUpdateTime_t"
+      args="Arial,12,0xc3903d,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankOver_t"
+      args="Arial,12,0xc3903d,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankMyRank_t"
+      args="Arial,16,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankMyScore_t"
+      args="Arial,16,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankPageText_t"
+      args="Arial,16,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankStr1_t"
+      args="Arial,12,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankStr2_t"
+      args="Arial,12,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankStr3_t"
+      args="Arial,12,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankStr4_t"
+      args="Arial,12,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <!-- 排行榜列表项 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankItemRank_t"
+      args="Arial,16,0xd8cfa4,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankItemName_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankItemFP_t"
+      args="Arial,16,0xd8cfa4,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtRankItemScore_t"
+      args="Arial,16,0xd8cfa4,,,,,,center"
+      leading="0" />
+    <!-- 奖品列表界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardRank_t"
+      args="Arial,12,0xc0b69b,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardContent_t"
+      args="Arial,12,0xbc28ff,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardContent2_t"
+      args="Arial,12,0xd4b72b,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.awardNameTxt_t"
+      args="Arial,12,0xFF861F,,,,,,center"
+      leading="0" />
+    <!-- 获奖名单 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardListItemStr1_t"
+      args="Arial,14,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardListItemStr2_t"
+      args="Arial,14,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardListItemStr3_t"
+      args="Arial,14,0xc4bca7,true,,,,,left"
+      leading="0" />
+    <!-- 获奖名单单项 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardListItemPlayerName_t"
+      args="Arial,14,0xc4bca7,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardListItemRank_t"
+      args="Arial,14,0xc4bca7,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtAwardListItemArea_t"
+      args="Arial,14,0xc4bca7,,,,,,left"
+      leading="0" />
+    <!-- 战报 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtReportRank_t"
+      args="Arial,16,0xf5f100,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtReportTurn_t"
+      args="Arial,16,0xf5f100,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtReportAward_t"
+      args="Arial,14,0xff9104,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtReportState_t"
+      args="Arial,14,0xff9104,,,,,,left"
+      leading="0" />
+    <!--组队界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamView1_t"
+      args="Arial,14,0xd8cfbe,false,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamViewInput_t"
+      args="Arial,14,0x5d5a55,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="apex.team.refreshTimeCountTxt_t"
+      args="Arial,16,0xff0000,true,,,,,center" />
+    <!--队伍列表项 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamItemMyteam_t"
+      args="Arial,12,0xf0d89c,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamItemNo_t"
+      args="Arial,16,0xffe8c4,false,,,,,center"
+      leading="0" />
+    <!--队伍人物卡牌 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamPlayerItemName_t"
+      args="Arial,12,0xf0d89c,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamPlayerItemConsortia_t"
+      args="Arial,12,0xf0d89c,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamPlayerItemLv_t"
+      args="Arial,12,0xf0d89c,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apex.txtTeamPlayerItemFP_t"
+      args="Arial,14,0xffe08d,false,,,,,left"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <!-- 房间界面 -->
+    <bitmapData
+      resourceLink="asset.apex.bg0"
+      x="5"
+      y="-6" />
+    <bitmapData
+      resourceLink="asset.apex.PleaseAwaitImg"
+      x="60"
+      y="-3" />
+    <!-- 竞猜界面 -->
+    <bitmapData
+      resourceLink="asset.apex.str.awardpool"
+      x="366"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.apex.str.lastAward"
+      x="401"
+      y="124" />
+    <bitmapData
+      resourceLink="asset.apex.guess.str2"
+      x="259"
+      y="169" />
+    <bitmapData
+      resourceLink="asset.apex.bg2"
+      x="236"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.apex.guess.num" />
+    <bitmapData
+      resourceLink="asset.apex.guess.str4"
+      x="490"
+      y="360" />
+    <!-- 竞猜界面列表 -->
+    <bitmapData
+      resourceLink="asset.apex.kuang"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.apex.fplight"
+      x="79"
+      y="63" />
+    <!-- 竞猜确认界面 -->
+    <bitmapData
+      resourceLink="asset.apex.guess.str3"
+      x="100"
+      y="68" />
+    <bitmapData
+      resourceLink="asset.apex.guess.bg2"
+      x="32"
+      y="47" />
+    <!-- 排行榜 -->
+    <bitmapData
+      resourceLink="asset.apex.str.myScore"
+      x="352"
+      y="435" />
+    <bitmapData
+      resourceLink="asset.apex.str.myrank2"
+      x="38"
+      y="433" />
+    <bitmapData
+      resourceLink="asset.apex.rank.str2"
+      x="280"
+      y="432" />
+    <bitmapData
+      resourceLink="asset.apex.rank.bg"
+      x="32"
+      y="68" />
+    <!-- 奖品列表界面 -->
+    <bitmapData
+      resourceLink="asset.apex.str.awardList"
+      x="202"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.apex.str.1th"
+      x="60"
+      y="105" />
+    <bitmapData
+      resourceLink="asset.apex.str.2th"
+      x="59"
+      y="179" />
+    <bitmapData
+      resourceLink="asset.apex.str.3th"
+      x="57"
+      y="252" />
+    <bitmapData
+      resourceLink="asset.apex.award.bg"
+      x="7"
+      y="-12" />
+    <!-- 获奖名单 -->
+    <bitmapData
+      resourceLink="asset.apex.awardList.bg"
+      x="30"
+      y="45" />
+    <!-- 获奖名单单项 -->
+    <bitmapData
+      resourceLink="asset.apex.award.line"
+      x="-27"
+      y="19" />
+    <!-- 战报 -->
+    <bitmapData
+      resourceLink="asset.apex.report.img1"
+      x="73"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.apex.report.img2"
+      x="253"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.apex.report.str1"
+      x="40"
+      y="42" />
+    <bitmapData
+      resourceLink="asset.apex.report.str2"
+      x="40"
+      y="109" />
+    <bitmapData
+      resourceLink="asset.apex.report.str3"
+      x="41"
+      y="164" />
+    <bitmapData
+      resourceLink="asset.apex.report.str4"
+      x="39"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.apex.report.str5"
+      x="121"
+      y="42" />
+    <bitmapData
+      resourceLink="asset.apex.report.str6"
+      x="311"
+      y="76" />
+    <bitmapData
+      resourceLink="asset.apex.report.title"
+      x="119"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.apex.report.bg"
+      x="-17"
+      y="17" />
+    <!--组队界面 -->
+    <bitmapData
+      resourceLink="asset.apex.team.bg"
+      x="44"
+      y="71" />
+    <!--队伍列表项 -->
+    <bitmapData
+      resourceLink="asset.apex.team.bg2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.apex.team.bg1"
+      x="1"
+      y="0" />
+    <!--队伍人物卡牌 -->
+    <bitmapData
+      resourceLink="asset.apex.team.itemBg"
+      x="0"
+      y="1" />
+    <bitmapData
+      resourceLink="asset.apex.team.img1"
+      x="5"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.apex.team.flag"
+      x="0"
+      y="79" />
+    <bitmapData
+      resourceLink="asset.apex.team.img2"
+      x="5"
+      y="161" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 房间界面 -->
+    <custom
+      classname="apex.ApexRoomView"
+      stylename="apex.ApexRoomView" />
+    <!-- 奖品列表界面 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="apex.awardIcon"
+      iconStyle="apex.awardIconView"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="44"
+      profileHeight="44"
+      showProfile="true"
+      x="20"
+      y="41" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="apex.awardIconView"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="27"
+      loadingY="27"
+      x="1"
+      y="1" />
+    <!--组队界面 -->
+    <custom
+      stylename="apex.team.teamContainer"
+      classname="flash.display.Sprite"
+      y="10" />
+    <!--队伍人物卡牌 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="aped.apexTeamPlayer.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      iconWidth="100"
+      iconHeight="100"
+      x="7"
+      y="7" />
+  </customDisplay>
+  <components>
+    <!-- 主界面 -->
+    <component
+      stylename="apex.ApexHallFrame"
+      classname="apex.ApexHallFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="776"
+      height="572"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,10,45,29,14"
+      moveInnerRectString="0,80,10,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="apex.hall.linkAward"
+      textStyle="apex.hall.linkAwardTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,13,-2,13"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="30"
+      height="20"
+      x="49"
+      y="506" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="apex.hall.linkRank"
+      parentStyle="apex.hall.linkAward"
+      width="30"
+      height="20"
+      x="152"
+      y="506" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="apex.hall.linkAwardTxt"
+      textFormatStyle="apex.hall.linkAwardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="apex.defaultAvatarImg"
+      resourceLink="asset.apex.shade.man1,asset.apex.shade.women1"
+      scaleX="1"
+      scaleY="1"
+      x="45"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="apex.hall.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="705"
+      y="47" />
+    <component
+      classname="apex.ApexHelpFrame"
+      stylename="apex.hall.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="apex.help.hall.content"
+      titleText="apex.help.hall"
+      textWidth="600"
+      isOpenScorll="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="apex.hall.nickNameTxt"
+      textFormatStyle="apex.hall.nickNameTxt_t"
+      autoSize="none"
+      width="127"
+      height="24"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.apex.hall.nickname.gradient"
+      autoSize="none"
+      width="142"
+      textFieldStyle="apex.hall.nickNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="59"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="apex.hall.playerServerNameTxt"
+      textFormatStyle="apex.hall.playerServerNameTxt_t"
+      autoSize="none"
+      width="127"
+      height="24"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="apex.hall.playerServerNameTxt.gradient"
+      autoSize="none"
+      width="142"
+      textFieldStyle="apex.hall.playerServerNameTxt"
+      colors="0xE1BF3A,0xCF7E2D"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="59"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnHallFight"
+      backStyle="asset.apex.btn.1"
+      iconStyle="asset.apex.str.challenge"
+      iconInnerRectString="54,72,15,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="292"
+      y="476" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnHallGuess"
+      backStyle="asset.apex.btn.1"
+      iconStyle="asset.apex.str.guess"
+      iconInnerRectString="54,71,15,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="532"
+      y="476" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtHallTimeStart"
+      textFormatStyle="ui.apex.txtHallTimeStart_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="293"
+      height="20"
+      x="451"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtHallTimeGuess"
+      textFormatStyle="ui.apex.txtHallTimeGuess_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="293"
+      height="20"
+      x="451"
+      y="448" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apex.mainView2"
+      resourceLink="asset.apex.str.guessTime,asset.apex.str.actTime,asset.apex.str.title"
+      imageRectString="0|124|435|20|13,0|115|407|17|13,15|138|5|41|13"
+      x="313"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apex.mainView1"
+      resourceLink="asset.apex.str.title,asset.apex.str.shijian,asset.apex.str.feiyong,asset.apex.str.tiaojian"
+      imageRectString="86|138|5|41|13,0|140|401|21|13,11|128|447|20|13,-22|160|421|20|13"
+      x="242"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTime"
+      textFormatStyle="ui.apex.txtTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="406"
+      height="20"
+      x="387"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtCondition"
+      textFormatStyle="ui.apex.txtCondition_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="341"
+      height="35"
+      x="387"
+      y="429"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtCost"
+      textFormatStyle="ui.apex.txtCost_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="406"
+      height="20"
+      x="387"
+      y="458" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.apex.btnShop"
+      backStyle="asset.apex.btn.shop"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="72"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnTeamIn"
+      backStyle="asset.apex.btn.1"
+      iconStyle="ui.apex.btnTeamIn.icon"
+      iconInnerRectString="31,117,15,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="568"
+      y="479" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.btnTeamIn.icon"
+      resourceLink="asset.apex.str.findTeam,asset.apex.str.myTeam"
+      x="25"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.signstate"
+      resourceLink="asset.apex.state.notSign,asset.apex.state.signed"
+      x="583"
+      y="454" />
+    <!-- 竞猜界面 -->
+    <component
+      stylename="apex.guess.ApexGuessFrame"
+      classname="apex.guess.ApexGuessFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="776"
+      height="572"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,40,10,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="apex.guess.framebg"
+      resourceLink="core.FrameBackgoundBase2,core.describeBackground_style25"
+      imageRectString="-7|820|0|490|13,25|300|50|417|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="apex.guess.img1"
+      parentStyle="core.describeBackground_style09"
+      x="19"
+      y="45"
+      width="765"
+      height="430" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="apex.guess.linkAwardList"
+      textStyle="ui.apex.txtGuessBtnAward"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,13,-2,13"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="83"
+      height="20"
+      x="608"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.apex.txtGuessTurn.gradient"
+      autoSize="none"
+      width="162"
+      textFieldStyle="ui.apex.txtGuessTurn"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="406"
+      y="168" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.apex.txtGuessRank.gradient"
+      autoSize="none"
+      width="142"
+      textFieldStyle="ui.apex.txtGuessRank"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="678"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessLastBig"
+      textFormatStyle="ui.apex.txtGuessLastBig_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="83"
+      height="20"
+      x="509"
+      y="123" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessStr1"
+      textFormatStyle="ui.apex.txtGuessStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="40"
+      x="377"
+      y="223"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessStr2"
+      textFormatStyle="ui.apex.txtGuessStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="22"
+      x="468"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessStr2_2"
+      textFormatStyle="ui.apex.txtGuessStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="40"
+      multiline="true"
+      wordWrap="true"
+      x="386"
+      y="270" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessStr3"
+      textFormatStyle="ui.apex.txtGuessStr3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="199"
+      height="20"
+      x="328"
+      y="319" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessPlayerName"
+      textFormatStyle="ui.apex.txtGuessPlayerName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="199"
+      height="20"
+      x="528"
+      y="319" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessTimeCountDown"
+      textFormatStyle="ui.apex.txtGuessTimeCountDown_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="498"
+      height="22"
+      x="267"
+      y="419" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessMyCount"
+      textFormatStyle="ui.apex.txtGuessMyCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="498"
+      height="22"
+      x="267"
+      y="396" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessCount"
+      textFormatStyle="ui.apex.txtGuessCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="77"
+      height="20"
+      x="496"
+      y="231"
+      type="input"
+      restrict="0-9" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnGuess"
+      backStyle="asset.apex.btn.2"
+      iconStyle="asset.apex.guess.str1"
+      iconInnerRectString="32,94,12,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="442"
+      y="347" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnGuessed"
+      backStyle="asset.apex.btn.2"
+      iconStyle="asset.apex.guess.str4"
+      iconInnerRectString="43,71,12,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="442"
+      y="347" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessSsuccessGet"
+      textFormatStyle="ui.apex.txtGuessSsuccessGet_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="22"
+      x="296"
+      y="441" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessFailGet"
+      textFormatStyle="ui.apex.txtGuessFailGet_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="362"
+      height="22"
+      x="534"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessBtnAward"
+      textFormatStyle="ui.apex.txtGuessBtnAward_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="83"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.imgGuessTeam"
+      resourceLink="asset.apex.team.bronze,asset.apex.team.silver,asset.apex.team.gold,asset.apex.team.plan,asset.apex.team.diamond,asset.apex.team.master"
+      x="552"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessTurn"
+      textFormatStyle="ui.apex.txtGuessTurn_t"
+      autoSize="none"
+      width="160"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessRank"
+      textFormatStyle="ui.apex.txtGuessRank_t"
+      autoSize="none"
+      width="116"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apex.guessMoney1"
+      resourceLink="asset.apex.money"
+      imageRectString="0|0|19"
+      x="579"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apex.guessMoney2"
+      resourceLink="asset.apex.money"
+      imageRectString="0|0|19"
+      x="505"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apex.guessMoney3"
+      resourceLink="asset.apex.money"
+      imageRectString="0|0|19"
+      x="690"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apex.guessMoney4"
+      resourceLink="asset.apex.money"
+      imageRectString="0|0|19"
+      x="580"
+      y="227" />
+    <!-- 竞猜界面列表 -->
+    <component
+      stylename="apex.guess.ApexGuessListItem"
+      classname="apex.guess.ApexGuessListItem" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="apex.vbox.guess.vbox"
+      x="38"
+      y="32"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="apex.scrollPanel.guess"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-8,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="221"
+      height="422"
+      x="10"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemStr1"
+      textFormatStyle="ui.apex.txtGuessItemStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="37"
+      x="22"
+      y="58"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemStr2"
+      textFormatStyle="ui.apex.txtGuessItemStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="22"
+      x="22"
+      y="89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemStr3"
+      textFormatStyle="ui.apex.txtGuessItemStr3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="88"
+      height="22"
+      x="22"
+      y="108" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemRank"
+      textFormatStyle="ui.apex.txtGuessItemRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="22"
+      x="103"
+      y="89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemFightPower"
+      textFormatStyle="ui.apex.txtGuessItemFightPower_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="93"
+      height="22"
+      x="88"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemStrArea"
+      textFormatStyle="ui.apex.txtGuessItemStrArea_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="105"
+      height="22"
+      x="104"
+      y="108" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnGuessSelect"
+      backStyle="asset.apex.btn.select"
+      iconStyle="asset.apex.str.select"
+      iconInnerRectString="23,44,6,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="105"
+      y="133" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.btnGuessItemPlayer"
+      resourceLink="asset.apex.guess.btn1,asset.apex.guess.btn2"
+      x="9"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessItemPlayerName"
+      textFormatStyle="ui.apex.txtGuessItemPlayerName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="178"
+      height="22"
+      x="17"
+      y="26" />
+    <!-- 竞猜确认界面 -->
+    <component
+      stylename="apex.guess.ApexGuessDetailFrame"
+      classname="apex.guess.ApexGuessDetailFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="473"
+      height="256"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,60,10,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="apex.guess.detail.framebg"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-2|480|0|250|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnGuessDetail"
+      backStyle="asset.apex.guess.btnok"
+      iconStyle="asset.apex.guess.ok"
+      iconInnerRectString="30,59,10,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="177"
+      y="169" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessDetailInput"
+      textFormatStyle="ui.apex.txtGuessDetailInput_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="18"
+      x="237"
+      y="73"
+      type="input"
+      restrict="0-9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtGuessDetailHint"
+      textFormatStyle="ui.apex.txtGuessDetailHint_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="51"
+      x="59"
+      y="120"
+      multiline="true"
+      wordWrap="true" />
+    <!-- 奖品列表界面 -->
+    <component
+      stylename="apex.award.ApexAwardFrame"
+      classname="apex.award.ApexAwardFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="608"
+      height="527"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-12,60,33,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="apex.hbox.award.hbox"
+      x="37"
+      y="48"
+      spacing="-11" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.award.textBt1"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.master2"
+      unselectedIconStyle="asset.apex.master1"
+      selectedIconInnerRectString="25,56,10,17,13"
+      unselectedIconInnerRectString="24,57,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.award.textBt2"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.diamond2"
+      unselectedIconStyle="asset.apex.diamond1"
+      selectedIconInnerRectString="11,79,9,18,13"
+      unselectedIconInnerRectString="11,80,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.award.textBt3"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.plan2"
+      unselectedIconStyle="asset.apex.plan1"
+      selectedIconInnerRectString="20,59,9,19,13"
+      unselectedIconInnerRectString="19,59,8,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.award.textBt4"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.gold2"
+      unselectedIconStyle="asset.apex.gold1"
+      selectedIconInnerRectString="30,42,9,17,13"
+      unselectedIconInnerRectString="30,44,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.award.textBt5"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.silver2"
+      unselectedIconStyle="asset.apex.silver1"
+      selectedIconInnerRectString="30,45,9,17,13"
+      unselectedIconInnerRectString="30,47,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.award.textBt6"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.bronze2"
+      unselectedIconStyle="asset.apex.bronze1"
+      selectedIconInnerRectString="25,58,10,17,13"
+      unselectedIconInnerRectString="24,59,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.awardNameTxt"
+      textFormatStyle="ui.apex.awardNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="135"
+      height="20"
+      x="-18"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="apex.hbox.award.grade.hbox1"
+      x="150"
+      y="52"
+      spacing="-15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="apex.hbox.award.grade.hbox2"
+      x="150"
+      y="129"
+      spacing="-15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="apex.hbox.award.grade.hbox3"
+      x="150"
+      y="205"
+      spacing="-15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardRank"
+      textFormatStyle="ui.apex.txtAwardRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="98"
+      height="118"
+      x="62"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardContent"
+      textFormatStyle="ui.apex.txtAwardContent_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="412"
+      height="118"
+      x="159"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardContent2"
+      textFormatStyle="ui.apex.txtAwardContent2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="516"
+      height="98"
+      x="47"
+      y="377"
+      wordWrap="true" />
+    <!-- 排行榜 -->
+    <component
+      stylename="apex.rank.ApexRankFrame"
+      classname="apex.rank.ApexRankFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="584"
+      height="484"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,60,10,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="apex.guess.rank.framebg"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-2|600|0|480|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="apex.rank.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="341"
+      y="377" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="apex.rank.btnLast"
+      parentStyle="core.LastPageBtn"
+      x="271"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="apex.rank.btnNext"
+      parentStyle="core.NextPageBtn"
+      x="409"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="apex.rank.textBg3"
+      resourceLink="asset.apex.TxtBgLeft,asset.apex.TxtBgMiddle,asset.apex.TxtBgRight"
+      x="449"
+      y="429"
+      width="108"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="apex.hbox.rank.hbox"
+      x="32"
+      y="42"
+      spacing="-11" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.rank.textBt1"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.master2"
+      unselectedIconStyle="asset.apex.master1"
+      selectedIconInnerRectString="25,56,10,17,13"
+      unselectedIconInnerRectString="24,57,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.rank.textBt2"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.diamond2"
+      unselectedIconStyle="asset.apex.diamond1"
+      selectedIconInnerRectString="11,79,9,18,13"
+      unselectedIconInnerRectString="11,80,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.rank.textBt3"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.plan2"
+      unselectedIconStyle="asset.apex.plan1"
+      selectedIconInnerRectString="25,59,9,19,13"
+      unselectedIconInnerRectString="24,59,8,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.rank.textBt4"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.gold2"
+      unselectedIconStyle="asset.apex.gold1"
+      selectedIconInnerRectString="30,42,9,17,13"
+      unselectedIconInnerRectString="30,44,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.rank.textBt5"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.silver2"
+      unselectedIconStyle="asset.apex.silver1"
+      selectedIconInnerRectString="30,45,9,17,13"
+      unselectedIconInnerRectString="30,47,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.apex.rank.textBt6"
+      selectedStyle="asset.apex.tab2"
+      unSelectedStyle="asset.apex.tab1"
+      selectedIconStyle="asset.apex.bronze2"
+      unselectedIconStyle="asset.apex.bronze1"
+      selectedIconInnerRectString="25,58,10,17,13"
+      unselectedIconInnerRectString="24,59,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="apex.vbox.rank.vbox"
+      x="55"
+      y="105"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankUpdateTime"
+      textFormatStyle="ui.apex.txtRankUpdateTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="269"
+      height="18"
+      x="41"
+      y="367" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankOver"
+      textFormatStyle="ui.apex.txtRankOver_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="214"
+      height="18"
+      x="41"
+      y="394" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankMyRank"
+      textFormatStyle="ui.apex.txtRankMyRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="25"
+      x="248"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankMyScore"
+      textFormatStyle="ui.apex.txtRankMyScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="83"
+      height="20"
+      x="462"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankPageText"
+      textFormatStyle="ui.apex.txtRankPageText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="58"
+      height="20"
+      x="346"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankStr1"
+      textFormatStyle="ui.apex.txtRankStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="28"
+      x="38"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankStr2"
+      textFormatStyle="ui.apex.txtRankStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="28"
+      x="219"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankStr3"
+      textFormatStyle="ui.apex.txtRankStr3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="138"
+      height="22"
+      x="373"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankStr4"
+      textFormatStyle="ui.apex.txtRankStr4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="82"
+      height="22"
+      x="492"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.imgRankGroup"
+      resourceLink="asset.apex.team.bronze,asset.apex.team.silver,asset.apex.team.gold,asset.apex.team.plan,asset.apex.team.diamond,asset.apex.team.master"
+      x="128"
+      y="433" />
+    <!-- 排行榜列表项 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankItemRank"
+      textFormatStyle="ui.apex.txtRankItemRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="38"
+      height="20"
+      x="2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankItemName"
+      textFormatStyle="ui.apex.txtRankItemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="223"
+      height="20"
+      x="51"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.imgRankItemStatus"
+      resourceLink="asset.apex.arrow2,asset.apex.arrow1"
+      x="272"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankItemFP"
+      textFormatStyle="ui.apex.txtRankItemFP_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="123"
+      height="20"
+      x="309"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtRankItemScore"
+      textFormatStyle="ui.apex.txtRankItemScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="58"
+      height="20"
+      x="438"
+      y="5" />
+    <!-- 获奖名单 -->
+    <component
+      stylename="apex.award.ApexAwardListFrame"
+      classname="apex.award.ApexAwardListFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="376"
+      height="389"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-20,67,13,29,14"
+      moveInnerRectString="0,30,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="0,16,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="apex.award.ApexAwardListFrame.framebg"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-2|375|0|380|13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="apex.vbox.award.vbox"
+      x="0"
+      y="0"
+      spacing="9" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="apex.scrollPanel.award"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-8,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="283"
+      height="281"
+      x="46"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardListItemStr1"
+      textFormatStyle="ui.apex.txtAwardListItemStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="18"
+      x="51"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardListItemStr2"
+      textFormatStyle="ui.apex.txtAwardListItemStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="18"
+      x="134"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardListItemStr3"
+      textFormatStyle="ui.apex.txtAwardListItemStr3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="22"
+      x="231"
+      y="53" />
+    <!-- 获奖名单单项 -->
+    <component
+      stylename="apex.award.ApexAwardListItem"
+      classname="apex.award.ApexAwardListItem" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardListItemPlayerName"
+      textFormatStyle="ui.apex.txtAwardListItemPlayerName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="111"
+      height="18"
+      x="61"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardListItemRank"
+      textFormatStyle="ui.apex.txtAwardListItemRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="38"
+      height="18"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtAwardListItemArea"
+      textFormatStyle="ui.apex.txtAwardListItemArea_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="88"
+      height="18"
+      x="176"
+      y="2" />
+    <!-- 战报 -->
+    <component
+      stylename="apex.report.ApexReportView"
+      classname="apex.report.ApexReportView" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.apexRankBtnOK"
+      backStyle="asset.apex.report.btn"
+      iconStyle="asset.apex.report.ok"
+      iconInnerRectString="23,45,7,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="165"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.imgReportGroup"
+      resourceLink="asset.apex.team.bronze,asset.apex.team.silver,asset.apex.team.gold,asset.apex.team.plan,asset.apex.team.diamond,asset.apex.team.master"
+      x="136"
+      y="77" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtReportRank"
+      textFormatStyle="ui.apex.txtReportRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="83"
+      height="20"
+      x="244"
+      y="76" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtReportAward"
+      textFormatStyle="ui.apex.txtReportAward_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="274"
+      height="45"
+      x="145"
+      y="110"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtReportState"
+      textFormatStyle="ui.apex.txtReportState_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="274"
+      height="21"
+      x="126"
+      y="166" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apex.imgReportTurn"
+      resourceLink="asset.apex.turn1,asset.apex.turn2,asset.apex.turn3,asset.apex.turn4"
+      x="178"
+      y="43" />
+    <!--组队界面 -->
+    <component
+      stylename="apex.team.ApexTeamView"
+      classname="apex.team.ApexTeamView"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="776"
+      height="572"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="-7,29,35,29,14"
+      moveInnerRectString="0,30,30,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      titleOuterRectPosString="10,35,1"
+      titleStyle="core.FrameTitleText" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="apex.team.framebg"
+      resourceLink="core.FrameBackgoundBase1"
+      imageRectString="-7|790|0|615|13"
+      x="11"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="apex.team.img1"
+      parentStyle="core.describeBackground_style09"
+      x="39"
+      y="67"
+      width="725"
+      height="535" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="apex.team.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="710 "
+      height="433"
+      x="34"
+      y="162" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="apex.team.refreshTimeCountTxt"
+      textFormatStyle="apex.team.refreshTimeCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="24"
+      x="140"
+      y="136" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnTeamUpdate"
+      backStyle="asset.apex.btn.2"
+      iconStyle="asset.apex.team.strUpdate"
+      iconInnerRectString="51,58,12,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="80"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnTeamCreate"
+      backStyle="asset.apex.btn.2"
+      iconStyle="asset.apex.team.strCreate"
+      iconInnerRectString="33,94,12,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="254"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamView1"
+      textFormatStyle="ui.apex.txtTeamView1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="83"
+      height="22"
+      x="411"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamViewInput"
+      textFormatStyle="ui.apex.txtTeamViewInput_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="121"
+      height="22"
+      type="input"
+      restrict="0-9"
+      x="508"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.apex.btnTeamFind"
+      backStyle="asset.apex.team.find"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="637"
+      y="104" />
+    <!--队伍列表项 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnTeamItemSign"
+      backStyle="asset.apex.team.btn2"
+      iconStyle="asset.apex.team.strSign"
+      iconInnerRectString="18,44,6,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="13"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnTeamItemInvite"
+      backStyle="asset.child.ChildFosterView.fosterBtnBack"
+      iconStyle="asset.apex.team.str.invite"
+      iconInnerRectString="14,36,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apex.btnTeamItemQuit"
+      backStyle="asset.child.ChildFosterView.fosterBtnBack"
+      iconStyle="asset.apex.str.quit"
+      iconInnerRectString="15,35,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="21"
+      y="106" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamItemMyteam"
+      textFormatStyle="ui.apex.txtTeamItemMyteam_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="108"
+      height="22"
+      x="0"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamItemNo"
+      textFormatStyle="ui.apex.txtTeamItemNo_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="108"
+      height="22"
+      x="2"
+      y="13" />
+    <!--队伍人物卡牌 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="apex.JobChangeBtn"
+      resourceLink="asset.resourcesBar.JobChangeBtn1,asset.resourcesBar.JobChangeBtn2,asset.resourcesBar.JobChangeBtn3,asset.resourcesBar.JobChangeBtn4"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="7"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamPlayerItemName"
+      textFormatStyle="ui.apex.txtTeamPlayerItemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="108"
+      height="22"
+      x="2"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamPlayerItemConsortia"
+      textFormatStyle="ui.apex.txtTeamPlayerItemConsortia_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="108"
+      height="22"
+      x="2"
+      y="133" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.apex.btnTeamPlayerItemClose"
+      backStyle="asset.apex.team.btnClose"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="96"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamPlayerItemLv"
+      textFormatStyle="ui.apex.txtTeamPlayerItemLv_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="22"
+      x="3"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apex.txtTeamPlayerItemFP"
+      textFormatStyle="ui.apex.txtTeamPlayerItemFP_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="97"
+      height="22"
+      x="24"
+      y="164" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.apex.btnTeamPlayerItemAdd"
+      backStyle="asset.apex.team.add"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="34"
+      y="44" />
+    <!--队伍邀请 -->
+    <component
+      classname="apex.team.ApexTeamInviteFrame"
+      stylename="apex.teamInviteFrame"
+      parentStyle="core.Frame5"
+      backStyle="apex.teamInviteFrameBg5"
+      titleOuterRectPosString="0,12,1"
+      width="306"
+      height="442" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="apex.teamInviteFrameBg5"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-18|-15|0|23|0" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="apex.team.invite.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="18,5,0,0,3"
+      viewportInnerRectString="0,22,0,0,0"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|apex.team.ApexTeamInviteItem,30,213"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="275"
+      height="240"
+      x="-21"
+      y="60"
+      hScrollProxy="0"
+      vScrollProxy="0"
+      vUnitIncrement="10" />
+  </components>
+</style>

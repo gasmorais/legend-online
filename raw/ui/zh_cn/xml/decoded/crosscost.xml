@@ -1,0 +1,602 @@
+<style
+  name="crosscost"
+  source="ui/zh_cn/swf/crosscost.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscostview.pageText_t"
+      args="Arial,16,0xfffdf4,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.title.pageTextStyle1_T2"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.rewardview.timeText_t"
+      args="Arial,12,0xf4e3a6,false,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.rewardview.contentText_t"
+      args="Arial,12,0xf4e3a6,false,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.rewardview.condition_t"
+      args="Arial,12,0x00bff8,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.DataItemTimeText_t1"
+      args="Arial,12,0xefd89b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.DataItemTimeText_t2"
+      args="Arial,12,0xca432d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.DataItemTimeText_t3"
+      args="Arial,12,0x8d8b8b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.MainFrameTipText_t"
+      args="Arial,12,0xd1b792,,,,,,left"
+      leading="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.MyTodayCostText_t"
+      args="Arial,14,0xfff0d9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="crosscost.MyTotalCount_t"
+      args="Arial,14,0xfff0d9,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.crossCostView.bg1" />
+    <bitmapData
+      resourceLink="asset.crossCostView.bg2"
+      x="4"
+      y="113"
+      scaleX="2.02" />
+    <bitmapData
+      resourceLink="asset.crossCostView.bg5" />
+    <bitmapData
+      resourceLink="asset.crossCostView.bg6" />
+    <bitmapData
+      resourceLink="asset.crossCostView.pageBg"
+      x="270"
+      y="470" />
+    <bitmapData
+      resourceLink="asset.crossCostView.currentCostBg"
+      x="35"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.crossCostView.firstCostBg"
+      x="35"
+      y="37" />
+    <bitmapData
+      resourceLink="asset.crossCostView.numberBg" />
+    <bitmapData
+      resourceLink="asset.crosscost.vipIcon"
+      x="105"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.crosscost.rewardview.conditionImage" />
+    <bitmapData
+      resourceLink="asset.rewarditem.ReceivedImg"
+      x="480"
+      y="30" />
+  </bitmaps>
+  <customDisplay></customDisplay>
+  <components>
+    <!-- 主窗体 -->
+    <component
+      classname="crosscost.CrossCostFrame"
+      stylename="crosscost.CrossCostFrame"
+      parentStyle="core.Frame1"
+      closeInnerRectString="28,10,20,28,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="17"
+      containerY="48"
+      width="805"
+      height="533" />
+    <!-- 背景图片 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="crossCostFrame.back"
+      parentStyle="core.describeBackground_style06"
+      x="5"
+      y="19"
+      width="150"
+      height="422" />
+    <!-- 左侧的VBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="crossCostFrame.leftVBox"
+      x="15"
+      y="25"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="crossCostView.hBox"
+      x="15"
+      y="80"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="crossCostView.bg5"
+      resourceLink="asset.crossCostView.bg5"
+      scaleGridString="10,10,50,50"
+      x="0"
+      y="110"
+      height="390" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="crossCostView.bg6"
+      resourceLink="asset.crossCostView.bg6"
+      scaleGridString="10,10,50,50"
+      x="614"
+      y="110"
+      height="390"
+      scaleX="-1" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="crossCostFrame.helpbtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="715"
+      y="-26" />
+    <!-- 跨服消费排行帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="crosscost.help"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="mainBar.TopToolsBar.crosscostTxt"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <!-- 跨服消费 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crossCostFrame.crossCostBtn"
+      unSelectedStyle="crosscost.UnselectBack"
+      selectedStyle="crosscost.SelectBack"
+      selectedIconStyle="asset.crosscost.crossServerRank.Text2"
+      unselectedIconStyle="asset.crosscost.crossServerRank.Text1"
+      selectedIconInnerRectString="3,123,9,29,13"
+      unselectedIconInnerRectString="3,123,9,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="80"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crossCostFrame.crossCostRewardBtn"
+      unSelectedStyle="crosscost.UnselectBack"
+      selectedStyle="crosscost.SelectBack"
+      selectedIconStyle="asset.crosscost.crossServerReward.Text2"
+      unselectedIconStyle="asset.crosscost.crossServerReward.Text1"
+      selectedIconInnerRectString="3,121,7,29,13"
+      unselectedIconInnerRectString="3,121,7,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="120"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crossCostFrame.noCrossCostRewardBtn"
+      unSelectedStyle="crosscost.UnselectBack"
+      selectedStyle="crosscost.SelectBack"
+      selectedIconStyle="asset.crosscost.singleServerReward.Text2"
+      unselectedIconStyle="asset.crosscost.singleServerReward.Text1"
+      selectedIconInnerRectString="6,117,6,30,13"
+      unselectedIconInnerRectString="6,117,6,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="160"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="crosscost.UnselectBack"
+      resourceLink="asset.crosscost.leftBtn1"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="crosscost.SelectBack"
+      resourceLink="asset.crosscost.leftBtn2"
+      y="5" />
+    <!-- 充值排行榜标题间距 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="crosscost.rightView.titileGap"
+      resourceLink="asset.crosscost.titleGap,asset.crosscost.titleGap,asset.crosscost.titleGap,asset.crosscost.titleGap"
+      imageRectString="95|1|0|32|13,265|1|0|32|13,375|1|0|32|13,495|1|0|32|13"
+      x="0"
+      y="114" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crossCostView.firstBtn"
+      unSelectedStyle="crosscostview.UnselectBack"
+      selectedStyle="crosscostview.SelectBack"
+      selectedIconStyle="asset.crosscost.firstDay.Text2"
+      unselectedIconStyle="asset.crosscost.firstDay.Text1"
+      selectedIconInnerRectString="23,48,11,19,13"
+      unselectedIconInnerRectString="23,43,13,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crossCostView.secondBtn"
+      unSelectedStyle="crosscostview.UnselectBack"
+      selectedStyle="crosscostview.SelectBack"
+      selectedIconStyle="asset.crosscost.secondDay.Text2"
+      unselectedIconStyle="asset.crosscost.secondDay.Text1"
+      selectedIconInnerRectString="25,49,11,19,13"
+      unselectedIconInnerRectString="25,45,13,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crossCostView.thirdBtn"
+      unSelectedStyle="crosscostview.UnselectBack"
+      selectedStyle="crosscostview.SelectBack"
+      selectedIconStyle="asset.crosscost.thirdDay.Text2"
+      unselectedIconStyle="asset.crosscost.thirdDay.Text1"
+      selectedIconInnerRectString="23,49,11,19,13"
+      unselectedIconInnerRectString="25,44,13,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="crosscostview.UnselectBack"
+      resourceLink="asset.crosscostview.Btn1"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="crosscostview.SelectBack"
+      resourceLink="asset.crosscostview.Btn2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="crossCostView.prePageBtn"
+      backStyle="asset.crosscostview.prepage"
+      width="27"
+      height="20"
+      x="235"
+      y="472"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="crossCostView.nextPageBtn"
+      backStyle="asset.crosscostview.nextpage"
+      width="27"
+      height="20"
+      x="328"
+      y="472"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.MainFrameTipText"
+      textFormatStyle="crosscost.MainFrameTipText_t"
+      autoSize="none"
+      wordWrap="true"
+      filterString="core.normal_f"
+      x="18"
+      y="241"
+      width="125"
+      height="97" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.MyTodayCostText"
+      textFormatStyle="crosscost.MyTodayCostText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="34"
+      y="344"
+      width="90"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.MyTotalCount"
+      textFormatStyle="crosscost.MyTotalCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="34"
+      y="405"
+      width="90"
+      height="22" />
+    <!-- 页码字数 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crossCostView.pageText"
+      textFormatStyle="crosscostview.pageText_t"
+      autoSize="none"
+      x="270"
+      y="471"
+      width="50"
+      height="20" />
+    <!-- 充值排行每一行的列表项文字显示 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.dataItem.rankText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="3"
+      y="4"
+      width="90"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.dataItem.userNameText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="115"
+      y="4"
+      width="120"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.dataItem.levelText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="265"
+      y="4"
+      width="110"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.dataItem.agencyServerText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="365"
+      y="4"
+      width="120"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.dataItem.exchargeNumberText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="490"
+      y="4"
+      width="110"
+      height="34"
+      wordWrap="true" />
+    <!-- 标题栏目文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.title.rankTextStyle"
+      textFormatStyle="crosscost.title.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="25"
+      y="120"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.title.userNameTextStyle"
+      textFormatStyle="crosscost.title.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="145"
+      y="120"
+      width="80"
+      height="20"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.title.powerTextStyle"
+      textFormatStyle="crosscost.title.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="280"
+      y="120"
+      width="80"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.title.agencySeverTextStyle"
+      textFormatStyle="crosscost.title.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="382"
+      y="120"
+      width="80"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.title.exchanrgeNumberTextStyle"
+      textFormatStyle="crosscost.title.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="502"
+      y="111"
+      width="100"
+      height="20"
+      wordWrap="true" />
+    <!-- 活动时间四个字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.rewardview.timeText"
+      textFormatStyle="crosscost.rewardview.timeText_t"
+      filterString="core.normal_f"
+      width="90"
+      height="15" />
+    <!-- 活动内容四个字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.rewardview.contentText"
+      textFormatStyle="crosscost.rewardview.timeText_t"
+      filterString="core.normal_f"
+      width="90"
+      height="15" />
+    <!-- 活动时间文字显示 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.rewardview.time"
+      textFormatStyle="crosscost.rewardview.timeText_t"
+      filterString="core.normal_f"
+      width="400"
+      wordWrap="true"
+      multiline="true"
+      height="20" />
+    <!-- 活动内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.rewardview.content"
+      textFormatStyle="crosscost.rewardview.contentText_t"
+      filterString="core.normal_f"
+      width="400"
+      wordWrap="true"
+      multiline="true"
+      height="20" />
+    <!-- 活动条件 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="crosscost.rewardview.condition"
+      textFormatStyle="crosscost.rewardview.condition_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="400"
+      height="20" />
+    <!-- 奖励预览 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="crosscost.rewardview.rewardImage"
+      resourceLink="asset.crosscost.rewardview.rewardImageBg,asset.crosscost.rewardview.rewardImage"
+      imageRectString="1|231|0|33|13,9|174|6|19|13" />
+    <!-- 活动介绍 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="crosscost.rewardview.activityDes"
+      resourceLink="asset.crosscost.rewardview.rewardImageBg,asset.crosscost.rewardview.activityImag"
+      imageRectString="1|231|0|33|13,9|179|6|23|13" />
+    <!-- 右侧滚动条 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="crosscost.rewardview.panel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,592,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="603"
+      x="5"
+      height="411"
+      y="5" />
+    <!-- 右侧VBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="crosscost.rewardview.itemVBox"
+      width="583"
+      spacing="4" />
+    <!--  领取按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="crosscost.rewarditem.getBtn"
+      backStyle="asset.rewarditem.getBoxBg"
+      iconStyle="asset.rewarditem.getBoxText"
+      displacement="true"
+      iconInnerRectString="6,54,6,16,13"
+      tipStyle="bottle.BottleBottomViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="465"
+      y="40"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="crosscost.rewarditem.bg"
+      resourceLink="asset.rewarditem.bg"
+      scaleGridString="20,20,556,72" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="exchargerank.LightEffect1"
+      resourceLink="asset.exchargerank.LightEffect1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="crosscost,rightView.accumulativeBtn"
+      unSelectedStyle="asset.crosscost.AccumulativeBtnUnselectedBack"
+      selectedStyle="asset.crosscost.AccumulativeBtnSelectedBack"
+      selectedIconStyle="asset.crosscost.AccumulativeBtn"
+      unselectedIconStyle="asset.crosscost.AccumulativeBtn"
+      selectedIconInnerRectString="0,85,-2,30,13"
+      unselectedIconInnerRectString="0,85,-2,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="520"
+      y="80"
+      autoCenter="false" />
+    <component
+      stylename="crosscost.crosscostview.itemBg1"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="crosscost.corner.scale1,crosscost.corner.scale2"
+      imageRectString="3|299|0|30|13,601|299|0|30|13" />
+    <component
+      stylename="crosscost.crosscostview.itemBg2"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="crosscost.corner.scale3,crosscost.corner.scale4"
+      imageRectString="3|299|0|30|13,601|299|0|30|13" />
+    <component
+      stylename="crosscost.corner.scale1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.crossCostView.ItemBg" />
+    <component
+      stylename="crosscost.corner.scale2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.crossCostView.ItemBg"
+      scaleX="-1" />
+    <component
+      stylename="crosscost.corner.scale3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.crossCostView.ItemBg2" />
+    <component
+      stylename="crosscost.corner.scale4"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.crossCostView.ItemBg2"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="crosscostview.item.bg"
+      resourceLink="crosscost.crosscostview.itemBg1,crosscost.crosscostview.itemBg2" />
+    <component
+      stylename="crosscostView.titile.bg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="crosscost.corner.scale5,crosscost.corner.scale6"
+      imageRectString="2|300|0|32|13,610|300|0|32|13" />
+    <component
+      stylename="crosscost.corner.scale5"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.crossCostView.bg2" />
+    <component
+      stylename="crosscost.corner.scale6"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.crossCostView.bg2"
+      scaleX="-1" />
+  </components>
+</style>

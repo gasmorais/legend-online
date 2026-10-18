@@ -1,0 +1,137 @@
+<style
+  name="pandora"
+  source="ui/zh_cn/swf/pandora.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="pandora.leftTimeTxt_t"
+      args="Arial,14,0x00ff06,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pandora.activityText_t"
+      args="Arial,14,0xffb70b,,,,,,center"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.pandora.Bg"
+      x="2"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.pandora.leftCountBg"
+      x="131"
+      y="459" />
+    <bitmapData
+      resourceLink="asset.pandora.activeTxtImg"
+      x="552"
+      y="442" />
+    <bitmapData
+      resourceLink="asset.pandora.personBg"
+      x="347"
+      y="-26" />
+    <bitmapData
+      resourceLink="asset.pandora.leftCountImg"
+      x="177"
+      y="462" />
+    <bitmapData
+      resourceLink="asset.pandora.bigNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.pandora.smallNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.pandora.middleNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.pandora.vipBoxItemSelect"
+      x="-11"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.pandora.diamondImg"
+      x="200"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.pandora.pointImg"
+      x="40"
+      y="76" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="pandora.PandoraItem"
+      stylename="pandora.PandoraItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.pandora.goodsFlickerEffctMC"
+      stylename="pandora.goodsFlickerEffctMC"
+      width="85"
+      height="85"
+      x="-12"
+      y="-12" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="pandoraFrame.BtnStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,7,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="160"
+      y="176" />
+  </customDisplay>
+  <components>
+    <component
+      classname="pandora.PandoraFrame"
+      stylename="pandora.PandoraFrame"
+      parentStyle="core.Frame1"
+      width="768"
+      height="602"
+      containerX="13"
+      containerY="56" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pandora.PandoraFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="854"
+      height="518"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pandora.itemIcon"
+      resourceLink="asset.pandora.itemIcon1,asset.pandora.itemIcon2,asset.pandora.itemIcon3,asset.pandora.itemIcon4,asset.pandora.itemIcon5,asset.pandora.itemIcon6"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pandora.receiveBtn"
+      backStyle="asset.pandora.receiveBtnImg"
+      iconStyle="asset.pandora.receiveTxtImg"
+      iconInnerRectString="39,67,43,35,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="146"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pandora.leftTimeTxt"
+      textFormatStyle="pandora.leftTimeTxt_t"
+      autoSize="none"
+      width="350"
+      height="20"
+      x="53"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pandora.activityText"
+      textFormatStyle="pandora.activityText_t"
+      autoSize="none"
+      width="215"
+      height="20"
+      x="487"
+      y="468" />
+  </components>
+</style>

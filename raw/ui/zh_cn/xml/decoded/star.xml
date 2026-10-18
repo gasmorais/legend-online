@@ -1,0 +1,1408 @@
+<style
+  name="star"
+  source="ui/zh_cn/swf/star.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarSellTip_f"
+      args="Arial,14,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.ButtonTextStyle_f"
+      args="Arial,12,0xffd800,,,true,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.FreeCount_f"
+      args="Arial,16,0xfff100,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarPointBtnTxt_f"
+      args="Arial,16,0xfacf56,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.OpenStarShopBtnTxt_f"
+      args="Arial,14,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.HelpConfirmBtnText_f"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.QuickSellComBoxTxt_f"
+      args="Arial,12,0xfff6ce,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarShopPageTxt_t"
+      args="Arial,16,0xe6d9b0,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarShopItemBuffTxt_t"
+      args="Arial,11,0xdac98e" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarShopItemStarPointTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="star.StarShopPageTxt_gf"
+      args="0x3C2000,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f1"
+      args="Arial,12,0x999999,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f2"
+      args="Arial,12,0x59cd41,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f3"
+      args="Arial,12,0x32a2f8,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f4"
+      args="Arial,12,0xa838f7,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f5"
+      args="Arial,12,0xff8000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f6"
+      args="Arial,12,0xce0f0f,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.enhancedStarLe"
+      args="Arial,14,0xffec96,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.costGoldTxt_t"
+      args="Arial,16,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.expProgessTxt_t"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="star.StarNameTxt_f7"
+      args="Arial,12,0xff8000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SubStarFrame.curTxt_t"
+      args="Arial,12,0x3cd91d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SubStarFrame.nextTxt_t"
+      args="Arial,12,0x9f9e9b,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.star.BG"
+      x="7"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.star.StarBar"
+      x="-40"
+      y="340" />
+    <bitmapData
+      resourceLink="asset.star.Arrow"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.star.HoroscopeBack"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.star.StarPowBg"
+      x="15"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.star.DirectionTxt"
+      x="491"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.star.HoroscopeEquipBg"
+      x="35"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.star.PlayerStarPowBack"
+      x="11"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.star.StarShopItemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.star.StarShopItemOverBg"
+      x="-5"
+      y="-6" />
+    <bitmapData
+      resourceLink="asset.star.StarPointImg"
+      x="280"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.star.addAttributeBg"
+      x="4"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.star.starEffectBg" />
+    <bitmapData
+      resourceLink="asset.star.starBlessing"
+      x="22"
+      y="110" />
+    <bitmapData
+      resourceLink="asset.star.costGold"
+      x="20"
+      y="143" />
+    <bitmapData
+      resourceLink="asset.star.expBg"
+      x="81"
+      y="106" />
+    <bitmapData
+      resourceLink="asset.star.expProgress"
+      x="100"
+      y="114" />
+    <bitmapData
+      resourceLink="asset.star.expSplitLine"
+      x="81"
+      y="106" />
+    <bitmapData
+      resourceLink="asset.star.splitLine" />
+    <bitmapData
+      resourceLink="asset.star.starEffectImg"
+      x="269"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.star.starEffectMax"
+      x="259"
+      y="43" />
+    <bitmapData
+      resourceLink="asset.star.autoStarSetFrame.costGold"
+      x="10"
+      y="31" />
+    <bitmapData
+      resourceLink="asset.star.autoStarSetFrame.sell"
+      x="15"
+      y="80" />
+    <bitmapData
+      resourceLink="asset.star.autoStarSetFrame.compose"
+      x="0"
+      y="128" />
+    <bitmapData
+      resourceLink="asset.autoStar.confirm.back1"
+      x="110"
+      y="180" />
+    <!-- 
+          <bitmapData resourceLink="asset.star.dispalyStarView.autoStarTxt" x="20" 
+                     y="18" 
+          />   
+           -->
+    <bitmapData
+      resourceLink="asset.star.SubStarFrame.txtBack"
+      x="15"
+      y="125" />
+    <bitmapData
+      resourceLink="asset.star.SubStarFrame.proBack"
+      x="50"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.star.SubStarFram.decribeImp"
+      x="5"
+      y="142" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="star.view.MakeStarView"
+      stylename="star.MakeStarView"
+      x="-27"
+      y="449" />
+    <custom
+      classname="star.view.DisplayStarView"
+      stylename="star.DisplayStarView"
+      x="46"
+      y="59" />
+    <custom
+      classname="asset.star.InstructionTxt"
+      stylename="star.InstructionTxt"
+      x="350"
+      y="-417" />
+    <custom
+      classname="asset.star.HoroscopeIconEffect"
+      stylename="star.HoroscopeBtnEffect"
+      x="506"
+      y="443"
+      mouseEnabled="false"
+      mouseChildren="false" />
+    <custom
+      classname="asset.star.CrystalGlow"
+      stylename="star.CrystalGlow"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <custom
+      classname="yishi.view.tips.OneLineTip"
+      stylename="star.CrystalTip"
+      tipWidth="220"
+      enableHtml="true" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="star.DisplayStarContainer"
+      vSpace="10"
+      hSpace="3"
+      y="33" />
+    <custom
+      classname="star.view.StarIconView"
+      stylename="star.StarIconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="0"
+      loadingY="1"
+      tipStyle="tips.StarTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,0,3,5,7"
+      tipGapH="-48"
+      tipGapV="5"
+      iconWidth="0"
+      iconHeight="0"
+      x="20"
+      y="20" />
+    <custom
+      stylename="star.HoroscopeShowAvatar"
+      classname="avatar.view.ShowAvatar"
+      x="90"
+      y="110"
+      scaleX="0.85"
+      scaleY="0.85"
+      mouseEnabled="false"
+      mouseChildren="false" />
+    <custom
+      stylename="star.HoroscopePlayerStarListView"
+      classname="star.view.PlayerStarListView"
+      x="9"
+      y="365" />
+    <custom
+      stylename="star.HoroscopeEquipStarListView"
+      classname="star.view.EquipStarListView"
+      x="47"
+      y="28" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="star.PlayerStarBagCellIcpn"
+      iconHeight="0"
+      iconWidth="0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="0"
+      loadingY="1"
+      tipStyle="tips.StarTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,0,3,5,7"
+      tipGapH="10"
+      tipGapV="5"
+      x="30"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarNameTxt"
+      textFormatStyle="core.StarNameTxt_f1,core.StarNameTxt_f2,core.StarNameTxt_f3,core.StarNameTxt_f4,core.StarNameTxt_f5,core.StarNameTxt_f6,core.StarNameTxt_f6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="60"
+      width="80"
+      x="-17"
+      y="35"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarLevelTxt"
+      parentStyle="star.StarNameTxt"
+      autoSize="none"
+      height="20"
+      width="50"
+      x="-10"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.StarBagCellLock"
+      resourceLink="asset.star.StarBagCellLock"
+      x="16"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.StarBagCellLockHeightLevel"
+      resourceLink="asset.star.StarBagCellLockHeightLevel"
+      x="3"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.StarBagCellComposeLock"
+      resourceLink="asset.star.StarBagCellComposeLock"
+      x="4"
+      y="38" />
+    <custom
+      classname="cell.view.starbag.StarBagCell"
+      stylename="star.StarBagCell"
+      backgroundStyle="asset.star.StarBagCell"
+      iconStyle="star.PlayerStarBagCellIcpn"
+      nameStyle="star.StarNameTxt"
+      levelStyle="star.StarLevelTxt"
+      lockStyle="star.StarBagCellLock"
+      composeLockStyle="star.StarBagCellComposeLock"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-10"
+      x="96"
+      y="45"
+      equipStyle="star.StarBagCellEquip" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.StarBagCellLock02"
+      resourceLink="asset.star.StarBagCellLock02"
+      x="15"
+      y="10" />
+    <custom
+      classname="cell.view.starbag.StarBagCell"
+      stylename="star.SmallStarBagCell"
+      parentStyle="star.StarBagCell"
+      lockStyle="star.StarBagCellLock02" />
+    <custom
+      stylename="star.EquipStarBagCell1"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.StarBagCell"
+      x="1"
+      y="168"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell2"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="-2"
+      y="92"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell3"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="32"
+      y="24"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell4"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="96"
+      y="-16"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell5"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="179"
+      y="-16"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell6"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="249"
+      y="24"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell7"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="277"
+      y="92"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell8"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="271"
+      y="167"
+      addBtnStyle="star.addAttributeBtn" />
+    <custom
+      stylename="star.EquipStarBagCell9"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="-1"
+      y="237"
+      addBtnStyle="star.addAttributeBtn"
+      lockStyle="star.StarBagCellLockHeightLevel" />
+    <custom
+      stylename="star.EquipStarBagCell10"
+      classname="cell.view.starbag.StarBagCell"
+      parentStyle="star.EquipStarBagCell1"
+      x="274"
+      y="238"
+      addBtnStyle="star.addAttributeBtn"
+      lockStyle="star.StarBagCellLockHeightLevel" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="star.StarShopItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="0"
+      loadingY="1"
+      tipStyle="tips.StarTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,0,3,5,7"
+      tipGapH="0"
+      tipGapV="5"
+      iconWidth="0"
+      iconHeight="0"
+      x="44"
+      y="50" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="star.StarShopItemContainer"
+      vSpace="1"
+      hSpace="6"
+      x="2"
+      y="-2" />
+    <custom
+      classname="yishi.view.community.BulePowerItem"
+      stylename="star.starExp"
+      width="166"
+      x="58"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="SubStarFrame.itemIcon"
+      parentStyle="core.BaseItemView"
+      x="40"
+      y="90" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="SubStarFrame.SimpleTileList"
+      vSpace="3"
+      hSpace="6" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="star.addAttributeBtn"
+      backStyle="asset.star.AttributePlusBtnBackImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="31"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="star.maxButton"
+      parentStyle="star.addAttributeBtn"
+      backStyle="asset.star.maxBg"
+      enable="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="star.tipButton"
+      parentStyle="star.addAttributeBtn"
+      alpha="0" />
+    <component
+      classname="star.StarFrame"
+      stylename="star.StarFrame"
+      parentStyle="core.Frame1"
+      containerX="14"
+      containerY="62"
+      width="638"
+      height="636" />
+    <component
+      classname="star.HoroscopeFrame"
+      stylename="star.HoroscopeFrame"
+      parentStyle="core.QuickBuyFrame"
+      closestyle="core.CloseBtn"
+      backStyle="core.AlertFrameBg"
+      closeInnerRectString="29,-17,-12,29,14"
+      moveEnable="false"
+      escEnable="false"
+      containerX="-3"
+      containerY="20"
+      width="422"
+      height="612"
+      x="644"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="star.9CornerBg"
+      parentStyle="core.describeBackground_style11"
+      width="608"
+      height="522"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="star.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="560"
+      y="-40" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="star.StarHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="star.view.StarHelpFrame.helpContent"
+      titleText="star.view.StarHelpFrame.title"
+      textWidth="353" />
+    <component
+      stylename="star.GreenCrystalMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.star.GreenCrystalMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="star.GreenCrystal"
+      button="star.GreenCrystalMC"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="star.CrystalTip"
+      tipDirctions="4,6,3,7"
+      tipGapH="-30"
+      tipGapV="-30"
+      buttonMode="true"
+      isFollowMouse="false"
+      displacement="false"
+      x="38"
+      y="-10" />
+    <component
+      stylename="star.WhiteCrystalMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.star.WhiteCrystalMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="star.WhiteCrystal"
+      button="star.WhiteCrystalMC"
+      parentStyle="star.GreenCrystal"
+      x="127"
+      y="-7" />
+    <component
+      stylename="star.YellowCrystalMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.star.YellowCrystalMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="star.YellowCrystal"
+      button="star.YellowCrystalMC"
+      parentStyle="star.GreenCrystal"
+      x="224"
+      y="-10" />
+    <component
+      stylename="star.RedCrystalMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.star.RedCrystalMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="star.RedCrystal"
+      button="star.RedCrystalMC"
+      parentStyle="star.GreenCrystal"
+      x="320"
+      y="-10" />
+    <component
+      stylename="star.BlueCrystalMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.star.BlueCrystalMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="star.BlueCrystal"
+      button="star.BlueCrystalMC"
+      parentStyle="star.GreenCrystal"
+      x="419"
+      y="-9" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="star.HoroscopeBtn"
+      backStyle="asset.star.HoroscopeIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="435"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.FreeCountTxt"
+      textFormatStyle="star.FreeCount_f"
+      filterString="core.normal_f"
+      x="509"
+      y="-431" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="star.StarPointBtn"
+      backStyle="asset.star.StarPointBg"
+      textStyle="star.StarPointBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="78,0,4,0"
+      width="197"
+      height="33"
+      x="39"
+      y="-434"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarPointBtnTxt"
+      textFormatStyle="star.StarPointBtnTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="star.OpenStarShopBtn"
+      backStyle="asset.core.AlertBtnStyle_022"
+      textStyle="star.OpenStarShopBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="16,0,8,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="242"
+      y="-437" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.OpenStarShopBtnTxt"
+      textFormatStyle="star.OpenStarShopBtnTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarSellTip"
+      textFormatStyle="star.StarSellTip_f"
+      filterString="core.normal_f"
+      x="-35" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.QuickStarBtn"
+      backStyle="asset.star.QuickBtnBg"
+      iconStyle="assset.star.quickStarTxt"
+      iconInnerRectString="13,60,11,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="235"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.DisplayViewQuickComposeBtn"
+      backStyle="asset.star.QuickBtnBg"
+      iconStyle="asset.star.QuickComposeTxt"
+      iconInnerRectString="13,60,11,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="395"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.QuickPickupBtn"
+      backStyle="asset.star.QuickBtnBg"
+      iconStyle="asset.star.quickPickUpTxt"
+      parentStyle="star.QuickStarBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="474"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.QuickSellBtn"
+      backStyle="asset.star.QuickBtnBg"
+      iconStyle="asset.star.quickSellTxt"
+      parentStyle="star.QuickStarBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="315"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="star.QuickSellComBox"
+      listPanelStyle="star.QuickSellComBoxListPanel"
+      listInnerRectString="5,33,10,75,18"
+      textStyle="star.QuickSellComBoxTxt"
+      textInnerRectString="5,25,6,0,0"
+      buttonStyle="star.QuickSellComBoxBtn"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="210"
+      height="32"
+      x="27"
+      y="306" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.QuickSellComBoxTxt"
+      textFormatStyle="star.QuickSellComBoxTxt_f"
+      filterString="core.normal_f"
+      y="7"
+      x="11" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="star.QuickSellComBoxListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|star.QuickSellComBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.QuickSellComBoxBtn"
+      backStyle="asset.star.QuickSellComBoxBtnBg"
+      iconStyle="asset.core.DownBtnStyle01"
+      iconInnerRectString="181,23,5,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="yishi.view.adapter.SimpleTextCellAdapter"
+      stylename="star.QuickSellComBoxListCell"
+      backStyle="star.QuickSellComBoxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="star.QuickSellComBoxTxt"
+      autoSizeAble="false"
+      enableHtml="true"
+      textFrameChange="false"
+      width="190"
+      height="22"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.QuickSellComBoxListCellBg"
+      resourceLink=",star.QuickSellComBoxItemBg,star.QuickSellComBoxItemBg"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="star.QuickSellComBoxItemBg"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarIconViewNameTxt"
+      textFormatStyle="core.StarNameTxt_f1,core.StarNameTxt_f2,core.StarNameTxt_f3,core.StarNameTxt_f4,core.StarNameTxt_f5,core.StarNameTxt_f6,core.StarNameTxt_f6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="60"
+      width="100"
+      x="-48"
+      y="-6"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.ButtonTextStyle"
+      textFormatStyle="star.ButtonTextStyle_f"
+      autoSize="none"
+      width="60"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="star.PickupBtn"
+      backStyle="asset.star.btnBg"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,0,0,0"
+      textStyle="star.ButtonTextStyle"
+      transparentEnable="false"
+      width="60"
+      height="24"
+      x="-50"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="star.SellBtn"
+      parentStyle="star.PickupBtn"
+      x="-2" />
+    <component
+      stylename="star.HoroscopeStarPowView"
+      classname="mainBar.StripView"
+      tipStyle="yishi.view.tips.goods.StarPowTip"
+      tipDirctions="7,5,6"
+      tipGapV="0"
+      tipGapH="30"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarPowTxt"
+      textFormatStyle="core.StarPowTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="60"
+      x="45"
+      y="21" />
+    <component
+      stylename="star.QuickComposeBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      backStyle="asset.star.HoroscpeBtnBg"
+      iconStyle="asset.star.SmallquickComposeTxt"
+      iconInnerRectString="20,47,9,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="31"
+      y="337"
+      offSetY="2" />
+    <component
+      stylename="star.ComposeLockBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      backStyle="asset.star.HoroscpeBtnBg"
+      iconStyle="asset.star.HoroscpeLockTxt"
+      iconInnerRectString="28,30,9,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="127"
+      y="337"
+      offSetY="2" />
+    <component
+      stylename="star.ComposeLockBtnImg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.star.QuickComposeLockIcon,asset.star.QuickComposeLockTxt"
+      imageRectString="2|34|-10|36|13,46|41|1|19|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="star.StarShopScaleBg"
+      parentStyle="core.describeBackground_style09"
+      x="1"
+      y="-5"
+      width="675"
+      height="378" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.StarShopPrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="230"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.StarShopNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      iconInnerRectString="9,52,5,20,13"
+      x="390"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarShopPageTxt"
+      textFormatStyle="star.StarShopPageTxt_t"
+      filterString="star.StarShopPageTxt_gf,core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="310"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="star.StarShopStarPointBtn"
+      parentStyle="star.StarPointBtn"
+      x="7"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.StarShopCloseBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.core.ShopReturnBtnTxt"
+      iconInnerRectString="35,61,9,32,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="536"
+      y="321" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarShopItemNameTxt"
+      textFormatStyle="star.StarNameTxt_f1,star.StarNameTxt_f2,star.StarNameTxt_f3,star.StarNameTxt_f4,star.StarNameTxt_f5,star.StarNameTxt_f6,star.StarNameTxt_f6"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="84"
+      y="10"
+      width="153"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarShopItemBuffTxt"
+      textFormatStyle="star.StarShopItemBuffTxt_t"
+      filterString="core.normal_f"
+      width="157"
+      multiline="true"
+      wordWrap="true"
+      x="84"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.StarShopItemStarPointTxt"
+      textFormatStyle="star.StarShopItemStarPointTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="90"
+      height="20"
+      x="190"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.StarShopItemBuyBtn"
+      backStyle="asset.core.ShopBuyBtn"
+      iconStyle="asset.stop.ExchangeTxt"
+      iconInnerRectString="19,40,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="242"
+      y="59" />
+    <component
+      classname="star.EnhancedAttributeFrame"
+      stylename="star.EnhancedAttributeFrame"
+      parentStyle="core.Frame2"
+      containerX="14"
+      containerY="50"
+      width="464"
+      height="334" />
+    <component
+      stylename="star.addAttributeBg01"
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      parentStyle="core.describeBackground_style11"
+      width="433"
+      height="241"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.addAttributeEffect01"
+      resourceLink="asset.star.addAttribute.add0,asset.star.addAttribute.add1,asset.star.addAttribute.add2,asset.star.addAttribute.add3,asset.star.addAttribute.add4,asset.star.addAttribute.add5,asset.star.addAttribute.add6,asset.star.addAttribute.add7,asset.star.addAttribute.add8,asset.star.addAttribute.add9,asset.star.addAttribute.add10"
+      x="165"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.addAttributeEffect02"
+      parentStyle="star.addAttributeEffect01"
+      x="392"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="star.starEffectaddBg"
+      resourceLink="asset.star.starEffectBg,asset.star.arrow,asset.star.starEffectBg"
+      imageRectString="0|189|0|45|13,189|39|9|27|13,228|189|0|45|13"
+      x="5"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.currLevelTxt"
+      textFormatStyle="star.enhancedStarLe"
+      filterString="core.normal_f"
+      width="150"
+      x="43"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.nextLevelTxt"
+      parentStyle="star.currLevelTxt"
+      x="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.costGoldTxt"
+      textFormatStyle="star.costGoldTxt_t"
+      filterString="core.normal_f"
+      width="15"
+      x="155"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.EnhancedAttributeBtn"
+      backStyle="asset.star.addAttributeBtnBg"
+      iconStyle="asset.star.addAttributeBtntxt"
+      iconInnerRectString="31,53,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="108"
+      y="178" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.expProgessTxt"
+      textFormatStyle="star.expProgessTxt_t"
+      filterString="core.normal_f"
+      width="150"
+      autoSize="none"
+      height="20"
+      x="177"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="asset.star.HoroscopeBackBg"
+      resourceLink="asset.star.HoroscopeBack,asset.star.splitLine"
+      imageRectString="0|420|0|540|13,0|423|357|23|13"
+      x="3"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="star.advanceStarBg"
+      resourceLink="asset.star.advanceStarBg,asset.star.advanceStarBg"
+      imageRectString="0|75|0|76|13,275|75|0|76|13"
+      x="38"
+      y="259" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="star.composeNotAlert_cancelStyle_2"
+      parentStyle="core.AlertButton_2"
+      x="285"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="star.composeNotAlert_confirmStyle_2"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="69"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="star.composeNotAlertCheckBtn2"
+      parentStyle="core.ThewCheckBtn"
+      x="185"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="star.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="475"
+      height="50"
+      x="-11"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="star.composeNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="star.composeNotAlert_confirmStyle_2"
+      cancelStyle="star.composeNotAlert_cancelStyle_2"
+      checkStyle="star.composeNotAlertCheckBtn2"
+      describeStyle="star.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="worldboss.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="3"
+      containerY="30"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="468"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.AutoStarBtn"
+      backStyle="asset.star.dispalyStarView.autoStarBg"
+      iconStyle="asset.star.dispalyStarView.autoStarTxt"
+      iconInnerRectString="17,63,18,45,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      autoCenter="false"
+      x="-55"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.SetStarBtn"
+      backStyle="asset.star.displayStarView.setBg"
+      iconStyle="asset.star.displayStarView.setTxt"
+      iconInnerRectString="10,34,10,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="19"
+      y="335" />
+    <component
+      classname="star.AutoStarSetFrame"
+      stylename="star.AutoStarSetFrame"
+      parentStyle="core.Frame2"
+      containerX="14"
+      containerY="50"
+      width="337"
+      height="325" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="star.starAutoFramBg"
+      parentStyle="core.describeBackground_style11"
+      width="316"
+      height="240"
+      x="-5"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.AutoStarFrame.confirmBtn"
+      iconStyle="asset.autoStar.confirm.icon"
+      backStyle="asset.autoStar.confirm.back"
+      x="100"
+      y="180"
+      iconInnerRectString="17,52,10,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="110"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="star.AutoGoldComBox"
+      listPanelStyle="star.QuickSellComBoxListPanel"
+      listInnerRectString="5,33,10,75,18"
+      textStyle="star.QuickSellComBoxTxt"
+      textInnerRectString="6,25,8,0,0"
+      buttonStyle="star.QuickSellComBoxBtn"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="210"
+      height="32"
+      x="80"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="star.AutoSellComBox"
+      listPanelStyle="star.QuickSellComBoxListPanel"
+      listInnerRectString="5,33,10,75,18"
+      textStyle="star.QuickSellComBoxTxt"
+      textInnerRectString="6,25,8,0,0"
+      buttonStyle="star.QuickSellComBoxBtn"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="210"
+      height="32"
+      x="80"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="star.AutoComposeComBox"
+      listPanelStyle="star.QuickSellComBoxListPanel"
+      listInnerRectString="5,33,10,75,18"
+      textStyle="star.QuickSellComBoxTxt"
+      textInnerRectString="6,25,8,0,0"
+      buttonStyle="star.QuickSellComBoxBtn"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="210"
+      height="32"
+      x="80"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.oneKeyEnhancedAttributeBtn"
+      backStyle="asset.star.addManyAttributeBtnBg"
+      iconStyle="asset.star.addManyAttributeBtntxt"
+      iconInnerRectString="16,83,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="253"
+      y="178" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="star.SubBtn"
+      iconStyle="asset.star.SubBtnIcon"
+      backStyle="asset.star.SubBtnBack"
+      iconInnerRectString="53,59,14,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="162"
+      height="51"
+      x="136"
+      y="280"
+      offSetY="3" />
+    <component
+      classname="star.SubStarFrame"
+      stylename="star.SubStarFrame"
+      parentStyle="core.Frame2"
+      containerX="14"
+      containerY="50"
+      width="445"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SubStarFrame.actBtn"
+      iconStyle="asset.star.ActBtnIcon"
+      backStyle="asset.star.ActBtnBack"
+      x="12"
+      y="120"
+      iconInnerRectString="51,59,14,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="162"
+      height="51"
+      offSetY="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SubStarFrame.subBtn"
+      parentStyle="star.SubBtn"
+      x="64"
+      y="139"
+      offSetY="3" />
+    <component
+      stylename="SubStarFrame.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="core.describeBackground_style04,asset.star.SubStarFram.topbg,star.SubStarFram.topbg.ScaleX,asset.star.SubStarFram.iconBack,asset.star.splitLine,asset.star.SubStarFram.corner,SubStarFram.corner.scale1,SubStarFram.corner.scale2,SubStarFram.corner.scale3"
+      imageRectString="0|417|0|503|13,3|205|3|310|13,413|205|3|310|13,160|89|8|88|13,0|421|308|23|13,-4|45|-5|47|13,423|45|-5|47|13,-4|45|318|47|13,423|45|318|47|13" />
+    <component
+      classname="yishi.view.base.Progress"
+      stylename="SubStarFrame.progress"
+      progressStyle="asset.star.SubStarFrame.progress"
+      progressTextStyle="SubStarFrame.progress.text"
+      x="64"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.progress.text"
+      textFormatStyle="core.Progress1Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="222"
+      height="16"
+      x="0"
+      y="-2" />
+    <component
+      stylename="star.SubStarFram.topbg.ScaleX"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.star.SubStarFram.topbg"
+      scaleX="-1" />
+    <component
+      stylename="SubStarFram.corner.scale1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.star.SubStarFram.corner"
+      scaleX="-1" />
+    <component
+      stylename="SubStarFram.corner.scale2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.star.SubStarFram.corner"
+      scaleY="-1" />
+    <component
+      stylename="SubStarFram.corner.scale3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.star.SubStarFram.corner"
+      scaleX="-1"
+      scaleY="-1" />
+    <component
+      stylename="SubStarFrame.lvImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.core.LevelTxtAsset"
+      x="0"
+      y="8" />
+    <component
+      stylename="SubStarFrame.inputImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.core.InputBack_Style_07"
+      x="250"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.lvTxt"
+      parentStyle="army.JewelLevel"
+      x="25"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.curTxt"
+      textFormatStyle="SubStarFrame.curTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="379"
+      height="20"
+      x="18"
+      y="162" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.nextTxt"
+      textFormatStyle="SubStarFrame.nextTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="379"
+      height="20"
+      x="18"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.curCount"
+      textFormatStyle="army.JewelLevel_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="98"
+      y="91" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.needCount"
+      textFormatStyle="army.JewelLevel_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="98"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SubStarFrame.inputTxt"
+      parentStyle="army.JewelCostValue"
+      x="253"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="SubStarFrame.panel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,395,0,0,2"
+      vScrollbarInnerRectString="15,0,20,2,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="407"
+      height="187"
+      x="6"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="star.StarBagCellEquip"
+      resourceLink="asset.star.StarBagCellEquip"
+      x="25"
+      y="5" />
+  </components>
+</style>

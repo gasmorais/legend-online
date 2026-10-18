@@ -1,0 +1,395 @@
+<style
+  name="registwelfare"
+  source="ui/zh_cn/swf/registwelfare.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.buyNote_t"
+      args="Arial,12,0xf6b600,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.rewardTitleTxt_t1"
+      args="Arial,14,0xf6b600,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.rewardTitleTxt_t2"
+      args="Arial,14,0x00f0ff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.rewardDesTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,left"
+      letterSpacing="1"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.rewardReceiveTxt_t1"
+      args="Arial,14,0xfcf7e7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.rewardReceiveTxt_t2"
+      args="Arial,14,0xebfdff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.countdownTxt_t"
+      args="Arial,12,0xf9ecc5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.increasePointTxt_t"
+      args="Arial,14,0x00f0ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.increaseCanTxt_t"
+      args="Arial,12,0xf6b600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="registwelfare.iconRewardItemText_t"
+      args="Arial,12,0xfffefe,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.registwelfare.buyBg"
+      x="6"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.registwelfare.taskBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.registwelfare.buySureBg"
+      x="30"
+      y="78"
+      width="359"
+      height="214" />
+    <bitmapData
+      resourceLink="asset.registwelfare.buySureNote"
+      x="147"
+      y="197" />
+    <bitmapData
+      resourceLink="asset.registwelfare.countdownNote"
+      x="25"
+      y="236" />
+    <bitmapData
+      resourceLink="asset.registwelfare.countdownDay"
+      x="258"
+      y="236" />
+    <bitmapData
+      resourceLink="asset.registwelfare.countdownHour"
+      x="326"
+      y="236" />
+    <bitmapData
+      resourceLink="asset.registwelfare.countdownMin"
+      x="402"
+      y="236" />
+    <bitmapData
+      resourceLink="asset.registwelfare.countdownSec"
+      x="498"
+      y="234" />
+    <bitmapData
+      resourceLink="asset.registwelfare.buyIndexNum" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="registwelfare.BaseItemView"
+      iconStyle="registwelfare.iconView"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="registwelfare.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="61"
+      profileHeight="61"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="registwelfare.iconView"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="42"
+      loadingY="42"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="19"
+      y="42" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="registwelfare.iconRewardView"
+      iconStyle="registwelfare.iconRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="registwelfare.iconRewardItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="41"
+      profileHeight="41"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="registwelfare.iconRewardIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="20"
+      loadingY="20"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.iconRewardItemText"
+      parentStyle="core.BaseItemText"
+      textFormatStyle="registwelfare.iconRewardItemText_t"
+      autoSize="none"
+      x="8"
+      y="24"
+      width="33"
+      height="20" />
+  </customDisplay>
+  <components>
+    <component
+      classname="registwelfare.RegistWelfareFrame"
+      stylename="registwelfare.RegistWelfareFrame"
+      parentStyle="core.Frame1"
+      width="705"
+      height="622" />
+    <component
+      classname="registwelfare.RegistWelfareConfirmFrame"
+      stylename="registwelfare.RegistWelfareConfirmFrame"
+      parentStyle="core.Frame2"
+      containerX="-21"
+      containerY="-34"
+      width="380"
+      height="294" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="registwelfare.Back1"
+      parentStyle="core.describeBackground_style09"
+      x="1"
+      y="7"
+      width="670"
+      height="520" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="registwelfare.buyBtn"
+      backStyle="asset.registwelfare.buyBtn"
+      iconStyle="asset.registwelfare.buyTxt"
+      iconInnerRectString="42,76,18,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="98"
+      y="177"
+      width="126"
+      height="52"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.buyNote1"
+      textFormatStyle="registwelfare.buyNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="85"
+      height="40"
+      x="128"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.buyNote2"
+      parentStyle="registwelfare.buyNote1"
+      x="290"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.buyNote3"
+      parentStyle="registwelfare.buyNote1"
+      x="452"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.countdownTxt"
+      textFormatStyle="registwelfare.countdownTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.increasePointTxt"
+      textFormatStyle="registwelfare.increasePointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="14"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.increaseCanTxt"
+      textFormatStyle="registwelfare.increaseCanTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="95"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.increaseNeedTxt"
+      textFormatStyle="registwelfare.increaseCanTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="12"
+      y="103" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.sellPriceTxt"
+      textFormatStyle="registwelfare.buyNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="163"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="registwelfare.buyConfirmBtn"
+      backStyle="asset.registwelfare.buySureBtn"
+      iconStyle="asset.registwelfare.buySureTxt"
+      iconInnerRectString="24,78,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="122"
+      height="48"
+      x="143"
+      y="227" />
+    <!-- 任务奖励 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.rewardTitleTxt"
+      textFormatStyle="registwelfare.rewardTitleTxt_t1,registwelfare.rewardTitleTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="158"
+      height="40"
+      x="0"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.rewardDesTxt"
+      textFormatStyle="registwelfare.rewardDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="135"
+      height="60"
+      x="12"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="registwelfare.rewardHbox"
+      x="12"
+      y="140"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="registwelfare.taskReceiveBtn1"
+      backStyle="asset.registwelfare.taskReceiveBtn1"
+      textStyle="registwelfare.rewardReceiveTxt1"
+      autoSizeAble="false"
+      backgoundInnerRectString="10,8,6,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="34"
+      x="35"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.rewardReceiveTxt1"
+      filterString="core.normal_f"
+      textFormatStyle="registwelfare.rewardReceiveTxt_t1"
+      autoSize="none"
+      width="72"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="registwelfare.taskReceiveBtn2"
+      backStyle="asset.registwelfare.taskReceiveBtn2"
+      textStyle="registwelfare.rewardReceiveTxt2"
+      autoSizeAble="false"
+      backgoundInnerRectString="10,8,6,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="34"
+      x="35"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="registwelfare.rewardReceiveTxt2"
+      filterString="core.normal_f"
+      textFormatStyle="registwelfare.rewardReceiveTxt_t2"
+      autoSize="none"
+      width="72"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="registwelfare.taskDesBg"
+      resourceLink="asset.registwelfare.taskDesBg"
+      scaleGridString="6,9,12,15"
+      width="143"
+      height="64"
+      x="8"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="registwelfare.welfareHbox"
+      x="0"
+      y="0"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="registwelfare.ScrollPanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="0,0,15,10,4"
+      viewportInnerRectString="0,0,0,235,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="7"
+      width="656"
+      height="262"
+      x="10"
+      y="268" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="registwelfare.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="247"
+      y="201" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="registwelfare.increasePointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="68"
+      y="118" />
+  </components>
+</style>

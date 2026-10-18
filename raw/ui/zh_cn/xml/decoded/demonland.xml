@@ -1,0 +1,793 @@
+<style
+  name="demonland"
+  source="ui/zh_cn/swf/demonland.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.DemonRoadMapIcon.txtLevel_t"
+      args="Arial,12,0x000000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.AwardBox.txtStar_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.DemonLandFrame.txtStrOwn_t"
+      args="Arial,12,0xfff10f,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.DemonLandFrame.txtItemCount_t"
+      args="Arial,12,0xfff10f,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.DemonLandFrame.txtDesc_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.t1"
+      args="Arial,18,0xfff10f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.AwardView.txtCost_t"
+      args="Arial,14,0xfff10f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DemonLand.AwardView.txtAttCount_t"
+      args="Arial,12,0xfff34f,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.DemonLand.resource.main.num1" />
+    <bitmapData
+      resourceLink="asset.DemonLand.resource.level.num" />
+    <bitmapData
+      resourceLink="asset.DemonLand.resource.level.line" />
+    <bitmapData
+      resourceLink="asset.DemonLand.levelIcon.imgBoss"
+      y="40" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="DemonLand.DemonLandFrame.mapRoad"
+      classname="demonland.DemonLandMapRoad"
+      x="142"
+      y="100" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level1"
+      classname="demonland.DemonRoadMapIcon"
+      x="0"
+      y="368" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level2"
+      classname="demonland.DemonRoadMapIcon"
+      x="52"
+      y="392" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level3"
+      classname="demonland.DemonRoadMapIcon"
+      x="112"
+      y="374" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level4"
+      classname="demonland.DemonRoadMapIcon"
+      x="86"
+      y="319" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level5"
+      classname="demonland.DemonRoadMapIcon"
+      x="157"
+      y="303" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level6"
+      classname="demonland.DemonRoadMapIcon"
+      x="188"
+      y="249" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level7"
+      classname="demonland.DemonRoadMapIcon"
+      x="240"
+      y="201" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level16"
+      classname="demonland.DemonRoadMapIcon"
+      x="361"
+      y="159" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level17"
+      classname="demonland.DemonRoadMapIcon"
+      x="379"
+      y="234" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level18"
+      classname="demonland.DemonRoadMapIcon"
+      x="444"
+      y="186" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level19"
+      classname="demonland.DemonRoadMapIcon"
+      x="490"
+      y="145" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level20"
+      classname="demonland.DemonRoadMapIcon"
+      x="541"
+      y="211" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level21"
+      classname="demonland.DemonRoadMapIcon"
+      x="574"
+      y="152" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level22"
+      classname="demonland.DemonRoadMapIcon"
+      x="610"
+      y="93" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level15"
+      classname="demonland.DemonRoadMapIcon"
+      x="346"
+      y="96" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level14"
+      classname="demonland.DemonRoadMapIcon"
+      x="293"
+      y="56" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level8"
+      classname="demonland.DemonRoadMapIcon"
+      x="234"
+      y="140" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level9"
+      classname="demonland.DemonRoadMapIcon"
+      x="153"
+      y="122" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level10"
+      classname="demonland.DemonRoadMapIcon"
+      x="137"
+      y="66" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level11"
+      classname="demonland.DemonRoadMapIcon"
+      x="190"
+      y="25" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level12"
+      classname="demonland.DemonRoadMapIcon"
+      x="250"
+      y="9" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level13"
+      classname="demonland.DemonRoadMapIcon"
+      x="327"
+      y="-1" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level23"
+      classname="demonland.DemonRoadMapIcon"
+      x="663"
+      y="60" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level25"
+      classname="demonland.DemonRoadMapIcon"
+      x="656"
+      y="189" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level26"
+      classname="demonland.DemonRoadMapIcon"
+      x="611"
+      y="232" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level24"
+      classname="demonland.DemonRoadMapIcon"
+      x="705"
+      y="114" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level27"
+      classname="demonland.DemonRoadMapIcon"
+      x="688"
+      y="284" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level28"
+      classname="demonland.DemonRoadMapIcon"
+      x="638"
+      y="332" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level29"
+      classname="demonland.DemonRoadMapIcon"
+      x="580"
+      y="384" />
+    <custom
+      stylename="DemonLand.DemonLandMapRoad.level30"
+      classname="demonland.DemonRoadMapIcon"
+      x="509"
+      y="357" />
+    <custom
+      stylename="DemonLand.DemonLandFrame.box1"
+      classname="demonland.AwardBox"
+      x="265"
+      y="575"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      stylename="DemonLand.DemonLandFrame.box2"
+      classname="demonland.AwardBox"
+      x="381"
+      y="575"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      stylename="DemonLand.DemonLandFrame.box3"
+      classname="demonland.AwardBox"
+      x="499"
+      y="575"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      stylename="DemonLand.DemonLandFrame.box4"
+      classname="demonland.AwardBox"
+      x="609"
+      y="575"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      stylename="DemonLand.DemonLandFrame.box5"
+      classname="demonland.AwardBox"
+      x="729"
+      y="575"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      stylename="DemonLand.DemonLandFrame.box6"
+      classname="demonland.AwardBox"
+      x="849"
+      y="575"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level1"
+      classname="demonland.LevelStateIcon"
+      x="24"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level2"
+      classname="demonland.LevelStateIcon"
+      x="114"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level3"
+      classname="demonland.LevelStateIcon"
+      x="204"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level4"
+      classname="demonland.LevelStateIcon"
+      x="294"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level5"
+      classname="demonland.LevelStateIcon"
+      x="384"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level6"
+      classname="demonland.LevelStateIcon"
+      x="474"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level7"
+      classname="demonland.LevelStateIcon"
+      x="564"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level8"
+      classname="demonland.LevelStateIcon"
+      x="654"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level9"
+      classname="demonland.LevelStateIcon"
+      x="744"
+      y="22" />
+    <custom
+      stylename="DemonLand.DemonLandLevelSelectFrame.level10"
+      classname="demonland.LevelStateIcon"
+      x="834"
+      y="22" />
+    <!-- 奖励图标 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="demonland.goodsItem1"
+      iconStyle="demondland.iconStyle1"
+      lockStyle="core.BagCellLock"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="demonland.itemView1"
+      profileX="6"
+      profileY="7"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="25"
+      y="170" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="demondland.iconStyle1"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="27"
+      loadingY="27"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="46"
+      iconHeight="46"
+      x="8"
+      y="9" />
+    <!-- boss奖励图标 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="demonland.goodsItem2"
+      iconStyle="demondland.iconStyle2"
+      lockStyle="core.BagCellLock"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="demonland.itemView2"
+      profileX="6"
+      profileY="7"
+      profileWidth="38"
+      profileHeight="38"
+      showProfile="true"
+      x="30"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="demondland.iconStyle2"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="27"
+      loadingY="27"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="34"
+      iconHeight="34"
+      x="8"
+      y="9" />
+    <!-- 攻打奖励图标 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="demonland.goodsItem3"
+      iconStyle="demondland.iconStyle3"
+      textStyle="demonland.itemView3"
+      lockStyle="core.BagCellLock"
+      profileStyle="core.GoodsProfileBG"
+      profileX="6"
+      profileY="7"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="demondland.iconStyle3"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="27"
+      loadingY="27"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="56"
+      iconHeight="56"
+      x="8"
+      y="9" />
+    <custom
+      classname="asset.DemonLand.resource.main.mcMap"
+      stylename="asset.DemonLand.resource.main.mcMap"
+      x="276"
+      y="186" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="demonland.itemView1"
+      parentStyle="core.BaseItemText"
+      x="13"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="demonland.itemView2"
+      parentStyle="core.BaseItemText"
+      x="4"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="demonland.itemView3"
+      parentStyle="core.BaseItemText"
+      x="24"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DemonLand.DemonLandFrame.btnAddCount"
+      backStyle="asset.DemonLand.btnBuyCount.imgAdd"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="956"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DemonLand.AwardView.btnAddCount"
+      backStyle="asset.DemonLand.btnBuyCount.imgAdd"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="180"
+      y="296" />
+    <component
+      stylename="DemonLand.DemonRoadMapIcon.icon"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.DemonLand.proIcon.imgLock,asset.DemonLand.proIcon.imgOpen,asset.DemonLand.proIcon.imgCurrent"
+      x="0"
+      y="0" />
+    <component
+      stylename="DemonLand.DemonRoadMapIcon.star2"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.DemonLand.star.star0,asset.DemonLand.star.star1"
+      x="26"
+      y="54" />
+    <component
+      stylename="DemonLand.AwardBox.star"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.DemonLand.star.star0,asset.DemonLand.star.star1"
+      x="9"
+      y="38" />
+    <component
+      stylename="DemonLand.LevelStateIcon.icon"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.DemonLand.levelIcon.imgLock,asset.DemonLand.levelIcon.imgPassed,asset.DemonLand.levelIcon.imgCurrent,asset.DemonLand.levelIcon.imgBoss"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DemonLand.AwardView.btnSwap"
+      backStyle="asset.DemonLand.btnSwap.btn6"
+      iconStyle="asset.DemonLand.btnSwap.icon"
+      iconInnerRectString="33,49,10,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="230"
+      y="326" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DemonLand.AwardView.btnAttack"
+      backStyle="asset.DemonLand.btnAttack.btn5"
+      iconStyle="asset.DemonLand.btnAttack.icon"
+      iconInnerRectString="2,57,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false"
+      x="88"
+      y="326" />
+    <component
+      stylename="DemonLand.AwardView.bg2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.bg2"
+      x="31"
+      y="44" />
+    <component
+      stylename="DemonLand.AwardView.bg3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.bg3"
+      x="42"
+      y="62" />
+    <component
+      stylename="DemonLand.AwardView.bg4"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.bg3"
+      x="42"
+      y="171" />
+    <component
+      stylename="DemonLand.AwardView.str1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.str1"
+      x="49"
+      y="179" />
+    <component
+      stylename="DemonLand.AwardView.str2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.str2"
+      x="49"
+      y="71" />
+    <component
+      stylename="DemonLand.AwardView.str3"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.str3"
+      x="49"
+      y="301" />
+    <component
+      stylename="DemonLand.AwardView.attbg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.award.bg4"
+      x="57"
+      y="15" />
+    <component
+      stylename="DemonLand.AwardView.imgTear"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.tear1"
+      x="85"
+      y="11" />
+    <component
+      stylename="DemonLand.AwardView.txtCost"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.AwardView.txtCost_t"
+      type="dynamic"
+      width="48"
+      height="19"
+      x="48"
+      y="14" />
+    <component
+      stylename="DemonLand.AwardView.txtAttCount"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.AwardView.txtAttCount_t"
+      type="dynamic"
+      width="48"
+      height="19"
+      x="138"
+      y="301" />
+    <component
+      stylename="DemonLand.DemonLandFrame.awardGet"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.awardGet"
+      x="0"
+      y="0" />
+    <component
+      stylename="DemonLand.DemonLandFrame.bg1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.bg1"
+      x="-2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DemonLand.AwardBox.box"
+      backStyle="asset.DemonLand.resource.main.box"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      stylename="DemonLand.DemonLandFrame.str1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.str1"
+      x="97"
+      y="166" />
+    <component
+      stylename="DemonLand.DemonLandFrame.bg2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.bg2"
+      x="25"
+      y="51" />
+    <component
+      stylename="DemonLand.DemonLandFrame.imgTitle"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.imgTitle"
+      x="450"
+      y="52" />
+    <component
+      stylename="DemonLand.DemonLandFrame.imgTear"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.tear1"
+      x="880"
+      y="88" />
+    <component
+      stylename="DemonLand.DemonLandMapRoad.map2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.map2"
+      x="35"
+      y="23" />
+    <component
+      stylename="DemonLand.DemonLandMapRoad.map1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.main.map1"
+      x="43"
+      y="33" />
+    <component
+      stylename="DemonLand.DemonLandFrame.bar"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DemonLand.resource.main.bar"
+      x="244"
+      y="561"
+      width="470" />
+    <component
+      stylename="DemonLand.DemonLandFrame.barbg"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DemonLand.resource.main.barbg"
+      x="240"
+      y="607"
+      width="595" />
+    <component
+      stylename="DemonLand.DemonLandLevelSelectFrame.imgBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.level.imgBg"
+      x="3"
+      y="-61" />
+    <component
+      stylename="DemonLand.DemonLandLevelSelectFrame.bar"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DemonLand.resource.level.bar"
+      x="78"
+      y="108" />
+    <component
+      stylename="DemonLand.DemonLandLevelSelectFrame.barbg"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DemonLand.resource.level.barbg"
+      scaleGridString="7,4,14,5"
+      width="816"
+      height="14"
+      x="100"
+      y="106" />
+    <component
+      stylename="DemonLand.DemonLandLevelSelectFrame.str1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DemonLand.resource.level.str1"
+      x="340"
+      y="165" />
+    <!-- 主界面 -->
+    <component
+      stylename="demonland.DemonLandFrame"
+      classname="demonland.DemonLandFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="1030"
+      height="651"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,33,45,29,14"
+      moveInnerRectString="0,30,50,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <!-- 章节选择 -->
+    <component
+      stylename="demonland.DemonLandLevelSelectFrame"
+      classname="demonland.DemonLandLevelSelectFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="994"
+      height="305"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,20,10,29,14"
+      moveInnerRectString="0,30,10,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      stylename="demonland.DemonLandLevelSelect.title"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.t1"
+      type="dynamic"
+      width="300"
+      height="40"
+      x="350"
+      y="8" />
+    <!-- 奖励界面 -->
+    <component
+      stylename="demonland.AwardView"
+      classname="demonland.AwardView"
+      parentStyle="core.Frame2"
+      containerX="-20"
+      containerY="0"
+      width="387"
+      height="438" />
+    <component
+      stylename="DemonLand.DemonRoadMapIcon.txtLevel"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.DemonRoadMapIcon.txtLevel_t"
+      type="dynamic"
+      width="48"
+      height="19"
+      x="12"
+      y="26" />
+    <component
+      stylename="DemonLand.AwardBox.txtStar"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.AwardBox.txtStar_t"
+      type="dynamic"
+      width="29"
+      height="19"
+      x="26"
+      y="42" />
+    <component
+      stylename="DemonLand.DemonLandFrame.txtStrOwn"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.DemonLandFrame.txtStrOwn_t"
+      type="dynamic"
+      width="183"
+      height="19"
+      x="700"
+      y="93" />
+    <component
+      stylename="DemonLand.DemonLandFrame.txtItemCount"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.DemonLandFrame.txtItemCount_t"
+      type="dynamic"
+      width="48"
+      height="19"
+      x="906"
+      y="93" />
+    <component
+      stylename="DemonLand.DemonLandFrame.txtDesc"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DemonLand.DemonLandFrame.txtDesc_t"
+      type="dynamic"
+      width="154"
+      height="68"
+      x="50"
+      y="355"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      stylename="DemonLand.tearTip"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.DemonLand.proIcon.imgCurrent"
+      x="885"
+      y="91"
+      width="72"
+      height="21"
+      alpha="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <component
+      stylename="DemonLand.DemonLandLevelSelectFrame.preBtn"
+      classname="com.pickgliss.ui.controls.BaseButton"
+      backStyle="asset.DemonLandLevelSelectFrame.pageBar.preBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="150" />
+    <component
+      stylename="DemonLand.DemonLandLevelSelectFrame.nextBtn"
+      classname="com.pickgliss.ui.controls.BaseButton"
+      backStyle="asset.DemonLandLevelSelectFrame.pageBar.nextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="950"
+      y="150" />
+  </components>
+</style>

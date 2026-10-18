@@ -1,0 +1,339 @@
+<style name="theseusgodhead" source="ui/zh_cn/swf/theseusgodhead.swf">
+	<sets>
+		<!-- Text Formats -->
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.taskItemName_t"
+			args="Arial,14,0xffffff,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.taskItemDesc_t"
+			args="Arial,12,0xe3bf96,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.taskItemProgress_t"
+			args="Arial,12,0xfff6ce,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.taskItemReward_t"
+			args="Arial,12,0x00d8ff,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.taskItemStatus_t"
+			args="Arial,12,0xffa5a3,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.taskReceiveBtn_t"
+			args="Arial,14,0xffffff,true,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.godheadViewDesc_t"
+			args="Arial,12,0xe4d29c,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.godheadEquippedTxt_t"
+			args="Arial,12,0xe4d29c,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.godheadbaglvtxt_t"
+			args="Arial,12,0xfff9d2,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.godheadbagcosttxt_t"
+			args="Arial,14,0xdecfa4,,,,,,left" leading="0" />
+
+
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.godheadbagnametxt_t"
+			args="Arial,12,0xe4d29c,,,,,,left" leading="0" />
+		<!-- Filters -->
+		<set type="flash.filters.GlowFilter" stylename="theseusgodhead.taskItem_f"
+			args="0x000000,1,2,2,1" />
+
+		<set type="flash.text.TextFormat" stylename="theseusgodhead.actionButtonTxt_t"
+			args="Arial,12,0xFFEBC5,,,,,,center" leading="0"  letterSpacing="0" />
+	</sets>
+	<bitmaps>
+		<!-- Task Item Background -->
+		<bitmapData resourceLink="theseusgodhead.taskItemBg" x="0"
+			y="0" />
+
+		<!-- Godhead Stones -->
+		<bitmapData resourceLink="theseusgodhead.stone1" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.stone2" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.stone3a" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.stone3b" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.stone4a" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.stone4b" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.stone4c" x="0" y="0" />
+
+		<!-- Grid Backgrounds -->
+		<bitmapData resourceLink="theseusgodhead.gridBg" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.gridLocked" x="0"
+			y="0" />
+
+		<!-- Fragments -->
+		<bitmapData resourceLink="theseusgodhead.fragmentOrange" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentOrange2"
+			x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentPurple" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentPurple2"
+			x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentGreen" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentGreen2" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentBlue" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.fragmentBlue2" x="0"
+			y="0" />
+		<bitmapData resourceLink="TheseusGodHeadbagselect" x="-5"
+			y="-5" />
+
+		<!-- Dust -->
+		<bitmapData resourceLink="theseusgodhead.dust1" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.dust" x="0" y="0" />
+
+		<!-- Background and Icons -->
+		<bitmapData resourceLink="theseusgodhead.bg" x="0" y="0" />
+		<bitmapData resourceLink="theseusgodhead.entryIcon" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.bagSelected" x="0"
+			y="0" />
+
+		<!-- Skill Frame -->
+		<bitmapData resourceLink="theseusgodhead.skillFrameBg" x="0"
+			y="0" />
+		<bitmapData resourceLink="theseusgodhead.skillFrameOl" x="0"
+			y="0" />
+
+		<!-- Upgrade Effects -->
+		<bitmapData resourceLink="theseusgodhead.upgradeCircle" x="0"
+			y="0" />
+	</bitmaps>
+	<customDisplay>
+		<!-- Task Item -->
+		<custom classname="com.pickgliss.ui.image.Scale9CornerImage"
+			stylename="theseusgodhead.taskItemBg" resourceLink="theseusgodhead.taskItemBg"
+			rect="10,10,10,10" x="0" y="0" />
+
+
+		<custom stylename="theseusgodhead.item.GodheadUpStarCell"
+			classname="theseusgodhead.item.GodheadUpStarCell" fashionStyle="core.FashionLevel"
+			fashionTextY="24" fashionIconY="21" iconWidth="42" iconHeight="42"
+			profileX="1" profileY="1" equipStyle="asset.core.HeroEquipIcon"
+			profileWidth="43" profileHeight="43" backgroundStyle="core.ItemBack"
+			iconStyle="core.BaseItemViewIcon" textStyle="core.BaseItemText"
+			fullStyleY="1" fullStyleX="2" fullStyle="asset.tips.addImg" lvStyle="ui.theseusbagCell.lvText"
+			profileStyle="ui.theseus.warCell.Profile2" strengthenStyle="core.goods.Strengthen"
+			strengthenX="24" strengthenY="24" showProfile="true" />
+
+
+
+		<!-- Godhead Grid -->
+		<custom classname="theseusgodhead.UI.TheseusGodgrid" stylename="theseusgodhead.grid"
+			x="0" y="0" />
+	</customDisplay>
+	<components>
+		<!-- Containers -->
+		<component classname="com.pickgliss.ui.controls.container.HBox"
+			stylename="theseusgodhead.actionHBox" spacing="-5" x="0" y="-15" />
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="theseusgodhead.taskVBox" spacing="5" x="10" y="10" />
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="theseusgodhead.totalVBox" spacing="10" x="20" y="20" />
+
+		<!-- Panels -->
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="theseusgodhead.taskPanel" vScrollbarStyle="core.VScrollbar02"
+			vScrollbarInnerRectString="11,0,-5,-5,3" viewportInnerRectString="0,2,0,2,5"
+			vScrollProxy="1" vUnitIncrement="5" width="350" height="400" x="20"
+			y="50" />
+
+		<!-- Buttons -->
+
+		<component classname="com.pickgliss.ui.controls.SelectedTextButton"
+			stylename="theseusgodhead.actionButton" selectedStyle="asset.core.Style26SelectedBtn"
+			unSelectedStyle="asset.core.Style26UnSelectedBtn" textStyle="theseusgodhead.actionButtonTxt"
+			backgoundInnerRectString="-3,90,10,30,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="75" x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="theseusgodhead.decomposeBtn" backStyle="asset.warFrame.HookReceiveBack"
+			textStyle="theseusgodhead.decomposeBtnTxt" backgoundInnerRectString="5,94,9,40,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="80" height="30" x="625" y="440" />
+
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="theseusgodhead.rotateBtn" backStyle="asset.warFrame.HookReceiveBack"
+			textStyle="theseusgodhead.rotateBtnTxt" backgoundInnerRectString="5,94,9,40,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="80" height="30" x="530" y="440" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.decomposeBtnTxt" textFormatStyle="theseusgodhead.actionButtonTxt_t"
+			filterString="core.normal_f" autoSize="none" width="80" height="19"
+			y="9" x="8" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.rotateBtnTxt" textFormatStyle="theseusgodhead.actionButtonTxt_t"
+			filterString="core.normal_f" autoSize="none" width="80" height="19"
+			y="10" x="8" />
+
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="theseusgodhead.taskReceiveBtn" textStyle="theseusgodhead.taskReceiveBtn_t"
+			backStyle="asset.core.Style11Btn" width="100" height="30" x="200" y="100" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.actionButtonTxt" textFormatStyle="theseusgodhead.actionButtonTxt_t"
+			filterString="core.normal_f" autoSize="none" width="99" height="34"
+			x="-2" y="7"  wordWrap="true" />
+		<!-- Text Fields -->
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.taskItemName" textFormatStyle="theseusgodhead.taskItemName_t"
+			filterString="theseusgodhead.taskItem_f" autoSize="none" width="200"
+			height="20" x="10" y="5" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.taskItemDesc" textFormatStyle="theseusgodhead.taskItemDesc_t"
+			filterString="theseusgodhead.taskItem_f" autoSize="none" width="210"
+			height="65" x="5" y="5" wordWrap="true" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.taskItemProgress" textFormatStyle="theseusgodhead.taskItemProgress_t"
+			filterString="theseusgodhead.taskItem_f" autoSize="none" width="200"
+			height="20" x="10" y="75" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.taskItemReward" textFormatStyle="theseusgodhead.taskItemReward_t"
+			filterString="theseusgodhead.taskItem_f" autoSize="none" width="200"
+			height="20" x="10" y="95" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="theseusgodhead.taskItemStatus" textFormatStyle="theseusgodhead.taskItemStatus_t"
+			filterString="theseusgodhead.taskItem_f" autoSize="none" width="100"
+			height="20" x="220" y="5" />
+
+		<!-- Images -->
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone1" resourceLink="theseusgodhead.stone1"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone2" resourceLink="theseusgodhead.stone2"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone3a" resourceLink="theseusgodhead.stone3a"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone3b" resourceLink="theseusgodhead.stone3b"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone4a" resourceLink="theseusgodhead.stone4a"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone4b" resourceLink="theseusgodhead.stone4b"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.stone4c" resourceLink="theseusgodhead.stone4c"
+			x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.gridBg" resourceLink="theseusgodhead.gridBg"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.gridLocked" resourceLink="theseusgodhead.gridLocked"
+			x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentOrange" resourceLink="theseusgodhead.fragmentOrange"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentOrange2" resourceLink="theseusgodhead.fragmentOrange2"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentPurple" resourceLink="theseusgodhead.fragmentPurple"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentPurple2" resourceLink="theseusgodhead.fragmentPurple2"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentGreen" resourceLink="theseusgodhead.fragmentGreen"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentGreen2" resourceLink="theseusgodhead.fragmentGreen2"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentBlue" resourceLink="theseusgodhead.fragmentBlue"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.fragmentBlue2" resourceLink="theseusgodhead.fragmentBlue2"
+			x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.dust1" resourceLink="theseusgodhead.dust1"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.dust" resourceLink="theseusgodhead.dust" x="0"
+			y="0" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.bg" resourceLink="theseusgodhead.bg" x="0"
+			y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.entryIcon" resourceLink="theseusgodhead.entryIcon"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.bagSelected" resourceLink="theseusgodhead.bagSelected"
+			x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.skillFrameBg" resourceLink="theseusgodhead.skillFrameBg"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.skillFrameOl" resourceLink="theseusgodhead.skillFrameOl"
+			x="0" y="0" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.godheadViewDesc" textFormatStyle="ui.SkyTreasure.godheadViewDesc_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="19"
+			x="25" y="346" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.godheadEquippedTxt" textFormatStyle="ui.SkyTreasure.godheadEquippedTxt_t"
+			filterString="core.normal_f" autoSize="none" width="204" height="47"
+			x="30" y="369"  wordWrap="true" />
+	<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.godheadbaglvtxt" textFormatStyle="ui.SkyTreasure.godheadbaglvtxt_t"
+			filterString="core.normal_f" autoSize="none" width="93" height="25"
+			x="10" y="2" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.godheadbagcosttxt" textFormatStyle="ui.SkyTreasure.godheadbagcosttxt_t"
+			filterString="core.normal_f" autoSize="none" width="93" height="25"
+			x="150" y="280" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.godheadbagnametxt" textFormatStyle="ui.SkyTreasure.godheadbagnametxt_t"
+			filterString="core.normal_f" autoSize="none" width="90" height="35"
+			x="3" y="65"  wordWrap="true" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="theseusgodhead.upgradeCircle" resourceLink="theseusgodhead.upgradeCircle"
+			x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.controls.IconButton"
+			stylename="ui.TheseusGodHeadupstarBtn.star2Btn" backStyle="asset.core.Style11Btn"
+			iconStyle="TheseusGodHeadupstarBtn" iconInnerRectString="46,50,14,22,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			x="105" y="348" />
+
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="TheseusGodheadUpgradeView.confirmBtn" backStyle="asset.core.Style11Btn"
+			backgoundInnerRectString="-10,151,12,50,13" textStyle="TheseusGodheadUpgradeView.confirmBtnTxt"
+			autoSizeAble="false"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="151" height="50" x="105" y="300" />
+
+		<component classname="com.pickgliss.ui.text.GradientText"
+			stylename="TheseusGodheadUpgradeView.confirmBtnTxt" textFieldStyle="bossName.timeTxt1"
+			colors="0xffd972,0xffffff" alphas="1,1" ratios="60,230" filterString="ui.bossName.Txt_f"
+			autoSize="none" width="170" height="25" x="235" y="100" />
+	
+	<component classname="theseusgodhead.TheseusGodheadFrame" stylename="theseusgodhead.TheseusGodheadFrame"
+			parentStyle="core.Frame2" moveEnable="false" containerX="18"
+			containerY="43" width="292" height="358" />
+
+		<component stylename="heseusGodheadUpgradeView.taskbtnBtn"
+			classname="com.pickgliss.ui.controls.TextButton" backStyle="asset.core.Style16Btn"
+			backgoundInnerRectString="12,0,2,0" width="69" height="24" x="270" y="28"
+			textStyle="armyII.InformationChangeHeadBtnTxt" autoSizeAble="false"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			alpha="1" buttonMode="true" displacement="true" enable="true"
+			enableHtml="false" isFollowMouse="true" mouseChildren="false"
+			mouseEnabled="true" pressEnable="false" scaleX="1" scaleY="1"
+			tipGapH="0" tipGapV="0" />
+
+
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="ui.theseuscollection.StarVbox" x="88" y="45" strictWidth="20"
+			autoCenter="true" spacing="-1" />
+		<component stylename="theseusgodhead.view.GodItemSellView" classname="theseusgodhead.view.GodItemSellView"
+			parentStyle="core.Frame2" closeInnerRectString="29,3,12,29,14"
+			containerX="8" containerY="47" width="257" height="519" escEnable="false"
+			x="785" y="-32" />
+	</components>
+</style>

@@ -1,0 +1,984 @@
+<style
+  name="guildfb"
+  source="ui/zh_cn/swf/guildfb.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.areaDesTxt_t"
+      args="Arial,12,0xFFB30F,true,,,,,center"
+      leading="4"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.areaCountTxt_t"
+      args="Arial,14,0xedd297,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.areaHurtCountTxt_t"
+      args="Arial,14,0xedd297,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.areaNameTxt_t"
+      args="Arial,14,0xfff1d2,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.toptimeTxt_t"
+      args="Arial,14,0xDFBB5C,true,,,,,center"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.fightTimeDesTxt_t"
+      args="Arial,12,0xffb99a,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.nodeIdxTxt_t"
+      args="Arial,14,0xffe400,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.nodeIdxTxt_t2"
+      args="Arial,14,0xcecbb6,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.fightInfoDes_t"
+      args="Arial,12,0xd56e41,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.guildfbTipTitle_t"
+      args="Arial,14,0x9431db,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.guildfbTipContentDes_t"
+      args="Arial,12,0xe9c68c,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.guildfbTipFlgDes_t"
+      args="Arial,12,0x55c03b,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.guildfbTipFlgTitle_t"
+      args="Arial,12,0xffc600,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.bossHpTxt_t"
+      args="Arial,14,0xffffff,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRankFrame.rankTxt_t"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRankFrame.guildInNameTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRankItem.guildNameTxt_t"
+      args="Arial,12,0xdcc350,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRankItem.rankTxt_t"
+      args="Arial,12,0xffebc5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.areaNodeTipTitle_t"
+      args="Arial,14,0xffc660,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildfb.leaddesTxt_t"
+      args="Arial,12,0xFF0000,true,,,,,center"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRewardItem.rankTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,left"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRewardFrame.tipTxt_t"
+      args="Arial,12,0xFF0000,,,,,,center"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRankFrame.lastUpdateTimeTxt_t"
+      args="Arial,12,0xffebc5,,,,,,left"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="guildFBRankItem.HBoxItemTxt_t"
+      args="Arial,12,0xffffff,true,,,,,right"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.guild.area.mvp"
+      x="306"
+      y="146" />
+    <bitmapData
+      resourceLink="asset.guild.top.end"
+      x="289"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.guild.top.racing"
+      x="289"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.guild.top.back"
+      x="-8"
+      y="-17" />
+    <bitmapData
+      resourceLink="asset.guild.botoom.back"
+      x="20"
+      y="-6" />
+    <bitmapData
+      resourceLink="asset.guild.botoom.boxBack"
+      x="5"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.guild.botoom.getFlg"
+      x="11"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.guild.fight.flg"
+      x="119"
+      y="292" />
+    <bitmapData
+      resourceLink="asset.guild.nodeFlg"
+      x="-13"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.guild.fight.pbar"
+      x="21"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.guildfb.diffMask"
+      x="72"
+      y="45" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.guildfb.headIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="44"
+      y="196" />
+    <custom
+      classname="consortia.view.fb.GuildFBTopUIView"
+      stylename="ui.guildfb.topUI"
+      x="82"
+      y="64" />
+    <custom
+      classname="consortia.view.fb.GuildFBBotoomUIView"
+      stylename="ui.guildfb.botoomUI"
+      x="433"
+      y="663" />
+    <custom
+      classname="consortia.view.fb.item.GuildFBAreaBoxItem"
+      stylename="ui.guildfb.bBoxItem"
+      x="-8"
+      y="-1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.guildfb.buffIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      tipStyle="yishi.view.tips.GuildFbOneBuffTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.guildfb.scrollVbox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.guildfb.fightRWbox"
+      x="172"
+      y="215"
+      spacing="10"
+      autoCenter="true" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.guildfb.fightBuffbox"
+      x="177"
+      y="84"
+      spacing="10"
+      autoCenter="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.guildfb.guildfbBuffIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="25"
+      loadingY="25"
+      x="16"
+      y="11" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.guildfb.fight.playerInfoIcon"
+      parentStyle="core.armymanage.PlayerIconIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="0" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="ui.guildfb.bossHp"
+      x="45"
+      y="53" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.guildfb.raceSIdx"
+      x="0"
+      y="0" />
+    <custom
+      classname="consortia.view.fb.item.GuildFBAreaBoxItem"
+      stylename="ui.guildfb.GuildFBAreaBoxItem"
+      tipStyle="yishi.view.tips.GuildFBAreaBoxTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.guildfb.areaBoxTitleList"
+      vSpace="10"
+      hSpace="10"
+      x="31"
+      y="45" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.guildfb.areaRewardbox"
+      x="50"
+      y="6"
+      spacing="10" />
+    <custom
+      classname="yishi.view.base.HRollItemPanel"
+      stylename="ui.guildfb.areaRewardRollPanel"
+      x="0"
+      y="87" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="guildFBRankItem.BaseItemView"
+      iconStyle="guildFBRankItem.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="guildFBRankItem.HBoxItemTxt"
+      profileX="0"
+      profileY="0"
+      profileWidth="30"
+      profileHeight="30"
+      showProfile="true"
+      showCount="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="guildFBRankItem.BaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="30"
+      iconHeight="30"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ui.guildfb.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="guildfb.helpTxt"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="525" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ui.guildfb.helpFrame1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="guildfb.helpTxt1"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="525" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1079"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankItem.HBoxItemTxt"
+      textFormatStyle="guildFBRankItem.HBoxItemTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="32"
+      x="0"
+      y="12" />
+    <component
+      stylename="consortia.view.fb.GuildFbFrame"
+      classname="consortia.view.fb.GuildFbFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      width="1227"
+      height="742"
+      closeInnerRectString="29,67,90,29,14"
+      moveInnerRectString="376,57,50,0,9" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.GuildFBAreaRewardFrame.back"
+      parentStyle="core.quickBuyFrameBg"
+      width="382"
+      height="400" />
+    <component
+      stylename="consortia.view.fb.GuildFBAreaRewardFrame"
+      classname="consortia.view.fb.GuildFBAreaRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="ui.GuildFBAreaRewardFrame.back"
+      containerX="-4"
+      containerY="21"
+      width="380"
+      height="370"
+      closeInnerRectString="29,-15,-5,29,14"
+      titleOuterRectPosString="0,-8,1"
+      moveInnerRectString="376,25,0,0,9" />
+    <component
+      stylename="consortia.view.fb.GuildFBRewardFrame"
+      classname="consortia.view.fb.GuildFBRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="ui.GuildFBAreaRewardFrame.back"
+      containerX="-4"
+      containerY="21"
+      width="369"
+      height="375"
+      closeInnerRectString="29,-15,-5,29,14"
+      titleOuterRectPosString="0,-8,1"
+      moveInnerRectString="376,25,0,0,9" />
+    <component
+      stylename="consortia.view.fb.GuildFBRankFrame"
+      classname="consortia.view.fb.GuildFBRankFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="46"
+      width="550"
+      height="500"
+      closeInnerRectString="29,-15,-5,29,14"
+      titleOuterRectPosString="0,12,1"
+      moveInnerRectString="376,25,0,0,9" />
+    <component
+      stylename="consortia.view.fb.GuildFBFightFrame"
+      classname="consortia.view.fb.GuildFBFightFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="46"
+      width="385"
+      height="445"
+      closeInnerRectString="29,13,15,29,14"
+      moveInnerRectString="376,27,10,0,9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.GuildFBFightInfoFrame.back"
+      resourceLink="asset.guild.fightScaleBack"
+      scaleGridString="17,17,67,81" />
+    <component
+      stylename="consortia.view.fb.GuildFBFightInfoFrame"
+      classname="consortia.view.fb.GuildFBFightInfoFrame"
+      parentStyle="core.Frame2"
+      backStyle="ui.GuildFBFightInfoFrame.back"
+      containerX="11"
+      containerY="0"
+      width="170"
+      height="380"
+      closeInnerRectString="29,-5,-5,29,14"
+      moveInnerRectString="170,27,10,0,9" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.guildfb.areaRewardBack"
+      resourceLink="asset.guild.area.back,asset.guild.area.hurt,asset.guild.area.fight"
+      imageRectString="0|0|19,140|247|19,140|224|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.areaRightBtn"
+      backStyle="asset.guild.area.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="342"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.areaLeftBtn"
+      backStyle="asset.guild.area.leftBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="11"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.areaDesTxt"
+      textFormatStyle="ui.guildfb.areaDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="327"
+      height="52"
+      x="27"
+      y="27"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.areaCountTxt"
+      textFormatStyle="ui.guildfb.areaCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="145"
+      height="20"
+      x="239"
+      y="222" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.areaHurtCountTxt"
+      textFormatStyle="ui.guildfb.areaHurtCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="145"
+      height="20"
+      x="219"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.areaNameTxt"
+      textFormatStyle="ui.guildfb.areaNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="139"
+      y="191" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.guildfb.mainBack"
+      resourceLink="asset.guild.boxBack,asset.guild.title"
+      imageRectString="0|0|19,511|13|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.allrewardBtn"
+      backStyle="asset.guild.allBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="905"
+      y="647" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.guildfb.topJiliBtn"
+      resourceLink="asset.guild.top.jili"
+      tipStyle="yishi.view.tips.GuildFbPreviewBuffTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="68"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.raceSortBtn"
+      backStyle="asset.guild.top.sort"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="239"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.raceRewardBtn"
+      backStyle="asset.guild.top.reward"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="155"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.toptimeTxt"
+      textFormatStyle="ui.guildfb.toptimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="175"
+      height="20"
+      x="45"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.guildfb.botoomTitle"
+      resourceLink="asset.guild.botoom.t1,asset.guild.botoom.t2,asset.guild.botoom.t3,asset.guild.botoom.t4,asset.guild.botoom.t5"
+      x="572"
+      y="697" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.guildfb.botoomBox"
+      resourceLink="asset.guild.botoom.nogetBox,asset.guild.botoom.getBox,asset.guild.botoom.hasGetBox"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.normalBtn"
+      backStyle="asset.guild.normalBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1038"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.advanceBtn"
+      backStyle="asset.guild.advanceBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1038"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.bigRightBtn"
+      backStyle="asset.guild.trunRightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1146"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.bigLeftBtn"
+      backStyle="asset.guild.turnLeftBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="47"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.guildfb.map"
+      resourceLink="asset.guildfb.map1,asset.guildfb.map2,asset.guildfb.map3,asset.guildfb.map4,asset.guildfb.map5"
+      x="83"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.guildfb.fightBack"
+      resourceLink="asset.guild.fight.back,asset.guild.fight.tback,asset.guild.fight.t1,asset.guild.fight.tback,asset.guild.fight.t2"
+      imageRectString="0|0|19,15|14|19,24|22|19,15|156|19,24|163|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.fightBtn"
+      backStyle="asset.guild.fight.btn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="121"
+      y="293" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.fightTimeDesTxt"
+      textFormatStyle="ui.guildfb.fightTimeDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="255"
+      height="18"
+      x="104"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.guildfb.nodeImg"
+      resourceLink="asset.guild.node1,asset.guild.node2"
+      x="31"
+      y="58"
+      autoHCenter="true"
+      autoVCenter="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.nodeIdxTxt"
+      textFormatStyle="ui.guildfb.nodeIdxTxt_t,ui.guildfb.nodeIdxTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="11"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.guildfb.fightInfoInnerBack"
+      parentStyle="core.describeBackground_style06"
+      width="130"
+      height="296"
+      x="10"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.guildfb.enterShopBtn"
+      backStyle="asset.guild.enterShop"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="132"
+      y="594" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.guildfb.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,115,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      width="85"
+      height="270"
+      x="42"
+      y="77" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.fightInfoDes"
+      textFormatStyle="ui.guildfb.fightInfoDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="145"
+      height="40"
+      x="2"
+      y="30"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.bossHpTxt"
+      textFormatStyle="ui.guildfb.bossHpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="272"
+      height="19"
+      x="2"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.guildfbTipTitle"
+      textFormatStyle="ui.guildfb.guildfbTipTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="255"
+      height="20"
+      x="78"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.guildfbTipContentDes"
+      textFormatStyle="ui.guildfb.guildfbTipContentDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="255"
+      height="40"
+      wordWrap="true"
+      multiline="true"
+      x="78"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.guildfbTipFlgDes"
+      textFormatStyle="ui.guildfb.guildfbTipFlgDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="255"
+      height="40"
+      wordWrap="true"
+      x="78"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.guildfbTipFlgTitle"
+      textFormatStyle="ui.guildfb.guildfbTipFlgTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="68"
+      height="20"
+      x="6"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="guildFBRankFrame.bg"
+      resourceLink="asset.guild.rank.bg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="guildFBRankFrame.pageBg"
+      resourceLink="asset.guild.rank.pageBg"
+      x="388"
+      y="307" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="guildFBRankFrame.guildbg"
+      resourceLink="asset.guild.rank.guildbg"
+      x="3"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="guildFBRankFrame.rankImg"
+      resourceLink="asset.guild.rank.rankImg"
+      x="5"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="guildFBRankFrame.rankTxtBg"
+      resourceLink="asset.guild.rangk.txtBgLeft,asset.guild.rank.txtBgMiddle,asset.guild.rank.txtBgRight"
+      x="72"
+      y="380"
+      width="82"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.rankTxt"
+      textFormatStyle="guildFBRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="5"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.guildNameTxt"
+      textFormatStyle="guildFBRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="100"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.currentLevelTxt"
+      textFormatStyle="guildFBRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="245"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.progressTxt"
+      textFormatStyle="guildFBRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="400"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.seasonRewardTxt"
+      textFormatStyle="guildFBRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="400"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.pageTxt"
+      textFormatStyle="guildFBRankFrame.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="390"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="guildFBRankFrame.preBtn"
+      parentStyle="core.LastPageBtn"
+      x="318"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="guildFBRankFrame.nextBtn"
+      parentStyle="core.NextPageBtn"
+      x="454"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.guildInNameTxt"
+      textFormatStyle="guildFBRankFrame.guildInNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="282"
+      height="20"
+      x="80"
+      y="348" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.selfRankTxt"
+      textFormatStyle="guildFBRankFrame.guildInNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="80"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankFrame.lastUpdateTimeTxt"
+      textFormatStyle="guildFBRankFrame.lastUpdateTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="308"
+      height="20"
+      x="10"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.areaNodeTipTitle"
+      textFormatStyle="ui.guildfb.areaNodeTipTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="288"
+      height="39"
+      x="4"
+      y="7"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="guildFBRankFrame.vBox"
+      spacing="7"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankItem.rankTxt"
+      textFormatStyle="guildFBRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="5"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankItem.guildNameTxt"
+      textFormatStyle="guildFBRankItem.guildNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="60"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankItem.currentLevelTxt"
+      textFormatStyle="guildFBRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="235"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRankItem.progressTxt"
+      textFormatStyle="guildFBRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="410"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="guildFBRankItem.seasonRewardHox"
+      spacing="2"
+      x="360"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildfb.leaddesTxt"
+      textFormatStyle="ui.guildfb.leaddesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="350"
+      height="35"
+      x="12"
+      y="272"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRewardFrame.tipTxt"
+      textFormatStyle="guildFBRewardFrame.tipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="40"
+      wordWrap="true"
+      x="0"
+      y="285" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="guildFBRewardFrame.rewardVbox"
+      spacing="12"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="guildFBRewardItem.rankTxt"
+      textFormatStyle="guildFBRewardItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="guildFBRewardItem.rewardHbox"
+      spacing="12"
+      x="100"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="guildFBRewardFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="350"
+      height="255"
+      x="0"
+      y="15" />
+  </components>
+</style>

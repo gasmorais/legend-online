@@ -1,0 +1,368 @@
+<style
+  name="toptoolbar"
+  source="ui/zh_cn/swf/toptoolbar.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="alchemyBtn.TotalNumTxt_f"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="onlinereward.timeText_t1"
+      args="Arial,12,0x00eef7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="onlinereward.timeText_t2"
+      args="Arial,12,0x13e827,true,,,,,center" />
+    <!-- 目标选择面板 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="toptoolbar.levelText_t"
+      args="Arial,12,0xf6e80f,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="toptoolbar.nickNameText_t"
+      args="Arial,14,0xffde00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RegressionView.describe_t"
+      args="Arial,14,0xffa800,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="toptoolbar.topBtn.stateText_t1"
+      args="Arial,12,0x1de722,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="toptoolbar.topBtn.stateText_t2"
+      args="Arial,12,0xe7b51d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="toptoolbar.topBtn.stateText_t3"
+      args="Arial,12,0xf70808,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 目标选择背景 -->
+    <bitmapData
+      resourceLink="asset.toptoolbar.TargetSelectBack"
+      y="8" />
+    <!-- 头像遮罩 -->
+    <bitmapData
+      resourceLink="asset.toptoolbar.TargetSelectMask" />
+    <bitmapData
+      resourceLink="asset.toptoolbar.alchemySoul.numberBg"
+      x="7"
+      y="9" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="toptoolbar.Container1"
+      vSpace="0"
+      hSpace="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="toptoolbar.Container2"
+      vSpace="-2"
+      hSpace="-4"
+      y="8" />
+    <!-- 目标选择面板 -->
+    <custom
+      classname="ui.toptoolbar.view.TargetSelectView"
+      stylename="toptoolbar.TargetSelectView"
+      x="-10"
+      y="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="toptoolbar.TargetIcon"
+      iconX="3"
+      iconY="3"
+      iconWidth="70"
+      iconHeight="70"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="topBtn.ActiveBoxView.SimpleTileList"
+      vSpace="0"
+      hSpace="0"
+      x="5"
+      y="5" />
+  </customDisplay>
+  <components>
+    <!-- 目标选择面板 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="toptoolbar.LevelText"
+      textFormatStyle="toptoolbar.levelText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="51"
+      y="54"
+      width="26"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="toptoolbar.NickNameText"
+      textFormatStyle="toptoolbar.nickNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="60"
+      y="30"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="toptoolbar.OperateBtn"
+      backStyle="asset.toptoolbar.TargetSelectOpBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="95"
+      y="55" />
+    <!--通用按钮-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="toptoolbar.topBtnMc"
+      resourceLink="asset.toptoolbar.topBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="toptoolbar.topBtn"
+      button="toptoolbar.topBtnMc"
+      transparentEnable="true"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,4"
+      tipGapH="0"
+      tipGapV="0"
+      manualHeight="60"
+      manualWidth="60"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--精彩活动-->
+    <component
+      stylename="toptoolbar.FunnyMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.toptoolbar.FunnyBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="toptoolbar.FunnyBtn"
+      button="toptoolbar.FunnyMc"
+      transparentEnable="true"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,4"
+      tipGapH="0"
+      tipGapV="0"
+      manualHeight="60"
+      manualWidth="60"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--计数Text	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="toptoolbar.alchemyBtn.TotalNumTxt"
+      textFormatStyle="alchemyBtn.TotalNumTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="18"
+      x="14"
+      y="14" />
+    <!-- 活动压缩按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="toptoolbar.condenseBtn"
+      backStyle="toptoolbar.condenseBtnBack"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 活动拉伸按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="toptoolbar.extrudeBtn"
+      backStyle="toptoolbar.extrudeBtn.back"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="onlinereward.timeText"
+      textFormatStyle="onlinereward.timeText_t1,onlinereward.timeText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="18"
+      width="63"
+      x="9"
+      y="65"
+      wordWrap="true" />
+    <!--buff容器底-->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="toptoolbar.bufferBack"
+      parentStyle="core.describeBackground_style36"
+      width="190"
+      height="53"
+      x="-5"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="toptoolbar.bufferHideBtn"
+      unSelectedStyle="asset.toptoolbar.bufferHideImage"
+      selectedStyle="toptoolbar.bufferHideImage.scaleY"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="16"
+      height="15"
+      x="168"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="toptoolbar.bufferHideImage.scaleY"
+      resourceLink="asset.toptoolbar.bufferHideImage"
+      scaleY="-1"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="toptoolbar.ChestOKBtn"
+      backStyle="asset.core.chest.ConfirmBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="RegressionView.back"
+      resourceLink="asset.toptoolbar.regressionBack,asset.toptoolbar.regressionPeople,asset.toptoolbar.regressionTitle"
+      imageRectString="0|465|0|186|13,-130|247|-52|273|13,100|251|-15|47|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RegressionView.btn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.toptoolbar.regressionGetIcon"
+      iconInnerRectString="28,40,12,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="172"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RegressionView.describe"
+      textFormatStyle="RegressionView.describe_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      multiline="true"
+      wordWrap="true"
+      x="88"
+      y="51"
+      width="326"
+      height="55" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="toptoolbar.targetSelectBar.VocationIconBtn"
+      parentStyle="core.VocationIcon"
+      x="70"
+      y="26" />
+    <!-- 钢铁之战 -->
+    <component
+      stylename="toptoolbar.steelMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.toptoolbar.steelBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="toptoolbar.steelBtn"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="toptoolbar.steelMc" />
+    <!-- 天空寻宝 -->
+    <component
+      stylename="toptoolbar.skyTreasureMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.toptoolbar.skyTreasureBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="toptoolbar.skyTreasureBtn"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="toptoolbar.skyTreasureMc" />
+    <!-- 古神宝藏 -->
+    <component
+      stylename="toptoolbar.godTreasureMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.toptoolbar.godTreasureBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="toptoolbar.godTreasureBtn"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="toptoolbar.godTreasureMc" />
+    <!--  时间盒子  -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="TimeActiveBoxView.back"
+      parentStyle="core.describeBackground_style047"
+      width="300"
+      height="150"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="TimeActiveBoxView.SimpleTileList"
+      vSpace="5"
+      hSpace="8"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="toptoolbar.topBtn.stateText"
+      textFormatStyle="toptoolbar.topBtn.stateText_t1,toptoolbar.topBtn.stateText_t1,toptoolbar.topBtn.stateText_t2,toptoolbar.topBtn.stateText_t3"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="65"
+      height="29"
+      x="8"
+      y="12"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="toptoolbar.condenseBtnBack"
+      resourceLink="asset.toptoolbar.condense" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="toptoolbar.extrudeBtn.back"
+      resourceLink="asset.toptoolbar.condense"
+      scaleY="-1"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="toptoolbar.preBtn"
+      backStyle="toptoolbar.preBtnBack"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="toptoolbar.nextBtn"
+      backStyle="toptoolbar.nextBtnBack"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="toptoolbar.preBtnBack"
+      resourceLink="asset.toptoolbar.preBtnBack.moveOut,asset.toptoolbar.preBtnBack.moveOver,asset.toptoolbar.preBtnBack.moveOut,asset.toptoolbar.preBtnBack.moveOut" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="toptoolbar.nextBtnBack"
+      resourceLink="toptoolbar.nextBtnBack.moveOut,toptoolbar.nextBtnBack.moveOver,toptoolbar.nextBtnBack.moveOut,toptoolbar.nextBtnBack.moveOut" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="toptoolbar.nextBtnBack.moveOut"
+      resourceLink="asset.toptoolbar.preBtnBack.moveOut"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="toptoolbar.nextBtnBack.moveOver"
+      resourceLink="asset.toptoolbar.preBtnBack.moveOver"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="toptoolbar.pageHbox"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="toptoolbar.pageImage"
+      resourceLink="asset.toptoolbar.selectPageImage,asset.toptoolbar.unselectPageImage" />
+  </components>
+</style>

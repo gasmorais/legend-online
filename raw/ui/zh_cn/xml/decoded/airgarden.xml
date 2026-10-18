@@ -1,0 +1,735 @@
+<style
+  name="airgarden"
+  source="ui/zh_cn/swf/airgarden.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCreatePartyFrame.alertText_t"
+      args="Arial,12,0xdcb55c" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenJoinPartyItem.nameText_t"
+      args="Arial,12,0xf4da94,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenJoinPartyItem.declarationText_t"
+      args="Arial,12,0xff6600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenJoinPartyItem.upItem.text_t"
+      args="Arial,12,0xFAC0FF,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignTopView.selfCountText_t"
+      args="Arial,14,0xf3e1bb,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignTopView.totalScoreText_t"
+      args="airal,14,0xffae00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignRightView.rankText_t"
+      args="Arial,12,0xb8a98d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignRightView.ListPageText_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignRightItem.rankText_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignRightItem.upText_t"
+      args="Arial,14,0xFAC0FF,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignShowItem.nameText_t"
+      args="Arial,12,0xf3ff2d,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignTopView.masterNameText_t"
+      args="Arial,16,0xf3ff2d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="AirGardenCampaignTopView.gardenUpText_t"
+      args="Arial,16,0xffdf14,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.AlchemicalExploitView.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AirGardenCampaignRightView.titleBack"
+      x="2"
+      y="51" />
+    <bitmapData
+      resourceLink="asset.AirGardenCampaignRightItem.selectBg"
+      x="0"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.AirGardenCampaignShowItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.AirGardenCampaignTopView.topBack"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="AirGardenJoinPartyItem.headIcon"
+      iconWidth="50"
+      iconHeight="50"
+      x="23"
+      y="23" />
+    <custom
+      classname="asset.AirGardenCampaignSmallMapFrame.WalkTarget"
+      stylename="AirGardenCampaignSmallMapFrame.WalkTarget" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="AirGardenCampaignShowFrame.SimpleTileList"
+      vSpace="5"
+      hSpace="10"
+      x="2"
+      y="13" />
+  </customDisplay>
+  <components>
+    <component
+      classname="airgarden.AirGardenCreatePartyFrame"
+      stylename="airGarden.AirGardenCreatePartyFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="51"
+      width="355"
+      height="260" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCreatePartyFrame.alertText"
+      textFormatStyle="AirGardenCreatePartyFrame.alertText_t"
+      filterString="core.normal_f"
+      width="80"
+      height="22"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="AirGardenCreatePartyFrame.textBack"
+      resourceLink="asset.common.ChatInputBg"
+      scaleGridString="20,10,59,7"
+      x="0"
+      y="28"
+      width="321"
+      height="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCreatePartyFrame.costText"
+      textFormatStyle="AirGardenCreatePartyFrame.alertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="22"
+      x="100"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCreatePartyFrame.declarationText"
+      textFormatStyle="core.IMChatMsgTxt_f1"
+      filterString="core.filter_01"
+      type="input"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="303"
+      height="55"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="AirGardenCreatePartyFrame.pointImage"
+      resourceLink="asset.core.SmallPointImg"
+      x="175"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="AirGardenCreatePartyFrame.sureBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="50"
+      y="131" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="AirGardenCreatePartyFrame.cancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="180"
+      y="131" />
+    <component
+      classname="airgarden.AirGardenJoinPartyFrame"
+      stylename="airGarden.AirGardenJoinPartyFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="51"
+      width="570"
+      height="530" />
+    <component
+      stylename="AirGardenJoinPartyFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="538"
+      height="428"
+      x="0"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="AirGardenJoinPartyFrame.itemPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="15,4,0,0,3"
+      viewportInnerRectString="0,10,0,0,0"
+      vScrollProxy="1"
+      width="533"
+      height="418"
+      x="4"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AirGardenJoinPartyFrame.itemVbox"
+      spacing="3" />
+    <component
+      stylename="AirGardenJoinPartyItem.itemBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.AirGardenJoinPartyItem.itemBack,asset.AirGardenJoinPartyItem.heroBack,asset.AirGardenJoinPartyItem.inputBack"
+      imageRectString="0|0|19,20|20|19,86|35|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenJoinPartyItem.nameText"
+      textFormatStyle="AirGardenJoinPartyItem.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="22"
+      x="90"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenJoinPartyItem.declarationText"
+      textFormatStyle="AirGardenJoinPartyItem.declarationText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="310"
+      height="40"
+      x="90"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AirGardenJoinPartyItem.joinBtn"
+      backStyle="asset.common.blueBtnBack"
+      iconStyle="asset.AirGardenJoinPartyItem.joinBtn.icon"
+      iconInnerRectString="22,44,9,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="415"
+      y="25" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="AirGardenJoinPartyItem.upItem"
+      firstTxtLink="AirGardenJoinPartyItem.upItem.text"
+      iconLink="asset.AirGardenJoinPartyItem.upItemImage"
+      layout="left"
+      space="2"
+      xy="270,13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenJoinPartyItem.upItem.text"
+      textFormatStyle="AirGardenJoinPartyItem.upItem.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="AirGardenJoinPartyItem.gameHbox"
+      x="270"
+      y="15"
+      strictWidth="50"
+      spacing="0" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="AirGardenJoinPartyItem.gameItem0"
+      firstTxtLink="AirGardenJoinPartyItem.upItem.text"
+      iconLink="asset.AirGardenJoinPartyItem.gameItemImage0"
+      layout="left"
+      space="2" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="AirGardenJoinPartyItem.gameItem1"
+      firstTxtLink="AirGardenJoinPartyItem.upItem.text"
+      iconLink="asset.AirGardenJoinPartyItem.gameItemImage1"
+      layout="left"
+      space="2"
+      xy="0,-2" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="AirGardenJoinPartyItem.gameItem2"
+      firstTxtLink="AirGardenJoinPartyItem.upItem.text"
+      iconLink="asset.AirGardenJoinPartyItem.gameItemImage2"
+      layout="left"
+      space="2"
+      xy="0,-2" />
+    <!--空中花园副本上方视图 -->
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="AirGardenCampaignTopView.noPartyCon"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.masterNameText"
+      textFormatStyle="AirGardenCampaignTopView.masterNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      x="95"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AirGardenCampaignTopView.gardenBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.AirGardenCampaignTopView.gardenBtnSelectTxt"
+      unselectedIconStyle="asset.AirGardenCampaignTopView.gardenBtnUnSelectTxt"
+      selectedIconInnerRectString="10,70,4,28,13"
+      unselectedIconInnerRectString="10,70,2,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="102"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AirGardenCampaignTopView.selfBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.AirGardenCampaignTopView.selfBtnSelectTxt"
+      unselectedIconStyle="asset.AirGardenCampaignTopView.selfBtnUnSelectTxt"
+      selectedIconInnerRectString="8,73,4,26,13"
+      unselectedIconInnerRectString="10,73,3,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="197"
+      y="30" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="AirGardenCampaignTopView.gardenUpItem"
+      firstTxtLink="AirGardenCampaignTopView.gardenUpItem.text"
+      iconLink="asset.AirGardenJoinPartyItem.upItemImage"
+      layout="right"
+      space="10"
+      xy="90,65"
+      y="75"
+      x="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.gardenUpItem.text"
+      textFormatStyle="AirGardenCampaignTopView.gardenUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.gardenUpText"
+      textFormatStyle="AirGardenCampaignTopView.gardenUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22"
+      x="110"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.leftUpCount"
+      textFormatStyle="AirGardenCampaignTopView.gardenUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22"
+      x="20"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.upCountDown"
+      textFormatStyle="AirGardenCampaignTopView.gardenUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22"
+      x="110"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="AirGardenCampaignTopView.partyCon"
+      x="0"
+      y="10" />
+    <component
+      stylename="AirGardenCampaignTopView.scoreImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.AirGardenCampaignTopView.totalScoreImage,asset.AirGardenCampaignTopView.selfScoreImage"
+      imageRectString="33|17|19,160|17|19"
+      x="25"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="AirGardenCampaignTopView.gameHbox"
+      x="110"
+      y="85"
+      strictWidth="50"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.selfCountText"
+      textFormatStyle="AirGardenCampaignTopView.selfCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="22"
+      x="75"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.totalScoreText"
+      textFormatStyle="AirGardenCampaignTopView.totalScoreText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      x="145"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignTopView.selfScoreText"
+      textFormatStyle="AirGardenCampaignTopView.totalScoreText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      x="300"
+      y="40" />
+    <!--空中花园副本右侧视图 -->
+    <component
+      stylename="AirGardenCampaignRightView.rightBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.AirGardenCampaignRightView.rightBack,asset.AirGardenCampaignRightView.rightTitleImage"
+      imageRectString="0|0|19,48|8|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AirGardenCampaignRightView.friendBtn"
+      selectedStyle="asset.AirGardenCampaignRightView.selectedBtnBack"
+      unSelectedStyle="asset.AirGardenCampaignRightView.unselectedBtnBack"
+      selectedIconStyle="asset.AirGardenCampaignRightView.friendBtnSelectTxt"
+      unselectedIconStyle="asset.AirGardenCampaignRightView.friendBtnUnSelectTxt"
+      selectedIconInnerRectString="26,46,3,16,13"
+      unselectedIconInnerRectString="28,44,3,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="2"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="AirGardenCampaignRightView.serverBtn"
+      selectedStyle="asset.AirGardenCampaignRightView.selectedBtnBack"
+      unSelectedStyle="asset.AirGardenCampaignRightView.unselectedBtnBack"
+      selectedIconStyle="asset.AirGardenCampaignRightView.serverBtnSelectTxt"
+      unselectedIconStyle="asset.AirGardenCampaignRightView.serverBtnUnSelectTxt"
+      selectedIconInnerRectString="4,89,3,14,13"
+      unselectedIconInnerRectString="7,84,3,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="102"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightView.rankText"
+      textFormatStyle="AirGardenCampaignRightView.rankText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-7"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightView.nameText"
+      textFormatStyle="AirGardenCampaignRightView.rankText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="45"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightView.upText"
+      textFormatStyle="AirGardenCampaignRightView.rankText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="140"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightView.ListPageText"
+      textFormatStyle="AirGardenCampaignRightView.ListPageText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="54"
+      height="20"
+      x="70"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AirGardenCampaignRightView.ListFirstBtn"
+      backStyle="asset.water.FirstPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="10"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AirGardenCampaignRightView.ListLastBtn"
+      backStyle="asset.water.LastPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="160"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AirGardenCampaignRightView.ListPreBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="65"
+      y="382"
+      scaleX="-1"
+      scaleY="1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="AirGardenCampaignRightView.ListNextBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="130"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="AirGardenCampaignRightView.PageNumBack"
+      resourceLink="asset.airgarden.PageNumBack"
+      x="75"
+      y="381" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AirGardenCampaignRightView.itemBox"
+      spacing="0"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AirGardenCampaignRightView.smallMapBtn"
+      backStyle="asset.core.MapBtnAsset"
+      iconStyle="asset.core.MapBtnTxt"
+      iconInnerRectString="48,78,0,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="15"
+      y="422" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AirGardenCampaignRightView.myGardenBtn"
+      backStyle="asset.AirGardenCampaignRightView.myGardenBtnBack"
+      iconStyle="asset.AirGardenCampaignRightView.myGardenBtnTxt"
+      iconInnerRectString="10,63,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="65"
+      y="460" />
+    <component
+      stylename="AirGardenCampaignRightItem.rankImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.AirGardenCampaignRightItem.rankImage1,asset.AirGardenCampaignRightItem.rankImage2,asset.AirGardenCampaignRightItem.rankImage3"
+      x="8"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightItem.rankText"
+      textFormatStyle="AirGardenCampaignRightItem.rankText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="-2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightItem.nameText"
+      textFormatStyle="AirGardenCampaignRightItem.rankText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="40"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignRightItem.upText"
+      textFormatStyle="AirGardenCampaignRightItem.upText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="140"
+      y="5" />
+    <!-- 小地图 -->
+    <component
+      classname="map.campaign.view.ui.airgarden.AirGardenCampaignSmallMapFrame"
+      stylename="airGarden.AirGardenCampaignSmallMapFrame"
+      parentStyle="core.Frame1"
+      backStyle="AirGardenCampaignSmallMapFrame.FrameBg"
+      closeInnerRectString="23,0,-2,23,14"
+      moveInnerRectString="580,10,0,-15,9"
+      titleOuterRectPosString="0,26,1"
+      containerX="4"
+      containerY="4"
+      closestyle="map.space.SpaceMapFrame.CloseBtn"
+      width="580"
+      height="345" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="AirGardenCampaignSmallMapFrame.FrameBg"
+      resourceLink="asset.AirGardenCampaignSmallMapFrame.FrameBg"
+      scaleGridString="10,10,50,51" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="AirGardenCampaignSmallMapFrame.MapBg"
+      resourceLink="asset.AirGardenCampaignSmallMapFrame.PanelBg"
+      scaleGridString="10,10,32,33"
+      x="-2"
+      y="0"
+      width="576"
+      height="338" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="AirGardenCampaignSmallMapFrame.NPCGreenBtn"
+      backStyle="asset.AirGardenCampaignSmallMapFrame.NPCGreenBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="AirGardenCampaignSmallMapFrame.NPCPurpleBtn"
+      backStyle="asset.AirGardenCampaignSmallMapFrame.NPCPurpleBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      stylename="AirGardenCampaignSmallMapFrame.NPCBlueBtn"
+      backStyle="asset.AirGardenCampaignSmallMapFrame.NPCBlueBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <!--	展示界面		-->
+    <component
+      classname="map.campaign.view.ui.airgarden.AirGardenCampaignShowFrame"
+      stylename="airGarden.AirGardenCampaignShowFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="51"
+      width="720"
+      height="630" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AirGardenCampaignShowItem.nameText"
+      textFormatStyle="AirGardenCampaignShowItem.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="AirGardenCampaignShowItem.showBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.AirGardenCampaignShowItem.showBtn.icon"
+      iconInnerRectString="37,40,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="50"
+      y="195" />
+    <component
+      stylename="AirGardenCampaignShowFrame.pageBar"
+      classname="yishi.view.base.PageBar"
+      preBtnStyle="AirGardenCampaignShowFrame.LastPageBtn"
+      nextBtnStyle="AirGardenCampaignShowFrame.NextPageBtn"
+      pageBackStyle="AirGardenCampaignShowFrame.pageBar.pageBack"
+      pageTxtStyle="AirGardenCampaignShowFram.pageBar.pageText"
+      x="215"
+      y="502" />
+    <component
+      stylename="AirGardenCampaignShowFrame.LastPageBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="core.LastPageBtn"
+      x="20"
+      y="7" />
+    <component
+      stylename="AirGardenCampaignShowFrame.NextPageBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="core.NextPageBtn"
+      x="170"
+      y="7" />
+    <component
+      stylename="AirGardenCampaignShowFram.pageBar.pageText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="core.PageTextStyle1"
+      x="101"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="AirGardenCampaignShowFrame.pageBar.pageBack"
+      resourceLink="asset.core.pageBg"
+      x="98"
+      y="5" />
+  </components>
+</style>

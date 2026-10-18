@@ -1,0 +1,842 @@
+<style
+  name="pvproomlist"
+  source="ui/zh_cn/swf/pvproomlist.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvproomlist.VipLevelTxt_f"
+      args="Arial,14,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvproomlist.VipNameTxt_f"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pvproomlist.roomRight.EnterTimeRecord_t"
+      args="Arial,15,0xfae950,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="pvproomlist.AthleticsShopPageTextStyle_f"
+      args="0x3C2000,1,3,3,3" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="pvproomlist.AthleticsShopBuyNumTextStyle_f"
+      args="0xff3c00,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamItem.name_t1"
+      args="Arial,16,0xfaeab9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamItem.name_t2"
+      args="Arial,16,0x28d5e9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamItem.level_t1"
+      args="Arial,16,0xfaeab9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamItem.level_t2"
+      args="Arial,16,0x28d5e9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamListView.titleTxt_t"
+      args="Arial,14,0xe7c88b,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamFrame.lineupBtnText_t"
+      args="Arial,14,0x22ff22,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GroupfbTeamFrame.RoomTitle_t"
+      args="Arial,16,0xe7d5ad,,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.pvproomlist.RoomListBack"
+      x="3"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.RoomTitle"
+      x="12"
+      y="-11" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.RoomName"
+      x="106"
+      y="18" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.PlayerListBack"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.PlayerTitleBack"
+      x="10"
+      y="-9" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.PlayerTitleTxt"
+      x="12"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.PlayerSpliceLine"
+      x="0"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.TimeLeftBMD"
+      x="21"
+      y="476" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopBgAsset"
+      x="-6"
+      y="-11" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopItemOverBgAsset"
+      x="-2"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopTipAsset"
+      x="191"
+      y="337" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopBigMedalAsset"
+      x="7"
+      y="333" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopBuyFrameBgAsset"
+      x="-1"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopBuyText"
+      x="103"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopBuyPriceText"
+      x="10"
+      y="130" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.ShopBuyNumText"
+      x="10"
+      y="160" />
+    <bitmapData
+      resourceLink="asset.pvproomlist.RoomItemIcon"
+      x="3"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.groupfb.GroupfbRoomItem.mapName"
+      x="100"
+      y="34" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 房间列表 -->
+    <custom
+      classname="pvproomlist.view.PVPRoomListView"
+      stylename="pvproomlist.PVPRoomListView"
+      x="3"
+      y="0" />
+    <!--  玩家列表 -->
+    <custom
+      classname="pvproomlist.view.PVPPlayerListView"
+      stylename="pvproomlist.PVPPlayerListView"
+      x="514"
+      y="0" />
+    <custom
+      classname="pvproomlist.view.PVPRoomItem"
+      stylename="pvproomlist.PVPRoomItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="pvproomlist.view.PVPPlayerListItem"
+      stylename="pvproomlist.PlayerListItem"
+      unSelectedStyle="pvproomlist.PlayerItemUnselected"
+      selectedStyle="pvproomlist.PlayerItemSelected"
+      selectedIconInnerRectString="3,43,10,21,13"
+      unselectedIconInnerRectString="3,43,10,21,13"
+      nameTextStyle="pvproomlist.PlayerListItemName"
+      levelTextStyle="pvproomlist.PlayerListItemLevel"
+      vipNameTextStyle="pvproomlist.PlayerListItemVipName"
+      vipLevelTextStyle="pvproomlist.PlayerListItemVipLevel"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="212"
+      height="27" />
+  </customDisplay>
+  <components>
+    <component
+      classname="pvproomlist.PVPRoomListFrame"
+      stylename="pvproomlist.PVPRoomListFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="64"
+      width="784"
+      height="580" />
+    <!-- 房间列表背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pvproomlist.RoomListBack1"
+      parentStyle="core.describeBackground_style11"
+      width="504"
+      height="472" />
+    <!--玩家列表背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pvproomlist.PlayerListBack1"
+      parentStyle="core.describeBackground_style11"
+      width="239"
+      height="472" />
+    <!-- 上一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pvproomlist.PreBtn"
+      iconStyle="asset.pvproomlist.PrePage"
+      backStyle="pvproomlist.ButtonBack"
+      iconInnerRectString="20,58,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="127"
+      y="425" />
+    <!-- 下一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pvproomlist.NextBtn"
+      iconStyle="asset.pvproomlist.NextPage"
+      backStyle="pvproomlist.ButtonBack"
+      iconInnerRectString="20,58,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="253"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pvproomlist.ButtonBack"
+      resourceLink="asset.core.Style11Btn"
+      width="100"
+      height="41" />
+    <!-- 房间列表容器 -->
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="pvproomlist.ListContain"
+      x="6"
+      y="6" />
+    <!-- 格子 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.RoomItemTitle"
+      textFormatStyle="roomItem_title_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="215"
+      x="6"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.RoomItemLevel"
+      textFormatStyle="roomItem_level_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="105"
+      x="0"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.RoomCapicity"
+      textFormatStyle="roomItem_capicity_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="124"
+      x="105"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="pvproomlist.PlayerListPanel"
+      vScrollbarStyle="pveroomlist.VScrollbar02"
+      vScrollbarInnerRectString="11,1,-2,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|pvproomlist.PlayerListItem,27,212"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="230"
+      height="283"
+      x="4"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.PlayerListItemUp"
+      resourceLink="asset.pvproomlist.PlayerItemOver"
+      alpha="0"
+      width="212" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.PlayerListItemOver"
+      resourceLink="asset.pvproomlist.PlayerItemOver"
+      width="212" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.PlayerItemSelected"
+      resourceLink="asset.pvproomlist.PlayerItemSelected,asset.pvproomlist.PlayerItemSelected,asset.pvproomlist.PlayerItemSelected,asset.pvproomlist.PlayerItemSelected"
+      width="212"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.PlayerItemUnselected"
+      resourceLink="pvproomlist.PlayerListItemUp,pvproomlist.PlayerListItemOver,pvproomlist.PlayerItemSelected,pvproomlist.PlayerListItemUp"
+      width="212"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.SexIcon"
+      parentStyle="core.SexIcon"
+      x="19"
+      y="2" />
+    <!-- 列表名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.PlayerListItemName"
+      textFormatStyle="playerItemName_t1,playerItemName_t2,playerItemName_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="58"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.VipNameTxt"
+      textFormatStyle="pvproomlist.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pvproomlist.PlayerListItemVipName"
+      textFieldStyle="pvproomlist.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="58"
+      y="0" />
+    <!-- 列表等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.PlayerListItemLevel"
+      textFormatStyle="playerItemLevel_t1,playerItemLevel_t2,playerItemLevel_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="161"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.VipLevelTxt"
+      textFormatStyle="pvproomlist.VipLevelTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pvproomlist.PlayerListItemVipLevel"
+      textFieldStyle="pvproomlist.VipLevelTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="161"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pvproomlist.SearchRoomBtn"
+      backStyle="asset.pvproomlist.SearchBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="63"
+      y="355"
+      scaleX="0.95"
+      scaleY="0.95" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pvproomlist.CreateRoomBtn"
+      backStyle="asset.pvproomlist.CreateBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="147"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pvproomlist.QuickBtn"
+      backStyle="asset.pvproomlist.QuickBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="-7"
+      y="355" />
+    <!-- 查询房间 -->
+    <component
+      classname="pvproomlist.view.PVPRoomSearchFrame"
+      stylename="pvproomlist.SearchRoomFrame"
+      parentStyle="core.Frame2"
+      width="355"
+      height="250" />
+    <!-- 查找房间背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pvproomlist.SearchRoomBack"
+      parentStyle="core.describeBackground_style04"
+      width="318"
+      height="100"
+      x="-18"
+      y="5" />
+    <!-- Id值背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pvproomlist.SearchRoomIdBack"
+      resourceLink="asset.core.ConfirmSellInputBack"
+      scaleGridString="10,7,36,16"
+      width="154"
+      height="27"
+      x="90"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.SearchRoomPasswdBack"
+      resourceLink="asset.pvproomlist.InputBack1,asset.pvproomlist.InputBack2"
+      width="154"
+      height="27"
+      x="90"
+      y="60" />
+    <!-- 请输入房间id -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.SearchRoomIdText"
+      textFormatStyle="search_id_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="89"
+      x="5"
+      y="44" />
+    <!-- 房间id值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.SearchRoomIdValueText"
+      textFormatStyle="search_id_value_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      type="input"
+      height="20"
+      width="152"
+      x="90"
+      y="45"
+      maxChars="5"
+      restrict="0-9" />
+    <!-- 密码值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.SearchRoomPasswdValueTxt"
+      textFormatStyle="search_pwd_value_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      type="input"
+      height="18"
+      width="152"
+      x="90"
+      y="67"
+      maxChars="8"
+      restrict="0-9"
+      displayAsPassword="true" />
+    <!-- 密码锁定按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.SearchRoomPasswdTxt"
+      textFormatStyle="search_pwd_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="70"
+      x="35"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pvproomlist.SearchRoomPasswdCheckBtn"
+      parentStyle="core.BuildUpgradeButton"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      textStyle="pvproomlist.SearchRoomPasswdTxt"
+      fieldX="25"
+      fieldY="4"
+      x="23"
+      y="60" />
+    <!-- 确定按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pvproomlist.SearchRoomConfirmBtn"
+      parentStyle="core.AlertButton"
+      width="97"
+      height="33"
+      x="25"
+      y="113" />
+    <!-- 取消按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pvproomlist.SearchRoomCancelBtn"
+      parentStyle="core.AlertButton"
+      width="97"
+      height="33"
+      x="170"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvproomlist.roomRight.EnterTimeRecord"
+      textFormatStyle="pvproomlist.roomRight.EnterTimeRecord_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="94"
+      y="446" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pvproomlist.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="138"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pvproomlist.LeagueRankButton"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.pveroomlist.LeagueRankBtnTxt"
+      iconInnerRectString="23,70,11,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="380"
+      y="425" />
+    <component
+      classname="groupfb.GroupfbRoomListFrame"
+      stylename="groupfb.GroupfbRoomListFrame"
+      parentStyle="core.Frame2"
+      containerX="12"
+      containerY="48"
+      width="535"
+      height="565" />
+    <component
+      classname="groupfb.GroupfbTeamFrame"
+      stylename="groupfb.GroupfbTeamFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveInnerRectString="80,80,-5,25,1"
+      containerX="4"
+      containerY="36"
+      width="510"
+      height="545" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GroupfbRoomListFrame.bg"
+      resourceLink="core.describeBackground_style11,asset.groupfb.roomlist.bg1,asset.groupfb.roomlist.bg2,asset.water.Expback,asset.pvproomlist.TimeLeftBMD"
+      imageRectString="0|508|0|464|13,3|502|3|458|13,3|502|321|140|13,164|170|426|59|13,190|70|450|20|13" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GroupfbRoomListFrame.QuickBtn"
+      backStyle="asset.pvproomlist.QuickBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GroupfbRoomListFrame.SearchRoomBtn"
+      backStyle="asset.pvproomlist.SearchBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GroupfbRoomListFrame.CreateRoomBtn"
+      backStyle="asset.pvproomlist.CreateBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbRoomListFrame.TimeTxt"
+      parentStyle="pvproomlist.roomRight.EnterTimeRecord"
+      x="265"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="GroupfbRoomListFrame.panel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      viewportInnerRectString="1,0,1,307,1"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      x="4"
+      y="4"
+      width="498"
+      height="315" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="GroupfbRoomListFrame.btnBox"
+      spacing="60"
+      x="76"
+      y="348" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="GroupfbRoomListFrame.SimpleTileList"
+      vSpace="-3"
+      hSpace="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GroupfbTeamListView.bg"
+      resourceLink="core.describeBackground_style06,asset.groupfb.GroupfbTeamListView.TeamBack,core.describeBackground_style40"
+      imageRectString="0|500|0|210|13,69|362|5|28|13,3|494|35|172|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GroupfbTeamListView.teamName"
+      resourceLink="asset.groupfb.GroupfbTeamListView.teamImage1,asset.groupfb.GroupfbTeamListView.teamImage2"
+      x="210"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamListView.titleTxt"
+      textFormatStyle="GroupfbTeamListView.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="415"
+      height="20"
+      x="95"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="GroupfbTeamListView.vBox"
+      spacing="3"
+      x="5"
+      y="74" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="GroupfbTeamFrame.lineupBtn"
+      textStyle="GroupfbTeamFrame.lineupBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,13,-2,13"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="20"
+      x="40"
+      y="443" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamFrame.lineupBtnText"
+      textFormatStyle="GroupfbTeamFrame.lineupBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GroupfbTeamFrame.prepareBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.GroupfbTeamFrame.prepareBtnIcon"
+      iconInnerRectString="35,44,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="130"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GroupfbTeamFrame.cancleBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.GroupfbTeamFrame.cancleBtnIcon"
+      iconInnerRectString="35,44,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="130"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GroupfbTeamFrame.startBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.GroupfbTeamFrame.startBtnIcon"
+      iconInnerRectString="35,44,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="130"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GroupfbTeamFrame.exitBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.GroupfbTeamFrame.exitBtnIcon"
+      iconInnerRectString="35,44,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GroupfbTeamItem.CaptainFlag"
+      resourceLink="asset.core.CaptainIcon"
+      x="5"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GroupfbTeamItem.jobImage"
+      parentStyle="core.HeroVocation"
+      x="30"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamItem.name"
+      textFormatStyle="GroupfbTeamItem.name_t1,GroupfbTeamItem.name_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="60"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamItem.level"
+      textFormatStyle="GroupfbTeamItem.level_t1,GroupfbTeamItem.level_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="197"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamItem.fighting"
+      textFormatStyle="GroupfbTeamItem.level_t1,GroupfbTeamItem.level_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="279"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamItem.stateTxt"
+      textFormatStyle="GroupfbTeamItem.level_t1,GroupfbTeamItem.level_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="370"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GroupfbTeamItem.MemberItemBg"
+      resourceLink=",GroupfbTeamItem.lightcolorBg" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="GroupfbTeamItem.lightcolorBg"
+      parentStyle="core.TitleBack_Style888"
+      width="490"
+      height="30"
+      x="0"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GroupfbTeamItem.MemberItemLine"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|333|0|2|13,414|80|0|2|13"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="GroupfbTeamItem.EnterWarDelBtn"
+      backStyle="asset.core.deleteBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="455"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="GroupfbTeamFrame.loceBtn1"
+      backStyle="asset.GroupfbTeamFrame.lockIcon1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6,5"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="452"
+      y="-51" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="GroupfbTeamFrame.loceBtn2"
+      backStyle="asset.GroupfbTeamFrame.lockIcon2"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6,5"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="452"
+      y="-51" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GroupfbTeamItem.AddBtn"
+      backStyle="asset.groupfb.TeamPlayerAdd"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="455"
+      y="6" />
+    <component
+      classname="groupfb.GroupfbRoomSearchFrame"
+      stylename="groupfb.GroupfbRoomSearchFrame"
+      parentStyle="core.Frame2"
+      width="355"
+      height="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GroupfbTeamFrame.RoomTitle"
+      textFormatStyle="GroupfbTeamFrame.RoomTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="215"
+      height="22"
+      x="6"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="GroupfbTeamFrame.checkBtn"
+      parentStyle="core.useBindPointBtn"
+      x="395"
+      y="440" />
+    <!-- 人数不足开始提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="pvp.noEnoughPeople.AlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="pvp.noEnoughPeople.ConfirmBtn"
+      cancelStyle="pvp.noEnoughPeople.CancelBtn"
+      checkStyle="pvp.noEnoughPeople.CheckBtn"
+      describeStyle="pvp.noEnoughPeople.Describe"
+      showPromptStyle="auction.RefreshPrompt"
+      containerY="18"
+      width="300"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pvp.noEnoughPeople.Describe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      wordWrap="45"
+      height="45"
+      width="280"
+      x="-18"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pvp.noEnoughPeople.ConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="0"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pvp.noEnoughPeople.CancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="130"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pvp.noEnoughPeople.CheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="65"
+      y="48" />
+  </components>
+</style>

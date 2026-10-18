@@ -1,0 +1,489 @@
+<style
+  name="spiritexpedition"
+  source="ui/zh_cn/swf/spiritexpedition.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="SpiritExpeditionRewardItem.starItem.text_t"
+      args="arial,16,0xffe400,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SpiritExpeditionNodeItem.bossText_t"
+      args="arial,12,0xffc740,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SpiritExpeditionNodeItem.nodeIdText_t"
+      args="arial,12,0x957762,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SpiritExpeditionFormationFrame.alertText_t"
+      args="arial,12,0xa2574d,,,,,,center"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.SpiritExpeditionFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SpiritExpeditionFrame.rewardTitle"
+      x="230"
+      y="652" />
+    <bitmapData
+      resourceLink="asset.SpiritExpeditionMapItem.lockImage"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SpiritExpeditionChapterFrame.line"
+      x="190"
+      y="90" />
+    <bitmapData
+      resourceLink="asset.SpiritExpeditionNodeItem.passImage"
+      x="15"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.SpiritExpeditionNSHeadItem.back"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.mapNoe.area1"
+      stylename="SpiritExpeditionMapItem.mapMc1" />
+    <custom
+      classname="asset.mapNoe.area2"
+      stylename="SpiritExpeditionMapItem.mapMc2" />
+    <custom
+      classname="asset.mapNoe.area3"
+      stylename="SpiritExpeditionMapItem.mapMc3" />
+    <custom
+      classname="asset.mapNoe.area4"
+      stylename="SpiritExpeditionMapItem.mapMc4" />
+    <custom
+      classname="asset.mapNoe.area5"
+      stylename="SpiritExpeditionMapItem.mapMc5" />
+    <custom
+      classname="asset.mapNoe.area6"
+      stylename="SpiritExpeditionMapItem.mapMc6" />
+    <custom
+      stylename="SpiritExpeditionNodeItem.monsterIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      tipStyle="yishi.view.tips.OneLineTip"
+      iconHeight="48"
+      iconWidth="48"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      loadingX="29"
+      loadingY="29"
+      x="32"
+      y="32" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SpiritExpeditionNSHeadItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="48"
+      iconHeight="48"
+      tipStyle="yishi.view.tips.ChildrenFigureTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="70"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SpiritExpeditionChildSkillItem.childIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      tipStyle="yishi.view.tips.ChildrenFigureTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="70"
+      tipGapV="-20"
+      isFollowMouse="false"
+      iconWidth="45"
+      iconHeight="45"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SpiritExpeditionChildSkillItem.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="38"
+      iconHeight="38"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="SpiritExpeditionSkillSelectView.SimpleTileList"
+      vSpace="2"
+      hSpace="2"
+      y="10"
+      x="10" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="SpiritExpeditionFrame.rewardBar"
+      x="380"
+      y="653" />
+    <custom
+      classname="childspiritexpedition.SpiritExpeditionNodeItem"
+      stylename="SpiritExpeditionChapterFrame.nodeItem"
+      tipStyle="yishi.view.tips.SpiritExpeditionNodeTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false" />
+  </customDisplay>
+  <components>
+    <component
+      classname="childspiritexpedition.SpiritExpeditionFrame"
+      stylename="spiritExpedition.spiritExpeditionFrame"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SpiritExpeditionFrame.viewCon"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="SpiritExpeditionFrame.rewardBar"
+      backgroundLink="asset.common.expBarBg1"
+      barLink="SpiritExpeditionFrame.rewardBarColor"
+      textStyle="AvengerEyeView.expBar.text"
+      barMargin="14,2,20,4"
+      x="380"
+      y="653" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="SpiritExpeditionFrame.rewardBarbg"
+      resourceLink="asset.common.expBarBg1"
+      scaleGridString="30,3,70,6"
+      width="723"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="SpiritExpeditionFrame.rewardBarColor"
+      resourceLink="asset.common.expBarColor1"
+      scaleGridString="30,3,70,6"
+      width="695"
+      height="13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SpiritExpeditionFrame.rewardBox"
+      spacing="10"
+      x="435"
+      y="600" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SpiritExpeditionFrame.mapCon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SpiritExpeditionRewardItem.boxImage"
+      resourceLink="asset.SpiritExpeditionRewardItem.boxImage1,asset.SpiritExpeditionRewardItem.boxImage2,asset.SpiritExpeditionRewardItem.boxImage3"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-30"
+      isFollowMouse="false" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="SpiritExpeditionRewardItem.starItem"
+      firstTxtLink="SpiritExpeditionRewardItem.starItem.text"
+      iconLink="asset.common.lightStar2"
+      layout="right"
+      space="2"
+      xy="35,80"
+      x="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SpiritExpeditionRewardItem.starItem.text"
+      textFormatStyle="SpiritExpeditionRewardItem.starItem.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SpiritExpeditionMapItem.hitContiner"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="SpiritExpeditionMapItem.starItem"
+      firstTxtLink="SpiritExpeditionRewardItem.starItem.text"
+      iconLink="asset.common.lightStar2"
+      layout="right"
+      space="2"
+      xy="165,148" />
+    <component
+      stylename="spiritexpedition.SpiritExpeditionChapterFrame"
+      classname="childspiritexpedition.SpiritExpeditionChapterFrame"
+      backStyle="asset.spiritexpedition.SpiritExpeditionChapterFrame"
+      containerX="-20"
+      containerY="0"
+      width="1194"
+      height="346"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,20,10,29,14"
+      moveInnerRectString="0,30,10,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SpiritExpeditionChapterFrame.rightBg"
+      resourceLink="asset.SpiritExpeditionChapterFrame.rightBg,asset.SpiritExpeditionChapterFrame.titleChild"
+      imageRectString="0|174|0|344|13,19|131|22|28|13"
+      x="1000"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SpiritExpeditionChapterFrame.nodeCon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SpiritExpeditionChapterFrame.fightBtn"
+      backStyle="SpiritExpeditionChapterFrame.fightBtnBg"
+      iconStyle="asset.SpiritExpeditionChapterFrame.fightBtnIcon"
+      iconInnerRectString="80,115,50,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="460"
+      y="230"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SpiritExpeditionChapterFrame.fightBtnBg"
+      resourceLink="asset.SpiritExpeditionChapterFrame.fightBtnBg,asset.core.Style11Btn"
+      imageRectString="0|0|19,62|33|19" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SpiritExpeditionChapterFrame.formationBtn"
+      backStyle="asset.core.Style14Btn"
+      iconStyle="asset.SpiritExpeditionChapterFrame.formationBtnIcon"
+      iconInnerRectString="2,70,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1050"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="SpiritExpeditionChapterFrame.childBox"
+      spacing="-10"
+      x="1062"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SpiritExpeditionNodeItem.selectBg"
+      resourceLink="asset.SpiritExpeditionNodeItem.selectBg1,asset.SpiritExpeditionNodeItem.selectBg2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SpiritExpeditionNodeItem.nodeBg"
+      resourceLink="asset.SpiritExpeditionNodeItem.nodeBg1,asset.SpiritExpeditionNodeItem.nodeBg2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SpiritExpeditionNodeItem.starBox"
+      spacing="-5"
+      x="55"
+      y="15"
+      autoCenter="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SpiritExpeditionNodeItem.nodeIdText"
+      textFormatStyle="SpiritExpeditionNodeItem.nodeIdText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="25"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SpiritExpeditionNodeItem.bossText"
+      textFormatStyle="SpiritExpeditionNodeItem.bossText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="25"
+      y="78" />
+    <!--阵型 -->
+    <component
+      classname="childspiritexpedition.formation.SpiritExpeditionFormationFrame"
+      stylename="spiritexpedition.SpiritExpeditionFormationFrame"
+      parentStyle="core.Frame1"
+      width="994"
+      height="514"
+      containerX="11"
+      containerY="57" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="SpiritExpeditionFormationFrame.border"
+      parentStyle="core.describeBackground_style11"
+      width="956"
+      height="404"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SpiritExpeditionFormationFrame.back"
+      resourceLink="asset.childformation.Back,asset.childformation.Title,asset.SpiritExpeditionFormationFrame.rightBack,asset.SpiritExpeditionChapterFrame.titleChild,asset.SpiritExpeditionFormationFrame.rightTitle"
+      imageRectString="0|0|19,175|0|19,624|0|19,719|12|19,673|273|19"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SpiritExpeditionNSHeadItem.cdTxt"
+      textFormatStyle="SpiritExpeditionNodeItem.bossText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-2"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SpiritExpeditionNSHeadItem.speedBtn"
+      backStyle="asset.SpiritExpeditionNSHeadItem.speedBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="15"
+      y="67" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="SpiritExpeditionNSHeadItem.energyBar"
+      backgroundLink="asset.SpiritExpeditionNSHeadItem.energyBarBg"
+      barLink="asset.SpiritExpeditionNSHeadItem.energyBarColor"
+      barMargin="0,0,0,1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-30"
+      isFollowMouse="false"
+      x="2"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SpiritExpeditionFormationFrame.headBox"
+      spacing="2"
+      x="645"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SpiritExpeditionNSHeadItem.enterWarImage"
+      resourceLink="asset.SpiritExpeditionNSHeadItem.enterWarImage"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="26"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SpiritExpeditionChildSkillItem.itemBg"
+      resourceLink="asset.SpiritExpeditionNSHeadItem.back,asset.SpiritExpeditionChildSkillItem.arrow,asset.SpiritExpeditionChildSkillItem.arrow,asset.SpiritExpeditionChildSkillItem.arrow,asset.SpiritExpeditionChildSkillItem.arrow"
+      imageRectString="0|52|0|52|13,95|21|15|22|13,147|21|15|22|13,200|21|15|22|13,252|21|15|22|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SpiritExpeditionChildSkillItem.skillBox"
+      spacing="-3"
+      x="60"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="SpiritExpeditionFormationFrame.skillBox"
+      spacing="5"
+      x="642"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SpiritExpeditionFormationFrame.alertText"
+      textFormatStyle="SpiritExpeditionFormationFrame.alertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="645"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="SpiritExpeditionSkillSelectView.bg"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="178"
+      height="100" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SpiritExpeditionChapterFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="1168"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SpiritExpeditionFormationFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="921"
+      y="-34" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="spiritExpedition.SpiritExpeditionChapterFrame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="SpiritExpeditionChapterFrame.helpFrame.content"
+      titleText="SpiritExpeditionChapterFrame.helpFrame.titleText"
+      textWidth="500" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SpiritExpeditionChildSkillItem.delBtn"
+      backStyle="asset.common.delBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="35"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SpiritExpeditionChildSkillItem.skillDelBtn"
+      backStyle="asset.common.delBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="28"
+      y="-5" />
+  </components>
+</style>

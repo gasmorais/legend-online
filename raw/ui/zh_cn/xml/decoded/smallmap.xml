@@ -1,0 +1,508 @@
+<style
+  name="smallmap"
+  source="ui/zh_cn/swf/smallmap.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="smallMap.TitleText_t"
+      args="Arial,12,0xeae5c0,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="smallMap.recommendTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="smallMap.InputPosText_tX"
+      args="Arial,12,0xffecb7,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="smallMap.InputPosText_tC"
+      args="Arial,12,0xffecb7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="smallMap.InputPosText_tY"
+      args="Arial,12,0xffecb7,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.smallMap.guideTaskTxt"
+      x="-143"
+      y="254" />
+    <bitmapData
+      resourceLink="asset.smallmap.getRewardbg"
+      x="-114"
+      y="213" />
+    <!--放大镜按钮图片-->
+    <bitmapData
+      resourceLink="asset.smallMap.zoomBtnImg" />
+    <!--定位到军队图片-->
+    <bitmapData
+      resourceLink="asset.smallMap.locateArmyImg" />
+    <!--定位到主城图片-->
+    <bitmapData
+      resourceLink="asset.smallMap.locateHkeeImg" />
+    <bitmapData
+      resourceLink="asset.smallMap.zoomBtnBg"
+      x="30"
+      y="103" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.smallMap.BgMcAsset"
+      stylename="asset.smallMap.BgMcAsset" />
+    <custom
+      classname="asset.smallmap.guideTaskBtnEff"
+      stylename="asset.smallmap.guideTaskBtnEff" />
+    <custom
+      classname="asset.smallmap.guideTaskRewardEff"
+      stylename="asset.smallmap.guideTaskRewardEff" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="asset.smallmap.getRewardbg01"
+      resourceLink="asset.smallmap.getRewardbg"
+      scaleGridString="17,14,12,2"
+      width="56"
+      height="28"
+      x="-114"
+      y="213" />
+    <!-- 内城 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.CastleBtn"
+      backStyle="asset.smallMap.CastleBtnAsset"
+      iconStyle="asset.smallMap.CastleBtnTxt"
+      width="114"
+      height="46"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      iconInnerRectString="27,60,7,31,13"
+      x="28"
+      y="18"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false" />
+    <!-- 天空之城 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.SpaceBtn"
+      backStyle="asset.smallMap.SpaceBtnAsset"
+      iconStyle="asset.smallMap.SpaceBtnTxt"
+      width="114"
+      height="46"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      iconInnerRectString="12,93,2,42,13"
+      x="31"
+      y="18"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      autoCenter="false" />
+    <!-- 外城 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.OutercityBtn"
+      backStyle="asset.smallMap.OutercityBtnAsset"
+      iconStyle="asset.smallMap.OutercityBtnTxt"
+      width="114"
+      height="46"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      iconInnerRectString="28,58,7,29,13"
+      x="28"
+      y="18"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false" />
+    <!-- 副本名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="smallMap.TitleText"
+      textFormatStyle="smallMap.TitleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="27"
+      y="-2"
+      width="117"
+      height="20"
+      isAutoFitLength="true" />
+    <!-- 跳过新手 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.NoviceCloseBtn"
+      backStyle="asset.smallMap.NoviceCloseBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="248"
+      y="5" />
+    <!-- 客服系统 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.CustomerServiceBtn"
+      backStyle="asset.customerservice.MainBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="102"
+      y="60" />
+    <!-- 游戏设定 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.SetBtn"
+      backStyle="asset.smallMap.SetBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="138"
+      y="9" />
+    <!-- 排行榜 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.RankingBtn"
+      backStyle="asset.smallMap.RankingBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="-4"
+      y="10" />
+    <!-- 二级密码 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.vicepasswordBtn"
+      backStyle="asset.smallMap.vicepasswordicon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="114"
+      y="57" />
+    <!-- 时报 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.UpdateBtn"
+      backStyle="asset.smallMap.UpdateBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="126"
+      y="39" />
+    <!-- 邮件 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.MailBtn"
+      backStyle="asset.smallMap.MailBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="12"
+      y="38" />
+    <!-- 每日引导 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.DayGuideBtn"
+      backStyle="asset.smallMap.DailyRoutineBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="-10"
+      y="0" />
+    <!-- 显示其他玩家 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.OthersShowBtn"
+      backStyle="asset.smallMap.OthersShowBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="-7"
+      y="-4" />
+    <!-- 隐藏其他玩家 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.OthersHideBtn"
+      backStyle="asset.smallMap.OthersHideBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="38"
+      y="62" />
+    <!-- 战场帮助说明 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.HelpBtn"
+      backStyle="asset.core.HelpBg"
+      width="90"
+      height="21"
+      x="65"
+      y="230"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 7天引导按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.guideTaskBtn"
+      backStyle="asset.smallMap.guideTaskBtnBg"
+      width="61"
+      height="67"
+      x="-100"
+      y="210"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--  功能开放 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.FunPreviewBtn"
+      backStyle="smallMap.FunPreviewBtnBack"
+      iconStyle="asset.smallMap.funpreviewBtnIconAsset"
+      width="73"
+      height="24"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="1"
+      isFollowMouse="false"
+      iconInnerRectString="10,52,4,16,13"
+      x="95"
+      y="140"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="smallMap.FunPreviewBtnBack"
+      resourceLink="asset.smallMap.CampaignGuidBtnOverAsset"
+      scaleGridString="40,5,50,6" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.FaceBookBtn"
+      backStyle="asset.smallMap.FaceBookImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      ipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="102"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="smallMap.getRewardTxt"
+      textFormatStyle="smallMap.recommendTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="30"
+      height="16" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="smallMap.getRewardTxt_2"
+      textFieldStyle="smallMap.getRewardTxt"
+      colors="0xffff79,0xe2a000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="30"
+      height="16"
+      x="-108"
+      y="217" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.BaseBtn"
+      backStyle="asset.core.Style16Btn"
+      width="48"
+      height="24"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      iconInnerRectString="7,34,3,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.LocateArmyBtn"
+      parentStyle="smallMap.BaseBtn"
+      iconStyle="asset.smallMap.locateArmyImg"
+      x="60"
+      y="125"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.ResultCastleBtn"
+      parentStyle="smallMap.BaseBtn"
+      iconStyle="asset.smallMap.ArmyGoToAsset"
+      iconInnerRectString="7,34,3,18,13"
+      x="7"
+      y="125"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.LocateHkeeBtn"
+      parentStyle="smallMap.BaseBtn"
+      iconStyle="asset.smallMap.locateHkeeImg"
+      x="113"
+      y="125"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.campaignTransmitBtn"
+      backStyle="asset.smallMap.transmitBtnImg"
+      iconStyle="asset.smallMap.transmitTxtImg"
+      width="48"
+      height="24"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      iconInnerRectString="7,34,3,18,13"
+      x="32"
+      y="150"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="smallMap.AttackBtn"
+      backStyle="asset.smallMap.transmitBtnImg"
+      iconStyle="asset.smallMap.AttackBtnImg"
+      width="48"
+      height="24"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      iconInnerRectString="7,34,3,18,13"
+      x="85"
+      y="150"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="smallMap.InputPosText"
+      textFormatStyle="smallMap.InputPosText_tX"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      maxChars="4"
+      x="34"
+      y="104"
+      width="33"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="smallMap.InputPosYText"
+      textFormatStyle="smallMap.InputPosText_tY"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      maxChars="4"
+      x="74"
+      y="104"
+      width="33"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="smallMap.InputPosCText"
+      textFormatStyle="smallMap.InputPosText_tC"
+      filterString="core.normal_f"
+      autoSize="none"
+      text=","
+      x="66"
+      y="103"
+      width="7"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.ZoomBtn"
+      backStyle="asset.smallMap.zoomBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="103"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,2"
+      tipGapV="20"
+      isFollowMouse="false" />
+    <!-- 时间图标 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="smallMap.TimeIcon"
+      resourceLink="asset.smallMap.TimeIcon"
+      tipStyle="yishi.view.tips.TimeTip"
+      tipDirctions="6,7,2"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="70"
+      y="68" />
+    <component
+      classname="mainBar.StripView"
+      stylename="smallMap.OthersShowBtnTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      mouseChildren="true"
+      mouseEnabled="true"
+      scaleX="1"
+      scaleY="1"
+      x="45"
+      y="65" />
+    <!-- 社交 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="smallMap.FriendsBtnAsset"
+      backStyle="asset.smallMap.FriendsBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="79"
+      y="74" />
+    <component
+      classname="mainBar.StripView"
+      stylename="smallMap.SpaceBtnTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="172"
+      tipDirctions="0,1,7,6,4,5"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      mouseChildren="true"
+      mouseEnabled="true"
+      scaleX="1"
+      scaleY="1"
+      x="0"
+      y="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="smallMap.mailStrip"
+      x="15"
+      y="45"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="smallMap.friendsStrip"
+      x="79"
+      y="74"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <!--好友按钮-->
+    <component
+      stylename="smallMap.friendsBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.smallMap.friendsBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="smallMap.FriendsBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="smallMap.friendsBtnMC"
+      x="67"
+      y="70" />
+  </components>
+</style>

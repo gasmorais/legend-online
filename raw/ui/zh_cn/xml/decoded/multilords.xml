@@ -1,0 +1,661 @@
+<style
+  name="multilords"
+  source="ui/zh_cn/swf/multilords.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="multilords.MultilordsFrame.RewardLinkTxt_t"
+      args="Arial,12,0x19d5f1,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="multilords.MultilordsFrame.ServiceName_t"
+      args="Arial,12,0xdec975,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.multilords.MultilordsFrameTitleTxtImg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.multilords.MultilordsTopItemNameBg"
+      x="-3"
+      y="290" />
+    <bitmapData
+      resourceLink="asset.multilords.MultilordsFrameUpBg"
+      x="0"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.multilords.MultilordsFrameDownBg"
+      x="0"
+      y="330" />
+    <bitmapData
+      resourceLink="asset.multilords.betNumBitmap"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.multilords.betTips01"
+      x="40"
+      y="118" />
+    <bitmapData
+      resourceLink="asset.multilords.betTips02"
+      x="65"
+      y="118" />
+    <bitmapData
+      resourceLink="asset.multilords.worshipBg"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="multilords.MultilordsTopItemAvatar"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="-16"
+      y="100" />
+    <custom
+      classname="multilords.MultilordsGeneralListCell"
+      stylename="multilords.MultilordsWinPrizesFrameAwardListCell"
+      cellType="2"
+      disObjStyle1="warlords.PrizeListCellOverBg"
+      disObjStyle2="warlords.PrizeListCellVipIcon"
+      disObjStyle3="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle4="warlords.PrizeListCellNameTxt"
+      disObjStyle6="multilords.PrizeListCellGloryIcon"
+      disObjStyle7="warlords.PrizeListCellGoldTxt"
+      disObjStyle8="warlords.PrizeListCellLine" />
+    <custom
+      classname="multilords.MultilordsGeneralListCell"
+      stylename="multilords.MultilordsBetSelectFrameBetListCell"
+      cellType="1"
+      disObjStyle1="warlords.BetListCellVipIcon"
+      disObjStyle2="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle3="warlords.BetListCellNameTxt"
+      disObjStyle4="warlords.BetListCellServerNameTxt"
+      disObjStyle5="warlords.BetListCellLevelIcon"
+      disObjStyle6="warlords.BetListCellLevelTxt"
+      disObjStyle7="warlords.BetListCellFightingCapacityTxt"
+      disObjStyle8="multilords.BetListCellCancelBtn"
+      disObjStyle9="warlords.BetListCellBetImg"
+      disObjStyle10="warlords.BetListCellBetBtn"
+      disObjStyle11="warlords.BetListCellLine"
+      disObjStyle12="warlords.BetListCellOverBg" />
+    <custom
+      classname="multilords.MultilordsGeneralListCell"
+      stylename="multilords.MultilordsRankFrameRankListCell"
+      cellType="3"
+      disObjStyle1="warlords.BetListCellOverBg"
+      disObjStyle2="warlords.RankListCellRankImg"
+      disObjStyle3="warlords.RankListCellRankTxt"
+      disObjStyle4="warlords.RankListCellVipIcon"
+      disObjStyle5="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle6="warlords.RankListCellNameTxt"
+      disObjStyle7="warlords.BetListCellServerNameTxt"
+      disObjStyle8="warlords.RankListCellLevelIcon"
+      disObjStyle9="warlords.BetListCellLevelTxt"
+      disObjStyle10="multilords.RankListCellFightingCapacityTxt"
+      disObjStyle11="multilords.RankListCellWinCountTxt"
+      disObjStyle12="warlords.BetListCellLine" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.RankListCellFightingCapacityTxt"
+      parentStyle="warlords.BetListCellFightingCapacityTxt"
+      x="292" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.RankListCellWinCountTxt"
+      parentStyle="warlords.RankListCellWinCountTxt"
+      x="434" />
+    <custom
+      classname="multilords.MultilordsGeneralListCell"
+      stylename="multilords.MultilordsBetSelectFrameBetOperListCell"
+      cellType="5"
+      disObjStyle1="warlords.BetOperListCellBtn" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="multilords.betNumContainer"
+      x="60"
+      y="118" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="multilords.MultilordsFrame.TitleContainer"
+      x="0"
+      y="7" />
+    <custom
+      classname="multilords.MultilordsGeneralListCell"
+      stylename="multilords.MultilordsBattleViewFrameRankListCell"
+      cellType="3"
+      disObjStyle1="warlords.BetListCellOverBg"
+      disObjStyle2="warlords.RankListCellRankImg"
+      disObjStyle3="warlords.RankListCellRankTxt"
+      disObjStyle4="warlords.RankListCellVipIcon"
+      disObjStyle5="warlords.BetListCellVipNameGradientTxt"
+      disObjStyle6="warlords.RankListCellNameTxt"
+      disObjStyle7="warlords.BetListCellServerNameTxt"
+      disObjStyle8="warlords.RankListCellLevelIcon"
+      disObjStyle9="warlords.BetListCellLevelTxt"
+      disObjStyle10="warlords.RankListCellFightingCapacityTxt"
+      disObjStyle11="warlords.RankListCellWinCountTxt"
+      disObjStyle12="warlords.BetListCellLine"
+      btnStyle_0="multilords.BattleViewBtn" />
+  </customDisplay>
+  <components>
+    <component
+      classname="multilords.MultilordsFrame"
+      stylename="multilords.MultilordsFrame"
+      parentStyle="core.Frame1"
+      containerX="18"
+      containerY="62"
+      width="686"
+      height="594" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="multilords.MultilordsFrameUpBgBorder"
+      parentStyle="core.describeBackground_style04"
+      width="646"
+      height="315"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="multilords.MultilordsFrameDownBgBorder"
+      parentStyle="core.describeBackground_style04"
+      width="646"
+      height="155"
+      x="0"
+      y="328" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsFrame.TitleImg"
+      resourceLink="asset.warlords.WarlordsFrameTitleBgImg,warlords.WarlordsFrameTitleBgTurnImg"
+      imageRectString="0|199|0|25|13,398|199|0|25|13"
+      x="133"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsFrame.ProcessBg"
+      resourceLink="asset.warlords.WarlordsFrameProcessBg,warlords.WarlordsFrameProcessTurnBg"
+      imageRectString="0|239|0|47|13,478|239|0|47|13"
+      x="180"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsFrame.ProcessTxt"
+      textFormatStyle="warlords.WarlordsFrameProcessTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="420"
+      height="48"
+      x="205"
+      y="362"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="multilords.MultilordsFrame.ShopBtn"
+      backStyle="asset.multilords.MultilordsFrameShopBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="45"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsFrame.RewardLinkTxt"
+      textFormatStyle="multilords.MultilordsFrame.RewardLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="30"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsFrame.HelpLinkTxt"
+      textFormatStyle="multilords.MultilordsFrame.RewardLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="30"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsFrame.RankLinkTxt"
+      textFormatStyle="multilords.MultilordsFrame.RewardLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="105"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.MultilordsFrame.SignupBtn"
+      backStyle="asset.warlords.WarlordsFrameBetBtnBg"
+      iconStyle="asset.multilords.MultilordsFrameSignupBtnTxt"
+      iconInnerRectString="26,126,13,36,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="230"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.MultilordsFrame.JoinBtn"
+      backStyle="asset.warlords.WarlordsFrameBetBtnBg"
+      iconStyle="asset.multilords.MultilordsFrameJoinBtnTxt"
+      iconInnerRectString="26,126,13,36,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="230"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.MultilordsFrame.BetBtn"
+      backStyle="asset.warlords.WarlordsFrameBetBtnBg"
+      iconStyle="asset.warlords.WarlordsFrameBetBtnTxt"
+      iconInnerRectString="26,126,13,36,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="430"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsFrame.ServiceName"
+      textFormatStyle="multilords.MultilordsFrame.ServiceName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="22"
+      x="1"
+      y="2" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="multilords.MultilordsTopItemDefaultAvatarImg"
+      resourceLink="asset.warlords.WarlordsTopWizardDefault,asset.warlords.WarlordsTopWarriorDefault,asset.warlords.WarlordsTopHunterDefault"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="0"
+      y="91" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsTopItemNickNameTxt"
+      textFormatStyle="warlords.WarlordsTopItemNickNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="127"
+      height="24"
+      isAutoFitLength="true"
+      x="15"
+      y="299" />
+    <!-- 竞猜界面 -->
+    <component
+      classname="multilords.MultilordsBetFrame"
+      stylename="multilords.MultilordsBetFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,60,0,45,1"
+      containerX="16"
+      containerY="48"
+      width="439"
+      height="435" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsBetFrame.Bg"
+      resourceLink="warlords.WarlordsBetFrameBgBack1,warlords.WarlordsBetFrameBgBack2,asset.warlords.LastAwardBg,warlords.LastAwardBgTurn,asset.warlords.AwardTotalTxt,asset.warlords.TotalAwardsTxt,warlords.InputBg,asset.warlords.BetNumTxt,warlords.InputBg"
+      imageRectString="&#xD;&#xA;                    0|404|0|345|13,&#xD;&#xA;                    3|398|3|338|13,&#xD;&#xA;                    10|191|10|96|13,&#xD;&#xA;                    392|191|10|96|13,&#xD;&#xA;                    38|210|38|27|13,&#xD;&#xA;                    38|117|84|21|13,&#xD;&#xA;                    128|196|116|22|13,&#xD;&#xA;                    115|71|213|24|13,&#xD;&#xA;                    189|86|212|22|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsBetFrame.BgIcon"
+      resourceLink="asset.core.GodwinerIcon,asset.core.GodwinerIcon,asset.core.GodwinerIcon,asset.core.GodwinerIcon,asset.core.GodwinerIcon,asset.warlords.SplitImgStyle01"
+      imageRectString="&#xD;&#xA;                    247|25|38|25|13,&#xD;&#xA;                    153|25|81|25|13,&#xD;&#xA;                    278|25|211|25|13,&#xD;&#xA;                    121|25|311|25|13,&#xD;&#xA;                    305|25|311|25|13,&#xD;&#xA;                    -4|414|199|2|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.MultilordsBetFrame.SelectBtn"
+      backStyle="asset.core.Style24Btn"
+      iconStyle="warlords.WarlordsBetFrameFirstSelectBtnIcon"
+      iconInnerRectString="23,46,6,21,13"
+      iconFrameChange="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="158"
+      y="152" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.QuickSelectTxt"
+      textFormatStyle="warlords.WarlordsBetFrameCheckMoreTxt_t,warlords.WarlordsBetFrameCheckMoreTxt_t2"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="312"
+      y="169" />
+    <!-- 竞猜状态 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.MultilordsBetFrame.CommitBetBtn"
+      backStyle="asset.core.Style25Btn"
+      iconStyle="asset.warlords.CommitBetTxt"
+      iconInnerRectString="28,103,9,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="122"
+      y="261" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.BetNumTxt"
+      textFormatStyle="warlords.WarlordsBetFrameBetNumTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      maxChars="4"
+      restrict="0-9"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="191"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.NumTipTxt"
+      textFormatStyle="warlords.WarlordsBetFrameBetNumTipTxt_t"
+      filterString="core.normal_f"
+      x="115"
+      y="241" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.SucceedTipTxt"
+      textFormatStyle="warlords.WarlordsBetFrameSucceedTipTxt_t"
+      filterString="core.normal_f"
+      x="31"
+      y="294"
+      width="100"
+      height="60"
+      wordWrap="true"
+      autoSize="none" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.SucceedNumTxt"
+      textFormatStyle="warlords.WarlordsBetFrameLastAwardNumTxt_t3"
+      filterString="core.normal_f"
+      x="145"
+      y="316" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="multilords.MultilordsBetFrame.SucceedTipImg"
+      resourceLink="asset.warlords.QMStyle01"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="-5"
+      tipGapV="-10"
+      isFollowMouse="false"
+      x="192"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.FailTipTxt"
+      textFormatStyle="warlords.WarlordsBetFrameSucceedTipTxt_t"
+      filterString="core.normal_f"
+      x="215"
+      y="306"
+      width="100"
+      height="40"
+      wordWrap="true"
+      autoSize="none" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsBetFrame.FailNumTxt"
+      textFormatStyle="warlords.WarlordsBetFrameLastAwardNumTxt_t3"
+      filterString="core.normal_f"
+      x="330"
+      y="316" />
+    <!-- 竞猜结算 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsBetFrame.ResultBg"
+      resourceLink="warlords.ScaleBgStyle01,asset.warlords.TitleBackStyle01,asset.warlords.WarlordsFrameSplitImg,asset.warlords.ResultAwardImg,asset.core.GodwinerIcon"
+      imageRectString="&#xD;&#xA;                    0|367|0|154|13,&#xD;&#xA;                    3|361|1|24|13,&#xD;&#xA;                    221|2|27|116|13,&#xD;&#xA;                    40|188|172|21|13,&#xD;&#xA;                    230|25|169|25|13" />
+    <!-- 选择下注界面 -->
+    <component
+      classname="multilords.MultilordsBetSelectFrame"
+      stylename="multilords.MultilordsBetSelectFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="48"
+      width="543"
+      height="493" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsBetSelectFrame.Bg"
+      resourceLink="core.describeBackground_style04,multilords.MultilordsBetSelectFrame.TitleBg,asset.warlords.SplitLine,asset.core.pageBg"
+      imageRectString="0|506|0|402|13,1|505|1|34|13,2|502|353|3|13,226|64|363|33|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsBetSelectFrame.TitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|505|0|34|13,308|22|3|28|13,407|22|3|28|13" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="multilords.MultilordsBetSelectFrame.BetListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|multilords.MultilordsBetSelectFrameBetListCell,35,300"
+      width="495"
+      height="316"
+      x="6"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="multilords.MultilordsBetSelectFrame.BetOperListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      backgoundStyle="core.commonTipBg"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|multilords.MultilordsBetSelectFrameBetOperListCell,22,46"
+      width="50"
+      height="90"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="multilords.BetListCellCancelBtn"
+      backStyle="asset.warlords.BtnStyle01"
+      textStyle="warlords.BetListCellBetBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,0,3,0"
+      width="62"
+      height="24"
+      x="428"
+      y="2" />
+    <!-- 查看获奖界面 -->
+    <component
+      classname="multilords.MultilordsWinPrizesFrame"
+      stylename="multilords.MultilordsWinPrizesFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="48"
+      width="379"
+      height="490" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="multilords.PrizeListCellGloryIcon"
+      resourceLink="asset.core.GodwinerIcon"
+      x="165"
+      y="2" />
+    <!-- 查看奖励界面 -->
+    <component
+      classname="multilords.MultilordsCheckRewardFrame"
+      stylename="multilords.MultilordsCheckRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="70"
+      width="665"
+      height="613" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="multilords.MultilordsWinPrizesFrameAwardListPanel"
+      backgoundStyle="core.describeBackground_style33"
+      backgoundInnerRectString="3,3,3,3,-1"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|multilords.MultilordsWinPrizesFrameAwardListCell,35,212"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="331"
+      height="309"
+      x="6"
+      y="35" />
+    <!-- 排行榜界面 -->
+    <component
+      classname="multilords.MultilordsRankFrame"
+      stylename="multilords.MultilordsRankFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="20"
+      width="535"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsRankFrame.Bg"
+      resourceLink="core.describeBackground_style04,asset.warlords.SplitLine,asset.core.pageBg,multilords.MultilordsRankFrame.MyRankBg"
+      imageRectString="0|516|0|416|13,2|512|312|3|13,367|64|320|33|13,"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsRankFrame.MyRankBg"
+      resourceLink="warlords.WarlordsRankFrameMyRankBgBack,asset.warlords.MyRankTxtBg,asset.multilords.MyRankTxt,asset.warlords.RankTxt,warlords.WarlordsRankFrameTxtBg,asset.warlords.FightTxt,warlords.WarlordsRankFrameTxtBg"
+      imageRectString="0|511|0|55|13,0|146|-9|17|13,&#xD;&#xA;                    8|89|-8|17|13,&#xD;&#xA;                    22|37|25|15|13,66|70|19|27|13,&#xD;&#xA;                    335|43|25|15|13,379|114|19|27|13"
+      x="3"
+      y="359" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsRankFrame.TitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|515|0|34|13,63|22|3|28|13,&#xD;&#xA;                    280|22|3|28|13,410|22|3|28|13"
+      width="515"
+      height="34"
+      x="1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="multilords.MultilordsRankFrame.RankListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|multilords.MultilordsRankFrameRankListCell,35,307"
+      width="505"
+      height="274"
+      x="6"
+      y="58" />
+    <!-- 预赛结算 -->
+    <component
+      classname="yishi.view.frame.MultilordsPrelimReportFrame"
+      stylename="multilords.MultilordsPrelimReportFrame" />
+    <!-- 决赛结算界面 -->
+    <component
+      classname="yishi.view.frame.MultilordsFinalReportFrame"
+      stylename="multilords.MultilordsFinalReportFrame" />
+    <!-- 膜拜界面 -->
+    <component
+      classname="multilords.MultilordsWorshipFrame"
+      stylename="multilords.MultilordsWorshipFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.MultilordsWorshipFrame.WorshipBtn"
+      backStyle="asset.multilords.worshipBtnBg"
+      iconStyle="asset.multilords.worshipBtnTxt"
+      iconInnerRectString="65,97,15,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="-5"
+      tipGapV="-10"
+      isFollowMouse="false"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="multilords.MultilordsWorshipFrame.BackEffect"
+      resourceLink="asset.multilords.worshipEffect" />
+    <!-- 帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="multilords.MultilordsHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="multilords.MultilordsFrame.helpContent1"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="423" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="multilords.MultilordsShopHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="multilords.MultilordsShopFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="multilords.MultilordsBetHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="multilords.MultilordsBetFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <!-- 观战列表界面 -->
+    <component
+      classname="multilords.MultilordsRankFrame"
+      stylename="multilords.MultilordsBattleViewFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="20"
+      width="623"
+      height="440" />
+    <!-- 观战列表标头 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="multilords.MultilordsBattleViewFrameTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|602|0|34|13,63|22|3|28|13,277|22|3|28|13,&#xD;&#xA;      400|22|3|28|13,500|22|3|28|13"
+      x="1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsRankFrameRankTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="3"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsRankFrameNameTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="180"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsRankFrameFightTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      x="282"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="multilords.MultilordsRankFrameWinCountTitleTxt"
+      parentStyle="warlords.WarlordsWinPrizesFrameNameTitleTxt"
+      wordWrap="true"
+      width="60"
+      x="423"
+      y="22" />
+    <!-- 观战列表 -->
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="multilords.MultilordsBattleViewFrame.RankListPanel"
+      parentStyle="warlords.WarlordsWinPrizesFrameAwardListPanel"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|multilords.MultilordsBattleViewFrameRankListCell,35,307"
+      width="590"
+      height="274"
+      x="6"
+      y="58" />
+    <!-- 观战按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="multilords.BattleViewBtn"
+      backStyle="asset.multilords.cellBtnBg"
+      iconStyle="asset.multilords.viewBattleBtnIcon"
+      width="66"
+      height="29"
+      iconInnerRectString="17,33,7,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="515" />
+  </components>
+</style>

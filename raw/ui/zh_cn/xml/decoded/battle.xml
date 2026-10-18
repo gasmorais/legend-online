@@ -1,0 +1,1752 @@
+<style
+  name="battle"
+  source="ui/zh_cn/swf/battle.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ButtonTxt_t"
+      args="Arial,12,0xFFefbd,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.SoldierGrade_t"
+      args="Arial,12,0xffd8b2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.CoolDownTimeTxt_t"
+      args="Arial,12,0x00D2FF" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ValidTimeTxt_t"
+      args="Arial,11,0xFFFFFF" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ModeNameTxt_t"
+      args="Arial,12,0xF1E1BC" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.WaveDescTxt_t"
+      args="Arial,14,0x00D3FC" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ModeTurnTxt_t"
+      args="Arial,14,0xFFFFFF" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.WaveNumTxt_t"
+      args="Arial,16,0xFFFFFF" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ChatPopName_t"
+      args="Arial,13,0xffdd9a,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ChatPopTxt_t"
+      args="Arial,13,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.BufferTurnTxt_t"
+      args="Arial,16,0xFFefbd,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.SelfBufferIcon.LayerCount_t"
+      args="Arial,12,0xFFefbd,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.TrailPropCount_t"
+      args="Arial,12,0xFFefbd,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.SkillCount_t"
+      args="Arial,13,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.SkillBigCount_t"
+      args="Arial,13,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.PetNameTxt_t1"
+      args="Arial,13,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.PetNameTxt_t2"
+      args="Arial,13,0x59cd41,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.PetNameTxt_t3"
+      args="Arial,13,0x32a2f8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.PetNameTxt_t4"
+      args="Arial,13,0xc300ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.PetNameTxt_t5"
+      args="Arial,13,0xff9600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.PetNameTxt_t6"
+      args="Arial,13,0xce0f0f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.ActionPowerUILeftTime_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.HurtUpTipTxt_f"
+      args="Arial,16,0xff0000,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="battle.ActionPowerUILeftTime_f"
+      args="0x003399,1,3,3,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.petChallenge.countdownTxt.txt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.petChallenge.countdownNumTxt_t"
+      args="Arial,18,0xfff4c2,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.teamStrip_t1"
+      args="Arial,12,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.teamStrip_t2"
+      args="Arial,12,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.godArriveTimeTxt_t"
+      args="Arial,20,0xffe827,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.MarrPropCount_t"
+      args="Arial,12,0xffffff,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TrailCountView.skipTxt_t"
+      args="Arial,14,0xffb400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.HideOthersTip_t"
+      args="Arial,12,0xfff6ce" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.GreenNumberAssetSp.text_f"
+      args="arial,40,0x5EEF26,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.SelfCauseNumberAssetSp.text_f"
+      args="arial,40,0x23B3E8,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.DamageNumberAssetSp.text_f"
+      args="arial,40,0xF1FA61,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.RedNumberAssetSp.text_f"
+      args="arial,40,0xF4FFCC,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.GreenNumberField_t1"
+      args="SSF4 ABUKET,50,0xFFCC00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.bufferGoodText_t"
+      args="arial,14,0x00ff36,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.bufferBadText_t"
+      args="arial,14,0xff0000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.SacristyAwakenValueText_t"
+      args="Arial,14,0xcdcccb,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.AbysmHpValueText_t"
+      args="Arial,14,0xF4FFCC,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.spaceTimeBox.boxCountText_t1"
+      args="arial,14,0xF4FFCC,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.spaceTimeBox.boxCountText_t2"
+      args="arial,14,0x666666,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SelfAvengerView.majorText_t"
+      args="arial,14,0xe9c68c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SelfAvengerView.leftTimeText_t"
+      args="arial,14,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="raceAgainstTimeUpView.txt_t"
+      args="arial,16,0xc17d54,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="raceAgainstTimeUpView.timeTxt_t"
+      args="arial,16,0xfff9db,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="raceAgainstTimeUpView.timeTxt_f"
+      args="0xce5700,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossUIView.nickNameTxt_t"
+      args="arial,14,0xfc7d00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossUIView.consortiaNameTxt_t"
+      args="arial,12,0xe7d5ad,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.warsoul.spTxt_t"
+      args="arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="battle.warsoul.sp_f"
+      args="0x16928d,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battle.HurtUpTipTxt_f2"
+      args="Arial,14,0xff0000,true,,,,,center"
+      leading="5" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.battle.BattleBackScaleShape"
+      x="0"
+      y="0" />
+    <!-- BOSS血条上的数字切图 -->
+    <!-- timebg.png-->
+    <bitmapData
+      resourceLink="asset.battle.SuperSkill"
+      x="4"
+      y="6"
+      scaleX="0.9"
+      scaleY="0.9" />
+    <bitmapData
+      resourceLink="asset.battle.ChatPopIconBack"
+      x="31"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.battle.BattleHurtUpTipBack"
+      x="-131"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.battle.CountDownBack"
+      x="-110"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.CountDownWords"
+      x="-33"
+      y="5.85" />
+    <bitmapData
+      resourceLink="asset.battle.RedScreenBMD" />
+    <bitmapData
+      resourceLink="asset.battle.SkillCDNumYellow" />
+    <bitmapData
+      resourceLink="asset.battle.SkillCDNumRed" />
+    <bitmapData
+      resourceLink="asset.battle.SkillNameBg" />
+    <bitmapData
+      resourceLink="asset.battle.ChatPopAsset" />
+    <bitmapData
+      resourceLink="asset.battle.SkillCountBack"
+      x="29"
+      y="43" />
+    <bitmapData
+      resourceLink="asset.battle.SkillBigCountBack"
+      x="3"
+      y="43" />
+    <!--		格挡文字-->
+    <bitmapData
+      resourceLink="asset.battle.ParryAsset" />
+    <!--		<bitmapData resourceLink='asset.battle.ParryAsset2' />-->
+    <!--		<bitmapData resourceLink='asset.battle.ParryAsset3' />-->
+    <!--		格挡数字-->
+    <bitmapData
+      resourceLink="asset.battle.SelfHpNumAsset" />
+    <!--		对别人伤害数字-->
+    <bitmapData
+      resourceLink="asset.battle.DamageNumberAsset" />
+    <!--		暴击伤害数字-->
+    <bitmapData
+      resourceLink="asset.battle.CriticalDamageNumAsset" />
+    <!--		暴击伤害底图-->
+    <bitmapData
+      resourceLink="asset.battle.CriticalDamageBgAsset" />
+    <!--		暴击伤害文字图片-->
+    <bitmapData
+      resourceLink="asset.battle.CriticalDamageAsset" />
+    <bitmapData
+      resourceLink="asset.battle.BottomTextBack" />
+    <bitmapData
+      resourceLink="asset.battle.BottomBackAsset" />
+    <bitmapData
+      resourceLink="asset.battle.BattlePropLockAsset" />
+    <bitmapData
+      resourceLink="asset.battle.ReinforceFlagBg"
+      x="-49"
+      y="-30" />
+    <bitmapData
+      resourceLink="asset.battle.AutoFightFlagAsset" />
+    <bitmapData
+      resourceLink="asset.battle.BottomJobHead1" />
+    <bitmapData
+      resourceLink="asset.battle.BottomJobHead3" />
+    <bitmapData
+      resourceLink="asset.battle.SettingBmd"
+      x="200"
+      y="-109" />
+    <!--试练之塔-->
+    <bitmapData
+      resourceLink="asset.battle.TrailLayerBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.TrailBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.BanAsset"
+      x="3"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.battle.HideOthersBg"
+      width="124" />
+    <bitmapData
+      resourceLink="asset.battle.childArenaCountDownBack"
+      x="-324.5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.generalBmp1"
+      x="63"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.battle.generalBmp2"
+      x="125"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.battle.generalBmp3"
+      x="178"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.battle.generalBmp4"
+      x="237"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.defenceBg"
+      x="30"
+      y="80" />
+    <bitmapData
+      resourceLink="asset.battle.sacristy.BottomTextBack"
+      x="-239"
+      y="-20" />
+    <bitmapData
+      resourceLink="asset.battle.EastReinforceFlagBg"
+      x="-49"
+      y="-30" />
+    <bitmapData
+      resourceLink="asset.SelfAvengerView.skillBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SelfAvengerView.splitLine"
+      x="15"
+      y="18" />
+    <bitmapData
+      resourceLink="asset.SelfAvengerView.numBmd"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SelfAvengerView.closeImage"
+      x="128"
+      y="44" />
+    <bitmapData
+      resourceLink="asset.battle.raceAgainstTime.timeBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.raceAgainstTime.num"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.warsoul.containBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battle.warsoul.spBg"
+      x="22"
+      y="-15" />
+    <bitmapData
+      resourceLink="asset.battle.warsoul.spBar"
+      x="33"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.battle.warsoul.spLine"
+      x="29"
+      y="1" />
+    <bitmapData
+      resourceLink="asset.battle.nswarCicle"
+      x="2"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.battle.nswarCdbg"
+      x="-295"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.battle.nswarLeft"
+      x="-4"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.battle.nswarRight"
+      x="2"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.battle.nswarDie"
+      x="8"
+      y="14" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="battleSkillItemII.circleImg"
+      resourceLink="asset.battle.SkillCricleImg"
+      x="7"
+      y="9" />
+    <custom
+      classname="asset.battle.BattleBackGround"
+      stylename="battle.BattleBackGround" />
+    <custom
+      classname="asset.battle.BottomAwakenMc"
+      stylename="battle.BottomAwakenMc"
+      x="0"
+      y="9" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.BufferIconView"
+      tipStyle="battle.view.buffer.BufferListItemTip"
+      isFollowMouse="false"
+      tipDirctions="7,6"
+      tipGapH="0"
+      tipGapV="0"
+      iconWidth="32"
+      iconHeight="32" />
+    <custom
+      classname="battle.view.ui.SelfBufferIcon"
+      stylename="battle.SelfBufferIcon"
+      tipStyle="battle.view.buffer.BufferListItemTip"
+      isFollowMouse="false"
+      tipDirctions="7,6,0"
+      tipGapH="0"
+      tipGapV="0"
+      iconWidth="25"
+      iconHeight="25" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.TrailPropIcon"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0"
+      iconWidth="30"
+      iconHeight="30"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.SkillItemView"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0"
+      iconWidth="44"
+      iconHeight="44"
+      x="4"
+      y="6" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.SkillUseItemCell"
+      iconWidth="30"
+      iconHeight="30"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.PawnIcon"
+      iconWidth="37"
+      iconHeight="37"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.LeftPawnIcon"
+      iconWidth="50"
+      iconHeight="50"
+      x="0"
+      y="0" />
+    <custom
+      classname="battle.BackDust01Asset"
+      stylename="battle.BackDust01Asset" />
+    <custom
+      classname="asset.battle.BackDust02Asset"
+      stylename="asset.battle.BackDust02Asset" />
+    <custom
+      classname="asset.battle.HpStripAsset"
+      stylename="asset.battle.HpStripAsset" />
+    <custom
+      classname="asset.battle.BottomHpStripAsset"
+      stylename="asset.battle.BottomHpStripAsset" />
+    <custom
+      classname="asset.battle.RedNumberAsset"
+      stylename="asset.battle.RedNumberAsset" />
+    <custom
+      classname="asset.battle.GreenNumberAsset"
+      stylename="asset.battle.GreenNumberAsset" />
+    <custom
+      classname="asset.battle.SelfCauseNumberAsset"
+      stylename="asset.battle.SelfCauseNumberAsset" />
+    <custom
+      classname="asset.battle.SkillGlowAsset"
+      stylename="asset.battle.SkillGlowAsset" />
+    <custom
+      classname="asset.battle.PawnBottomAsset"
+      stylename="asset.battle.PawnBottomAsset"
+      y="10" />
+    <custom
+      classname="asset.battle.PowerStripAsset"
+      stylename="asset.battle.PowerStripAsset" />
+    <custom
+      classname="asset.battle.ExtraNumberAsset"
+      stylename="asset.battle.ExtraNumberAsset" />
+    <custom
+      classname="asset.battle.CollectGasAsset"
+      stylename="asset.battle.CollectGasAsset" />
+    <custom
+      classname="asset.battle.SkillItemCDFlashAsset"
+      stylename="asset.battle.SkillItemCDFlashAsset" />
+    <custom
+      classname="asset.battle.SkillItemCDAsset"
+      stylename="asset.battle.SkillItemCDAsset" />
+    <custom
+      classname="asset.battle.OverMc"
+      stylename="asset.battle.OverMc"
+      x="3"
+      y="5" />
+    <custom
+      classname="asset.battle.DownMc"
+      stylename="asset.battle.DownMc"
+      x="3"
+      y="4" />
+    <custom
+      classname="asset.battle.SkillNameMC"
+      stylename="asset.battle.SkillNameMC" />
+    <custom
+      classname="asset.battle.AddSpBallMC3"
+      stylename="asset.battle.AddSpBallMC3" />
+    <custom
+      classname="asset.battle.BossBottomStripAsset"
+      stylename="asset.battle.BossBottomStripAsset" />
+    <custom
+      classname="asset.battle.RoleShadeMC"
+      stylename="asset.battle.RoleShadeMC" />
+    <custom
+      classname="asset.battle.BloodUpdateRage"
+      stylename="asset.battle.BloodUpdateRage" />
+    <custom
+      classname="asset.battle.BloodUpdateAsset"
+      stylename="asset.battle.BloodUpdateAsset" />
+    <custom
+      classname="asset.battle.SkillUsedSelectedAsset2"
+      stylename="asset.battle.SkillUsedSelectedAsset2" />
+    <custom
+      classname="asset.battle.SkillUsedSelectedAsset1"
+      stylename="asset.battle.SkillUsedSelectedAsset1" />
+    <custom
+      classname="asset.battle.SkillUsedDisperseAsset"
+      stylename="asset.battle.SkillUsedDisperseAsset" />
+    <custom
+      classname="asset.battle.SkillUsedBallAsset"
+      stylename="asset.battle.SkillUsedBallAsset" />
+    <custom
+      classname="asset.battle.VesselPoolLineMC"
+      stylename="asset.battle.VesselPoolLineMC" />
+    <custom
+      classname="asset.battle.CollectGasWizardAsset"
+      stylename="asset.battle.CollectGasWizardAsset" />
+    <custom
+      classname="asset.battle.CollectGasFrontAsset"
+      stylename="asset.battle.CollectGasFrontAsset" />
+    <custom
+      classname="asset.battle.CollectGasHunterAsset"
+      stylename="asset.battle.CollectGasHunterAsset" />
+    <custom
+      classname="asset.battle.BloodPoolBallMC"
+      stylename="asset.battle.BloodPoolBallMC" />
+    <custom
+      classname="asset.battle.AngerPoolBallMC"
+      stylename="asset.battle.AngerPoolBallMC" />
+    <custom
+      classname="asset.battle.ReinforceMC"
+      stylename="asset.battle.ReinforceMC" />
+    <custom
+      classname="asset.battle.RoleLoadingView"
+      stylename="asset.battle.RoleLoadingView" />
+    <custom
+      classname="asset.battle.ChildAwakenMC"
+      stylename="asset.battle.ChildAwakenMC" />
+    <!-- tips -->
+    <custom
+      classname="mainBar.StripView"
+      stylename="battle.ChildAwakenTip"
+      tipWidth="150"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0"
+      width="80"
+      height="22" />
+    <!-- 按钮出来时的特效 -->
+    <custom
+      classname="asset.battle.GlowMc"
+      stylename="battle.GlowMc" />
+    <!-- 连击数字 -->
+    <custom
+      classname="asset.battle.BatterNumberAsset"
+      stylename="asset.battle.BatterNumberAsset" />
+    <!-- 总伤害数字 -->
+    <custom
+      classname="asset.battle.TotalDamageNumberAsset"
+      stylename="asset.battle.TotalDamageNumberAsset" />
+    <!-- 连击UI -->
+    <custom
+      classname="asset.battle.BatterUIAsset"
+      stylename="asset.battle.BatterUIAsset" />
+    <!-- 总伤害UI -->
+    <custom
+      classname="asset.battle.DamageUIAsset"
+      stylename="asset.battle.DamageUIAsset" />
+    <!-- 能量条UI -->
+    <custom
+      classname="asset.battle.PowerUIViewAsset"
+      stylename="asset.battle.PowerUIViewAsset" />
+    <!-- 暴击伤害元件 -->
+    <custom
+      classname="asset.battle.CriticalDamageNumAssetSp"
+      stylename="battle.CriticalDamageNumAssetSp" />
+    <!-- tips -->
+    <custom
+      classname="mainBar.StripView"
+      stylename="battle.VesselBallTip"
+      tipWidth="150"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0"
+      width="80"
+      height="22"
+      contentWidth="150" />
+    <!-- 胜利失败 -->
+    <custom
+      classname="asset.battle.VictoryAsset"
+      stylename="asset.battle.VictoryAsset" />
+    <custom
+      classname="asset.battle.FailedAsset"
+      stylename="asset.battle.FailedAsset" />
+    <custom
+      classname="asset.battle.PetAwakenEffect"
+      stylename="battle.PetAwakenEffect"
+      x="0"
+      y="19" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.PetIcon"
+      iconX="3"
+      iconY="3"
+      iconWidth="60"
+      iconHeight="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.PetIcon2"
+      iconX="3"
+      iconY="3"
+      iconWidth="30"
+      iconHeight="30"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="battle.ResultItem"
+      iconStyle="battle.ResultItem.RewardCellIcon"
+      textStyle="selecteCP.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="61"
+      profileHeight="61"
+      showProfile="true"
+      width="41"
+      height="41" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.ResultItem.RewardCellIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="battleSkillItemII.bigCircleImg"
+      resourceLink="asset.battle.SkillBigCricleImg"
+      x="7"
+      y="9" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="battle.HitPointTip"
+      tipWidth="150"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0"
+      width="118"
+      height="30" />
+    <!-- 伤害元件 -->
+    <custom
+      classname="asset.battle.DamageNumberAssetSp"
+      stylename="battle.DamageNumberAssetSp" />
+    <!-- p格挡伤害元件 -->
+    <custom
+      classname="asset.battle.SelfCauseNumberAssetSp"
+      stylename="battle.SelfCauseNumberAssetSp" />
+    <!-- RedNumberAsset.pngSp -->
+    <custom
+      classname="asset.battle.RedNumberAssetSp"
+      stylename="battle.RedNumberAssetSp" />
+    <custom
+      classname="asset.battle.TotalDamageNumberAssetSp"
+      stylename="battle.TotalDamageNumberAssetSp" />
+    <custom
+      classname="asset.battle.GreenNumberAssetSp"
+      stylename="battle.GreenNumberAssetSp" />
+    <custom
+      classname="asset.battle.BattleHurtUpTipBack2"
+      stylename="asset.battle.BattleHurtUpTipBack2"
+      x="-159"
+      y="109" />
+    <custom
+      classname="asset.battle.generalProgressMc"
+      stylename="battle.generalProgressMc"
+      x="0"
+      y="60" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="battle.autoFightStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.SkillSacristyItemView"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0"
+      iconWidth="60"
+      iconHeight="60"
+      x="4"
+      y="6" />
+    <custom
+      classname="asset.battle.SacristyAwakenMC"
+      stylename="asset.battle.SacristyAwakenMC"
+      x="24"
+      y="44" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="battleSkillItemII.sacristy.blackCircle"
+      resourceLink="asset.battle.sacristy.blackCircle"
+      x="2"
+      y="3" />
+    <custom
+      classname="asset.HeroRoleView.childChangeMovie"
+      stylename="HeroRoleView.childChangeMovie"
+      x="0"
+      y="9" />
+    <custom
+      classname="asset.battle.spaceTimeBox1"
+      stylename="asset.battle.spaceTimeBox1"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.battle.spaceTimeBox2"
+      stylename="asset.battle.spaceTimeBox2"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.battle.spaceTimeBox3"
+      stylename="asset.battle.spaceTimeBox3"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="BattleGoddessMovieView.goddessMc"
+      iconWidth="80"
+      iconHeight="80" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="BattleGoddessTopItem.goddessHead" />
+    <custom
+      classname="asset.BattleGoddessTopItem.goddessHeadMc"
+      stylename="BattleGoddessTopItem.goddessHeadMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.BattleBeliefProgressView.progressMc"
+      stylename="BattleBeliefProgressView.progressMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.battle.EastReinforceMC1"
+      stylename="asset.battle.EastReinforceMC1" />
+    <custom
+      classname="asset.battle.EastReinforceMC2"
+      stylename="asset.battle.EastReinforceMC2" />
+    <custom
+      classname="asset.battle.EastReinforceMC3"
+      stylename="asset.battle.EastReinforceMC3" />
+    <custom
+      classname="asset.battle.EastReinforceMC4"
+      stylename="asset.battle.EastReinforceMC4" />
+    <custom
+      classname="asset.battle.bufferResistMc"
+      stylename="battle.bufferResistMc" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.warsoul.SkillItemView"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0"
+      iconWidth="47"
+      iconHeight="47"
+      x="4"
+      y="6" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="childnswar.battle.childIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5"
+      iconWidth="46"
+      iconHeight="46"
+      x="4"
+      y="7" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="battle.BattleBackScaleShape"
+      resourceLink="asset.battle.BattleBackScaleShape"
+      scaleGridString="40,25,50,35"
+      width="500"
+      height="500" />
+    <!-- Qte -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.HurtUpTipTxt"
+      textFormatStyle="battle.HurtUpTipTxt_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="318"
+      height="22"
+      x="-122"
+      y="72" />
+    <!-- 攻击模式冷却提示文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.CoolDownTimeTxt"
+      textFormatStyle="battle.CoolDownTimeTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      x="45"
+      y="128" />
+    <!-- buffer图标上的剩余回合 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.BufferTurnTxt"
+      textFormatStyle="battle.BufferTurnTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      width="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.SelfBufferIcon.LayerCount"
+      textFormatStyle="battle.SelfBufferIcon.LayerCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="25"
+      x="0"
+      y="7" />
+    <component
+      classname="battle.view.ui.attackmode.AttackModeButton"
+      stylename="battle.AttackBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DefaultFilter"
+      backStyle="asset.battle.AttackBtnAsset"
+      selectedStyle="asset.battle.AttackSelectedBtnAsset"
+      x="5"
+      y="121"
+      tipStyle="battle.view.ui.attackmode.AttackModeBtnTip"
+      tipDirctions="7"
+      isFollowMouse="false" />
+    <!-- 防御按钮 -->
+    <component
+      classname="battle.view.ui.attackmode.AttackModeButton"
+      stylename="battle.DefenseBtn"
+      parentStyle="battle.AttackBtn"
+      backStyle="asset.battle.DefenseBtnAsset"
+      x="86"
+      tipStyle="battle.view.ui.attackmode.AttackModeBtnTip" />
+    <!-- 冷却按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="battle.ColdDownButton"
+      backStyle="asset.battle.AttackModeCDAsset"
+      x="5"
+      y="121" />
+    <!-- 攻击模式持续提示文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.ValidTimeTxt"
+      textFormatStyle="battle.ValidTimeTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      x="3"
+      y="17" />
+    <!-- 攻击 防御 文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.ModeNameTxt"
+      textFormatStyle="battle.ModeNameTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      x="32"
+      y="6" />
+    <!-- "回合"这两个字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.TurnStrTxt"
+      textFormatStyle="battle.ModeNameTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      x="37"
+      y="6" />
+    <!-- 第几回合文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.TurnNumTxt"
+      textFormatStyle="battle.ModeTurnTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      x="28"
+      y="6" />
+    <!-- 增援波数（第几波/总波数）文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.WaveNumTxt"
+      textFormatStyle="battle.WaveNumTxt_t"
+      filterString="core.normal_f"
+      height="22"
+      x="-316"
+      y="-19" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="battle.SetAutoFightBtn"
+      backStyle="asset.battle.SetAutoFightAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="battle.CancelAutoFightBtn"
+      backStyle="asset.battle.CancelAutoFightAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 自动战斗按钮2 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="battle.AutoFightBtn2"
+      unSelectedStyle="battle.CancelAutoFightBtn"
+      selectedStyle="battle.SetAutoFightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--消息盒子按钮-->
+    <component
+      stylename="battle.chatMessageBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.battle.ChatMessageBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="battle.chatMessageBtn"
+      button="battle.chatMessageBtnMC"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5" />
+    <!-- 组队聊天泡泡 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.ChatPopName"
+      textFormatStyle="battle.ChatPopName_t"
+      filterString="core.normal_f"
+      height="22"
+      x="56"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="battle.ChatPopIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      iconWidth="45"
+      iconHeight="45"
+      loadingX="22"
+      loadingY="22"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.ChatPopTxt"
+      textFormatStyle="battle.ChatPopTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="50"
+      width="125"
+      multiline="true"
+      wordWrap="true"
+      x="56"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="battle.settingBtn"
+      backStyle="asset.battle.SettingBtnBmd"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="175"
+      y="-95" />
+    <!-- 多次失败后的提示窗-->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="battle.multiFailedAlertFrame"
+      parentStyle="core.Frame2"
+      confirmStyle="battle.MultiFailedAlertConfirmBtn"
+      checkStyle="battle.MultiFailedCheckBtn"
+      describeStyle="battle.ThewDescribeTxt"
+      width="320"
+      height="228" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="battle.MultiFailedAlertConfirmBtn"
+      parentStyle="core.AlertButton_2"
+      x="80"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="battle.MultiFailedCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="65"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.ThewDescribeTxt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="300"
+      height="30"
+      x="-20"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.TrailPropBox"
+      x="173"
+      y="-46"
+      spacing="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.TrailPropCount"
+      textFormatStyle="battle.TrailPropCount_t"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="13"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.SkillBigCount"
+      textFormatStyle="battle.SkillBigCount_t"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="6"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.SkillCount"
+      textFormatStyle="battle.SkillCount_t"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="15"
+      y="41" />
+    <component
+      stylename="battle.BottomJob1"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.battle.AwakenProgress1"
+      mouseChildren="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5" />
+    <component
+      stylename="battle.BottomJob2"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.battle.AwakenProgress2"
+      mouseChildren="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5" />
+    <component
+      stylename="battle.BottomJob3"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.battle.AwakenProgress3"
+      mouseChildren="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="battle.awakenImage"
+      resourceLink="asset.battle.PetAwakenTxt,asset.battle.PetAwakenCancelTxt"
+      x="99"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.PetNameTxt"
+      textFormatStyle="battle.PetNameTxt_t1,battle.PetNameTxt_t2,battle.PetNameTxt_t3,battle.PetNameTxt_t4,battle.PetNameTxt_t5,battle.PetNameTxt_t6"
+      autoSize="none"
+      filterString="battle.HeroNameTxt_f"
+      width="150"
+      height="18"
+      x="-75"
+      y="-110" />
+    <!-- 英灵竞技 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battle.petChallenge.finishNowBtn"
+      backStyle="asset.battle.FinishNowBtnBg"
+      iconStyle="asset.battle.FinishNowBtnTxt"
+      iconInnerRectString="53,95,14,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="200"
+      height="57"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="battle.petChallenge.settingBtn"
+      backStyle="asset.battle.SettingBtnBmd"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapV="5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="217"
+      y="-100" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="battle.petChallenge.finishNowBtnTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,4,5"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false"
+      x="75"
+      y="187" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="battle.petChallenge.countdownTxt"
+      textFieldStyle="battle.petChallenge.countdownTxt.txt"
+      colors="0xffffff,0xfffcd6,0xdba30d"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,80,250"
+      x="12"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.petChallenge.countdownTxt.txt"
+      textFormatStyle="battle.petChallenge.countdownTxt.txt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="110"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.petChallenge.countdownNumTxt"
+      textFormatStyle="battle.petChallenge.countdownNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="22"
+      x="90"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="battle.teamStripText1"
+      colors="0x45f7f1,0x1cacdc,0x58fdff"
+      alphas="1,1,1"
+      ratios="0,210,255"
+      filterString="core.normal2_f"
+      textFieldStyle="battle.teamStripText1Field"
+      mouseEnabled="false"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.teamStripText1Field"
+      textFormatStyle="battle.teamStrip_t1"
+      autoSize="none"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="battle.teamStripText2"
+      colors="0xff8053,0xbb0000,0xff58b4"
+      alphas="1,1,1"
+      ratios="0,210,255"
+      filterString="core.normal2_f"
+      textFieldStyle="battle.teamStripText2Field"
+      mouseEnabled="false"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.teamStripText2Field"
+      textFormatStyle="battle.teamStrip_t2"
+      autoSize="none"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="battle.teamStripContainer1"
+      x="1"
+      y="235"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="battle.teamStripContainer2"
+      y="235"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.ResultHBox"
+      x="268"
+      y="300"
+      spacing="20" />
+    <!-- 诸神降临倒计时背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="battle.godArriveTimeBack"
+      resourceLink="asset.battle.GodArriveTimerBack,asset.battle.GodArriveTimerImage"
+      imageRectString="0|304|0|40|13,-6|221|11|24|13"
+      x="424"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.godArriveTimeTxt"
+      textFormatStyle="battle.godArriveTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="25"
+      x="648"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.MarrPropCount"
+      textFormatStyle="battle.MarrPropCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="12"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="TrailCountView.skipTxt"
+      textFormatStyle="TrailCountView.skipTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="22"
+      x="12"
+      y="9" />
+    <!-- 隐藏战斗单位 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.HideOthersBg"
+      resourceLink="asset.battle.HideOthersBg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="battle.HideOthersBtn"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedIconInnerRectString="0,23,0,23,13"
+      unselectedIconInnerRectString="0,23,0,23,13"
+      textStyle="battle.HideOthersTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.HideOthersTip"
+      textFormatStyle="battle.HideOthersTip_t"
+      filterString="core.normal_f"
+      height="22"
+      x="20"
+      y="2" />
+    <!--	战斗伤害数字样式	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.GreenNumberAssetSp.text"
+      textFormatStyle="battle.GreenNumberAssetSp.text_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.SelfCauseNumberAssetSp.text"
+      textFormatStyle="battle.SelfCauseNumberAssetSp.text_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.DamageNumberAssetSp.text"
+      textFormatStyle="battle.DamageNumberAssetSp.text_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.RedNumberAssetSp.text"
+      textFormatStyle="battle.RedNumberAssetSp.text_f"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="battle.ResistUIView.sign"
+      resourceLink="asset.battle.addRedLow,asset.battle.minusRedLow" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="battle.ResistUIView.percent"
+      resourceLink="asset.battle.percentRedLow,asset.battle.percentGreenLow" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="battle.ResistUIView.damage"
+      resourceLink="asset.battle.damageRedLow,asset.battle.damageGreenLow" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.GreenNumberField"
+      textFormatStyle="battle.GreenNumberField_t1" />
+    <!-- 神龙泰坦/bg.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.fightBg"
+      resourceLink="asset.dragontitan.fightBg"
+      x="0"
+      y="0" />
+    <!-- 神龙泰坦/收展按钮.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.hidebtn"
+      resourceLink="asset.dragontitan.hidebtn"
+      x="99"
+      y="122" />
+    <!-- 神龙泰坦/隐藏.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.hideImgTxt"
+      resourceLink="asset.dragontitan.hideImgTxt"
+      x="94"
+      y="139" />
+    <!-- 神龙泰坦/展开.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.expandImgTxt"
+      resourceLink="asset.dragontitan.expandImgTxt"
+      x="94"
+      y="140" />
+    <!--5.7新增buffer数量显示-->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.bufferStateHbox"
+      x="-35"
+      y="-20"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.bufferGoodImage"
+      resourceLink="asset.battle.bufferGoodImage"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.bufferBadImage"
+      resourceLink="asset.battle.bufferBadImage"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.bufferGoodText"
+      textFormatStyle="battle.bufferGoodText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="20"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.bufferBadText"
+      textFormatStyle="battle.bufferBadText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="20"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.SacristyAwakenValueText"
+      textFormatStyle="battle.SacristyAwakenValueText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="56"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.AbysmHpValueText"
+      textFormatStyle="battle.AbysmHpValueText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="95"
+      height="20"
+      x="-240"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.AbysmMpValueText"
+      textFormatStyle="battle.AbysmHpValueText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="95"
+      height="20"
+      x="153"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.spaceTimeBox.boxCountText"
+      textFormatStyle="battle.spaceTimeBox.boxCountText_t1,battle.spaceTimeBox.boxCountText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="30"
+      height="20"
+      x="5"
+      y="10" />
+    <component
+      stylename="BattleGoddessMovieView.leftContiner"
+      classname="com.pickgliss.ui.core.Component"
+      x="170"
+      y="390" />
+    <component
+      stylename="BattleGoddessMovieView.rightContiner"
+      classname="com.pickgliss.ui.core.Component"
+      x="170"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="BattleGoddessTopView.hbox"
+      spacing="0"
+      x="0"
+      y="0" />
+    <component
+      stylename="BattleBeliefProgressView.beliefContiner"
+      classname="com.pickgliss.ui.core.Component"
+      x="78"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="battle.TrailBack"
+      resourceLink="asset.battle.TrailBack,asset.battle.CrossGuildTrailBack"
+      x="163"
+      y="-47" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SelfAvengerView.avengerImage"
+      resourceLink="asset.SelfAvengerView.avengerImage"
+      x="15"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SelfAvengerView.waitBg"
+      resourceLink="SelfAvengerView.waitScaleBg,asset.SelfAvengerView.waitSkillBg,asset.SelfAvengerView.waitSkillBg"
+      imageRectString="0|156|0|170|13,7|68|8|156|13,80|68|8|156|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="SelfAvengerView.waitScaleBg"
+      parentStyle="core.describeBackground_style048" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SelfAvengerView.majorText"
+      textFormatStyle="SelfAvengerView.majorText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="75"
+      height="20"
+      x="3"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SelfAvengerView.minorText"
+      parentStyle="SelfAvengerView.majorText"
+      x="80"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SelfAvengerView.fightSkillHbox"
+      x="23"
+      y="40"
+      spacing="-4" />
+    <component
+      stylename="SelfAvengerView.waitSkillCon"
+      classname="com.pickgliss.ui.core.Component"
+      x="13"
+      y="12" />
+    <component
+      stylename="SelfAvengerView.avengerSpCon"
+      classname="com.pickgliss.ui.core.Component"
+      x="30"
+      y="0" />
+    <component
+      stylename="SelfAvengerView.waitView"
+      classname="com.pickgliss.ui.core.Component"
+      x="57"
+      y="-152" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SelfAvengerView.openBtn"
+      backStyle="asset.SelfAvengerView.openBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="128"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SelfAvengerView.leftTimeText"
+      textFormatStyle="SelfAvengerView.leftTimeText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="135"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="AvengerBattleSkillView.btnKeyImage"
+      resourceLink="asset.battle.SkillCountBack"
+      x="130"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AvengerBattleSkillView.btnKeyText"
+      parentStyle="battle.SkillBigCount"
+      x="143"
+      y="82" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="raceAgainstTimeUpView.txt"
+      textFormatStyle="raceAgainstTimeUpView.txt_t"
+      autoSize="none"
+      width="139"
+      height="28"
+      x="51"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="raceAgainstTimeUpView.timeTxt"
+      textFormatStyle="raceAgainstTimeUpView.timeTxt_t"
+      autoSize="none"
+      filterString="raceAgainstTimeUpView.timeTxt_f"
+      width="50"
+      height="28"
+      x="140"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="forbiddenBossUIView.bg"
+      resourceLink="asset.battle.forbiddenBossUIView.bg,asset.battle.forbiddenBossUIView.txt"
+      imageRectString="0|173|0|134|13,50|78|22|21|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossUIView.nickNameTxt"
+      textFormatStyle="forbiddenBossUIView.nickNameTxt_t"
+      autoSize="none"
+      width="170"
+      height="26"
+      x="0"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossUIView.consortiaNameTxt"
+      textFormatStyle="forbiddenBossUIView.consortiaNameTxt_t"
+      autoSize="none"
+      width="130"
+      height="26"
+      x="21"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.warsoulHBox"
+      x="38"
+      y="18"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.warsoul.spTxt"
+      textFormatStyle="battle.warsoul.spTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="battle.warsoul.sp_f"
+      width="50"
+      height="20"
+      x="21"
+      y="-13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battle.petChallenge.warsoulEndBtn"
+      backStyle="asset.battle.warsoulEndBtnBg"
+      iconStyle="asset.battle.warsoulEndBtnTxt"
+      backgoundInnerRectString="25,190,0,46,13"
+      width="190"
+      height="46"
+      iconInnerRectString="33,78,11,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childnswar.IdxLeftImg"
+      resourceLink="asset.battle.SkillCountBack"
+      x="-35"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childnswar.IdxRightImg"
+      resourceLink="asset.battle.SkillCountBack"
+      x="13"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.childnswar.leftIdx"
+      parentStyle="battle.SkillCount"
+      x="-20"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.childnswar.rightIdx"
+      parentStyle="battle.SkillCount"
+      x="28"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.childnswarLeft.HBox"
+      x="-218"
+      y="-4"
+      strictWidth="61" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.childnswar.right.HBox"
+      x="97"
+      y="-4"
+      strictWidth="61" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.childnswar.bottom.HBox"
+      x="81"
+      y="-64"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.battle.battle.BattleHurtUpTipBack"
+      resourceLink="asset.battle.BattleHurtUpTipBack"
+      scaleGridString="20,14,278,24"
+      width="318"
+      height="54"
+      x="-131"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.battle.battle.BattleHurtUpTipBack2"
+      resourceLink="asset.battle.BattleHurtUpTipBack"
+      scaleGridString="20,14,278,24"
+      width="318"
+      height="54"
+      x="-131"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battle.HurtUpTipTxt2"
+      textFormatStyle="battle.HurtUpTipTxt_f2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="318"
+      height="22"
+      x="-122"
+      y="152"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.addSkHBox"
+      x="193"
+      y="-38"
+      spacing="2" />
+  </components>
+</style>

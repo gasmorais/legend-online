@@ -1,0 +1,616 @@
+<style
+  name="bingo"
+  source="ui/zh_cn/swf/bingo.swf">
+  <sets>
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="bingo.BuyNumTextStyle_f"
+      args="0xff0000,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.BingoNumView.numTxt_1"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.BingoNumView.numTxt_2"
+      args="Arial,14,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.RankTitleTxt_t"
+      args="Arial,12,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.NormalTextFormat_t1"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.NormalTextFormat_t2"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.additionNumTextStyle_t"
+      args="Arial,15,0xfff000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bingo.lotteryNumTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.bingo.Bg"
+      x="2"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.bingo.numberBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.bingo.grayBg" />
+    <bitmapData
+      resourceLink="asset.bingo.ballsBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.bingo.redStone"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.bingo.cellbg"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.numBg"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.calendarAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.ballNumberAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.rankNumAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.cardTitleNumAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.cardNumAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.poolNumAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.tabSelectedAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.tabUnselectedAsset"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.bigBallImgB"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.bigBallImgI"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.bigBallImgN"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.bigBallImgG"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.bigBallImgO"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.bingo.zhongjiangkazu"
+      x="10"
+      y="283" />
+    <bitmapData
+      resourceLink="asset.bingo.xingyunshuzi"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.bingo.jiangchifanli"
+      x="8"
+      y="100" />
+    <bitmapData
+      resourceLink="asset.bingo.jiangchi"
+      x="22"
+      y="181" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="mainBar.StripView"
+      stylename="bingo.poolTip.StripView"
+      tipStyle="bingo.poolTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="17"
+      y="142" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="bingo.rankTip.StripView1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="63"
+      y="319" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="bingo.rankTip.StripView2"
+      parentStyle="bingo.rankTip.StripView1"
+      x="63"
+      y="374" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="bingo.rankTip.StripView3"
+      parentStyle="bingo.rankTip.StripView1"
+      x="66"
+      y="424" />
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="bingo.poolTip"
+      enableHtml="true"
+      tipWidth="200"
+      contentWidth="200" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="bingoEvent.pageSpComponent"
+      x="32"
+      y="388" />
+    <custom
+      classname="asset.bingo.inkMc"
+      stylename="asset.bingo.inkMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="bingo.BingoNumView"
+      stylename="bingo.BingoNumView1"
+      x="138"
+      y="119" />
+    <custom
+      classname="bingo.BingoNumView"
+      stylename="bingo.BingoNumView2"
+      x="459"
+      y="119" />
+    <custom
+      classname="bingo.BingoNumView"
+      stylename="bingo.BingoNumView3"
+      x="816"
+      y="164"
+      scaleX="0.4"
+      scaleY="0.4" />
+    <custom
+      classname="bingo.BingoNumView"
+      stylename="bingo.BingoNumView4"
+      x="816"
+      y="336"
+      scaleX="0.4"
+      scaleY="0.4" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="bingo.scene.lineSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="bingo.BingoBallMovieView"
+      stylename="bingo.BingoBallMovieView"
+      x="490"
+      y="20" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="bingo.movie.ballSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.bingo.bigBallMask"
+      stylename="asset.bingo.bigBallMask"
+      x="0"
+      y="0" />
+    <custom
+      classname="bingo.BingoResultItem"
+      stylename="bingo.BingoResultItem1"
+      x="0"
+      y="38" />
+    <custom
+      classname="bingo.BingoResultItem"
+      stylename="bingo.BingoResultItem2"
+      x="0"
+      y="76" />
+    <custom
+      classname="bingo.BingoResultItem"
+      stylename="bingo.BingoResultItem3"
+      x="0"
+      y="113" />
+  </customDisplay>
+  <components>
+    <component
+      classname="bingo.BingoFrame"
+      stylename="bingo.BingoFrame"
+      parentStyle="core.Frame1"
+      containerX="14"
+      containerY="61"
+      width="989"
+      height="633" />
+    <component
+      classname="bingo.BingoBallFrame"
+      stylename="bingo.BingoBallFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="51"
+      width="407"
+      height="393" />
+    <component
+      classname="bingo.BingoResultFrame"
+      stylename="bingo.BingoResultFrame"
+      parentStyle="core.Frame2"
+      containerX="8"
+      containerY="45"
+      width="538"
+      height="259" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bingo.BingoFrameBack"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="958"
+      height="527"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bingo.BingoBallFrameBack"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="384"
+      height="303"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bingo.BingoResultFrameBack"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="519"
+      height="151"
+      x="0"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bingo.describeBackground_style33"
+      parentStyle="core.describeBackground_style33"
+      width="510"
+      height="141"
+      x="5"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="bingo.resultMovie"
+      resourceLink="asset.bingo.resultMovie"
+      x="309"
+      y="256" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bingo.shopBtn"
+      backStyle="asset.bingo.shopBtn"
+      iconInnerRectString="20,45,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="76"
+      height="76"
+      x="848"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="bingo.numberBtn"
+      backStyle="asset.bingo.numberBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="-10"
+      tipGapH="-10"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="807"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="bingo.bigBallImage"
+      resourceLink="asset.bingo.bigBallImgB,asset.bingo.bigBallImgI,asset.bingo.bigBallImgN,asset.bingo.bigBallImgG,asset.bingo.bigBallImgO"
+      x="-39"
+      y="-39" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="bingo.ballImage"
+      resourceLink="asset.bingo.bigBallImgB,asset.bingo.bigBallImgI,asset.bingo.bigBallImgN,asset.bingo.bigBallImgG,asset.bingo.bigBallImgO"
+      x="-39"
+      y="-39" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.cellbg1"
+      resourceLink="asset.bingo.cellbg"
+      scaleX="0.75"
+      scaleY="0.75"
+      x="65"
+      y="322" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.cellbg2"
+      parentStyle="bingo.cellbg1"
+      x="65"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.cellbg3"
+      parentStyle="bingo.cellbg1"
+      x="65"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.BingoNumView.numTxt1"
+      textFormatStyle="bingo.BingoNumView.numTxt_1,bingo.BingoNumView.numTxt_2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="97"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.BingoNumView.numTxt2"
+      parentStyle="bingo.BingoNumView.numTxt1"
+      x="142"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.additionNumTextStyle"
+      textFormatStyle="bingo.additionNumTextStyle_t"
+      autoSize="none"
+      x="19"
+      y="145"
+      height="20"
+      width="76"
+      filterString="bingo.BuyNumTextStyle_f" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bingo.zhongjiangDetail"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.bingo.zhongjiangDetail"
+      width="114"
+      height="42"
+      iconInnerRectString="20,74,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.firstBmp1"
+      resourceLink="asset.bingo.firstBmp"
+      x="18"
+      y="324" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.grayBg"
+      resourceLink="asset.bingo.grayBg"
+      x="808"
+      y="124" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.secondBmp1"
+      resourceLink="asset.bingo.secondBmp"
+      x="18"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.thirdBmp1"
+      resourceLink="asset.bingo.thirdBmp"
+      x="18"
+      y="427" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.redStone1"
+      resourceLink="asset.bingo.redStone"
+      x="82"
+      y="142" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.redStone2"
+      resourceLink="asset.bingo.redStone"
+      x="53"
+      y="251" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.redStone3"
+      resourceLink="asset.bingo.redStone"
+      x="318"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.redStone4"
+      resourceLink="asset.bingo.redStone"
+      x="460"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.xingyunshuzi1"
+      resourceLink="asset.bingo.xingyunshuzi"
+      x="232"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.xingyunshuzi2"
+      resourceLink="asset.bingo.xingyunshuzi"
+      x="34"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="bingo.result.rankImage"
+      resourceLink="asset.bingo.firstBmp,asset.bingo.secondBmp,asset.bingo.thirdBmp"
+      x="32"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="bingo.rewardMulImage"
+      resourceLink="asset.bingo.rewardMul2,asset.bingo.rewardMul5"
+      x="247"
+      y="344" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bingo.BingoResultFrame.TitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|517|0|34|13,91|22|3|28|13,231|22|3|28|13,378|22|3|28|13"
+      width="515"
+      height="34"
+      x="1"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.RankTitleTxt"
+      textFormatStyle="bingo.RankTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="34"
+      x="-1"
+      y="23"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.NumTitleTxt"
+      parentStyle="bingo.RankTitleTxt"
+      autoSize="none"
+      width="140"
+      x="93"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.NoteTitleTxt"
+      parentStyle="bingo.RankTitleTxt"
+      autoSize="none"
+      width="150"
+      x="233"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.DistributeTitleTxt"
+      parentStyle="bingo.RankTitleTxt"
+      autoSize="none"
+      width="150"
+      x="373"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="bingo.BingoResultFrame.GroupBtn1"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedIconStyle="asset.bingo.daySelectedAsset"
+      unselectedIconStyle="asset.bingo.dayUnselectedAsset"
+      selectedIconInnerRectString="53,28,8,17,13"
+      unselectedIconInnerRectString="53,27,8,17,13"
+      textStyle="bingo.NormalTextFormat"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="22"
+      x="3"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="bingo.BingoResultFrame.GroupBtn2"
+      parentStyle="bingo.BingoResultFrame.GroupBtn1"
+      width="100"
+      height="22"
+      x="103"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="bingo.BingoResultFrame.GroupBtn3"
+      parentStyle="bingo.BingoResultFrame.GroupBtn1"
+      width="100"
+      height="22"
+      x="203"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="bingo.BingoResultFrame.GroupBtn4"
+      parentStyle="bingo.BingoResultFrame.GroupBtn1"
+      width="100"
+      height="22"
+      x="303"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.NormalTextFormat"
+      textFormatStyle="bingo.NormalTextFormat_t1,bingo.NormalTextFormat_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="22"
+      height="18"
+      x="31"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.BuyInputBg1"
+      resourceLink="asset.core.TextInputBG2"
+      scaleX="0.45"
+      x="108"
+      y="344" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bingo.BuyInputBg2"
+      resourceLink="asset.core.TextInputBG2"
+      scaleX="0.45"
+      x="154"
+      y="344" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.lotteryNumTxt"
+      textFormatStyle="bingo.lotteryNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="76"
+      height="20"
+      x="127"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.everyLotteryTxt"
+      parentStyle="bingo.lotteryNumTxt"
+      autoSize="none"
+      width="76"
+      height="20"
+      x="259"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bingo.totalLevelTxt"
+      parentStyle="bingo.lotteryNumTxt"
+      autoSize="none"
+      width="76"
+      height="20"
+      x="400"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bingo.BetListCellOverBg"
+      parentStyle="core.TitleBack_Style888"
+      width="515"
+      height="37"
+      x="2"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="bingo.BetListCellLine"
+      resourceLink="asset.bingo.DashedLine,asset.bingo.DashedLine,asset.bingo.DashedLine"
+      width="494"
+      height="3"
+      x="1"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="bingo.pvpShopHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="915"
+      y="-24" />
+  </components>
+</style>

@@ -1,0 +1,3002 @@
+<style
+  name="friends"
+  source="ui/zh_cn/swf/friends.swf">
+  <sets>
+    <!-- 页码文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.InvitePageTextStyle_t"
+      args="arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="friends.InvitePageTextStyle_f"
+      args="0x3C2000,1,3,3,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.InviteNicknameTextStyle_t"
+      args="Arial,12,0xfff6d9,,,,,,center" />
+    <!-- 文字滤镜 -->
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="friends.friendsNameTextStyle_f"
+      args="0x000000,1,5,5,3" />
+    <!-- 好友大图标Item -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.friendsCellName_t"
+      args="Arial,12,0xfff4c6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.friendsCellLevel_t"
+      args="Arial,12,0xffae00,,,,,,left" />
+    <!-- 好友Item未选中 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.friendsItemUnselected_t"
+      args="Arial,14,0xe7c88b,,,,,,left" />
+    <!-- 好友Item选中 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.friendsItemSelected_t"
+      args="Arial,14,0xffae00,,,,,,left" />
+    <!-- 好友vip -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="FriendItemCellNameText_vip_t"
+      args="Arial,14,0xfcc64d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.friendsNameTextStyle_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <!-- 菜单字体 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.menuBtn_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.menuBtn_t2"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.menuBtn_t3"
+      args="Arial,12,0x7e6530,,,,,,left" />
+    <!-- 搜索字体 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.search_t"
+      args="Arial,12,0xd9b88d,,,,,,left" />
+    <!--搜索提示 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.searchTip_t"
+      args="Arial,12,0xe7c88b,,,,,,center" />
+    <!-- 帮助确定按钮 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.friendsHelpConfirmBtnTxt_t"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.applyFormat_5"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.applyFormat_12"
+      args="Arial,12,0xffefbd,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.applyFormat_1"
+      args="Arial,15,0xfc7100,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.applyFormat_2"
+      args="Arial,15,0xefbe55,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.applyFormat_3"
+      args="Arial,12,0xffae00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.applyFormat_4"
+      args="Arial,12,0xfddaac,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.yield_title_total_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="friend.yield_title_total_f"
+      args="0x000000,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.yield_value_total_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="friend.GlowFilter_1"
+      args="0x0b01111,1,5,5,3" />
+    <!-- IM -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.IMStateComBoxListCellTxt_f1"
+      args="Arial,12,0xdcb55c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.IMStateComBoxListCellTxt_f2"
+      args="Arial,12,0xffefbd,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.IMStateReplyInputTipTxt_t"
+      args="Arial,12,0xdcb55c" />
+    <!-- 查找好友 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.FindWayTxt_t"
+      args="Arial,12,0xe5cf9f" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.ExactFindInputTipTxt_t"
+      args="Arial,14,0xe5cf9f" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.ExactFindClickTipTxt_t"
+      args="Arial,12,0x625b54" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.ConditionFindSexListCellTxt_t"
+      args="Arial,12,0xecdfa1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.ConditionFindSexComBoxText_t"
+      args="Arial,12,0x826b63,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.FindResultFrameResultTipTxt_t"
+      args="Arial,12,0xfc9c46" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.FindResultFrameCurPageTxt_t"
+      args="Arial,12,0xcdc5b5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.FindResultCellNameTxt_t"
+      args="Arial,12,0xe5cf9f" />
+    <!-- 赠送玫瑰 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentViewInputComBoxTxt_t"
+      args="Arial,12,0xdad8b6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentViewInputComBoxBtnTxt_t"
+      args="Arial,12,0xffeda7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentViewWordCountTxt_t"
+      args="Arial,12,0xdad8b6,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentBackViewInputTipTxt_t"
+      args="Arial,14,0xffc62c,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentBackViewInputNumTxt_t"
+      args="Arial,12,0xffebc5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentBackViewChangeContentTxt_t"
+      args="Arial,12,0x00d8ff,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.addBtnTextStyle_t"
+      args="Arial,12,0xecdfa1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.CellMateRingTxt_t"
+      args="Arial,12,0xe3e5e9,,,,,,right"
+      spacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.CellVipNameTxt_f"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friends.RosePresentViewInputComBoxTxt_t1"
+      args="Arial,12,0xfe3c92" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="friend.RosePresentBackNewViewSendNameTxt_t"
+      args="Arial,18,0xffffff,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 好友帮助 -->
+    <bitmapData
+      resourceLink="asset.friends.FriendsHelp"
+      x="-6"
+      y="24" />
+    <!-- 好友背景 -->
+    <bitmapData
+      resourceLink="asset.core.friendsFriendImg"
+      x="5"
+      y="4" />
+    <!-- 公会图标 -->
+    <bitmapData
+      resourceLink="asset.core.friendsUnionImg"
+      x="3"
+      y="2" />
+    <!-- 社区图标 -->
+    <bitmapData
+      resourceLink="asset.friends.CommunityImg"
+      x="5"
+      y="4" />
+    <!-- 好友删除Img -->
+    <bitmapData
+      resourceLink="asset.friends.DeleteFriendsImg" />
+    <!-- 菜单按钮图标 -->
+    <bitmapData
+      resourceLink="asset.friends.MenuBtnImg"
+      x="6"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.friends.AddGroupIcon"
+      x="5"
+      y="5" />
+    <!-- 搜索背景 -->
+    <bitmapData
+      resourceLink="asset.friends.FriendsSearchBg"
+      width="240" />
+    <!-- 搜索图标 -->
+    <bitmapData
+      resourceLink="asset.friends.FriendsSearchBtnImg" />
+    <!-- 搜索返回图标 -->
+    <bitmapData
+      resourceLink="asset.friends.FriendsSearchReturnImg" />
+    <!-- 推荐 -->
+    <bitmapData
+      resourceLink="asset.friends.RecommendTitleBG"
+      width="464" />
+    <!-- 好感度 -->
+    <bitmapData
+      resourceLink="asset.friends.StandingsBG" />
+    <!--标题条.png -->
+    <bitmapData
+      resourceLink="asset.friends.InviteTitlebarBg"
+      x="-13"
+      y="2" />
+    <!-- 查找好友 -->
+    <!-- <bitmapData resourceLink="asset.friends.FindWayImg" x="23" y="11" 
+			/> -->
+    <!-- 赠送玫瑰 -->
+    <bitmapData
+      resourceLink="asset.friends.RosePresentViewInputTipImg"
+      x="5"
+      y="18" />
+    <bitmapData
+      resourceLink="asset.friends.textBg"
+      x="5"
+      y="20" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="friends.CellMateRing"
+      iconHeight="30"
+      iconWidth="30"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="14"
+      loadingY="14"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="Friends.FriendItemCellStandingsView"
+      x="141"
+      y="19"
+      tipStyle="yishi.view.tips.FavourTip" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="Friends.FriendItemCellmateStripView1"
+      x="55"
+      y="50"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,4,3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="Friends.FriendItemCellmateStripView2"
+      x="125"
+      y="50"
+      tipStyle="yishi.view.tips.MarryTip"
+      tipDirctions="4,5,4,3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="Friends.FriendItemCellmateStripView3"
+      x="165"
+      y="50"
+      tipStyle="yishi.view.tips.MarryTip"
+      tipDirctions="4,5,4,3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="Friends.standingsView"
+      x="173"
+      y="3"
+      tipStyle="yishi.view.tips.FavourTip" />
+    <custom
+      classname="friends.view.ConsortiaMenuView"
+      stylename="friends.ConsortiaMenuView" />
+    <custom
+      classname="friends.view.FridendsListView"
+      stylename="friends.FridendsListView"
+      x="-22"
+      y="80" />
+    <custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="friends.HeadIconCell"
+      parentStyle="core.PreviewSmallIconCell"
+      buttonMode="true"
+      x="-19"
+      y="-3" />
+    <custom
+      classname="friends.view.FriendItemCell"
+      stylename="friends.FriendCell" />
+    <custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="friends.FriendItemCellHeadCell"
+      backStyle="friends.FriendItemCellHeadCellBack"
+      iconStyle="friends.FriendItemCellHeadCellIcon"
+      iconX="2"
+      iconY="2"
+      iconWidth="39"
+      iconHeight="39"
+      x="5"
+      y="-1" />
+    <custom
+      classname="yishi.view.community.BaseFriendIcon"
+      stylename="friends.FriendItemCellHeadCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="2"
+      loadingHeight="2"
+      loadingX="10"
+      loadingY="10" />
+    <!-- IM -->
+    <custom
+      classname="asset.friends.IMFriendShiningMC"
+      stylename="friends.IMFriendShiningMC"
+      x="0"
+      y="2" />
+    <custom
+      classname="asset.friends.IMGroupShiningMC"
+      stylename="friends.IMGroupShiningMC"
+      x="0"
+      y="0" />
+    <!-- 查找好友 -->
+    <custom
+      classname="friends.findfriend.FindFriendView"
+      stylename="friends.FindFriendView"
+      x="0"
+      y="5" />
+    <custom
+      classname="friends.findfriend.ExactFindFriendView"
+      stylename="friends.ExactFindFriendView"
+      x="131"
+      y="74" />
+    <custom
+      classname="friends.findfriend.ConditionFindFriendView"
+      stylename="friends.ConditionFindFriendView"
+      x="15"
+      y="61" />
+    <custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="friends.FindResultCellHeadCell"
+      parentStyle="core.PreviewSmallIconCell"
+      x="4"
+      y="5" />
+    <!-- 回赠玫瑰 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="friends.RosePresentBackViewContentContainer"
+      x="-20"
+      y="202" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="friends.RosePresentBackViewContentContainer1"
+      x="-18"
+      y="202" />
+  </customDisplay>
+  <components>
+    <!-- <component classname="com.pickgliss.ui.image.Image" stylename="friends.FindFriendFrameBg" 
+			resourceLink="asset.friends.FindFriendFrameBg" x="-1" y="-4" /> -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="friends.FindFriendFrameBg"
+      resourceLink="asset.friends.addBg01,asset.friends.addBg02,asset.friends.addBg03,asset.friends.addBg04,asset.friends.addBg05,asset.friends.addBg06,asset.friends.addBg07,asset.friends.addBg08,asset.friends.addBg09"
+      x="-6"
+      y="3"
+      width="346"
+      height="111" />
+    <!--聊天状态盒子 -->
+    <component
+      classname="im.view.IMStateComBox"
+      stylename="friends.IMStateComBox"
+      listPanelStyle="friends.IMStateComBoxListPanel"
+      listInnerRectString="0,25,0,100,18"
+      frameImageStyle="friends.IMStateComBoxStateImage"
+      buttonStyle="friends.IMStateComBoxBtn"
+      selctedPropName="stateId"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,4,3"
+      tipGapV="3"
+      tipGapH="-20"
+      isFollowMouse="false"
+      width="104"
+      height="23"
+      x="33"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.IMStateComBoxStateImage"
+      resourceLink=",,,asset.core.friends.LeaveState,asset.core.friends.NoDisturbState,asset.core.friends.BusyState,asset.friends.OnlineState"
+      x="5"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="friends.IMStateComBoxListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="4,4,3,3,-1"
+      viewportInnerRectString="0,1,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.IMStateComBoxListCell,25,80"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="84"
+      height="96" />
+    <component
+      classname="im.view.IMStateComBoxCell"
+      stylename="friends.IMStateComBoxListCell"
+      backStyle="friends.IMStateComBoxListCellBack"
+      backgoundInnerRectString="25,0,0,0,-1"
+      frameImageStyle="friends.IMStateComBoxStateImage"
+      textStyle="friends.IMStateComBoxListCellTxt"
+      autoSizeAble="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="6,5,4,5"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="80"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.IMStateComBoxListCellBack"
+      resourceLink=",asset.core.ItemBg001,asset.core.ItemBg001"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.IMStateComBoxListCellTxt"
+      textFormatStyle="friends.IMStateComBoxListCellTxt_f1,friends.IMStateComBoxListCellTxt_f2,friends.IMStateComBoxListCellTxt_f2"
+      filterString="core.filter_01"
+      autoSize="none"
+      width="80"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.IMStateComBoxBtn"
+      unSelectedStyle="friends.IMStateComBoxBtnBack"
+      selectedStyle="friends.IMStateComBoxBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.IMStateComBoxBtnBack"
+      resourceLink="asset.friends.StateComBoxDefaultBg,asset.friends.StateComBoxOverBg,asset.friends.StateComBoxOverBg" />
+    <!-- 聊天状态回复 -->
+    <component
+      classname="im.view.IMStateReplyInputView"
+      stylename="friends.IMStateReplyInputView"
+      parentStyle="core.Frame2"
+      width="360"
+      height="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.IMStateReplyInputTipTxt"
+      textFormatStyle="friends.IMStateReplyInputTipTxt_t"
+      filterString="core.filter_01"
+      x="-12"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.IMStateReplyInputTxt"
+      textFormatStyle="core.IMChatMsgTxt_f1"
+      filterString="core.filter_01"
+      type="input"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="308"
+      height="60"
+      x="-10"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.IMStateReplyInputBg"
+      parentStyle="core.IMChatInputBg"
+      x="-17"
+      y="18"
+      width="321"
+      height="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.IMStateReplyInputConfirmBtnTxt"
+      textFormatStyle="core.IMAddFriendBtnTxt_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.IMStateReplyInputConfirmBtn"
+      backStyle="asset.core.Style14Btn"
+      textStyle="friends.IMStateReplyInputConfirmBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="22,0,6,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="75"
+      height="31"
+      x="47"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.IMStateReplyInputCancleBtn"
+      parentStyle="friends.IMStateReplyInputConfirmBtn"
+      x="168"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="friends.Vscroll"
+      parentStyle="core.VScrollbar02"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="0,0,10,10,0"
+      decreaseButtonInnerRectString="14,10,0,0,9"
+      increaseButtonInnerRectString="14,10,0,0,10" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="friends.FriendListPanel"
+      vScrollbarStyle="friends.Vscroll"
+      vScrollbarInnerRectString="16,0,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="4,2,22,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.FriendCell,24,150,false"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="30"
+      width="238"
+      height="340"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.friendsHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="207"
+      y="9" />
+    <component
+      classname="friends.view.FriendsHelpFrame"
+      stylename="friends.friendsHelpFrame"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="35"
+      containerY="40"
+      width="370"
+      height="463" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.friendsHelpBack"
+      parentStyle="core.describeBackground_style04"
+      x="-18"
+      y="4"
+      width="330"
+      height="325" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.friendsHelpConfirmBtn"
+      parentStyle="core.GreenBtn"
+      backgoundInnerRectString="3,8,5,5"
+      textStyle="friends.friendsHelpConfirmBtnTxt"
+      x="106"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.friendsHelpConfirmBtnTxt"
+      textFormatStyle="friends.friendsHelpConfirmBtnTxt_t"
+      autoSize="none"
+      width="74"
+      height="22"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.InputGroupNameBg"
+      resourceLink="asset.friends.FriendsSearchBg"
+      width="200"
+      x="20"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.InputGroupNameTxt"
+      textFormatStyle="friends.menuBtn_t"
+      filterString="core.normal_f"
+      type="input"
+      maxChars="12"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="26"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.DelGroupBtn"
+      backStyle="asset.friends.DeleteFriendsImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,1,2,3"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="200"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.RenameGroupBtn"
+      backStyle="asset.friends.RenameGroupIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,1,2,3"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="170"
+      y="2" />
+    <!-- 好友标题按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.TitleBack"
+      resourceLink="friends.MenuUnselectedBtnImg,asset.friends.MenuBtnImg,asset.friends.AddGroupIcon" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.MenuUnselectedBtnImg"
+      resourceLink="asset.friends.MenuBtnImg"
+      rotation="-90"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.TitleTxt"
+      textFormatStyle="friends.menuBtn_t,friends.menuBtn_t2,friends.menuBtn_t2,friends.menuBtn_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.FriendsItemGroupCellBg"
+      resourceLink=",asset.invite.FriendsItemOverBg"
+      width="232"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.FriendsItemCellBg"
+      resourceLink="asset.friends.FriendsCellSelectBg"
+      scaleGridString="24,13,67,12"
+      width="231"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.FriendsItemBg"
+      resourceLink=",asset.invite.FriendsItemOverBg,asset.invite.FriendsItemSelectBg"
+      width="232"
+      x="1" />
+    <!--公会菜单 -->
+    <component
+      classname="friends.view.FriendSelectedButton"
+      stylename="friends.MenuConsortiaButton"
+      parentStyle="friends.MenuFrindButton"
+      x="3"
+      y="0" />
+    <!-- ScrollPanel -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="friends.ConsortiaDescribeScrollPanel"
+      parentStyle="core.ScrollPanel"
+      vScrollbarStyle="friends.Vscroll"
+      vScrollbarInnerRectString="16,0,0,0,3"
+      viewportInnerRectString="4,2,22,5,5"
+      vUnitIncrement="20"
+      width="238"
+      height="340"
+      x="-24"
+      y="79" />
+    <!--好友Frame -->
+    <component
+      classname="friends.view.FriendsFrame"
+      stylename="friends.FriendsFrame"
+      parentStyle="core.Frame5"
+      width="269"
+      height="560"
+      backStyle="friends.FrameBg5"
+      titleOuterRectPosString="0,13,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerY="57" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.FrameBg5"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-18|-15|0|23|0" />
+    <!-- tab页背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.TabUnselectBack"
+      resourceLink="asset.core.Style8UnselectedBtn"
+      scaleY="-1"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.TabSselectBack"
+      resourceLink="asset.core.Style8SelectedBtn"
+      scaleY="-1"
+      y="32" />
+    <!--查找好友Frame -->
+    <component
+      classname="friends.findfriend.FindFriendFrame"
+      stylename="friends.FindFriendFrame"
+      parentStyle="core.Frame2"
+      containerX="26"
+      containerY="45"
+      width="385"
+      height="203"
+      closeInnerRectString="29,3,12,29,14" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="friends.FindFriendFrameScaleBg"
+      parentStyle="core.describeBackground_style11"
+      width="354"
+      height="120"
+      x="-10"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="friends.FindBtn"
+      unSelectedStyle="friends.TabUnselectBack"
+      selectedStyle="friends.TabSselectBack"
+      selectedIconStyle="asset.friends.FindSelectTxt"
+      unselectedIconStyle="asset.friends.FindUnselectTxt"
+      selectedIconInnerRectString="16,64,7,18,13"
+      unselectedIconInnerRectString="16,65,7,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      x="-5"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="friends.LuckFindBtn"
+      parentStyle="friends.FindBtn"
+      selectedIconStyle="asset.friends.LuckFindSelectTxt"
+      unselectedIconStyle="asset.friends.LuckFindUnselectTxt"
+      selectedIconInnerRectString="12,74,7,18,13"
+      unselectedIconInnerRectString="12,76,7,18,13"
+      x="90"
+      y="-7" />
+    <!-- FindFriendView -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="friends.ExactFindBtn"
+      selectedIconStyle="asset.friends.FindWaySelectImg"
+      unselectedIconStyle="asset.friends.FindWayUnselectImg"
+      selectedIconInnerRectString="0,22,0,22,13"
+      unselectedIconInnerRectString="0,22,0,22,13"
+      textStyle="friends.FindWayTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="120"
+      height="22"
+      x="122"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindWayTxt"
+      textFormatStyle="friends.FindWayTxt_t"
+      filterString="core.normal_f"
+      x="29"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="friends.ConditionFindBtn"
+      parentStyle="friends.ExactFindBtn"
+      width="150"
+      height="22"
+      x="241"
+      y="10" />
+    <!-- ExactFindFriendView -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ExactFindInputTipTxt"
+      textFormatStyle="friends.ExactFindInputTipTxt_t"
+      filterString="core.normal_f"
+      x="-138"
+      y="-50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.ExactFindInputNameBg"
+      parentStyle="core.InputBack_style02"
+      width="150"
+      x="-55"
+      y="-53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ExactFindInputNameTxt"
+      parentStyle="core.BaseInputFrameInputTxt"
+      restrict="^ "
+      x="-50"
+      y="-50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ExactFindClickTipTxt"
+      textFormatStyle="friends.ExactFindClickTipTxt_t"
+      filterString="core.normal_f"
+      x="-130"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.ExactFindAddFriendBtn"
+      parentStyle="core.IMAddFriendBtn"
+      x="-7"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.ExactFindCancleBtn"
+      parentStyle="core.IMAddFriendBtn"
+      backgoundInnerRectString="22,0,6,0"
+      x="110"
+      y="-58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.addBtnText"
+      textFormatStyle="friends.addBtnTextStyle_t" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.addBtn"
+      backStyle="asset.core.Style14Btn"
+      textStyle="friends.addBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="22,0,6,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="75"
+      height="31"
+      x="110"
+      y="-58" />
+    <!-- ConditionFindFriendView -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindSexTxt"
+      parentStyle="friends.FindWayTxt"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindBirthTxt"
+      parentStyle="friends.ConditionFindSexTxt"
+      x="90"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindHoroscopeTxt"
+      parentStyle="friends.ConditionFindSexTxt"
+      x="212"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindBloodTxt"
+      parentStyle="friends.ConditionFindSexTxt"
+      x="354"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindCountryTxt"
+      parentStyle="friends.ConditionFindSexTxt"
+      x="0"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindProvinceTxt"
+      parentStyle="friends.ConditionFindSexTxt"
+      x="154"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindCityTxt"
+      parentStyle="friends.ConditionFindSexTxt"
+      x="294"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.ConditionFindFindBtn"
+      parentStyle="core.IMAddFriendBtn"
+      backgoundInnerRectString="22,0,6,0"
+      x="100"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.ConditionFindCancleBtn"
+      parentStyle="core.IMAddFriendBtn"
+      backgoundInnerRectString="22,0,6,0"
+      x="243"
+      y="135" />
+    <!-- 生日 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.ConditionFindBirthBtn"
+      backStyle="friends.ConditionFindSexComBoxBtnBack"
+      textStyle="friends.ConditionFindBirthBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="7,19,4,1,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="25"
+      x="88"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindBirthBtnTxt"
+      parentStyle="friends.ConditionFindSexComBoxText"
+      autoSize="none"
+      width="63"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="friends.ConditionFindBirthContainerBg"
+      parentStyle="core.describeBackground_style11"
+      width="111"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindMonthComBox"
+      parentStyle="friends.ConditionFindSexComBox"
+      listInnerRectString="2,30,3,82,18"
+      textInnerRectString="4,15,3,1,0"
+      buttonStyle="friends.ConditionFindMonthComBoxBtn"
+      width="50"
+      x="5"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindMonthComBoxBtn"
+      parentStyle="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindMonthComBoxBtnBack"
+      selectedStyle="friends.ConditionFindMonthComBoxBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindMonthComBoxBtnBack"
+      resourceLink="core.describeBackground_style13,asset.core.DownArrowImg"
+      imageRectString="0|0|0|25|1,9|6|9|8|14"
+      width="50" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindDayComBox"
+      parentStyle="friends.ConditionFindMonthComBox"
+      x="56" />
+    <!-- 性别 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindSexComBox"
+      listPanelStyle="friends.ConditionFindSexListPanel"
+      listInnerRectString="7,30,14,62,18"
+      textStyle="friends.ConditionFindSexComBoxText"
+      textInnerRectString="7,19,4,1,0"
+      buttonStyle="friends.ConditionFindSexComBoxBtn"
+      selctedPropName="text"
+      width="60"
+      height="25"
+      x="-2"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="friends.ConditionFindSexListPanel"
+      backgoundStyle="core.describeBackground_style13"
+      backgoundInnerRectString="3,3,3,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,1,0,-1,3"
+      vScrollProxy="1"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.ConditionFindSexListCell,20,130"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.SimpleAreaCellAdapter"
+      stylename="friends.ConditionFindSexListCell"
+      backStyle="friends.ConditionFindSexListCellBack"
+      backgoundInnerRectString="2,0,0,0,-1"
+      textStyle="friends.ConditionFindSexListCellTxt"
+      autoSizeAble="false"
+      width="130"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.ConditionFindSexListCellBack"
+      resourceLink=",asset.core.ListCellBack,asset.core.ListCellBack"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindSexListCellTxt"
+      textFormatStyle="friends.ConditionFindSexListCellTxt_t"
+      filterString="core.filter_01"
+      autoSize="none" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.ConditionFindSexComBoxText"
+      textFormatStyle="friends.ConditionFindSexComBoxText_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      maxChars="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindSexComBoxBtnBack"
+      selectedStyle="friends.ConditionFindSexComBoxBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindSexComBoxBtnBack"
+      resourceLink="core.InputBack_style02,asset.core.DownArrowImg"
+      imageRectString="0|0|0|25|1,9|8|10|8|14"
+      width="60" />
+    <!-- 星座 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindHoroscopeComBox"
+      parentStyle="friends.ConditionFindSexComBox"
+      listInnerRectString="7,30,14,102,18"
+      buttonStyle="friends.ConditionFindHoroscopeComBoxBtn"
+      width="100"
+      x="210"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindHoroscopeComBoxBtn"
+      parentStyle="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindHoroscopeComBoxBtnBack"
+      selectedStyle="friends.ConditionFindHoroscopeComBoxBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindHoroscopeComBoxBtnBack"
+      parentStyle="friends.ConditionFindSexComBoxBtnBack"
+      width="100" />
+    <!-- 血型 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindBloodComBox"
+      parentStyle="friends.ConditionFindSexComBox"
+      listInnerRectString="7,30,14,102,18"
+      buttonStyle="friends.ConditionFindBloodComBoxBtn"
+      width="70"
+      x="352"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindBloodComBoxBtn"
+      parentStyle="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindBloodComBoxBtnBack"
+      selectedStyle="friends.ConditionFindBloodComBoxBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindBloodComBoxBtnBack"
+      parentStyle="friends.ConditionFindSexComBoxBtnBack"
+      width="70" />
+    <!-- 国家 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindCountryComBox"
+      parentStyle="friends.ConditionFindSexComBox"
+      listInnerRectString="7,30,14,102,18"
+      buttonStyle="friends.ConditionFindCountryComBoxBtn"
+      width="130"
+      x="-2"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindCountryComBoxBtn"
+      parentStyle="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindCountryComBoxBtnBack"
+      selectedStyle="friends.ConditionFindCountryComBoxBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindCountryComBoxBtnBack"
+      parentStyle="friends.ConditionFindSexComBoxBtnBack"
+      width="130" />
+    <!-- 省份 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindProvinceComBox"
+      parentStyle="friends.ConditionFindSexComBox"
+      listInnerRectString="7,30,14,102,18"
+      buttonStyle="friends.ConditionFindProvinceComBoxBtn"
+      width="130"
+      x="152"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindProvinceComBoxBtn"
+      parentStyle="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindProvinceComBoxBtnBack"
+      selectedStyle="friends.ConditionFindProvinceComBoxBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindProvinceComBoxBtnBack"
+      parentStyle="friends.ConditionFindSexComBoxBtnBack"
+      width="130" />
+    <!-- 城市 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="friends.ConditionFindCityComBox"
+      parentStyle="friends.ConditionFindSexComBox"
+      listInnerRectString="7,30,14,102,18"
+      buttonStyle="friends.ConditionFindCityComBoxBtn"
+      width="130"
+      x="292"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.ConditionFindCityComBoxBtn"
+      parentStyle="friends.ConditionFindSexComBoxBtn"
+      unSelectedStyle="friends.ConditionFindCityComBoxBtnBack"
+      selectedStyle="friends.ConditionFindCityComBoxBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.ConditionFindCityComBoxBtnBack"
+      parentStyle="friends.ConditionFindSexComBoxBtnBack"
+      width="130" />
+    <component
+      classname="friends.findfriend.FindResultFrame"
+      stylename="friends.FindResultFrame"
+      parentStyle="core.Frame2"
+      containerX="26"
+      containerY="45"
+      width="450"
+      height="450" />
+    <!-- FindResultFrame -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultFrameResultTipTxt"
+      textFormatStyle="friends.FindResultFrameResultTipTxt_t"
+      filterString="core.normal_f"
+      x="-5"
+      y="-8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultFrameUnfindTipTxt"
+      textFormatStyle="friends.FindResultFrameCurPageTxt_t"
+      filterString="core.normal_f"
+      x="155"
+      y="182" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultFrameCurPageTxt"
+      textFormatStyle="friends.FindResultFrameCurPageTxt_t"
+      filterString="core.normal_f"
+      x="3"
+      y="318" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="friends.FindResultFrameScrollPanel"
+      backgoundStyle="core.describeBackground_style04"
+      backgoundInnerRectString="3,3,3,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,1,0,-1,3"
+      vScrollProxy="1"
+      viewportInnerRectString="1,1,1,0,5"
+      vUnitIncrement="20"
+      width="400"
+      height="281"
+      x="-3"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="friends.FindResultFrameVBox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.FindResultFramePrePageBtn"
+      parentStyle="core.IMAddFriendBtn"
+      backStyle="asset.core.Style15Btn"
+      backgoundInnerRectString="10,0,6,0"
+      width="51"
+      height="31"
+      x="139"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.FindResultFrameNextPageBtn"
+      parentStyle="friends.FindResultFramePrePageBtn"
+      x="197"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.FindResultFrameCloseBtn"
+      parentStyle="core.IMAddFriendBtn"
+      backgoundInnerRectString="22,0,6,0"
+      x="319"
+      y="312" />
+    <!-- FindResultCell -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.FindResultCellBg"
+      resourceLink="friends.FindResultCellBg1," />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.FindResultCellBg1"
+      resourceLink="asset.friends.FindResultCellBg1"
+      scaleGridString="30,15,339,28"
+      width="430"
+      height="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultCellNameTxt"
+      textFormatStyle="friends.FindResultCellNameTxt_t"
+      filterString="core.normal_f"
+      x="59"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultCellSexTxt"
+      textFormatStyle="friends.FindResultFrameCurPageTxt_t"
+      filterString="core.normal_f"
+      x="59"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultCellHoroscopeTxt"
+      parentStyle="friends.FindResultCellSexTxt"
+      x="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultCellBloodTxt"
+      parentStyle="friends.FindResultCellSexTxt"
+      x="137" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FindResultCellAreaTxt"
+      parentStyle="friends.FindResultCellSexTxt"
+      autoSize="none"
+      width="132"
+      height="20"
+      x="181"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.FindResultCellCheckBtn"
+      backStyle="asset.mainToolBar.TipsInfoIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4"
+      tipGapH="-30"
+      tipGapV="5"
+      isFollowMouse="false"
+      width="19"
+      height="22"
+      x="308"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.FindResultCellAddFriendBtn"
+      parentStyle="friends.FindResultCellCheckBtn"
+      backStyle="asset.mainToolBar.TipsAddFriendsIcon"
+      width="20"
+      height="22"
+      x="346"
+      y="15" />
+    <!-- 好友按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.FriendsSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedVerticalImg,asset.core.friendsFriendImg"
+      imageRectString="0|31|0|65|13,4|19|25|17|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.FriendsUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedVerticalImg,asset.core.friendsFriendImg"
+      imageRectString="0|28|0|67|13,4|19|25|17|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.FriendsButton"
+      unSelectedStyle="friends.FriendsUnselectedBg"
+      selectedStyle="friends.FriendsSelectedBg"
+      textStyle="core.FriendsBtnVerticalTextStyle"
+      filterString="core.DefaultFilter,core.DefaultFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="-45"
+      y="77"
+      width="65"
+      height="25"
+      fieldX="5"
+      fieldY="7" />
+    <!-- 公会按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.UnionSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedVerticalImg,asset.core.friendsUnionImg"
+      imageRectString="0|31|0|65|13,3|21|23|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.UnionUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedVerticalImg,asset.core.friendsUnionImg"
+      imageRectString="0|28|0|67|13,3|21|23|20|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.UnionButton"
+      unSelectedStyle="friends.UnionUnselectedBg"
+      selectedStyle="friends.UnionSelectedBg"
+      textStyle="core.FriendsBtnVerticalTextStyle"
+      filterString="core.DefaultFilter,core.DefaultFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="-45"
+      y="142"
+      width="65"
+      height="25"
+      fieldX="5"
+      fieldY="7" />
+    <!-- 社交按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.CommunitySelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedImg,asset.friends.CommunityImg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.CommunityUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.friends.CommunityImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.CommunityButton"
+      unSelectedStyle="friends.CommunityUnselectedBg"
+      selectedStyle="friends.CommunitySelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      filterString="core.DefaultFilter,core.DefaultFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="117"
+      y="77"
+      width="65"
+      height="25"
+      fieldX="16"
+      fieldY="5" />
+    <!-- 好友Item -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.FriendItemCellHeadCellBack"
+      parentStyle="core.ItemBack"
+      width="43"
+      height="43" />
+    <!-- 好友Item -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.FriendItemCellStateImg"
+      parentStyle="core.IMFriendInfoStateImg"
+      x="31"
+      y="24" />
+    <!-- 性别头像 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.ItemSexIcon"
+      parentStyle="core.SexIcon"
+      x="4"
+      y="2" />
+    <!-- 好友删除按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.FriendsDeleteBtn"
+      resourceLink="asset.friends.DeleteFriendsImg"
+      x="180"
+      y="4"
+      buttonMode="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,1,2,3"
+      tipGapV="5"
+      isFollowMouse="false" />
+    <!-- 与好友私聊 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.FriendItemCellChatBtn"
+      backStyle="asset.mainToolBar.TipsPrivateChatIcon"
+      x="182"
+      y="19"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,1,2,3"
+      tipGapV="5"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.FriendsChatBtn"
+      backStyle="asset.mainToolBar.TipsPrivateChatIcon"
+      x="202"
+      y="-2"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,1,2,3"
+      tipGapV="5"
+      isFollowMouse="false" />
+    <!-- 好友Item字体 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendItemCellNameText"
+      autoSize="none"
+      textFormatStyle="friends.friendsCellName_t"
+      x="54"
+      y="0"
+      width="95"
+      height="20"
+      filterString="core.friendsNormal_f" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FriendCellNameGradientText"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      autoSize="none"
+      filterString="core.normal2_f"
+      textFieldStyle="FriendCellNameGradientTextField"
+      x="54"
+      y="0"
+      width="95"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendCellNameGradientTextField"
+      autoSize="none"
+      textFormatStyle="friends.CellVipNameTxt_f"
+      mouseEnabled="false"
+      x="0"
+      y="0"
+      width="95"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendItemNameGradientTextField"
+      autoSize="none"
+      textFormatStyle="friends.CellVipNameTxt_f"
+      mouseEnabled="false"
+      x="0"
+      y="0"
+      width="95"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendItemCellLevelText"
+      autoSize="none"
+      textFormatStyle="friends.friendsCellLevel_t"
+      x="54"
+      y="22"
+      width="90"
+      height="20"
+      filterString="core.friendsNormal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendItemCellLevelText2"
+      autoSize="none"
+      textFormatStyle="friends.friendsCellLevel_t"
+      x="114"
+      y="22"
+      width="90"
+      height="20"
+      filterString="core.friendsNormal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendsItemNameTextStyle"
+      autoSize="none"
+      textFormatStyle="friends.friendsItemUnselected_t,friends.friendsItemSelected_t,FriendItemCellNameText_vip_t"
+      x="20"
+      y="1"
+      width="95"
+      height="20"
+      filterString="core.friendsNormal_f" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FriendsItemNameGradientText"
+      textFieldStyle="FriendItemNameGradientTextField"
+      autoSize="none"
+      filterString="core.normal2_f"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      x="20"
+      y="1"
+      width="95"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendsItemLevelTextStyle"
+      autoSize="none"
+      textFormatStyle="friends.friendsItemUnselected_t,friends.friendsItemSelected_t"
+      x="130"
+      y="1"
+      width="60"
+      height="20"
+      filterString="core.friendsNormal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="Friends.ItemStandingsTxt"
+      autoSize="none"
+      textFormatStyle="friend.applyFormat_5"
+      x="21"
+      y="2"
+      width="16"
+      height="18"
+      filterString="friend.GlowFilter_1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.CellStandingsTxt"
+      parentStyle="Friends.ItemStandingsTxt"
+      x="21"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.CellStandingsBG"
+      resourceLink="asset.friends.StandingsBG"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.CellMateBG"
+      resourceLink="asset.core.MateBg"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.CellMateTxt"
+      textFormatStyle="friend.applyFormat_5"
+      autoSize="none"
+      filterString="friend.GlowFilter_1"
+      x="21"
+      y="3"
+      width="50"
+      height="18" />
+    <!-- 搜索框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.SearchTextStyle"
+      autoSize="none"
+      textFormatStyle="friends.search_t"
+      filterString="core.normal_f"
+      type="input"
+      restrict="^ "
+      x="-14"
+      y="51"
+      width="200"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.searchBg"
+      resourceLink="asset.friends.FriendsSearchBg"
+      width="237"
+      x="-20"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="friends.searchBtn"
+      unSelectedStyle="asset.friends.FriendsSearchBtnImg"
+      selectedStyle="asset.friends.FriendsSearchReturnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="192"
+      y="48" />
+    <!--搜索结果字体 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.AutoSearchTextStyle"
+      autoSize="none"
+      textFormatStyle="friends.searchTip_t"
+      filterString="core.normal_f"
+      restrict="^ "
+      x="45"
+      y="12"
+      height="20" />
+    <!--搜索结果背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.searchResultBg"
+      parentStyle="core.commonTipBg"
+      x="-4"
+      y="5" />
+    <!-- 英雄昵称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.heroNicknameTextStyle"
+      textFormatStyle="core.heroNickname_t"
+      isAutoFitLength="true"
+      autoSize="none"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,6"
+      tipGapH="-22"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="76"
+      y="-16"
+      height="20"
+      width="100"
+      filterString="core.friendsNormal_f" />
+    <!-- 英雄等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.heroLevelTextStyle"
+      autoSize="none"
+      textFormatStyle="core.heroLevel_t"
+      x="75"
+      y="4"
+      height="20"
+      filterString="core.friendsNormal_f" />
+    <!-- 个性签名 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.heroMoodTextStyle"
+      autoSize="none"
+      textFormatStyle="core.heroMood_t"
+      filterString="core.normal_f"
+      x="33"
+      y="24"
+      width="170"
+      height="20"
+      autoDisplay="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.HeroMoodBg"
+      resourceLink="asset.friends.FriendsSearchBg"
+      width="189"
+      x="28"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="friends.HeroMoodRollBg"
+      resourceLink="asset.friends.HeroMoodBg_L,asset.friends.HeroMoodBg_C,asset.friends.HeroMoodBg_R"
+      width="189"
+      height="25"
+      x="28"
+      y="21" />
+    <!-- 公会聊天按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.groupChatBtn"
+      backStyle="asset.friends.GroupChatBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-1"
+      y="429" />
+    <!-- 添加好友按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.addfriendBtn"
+      backStyle="asset.friends.AddFriendBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="113"
+      y="429" />
+    <!-- 神树按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.treeBtn"
+      parentStyle="core.IMAddFriendBtn"
+      x="140"
+      y="429" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.IMFriendsFrameScaleBg"
+      parentStyle="core.IMFrameScaleBg"
+      width="252"
+      height="482" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.DescribeScrollPanelBack"
+      parentStyle="core.describeBackground_style04"
+      width="240"
+      height="345"
+      x="-22"
+      y="77" />
+    <!-- 申请 -->
+    <component
+      classname="yishi.view.frame.ApplyFriendFrame"
+      stylename="friends.ApplyFriendFrame"
+      parentStyle="core.Frame2"
+      width="375"
+      height="225"
+      containerX="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.applybg"
+      parentStyle="core.describeBackground_style04"
+      x="12"
+      y="5"
+      width="335"
+      height="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecruitPawnBtnTextStyle"
+      textFormatStyle="core.RecruitPawnButton_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.applyOKBtn"
+      parentStyle="core.GreenBtn"
+      textStyle="friends.RecruitPawnBtnTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="10,6,5,13"
+      x="47"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.applyCancleBtn"
+      parentStyle="core.RedBtn"
+      textStyle="friends.RecruitPawnBtnTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="10,6,5,13"
+      x="230"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.applyNameTxt"
+      textFormatStyle="friend.applyFormat_1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="22"
+      x="18"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.applyFont1Txt"
+      textFormatStyle="friend.applyFormat_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="194"
+      height="22"
+      x="150"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.applyFont2Txt"
+      textFormatStyle="friend.applyFormat_3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22"
+      x="20"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.applyPSTxt"
+      textFormatStyle="friend.applyFormat_4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="260"
+      height="22"
+      x="80"
+      y="60" />
+    <!--9宫图背景3 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="friends.FriendsInviteDescribeBackground"
+      parentStyle="core.describeBackground_style03"
+      x="-19"
+      y="-5"
+      width="403"
+      height="357" />
+    <!--名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FriendsInviteFrameNameTextStyle"
+      textFormatStyle="friends.friendsNameTextStyle_t"
+      filterString="friends.friendsNameTextStyle_f"
+      height="20"
+      x="43"
+      y="9" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FriendsInviteFrameGradeTextStyle"
+      textFormatStyle="friends.friendsNameTextStyle_t"
+      filterString="friends.friendsNameTextStyle_f"
+      height="20"
+      x="157"
+      y="9" />
+    <!--操作 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.FriendsInviteFrameOperationTextStyle"
+      textFormatStyle="friends.friendsNameTextStyle_t"
+      filterString="friends.friendsNameTextStyle_f"
+      height="20"
+      x="284"
+      y="9" />
+    <!-- 同意按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.InvitePlayerAcceptBtn"
+      parentStyle="core.AlertBtnStyle_022"
+      textStyle="friends.InvitePlayerAddTextStyle"
+      x="-9"
+      y="261"
+      backgoundInnerRectString="20,96,9,40"
+      width="120"
+      height="40" />
+    <!-- 拒绝按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.InvitePlayerRejectBtn"
+      parentStyle="core.AlertButtonConfirm_2"
+      textStyle="friends.InvitePlayerAddTextStyle"
+      x="108"
+      y="261"
+      backgoundInnerRectString="20,96,9,40" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.InvitePageTextStyle"
+      textFormatStyle="friends.InvitePageTextStyle_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      filterString="friends.InvitePageTextStyle_f"
+      x="287"
+      y="271" />
+    <!-- 页码 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.InvitePlayerPageBg"
+      resourceLink="asset.core.pageBg_1"
+      x="282"
+      y="271" />
+    <!-- 前一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.InvitePlayerPrePageBtn"
+      parentStyle="core.MaxButton"
+      x="280"
+      y="272"
+      scaleX="-1" />
+    <!-- 后一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="friends.InvitePlayerNextPageBtn"
+      parentStyle="core.MaxButton"
+      x="354"
+      y="272" />
+    <!--背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.InvitePlayerItemBg"
+      resourceLink="asset.friends.InviteItemDeepcolorBg,asset.friends.InviteItemLightcolorBg" />
+    <!--高亮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.InvitePlayerItemHightcolorBg"
+      parentStyle="friends.InvitePlayerItemBg"
+      x="-7"
+      y="-6"
+      width="389" />
+    <!-- 名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.InvitePlayerItemNameTextStyle"
+      textFormatStyle="friends.InviteNicknameTextStyle_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="20" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.InvitePlayerItemGradeTextStyle"
+      textFormatStyle="friends.InviteNicknameTextStyle_t"
+      filterString="core.normal_f"
+      x="155"
+      autoSize="none"
+      width="70"
+      height="20" />
+    <!-- 同意按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.InvitePlayerItemAcceptBtn"
+      parentStyle="core.GreenIIBtn"
+      textStyle="friends.InvitePlayerAddTextStyle"
+      x="233"
+      y="-2"
+      backgoundInnerRectString="7,8,3,13" />
+    <!-- 拒绝按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.InvitePlayerItemRejectBtn"
+      parentStyle="core.SmallBrownBtn"
+      textStyle="friends.InvitePlayerAddTextStyle"
+      x="303"
+      y="-2"
+      backgoundInnerRectString="7,8,3,13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.InvitePlayerAddTextStyle"
+      textFormatStyle="friend.applyFormat_12"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="18" />
+    <!-- 推荐 -->
+    <component
+      classname="friends.view.RecommendFriendFrame"
+      stylename="friends.RecommendFriendFrame"
+      parentStyle="core.Frame1"
+      width="505"
+      height="534"
+      containerX="16"
+      containerY="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.RecommendBG"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="473"
+      height="370" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="friends.RecommendVbox"
+      x="5"
+      y="38"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.RecommendIconBG"
+      resourceLink="asset.invite.GirlImg,asset.invite.BoyImg"
+      x="258"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RecommendLineI"
+      x="53"
+      y="2"
+      resourceLink="asset.friends.RecommendGELine" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RecommendLineII"
+      x="178"
+      parentStyle="friends.RecommendLineI" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RecommendLineIII"
+      x="235"
+      parentStyle="friends.RecommendLineI" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RecommendLineIV"
+      x="295"
+      parentStyle="friends.RecommendLineI" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RecommendLineV"
+      x="376"
+      parentStyle="friends.RecommendLineI" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RecommendTitleBG"
+      resourceLink="asset.friends.RecommendTitleBG,friends.RecommendLineI,friends.RecommendLineII,friends.RecommendLineIII,friends.RecommendLineIV,friends.RecommendLineV" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.YieldItemBack"
+      resourceLink="asset.friends.GrayBack,asset.friends.BlackBack" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendIDTxt"
+      textFormatStyle="friend.yield_title_total_t"
+      filterString="friend.yield_title_total_f"
+      autoSize="none"
+      width="54"
+      height="20"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendNameTxt"
+      parentStyle="friends.RecommendIDTxt"
+      autoSize="none"
+      width="124"
+      x="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendLVTxt"
+      parentStyle="friends.RecommendIDTxt"
+      autoSize="none"
+      width="58"
+      x="178" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendSEXTxt"
+      parentStyle="friends.RecommendIDTxt"
+      autoSize="none"
+      width="59"
+      x="235" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendPowerTxt"
+      parentStyle="friends.RecommendIDTxt"
+      autoSize="none"
+      width="80"
+      x="295" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendFunTxt"
+      parentStyle="friends.RecommendIDTxt"
+      autoSize="none"
+      width="82"
+      x="378" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendItemIDTxt"
+      textFormatStyle="friend.yield_value_total_t"
+      filterString="friend.yield_title_total_f"
+      autoSize="none"
+      width="54"
+      height="20"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendItemNameTxt"
+      parentStyle="friends.RecommendItemIDTxt"
+      autoSize="none"
+      width="124"
+      x="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendItemLVTxt"
+      parentStyle="friends.RecommendItemIDTxt"
+      autoSize="none"
+      width="58"
+      x="178" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommendItemPowerTxt"
+      parentStyle="friends.RecommendItemIDTxt"
+      autoSize="none"
+      width="80"
+      x="295" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RecommendpageBg"
+      resourceLink="asset.friends.selectedHightlinetImg"
+      x="-5"
+      y="-5"
+      width="463"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RecommentAddTextStyle"
+      textFormatStyle="friend.applyFormat_5"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.RecommentAddFriend"
+      parentStyle="core.GreenIIBtn"
+      textStyle="friends.RecommentAddTextStyle"
+      x="388"
+      y="4"
+      backgoundInnerRectString="7,8,3,13" />
+    <!-- 推荐好友底框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="friends.BottomBg"
+      resourceLink="asset.friends.bottomBg_L,asset.friends.bottomBg_C,asset.friends.bottomBg_R"
+      width="474"
+      height="53"
+      x="-3"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.BottomCloseBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.friends.bottomCloseTxt"
+      x="296"
+      y="374"
+      width="96"
+      height="40"
+      iconInnerRectString="25,47,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.BottomAllAddBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.friends.bottomAllAddTxt"
+      x="76"
+      y="374"
+      width="120"
+      height="40"
+      iconInnerRectString="11,73,9,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 赠送玫瑰 -->
+    <component
+      classname="simplegame.roses.RosePresentView"
+      stylename="friends.RosePresentView"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="0"
+      containerY="5"
+      width="314"
+      height="228" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewBg"
+      resourceLink="asset.friends.RosePresentViewBg,friends.LaceStyle04,friends.LaceStyle03,friends.LaceStyle02"
+      imageRectString="0|335|0|193|13,-22|98|-7|24|13,163|187|-21|39|13,353|100|167|39|13"
+      x="-12"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.LaceStyle04"
+      resourceLink="asset.core.LaceStyle04"
+      scaleX="-1"
+      rotation="-90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.LaceStyle03"
+      resourceLink="asset.core.LaceStyle03"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.LaceStyle02"
+      resourceLink="asset.core.LaceStyle02"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.RosePresentViewInputBg"
+      parentStyle="core.InputBack_style02"
+      width="170"
+      height="25"
+      x="5"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.RosePresentViewContentBg"
+      parentStyle="core.describeBackground_style06"
+      x="6"
+      y="75"
+      width="297"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentViewContentTxt"
+      textFormatStyle="friends.RosePresentViewInputComBoxTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="290"
+      height="52"
+      x="10"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentViewWordCountTxt"
+      textFormatStyle="friends.RosePresentViewWordCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="151"
+      y="134" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.RosePresentViewConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="48"
+      y="152" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.RosePresentViewCancleBtn"
+      parentStyle="core.AlertButtonCancel_1"
+      x="172"
+      y="152" />
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="friends.RosePresentViewInputComBox0"
+      listPanelStyle="friends.RosePresentViewInputComBoxListPanel"
+      listInnerRectString="30,35,10,100,18"
+      textStyle="friends.RosePresentViewInputComBoxTxt"
+      textInnerRectString="-223,151,36,20,13"
+      buttonStyle="friends.RosePresentViewInputComBoxBtn"
+      width="138"
+      height="25"
+      x="241"
+      y="10" />
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="friends.RosePresentViewInputComBox1"
+      listPanelStyle="friends.RosePresentViewInputComBoxListPanel"
+      listInnerRectString="30,35,10,100,18"
+      textStyle="friends.RosePresentViewInputComBoxTxt"
+      textInnerRectString="-260,163,38,20,13"
+      buttonStyle="friends.RosePresentViewInputComBoxBtn"
+      width="138"
+      height="25"
+      x="271"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="friends.RosePresentViewInputComBoxListPanel"
+      backgoundStyle="asset.friends.RosePresentViewInputComBoxBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="13,4,-2,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.RosePresentViewInputComBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="yishi.view.adapter.EmailSelectedListAdapter"
+      stylename="friends.RosePresentViewInputComBoxListCell"
+      backStyle="friends.RosePresentViewInputComBoxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="core.Combox1_TextStyle"
+      autoSizeAble="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.RosePresentViewInputComBoxListCellBg"
+      resourceLink=",friends.comboxItembgB,friends.comboxItembgB"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.comboxItembgB"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentViewInputComBoxTxt"
+      textFormatStyle="friends.RosePresentViewInputComBoxTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      width="155"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.RosePresentViewInputComBoxBtn"
+      backStyle="friends.RosePresentViewInputComBoxBtnBg"
+      textStyle="friends.RosePresentViewInputComBoxBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="33,0,9,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-64"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewInputComBoxBtnBg"
+      resourceLink="asset.core.AlertBtnStyle_02,asset.core.friendsFriendImg"
+      imageRectString="0|96|0|40|13,12|19|11|17|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentViewInputComBoxBtnTxt"
+      textFormatStyle="friends.RosePresentViewInputComBoxBtnTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.RosePresentViewInputComBoxFriendBtn"
+      unSelectedStyle="friends.RosePresentViewInputComBoxFriendUnselectedBg"
+      selectedStyle="friends.RosePresentViewInputComBoxFriendSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-2"
+      y="104"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewInputComBoxFriendSelectedBg"
+      resourceLink="friends.friendsButtonSelectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewInputComBoxFriendUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.friendsButtonSelectedImg"
+      resourceLink="asset.core.friendsButtonSelectedImg"
+      scaleY="-1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.RosePresentViewInputComBoxConsortiaBtn"
+      unSelectedStyle="friends.RosePresentViewInputComBoxConsortiaUnselectedBg"
+      selectedStyle="friends.RosePresentViewInputComBoxConsortiaSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewInputComBoxConsortiaSelectedBg"
+      resourceLink="friends.friendsButtonSelectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewInputComBoxConsortiaUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg" />
+    <!-- 回赠玫瑰 -->
+    <component
+      classname="simplegame.roses.RosePresentBackView"
+      stylename="friends.RosePresentBackView"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="0"
+      containerY="5"
+      width="345" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentBackViewBg"
+      resourceLink="asset.friends.RosePresentBackViewBg,friends.RosePresentBackViewBgTurn,friends.BgStyle01,friends.LaceStyle04,friends.LaceStyle03,friends.LaceStyle02,asset.core.LaceStyle05"
+      imageRectString="0|183|0|198|13,366|183|0|198|13,15|336|15|95|13,-22|98|-7|24|13,163|187|-21|39|13,388|100|170|39|13,274|119|-35|112|13"
+      x="-12"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RosePresentBackViewBgTurn"
+      resourceLink="asset.friends.RosePresentBackViewBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="friends.BgStyle01"
+      resourceLink="asset.friends.BgStyle01_U,asset.friends.BgStyle01_M,asset.friends.BgStyle01_D" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="friends.RosePresentBackViewPresentShowTxt"
+      parentStyle="core.NpcName_VipText"
+      textFieldStyle="friends.RosePresentBackViewPresentShowTextField"
+      x="38"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewPresentShowTextField"
+      textFormatStyle="core.map.NpcNameFont_vip"
+      autoSize="none"
+      width="268"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="friends.RosePresentBackViewPresentNameTxt"
+      parentStyle="core.NpcName_VipText"
+      textFieldStyle="friends.RosePresentBackViewPresentNameTextField"
+      x="38"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewPresentNameTextField"
+      textFormatStyle="core.map.NpcNameFont_vipBig"
+      autoSize="none"
+      width="268"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="friends.RosePresentBackView99Tab"
+      parentStyle="friends.ExactFindBtn"
+      width="150"
+      height="22"
+      x="46"
+      y="121" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="friends.RosePresentBackView999Tab"
+      parentStyle="friends.ExactFindBtn"
+      width="150"
+      height="22"
+      x="210"
+      y="121" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.RosePresentBackViewConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="friends.RosePresentBackViewConfirmBtnIcon"
+      iconFrameChange="false"
+      x="48"
+      y="76"
+      autoCenter="false"
+      iconInnerRectString="8,78,10,21,13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.RosePresentBackViewConfirmBtnIcon"
+      resourceLink="asset.core.ConfirmTxtAsset_01,asset.friends.RosePresentBackGiveBackImg" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.RosePresentBackViewCancleBtn"
+      parentStyle="core.AlertButtonCancel_1"
+      iconStyle="friends.RosePresentBackViewCancleBtnIcon"
+      iconFrameChange="false"
+      x="202"
+      y="76"
+      autoCenter="false"
+      iconInnerRectString="10,74,10,22,13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.RosePresentBackViewCancleBtnIcon"
+      resourceLink="asset.core.CancelTxtAsset_01,asset.friends.RosePresentBackChatImg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewChangeContentTxt"
+      textFormatStyle="friends.RosePresentBackViewChangeContentTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      x="-7"
+      y="178" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentBackViewContentBg"
+      resourceLink="core.AlertFrameBaseBg,asset.friends.RosePresentBackViewContentBaseBg,friends.RosePresentBackViewContentBaseBgTurn,friends.RosePresentBackViewContentInputBg"
+      imageRectString="0|380|0|74|13,7|183|5|63|13,373|183|5|63|13,13|354|11|40|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.RosePresentBackViewContentBaseBgTurn"
+      resourceLink="asset.friends.RosePresentBackViewContentBaseBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.RosePresentBackViewContentInputBg"
+      parentStyle="core.describeBackground_style06" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewContentTxt"
+      parentStyle="friends.RosePresentViewContentTxt"
+      autoSize="none"
+      width="343"
+      height="34"
+      x="19"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewWordCountTxt"
+      parentStyle="friends.RosePresentViewWordCountTxt"
+      x="210"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewInputTipTxt"
+      textFormatStyle="friends.RosePresentBackViewInputTipTxt_t"
+      filterString="core.normal_f"
+      x="20"
+      y="30"
+      width="100"
+      height="36"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewInputNumTxt"
+      textFormatStyle="friends.RosePresentBackViewInputNumTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      restrict="0-9"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="114"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.RosePresentBackViewInputNumBg"
+      resourceLink="asset.friends.FriendsSearchBg"
+      width="195"
+      height="25"
+      x="108"
+      y="34" />
+    <!-- 私聊界面，快捷赠送玫瑰 -->
+    <component
+      classname="simplegame.roses.IMQuickRosePresentView"
+      stylename="friends.IMQuickRosePresentView"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="0"
+      containerY="5"
+      width="344"
+      height="160" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.CellMateRingTxt"
+      textFormatStyle="friends.CellMateRingTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="16"
+      x="0"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="75"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.FriendCell.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="85"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.FriendsItem.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="107"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.Recommend.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="174"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.InvitePlayer.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="135"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friend.applyJoinBg"
+      parentStyle="core.describeBackground_style06"
+      x="-3"
+      y="-2"
+      width="402"
+      height="257" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="friend.applyJoinBg2"
+      parentStyle="core.describeBackground_style40"
+      width="396"
+      height="198"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friend.applyJoinItemLine"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|219|0|2|13,300|80|0|2|13"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="friend.applyJoinScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      hScrollbarStyle="core.HScrollbar01"
+      showAreaRectString="1,0,0,265,1"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="0,0,158,1,4"
+      hScrollbarInnerRectString="5,22,20,150,4"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="391"
+      height="160"
+      x="6"
+      y="0" />
+    <!-- 圣诞雪花样式 begin -->
+    <component
+      classname="simplegame.christmasroses.SnowRosePresentView"
+      stylename="friends.SnowRosePresentView"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="0"
+      containerY="5"
+      width="314"
+      height="228" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.SnowRosePresentViewBg"
+      resourceLink="asset.friends.SnowRosePresentViewBg,asset.friends.SnowRosePresentViewBg2"
+      imageRectString="0|167|0|193|13,334|167|0|193|13"
+      x="-12"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="asset.friends.SnowRosePresentViewBg2"
+      resourceLink="asset.friends.SnowRosePresentViewBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.SnowRosePresentViewBgFlower"
+      resourceLink="asset.friends.SnowRosePresentViewBgFlower"
+      scaleGridString="200,42,300,150"
+      width="368"
+      height="245"
+      x="-25"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.SnowRosePresentViewInputBg"
+      parentStyle="core.InputBack_style02"
+      width="170"
+      height="25"
+      x="5"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="friends.SnowRosePresentViewContentBg"
+      parentStyle="core.describeBackground_style06"
+      x="6"
+      y="75"
+      width="297"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.SnowRosePresentViewContentTxt"
+      textFormatStyle="friends.RosePresentViewInputComBoxTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="290"
+      height="52"
+      x="10"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.SnowRosePresentViewWordCountTxt"
+      textFormatStyle="friends.RosePresentViewWordCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="151"
+      y="134" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.SnowRosePresentViewConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="48"
+      y="152" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.SnowRosePresentViewCancleBtn"
+      parentStyle="core.AlertButtonCancel_1"
+      x="172"
+      y="152" />
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="friends.SnowRosePresentViewInputComBox0"
+      listPanelStyle="friends.RosePresentViewInputComBoxListPanel"
+      listInnerRectString="30,35,10,100,18"
+      textStyle="friends.RosePresentViewInputComBoxTxt"
+      textInnerRectString="-223,240,36,-30,0"
+      buttonStyle="friends.RosePresentViewInputComBoxBtn"
+      width="138"
+      height="25"
+      x="256"
+      y="45" />
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="friends.SnowRosePresentViewInputComBox1"
+      listPanelStyle="friends.RosePresentViewInputComBoxListPanel"
+      listInnerRectString="30,35,10,100,18"
+      textStyle="friends.RosePresentViewInputComBoxTxt"
+      textInnerRectString="-258,243,38,-33,0"
+      buttonStyle="friends.RosePresentViewInputComBoxBtn"
+      width="138"
+      height="25"
+      x="271"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="friends.SnowRosePresentViewInputComBoxListPanel"
+      backgoundStyle="asset.friends.RosePresentViewInputComBoxBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="13,4,-2,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.SnowRosePresentViewInputComBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="yishi.view.adapter.EmailSelectedListAdapter"
+      stylename="friends.SnowRosePresentViewInputComBoxListCell"
+      backStyle="friends.RosePresentViewInputComBoxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="core.Combox1_TextStyle"
+      autoSizeAble="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="friends.SnowRosePresentViewInputComBoxListCellBg"
+      resourceLink=",friends.comboxItembgB,friends.comboxItembgB"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.SnowRosePresentViewInputComBoxTxt"
+      textFormatStyle="friends.RosePresentViewInputComBoxTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      width="155"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="friends.SnowRosePresentViewInputComBoxBtn"
+      backStyle="friends.SnowRosePresentViewInputComBoxBtnBg"
+      textStyle="friends.SnowRosePresentViewInputComBoxBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="33,0,9,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-64"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.SnowRosePresentViewInputComBoxBtnBg"
+      resourceLink="asset.core.AlertBtnStyle_02,asset.core.friendsFriendImg"
+      imageRectString="0|96|0|40|13,12|19|11|17|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.SnowRosePresentViewInputComBoxBtnTxt"
+      textFormatStyle="friends.SnowRosePresentViewInputComBoxBtnTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.SnowRosePresentViewInputComBoxFriendBtn"
+      unSelectedStyle="friends.SnowRosePresentViewInputComBoxFriendUnselectedBg"
+      selectedStyle="friends.SnowRosePresentViewInputComBoxFriendSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-2"
+      y="104"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.SnowRosePresentViewInputComBoxFriendSelectedBg"
+      resourceLink="friends.friendsButtonSelectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.SnowRosePresentViewInputComBoxFriendUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="friends.SnowRosePresentViewInputComBoxConsortiaBtn"
+      unSelectedStyle="friends.SnowRosePresentViewInputComBoxConsortiaUnselectedBg"
+      selectedStyle="friends.SnowRosePresentViewInputComBoxConsortiaSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.SnowRosePresentViewInputComBoxConsortiaSelectedBg"
+      resourceLink="friends.friendsButtonSelectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.SnowRosePresentViewInputComBoxConsortiaUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg" />
+    <!-- 圣诞雪花样式  over -->
+    <!--9999玫瑰回赠-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentBackViewBg1"
+      resourceLink="asset.friends.RosePresentBackViewBg1,friends.BgStyle01,friends.LaceStyle04,friends.LaceStyle03,friends.LaceStyle02,asset.core.LaceStyle05"
+      imageRectString="1|364|1|200|13,15|336|15|95|13,-22|98|-7|24|13,163|187|-21|39|13,388|100|170|39|13,274|119|-35|112|13"
+      x="-12"
+      y="3" />
+    <component
+      classname="simplegame.roses.RosePresentBackNewView"
+      stylename="friends.RosePresentBackNewView"
+      parentStyle="core.ConfirmSellFrame2"
+      containerX="0"
+      containerY="5"
+      width="350" />
+    <component
+      classname="yishi.view.frame.ConfirmSellFrame"
+      stylename="core.ConfirmSellFrame2"
+      parentStyle="core.Frame22"
+      titleOuterRectPosString="0,-7,1"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      width="340"
+      height="196" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="core.Frame22"
+      closestyle="core.CloseBtn1"
+      titleStyle="core.FrameTitleText"
+      backStyle="friends.RosePresentViewNewBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="36"
+      containerY="56"
+      width="500"
+      height="300" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="friends.RosePresentBackViewPresentNameTxt1"
+      textFieldStyle="friends.RosePresentBackViewPresentNameTextField1"
+      colors="0xfff2aa,0xffec84,0xae7300"
+      alphas="1,1,1"
+      ratios="60,230,230"
+      filterString="core.normal2_f"
+      mouseEnabled="false"
+      width="180"
+      height="20"
+      x="38"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewPresentNameTextField1"
+      textFormatStyle="friend.RosePresentBackNewViewSendNameTxt_t"
+      autoSize="none"
+      width="268"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="friends.RosePresentBackViewPresentShowTxt1"
+      textFieldStyle="friends.RosePresentBackViewPresentNameTextField1"
+      colors="0xfff2aa,0xffec84,0xae7300"
+      alphas="1,1,1"
+      ratios="60,230,230"
+      filterString="core.normal2_f"
+      mouseEnabled="false"
+      width="180"
+      height="20"
+      x="8"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentBackViewContentBg1"
+      resourceLink="friends.RosePresentViewNewBg4,asset.friends.RosePresentBackViewContentBaseBg1,friends.RosePresentBackViewContentInputBg"
+      imageRectString="6|380|3|74|13,10|364|9|63|13,14|352|18|42|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentBackViewContentTxt1"
+      parentStyle="friends.RosePresentViewContentTxt1"
+      autoSize="none"
+      width="343"
+      height="34"
+      x="19"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="friends.RosePresentViewContentTxt1"
+      textFormatStyle="friends.RosePresentViewInputComBoxTxt_t1"
+      filterString="core.normal_f"
+      type="input"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="290"
+      height="52"
+      x="10"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.RosePresentBackViewConfirmBtn1"
+      parentStyle="core.AlertButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="friends.RosePresentBackViewConfirmBtnIcon"
+      iconFrameChange="false"
+      iconInnerRectString="14,78,12,21,13"
+      autoCenter="false"
+      x="202"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="friends.RosePresentBackViewCancleBtn1"
+      parentStyle="core.AlertButtonCancel_1"
+      iconStyle="friends.RosePresentBackViewCancleBtnIcon"
+      iconFrameChange="false"
+      iconInnerRectString="10,75,12,22,13"
+      autoCenter="false"
+      x="48"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewBg1"
+      resourceLink="asset.friends.RosePresentViewBg1,friends.LaceStyle041,friends.LaceStyle031,friends.LaceStyle021"
+      imageRectString="0|364|0|200|13,-32|195|-22|97|13,285|113|-25|58|13,238|138|158|50|13"
+      x="-9"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.LaceStyle041"
+      resourceLink="asset.core.LaceStyle041" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.LaceStyle031"
+      resourceLink="asset.core.LaceStyle031" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="friends.LaceStyle021"
+      resourceLink="asset.core.LaceStyle021" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewNewBg2"
+      resourceLink="border.bg1,border.bg2,border.bg3,border.bg4,border.bg5,border.bg6,border.bg7,border.bg8,asset.core.frameTitleImage2"
+      imageRectString="0|30|0|30|13,30|312|0|30|13,340|30|0|30|13,0|30|30|148|13,342|30|30|148|13,0|30|178|30|13,30|310|178|30|13,340|30|178|30|13,229|17|-6|0|9"
+      x="-12"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewNewBg3"
+      resourceLink="border.bg1,border.bg2,border.bg3,border.bg4,border.bg5,border.bg6,border.bg7,border.bg8,asset.core.frameTitleImage2"
+      imageRectString="0|30|0|30|13,30|312|5|30|13,342|30|5|30|13,0|30|30|126|13,342|30|30|126|13,0|30|156|30|13,30|312|156|30|13,342|30|156|30|13,229|17|-6|0|9"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="friends.RosePresentViewNewBg4"
+      resourceLink="border.bg1,border.bg2,border.bg3,border.bg4,border.bg5,border.bg6,border.bg7,border.bg8"
+      imageRectString="0|30|0|30|13,30|312|0|30|13,342|30|0|30|13,0|30|30|20|13,342|30|30|20|13,0|30|44|30|13,30|312|44|30|13,342|30|44|30|13"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg1"
+      resourceLink="asset.border.bg1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg2"
+      resourceLink="asset.border.bg2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg3"
+      resourceLink="asset.border.bg3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg4"
+      resourceLink="asset.border.bg4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg5"
+      resourceLink="asset.border.bg5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg6"
+      resourceLink="asset.border.bg6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg7"
+      resourceLink="asset.border.bg7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="border.bg8"
+      resourceLink="asset.border.bg8" />
+  </components>
+</style>

@@ -1,0 +1,349 @@
+<style
+  name="sacrifice"
+  source="ui/zh_cn/swf/sacrifice.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="sacrifice.sacfificeFrame.combox_t"
+      args="Arial,14,0xfff7c4,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sacrifice.sacfificeFrame.goodsLvListCellTextStyle_t"
+      args="Arial,12,0xffdd9a,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sacrifice.sacfificeFrame.leftTimesTxtField_t"
+      args="Arial,16,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sacrifice.sacfificeFrame.goodsBgTitleTxtField_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sacrifice.SacrificeFrame.ExpTxt_t"
+      args="Arial,12,0xf0eac4,true,,,,,center"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.sacrifice.bg" />
+    <bitmapData
+      resourceLink="asset.sacrifice.chooseLvTxt"
+      x="541"
+      y="608" />
+    <bitmapData
+      resourceLink="asset.sacrifice.sacrificeBtnBg" />
+    <bitmapData
+      resourceLink="asset.sacrifice.refreshBtnBg" />
+    <bitmapData
+      resourceLink="asset.sacrifice.helpBtnBg" />
+    <bitmapData
+      resourceLink="asset.sacrifice.goodsLvBtnBg" />
+    <bitmapData
+      resourceLink="asset.sacrifice.LevelNum" />
+    <bitmapData
+      resourceLink="asset.sacrifice.goodsItemTopBmp" />
+    <bitmapData
+      resourceLink="asset.sacrifice.chooseGoodsBg"
+      x="595"
+      y="730" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.sacrifice.sacrificeMC"
+      stylename="asset.sacrifice.sacrificeMC"
+      x="473"
+      y="224" />
+    <custom
+      classname="asset.sacrifice.LvTxtMC"
+      stylename="asset.sacrifice.LvTxtMC"
+      x="75"
+      y="5" />
+    <custom
+      classname="asset.sacrifice.LvMC"
+      stylename="asset.sacrifice.LvMC" />
+    <custom
+      classname="asset.sacrifice.bgMC"
+      stylename="asset.sacrifice.bgMC"
+      x="100"
+      y="0" />
+    <custom
+      classname="asset.sacrifice.bgFireMc"
+      stylename="asset.sacrifice.bgFireMc"
+      x="100"
+      y="0" />
+    <custom
+      classname="asset.sacrifice.disappearMc"
+      stylename="asset.sacrifice.disappearMc"
+      x="800"
+      y="400" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="sacrifice.sacfificeFrame.GoodsCellIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="sacrifice.sacfificeFrame.choosenGoodsIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="sacrifice.sacfificeFrame.levelView"
+      x="100"
+      y="80"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="0"
+      tipDirctions="7,5,4,6"
+      tipGapH="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="sacrifice.sacfificeFrame.leftTimesStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="0"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      x="700"
+      y="600" />
+  </customDisplay>
+  <components>
+    <component
+      classname="sacrifice.SacrificeFrame"
+      stylename="sacrifice.SacrificeFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sacrifice.SacrificeFrame.sacrificeBtn"
+      backStyle="asset.sacrifice.sacrificeBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="696"
+      y="645" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sacrifice.SacrificeFrame.refreshRewardBtn"
+      backStyle="asset.sacrifice.refreshBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="1111"
+      y="630" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sacrifice.SacrificeFrame.helpBtn"
+      backStyle="asset.sacrifice.helpBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter"
+      x="1171"
+      y="670" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="sacrifice.sacfificeFrame.goodsHbox"
+      x="664"
+      y="734"
+      spacing="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.sacfificeFrame.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="2"
+      y="30" />
+    <component
+      classname="sacrifice.SacrificeGoodsItem"
+      stylename="sacrifice.sacfificeFrame.GoodsItem"
+      iconStyle="sacrifice.sacfificeFrame.GoodsCellIcon"
+      textStyle="sacrifice.sacfificeFrame.BaseItemText"
+      topbmpStyle="asset.sacrifice.goodsItemTopBmp"
+      showProfile="false" />
+    <!-- 献祭物品等级选择comboBox -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="sacrifice.sacfificeFrame.goodsLvComboBox"
+      listPanelStyle="sacrifice.sacfificeFrame.goodsLvListpanel"
+      listInnerRectString="0,35,3,100,18"
+      textStyle="sacrifice.sacfificeFrame.goodsLvText"
+      textInnerRectString="8,20,4,1,0"
+      buttonStyle="sacrifice.SacrificeFrame.goodsLvBtn"
+      width="150"
+      height="27"
+      x="823"
+      y="605" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.sacfificeFrame.goodsLvText"
+      textFormatStyle="sacrifice.sacfificeFrame.combox_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      buttonMode="true"
+      autoSize="none"
+      width="100"
+      height="20"
+      maxChars="14" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sacrifice.SacrificeFrame.goodsLvBtn"
+      backStyle="sacrifice.goodsLvBtnBG"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,room.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sacrifice.goodsLvBtnBG"
+      resourceLink="asset.sacrifice.goodsLvBtnBg"
+      scaleGridString="20,5,90,6"
+      width="150"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="sacrifice.sacfificeFrame.goodsLvListpanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="21,0,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|sacrifice.sacfificeFrame.goodsLvListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.SimpleTextCellAdapter"
+      stylename="sacrifice.sacfificeFrame.goodsLvListCell"
+      backStyle="sacrifice.sacfificeFrame.goodsLvListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="sacrifice.sacfificeFrame.goodsLvListCellTextStyle"
+      autoSizeAble="false"
+      width="138"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sacrifice.sacfificeFrame.goodsLvListCellAsset"
+      resourceLink=",asset.core.ListCellBack,asset.core.ListCellBack"
+      fillAlphaRect="true"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.sacfificeFrame.goodsLvListCellTextStyle"
+      textFormatStyle="sacrifice.sacfificeFrame.goodsLvListCellTextStyle_t"
+      filterString="core.filter_01"
+      type="input"
+      autoSize="none"
+      width="140"
+      height="20"
+      y="1" />
+    <!-- end 献祭物品等级选择comboBox -->
+    <component
+      classname="yishi.view.community.BaseItemView"
+      stylename="sacrifice.sacfificeFrame.choosenGoodsItem"
+      iconStyle="sacrifice.sacfificeFrame.choosenGoodsIcon"
+      showProfile="false" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="sacrifice.sacfificeFrame.leftTimesTxt"
+      textFieldStyle="sacrifice.sacfificeFrame.leftTimesTxtField"
+      colors="0xffc000,0xffffd5"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      width="110"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.sacfificeFrame.leftTimesTxtField"
+      textFormatStyle="sacrifice.sacfificeFrame.leftTimesTxtField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="110"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="sacrifice.sacfificeFrame.goodsBgTitle"
+      textFieldStyle="sacrifice.sacfificeFrame.goodsBgTitleTxtField"
+      colors="0xffc000,0xffffd5"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      width="200"
+      height="22"
+      x="723"
+      y="796" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.sacfificeFrame.goodsBgTitleTxtField"
+      textFormatStyle="sacrifice.sacfificeFrame.goodsBgTitleTxtField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="22" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="sacrifice.sacfificeFrame.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="sacrifice.sacrificeFrame.HelpFrame.content"
+      titleText="public.help"
+      textWidth="322" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.SacrificeFrame.ExpTxt"
+      textFormatStyle="sacrifice.SacrificeFrame.ExpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="155"
+      y="26" />
+    <!-- 刷新 下次不再提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="sacrifice.SacrificeFrame.refreshNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      describeStyle="sacrifice.SacrificeFrame.ThewDescribeTxt"
+      containerX="-11"
+      containerY="30"
+      width="300"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sacrifice.SacrificeFrame.ThewDescribeTxt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="240"
+      height="50"
+      x="40"
+      y="11" />
+  </components>
+</style>

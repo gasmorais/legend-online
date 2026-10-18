@@ -1,0 +1,2752 @@
+<style
+  name="monster"
+  source="ui/zh_cn/swf/monster.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterTrailView.rateText_t"
+      args="Arial,12,0xf0eac4,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterTrailView.goldText_t"
+      args="Arial,16,0xf6f0c9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterTrainItem.nameText_t"
+      args="Arial,14,0xffffcc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterTrainItem.descText_t"
+      args="Arial,12,0xffd673,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterSkillLeranItem.nameText_t"
+      args="Arial,14,0xf3e9c1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterSkillLeranItem.alertText_t"
+      args="Arial,12,0xfe0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterListItem.nameText_t"
+      args="Arial,14,0xf3e9c1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterListItem.gradeText_t"
+      args="Arial,12,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterHandBookItem.nameText_t"
+      args="Arial,12,0xf3e9c1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCircleItem.nameText_t1"
+      args="Arial,14,0x7ce90b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCircleItem.nameText_t2"
+      args="Arial,14,0x33ccff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCircleItem.nameText_t3"
+      args="Arial,14,0xF7F709,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCircleItem.timeText_t"
+      args="Arial,12,0xfb5309,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCircleItem.callText_t"
+      args="Arial,14,0xf4c68b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterKitchenItem.nameText_t1"
+      args="Arial,14,0x7ce90b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterKitchenItem.nameText_t2"
+      args="Arial,14,0x33ccff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterKitchenItem.nameText_t3"
+      args="Arial,14,0xF7F709,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterKitchenItem.timeText_t"
+      args="Arial,12,0xfb5309,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterKitchenItem.callText_t"
+      args="Arial,14,0xf4c68b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterPropView.nameText_t"
+      args="Arial,14,0x66ffcc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCallFrame.needText_t"
+      args="Arial,12,0x666666,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCallFrame.nameText_t"
+      args="Arial,14,0xfeea9f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterCallFrame.materialText_t"
+      args="Arial,12,0xfeea9f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterPropView.expBar.text_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterSkillIItem.lockText_t"
+      args="Arial,12,0x948067,,,,,,center"
+      letterSpacing="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterSkillIItem.gradeText_t"
+      args="Arial,12,0xfdf1c6,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterSkillLeranItem.progressText_t"
+      args="Arial,14,0xf3e9c1,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterTrainItem.fullText_t"
+      args="Arial,16,0x7ce90b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="Monster.MonsterKitchenItem.descText_t"
+      args="Arial,14,0xf4c68b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterSkillPracticeFrame.curDescText_t"
+      args="Arial,12,0xf1d8bf,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterSkillPracticeFrame.nextDescText_t"
+      args="Arial,12,0xefb913,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.lvTxt_t"
+      args="Arial,16,0xefcbc0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.nameTxt_t"
+      args="Arial,16,0xC2E7F8,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.effectTxt_t"
+      args="Arial,12,0xfec400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.strengethenLvTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterPropView.strengethenBar.text_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.numTxt_t"
+      args="Arial,16,0x00f851,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesBagCell.gradeText_t"
+      args="Arial,12,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.mainAttText_t"
+      args="Arial,14,0xefcbc0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesEffectItem.txt_t1"
+      args="Arial,14,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesEffectItem.txt_t2"
+      args="Arial,14,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesEffectItem.txt_t3"
+      args="Arial,14,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesEffectItem.txt_t4"
+      args="Arial,14,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesEffectItem.txt_t5"
+      args="Arial,14,0xce0f0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.BaseItemText_t1"
+      args="Arial,12,0x59cd41,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.BaseItemText_t2"
+      args="Arial,12,0xce0f0f,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAutoHammerFrame.ComBoxTxt_f"
+      args="Arial,12,0xfff6ce,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAutoHammerFrame.txt_t"
+      args="Arial,12,0xfc5e4e,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAutoHammerFrame.countNumTxt_t"
+      args="Arial,16,0xfff6ce,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.currCount_t"
+      args="Arial,12,0xfddfa9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterAccessoriesView.selectedChangeTxt_t"
+      args="Arial,12,0xfec400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterEvolveFrame.noNewSkillText_t"
+      args="Arial,14,0xFFCC33,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterContractItem.descText_t"
+      args="Arial,12,0xa3adb6,,,,,,left"
+      letterSpacing="1"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterContractSelectItem.nameText_t"
+      args="Arial,12,0xe9c68c,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.MonsterPropView.fightRes" />
+    <bitmapData
+      resourceLink="asset.MonsterSkillIItem.lockImage"
+      x="38"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.MonsterSkillIItem.gradeImage" />
+    <bitmapData
+      resourceLink="asset.MonsterPropView.lvBmd" />
+    <bitmapData
+      resourceLink="asset.MonsterTrailView.trainNumBit" />
+    <bitmapData
+      resourceLink="asset.MonsterKitchenItem.lookRewardImage"
+      x="0"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.MonsterAccessoriesView.successNumImg" />
+    <bitmapData
+      resourceLink="asset.MonsterPropBagView.back"
+      x="330"
+      y="31"
+      height="314" />
+    <bitmapData
+      resourceLink="asset.MonsterPropView.sellBg"
+      height="41"
+      width="242" />
+    <bitmapData
+      resourceLink="asset.MonsterAccessoriesView.countBmp"
+      x="0"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.MonsterAccessoriesView.targetBmp"
+      x="0"
+      y="85" />
+    <bitmapData
+      resourceLink="asset.MonsterBagCell.accessoriesTxt"
+      x="257"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.MonsterContractView.back"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="Monster.MonsterFrame.trainView"
+      classname="monster.view.MonsterTrainView"
+      x="228"
+      y="94" />
+    <custom
+      stylename="Monster.MonsterTrailView.curItem"
+      classname="monster.item.MonsterTrainItem"
+      x="8"
+      y="4" />
+    <custom
+      stylename="Monster.MonsterTrailView.nextItem"
+      classname="monster.item.MonsterTrainItem"
+      x="172"
+      y="4" />
+    <custom
+      stylename="Monster.MonsterFrame.skillView"
+      classname="monster.view.MonsterSkillView"
+      x="228"
+      y="94" />
+    <custom
+      stylename="Monster.MonsterFrame.listView"
+      classname="monster.view.MonsterListView"
+      x="33"
+      y="93" />
+    <custom
+      stylename="Monster.MonsterFrame.handBookView"
+      classname="monster.view.MonsterHandBookView"
+      x="32"
+      y="94" />
+    <custom
+      stylename="Monster.MonsterFrame.accessoriesView"
+      classname="monster.view.MonsterAccessoriesView"
+      x="32"
+      y="94" />
+    <custom
+      stylename="Monster.MonsterFrame.monsterContractView"
+      classname="monster.view.MonsterContractView"
+      x="32"
+      y="94" />
+    <custom
+      stylename="Monster.MonsterHandBookView.item"
+      classname="Monster.MonsterHandBookItem"
+      x="9"
+      y="15" />
+    <custom
+      stylename="Monster.MonsterFrame.propView"
+      classname="monster.view.MonsterPropView"
+      x="228"
+      y="94" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MonsterMaterialItemCell.item"
+      parentStyle="core.BaseItemView"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterSkillIItem.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0,2,6,7"
+      loadingX="30"
+      loadingY="30"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="Monster.MonsterListItem.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="78"
+      iconWidth="78"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.goods.MonsterTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="4"
+      y="4" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterHandBookView.SimpleTileList"
+      vSpace="5"
+      hSpace="10"
+      x="12"
+      y="8" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterHandBookItem.skillItem"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0,2,6,7"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      y="0" />
+    <custom
+      stylename="MonsterSkillLeranItem.skillItem"
+      classname="monster.item.MonsterSkillIItem"
+      x="20"
+      y="15" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterTrainView.SimpleTileList"
+      vSpace="0"
+      hSpace="0" />
+    <custom
+      classname="monster.item.MonsterMaterialItemCell"
+      stylename="MonsterTrainView.BagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="MonsterTrainView.BagCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="24"
+      fashionIconY="21" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterTrainView.BagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterCallFrame.SimpleTileList"
+      vSpace="3"
+      hSpace="1"
+      x="430"
+      y="350" />
+    <custom
+      classname="monster.item.MonsterCallItemCell"
+      stylename="MonsterTrainView.callCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="MonsterTrainView.callCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="60"
+      profileHeight="60"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="30"
+      fashionIconY="25" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterTrainView.callCellIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      stylename="MonsterCallFrame.dropAreaView"
+      classname="monster.view.MonsterCallDropAreaView"
+      x="30"
+      y="51" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterSkillPracticeFrame.materialBox"
+      vSpace="2"
+      hSpace="2"
+      x="50"
+      y="318" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterSkillPracticeFrame.SimpleTileList"
+      vSpace="0"
+      hSpace="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterIconCell.monsterIcon"
+      isFollowMouse="false"
+      iconWidth="40"
+      iconHeight="40"
+      tipStyle="yishi.view.tips.goods.MonsterTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterSkillPracticeFrame.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0,2,6,7"
+      loadingX="30"
+      loadingY="30"
+      x="98"
+      y="16" />
+    <!-- 怪怪饰品 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterAccessoriesView.baseIconView"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="44"
+      iconWidth="44"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="100"
+      y="365" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MonsterAccessoriesView.baseItemView"
+      parentStyle="core.BaseItemView"
+      x="100"
+      y="365" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterAccessoriesView.SimpleTileList"
+      vSpace="0"
+      hSpace="-1" />
+    <custom
+      classname="monster.cell.MonsterAccessoriesBagCell"
+      stylename="MonsterAccessoriesView.BagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="MonsterAccessoriesView.BagCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="45"
+      profileHeight="45"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="23"
+      strengthenY="23" />
+    <custom
+      stylename="MonsterAccessoriesView.BagCellIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="45"
+      iconHeight="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      loadingX="26"
+      loadingY="26"
+      x="0"
+      y="0" />
+    <custom
+      classname="monster.cell.MonsterAccessoriesEquipCell"
+      stylename="MonsterAccessoriesView.EquipCell"
+      backgroundStyle="MonsterAccessoriesEquipCell.ItemBack"
+      iconStyle="MonsterAccessoriesView.EquipCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="62"
+      profileHeight="62"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="32"
+      strengthenY="32"
+      x="67"
+      y="38" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterAccessoriesView.EquipCellIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="monster.view.MonsterAccessoriesBagView"
+      stylename="MonsterAccessoriesView.bagView" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MonsterAccessoriesView.BaseItemView"
+      parentStyle="core.BaseItemView"
+      textStyle="MonsterAccessoriesView.BaseItemText" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MonsterAccessoriesView.breakthroughItem.BaseItemView"
+      parentStyle="core.BaseItemView"
+      textStyle="MonsterAccessoriesView.BaseItemText"
+      iconStyle="MonsterAccessoriesView.EquipCellIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="60"
+      profileHeight="60" />
+    <custom
+      classname="monster.cell.MonsterAccessoriesItemCell"
+      stylename="MonsterAccessoriesView.ItemCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="MonsterAccessoriesView.ItemCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="45"
+      profileHeight="45"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="23"
+      strengthenY="23"
+      x="66"
+      y="38" />
+    <custom
+      stylename="MonsterAccessoriesView.ItemCellIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="45"
+      iconHeight="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      loadingX="26"
+      loadingY="26"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterPropBagView.SimpleTileList"
+      vSpace="0"
+      hSpace="-1" />
+    <custom
+      classname="monster.cell.MonsterPropBagCell"
+      stylename="MonsterPropBagView.BagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="MonsterPropBagView.ItemCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="45"
+      profileHeight="45"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="23"
+      strengthenY="23" />
+    <custom
+      stylename="MonsterPropBagView.ItemCellIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="45"
+      iconHeight="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      loadingX="26"
+      loadingY="26"
+      x="0"
+      y="0" />
+    <custom
+      classname="monster.view.MonsterPropBagView"
+      stylename="MonsterPropView.bagView" />
+    <custom
+      classname="monster.cell.MonsterBagCell"
+      stylename="MonsterPropView.BagCell"
+      backgroundStyle="MonsterPropView.accessoriesImage"
+      iconStyle="MonsterBagCell.ItemCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      showProfile="true"
+      profileWidth="54"
+      profileHeight="54"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="27"
+      strengthenY="27"
+      x="260"
+      y="10" />
+    <custom
+      stylename="MonsterBagCell.ItemCellIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="54"
+      iconHeight="54"
+      loadingWidth="5"
+      loadingHeight="5"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      loadingX="31"
+      loadingY="31"
+      x="0"
+      y="0" />
+    <custom
+      stylename="MonsterBagCell.icon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="54"
+      iconHeight="54"
+      loadingWidth="5"
+      loadingHeight="5"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      loadingX="27"
+      loadingY="27"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.MonsterAccessoriesView.strengethenMC"
+      stylename="MonsterAccessoriesView.strengethenMC"
+      x="135"
+      y="330" />
+    <custom
+      classname="asset.MonsterAccessoriesView.successMC"
+      stylename="MonsterAccessoriesView.successMC"
+      x="180"
+      y="220" />
+    <custom
+      classname="asset.MonsterAccessoriesView.failMC"
+      stylename="MonsterAccessoriesView.failMC"
+      x="180"
+      y="220" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterEvolveFrame.SimpleTileList"
+      vSpace="0"
+      hSpace="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="MonsterEvolveFrame.materialBox"
+      vSpace="2"
+      hSpace="2"
+      x="50"
+      y="318" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterEvolveFrame.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="0,2,6,7"
+      loadingX="30"
+      loadingY="30"
+      x="133"
+      y="220" />
+    <custom
+      classname="asset.MonsterTrailView.rateBarMc"
+      stylename="MonsterTrainView.rateMc"
+      x="25"
+      y="275" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterContractItem.monsterIcon"
+      isFollowMouse="false"
+      iconWidth="78"
+      iconHeight="78"
+      tipStyle="yishi.view.tips.goods.MonsterTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="49"
+      y="14" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="MonsterContractSelectItem.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.goods.MonsterTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="5"
+      y="8" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterTrailView.trainBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.trainBtn.icon"
+      iconInnerRectString="15,36,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="362"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterTrailView.evolveBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.evolveBtn.icon"
+      iconInnerRectString="15,36,7,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="469"
+      y="380" />
+    <component
+      stylename="Monster.MonsterTrailView.mBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.Monster.trainBack.trainBg,asset.Monster.trainBack.trainTextImage,asset.core.GoldIcon"
+      imageRectString="0|0|19,47|239|19,370|342|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterSkillLeranItem.practiceBtn"
+      backStyle="asset.Monster.practiceBtn.btnBck2"
+      iconStyle="asset.Monster.practiceBtn.icon"
+      iconInnerRectString="11,43,3,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="470"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCircleItem.completeBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.completeBtn.icon"
+      iconInnerRectString="3,60,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="152"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterKitchenItem.completeBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.completeBtn.icon"
+      iconInnerRectString="3,60,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="152"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterKitchenItem.getBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.getBtn.icon"
+      iconInnerRectString="15,36,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="152"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCircleItem.cancelBtn"
+      backStyle="asset.Monster.practiceBtn.btnBck2"
+      iconStyle="asset.Monster.cancelBtn.icon"
+      iconInnerRectString="12,42,4,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="82"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterKitchenItem.cancelBtn"
+      backStyle="asset.Monster.practiceBtn.btnBck2"
+      iconStyle="asset.Monster.cancelBtn.icon"
+      iconInnerRectString="12,42,4,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="82"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCircleItem.resolveBtn"
+      backStyle="asset.Monster.resolveBtn.btnBack3"
+      iconStyle="asset.Monster.resolveBtn.icon"
+      iconInnerRectString="22,80,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="50"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCircleItem.upgradeBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.upgradeBtn.icon"
+      iconInnerRectString="3,60,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="152"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCircleItem.callBtn"
+      backStyle="asset.Monster.practiceBtn.btnBck2"
+      iconStyle="asset.Monster.callBtn.icon"
+      iconInnerRectString="12,43,5,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="82"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterKitchenItem.nakeBtn"
+      backStyle="asset.Monster.practiceBtn.btnBck2"
+      iconStyle="asset.Monster.makeBtn.icon"
+      iconInnerRectString="11,43,4,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="82"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterKitchenItem.upgradeBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.upgradeBtn2.icon"
+      iconInnerRectString="3,59,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="152"
+      y="71" />
+    <component
+      stylename="Monster.MonsterCallFrame.callBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.Monster.callBack.callLeftBg,asset.Monster.callBack.callRightBg"
+      imageRectString="0|327|19,395|0|19"
+      x="30"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCallFrame.callBtn"
+      backStyle="asset.Monster.callBtn2.btnBack"
+      iconStyle="asset.Monster.callBtn.icon"
+      iconInnerRectString="36,43,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="394" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterPropView.firstBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.fisrtBtn.icon"
+      iconInnerRectString="15,36,7,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="177"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterPropView.enterWarBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.enterWarBtn.icon"
+      iconInnerRectString="15,36,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="253"
+      y="310" />
+    <component
+      stylename="Monster.MonsterPropView.pBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.Monster.propBack.back,asset.fairycommon.gap,MonsterPropView.pBack.lineImage,asset.Monster.propBack.fightImage,asset.Monster.propBack.skillImage,asset.Monster.propBack.propTextImage,asset.Monster.propBack.lvImage,asset.MonsterAccessoriesView.Hline"
+      imageRectString="0|576|0|422|13,328|3|0|345|13,0|575|345|1|13,3|169|375|20|13,285|92|364|36|13,344|135|35|15|13,346|30|60|20|13,330|245|29|3|13"
+      x="0"
+      y="0" />
+    <component
+      stylename="MonsterPropView.pBack.lineImage"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.gap"
+      scaleGridString="1,1,2,2" />
+    <component
+      stylename="Monster.MonsterPropView.propBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.Monster.propTextBack.propTextImage1,asset.Monster.propTextBack.propTextImage2,asset.Monster.propTextBack.propTextImage3,asset.Monster.propTextBack.propTextImage4,asset.Monster.propTextBack.propTextImage5,asset.Monster.propTextBack.propTextImage6,asset.Monster.propTextBack.propTextImage7,asset.Monster.propTextBack.propTextImage8"
+      imageRectString="-10|90|0|18|13,-10|47|28|14|13,-10|42|56|17|13,-10|75|85|15|13,-10|45|116|15|13,-10|75|145|18|13,-10|59|174|17|13,-10|32|201|14|13"
+      x="343"
+      y="115" />
+    <component
+      stylename="Monster.MonsterMagicCircleFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="234"
+      height="443"
+      x="27"
+      y="49" />
+    <component
+      stylename="Monster.MonsterKitchenFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="234"
+      height="443"
+      x="27"
+      y="49" />
+    <component
+      stylename="Monster.MonsterCallFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="644"
+      height="412"
+      x="28"
+      y="48" />
+    <component
+      stylename="Monster.MonsterFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="775"
+      height="428"
+      x="31"
+      y="92" />
+    <component
+      stylename="Monster.MonsterTrailView.arrowImage2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.traim.arrowImage2"
+      x="151"
+      y="124" />
+    <component
+      stylename="Monster.MonsterSkillLeranItem.back"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.skill.back"
+      x="2"
+      y="5" />
+    <component
+      stylename="Monster.MonsterSkillView.skillBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.skill.skillBack"
+      x="0"
+      y="38" />
+    <component
+      stylename="Monster.MonsterListItem.itemBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.list.itemBack"
+      x="0"
+      y="0" />
+    <component
+      stylename="Monster.MonsterListItem.selectBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.list.selectBg"
+      x="0"
+      y="0" />
+    <component
+      stylename="Monster.MonsterHandBookItem.back"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.handbook.back"
+      x="0"
+      y="0" />
+    <component
+      stylename="Monster.MonsterMagicCircleFrame.itemBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.circle.itemBack"
+      x="30"
+      y="52" />
+    <component
+      stylename="Monster.MonsterKitchenFrame.itemBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.circle.itemBack"
+      x="30"
+      y="52" />
+    <component
+      stylename="Monster.MonsterCircleItem.callBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.circle.callBack"
+      x="0"
+      y="0" />
+    <component
+      stylename="Monster.MonsterKitchenItem.back"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.circle.callBack"
+      x="0"
+      y="0" />
+    <component
+      stylename="Monster.MonsterPropView.addImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.resource.prop.addImage"
+      x="510"
+      y="64" />
+    <component
+      stylename="monster.MonsterMagicCircleFrame"
+      classname="monster.MonsterMagicCircleFrame"
+      parentStyle="core.Frame2"
+      containerX="-15"
+      containerY="0"
+      width="263"
+      height="535"
+      x="800"
+      y="-65" />
+    <component
+      stylename="monster.MonsterKitchenFrame"
+      classname="monster.MonsterKitchenFrame"
+      parentStyle="core.Frame2"
+      containerX="-15"
+      containerY="0"
+      width="263"
+      height="535"
+      x="604"
+      y="-65" />
+    <component
+      stylename="monster.MonsterCallFrame"
+      classname="monster.MonsterCallFrame"
+      parentStyle="core.Frame2"
+      containerX="-10"
+      containerY="0"
+      width="672"
+      height="501" />
+    <component
+      stylename="monster.MonsterFrame"
+      classname="monster.MonsterFrame"
+      parentStyle="core.Frame1"
+      containerX="-15"
+      containerY="-5"
+      width="808"
+      height="560" />
+    <component
+      stylename="Monster.MonsterTrailView.rateText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrailView.rateText_t"
+      type="dynamic"
+      width="94"
+      height="38"
+      x="21"
+      y="305"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterTrailView.goldText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrailView.goldText_t"
+      type="dynamic"
+      width="126"
+      height="23"
+      x="404"
+      y="343" />
+    <component
+      stylename="Monster.MonsterTrainItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrainItem.nameText_t"
+      type="dynamic"
+      width="155"
+      height="40"
+      x="0"
+      y="5"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterTrainItem.descText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrainItem.descText_t"
+      type="dynamic"
+      width="155"
+      height="20"
+      x="0"
+      y="190" />
+    <component
+      stylename="Monster.MonsterSkillLeranItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterSkillLeranItem.nameText_t"
+      type="dynamic"
+      width="325"
+      height="20"
+      x="98"
+      y="11" />
+    <component
+      stylename="Monster.MonsterSkillLeranItem.alertText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterSkillLeranItem.alertText_t"
+      type="dynamic"
+      width="237"
+      height="20"
+      x="167"
+      y="39" />
+    <component
+      stylename="Monster.MonsterListItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterListItem.nameText_t"
+      type="dynamic"
+      width="94"
+      height="38"
+      x="82"
+      y="12"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterListItem.gradeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterListItem.gradeText_t"
+      type="dynamic"
+      width="100"
+      height="20"
+      x="77"
+      y="44" />
+    <component
+      stylename="Monster.MonsterHandBookItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterHandBookItem.nameText_t"
+      type="dynamic"
+      width="160"
+      height="20"
+      x="2"
+      y="4" />
+    <component
+      stylename="Monster.MonsterCircleItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterCircleItem.nameText_t1,Monster.MonsterCircleItem.nameText_t2,Monster.MonsterCircleItem.nameText_t3"
+      type="dynamic"
+      width="57"
+      height="40"
+      x="5"
+      y="65"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterCircleItem.timeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterCircleItem.timeText_t"
+      type="dynamic"
+      width="165"
+      height="20"
+      x="62"
+      y="15" />
+    <component
+      stylename="Monster.MonsterCircleItem.callText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterCircleItem.callText_t"
+      type="dynamic"
+      width="142"
+      height="20"
+      x="77"
+      y="6" />
+    <component
+      stylename="Monster.MonsterKitchenItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterKitchenItem.nameText_t1,Monster.MonsterKitchenItem.nameText_t2,Monster.MonsterKitchenItem.nameText_t3"
+      type="dynamic"
+      width="45"
+      height="40"
+      x="20"
+      y="65"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterKitchenItem.timeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterKitchenItem.timeText_t"
+      type="dynamic"
+      width="165"
+      height="20"
+      x="67"
+      y="45" />
+    <component
+      stylename="Monster.MonsterKitchenItem.callText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterKitchenItem.callText_t"
+      type="dynamic"
+      width="125"
+      height="20"
+      x="87"
+      y="6" />
+    <component
+      stylename="Monster.MonsterPropView.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterPropView.nameText_t"
+      type="dynamic"
+      width="175"
+      height="20"
+      x="11"
+      y="15" />
+    <component
+      stylename="Monster.MonsterCallFrame.needText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterCallFrame.needText_t"
+      type="dynamic"
+      width="60"
+      height="68"
+      x="193"
+      y="175"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterCallFrame.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterCallFrame.nameText_t"
+      type="dynamic"
+      width="218"
+      height="40"
+      x="445"
+      y="64"
+      wordWrap="true" />
+    <component
+      stylename="Monster.MonsterCallFrame.materialText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterCallFrame.materialText_t"
+      type="dynamic"
+      width="215"
+      height="180"
+      x="449"
+      y="123"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterFrame.btnHbox"
+      x="65"
+      y="65"
+      spacing="15" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterFrame.propBtn"
+      selectedStyle="asset.core.Style108SelectedBtn"
+      unSelectedStyle="asset.core.Style108UnSelectedBtn"
+      selectedIconStyle="asset.MonsterFrame.propBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterFrame.propBtnUnSelectedTxt"
+      selectedIconInnerRectString="20,70,8,17,13"
+      unselectedIconInnerRectString="22,66,8,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterFrame.trainBtn"
+      parentStyle="MonsterFrame.propBtn"
+      selectedIconStyle="asset.MonsterFrame.trainBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterFrame.trainBtnUnSelectedTxt"
+      selectedIconInnerRectString="18,75,7,17,13"
+      unselectedIconInnerRectString="20,71,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterFrame.skillBtn"
+      parentStyle="MonsterFrame.propBtn"
+      selectedIconStyle="asset.MonsterFrame.skillBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterFrame.skillBtnUnSelectedTxt"
+      selectedIconInnerRectString="10,90,7,17,13"
+      unselectedIconInnerRectString="12,85,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterFrame.handBookBtn"
+      parentStyle="MonsterFrame.propBtn"
+      selectedIconStyle="asset.MonsterFrame.handBookBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterFrame.handBookBtnUnSelectedTxt"
+      selectedIconInnerRectString="22,62,6,20,13"
+      unselectedIconInnerRectString="25,60,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterFrame.accessoriesBtn"
+      parentStyle="MonsterFrame.propBtn"
+      selectedIconStyle="asset.MonsterFrame.accessoriesBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterFrame.accessoriesBtnUnSelectedTxt"
+      selectedIconInnerRectString="20,69,7,16,13"
+      unselectedIconInnerRectString="22,66,7,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MonsterListView.itemBox"
+      x="5"
+      y="15"
+      spacing="6" />
+    <component
+      stylename="MonsterListView.pageBar"
+      classname="yishi.view.base.PageBar"
+      preBtnStyle="MonsterListView.pageBar.LastPageBtn"
+      nextBtnStyle="MonsterListView.pageBar.NextPageBtn"
+      pageBackStyle="MonsterListView.pageBar.pageBack"
+      pageTxtStyle="MonsterListView.pageBar.pageText"
+      x="10"
+      y="385" />
+    <component
+      stylename="MonsterListView.pageBar.LastPageBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="core.newPrePageBtn"
+      x="20"
+      y="7" />
+    <component
+      stylename="MonsterListView.pageBar.NextPageBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      parentStyle="core.newNextPageBtn"
+      x="125"
+      y="7" />
+    <component
+      stylename="MonsterListView.pageBar.pageText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="core.PageTextStyle1"
+      x="58"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MonsterListView.pageBar.pageBack"
+      resourceLink="asset.core.pageBg"
+      x="55"
+      y="0" />
+    <component
+      stylename="MonsterFrame.lineImage"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.gap"
+      scaleGridString="1,1,2,2"
+      height="420"
+      x="225"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterPropView.fightCon"
+      x="168"
+      y="372" />
+    <component
+      stylename="MonsterSkillIItem.back"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.MonsterSkillIItem.back1,asset.MonsterSkillIItem.back2"
+      autoHCenter="true"
+      autoVCenter="true"
+      x="25"
+      y="25" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MonsterPropView.expBar"
+      backgroundLink="asset.MonsterPropView.expBarBg"
+      barLink="asset.MonsterPropView.expBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="5,5,5,6"
+      x="340"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterPropView.expBar.text"
+      textFormatStyle="MonsterPropView.expBar.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="125"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterPropView.propBox"
+      x="420"
+      y="115" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MonsterPropView.propItem"
+      backgroundLink="asset.MonsterPropView.propItemBg"
+      barLink="asset.MonsterPropView.propItemColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="5,5,5,5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterPropView.skillHbox"
+      x="380"
+      y="360"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterSkillIItem.lockText"
+      textFormatStyle="MonsterSkillIItem.lockText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="52"
+      height="50"
+      wordWrap="true"
+      y="0"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterSkillIItem.gradeText"
+      textFormatStyle="MonsterSkillIItem.gradeText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="45"
+      height="20"
+      y="34"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterPropView.lvCon"
+      x="375"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterPropView.periodCon"
+      x="530"
+      y="61" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterPropView.starHbox"
+      x="480"
+      y="35"
+      spacing="0" />
+    <component
+      stylename="MonsterHandBookView.pageBar"
+      classname="yishi.view.base.PageBar"
+      parentStyle="MonsterListView.pageBar"
+      x="598"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterHandBookItem.skillHbox"
+      x="13"
+      y="132"
+      spacing="8" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterSkillView.activeBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.MonsterSkillView.activeBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterSkillView.activeBtnUnSelectedTxt"
+      selectedIconInnerRectString="41,37,5,16,13"
+      unselectedIconInnerRectString="42,35,6,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="13"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterSkillView.passiveBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.MonsterSkillView.passiveBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterSkillView.passiveBtnUnSelectedTxt"
+      selectedIconInnerRectString="32,55,6,15,13"
+      unselectedIconInnerRectString="34,52,6,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="130"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterSkillView.skillPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,577,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="575"
+      height="385"
+      x="0"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MonsterSkillView.skillBox"
+      x="0"
+      y="0"
+      spacing="6" />
+    <component
+      stylename="MonsterSkillLeranItem.progressText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterSkillLeranItem.progressText_t"
+      type="dynamic"
+      width="110"
+      height="20"
+      x="75"
+      y="45" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MonsterSkillLeranItem.expBar"
+      backgroundLink="asset.MonsterSkillLeranItem.expBarBg"
+      barLink="asset.MonsterSkillLeranItem.expBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="2,6,7,8"
+      x="195"
+      y="40" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="Monster.MonsterTrailView.expBar"
+      backgroundLink="asset.MonsterTrailView.expBar"
+      barLink="asset.MonsterTrailView.expBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="4,5,6,6"
+      x="20"
+      y="270" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MonsterTrailView.rateBar"
+      backgroundLink="asset.MonsterTrailView.rateBarBg"
+      barLink="asset.MonsterTrailView.rateBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="94,6,4,6"
+      x="15"
+      y="312" />
+    <component
+      stylename="Monster.MonsterTrainItem.fullText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrainItem.fullText_t"
+      type="dynamic"
+      width="155"
+      height="40"
+      wordWrap="true"
+      x="195"
+      y="233" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterTrailView.curPeriodCon"
+      x="205"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterTrailView.nextPeriodCon"
+      x="285"
+      y="239" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterTrailView.rateItemHbox"
+      x="27"
+      y="357"
+      spacing="0" />
+    <!-- 装备背包滚动条 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterTrainView.EquipScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,245,0,100,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="245"
+      height="418"
+      x="332"
+      y="3" />
+    <component
+      stylename="MonsterCallFrame.pageBar"
+      classname="yishi.view.base.PageBar"
+      parentStyle="MonsterListView.pageBar"
+      x="460"
+      y="297" />
+    <component
+      stylename="Monster.MonsterCallFrame.bagBorder"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="245"
+      height="115"
+      x="424"
+      y="339" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterCallFrame.materialBox"
+      x="50"
+      y="60" />
+    <component
+      stylename="MonsterCallFrame.materialImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.Monster.callBack.dragArea"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="Monster.MonsterMagicCircleFrame.itemBox"
+      x="32"
+      y="54"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterCircleItem.getBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.getBtn.icon"
+      iconInnerRectString="15,36,6,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="152"
+      y="71" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="Monster.MonsterCircleItem.callBar"
+      backgroundLink="asset.MonsterCircleItem.callBarBg"
+      barLink="asset.MonsterCircleItem.callBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="4,3,4,3"
+      x="75"
+      y="30" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="Monster.MonsterKitchenItem.callBar"
+      backgroundLink="asset.MonsterCircleItem.callBarBg"
+      barLink="asset.MonsterCircleItem.callBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="4,3,4,3"
+      x="75"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterKitchenItem.resolveBtn"
+      backStyle="asset.Monster.resolveBtn.btnBack3"
+      iconStyle="asset.MonsterKitchenItem.resolveBtn"
+      iconInnerRectString="22,80,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="50"
+      y="30" />
+    <component
+      stylename="Monster.MonsterKitchenItem.descText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterKitchenItem.descText_t"
+      type="dynamic"
+      width="125"
+      height="20"
+      x="22"
+      y="6" />
+    <component
+      stylename="monster.MonsterSkillPracticeFrame"
+      classname="monster.MonsterSkillPracticeFrame"
+      parentStyle="core.Frame2"
+      containerX="5"
+      containerY="50"
+      width="507"
+      height="521" />
+    <component
+      stylename="MonsterSkillPracticeFrame.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MonsterSkillPracticeFrame.mback,asset.MonsterSkillPracticeFrame.praceticeTextImage,asset.Monster.propBack.lvImage,asset.core.GoldIcon"
+      imageRectString="0|0|19,40|225|19,45|250|19,245|370|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterSkillPracticeFrame.nextContiner"
+      x="105"
+      y="245" />
+    <component
+      stylename="MonsterSkillPracticeFrame.nextImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.Monster.resource.traim.arrowImage1,asset.Monster.propBack.lvImage"
+      imageRectString="0|39|0|27|13,50|30|5|20|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterSkillPracticeFrame.nextGradeCon"
+      x="80"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterSkillPracticeFrame.curGradeCon"
+      x="75"
+      y="249" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MonsterSkillPracticeFrame.expBar"
+      backgroundLink="asset.MonsterSkillPracticeFrame.expBarBg"
+      barLink="asset.MonsterSkillPracticeFrame.expBarColor"
+      textStyle="MonsterPropView.expBar.text"
+      barMargin="5,5,6,5"
+      x="20"
+      y="275" />
+    <component
+      stylename="MonsterSkillPracticeFrame.goldText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrailView.goldText_t"
+      type="dynamic"
+      width="126"
+      height="23"
+      x="275"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterSkillPracticeFrame.practiceBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.practiceBtn.icon"
+      iconInnerRectString="11,43,3,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="410"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterSkillPracticeFrame.EquipScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,247,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="247"
+      height="320"
+      x="230"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MonsterIconCell.back"
+      parentStyle="core.ItemBack"
+      width="45"
+      height="45" />
+    <component
+      stylename="MonsterSkillPracticeFrame.curDescText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterSkillPracticeFrame.curDescText_t"
+      type="dynamic"
+      width="90"
+      height="135"
+      wordWrap="true"
+      x="25"
+      y="77" />
+    <component
+      stylename="MonsterSkillPracticeFrame.nextDescText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterSkillPracticeFrame.nextDescText_t"
+      type="dynamic"
+      width="90"
+      height="135"
+      wordWrap="true"
+      x="130"
+      y="77" />
+    <component
+      stylename="MonsterKitchenItem.cookIcon"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.MonsterKitchenItem.cookIcon1,asset.MonsterKitchenItem.cookIcon2,asset.MonsterKitchenItem.cookIcon3"
+      x="10"
+      y="8" />
+    <component
+      stylename="MonsterCircleItem.callImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.MonsterCircleItem.callImage1,asset.MonsterCircleItem.callImage2,asset.MonsterCircleItem.callImage3"
+      x="5"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterKitchenItem.rewardContiner"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="0,7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="70"
+      y="5" />
+    <component
+      stylename="Monster.MonsterTrailView.nextAddImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.Monster.resource.traim.arrowImage1,asset.Monster.resource.prop.addImage"
+      imageRectString="0|0|19,45|5|19"
+      x="219"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterIconCell.starHbox"
+      x="0"
+      y="26"
+      spacing="-6" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="Monster.MonsterListItem.starHbox"
+      x="5"
+      y="60"
+      spacing="-5" />
+    <!-- 怪怪饰品 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MonsterAccessoriesView.propertyBg"
+      resourceLink="asset.MonsterAccessoriesView.propertyBg"
+      scaleGridString="5,15,10,24"
+      width="527"
+      height="190" />
+    <component
+      stylename="MonsterAccessoriesView.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MonsterAccessoriesView.bg,asset.MonsterAccessoriesView.goodBg,MonsterAccessoriesView.propertyBg,asset.MonsterAccessoriesView.line,asset.MonsterAccessoriesView.effectBmp,asset.MonsterAccessoriesView.Vline,asset.MonsterAccessoriesView.Hline"
+      imageRectString="0|0|19,20|0|19,0|122|19,20|160|19,20|135|19,526|3|0|420|13,528|242|29|3|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.hammerBtn"
+      backStyle="asset.MonsterAccessoriesView.hammerBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="460"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.strengethenBtn"
+      backStyle="asset.MonsterAccessoriesView.strengthenBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="460"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.descBtn"
+      backStyle="asset.MonsterAccessoriesView.descBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="426"
+      y="170" />
+    <component
+      stylename="MonsterAccessoriesView.lvTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterAccessoriesView.lvTxt_t"
+      type="dynamic"
+      width="50"
+      height="24"
+      x="175"
+      y="18" />
+    <component
+      stylename="MonsterAccessoriesView.nameTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterAccessoriesView.nameTxt_t"
+      type="dynamic"
+      width="185"
+      height="24"
+      x="210"
+      y="18" />
+    <component
+      stylename="MonsterAccessoriesView.effectTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterAccessoriesView.effectTxt_t"
+      type="dynamic"
+      width="400"
+      height="40"
+      wordWrap="true"
+      x="120"
+      y="128" />
+    <component
+      stylename="MonsterAccessoriesView.strengethenLvTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterAccessoriesView.strengethenLvTxt_t"
+      type="dynamic"
+      width="50"
+      height="24"
+      x="37"
+      y="331" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MonsterAccessoriesView.strengethenBar"
+      backgroundLink="asset.MonsterAccessoriesView.strengethenBarBg"
+      barLink="asset.MonsterAccessoriesView.strengethenBarColor"
+      textStyle="MonsterPropView.strengethenBar.text"
+      barMargin="21,5,21,5"
+      x="70"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterPropView.strengethenBar.text"
+      textFormatStyle="MonsterPropView.strengethenBar.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="272"
+      height="21" />
+    <component
+      stylename="MonsterAccessoriesView.numImg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesView.numImg"
+      x="150"
+      y="378" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MonsterAccessoriesView.numBg"
+      resourceLink="asset.MonsterAccessoriesView.numBg"
+      scaleGridString="7,5,24,15"
+      width="80"
+      height="30"
+      x="225"
+      y="373" />
+    <component
+      stylename="MonsterAccessoriesView.numTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterAccessoriesView.numTxt_t"
+      type="input"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="225"
+      y="378" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAccessoriesView.currCount"
+      textFormatStyle="MonsterAccessoriesView.currCount_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="150"
+      height="21"
+      x="152"
+      y="405" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.intensifyBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.MonsterAccessoriesView.intensifyTxt"
+      iconInnerRectString="52,47,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="370"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.breakthroughBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.MonsterAccessoriesView.breakthroughTxt"
+      iconInnerRectString="49,54,14,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="370"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterAccessoriesView.propBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.MonsterAccessoriesView.propBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterAccessoriesView.propBtnUnSelectedTxt"
+      selectedIconInnerRectString="42,35,5,16,13"
+      unselectedIconInnerRectString="43,33,5,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="650"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterAccessoriesView.accessoriesBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.MonsterAccessoriesView.accessoriesBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterAccessoriesView.accessoriesBtnUnSelectedTxt"
+      selectedIconInnerRectString="23,69,6,16,13"
+      unselectedIconInnerRectString="26,66,6,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="530"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterAccessoriesView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,245,0,0,2"
+      vScrollbarInnerRectString="15,5,0,0,3"
+      vScrollProxy="0"
+      width="245"
+      height="345"
+      x="530"
+      y="33" />
+    <component
+      stylename="MonsterAccessoriesBagCell.equipIcon"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.core.HeroEquipIcon"
+      x="0"
+      y="0" />
+    <component
+      stylename="MonsterAccessoriesBagCell.isNewImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesBagCell.isNewImage"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAccessoriesBagCell.gradeText"
+      textFormatStyle="MonsterAccessoriesBagCell.gradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="3"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterAccessoriesView.breakHbox"
+      x="60"
+      y="360"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MonsterAccessoriesView.propVbox"
+      x="200"
+      y="50"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MonsterAccessoriesView.effectVbox"
+      x="85"
+      y="175"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAccessoriesView.mainAttText"
+      textFormatStyle="MonsterAccessoriesView.mainAttText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="180"
+      x="0"
+      y="0" />
+    <component
+      stylename="MonsterAccessoriesView.upArrow"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesView.upArrow"
+      x="0"
+      y="0" />
+    <component
+      stylename="MonsterAccessoriesEffectItem.icon"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.MonsterAccessoriesView.icon1,asset.MonsterAccessoriesView.icon2"
+      autoHCenter="true"
+      autoVCenter="true"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAccessoriesEffectItem.txt"
+      textFormatStyle="MonsterAccessoriesEffectItem.txt_t1,MonsterAccessoriesEffectItem.txt_t2,MonsterAccessoriesEffectItem.txt_t3,MonsterAccessoriesEffectItem.txt_t4,MonsterAccessoriesEffectItem.txt_t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="270"
+      x="10"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAccessoriesView.BaseItemText"
+      textFormatStyle="MonsterAccessoriesView.BaseItemText_t1,MonsterAccessoriesView.BaseItemText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="55"
+      x="4"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Monster.MonsterPropView.restBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.MonsterPropView.restBtn.icon"
+      iconInnerRectString="15,36,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="253"
+      y="310" />
+    <component
+      stylename="MonsterAccessoriesView.pushImg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesView.pushImg"
+      x="5"
+      y="332" />
+    <component
+      stylename="MonsterAccessoriesView.successImg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesView.successImg"
+      x="379"
+      y="328" />
+    <component
+      stylename="MonsterAccessoriesView.percentImg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesView.percentImg"
+      x="495"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.hammerButton"
+      backStyle="asset.MonsterAccessoriesView.redBtnBack"
+      iconStyle="asset.MonsterAccessoriesView.hammerButton"
+      iconInnerRectString="50,55,14,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="95"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAccessoriesView.autoHammerButton"
+      backStyle="asset.MonsterAccessoriesView.yellowBtnBack"
+      iconStyle="asset.MonsterAccessoriesView.autoHammerButton"
+      iconInnerRectString="35,77,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="305"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterAccessoriesView.itemCellHbox"
+      x="128"
+      y="275"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MonsterAccessoriesView.selectedVBox"
+      x="48"
+      y="174"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterPropBagView.propertyBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.MonsterAccessoriesView.propertyBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterAccessoriesView.propertyBtnUnSelectedTxt"
+      selectedIconInnerRectString="27,63,5,16,13"
+      unselectedIconInnerRectString="30,59,5,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="330"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterPropBagVew.accessoriesBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.MonsterAccessoriesView.accessoriesBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterAccessoriesView.accessoriesBtnUnSelectedTxt"
+      selectedIconInnerRectString="25,69,6,16,13"
+      unselectedIconInnerRectString="26,66,6,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="450"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterPropBagView.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,245,0,0,2"
+      vScrollbarInnerRectString="15,2,0,0,3"
+      vScrollProxy="0"
+      width="245"
+      height="310"
+      x="332"
+      y="33" />
+    <component
+      stylename="MonsterAutoHammerFrame.countNumBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterAccessoriesView.comBoxBtnBg"
+      x="118"
+      y="28" />
+    <component
+      stylename="MonsterAutoHammerFrame.countNumTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterAutoHammerFrame.countNumTxt_t"
+      type="input"
+      restrict="0-9"
+      width="148"
+      height="24"
+      x="120"
+      y="35" />
+    <!-- ComboBox start -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="MonsterAutoHammerFrame.targetComBox"
+      listPanelStyle="MonsterAutoHammerFrame.ComBoxListPanel"
+      listInnerRectString="5,33,10,126,18"
+      textStyle="MonsterAutoHammerFrame.ComBoxTxt"
+      textInnerRectString="6,25,8,0,0"
+      buttonStyle="MonsterAutoHammerFrame.ComBoxBtn"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="198"
+      height="32"
+      x="118"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="MonsterAutoHammerFrame.ComBoxListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|MonsterAutoHammerFrame.ComBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.SimpleTextCellAdapter"
+      stylename="MonsterAutoHammerFrame.ComBoxListCell"
+      backStyle="MonsterAutoHammerFrame.ComBoxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="MonsterAutoHammerFrame.ComBoxTxt"
+      autoSizeAble="false"
+      enableHtml="true"
+      textFrameChange="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="MonsterAutoHammerFrame.ComBoxListCellBg"
+      resourceLink=",MonsterAutoHammerFrame.ComBoxItemBg,MonsterAutoHammerFrame.ComBoxItemBg"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MonsterAutoHammerFrame.ComBoxItemBg"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAutoHammerFrame.ComBoxTxt"
+      textFormatStyle="MonsterAutoHammerFrame.ComBoxTxt_f"
+      filterString="core.normal_f"
+      y="7"
+      x="11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAutoHammerFrame.ComBoxBtn"
+      backStyle="asset.MonsterAccessoriesView.comBoxBtnBg"
+      iconStyle="asset.core.DownBtnStyle01"
+      iconInnerRectString="168,23,5,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <!-- ComboBox end -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAutoHammerFrame.txt"
+      textFormatStyle="MonsterAutoHammerFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="305"
+      height="53"
+      wordWrap="true"
+      x="10"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAutoHammerFrame.startBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.MonsterAccessoriesView.starBtn"
+      iconInnerRectString="20,89,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterAutoHammerFrame.stopBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.MonsterAccessoriesView.stopBtn"
+      iconInnerRectString="20,90,11,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="170" />
+    <component
+      classname="monster.MonsterAutoHammerFrame"
+      stylename="MonsterAccessoriesView.autoHammerFrame"
+      parentStyle="core.Frame2"
+      containerX="14"
+      containerY="50"
+      width="337"
+      height="325" />
+    <component
+      stylename="MonsterPropView.accessoriesImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.MonsterBagCell.ItemBack1,asset.MonsterBagCell.ItemBack2,asset.MonsterBagCell.ItemBack3"
+      x="0"
+      y="0" />
+    <component
+      classname="monster.MonsterAccessoriesHelpFrame"
+      stylename="MonsterAccessoriesView.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="MonsterAccessoriesView.helpContent.text"
+      titleText="MonsterAccessoriesView.helpFrame.titleTxt"
+      textWidth="600"
+      isOpenScorll="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MonsterAccessoriesEquipCell.ItemBack"
+      parentStyle="core.goods.ItemBack"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterAccessoriesView.selectedChangeTxt"
+      textFormatStyle="MonsterAccessoriesView.selectedChangeTxt_t"
+      filterString="core.normal_f"
+      x="123"
+      y="359" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MonsterPropView.lockbtn"
+      backStyle="asset.common.vp.btn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="10"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MonsterPropView.followBtn"
+      backStyle="asset.MonsterFrame.followBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="11"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MonsterPropView.cancelFollowBtn"
+      backStyle="asset.MonsterFrame.cancelFollowBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="11"
+      y="35" />
+    <component
+      stylename="MonsterListItem.lockImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.common.vp.icon"
+      x="4"
+      y="8" />
+    <component
+      stylename="MonsterIconCell.lockImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.common.vp.icon"
+      x="0"
+      y="0" />
+    <!-- 怪怪进化 -->
+    <component
+      stylename="monster.MonsterEvolveFrame"
+      classname="monster.MonsterEvolveFrame"
+      parentStyle="core.Frame2"
+      containerX="5"
+      containerY="50"
+      width="507"
+      height="521" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MonsterEvolveFrame.evolveBtn"
+      backStyle="asset.Monster.trainBtn.btnBack"
+      iconStyle="asset.Monster.evolveBtn.icon"
+      iconInnerRectString="15,36,7,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="410"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterEvolveFrame.EquipScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,247,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="247"
+      height="320"
+      x="230"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterEvolveFrame.starHbox"
+      x="30"
+      y="50"
+      spacing="2" />
+    <component
+      stylename="MonsterEvolveFrame.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrainItem.nameText_t"
+      type="dynamic"
+      width="155"
+      height="20"
+      x="30"
+      y="25" />
+    <component
+      stylename="MonsterEvolveFrame.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MonsterEvolveFrame.evolveBg,asset.MonsterEvolveFrame.newSkillTextImage,asset.MonsterEvolveFrame.SkillAlertImage,asset.core.GoldIcon"
+      imageRectString="0|0|19,50|232|19,15|270|19,245|370|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="MonsterEvolveFrame.goldText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="Monster.MonsterTrailView.goldText_t"
+      type="dynamic"
+      width="126"
+      height="23"
+      x="275"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterIconCell.alertText"
+      textFormatStyle="MonsterSkillIItem.lockText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="47"
+      height="43"
+      wordWrap="true"
+      y="5"
+      x="-2" />
+    <component
+      stylename="MonsterListItem.enterWarImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.monster.EnterWarImg"
+      x="45"
+      y="2" />
+    <component
+      stylename="MonsterIconCell.enterWarImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.monster.EnterWarImg"
+      x="22"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="MonsterTrainView.rateMcMask"
+      x="25"
+      y="275" />
+    <component
+      stylename="MonsterSkillIItem.gradeImage"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.MonsterSkillIItem.gradeImage"
+      scaleGridString="3,3,6,5"
+      width="40"
+      height="17"
+      x="16"
+      y="35" />
+    <component
+      stylename="MonsterListItem.exploreWarImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterListItem.exploreWarImage"
+      x="50"
+      y="2" />
+    <component
+      stylename="MonsterIconCell.exploreWarImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterListItem.exploreWarImage"
+      x="22"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterEvolveFrame.noNewSkillText"
+      textFormatStyle="MonsterEvolveFrame.noNewSkillText_t"
+      autoSize="none"
+      width="100"
+      height="22"
+      y="237"
+      x="133" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="MonsterFrame.contractBtn"
+      parentStyle="MonsterFrame.propBtn"
+      selectedIconStyle="asset.MonsterFrame.contractBtnSelectedTxt"
+      unselectedIconStyle="asset.MonsterFrame.contractBtnUnSelectedTxt"
+      selectedIconInnerRectString="20,69,7,17,13"
+      unselectedIconInnerRectString="21,65,8,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 契约 -->
+    <component
+      stylename="MonsterContractView.contractImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterContractView.contractImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,6,3,4,5"
+      tipGapH="-10"
+      tipGapV="-10"
+      x="322"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterContractView.hbox"
+      x="60"
+      y="160"
+      spacing="60" />
+    <component
+      stylename="MonsterContractItem.overImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterContractItem.overImage"
+      x="47"
+      y="12" />
+    <component
+      stylename="MonsterContractItem.back"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterContractItem.back"
+      x="47"
+      y="12" />
+    <component
+      stylename="MonsterContractItem.alertImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterContractItem.alertImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,6,3,4,5"
+      tipGapH="0"
+      tipGapV="0"
+      x="135"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MonsterContractItem.delBtn"
+      backStyle="asset.MonsterContractItem.delBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="115"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterContractItem.starHbox"
+      x="88"
+      y="97"
+      spacing="0"
+      autoCenter="true" />
+    <component
+      stylename="MonsterContractItem.descText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MonsterContractItem.descText_t"
+      wordWrap="true"
+      width="180"
+      height="120"
+      x="0"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="MonsterContractSelectView.bg"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="253"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="MonsterContractSelectView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,260,0,0,2"
+      vScrollbarInnerRectString="17,8,0,0,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="250"
+      height="300"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MonsterExploreHeadSelectView.vbox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterContractSelectView.alertText"
+      textFormatStyle="MonsterExploreHeadSelectView.alertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="20"
+      x="12"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterContractSelectItem.nameText"
+      textFormatStyle="MonsterContractSelectItem.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="65"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterContractSelectItem.levelTxt"
+      textFormatStyle="MonsterContractSelectItem.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="185"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterContractSelectItem.starHbox"
+      x="65"
+      y="35"
+      spacing="2" />
+    <component
+      stylename="MonsterContractSelectItem.enterWarImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.monster.EnterWarImg"
+      scaleX="0.6"
+      scaleY="0.6"
+      x="28"
+      y="8" />
+    <component
+      stylename="MonsterContractSelectItem.exploreWarImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterListItem.exploreWarImage"
+      scaleX="0.6"
+      scaleY="0.6"
+      x="28"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="MonsterFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="760"
+      y="30" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="monster.MonsterFrame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="monster.MonsterFrame.helpFrame.content"
+      titleText="MonsterFrame.helpFrame.HelpTitle.text"
+      textWidth="500" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="MonsterAccessoriesView.sellBtn"
+      parentStyle="army.SellButton"
+      x="606"
+      y="385" />
+    <component
+      stylename="MonsterAccessoriesView.sellBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MonsterPropView.sellBg"
+      x="530"
+      y="380" />
+  </components>
+</style>

@@ -1,0 +1,1281 @@
+<style
+  name="childpatrol"
+  source="ui/zh_cn/swf/childpatrol.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolLeftItemView.nameTxt_t"
+      args="Arial,12,0xf3b288,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolLeftItemView.itemGradeTxt_t"
+      args="Arial,12,0xffe400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolLeftItemView.fightingCapacity_t"
+      letterSpacing="1"
+      args="Arial,12,0xe8a820,,,,,,left"
+      leading="8" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTowerExpView.expText_t"
+      letterSpacing="1"
+      args="Arial,12,0xFCF2C6,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTowerAffectView.descText_t"
+      args="arial,12,0xff2a00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTowerAffectView.towerCount_t"
+      args="arial,12,0xff9600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTowerAffectView.taskText_t"
+      args="Arial,14,0xfff600,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolBottomView.upgradeText_t"
+      args="arial,14,0xfcf2c6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTaskView.condition_t1"
+      args="arial,12,0x8c8c8c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTaskView.condition_t2"
+      args="arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTaskView.condition_t3"
+      args="arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolTaskView.condition_t4"
+      args="arial,12,0x2aff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolRiotFrame.riotTitleText_t"
+      args="Arial,14,0xcec6a8,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolRiotFrame.descText_t"
+      args="Arial,12,0xcec6a8,,,,,,center"
+      letterSpacing="2"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrol.ListPageText_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrol.playerName_t1"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrol.playerName_t2"
+      args="Arial,14,0xffae00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolHallTowerView.levelText_t"
+      args="arial,15,0xfffdd1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolHallTowerView.timeText_t"
+      args="Arial,12,0xffea00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolHallFrame.freeChildText_t"
+      args="arial,14,0xfff400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolHallFrame.nameText_t"
+      args="Arial,14,0xffc515,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolHallTowerView.numberText_t"
+      args="arial,14,0xffcb3e,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolBottomView.levelUpText_t"
+      args="Arial,14,0xfcf2c6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolBottomView.taskTipText_t"
+      args="Arial,14,0xfcf2c6,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolExplore.descriptTxt_t"
+      args="Arial,14,0xe5a537,,,,,,left"
+      letterSpacing="0"
+      leading="0"
+      indent="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildPatrolExplore.stateTxt_t"
+      args="Arial,14,0xcfb38b,,,,,,left"
+      letterSpacing="1"
+      leading="10"
+      indent="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ChildPatrolBottomView.childBack1" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolBottomView.childBack4"
+      x="40"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolTowerExpView.levelTextImage"
+      x="210"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolTowerExpView.arrowImage"
+      x="250"
+      y="130" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolLeftListView.listImage"
+      x="40"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolTowerAffectView.NumBmpData" />
+    <bitmapData
+      resourceLink="asset.ChildPatrol.FriendListTitleAsset"
+      x="89"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.ChildPatrol.FriendListAsset"
+      x="7"
+      y="184" />
+    <bitmapData
+      resourceLink="asset.ChildPatrol.FriendListArrow"
+      x="6" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolFriendItem.stateImage"
+      x="145"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ChildPatrolHallFrame.headBack"
+      x="2"
+      y="4" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ChildPatrolLeftItemView.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="80"
+      iconHeight="80"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ChildPatrolBottomView.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="80"
+      iconHeight="80" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ChildPatrolRiotFrame.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="80"
+      iconHeight="80"
+      x="299"
+      y="309" />
+    <custom
+      classname="asset.ChildPatrolTowerExpView.levelMc"
+      stylename="ChildPatrolTowerExpView.levelMc" />
+    <custom
+      classname="childpatrol.ChildPatrolLeftListView"
+      stylename="ChildPatrolTowerFrame.leftView"
+      x="0"
+      y="0" />
+    <custom
+      classname="childpatrol.ChildPatrolTaskView"
+      stylename="ChildPatrolTowerFrame.taskView"
+      x="200"
+      y="40" />
+    <custom
+      classname="childpatrol.ChildPatrolTowerExpView"
+      stylename="ChildPatrolTowerFrame.towerExpView"
+      x="200"
+      y="40" />
+    <custom
+      classname="childpatrol.ChildPatrolBottomView"
+      stylename="ChildPatrolTowerFrame.bottomView"
+      x="200"
+      y="315" />
+    <custom
+      classname="childpatrol.ChildPatrolTowerAffectView"
+      stylename="ChildPatrolTowerExpView.curAffectView"
+      x="-5"
+      y="125" />
+    <custom
+      classname="childpatrol.ChildPatrolTowerAffectView"
+      stylename="ChildPatrolTowerExpView.nextAffectView"
+      x="285"
+      y="125" />
+    <custom
+      classname="childpatrol.ChildPatrolTowerAffectView"
+      stylename="ChildPatrolTowerExpView.fullAffectView"
+      x="180"
+      y="125" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ChildPatrolTaskView.baseItem"
+      parentStyle="core.BaseItemView"
+      profileX="0"
+      profileY="0" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView0"
+      x="220"
+      y="185" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView1"
+      x="470"
+      y="160" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView2"
+      x="350"
+      y="50" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView3"
+      x="130"
+      y="60" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView4"
+      x="30"
+      y="180" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView5"
+      x="115"
+      y="318" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView6"
+      x="310"
+      y="350" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView7"
+      x="465"
+      y="305" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView8"
+      x="605"
+      y="75" />
+    <custom
+      classname="childpatrol.ChildPatrolHallTowerView"
+      stylename="ChildPatrolHallFrame.towerView9"
+      x="650"
+      y="305" />
+    <custom
+      classname="childpatrol.ChildPatrolLeftItemView"
+      stylename="ChildPatrol.ChildPatrolLeftItemView"
+      tipStyle="yishi.view.tips.ChildPatrolItemTip"
+      isFollowMouse="false"
+      tipDirctions="1,4,6,5,2,7,0,3"
+      tipGapH="-20"
+      tipGapV="0" />
+    <custom
+      classname="asset.ChildPatrolHallTowerView.stateMc.onWork"
+      stylename="ChildPatrolHallTowerView.stateMc.onWork"
+      x="60"
+      y="0" />
+    <custom
+      classname="asset.ChildPatrolHallTowerView.stateMc.offWork"
+      stylename="ChildPatrolHallTowerView.stateMc.offWork"
+      x="45"
+      y="5" />
+    <custom
+      classname="asset.ChildPatrolHallTowerView.tower100Mc"
+      stylename="ChildPatrolHallTowerView.tower100Mc" />
+    <custom
+      classname="asset.ChildPatrolHallTowerView.towerMc"
+      stylename="ChildPatrolHallTowerView.towerMc" />
+    <!-- 列表界面 -->
+    <custom
+      classname="childpatrol.ChildPatrolFriendItem"
+      stylename="ChildPatrol.FriendItem"
+      back="ChildPatrol.friendItemButton"
+      nameTextStyle="ChildPatrol.friendItemNameText"
+      stateIconStyle="farm.FarmStateImg"
+      width="196"
+      height="22" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ChildPatrolHallFrame.headIcon"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="28"
+      loadingY="27"
+      x="6"
+      y="10" />
+    <custom
+      classname="childpatrol.ChildPatrolExploreView"
+      stylename="ChildPatrolTowerFrame.ChildPatrolExploreView"
+      x="200"
+      y="40" />
+    <custom
+      classname="asset.ChildPatrol.entranceIdx"
+      stylename="asset.ChildPatrol.entranceIdx"
+      mouseEnabled="false"
+      x="19"
+      y="16" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="ChildPatrolHallTowerView.entranceSp"
+      x="-23"
+      y="26" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.explore.advanceRewardBackBox"
+      spacing="10"
+      x="109"
+      y="222" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="childpve.explore.advanceRewardBox"
+      spacing="15"
+      x="111"
+      y="225" />
+  </customDisplay>
+  <components>
+    <!--  守卫巡逻左侧守卫界面	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolLeftItemView.bg"
+      resourceLink="asset.child.ChildItemView.background"
+      imageRectString="0|181|0|86|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolLeftItemView.nameTxt"
+      textFormatStyle="ChildPatrolLeftItemView.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="38"
+      x="83"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolLeftItemView.stateName"
+      textFormatStyle="ChildPatrolLeftItemView.itemGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="89"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ChildPatrolLeftItemView.selectedBg"
+      resourceLink="asset.core.common_scale9bg1,asset.core.common_scale9bg2,asset.core.common_scale9bg3,asset.core.common_scale9bg4,asset.core.common_scale9bg5,asset.core.common_scale9bg6,asset.core.common_scale9bg7,asset.core.common_scale9bg8,asset.core.common_scale9bg9"
+      width="195"
+      height="107"
+      x="-7"
+      y="-11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolLeftItemView.fightingCapacity"
+      textFormatStyle="ChildPatrolLeftItemView.fightingCapacity_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="90"
+      height="42"
+      x="88"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildPatrolLeftListView.listVbox"
+      spacing="0"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrolLeftListView.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="25"
+      y="470" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrolLeftListView.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="145"
+      y="470" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrolLeftListView.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="29"
+      y="471" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolLeftListView.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      x="68"
+      y="474"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ChildPatrolLeftItemView.UpdateTime"
+      timeTxtStyle="ChildPatrolLeftItemView.UpdateTime.text"
+      x="88"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolLeftItemView.UpdateTime.text"
+      textFormatStyle="ChildPatrolLeftItemView.itemGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+    <!--	底部界面 	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolBottomView.back"
+      resourceLink="asset.ChildPatrolBottomView.back,asset.ChildPatrolBottomView.patralChildImage"
+      imageRectString="0|561|135|58|13,170|222|5|26|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolBottomView.patrolBtn"
+      backStyle="asset.ChildPatrolBottomView.patrolBtnBack"
+      iconStyle="asset.ChildPatrolBottomView.patrolBtnTxt1"
+      iconInnerRectString="32,57,10,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="430"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolBottomView.cancelBtn"
+      backStyle="asset.ChildPatrolBottomView.patrolBtnBack"
+      iconStyle="asset.ChildPatrolBottomView.cancelpatrolBtnTxt"
+      iconInnerRectString="14,89,10,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="430"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolBottomView.getRewardBtn"
+      backStyle="asset.ChildPatrolBottomView.patrolBtnBack"
+      iconStyle="asset.ChildPatrolBottomView.getRewardBtnTxt"
+      iconInnerRectString="14,89,10,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="430"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolBottomView.alertText"
+      textFormatStyle="ChildPatrolBottomView.levelUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="50"
+      y="172" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolBottomView.levelUpText"
+      textFormatStyle="ChildPatrolBottomView.levelUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="28"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolBottomView.leftTimeText"
+      textFormatStyle="ChildPatrolBottomView.levelUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="260"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolBottomView.restTimeText"
+      textFormatStyle="ChildPatrolBottomView.upgradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="370"
+      y="150" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ChildPatrolBottomView.UpdateTime"
+      timeTxtStyle="ChildPatrolBottomView.UpdateTime.text"
+      x="370"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolBottomView.UpdateTime.text"
+      textFormatStyle="ChildPatrolBottomView.upgradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildPatrolBottomView.headHbox"
+      x="60"
+      y="44"
+      spacing="49" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildPatrolBottomView.headBackHbox"
+      y="35"
+      spacing="10" />
+    <!--	塔功能开放提示界面	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildPatrolTowerAffectView.levelImage"
+      resourceLink="asset.ChildPatrolTowerAffectView.curlevelImage,asset.ChildPatrolTowerAffectView.nextlevelImage"
+      x="20"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildPatrolTowerAffectView.levelNumContiner"
+      x="165"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTowerAffectView.towerCount"
+      textFormatStyle="ChildPatrolTowerAffectView.towerCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="20"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTowerAffectView.childCount"
+      textFormatStyle="ChildPatrolTowerAffectView.towerCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="20"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTowerAffectView.taskText"
+      textFormatStyle="ChildPatrolTowerAffectView.towerCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="45"
+      wordWrap="true"
+      x="20"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildPatrolTowerAffectView.descTextContiner"
+      x="2"
+      y="70"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTowerAffectView.descText"
+      textFormatStyle="ChildPatrolTowerAffectView.towerCount_t"
+      autoSize="left"
+      filterString="core.normal_f"
+      width="250"
+      height="20"
+      x="20"
+      y="135" />
+    <!--	塔升级界面	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildPatrolTowerExpView.back"
+      resourceLink="ChildPatrolTowerExpView.back.yellow,ChildPatrolTowerExpView.back.green"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTowerExpView.back.yellow"
+      resourceLink="asset.ChildPatrolTowerExpView.back.yellow,asset.ChildPatrolTowerExpView.back.yellow2"
+      imageRectString="0|562|0|502|13,0|563|130|171|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTowerExpView.back.green"
+      resourceLink="asset.ChildPatrolTowerExpView.back.green,asset.ChildPatrolTowerExpView.back.green2"
+      imageRectString="0|562|0|472|13,25|516|120|133|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildPatrolTowerExpView.towerImage"
+      resourceLink="asset.ChildPatrolTowerExpView.towerImage100,asset.ChildPatrolTowerExpView.towerImage1"
+      x="50"
+      y="-25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTowerExpView.expText"
+      textFormatStyle="ChildPatrolTowerExpView.expText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="305"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildPatrolTowerExpView.mcContiner"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="20"
+      tipGapH="20"
+      isFollowMouse="false"
+      x="188"
+      y="50" />
+    <!--	瞭望塔任务界面		-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTaskView.back"
+      resourceLink="asset.ChildPatrolTowerExpView.back.green,asset.ChildPatrolTaskView.taskImageBack,asset.ChildPatrolTaskView.taskImageBack,asset.ChildPatrolTaskView.taskImageBack"
+      imageRectString="0|562|0|472|13,0|562|0|37|13,0|562|85|39|13,0|562|170|39|13"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTaskView.taskImage"
+      resourceLink="asset.ChildPatrolTaskView.taskImage.normal,asset.ChildPatrolTaskView.taskImage.hard,asset.ChildPatrolTaskView.taskImage.nightmare"
+      imageRectString="10|112|5|18|13,10|100|90|19|13,10|123|175|18|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTaskView.normalText"
+      textFormatStyle="ChildPatrolTaskView.condition_t1,ChildPatrolTaskView.condition_t2,ChildPatrolTaskView.condition_t3,ChildPatrolTaskView.condition_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="40"
+      wordWrap="true"
+      x="35"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTaskView.hardText"
+      textFormatStyle="ChildPatrolTaskView.condition_t1,ChildPatrolTaskView.condition_t2,ChildPatrolTaskView.condition_t3,ChildPatrolTaskView.condition_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="40"
+      wordWrap="true"
+      x="35"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTaskView.nightmareText"
+      textFormatStyle="ChildPatrolTaskView.condition_t1,ChildPatrolTaskView.condition_t2,ChildPatrolTaskView.condition_t3,ChildPatrolTaskView.condition_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="40"
+      wordWrap="true"
+      x="35"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildPatrolTaskView.normalRewardBox"
+      x="400"
+      y="32"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildPatrolTaskView.hardRewardBox"
+      x="400"
+      y="117"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildPatrolTaskView.nightmareRewardBox"
+      x="400"
+      y="202"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolTaskView.refreshBtn"
+      backStyle="asset.ChildPatrolTaskView.refreshBtnBack"
+      iconStyle="asset.ChildPatrolTaskView.refreshBtnTxt"
+      iconInnerRectString="17,36,7,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="470"
+      y="252" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTaskView.pointImage"
+      resourceLink="ChildPatrolTaskView.PageNumBack,asset.resourcesBar.VoucherIconAsset"
+      imageRectString="0|150|0|25|13,120|18|3|18|13"
+      x="315"
+      y="254" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ChildPatrolTaskView.PageNumBack"
+      resourceLink="asset.core.PageNumBack"
+      scaleGridString="10,5,20,10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolTaskView.costText"
+      textFormatStyle="ChildPatrolLeftItemView.itemGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="325"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrolTaskView.normalRewardImage"
+      resourceLink="asset.ChildPatrolTaskView.RewardImage"
+      x="325"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrolTaskView.hardRewardImage"
+      resourceLink="asset.ChildPatrolTaskView.RewardImage"
+      x="325"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrolTaskView.nightmareRewardImage"
+      resourceLink="asset.ChildPatrolTaskView.RewardImage"
+      x="325"
+      y="210" />
+    <!--	瞭望塔Frame	-->
+    <component
+      classname="childpatrol.ChildPatrolTowerFrame"
+      stylename="childpatrol.ChildPatrolTowerFrame"
+      parentStyle="core.Frame1"
+      width="800"
+      height="610" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTowerFrame.back"
+      resourceLink="ChildPatrolTowerFrame.back.border,asset.child.ChildFrame.gap2"
+      imageRectString="0|765|0|505|13,198|3|2|498|13"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="ChildPatrolTowerFrame.back.border"
+      parentStyle="core.describeBackground_style11" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildPatrolTowerFrame.levelUpBtn"
+      selectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.light"
+      unSelectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.dark"
+      selectedIconStyle="asset.ChildPatrolTowerFrame.levelUpText1"
+      unselectedIconStyle="asset.ChildPatrolTowerFrame.levelUpText2"
+      selectedIconInnerRectString="34,52,4,19,13"
+      unselectedIconInnerRectString="34,53,4,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="335"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildPatrolTowerFrame.taskBtn"
+      selectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.light"
+      unSelectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.dark"
+      selectedIconStyle="asset.ChildPatrolTowerFrame.taskBtnText1"
+      unselectedIconStyle="asset.ChildPatrolTowerFrame.taskBtnText2"
+      selectedIconInnerRectString="31,56,3,19,13"
+      unselectedIconInnerRectString="31,55,3,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="10" />
+    <!--	大本营Frame	-->
+    <component
+      classname="childpatrol.ChildPatrolHeadQuartersFrame"
+      stylename="childpatrol.ChildPatrolHeadQuartersFrame"
+      parentStyle="core.Frame1"
+      width="800"
+      height="610" />
+    <!--	暴乱Frame	-->
+    <component
+      classname="childpatrol.ChildPatrolRiotFrame"
+      stylename="childpatrol.ChildPatrolRiotFrame"
+      parentStyle="core.Frame1"
+      width="520"
+      height="615" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolRiotFrame.back"
+      resourceLink="ChildPatrolTowerFrame.back.border,asset.child.ChildFrame.gap2,asset.roitFrame.rightBack,asset.ChildPatrolBottomView.patralChildImage,asset.ChildPatrolBottomView.childBack1"
+      imageRectString="0|482|0|510|13,198|3|2|503|13,200|280|3|503|13,228|222|260|26|13,280|119|295|98|13"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolRiotFrame.riotTitleText"
+      textFormatStyle="ChildPatrolRiotFrame.riotTitleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="290"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolRiotFrame.descText"
+      textFormatStyle="ChildPatrolRiotFrame.descText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="100"
+      wordWrap="true"
+      x="220"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolRiotFrame.patrolBtn"
+      backStyle="asset.ChildPatrolBottomView.patrolBtnBack"
+      iconStyle="asset.ChildPatrolBottomView.patrolBtnTxt1"
+      iconInnerRectString="32,57,10,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="282"
+      y="405" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolRiotFrame.leftCountText"
+      textFormatStyle="ChildPatrolBottomView.levelUpText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="290"
+      y="465" />
+    <!-- 好友界面 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrolFriendsListView.FriendListBack"
+      resourceLink="asset.ChildPatrolFriendsListView.FriendListBack"
+      x="30"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrolFriendsListView.FriendListBackAsset"
+      resourceLink="asset.ChildPatrolFriendsListView.FriendListBackAsset"
+      x="30"
+      y="2" />
+    <!-- 列表页码值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrol.ListPageText"
+      textFormatStyle="ChildPatrol.ListPageText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="44"
+      height="20"
+      x="110"
+      y="355" />
+    <!-- 首页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrol.ListFirstBtn"
+      backStyle="asset.water.FirstPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="40"
+      y="355" />
+    <!-- 尾页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrol.ListLastBtn"
+      backStyle="asset.water.LastPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="26"
+      height="21"
+      x="190"
+      y="355" />
+    <!-- 列表前页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrol.ListPreBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="95"
+      y="355"
+      scaleX="-1"
+      scaleY="1" />
+    <!-- 列表后页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrol.ListNextBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="160"
+      y="355" />
+    <!-- ListBox-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildPatrol.ListBox"
+      x="35"
+      y="42"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildPatrol.friendItemButton"
+      resourceLink="ChildPatrol.friendItemSelectedBack,ChildPatrol.friendItemUnSelectedBack" />
+    <!-- Item按钮未选中 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrol.friendItemUnSelectedBack"
+      resourceLink="asset.ChildPatrol.ItemSelected"
+      alpha="0" />
+    <!--Item按钮选中 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildPatrol.friendItemSelectedBack"
+      resourceLink="asset.ChildPatrol.ItemSelected" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrol.friendItemNameText"
+      textFormatStyle="ChildPatrol.playerName_t1,ChildPatrol.playerName_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="22"
+      x="25"
+      y="0" />
+    <!--	大厅Frame	-->
+    <component
+      classname="childpatrol.ChildPatrolHallFrame"
+      stylename="childpatrol.ChildPatrolHallFrame"
+      parentStyle="core.Frame1"
+      width="880"
+      height="610" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrolHallFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="800"
+      y="-35" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolHallFrame.back"
+      resourceLink="ChildPatrolTowerFrame.back.border,asset.ChildPatrolHeadQuartersFrame.background"
+      imageRectString="0|845|0|510|13,2|840|2|502|13"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolHallFrame.childCountBack"
+      resourceLink="asset.ChildPatrolHallFrame.playerBack.freeChild,asset.ChildPatrolHallFrame.playerBack.allChild"
+      imageRectString="-70|135|-10|35|13,100|150|-10|37|13"
+      x="555"
+      y="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallFrame.nameText"
+      textFormatStyle="ChildPatrolHallFrame.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="77"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallFrame.freeChildText"
+      textFormatStyle="ChildPatrolHallFrame.freeChildText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="625"
+      y="478" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallFrame.allChildText"
+      textFormatStyle="ChildPatrolHallFrame.freeChildText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="800"
+      y="478" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolHallFrame.friendBtn"
+      backStyle="asset.ChildPatrolHallFrame.friendBtnBack"
+      iconStyle="asset.ChildPatrol.FriendListAsset"
+      iconInnerRectString="5,17,40,41,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="815"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolHallFrame.returnBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.ChildPatrolHallFrame.returnBtnTxt"
+      iconInnerRectString="40,79,13,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="690"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildPatrolHallFrame.towerContiner"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildPatrolHallTowerView.nameBack"
+      resourceLink="ChildPatrolHallTowerView.nameBack100,ChildPatrolHallTowerView.nameBack0"
+      x="25"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolHallTowerView.nameBack100"
+      resourceLink="asset.ChildPatrolHallTowerView.towerTextBack,asset.ChildPatrolHallTowerView.towerText100"
+      imageRectString="0|154|0|30|13,-5|108|-3|30|13"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolHallTowerView.nameBack0"
+      resourceLink="asset.ChildPatrolHallTowerView.towerTextBack,asset.ChildPatrolHallTowerView.towerText0"
+      imageRectString="0|154|0|30|13,3|85|5|20|13"
+      x="0"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallTowerView.numberText"
+      textFormatStyle="ChildPatrolHallTowerView.numberText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="115"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallTowerView.levelText"
+      textFormatStyle="ChildPatrolHallTowerView.levelText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="135"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrolHallTowerView.rewardBtn"
+      backStyle="asset.ChildPatrolHallTowerView.rewardBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="25"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrolHallTowerView.riotBtn"
+      backStyle="asset.ChildPatrolHallTowerView.riotBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="80"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallTowerView.timeText"
+      textFormatStyle="ChildPatrolHallTowerView.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="25"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallTowerView.UpdateTime.text"
+      textFormatStyle="ChildPatrolHallTowerView.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ChildPatrolHallTowerView.UpdateTime"
+      timeTxtStyle="ChildPatrolHallTowerView.UpdateTime.text"
+      x="137"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildPatrolHallTowerView.mcContiner"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildPatrolHallTowerView.hitContiner"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolBottomView.taskTipText"
+      textFormatStyle="ChildPatrolBottomView.taskTipText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="245"
+      height="64"
+      x="5"
+      y="135"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildPatrolTowerFrame.exploreBtn"
+      selectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.light"
+      unSelectedStyle="asset.ChildPatrolTowerFrame.tabBtnBack.dark"
+      selectedIconStyle="asset.ChildPatrolTowerFrame.exploreText1"
+      unselectedIconStyle="asset.ChildPatrolTowerFrame.exploreText2"
+      selectedIconInnerRectString="27,64,6,18,13"
+      unselectedIconInnerRectString="27,64,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="460"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ChildPatrolLeftListView.entraceBtn"
+      backStyle="asset.ChildPatrol.entranceBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      stylename="ChildPatrolExplore.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.ChildPatrol.explore.back,asset.ChildPatrol.explore.b3,asset.ChildPatrol.explore.b3,asset.ChildPatrol.explore.b2,asset.ChildPatrol.explore.b1"
+      imageRectString="0|0|19,2|161|19,3|298|19,10|305|19,10|168|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolExplore.descriptTxt"
+      textFormatStyle="ChildPatrolExplore.descriptTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="130"
+      x="175"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolExplore.timeTitle"
+      textFormatStyle="ChildPatrolExplore.descriptTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="295"
+      height="22"
+      x="246"
+      y="-146"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolExplore.stateTxt"
+      textFormatStyle="ChildPatrolExplore.stateTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="360"
+      height="80"
+      x="75"
+      y="350"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolBottomView.exploreBtn"
+      backStyle="asset.ChildPatrolBottomView.exploreBack"
+      iconStyle="asset.ChildPatrolBottomView.doExploreBtn"
+      iconInnerRectString="16,76,10,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="42"
+      y="-160" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolBottomView.cancelExploreBtn"
+      backStyle="asset.ChildPatrolBottomView.exploreBack"
+      iconStyle="asset.ChildPatrolBottomView.cancelExploreBtn"
+      iconInnerRectString="16,76,10,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="42"
+      y="-160" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildPatrolHallTowerView.exporeTimeTxt"
+      parentStyle="ChildPatrolHallTowerView.timeText"
+      x="25"
+      width="90"
+      y="130"
+      wordWrap="true" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="ChildPatrolHallTowerView.exporeTime.UpdateTime"
+      timeTxtStyle="ChildPatrolHallTowerView.UpdateTime.text"
+      x="105"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildPatrolBottomView.chuzhenBtn"
+      backStyle="asset.ChildPatrolBottomView.patrolBtnBack"
+      iconStyle="asset.ChildPatrolHallTowerView.chuzhenBtn"
+      iconInnerRectString="20,78,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="26"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ChildPatrolTaskView.pointImage1"
+      resourceLink="ChildPatrolTaskView.PageNumBack"
+      imageRectString="0|150|0|25|13"
+      x="315"
+      y="254" />
+  </components>
+</style>

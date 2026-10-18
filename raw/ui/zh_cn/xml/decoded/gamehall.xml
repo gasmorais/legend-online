@@ -1,0 +1,2227 @@
+<style
+  name="gamehall"
+  source="ui/zh_cn/swf/gamehall.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveView.newTxt_t"
+      args="Arial,12,0xf8ff49,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveRightView.helpBtnTxt_t"
+      args="Arial,12,0xfffad7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveRightView.dayTxt_t"
+      args="Arial,16,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveRightView.infoTxt_t"
+      args="Arial,16,0xfbe65a,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveRightView.rewardShowAllTxt_t"
+      args="Arial,16,0x0cf738,,,,,,center"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveRightView.rewardCountTxt_t"
+      args="Arial,12,0xf7c80c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveRightView.rankTxt_t"
+      args="Arial,16,0x10e7ef,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveItemView.activeDayTxt_t1"
+      args="Arial,16,0x0cf738,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveItemView.activeDayTxt_t2"
+      args="Arial,16,0xaaaaaa,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamRightView.searchTxt_t"
+      args="Arial,14,0xe5cf9f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamRightView.searchTipTxt_t"
+      args="Arial,12,0x625b54,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamRightView.searchInputTxt_t"
+      args="Arial,12,0x625b54,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamRightView.refreshTimeCountTxt_t"
+      args="Arial,16,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamItemView.titleTxt_t"
+      args="Arial,12,0xffd673,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamItemView.mineTeamTxt_t"
+      args="Arial,12,0xffd673,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamInfoView.nameTxt_t"
+      args="Arial,12,0xfaefd4,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamInfoView.consortiaNameTxt_t"
+      args="Arial,12,0xffd673,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamInfoView.levelTxt_t"
+      args="Arial,12,0xffd673,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveItemView.diffBtn.text_t1"
+      args="Arial,14,0xffdd9a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallActiveItemView.diffBtn.text_t2"
+      args="Arial,14,0xfff0d1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallSceneBottomView.comboBox.CellTextStyle_t"
+      args="Arial,12,0xffdd9a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallSceneBottomView.useCountTxt_t1"
+      args="Arial,14,0x01fd1f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallSceneBottomView.useCountTxt_t2"
+      args="Arial,14,0xaaaaaa,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallRewardTipView.textFiled_t"
+      args="Arial,12,0x00FFFC,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastView.acvityTimeTxt_t"
+      args="Arial,12,0xf2e4a5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastView.eggsNumTxt_t"
+      args="Arial,16,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastItemView.campaignNameTxt_t1"
+      args="Arial,16,0x9ccccfd,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastItemView.campaignNameTxt_t2"
+      args="Arial,16,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastItemView.campaignNameTxt_t3"
+      args="Arial,16,0xff3c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastItemView.costGoodsNumTxt_t"
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopItemView.goodsName_t"
+      args="Arial,12,0xeae1c9,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopItemView.hasGet_t"
+      args="Arial,14,0xbaad89,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopItemView.hasGetNum_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopFrame.costTxt1_t"
+      args="Arial,12,0xdad89b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.east.shopProgrssTxt_t"
+      args="Arial,12,0xDB8134,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopFrame.costNumber1_t"
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopItemView.resetTxt_t"
+      args="Arial,12,0xff9c00,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.room.GameHallSceneEastBlessBaseItemView.levelTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.room.GameHallSceneEastBlessView.descTxt_t"
+      args="Arial,12,0xde1f00,,,,,,center"
+      leading="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.room.GameHallSceneEastBlessItem.userName_t1"
+      args="Arial,14,0x91a5cb,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.room.GameHallSceneEastBlessItem.userName_t2"
+      args="Arial,14,0xeaclc9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallSceneBottomView.campaignNameTxt_t"
+      args="Arial,12,0xfff7c4,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastView.tipsTxt1_t"
+      args="Arial,14,0xfbe65a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopDescFrame.descTxt_t"
+      args="Arial,12,0x868686,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.view.GameHallEastShopDescBtnItem.btnTxt_t1"
+      args="Arial,14,0xfff0d1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.view.GameHallEastShopDescBtnItem.btnTxt_t2"
+      args="Arial,14,0xfff0d1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopFrame.currentNumerTxt_t"
+      args="Arial,16,0xFFFCA2,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallTeamEastLeftView.pageNumber_t"
+      args="Arial,14,0xfff9d5,,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="gamehall.shopTtitleGlow"
+      args="0xff0000,1,3,3,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.GameHallEastShopFrame.currentRemianEggNumber_t"
+      args="Arial,16,0xFACF56,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.todayAlertDescribe_t"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamehall.renfroce.HallBackDesTxt_t"
+      args="Arial,16,0xfff9db,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="gamehall.renfroce.HallBackDes_g"
+      args="0xce5700,1,5,5,5" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.gamehall.dayNumberImg" />
+    <bitmapData
+      resourceLink="asset.gamehall.daySignImg" />
+    <bitmapData
+      resourceLink="asset.gamehall.titleImg2"
+      x="10" />
+    <bitmapData
+      resourceLink="asset.gamehall.gameTitleImg2"
+      x="8" />
+    <bitmapData
+      resourceLink="asset.gamehall.selectedFrameImage1" />
+    <bitmapData
+      resourceLink="asset.gamehall.selectedFrameImage2" />
+    <bitmapData
+      resourceLink="asset.gamehall.selectedFrameImage3" />
+    <bitmapData
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.spline"
+      width="765" />
+    <bitmapData
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.rewardContentBg"
+      width="765" />
+    <bitmapData
+      resourceLink="asset.gamehall.bgFrameImage1"
+      height="78" />
+    <bitmapData
+      resourceLink="asset.gamehall.bgFrameImage2"
+      height="78" />
+    <bitmapData
+      resourceLink="asset.gamehall.bgFrameImage3"
+      height="78" />
+    <bitmapData
+      resourceLink="asset.gamehall.x3flg"
+      x="171"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.gamehall.topBg"
+      x="10"
+      y="-10" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="gamehall.GameHallActiveView.txtContainer"
+      x="0"
+      y="0" />
+    <custom
+      classname="gamehall.view.GameHallActiveItemView"
+      stylename="gamehall.GameHallActiveLeftView.activeItem1"
+      x="0"
+      y="0" />
+    <custom
+      classname="gamehall.view.GameHallActiveItemView"
+      stylename="gamehall.GameHallActiveLeftView.activeItem2"
+      x="0"
+      y="140" />
+    <custom
+      classname="gamehall.view.GameHallActiveItemView"
+      stylename="gamehall.GameHallActiveLeftView.activeItem3"
+      x="0"
+      y="280" />
+    <custom
+      classname="gamehall.view.GameHallActiveItemView"
+      stylename="gamehall.GameHallTeamLeftView.activeItem1"
+      x="0"
+      y="55" />
+    <custom
+      classname="gamehall.view.GameHallActiveItemView"
+      stylename="gamehall.GameHallTeamLeftView.activeItem2"
+      x="0"
+      y="195" />
+    <custom
+      classname="gamehall.view.GameHallActiveItemView"
+      stylename="gamehall.GameHallTeamLeftView.activeItem3"
+      x="0"
+      y="335" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="gamehall.GameHallActiveItemView.diffContainer"
+      x="10"
+      y="125" />
+    <custom
+      classname="gamehall.view.GameHallActiveRewardView"
+      stylename="gamehall.GameHallActiveRightView.rewardView"
+      x="460"
+      y="185" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamehall.GameHallTeamInfoView.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      iconWidth="100"
+      iconHeight="100"
+      x="7"
+      y="7" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="gamehall.GameHallActiveRewardView.rewardContainer"
+      x="50"
+      y="30" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="gamehall.GameHallActiveRewardView.rewardContainer1"
+      x="10"
+      y="30" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="gamehall.GameHallActiveRewardView.rewardContainer2"
+      x="10"
+      y="130" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamehall.GameHallActiveRewardView.itemView"
+      iconStyle="gamehall.GameHallActiveRewardView.itemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="56"
+      profileHeight="56"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamehall.GameHallActiveRewardView.itemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      iconHeight="54"
+      iconWidth="54"
+      x="1"
+      y="1" />
+    <custom
+      classname="asset.gamehall.GameHallEastView.centerBg"
+      stylename="gamehall.GameHallEastView.centerBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamehall.room.GameHallSceneEastBlessBaseItemView.baseIconView"
+      iconWidth="30"
+      iconHeight="30"
+      loadingStyle="asset.core.IconLoading"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      x="0"
+      y="0"
+      loadingX="15"
+      loadingY="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamehall.GameHallEastItemView.mapIcon"
+      iconWidth="227"
+      iconHeight="72"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="57"
+      loadingY="36"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamehall.GameHallTeamEastItemView.mapIcon"
+      iconWidth="186"
+      iconHeight="82"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="57"
+      loadingY="36"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamehall.GameHallEastShopItemView.goodsIcon"
+      iconStyle="gamehall.GameHallEastShopItemView.itemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="true"
+      x="15"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamehall.GameHallEastShopItemView.itemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      iconHeight="65"
+      iconWidth="65"
+      x="1"
+      y="1" />
+    <custom
+      classname="asset.gamehall.boxEffectMC"
+      stylename="gamehall.GameHallEastShopAnimationFrame.boxEffectMC"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamehall.GameHallEastShopResultFrame.BaseItemView"
+      iconStyle="GameHallEastShopResultFrame.BaseItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      iconWidth="50"
+      iconHeight="50"
+      profileX="1"
+      profileY="1"
+      profileWidth="50"
+      profileHeight="50"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="GameHallEastShopResultFrame.BaseItemIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="25"
+      loadingY="25"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="gamehall.GameHallFrame"
+      stylename="gamehall.GameHallFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="65"
+      width="975"
+      height="645" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="gamehall.HelpFrame1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="gamehall.HelpFrame1.helpContent"
+      titleText="public.help"
+      textWidth="373" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="gamehall.HelpFrame2"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="gamehall.HelpFrame2.helpContent"
+      titleText="public.help"
+      textWidth="373" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="gamehall.HelpFrame3"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="gamehall.HelpFrame3.helpContent"
+      titleText="public.help"
+      textWidth="373" />
+    <!-- 玩法界面 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gamehall.GameHallActiveView.border"
+      parentStyle="core.describeBackground_style11"
+      width="935"
+      height="505"
+      x="0"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gamehall.GameHallActiveView.hBox"
+      spacing="8"
+      x="50"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gamehall.GameHallActiveView.groupBtn1"
+      unSelectedStyle="asset.gamehall.groupBtnBg.Unselected"
+      selectedStyle="asset.gamehall.groupBtnBg.Selected"
+      unselectedIconStyle="asset.gamehall.groupBtnTxt1.Unselected"
+      selectedIconStyle="asset.gamehall.groupBtnTxt1.Selected"
+      unselectedIconInnerRectString="20,75,9,16,13"
+      selectedIconInnerRectString="17,79,9,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gamehall.GameHallActiveView.groupBtn2"
+      unSelectedStyle="asset.gamehall.groupBtnBg.Unselected"
+      selectedStyle="asset.gamehall.groupBtnBg.Selected"
+      unselectedIconStyle="asset.gamehall.groupBtnTxt2.Unselected"
+      selectedIconStyle="asset.gamehall.groupBtnTxt2.Selected"
+      unselectedIconInnerRectString="29,53,8,19,13"
+      selectedIconInnerRectString="28,55,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gamehall.GameHallActiveView.groupBtn3"
+      unSelectedStyle="asset.gamehall.groupBtnBg.Unselected"
+      selectedStyle="asset.gamehall.groupBtnBg.Selected"
+      unselectedIconStyle="asset.gamehall.groupBtnTxt3.Unselected"
+      selectedIconStyle="asset.gamehall.groupBtnTxt3.Selected"
+      unselectedIconInnerRectString="29,53,8,19,13"
+      selectedIconInnerRectString="28,54,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveView.newTxt"
+      textFormatStyle="gamehall.GameHallActiveView.newTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="35"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.bg"
+      resourceLink="asset.gamehall.activeRightBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallActiveRightView.showImg"
+      resourceLink="asset.gamehall.showImg1,asset.gamehall.showImg2,asset.gamehall.showImg3,asset.gamehall.showImg2,asset.gamehall.showImg3"
+      x="55"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallActiveRightView.titleImg"
+      resourceLink="gamehall.GameHallActiveRightView.titleImg1,asset.gamehall.titleImg2,gamehall.GameHallActiveRightView.titleImg3,asset.gamehall.titleImg2,gamehall.GameHallActiveRightView.titleImg3"
+      x="159"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.titleImg1"
+      resourceLink="asset.gamehall.titleImg1"
+      x="12"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.titleImg3"
+      resourceLink="asset.gamehall.titleImg3"
+      x="12"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="gamehall.GameHallActiveRightView.helpBtn"
+      backStyle="asset.gamehall.helpBtnBg"
+      textStyle="gamehall.GameHallActiveRightView.helpBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="25,0,5,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="84"
+      height="27"
+      autoCenter="false"
+      x="355"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveRightView.helpBtnTxt"
+      textFormatStyle="gamehall.GameHallActiveRightView.helpBtnTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveRightView.dayTxt"
+      textFormatStyle="gamehall.GameHallActiveRightView.dayTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="485"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.dayImg"
+      resourceLink="asset.gamehall.dayWeekImg"
+      x="485"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="gamehall.GameHallActiveRightView.dayContainer"
+      x="423"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveRightView.infoTxt"
+      textFormatStyle="gamehall.GameHallActiveRightView.infoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      width="245"
+      height="90"
+      wordWrap="true"
+      x="460"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.rewardTitleBg"
+      resourceLink="asset.gamehall.rewardTitleBg"
+      x="465"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.rewardTitleImg"
+      resourceLink="asset.gamehall.rewardTitleImg"
+      x="465"
+      y="152" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRightView.rewardMagnifierImg"
+      resourceLink="asset.gamehall.magnifier"
+      x="595"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveRightView.rewardShowAllTxt"
+      textFormatStyle="gamehall.GameHallActiveRightView.rewardShowAllTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="25"
+      x="615"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallActiveRightView.teamBtn"
+      backStyle="asset.gamehall.teamBtnBg"
+      iconStyle="asset.gamehall.teamBtnTxt"
+      iconInnerRectString="44,78,13,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="500"
+      y="385"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveRightView.rewardCountTxt"
+      textFormatStyle="gamehall.GameHallActiveRightView.rewardCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="141"
+      height="35"
+      x="515"
+      y="420"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveRightView.rankTxt"
+      textFormatStyle="gamehall.GameHallActiveRightView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="30"
+      x="495"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRewardView.rewardBg"
+      resourceLink="asset.gamehall.rewardBg"
+      x="20"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRewardView.rewardDiff1"
+      resourceLink="asset.gamehall.rewardDiffImg1"
+      x="25"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRewardView.rewardDiff2"
+      resourceLink="asset.gamehall.rewardDiffImg2"
+      x="25"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRewardView.rewardDiffBg1"
+      resourceLink="asset.gamehall.rewardDiffBg"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveRewardView.rewardDiffBg2"
+      resourceLink="asset.gamehall.rewardDiffBg"
+      x="0"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gamehall.GameHallRewardTipView.vBox"
+      spacing="4"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallRewardTipView.textFiled"
+      textFormatStyle="gamehall.GameHallRewardTipView.textFiled_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="20" />
+    <!-- 组队界面 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gamehall.GameHallTeamView.border"
+      parentStyle="core.describeBackground_style11"
+      width="930"
+      height="530"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamLeftView.backBtn"
+      backStyle="asset.gamehall.backBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamLeftView.backImg"
+      resourceLink="asset.gamehall.backImg"
+      x="53"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamLeftView.prevBtn"
+      backStyle="asset.gamehall.changeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="85"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamLeftView.nextBtn"
+      backStyle="gamehall.GameHallTeamLeftView.nextBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="85"
+      y="525" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamLeftView.nextBtnImg"
+      resourceLink="asset.gamehall.changeBtn"
+      scaleY="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamRightView.bg"
+      resourceLink="asset.gamehall.teamRightBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallTeamRightView.refreshBtn"
+      backStyle="asset.gamehall.refreshBtnBg"
+      iconStyle="asset.gamehall.refreshBtnTxt"
+      iconInnerRectString="49,58,11,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="30"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallTeamRightView.createBtn"
+      backStyle="asset.gamehall.createBtnBg"
+      iconStyle="asset.gamehall.createBtnTxt"
+      iconInnerRectString="31,94,11,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamRightView.searchBtn"
+      backStyle="asset.gamehall.magnifier"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="595"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamRightView.searchTxt"
+      textFormatStyle="gamehall.GameHallTeamRightView.searchTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="35"
+      height="20"
+      x="415"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamRightView.searchTipTxt"
+      textFormatStyle="gamehall.GameHallTeamRightView.searchTipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="20"
+      x="465"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamRightView.searchInputTxt"
+      textFormatStyle="gamehall.GameHallTeamRightView.searchInputTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      maxChars="10"
+      width="125"
+      height="20"
+      x="465"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamRightView.refreshTimeCountTxt"
+      textFormatStyle="gamehall.GameHallTeamRightView.refreshTimeCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="24"
+      x="145"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="gamehall.GameHallTeamRightView.listPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-2,0,6,3"
+      viewportInnerRectString="0,0,5,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|gamehall.GameHallTeamRightView.TeamItem,205"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      width="700"
+      height="420"
+      x="10"
+      y="95" />
+    <component
+      classname="gamehall.view.GameHallTeamItemView"
+      stylename="gamehall.GameHallTeamRightView.TeamItem" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamItemView.bg"
+      resourceLink="asset.gamehall.itemBg"
+      x="50"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamItemView.flagImg"
+      resourceLink="asset.gamehall.teamFlagImg"
+      x="5"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamItemView.titleTxt"
+      textFormatStyle="gamehall.GameHallTeamItemView.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="35"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamItemView.mineTeamTxt"
+      textFormatStyle="gamehall.GameHallTeamItemView.mineTeamTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="20"
+      x="80"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamItemView.lockImg"
+      resourceLink="asset.gamehall.lockImg"
+      x="30"
+      y="20" />
+    <component
+      classname="gamehall.view.GameHallTeamInfoView"
+      stylename="gamehall.GameHallTeamItemView.infoView1"
+      x="75"
+      y="30" />
+    <component
+      classname="gamehall.view.GameHallTeamInfoView"
+      stylename="gamehall.GameHallTeamItemView.infoView2"
+      x="220"
+      y="30" />
+    <component
+      classname="gamehall.view.GameHallTeamInfoView"
+      stylename="gamehall.GameHallTeamItemView.infoView3"
+      x="365"
+      y="30" />
+    <component
+      classname="gamehall.view.GameHallTeamInfoView"
+      stylename="gamehall.GameHallTeamItemView.infoView4"
+      x="510"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamItemView.gamingFlagImg"
+      resourceLink="asset.gamehall.gamingFlagImg"
+      x="280"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamInfoView.bg"
+      resourceLink="asset.gamehall.infoBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamInfoView.selectedImg"
+      resourceLink="asset.gamehall.selectedImg"
+      x="-7"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamInfoView.add"
+      resourceLink="asset.gamehall.addImg"
+      x="35"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamInfoView.leader"
+      resourceLink="asset.gamehall.leaderFlagImg"
+      x="3"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamInfoView.nameTxt"
+      textFormatStyle="gamehall.GameHallTeamInfoView.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="0"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamInfoView.consortiaNameTxt"
+      textFormatStyle="gamehall.GameHallTeamInfoView.consortiaNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="0"
+      y="133" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamInfoView.levelBg"
+      resourceLink="asset.gamehall.levelBg"
+      x="90"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamInfoView.levelTxt"
+      textFormatStyle="gamehall.GameHallTeamInfoView.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="26"
+      height="20"
+      x="90"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveItemView.selectedEffect"
+      resourceLink="asset.gamehall.selectedEffect"
+      x="14"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallActiveItemView.activeBtn1"
+      backStyle="asset.gamehall.activeBtnBg"
+      iconStyle="asset.gamehall.activeBtnTxt1"
+      iconInnerRectString="29,131,32,46,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallActiveItemView.activeBtn2"
+      backStyle="asset.gamehall.activeBtnBg"
+      iconStyle="asset.gamehall.activeBtnTxt2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="14,160,32,46,13"
+      x="20"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallActiveItemView.activeBtn3"
+      backStyle="asset.gamehall.activeBtnBg"
+      iconStyle="asset.gamehall.activeBtnTxt3"
+      iconInnerRectString="29,132,32,46,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallActiveItemView.activeBtn4"
+      backStyle="asset.gamehall.activeBtnBg"
+      iconStyle="asset.gamehall.activeBtnTxt2"
+      iconInnerRectString="14,160,32,46,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallActiveItemView.activeBtn5"
+      backStyle="asset.gamehall.activeBtnBg"
+      iconStyle="asset.gamehall.activeBtnTxt3"
+      iconInnerRectString="29,132,32,46,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveItemView.activeNewFlag"
+      resourceLink="asset.gamehall.activeNewFlag"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveItemView.activeDayTxt"
+      textFormatStyle="gamehall.GameHallActiveItemView.activeDayTxt_t1,gamehall.GameHallActiveItemView.activeDayTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="20"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveItemView.diffBg"
+      resourceLink="asset.gamehall.diffSelectBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="gamehall.GameHallActiveItemView.diffBtn1"
+      selectedStyle="asset.gamehall.diffSelectedEffect"
+      unSelectedStyle="gamehall.GameHallActiveItemView.diffUnSelectedEffect"
+      textStyle="gamehall.GameHallActiveItemView.diffBtn.text"
+      backgoundInnerRectString="0,0,0,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="gamehall.GameHallActiveItemView.diffBtn2"
+      selectedStyle="asset.gamehall.diffSelectedEffect"
+      unSelectedStyle="gamehall.GameHallActiveItemView.diffUnSelectedEffect"
+      textStyle="gamehall.GameHallActiveItemView.diffBtn.text"
+      backgoundInnerRectString="0,0,0,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="98"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallActiveItemView.diffUnSelectedEffect"
+      resourceLink="asset.gamehall.diffSelectedEffect"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallActiveItemView.diffBtn.text"
+      textFormatStyle="gamehall.GameHallActiveItemView.diffBtn.text_t1,gamehall.GameHallActiveItemView.diffBtn.text_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="20" />
+    <!-- 集合点 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallSceneBottomView.bg"
+      resourceLink="asset.gamehall.teamManageBg"
+      x="20"
+      y="0" />
+    <component
+      classname="gamehall.room.GameHallComboBox"
+      stylename="gamehall.GameHallSceneBottomView.comboBox"
+      listPanelStyle="gamehall.GameHallSceneBottomView.comboBox.Listpanel"
+      listInnerRectString="0,28,3,100,18"
+      textStyle="SelectCP.PrivateChatText2"
+      textInnerRectString="0,-20,4,1,0"
+      buttonStyle="gamehall.GameHallSceneBottomView.comboBox.Btn"
+      width="220"
+      height="25"
+      x="0"
+      y="-25" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallSceneBottomView.comboBox.Btn"
+      backStyle="asset.gamehall.comboBoxBtnBg"
+      x="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="gamehall.GameHallSceneBottomView.comboBox.Listpanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="21,0,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|gamehall.GameHallSceneBottomView.comboBox.Cell,24,220"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="gamehall.room.GameHallGameCellAdapter"
+      stylename="gamehall.GameHallSceneBottomView.comboBox.Cell"
+      backStyle="gamehall.GameHallSceneBottomView.comboBox.CellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="gamehall.GameHallSceneBottomView.comboBox.CellTextStyle"
+      autoSizeAble="false"
+      width="210"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallSceneBottomView.comboBox.CellAsset"
+      resourceLink=",asset.gamehall.comboxListCellAsset,asset.gamehall.comboxListCellAsset"
+      fillAlphaRect="true"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallSceneBottomView.comboBox.CellTextStyle"
+      textFormatStyle="gamehall.GameHallSceneBottomView.comboBox.CellTextStyle_t"
+      filterString="core.filter_01"
+      type="input"
+      autoSize="none"
+      width="210"
+      height="20"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="gamehall.GameHallSceneBottomView.useCountBtn"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="230"
+      y="-22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallSceneBottomView.useCountTxt"
+      textFormatStyle="gamehall.GameHallSceneBottomView.useCountTxt_t1,gamehall.GameHallSceneBottomView.useCountTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="215"
+      height="20"
+      x="255"
+      y="-20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallSceneBottomView.gameTitleImg"
+      resourceLink="gamehall.GameHallSceneBottomView.gameTitleImgAsset1,asset.gamehall.gameTitleImg2,gamehall.GameHallSceneBottomView.gameTitleImgAsset3"
+      fillAlphaRect="true"
+      x="17"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallSceneBottomView.gameTitleImgAsset1"
+      resourceLink="asset.gamehall.gameTitleImg1"
+      x="5"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallSceneBottomView.gameTitleImgAsset3"
+      resourceLink="asset.gamehall.gameTitleImg3"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallSceneBottomView.gameDiffImg"
+      resourceLink="asset.gamehall.gameDiffImg1,asset.gamehall.gameDiffImg2"
+      fillAlphaRect="true"
+      x="33"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallSceneBottomView.lockBtn"
+      backStyle="asset.gamehall.lockBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallSceneBottomView.noLockBtn"
+      backStyle="asset.gamehall.noLockBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.selectBtn"
+      backStyle="asset.gamehall.selectBtnBg"
+      iconStyle="asset.gamehall.selectBtnTxt"
+      iconInnerRectString="9,64,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="96"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.addBtn"
+      backStyle="asset.gamehall.addBtnBg"
+      iconStyle="asset.gamehall.addBtnTxt"
+      iconInnerRectString="9,64,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="178"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.leaveBtn"
+      backStyle="asset.gamehall.leaveBtnBg"
+      iconStyle="asset.gamehall.leaveBtnTxt"
+      iconInnerRectString="9,64,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="260"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.lineUpBtn"
+      backStyle="asset.gamehall.lineUpBtnBg"
+      iconStyle="asset.gamehall.lineUpBtnTxt"
+      iconInnerRectString="9,64,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="96"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.kickBtn"
+      backStyle="asset.gamehall.kickBtnBg"
+      iconStyle="asset.gamehall.kickBtnTxt"
+      iconInnerRectString="9,64,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="178"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.leaderBtn"
+      backStyle="asset.gamehall.leaderBtnBg"
+      iconStyle="asset.gamehall.leaderBtnTxt"
+      iconInnerRectString="9,64,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="260"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.startBtn"
+      backStyle="asset.gamehall.startBtnBg"
+      iconStyle="asset.gamehall.startBtnTxt"
+      iconInnerRectString="23,50,20,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="340"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.readyBtn"
+      backStyle="asset.gamehall.readyBtnBg"
+      iconStyle="asset.gamehall.readyBtnTxt1"
+      iconInnerRectString="10,42,20,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="440"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallSceneBottomView.cancelBtn"
+      backStyle="asset.gamehall.readyBtnBg"
+      iconStyle="asset.gamehall.readyBtnTxt2"
+      iconInnerRectString="5,52,20,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="440"
+      y="8" />
+    <component
+      classname="gamehall.room.GameHallPasswordFrame"
+      stylename="gamehall.GameHallSceneBottomView.passwordFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="288"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallArmyView.flagView"
+      resourceLink=",asset.gamehall.offlineFlagImg,asset.gamehall.readyFlagImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallSceneMapView.bgView"
+      resourceLink="asset.gamehall.mapBg" />
+    <component
+      classname="gamehall.GameHallEastShopDescFrame"
+      stylename="gamehall.GameHallEastShopDescFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="50"
+      width="795"
+      height="647" />
+    <component
+      classname="gamehall.GameHallEastShopFrame"
+      stylename="gamehall.GameHallEastShopFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="60"
+      width="810"
+      height="630" />
+    <component
+      classname="gamehall.GameHallEastShopAnimationFrame"
+      stylename="gamehall.GameHallEastShopAnimationFrame"
+      parentStyle="core.Frame1"
+      containerX="0"
+      containerY="0"
+      width="494"
+      height="244"
+      backStyle="asset.GameHallEastShopAnimationFrame.bg" />
+    <component
+      classname="gamehall.GameHallEastShopResultFrame"
+      stylename="gamehall.GameHallEastShopResultFrame"
+      parentStyle="core.Frame1"
+      containerX="0"
+      containerY="0"
+      width="494"
+      height="244"
+      backStyle="asset.GameHallEastShopResultFrame.bg" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="gamehall.HelpFrame4"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="gamehall.HelpFrame4.helpContent"
+      titleText="public.help"
+      textWidth="378" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gamehall.room.GameHallSceneEastBlessItem.hbox"
+      spacing="5"
+      x="20"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gamehall.room.GameHallSceneEastBlessView.blessHBox"
+      spacing="5"
+      x="20"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gamehall.room.GameHallSceneEastBlessView.endBlessHBox"
+      spacing="5"
+      x="20"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gamehall.GameHallActiveView.eastBtn"
+      unSelectedStyle="asset.gamehall.groupBtnBg.Unselected"
+      selectedStyle="asset.gamehall.groupBtnBg.Selected"
+      unselectedIconStyle="asset.gamehall.eastBtn.Unselected"
+      selectedIconStyle="asset.gamehall.eastBtn.Selected"
+      unselectedIconInnerRectString="15,83,10,13,13"
+      selectedIconInnerRectString="12,87,10,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallEastShopResultFrame.confimBtn"
+      backStyle="asset.gamehall.confimBtn"
+      iconStyle="asset.gamehall.confimBtnTxt"
+      iconInnerRectString="60,39,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="175"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gamehall.room.GameHallSceneEastBlessView.vbox"
+      spacing="0"
+      x="5"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.room.GameHallSceneEastBlessView.hideBtn"
+      backStyle="asset.gamehall.hideBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-15"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.room.GameHallSceneEastBlessView.showBtn"
+      backStyle="asset.gamehall.showBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-15"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastView.acvityTimeTxt"
+      textFormatStyle="gamehall.GameHallEastView.acvityTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="80"
+      y="473" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastView.eggsNumTxt"
+      textFormatStyle="gamehall.GameHallEastView.eggsNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="490"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastView.ticksNumTxt"
+      textFormatStyle="gamehall.GameHallEastView.eggsNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="570"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastView.helpBtn"
+      backStyle="asset.gamehall.eastViewHelpBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="590"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastView.buyTicksBtn"
+      backStyle="asset.gamehall.buyTicksBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="620"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastView.goOuterCityBtn"
+      backStyle="asset.gamehall.goOuterCityBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastView.openShopBtn"
+      backStyle="asset.gamehall.openShopBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="105"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastView.goCampaignRoomBtn"
+      backStyle="asset.gamehall.goCampaignRoomBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gamehall.GameHallEastView.vbox"
+      spacing="-14"
+      x="12"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallEastItemView.selectedFrameImage"
+      resourceLink="asset.gamehall.selectedFrameImage1,asset.gamehall.selectedFrameImage2,asset.gamehall.selectedFrameImage3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallEastItemView.bgFrameImage"
+      resourceLink="asset.gamehall.bgFrameImage1,asset.gamehall.bgFrameImage2,asset.gamehall.bgFrameImage3"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastItemView.campaignNameTxt"
+      textFormatStyle="gamehall.GameHallEastItemView.campaignNameTxt_t1,gamehall.GameHallEastItemView.campaignNameTxt_t2,gamehall.GameHallEastItemView.campaignNameTxt_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="153"
+      height="40"
+      x="3"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastItemView.costGoodsNumTxt"
+      textFormatStyle="gamehall.GameHallEastItemView.costGoodsNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="190"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastItemView.lookImage"
+      resourceLink="asset.gamehall.magnifier"
+      tipStyle="yishi.view.tips.EastBlessTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="185"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastItemView.costGoodsImage"
+      resourceLink="asset.gamehall.costGoodsImage"
+      x="160"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastItemView.enterBtn"
+      backStyle="asset.gamehall.enterBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallEastItemView.selectedImage"
+      resourceLink="GameHallEastItemView.selectedImage01"
+      y="0"
+      x="0"
+      width="248"
+      height="98" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="GameHallEastItemView.selectedImage01"
+      parentStyle="shop.MouseOver1"
+      width="248"
+      height="98"
+      y="-8"
+      x="-5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallTeamEastItemView.selectedImage"
+      resourceLink="GameHallTeamEastItemView.selectedImage"
+      y="0"
+      x="0"
+      width="232"
+      height="108" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="GameHallTeamEastItemView.selectedImage"
+      parentStyle="shop.MouseOver1"
+      width="232"
+      height="108"
+      y="-8"
+      x="-5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gamehall.GameHallTeamEastItemView.bgFrameImage"
+      resourceLink="asset.gamehall.selectedFrameImage1,asset.gamehall.selectedFrameImage2,asset.gamehall.selectedFrameImage3"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopItemView.bg"
+      resourceLink="asset.gamehall.GameHallEastShopItemViewBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopItemView.goodsName"
+      textFormatStyle="gamehall.GameHallEastShopItemView.goodsName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="155"
+      height="56"
+      x="90"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopItemView.hasGet"
+      textFormatStyle="gamehall.GameHallEastShopItemView.hasGet_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="85"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopItemView.remain"
+      textFormatStyle="gamehall.GameHallEastShopItemView.hasGet_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="145"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopItemView.hasGetNum"
+      textFormatStyle="gamehall.GameHallEastShopItemView.hasGetNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="130"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopItemView.remainNum"
+      textFormatStyle="gamehall.GameHallEastShopItemView.hasGetNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="223"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gamehall.GameHallEastShopFrame.bg"
+      parentStyle="core.describeBackground_style09"
+      width="538"
+      height="525" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopFrame.bottoImg"
+      resourceLink="asset.gamehall.GameHallEastShopFrameBottoImg"
+      x="5"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopFrame.rightImage"
+      resourceLink="asset.gamehall.GameHallEastShopFrameRightImage"
+      x="538"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallEastShopFrame.oneBtn"
+      backStyle="asset.gamehall.oneBtnBg"
+      iconStyle="asset.gamehall.oneBtnTxt"
+      iconInnerRectString="35,89,14,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallEastShopFrame.tenBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.gamehall.tenBtnTxt"
+      iconInnerRectString="35,89,14,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallEastShopFrame.refreshGoodsBtn"
+      backStyle="asset.gamehall.refreshGoodsBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="472"
+      y="433" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="gamehall.GameHallEastShopFrame.descBtn"
+      textStyle="GameHallEastShopFrame.descBtn.txt"
+      backgoundInnerRectString="1,8,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="80"
+      height="20"
+      autoSizeAble="false"
+      displacement="false"
+      x="449"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GameHallEastShopFrame.descBtn.txt"
+      textFormatStyle="gamehall.GameHallActiveRightView.rewardShowAllTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.costTxt1"
+      textFormatStyle="gamehall.GameHallEastShopFrame.costTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="70"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.costTxt2"
+      textFormatStyle="gamehall.GameHallEastShopFrame.costTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="295"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.east.shopProgrssTxt"
+      textFormatStyle="gamehall.east.shopProgrssTxt_t"
+      filterString="planeswar.PlanesInvadeLogFrame.TextStyle_f"
+      autoSize="none"
+      width="135"
+      height="20"
+      x="187"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopFrame.costImage1"
+      resourceLink="asset.gamehall.GameHallEastShopFrame.costImage"
+      x="130"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopResultFrame.titleImage"
+      resourceLink="asset.GameHallEastShopResultFrame.titleImage"
+      x="197"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopFrame.costImage2"
+      resourceLink="asset.gamehall.GameHallEastShopFrame.costImage"
+      x="355"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopFrame.costImage3"
+      resourceLink="asset.gamehall.GameHallEastShopFrame.costImage"
+      x="464"
+      y="487" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.costNumber1"
+      textFormatStyle="gamehall.GameHallEastShopFrame.costNumber1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="155"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.costNumber2"
+      textFormatStyle="gamehall.GameHallEastShopFrame.costNumber1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="380"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopItemView.resetTxt"
+      textFormatStyle="gamehall.GameHallEastShopItemView.resetTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="117"
+      height="20"
+      x="130"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gamehall.GameHallEastShopFrame.goodsListScroll"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,529,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="529"
+      height="400"
+      x="0"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gamehall.GameHallEastShopDescFrame.btnScrollPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,710,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="710"
+      height="118"
+      x="53"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gamehall.GameHallEastShopDescFrame.contentScrollPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,765,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="765"
+      height="304"
+      x="2"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.room.GameHallSceneEastBlessBaseItemView.levelTxt"
+      textFormatStyle="gamehall.room.GameHallSceneEastBlessBaseItemView.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="25"
+      x="-7"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.room.GameHallSceneEastBlessView.descTxt"
+      textFormatStyle="gamehall.room.GameHallSceneEastBlessView.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="32"
+      wordWrap="true"
+      x="0"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.room.GameHallSceneEastBlessItem.userName"
+      textFormatStyle="gamehall.room.GameHallSceneEastBlessItem.userName_t1,gamehall.room.GameHallSceneEastBlessItem.userName_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="215"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallSceneBottomView.campaignNameTxt"
+      textFormatStyle="gamehall.GameHallSceneBottomView.campaignNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="55"
+      wordWrap="true"
+      x="22"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastView.tipsTxt1"
+      textFormatStyle="gamehall.GameHallEastView.tipsTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="40"
+      x="153"
+      y="65"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastView.tipsTxt2"
+      textFormatStyle="gamehall.GameHallEastView.tipsTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="40"
+      x="410"
+      y="175"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastView.tipsTxt3"
+      textFormatStyle="gamehall.GameHallEastView.tipsTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="148"
+      height="40"
+      x="190"
+      y="305"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopDescFrame.descTxt"
+      textFormatStyle="gamehall.GameHallEastShopDescFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="660"
+      height="100"
+      wordWrap="true"
+      x="75"
+      y="462" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.view.GameHallEastShopDescBtnItem.numberTxt"
+      textFormatStyle="gamehall.view.GameHallEastShopDescBtnItem.numberTxt1,gamehall.view.GameHallEastShopDescBtnItem.numberTxt2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="30"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gamehall.room.GameHallSceneEastBlessView.border"
+      resourceLink="asset.gamehall.frameBorder"
+      scaleGridString="12,13,14,15"
+      width="222"
+      height="510" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gamehall.room.GameHallSceneEastBlessView.playerInfoBg"
+      resourceLink="asset.gamehall.GameHallSceneEastBlessView.playerBg1,asset.gamehall.GameHallSceneEastBlessView.playerBg2,asset.gamehall.GameHallSceneEastBlessView.playerBg3"
+      imageRectString="1|218|1|241|13,1|217|1|29|13,75|69|2|24|13"
+      x="2"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gamehall.GameHallEastView.tipMuliteImage"
+      resourceLink="asset.gamehall.tipMuliteImage,asset.gamehall.tipMuliteImage,asset.gamehall.tipMuliteImage"
+      imageRectString="125|200|60|55|13,380|200|170|55|13,165|180|300|55|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gamehall.room.GameHallSceneEastBlessView.bossInfoBg"
+      resourceLink="asset.gamehall.GameHallSceneEastBlessView.bossInfoBg1,asset.gamehall.GameHallSceneEastBlessView.bossInfoBg2,asset.gamehall.GameHallSceneEastBlessView.bossInfoBg2,asset.gamehall.GameHallSceneEastBlessView.bossInfoBg3,asset.gamehall.GameHallSceneEastBlessView.bossInfoBg4"
+      imageRectString="1|218|1|270|13,1|217|0|29|13,1|217|75|29|13,35|154|3|23|13,10|199|78|23|13"
+      x="2"
+      y="241" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gamehall.GameHallEastShopDescFrame.border"
+      parentStyle="core.describeBackground_style09"
+      width="773"
+      height="562" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopDescFrame.rewardBg"
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.rewardBg"
+      x="5"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopDescFrame.rewardTxt"
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.rewardTxt"
+      x="15"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopDescFrame.rewardContentBg"
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.rewardContentBg"
+      x="0"
+      y="128" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopDescFrame.rewardContentTxt"
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.rewardContentTxt"
+      x="335"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopDescFrame.spline"
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.spline"
+      x="2"
+      y="461" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallEastShopDescFrame.descImage"
+      resourceLink="asset.gamehall.GameHallEastShopDescFrame.descImage"
+      x="10"
+      y="462" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="gamehall.view.GameHallEastShopDescBtnItem.btn"
+      selectedStyle="asset.gamehall.GameHallEastShopDescBtnItem.Selected"
+      unSelectedStyle="asset.gamehall.GameHallEastShopDescBtnItem.Unselected"
+      selectedIconInnerRectString="0,30,0,16,13"
+      unselectedIconInnerRectString="0,30,0,16,13"
+      textStyle="gamehall.view.GameHallEastShopDescBtnItem.btnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.view.GameHallEastShopDescBtnItem.btnTxt"
+      textFormatStyle="gamehall.view.GameHallEastShopDescBtnItem.btnTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="26"
+      x="12"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.currentRemainEggTxt"
+      textFormatStyle="gamehall.GameHallEastShopFrame.costNumber1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="26"
+      x="437"
+      y="488" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.currentRemianEggNumber"
+      textFormatStyle="gamehall.GameHallEastShopFrame.currentRemianEggNumber_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="26"
+      x="679"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallEastShopFrame.currentNumerTxt"
+      textFormatStyle="gamehall.GameHallEastShopFrame.currentNumerTxt_t"
+      filterString="gamehall.shopTtitleGlow"
+      autoSize="none"
+      width="100"
+      height="26"
+      x="225"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamEastLeftView.preBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="45"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamEastLeftView.nextBtn"
+      backStyle="asset.core.NextPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="148"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamEastLeftView.firstPageBtn"
+      backStyle="asset.core.FirstPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="8"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamehall.GameHallTeamEastLeftView.lastPageBtn"
+      backStyle="asset.core.LastPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="183"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamEastLeftView.pageBg"
+      resourceLink="asset.core.PageNumBack3"
+      x="80"
+      y="494" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamEastLeftView.pageNumber"
+      textFormatStyle="gamehall.GameHallTeamEastLeftView.pageNumber_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="24"
+      x="83"
+      y="499" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamEastLeftView.buyBufferBg"
+      resourceLink="asset.gamehall.eastView.buyBufferBg"
+      x="477"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamehall.GameHallTeamEastLeftView.selfBufferBg"
+      resourceLink="asset.gamehall.eastView.selfBufferBg"
+      x="472"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.GameHallTeamEastLeftView.buyBufferBtn"
+      backStyle="asset.gamehall.buyBufferBtn"
+      iconStyle="asset.gamehall.buyBufferBtnTxt"
+      iconInnerRectString="14,36,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamEastLeftView.bufferTitleTxt"
+      textFormatStyle="gamehall.GameHallEastView.tipsTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="118"
+      height="39"
+      x="85"
+      y="-5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamEastLeftView.bufferDescTxt"
+      textFormatStyle="gamehall.GameHallEastView.tipsTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="39"
+      x="70"
+      y="30"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.GameHallTeamEastLeftView.bufferText"
+      textFormatStyle="gamehall.room.GameHallSceneEastBlessBaseItemView.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="24"
+      x="25"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gamehall.GameHallTeamEastLeftView.selfBufferHbox"
+      spacing="5"
+      x="440"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gamehall.ShopImage"
+      resourceLink="asset.shop.ShopDisplayShow,asset.gamehall.eggFont,asset.gamehall.GameHallEastShopFrame.costImage"
+      imageRectString="0|177|0|33|13,28|48|5|25|13,10|20|6|20|13"
+      x="594"
+      y="487" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="gamehall.eastShopTodayNotAlertFrame"
+      parentStyle="ancientartifact.ArmoryDeleteAlertFrame"
+      confirmStyle="gamehall.eastAlertconfirmBtn"
+      cancelStyle="gamehall.eastAlertCancelBtn"
+      describeStyle="gamehall.todayAlertDescribe"
+      checkStyle="gamehall.ArmoryDeleteCheckBtn"
+      width="480" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.eastAlertconfirmBtn"
+      parentStyle="core.AlertButtonConfirm_2"
+      iconStyle="asset.gamehall.east.goOn"
+      iconInnerRectString="6,80,8,22,13"
+      x="60"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.eastAlertCancelBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      iconStyle="asset.gamehall.east.tobuy"
+      iconInnerRectString="25,47,10,22,13"
+      x="250"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="gamehall.ArmoryDeleteCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="160"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.todayAlertDescribe"
+      textFormatStyle="gamehall.todayAlertDescribe_t"
+      autoSize="none"
+      height="70"
+      width="435"
+      x="-10"
+      y="-8"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="gamehall.nextCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="340"
+      y="-25" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="gamehall.repeatCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="340"
+      y="-50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamehall.renfroce.autoCancelDesTxt"
+      textFormatStyle="gamehall.renfroce.HallBackDesTxt_t"
+      filterString="gamehall.renfroce.HallBackDes_g"
+      autoSize="none"
+      width="357"
+      height="20"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamehall.renfroce.CancelBtn"
+      backStyle="asset.core.Style18Btn"
+      iconStyle="asset.core.gameHall.cancelFt"
+      iconInnerRectString="25,45,6,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="132"
+      y="35" />
+  </components>
+</style>

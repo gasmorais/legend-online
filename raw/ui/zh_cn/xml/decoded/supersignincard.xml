@@ -1,0 +1,163 @@
+<style
+  name="supersignincard"
+  source="ui/zh_cn/swf/supersignincard.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="SuperSigninCardFrame.descTxt_t"
+      args="Arial,12,0xe3661a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SuperSigninCardFrame.pointTxt_t"
+      args="Arial,14,0xf9c85f,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SuperSigninCardFrame.timeTxt_t"
+      args="Arial,12,0xfc0e0e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SuperSigninCardItem.dayTxt_t"
+      args="Arial,16,0xf5e8b5,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.SuperSigninCardFrame.bg"
+      x="7"
+      y="27" />
+    <bitmapData
+      resourceLink="asset.SuperSigninCardItem.day"
+      x="10"
+      y="5" />
+  </bitmaps>
+  <customDisplay></customDisplay>
+  <components>
+    <component
+      classname="supersignincard.SuperSigninCardFrame"
+      stylename="supersignincard.SuperSigninCardFrame"
+      parentStyle="core.Frame1"
+      containerX="17"
+      containerY="68"
+      width="975"
+      height="570" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SuperSigninCardFrame.descTxt"
+      textFormatStyle="SuperSigninCardFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="443"
+      height="20"
+      x="10"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SuperSigninCardFrame.descTxt2"
+      textFormatStyle="SuperSigninCardFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="352"
+      height="20"
+      x="585"
+      y="-5" />
+    <component
+      stylename="SuperSigninCardFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="936"
+      height="432"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SuperSigninCardFrame.activateBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.SuperSigninCardFrame.activateTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="40,53,13,22,13"
+      x="405"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SuperSigninCardFrame.pointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="330"
+      y="407" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SuperSigninCardFrame.pointTxt"
+      textFormatStyle="SuperSigninCardFrame.pointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="355"
+      y="407" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SuperSigninCardFrame.timeTxt"
+      textFormatStyle="SuperSigninCardFrame.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="545"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SuperSigninCardItem.dayTxt"
+      textFormatStyle="SuperSigninCardItem.dayTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="20"
+      height="20"
+      x="-13"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SuperSigninCardItem.receiveBtn"
+      backStyle="asset.SuperSigninCardItem.redBg"
+      iconStyle="asset.SuperSigninCardItem.receiveTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="17,33,7,17,13"
+      x="20"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SuperSigninCardItem.receivedBtn"
+      backStyle="asset.SuperSigninCardItem.redBg"
+      iconStyle="asset.SuperSigninCardItem.receivedTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="10,47,7,17,13"
+      x="20"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SuperSigninCardItem.signinBtn"
+      backStyle="asset.SuperSigninCardItem.redBg"
+      iconStyle="asset.SuperSigninCardItem.signinTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="17,33,7,16,13"
+      x="20"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SuperSigninCardFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="895"
+      y="-40" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="supersignincard.SuperSigninCardFrame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="supersignincard.SuperSigninCardFrame.helpFrame.content"
+      titleText="supersignincard.SuperSigninCardFrame.HelpTitle.text"
+      textWidth="500" />
+  </components>
+</style>

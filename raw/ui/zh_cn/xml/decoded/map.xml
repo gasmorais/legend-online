@@ -1,0 +1,590 @@
+<style
+  name="map"
+  source="ui/zh_cn/swf/map.swf">
+  <!-- 通关结算 -->
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.style.HonerTxt14"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.style.VipTxt_f"
+      args="Arial,14,0xffffff,true,,,,,left" />
+    <set
+      type="flash.filters.DropShadowFilter"
+      stylename="core.normal2_f"
+      args="0, 90, 0x000000, 1, 3, 3, 10" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.campaign.ChildrenNameText_t"
+      args="Arial,13,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.campaign.ChildrenGradeTextField_f"
+      args="Arial,16,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="map.ChildrenAvatarView.gradeText_t"
+      args="Arial,18,0xfbe132,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.map.FootprintAsset" />
+    <bitmapData
+      resourceLink="asset.map.OfferRewardBuildName" />
+    <bitmapData
+      resourceLink="asset.avatar.DefaultAvatarImage"
+      x="-53"
+      y="-105" />
+    <bitmapData
+      resourceLink="asset.map.NpcBtnAsset45"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.map.ChildrenGradeImg" />
+    <bitmapData
+      resourceLink="asset.map.childGrade2" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 攻击状态 -->
+    <custom
+      classname="asset.outercity.AttackingAsset"
+      stylename="asset.outercity.AttackingAsset" />
+    <custom
+      classname="asset.avatar.DefaultAvatarMovieAsset"
+      stylename="asset.avatar.DefaultAvatarMovieAsset" />
+    <custom
+      classname="asset.map.SelectTargetAsset"
+      stylename="asset.map.SelectTargetAsset" />
+    <custom
+      classname="asset.map.SelectTargetAsset2"
+      stylename="asset.map.SelectTargetAsset2" />
+    <!-- 橙色英灵特效 -->
+    <custom
+      classname="asset.map.PetQuaityAsset"
+      stylename="asset.map.PetQuaityAsset" />
+    <!-- 脚印特效 -->
+    <custom
+      classname="asset.map.FootFireAssetL1"
+      stylename="asset.map.FootFireAssetL1" />
+    <custom
+      classname="asset.map.FootFireAssetL2"
+      stylename="asset.map.FootFireAssetL2" />
+    <custom
+      classname="asset.map.FootFireAssetL3"
+      stylename="asset.map.FootFireAssetL3" />
+    <custom
+      classname="asset.map.FootFireAssetL4"
+      stylename="asset.map.FootFireAssetL4" />
+    <custom
+      classname="asset.map.FootFireAssetL5"
+      stylename="asset.map.FootFireAssetL5" />
+    <custom
+      classname="asset.map.FootFireAssetR1"
+      stylename="asset.map.FootFireAssetR1" />
+    <custom
+      classname="asset.map.FootFireAssetR2"
+      stylename="asset.map.FootFireAssetR2" />
+    <custom
+      classname="asset.map.FootFireAssetR3"
+      stylename="asset.map.FootFireAssetR3" />
+    <custom
+      classname="asset.map.FootFireAssetR4"
+      stylename="asset.map.FootFireAssetR4" />
+    <custom
+      classname="asset.map.FootFireAssetR5"
+      stylename="asset.map.FootFireAssetR5" />
+  </customDisplay>
+  <components>
+    <!-- 地图名动画 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="map.mapNameMovieAsset"
+      resourceLink="asset.map.mapNameMovieAsset" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="map.style.BuildNameBg"
+      resourceLink="asset.map.BuildNameBg1,asset.map.BuildNameBg2,asset.map.BuildNameBg3"
+      height="29" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.BuildName"
+      textFieldStyle="map.style.HonerTxt"
+      colors="0xcbf3fd,0x00b9d5"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <!-- 人物头上的称号 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.HonerText"
+      textFieldStyle="map.style.HonerTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.HonerText2"
+      textFieldStyle="map.style.HonerTxt"
+      colors="0xf8f8f8,0x6c6c6c"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.HonerText3"
+      textFieldStyle="map.style.HonerTxt"
+      colors="0xf8f8f8,0x6c6c6c"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.HonerText4"
+      textFieldStyle="map.style.HonerTxt"
+      colors="0xff9cf9,0xcc00ff"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.HonerText5"
+      textFieldStyle="map.style.HonerTxt"
+      colors="0xfdff56,0xff7800"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.style.HonerTxt"
+      textFormatStyle="map.style.HonerTxt14"
+      autoSize="left"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="map.campaign.VipText"
+      textFieldStyle="map.style.VipTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.style.VipTxt"
+      textFormatStyle="map.style.VipTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <!-- NPC头顶按钮 -->
+    <!-- 英雄之门 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn2"
+      backStyle="asset.map.NpcBtnAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 英灵竞技 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="map.NpcBtnAsset7"
+      resourceLink="asset.map.NpcBtnAsset5,asset.map.NpcBtnAssetTxt3"
+      imageRectString="60|49|0|48|13,-3|166|36|22|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn3"
+      backStyle="map.NpcBtnAsset7"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 英灵兑换 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="map.NpcBtnAsset6"
+      resourceLink="asset.map.NpcBtnAsset5,asset.map.NpcBtnAssetTxt2"
+      imageRectString="55|49|0|48|13,3|157|36|22|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn4"
+      backStyle="map.NpcBtnAsset6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 英灵岛 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="map.NpcBtnAsset5"
+      resourceLink="asset.map.NpcBtnAsset5,asset.map.NpcBtnAssetTxt1"
+      imageRectString="20|49|0|48|13,0|88|36|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn5"
+      backStyle="map.NpcBtnAsset5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 多人竞技 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn6"
+      backStyle="asset.map.NpcBtnAsset1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 市场 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn8"
+      backStyle="asset.map.NpcBtnAsset8"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 位面 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn9"
+      backStyle="asset.map.NpcBtnAsset9"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--生活技能-->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn30"
+      backStyle="asset.map.NpcBtnAsset30"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 紫晶兑换商 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn16"
+      backStyle="asset.map.NpcBtnAsset16"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--神父、司仪-->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.marry.NPCBtn3"
+      backStyle="asset.map.NpcBtnAssetWedding3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.marry.NPCBtn8"
+      backStyle="asset.map.marryNpcBtnAsset8_1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--紫晶矿场领车-->
+    <component
+      stylename="map.mineral.NPCBtn3000003BMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.map.NpcBtnAsset3000003" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="map.mineral.NPCBtn3000003"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="map.mineral.NPCBtn3000003BMC" />
+    <!--紫晶矿场交矿-->
+    <component
+      stylename="map.mineral.NPCBtn3000004BMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.map.NpcBtnAsset3000004" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="map.mineral.NPCBtn3000004"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="map.mineral.NPCBtn3000004BMC" />
+    <!--紫晶矿场领车-->
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="map.mineral.NPCBtn3000102"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="map.mineral.NPCBtn3000003BMC" />
+    <!--紫晶矿场交矿-->
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="map.mineral.NPCBtn3000103"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="map.mineral.NPCBtn3000004BMC" />
+    <!-- 紫晶矿点 -->
+    <component
+      stylename="map.mineral.NPCBtn2351MC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.map.NpcBtnAsset2351" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="map.mineral.NPCBtn2351"
+      parentStyle="toptoolbar.WorldBossBtn"
+      button="map.mineral.NPCBtn2351MC" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.campaign.PetNameText"
+      textFormatStyle="battle.PetNameTxt_t1,battle.PetNameTxt_t2,battle.PetNameTxt_t3,battle.PetNameTxt_t4,battle.PetNameTxt_t5,battle.PetNameTxt_t6"
+      autoSize="none"
+      filterString="battle.HeroNameTxt_f"
+      width="150"
+      height="18"
+      x="-75"
+      y="-95" />
+    <!-- 婚车NPC -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn21"
+      backStyle="asset.map.NpcBtnAsset21"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 结婚NPC -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn22"
+      backStyle="asset.map.NpcBtnAsset22"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 跑环任务NPC -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn17"
+      backStyle="asset.map.NpcBtnAsset17"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 采集点 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn18"
+      backStyle="asset.map.NpcBtnAsset17"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 藏宝图 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn19"
+      backStyle="asset.map.NpcBtnAsset19"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 天穹之径 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn20"
+      backStyle="asset.map.NpcBtnAsset20"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 魔灵试炼 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn23"
+      backStyle="asset.map.NpcBtnAsset23"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 修行神殿 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn24"
+      backStyle="asset.map.NpcBtnAsset24"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 职业进阶 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn25"
+      backStyle="asset.map.NpcBtnAsset25"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 魔龙巢穴 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn26"
+      backStyle="asset.map.NpcBtnAsset26"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 云端历险 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn27"
+      backStyle="asset.map.NpcBtnAsset27"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 子女 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn28"
+      backStyle="asset.map.NpcBtnAsset28"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 备用 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn29"
+      backStyle="asset.map.NpcBtnAsset20"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--		 备用 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn31"
+      backStyle="asset.map.NpcBtnAsset31"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 英灵竞技（宠物岛） -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn3002"
+      backStyle="map.NpcBtnAsset6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 神秘人任务（宠物岛） -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn2175"
+      backStyle="asset.map.NpcBtnAsset6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 英灵岛boss -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtnAttack"
+      backStyle="asset.map.AttackBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="map.campaign.view.frame.MarryWeddingDialogFrame"
+      stylename="campaign.MarryWeddingDialogFrame"
+      closestyle="map.space.SpaceDialogFrame.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="map.space.SpaceDialogFrame.FrameBg"
+      closeInnerRectString="26,80,-2,26,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="80"
+      containerY="23"
+      width="594"
+      height="210" />
+    <!-- 外城商店 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn10"
+      backStyle="asset.map.NpcBtnAsset10"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.campaign.ChildrenNameText"
+      textFormatStyle="map.campaign.ChildrenNameText_t"
+      autoSize="none"
+      filterString="battle.HeroNameTxt_f"
+      width="150"
+      height="18"
+      x="-75"
+      y="-95" />
+    <!-- 献祭按钮 与天空之城位面公用一个？ -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn999503"
+      backStyle="asset.map.NpcBtnAsset9"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="map.campaign.ChildrenGradeImg"
+      resourceLink="asset.map.ChildrenGradeImg"
+      height="17"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.campaign.ChildrenGradeTextField"
+      textFormatStyle="map.campaign.ChildrenGradeTextField_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="150"
+      height="24" />
+    <!--神曲周年庆 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn35"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--神曲周年庆 -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn36"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn32"
+      backStyle="asset.map.NpcBtnAsset32"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.ChildrenAvatarView.gradeText"
+      textFormatStyle="map.ChildrenAvatarView.gradeText_t"
+      filterString="core.normal2_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="50"
+      height="20" />
+    <!--<component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn19"
+      backStyle="asset.map.NpcBtnAsset19"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    -->
+    <!-- 急速闯关  -->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn37"
+      backStyle="asset.map.NpcBtnAsset37"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn38"
+      backStyle="asset.map.NpcBtnAsset38"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn39"
+      backStyle="asset.map.NpcBtnAsset39"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn40"
+      backStyle="asset.map.NpcBtnAsset40"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn41"
+      backStyle="asset.map.NpcBtnAsset41"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn42"
+      backStyle="asset.map.NpcBtnAsset42"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn43"
+      backStyle="asset.map.NpcBtnAsset43"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn44"
+      backStyle="asset.map.NpcBtnAsset44"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn45"
+      backStyle="asset.map.NpcBtnAsset45"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn46"
+      backStyle="asset.map.NpcBtnAsset46"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn48"
+      backStyle="asset.map.NpcBtnAsset48"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn47"
+      backStyle="asset.map.NpcBtnAsset47"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn49"
+      backStyle="asset.map.NpcBtnAsset49"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn50"
+      backStyle="asset.map.NpcBtnAsset50"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn51"
+      backStyle="asset.map.NpcBtnAsset51"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn52"
+      backStyle="asset.map.NpcBtnAsset52"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn53"
+      backStyle="asset.map.NpcBtnAsset53"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="map.space.NPCBtn54"
+      backStyle="asset.map.NpcBtnAsset54"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+  </components>
+</style>

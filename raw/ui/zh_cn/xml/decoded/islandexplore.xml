@@ -1,0 +1,346 @@
+<style
+  name="islandexplore"
+  source="ui/zh_cn/swf/islandexplore.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="islandexplore.hpNumTxt_t"
+      args="Arial,20,0xffc659,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="islandexplore.attackNumTxt_t"
+      args="Arial,14,0x00f0ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="islandexplore.resetBtnTxt_t"
+      args="Arial,16,0xff0000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="islandexplore.attackMaxTxt_t"
+      args="Arial,16,0xffc659,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="IsLandExploreSpeedUpFrame.leftTimeText.text_t"
+      args="Arial,16,0x59CD41,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.islandexplore.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.islandexplore.landNoLock"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.islandexplore.landNoOpen"
+      x="-20"
+      y="-70" />
+    <bitmapData
+      resourceLink="asset.islandexplore.hpIcon01"
+      x="28"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.islandexplore.hpIcon02"
+      x="28"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.islandexplore.hpIcon03"
+      x="28"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.islandexplore.addHp"
+      x="68"
+      y="-23" />
+    <bitmapData
+      resourceLink="asset.islandexplore.attackIcon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.islandexplore.trap"
+      x="51"
+      y="-48" />
+    <bitmapData
+      resourceLink="asset.IsLandExploreSpeedUpItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.IsLandExploreSpeedUpItem.selectBg"
+      x="11"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.IsLandExploreSkillItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.islandexplore.cardImage"
+      x="63"
+      y="-38" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="islandexplore.view.IsLandExoploreMapView"
+      stylename="islandexplore.IsLandExoploreMapView"
+      x="0"
+      y="0" />
+    <custom
+      classname="islandexplore.view.IsLandExploreLandView"
+      stylename="islandexplore.IsLandExploreLandView"
+      x="0"
+      y="0" />
+    <custom
+      classname="islandexplore.view.IsLandExploreHpView"
+      stylename="islandexplore.IsLandExploreHpView"
+      x="0"
+      y="0" />
+    <custom
+      classname="islandexplore.view.IsLandExploreBorderLayer"
+      stylename="islandexplore.IsLandExploreBorderLayer"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.islandexplore.giftBox"
+      stylename="islandexplore.giftBox"
+      x="85"
+      y="0" />
+    <custom
+      classname="asset.islandexplore.portal"
+      stylename="islandexplore.portal"
+      x="90"
+      y="21" />
+    <custom
+      classname="asset.islandexplore.attack"
+      stylename="islandexplore.attack"
+      x="85"
+      y="0" />
+    <custom
+      classname="asset.islandexplore.addHpeffect"
+      stylename="islandexplore.addHpeffect"
+      x="85"
+      y="0" />
+    <custom
+      classname="asset.islandexplore.trapEffect"
+      stylename="islandexplore.trapEffect"
+      x="85"
+      y="4" />
+    <custom
+      classname="asset.islandexplore.lockEffect"
+      stylename="islandexplore.lockEffect"
+      x="90"
+      y="24" />
+    <custom
+      classname="asset.islandexplore.openLockEffect"
+      stylename="islandexplore.openLockEffect"
+      x="90"
+      y="24" />
+    <custom
+      classname="asset.islandexplore.getCardffect"
+      stylename="islandexplore.getCardffect"
+      x="85"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="IsLandExploreSpeedUpItem.goodsItem"
+      parentStyle="core.BaseItemView"
+      profileX="0"
+      profileY="0"
+      x="18"
+      y="17" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="IsLandExploreSkillItem.skillItem"
+      iconX="3"
+      iconY="3"
+      iconWidth="60"
+      iconHeight="60"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="1,6,5,4,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="13"
+      y="13" />
+  </customDisplay>
+  <components>
+    <component
+      classname="islandexplore.IsLandExploreFrame"
+      stylename="islandexplore.IsLandExploreFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="1400"
+      height="800"
+      containerX="0"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="islandexplore.hpNumTxt"
+      textFormatStyle="islandexplore.hpNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="195"
+      x="180"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="islandexplore.attackNumTxt"
+      textFormatStyle="islandexplore.attackNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="23"
+      width="100"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="islandexplore.resetBtn"
+      iconStyle="asset.islandexplore.resetBtnIcon"
+      backStyle="asset.islandexplore.resetBtnBack"
+      iconInnerRectString="33,52,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="115"
+      height="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="islandexplore.resetBtnTxt"
+      textFormatStyle="islandexplore.resetBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="islandexplore.attackMaxTxt"
+      textFormatStyle="islandexplore.attackMaxTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="475"
+      height="25"
+      x="0"
+      y="0" />
+    <!--   7.5秘境探索新知   		-->
+    <component
+      classname="islandexplore.IsLandExploreSpeedUpFrame"
+      stylename="islandexplore.IsLandExploreSpeedUpFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="260,30,5,0,9"
+      containerX="10"
+      containerY="45"
+      width="535"
+      height="490" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="islandexplore.shopBtn"
+      backStyle="asset.islandexplore.shopBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="islandexplore.speedUpBtn"
+      backStyle="asset.islandexplore.speedUpBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="IsLandExploreSpeedUpFrame.back"
+      resourceLink="asset.IsLandExploreSpeedUpFrame.back,asset.IsLandExploreSpeedUpFrame.inputback,asset.IsLandExploreSpeedUpFrame.useCountImage,asset.IsLandExploreSpeedUpFrame.speedTimeImage,asset.IsLandExploreSpeedUpFrame.leftTimeImage"
+      imageRectString="0|0|19,315|165|19,180|168|19,105|205|19,100|240|19" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="IsLandExploreSpeedUpFrame.preBtn"
+      backStyle="asset.IsLandExploreSpeedUpFrame.preBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="282"
+      y="164" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="IsLandExploreSpeedUpFrame.nextBtn"
+      backStyle="asset.IsLandExploreSpeedUpFrame.nextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="390"
+      y="164" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="IsLandExploreSpeedUpFrame.inputText"
+      textFormatStyle="islandexplore.hpNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="25"
+      x="293"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="IsLandExploreSpeedUpFrame.confirmBtn"
+      backStyle="asset.IsLandExploreSpeedUpFrame.confirmBtnBack"
+      iconStyle="asset.IsLandExploreSpeedUpFrame.confirmBtnText"
+      iconInnerRectString="36,46,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="IsLandExploreSpeedUpFrame.cancelBtn"
+      backStyle="asset.IsLandExploreSpeedUpFrame.cancelBtnBack"
+      iconStyle="asset.IsLandExploreSpeedUpFrame.cancelBtnText"
+      iconInnerRectString="36,46,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="IsLandExploreSpeedUpFrame.itemHbox"
+      spacing="12"
+      x="32"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="IsLandExploreSpeedUpFrame.speedTimeText"
+      textFormatStyle="islandexplore.resetBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="25"
+      x="303"
+      y="202" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="IsLandExploreSpeedUpFrame.leftTimeText"
+      timeTxtStyle="IsLandExploreSpeedUpFrame.leftTimeText.text"
+      x="303"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="IsLandExploreSpeedUpFrame.leftTimeText.text"
+      textFormatStyle="IsLandExploreSpeedUpFrame.leftTimeText.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="IsLandExploreSkillMenuView.useBtn"
+      backStyle="asset.IsLandExploreSkillItem.useBtnBack"
+      iconStyle="asset.IsLandExploreSkillItem.useBtnText"
+      iconInnerRectString="15,53,5,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="IsLandExploreSkillMenuView.giveupBtn"
+      backStyle="asset.IsLandExploreSkillItem.giveupBtnBack"
+      iconStyle="asset.IsLandExploreSkillItem.giveupBtnText"
+      iconInnerRectString="15,54,5,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="IsLandExploreHpView.skillHbox"
+      spacing="10"
+      x="600"
+      y="5" />
+  </components>
+</style>

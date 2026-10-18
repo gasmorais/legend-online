@@ -1,0 +1,259 @@
+<style
+  name="lottery"
+  source="ui/zh_cn/swf/lottery.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="lottery.LotteryBoxItemCountTxt_t"
+      args="Arial,14,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="lottery.LeftCount_t"
+      args="Arial,18,0xfffc00,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="lottery.HasCost_t"
+      args="Arial,14,0xeee095,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="lottery.endDays_t"
+      args="Arial,18,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="lottery.describe_t"
+      args="Arial,12,0xeee095,,,,,,left"
+      letterSpacing="0"
+      leading="2" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.lottery.disc" />
+    <bitmapData
+      resourceLink="asset.lottery.remainImage"
+      stylename="asset.lottery.remainImage"
+      y="201"
+      height="19"
+      x="282"
+      scaleX="1"
+      width="216"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.lottery.LotteryBoxItemSelect"
+      x="-2"
+      y="-1" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="lottery.goodsFlickerEffctMC"
+      classname="asset.lottery.goodsFlickerEffctMC"
+      x="-2"
+      y="-1" />
+    <custom
+      stylename="lottery.BoxListSp"
+      classname="flash.display.Sprite"
+      x="167"
+      y="32" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="lottery.LotteryBoxItem"
+      backgroundStyle="lottery.LotteryBoxItemBg"
+      iconStyle="lottery.LotteryBoxItemIcon"
+      lockStyle="core.BagCellLock"
+      textStyle="lottery.LotteryBoxItemCountTxt"
+      profileStyle="core.GoodsProfileBG"
+      profileX="6"
+      profileY="7"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="lottery.LotteryBoxItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="27"
+      loadingY="27"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      iconWidth="46"
+      iconHeight="46"
+      x="8"
+      y="9" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="lottery.LotteryBoxItemBg"
+      resourceLink="asset.lottery.LotteryBoxItemBg" />
+    <component
+      classname="lottery.LotteryFrame"
+      stylename="lottery.LotteryFrame"
+      parentStyle="core.Frame1"
+      width="868"
+      height="502"
+      containerX="20"
+      containerY="42" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="lottery.progressGaps"
+      resourceLink="asset.lottery.progressGap,asset.lottery.progressGap,asset.lottery.progressGap,asset.lottery.progressGap,asset.lottery.progressGap"
+      imageRectString="0|2|0|14|13,67|2|0|14|13,134|2|0|14|13,201|2|0|14|13,268|2|0|14|13"
+      x="238"
+      y="354" />
+    <!-- 消费提示 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="LotteryFrame.costTip"
+      resourceLink="asset.lottery.expenseImage,asset.core.SmallPointImg,asset.core.SmallPointImg"
+      imageRectString="5|413|0|19|13,142|23|0|21|13,274|23|0|21|13"
+      x="166"
+      y="326" />
+    <!-- 背景圖片 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="LotteryFrame.MutipleBg"
+      resourceLink="asset.lottery.girl,LotteryFrame.Back01,LotteryFrame.Back02,asset.lottery.disc,lottery.disc.ScaleX,asset.lottery.remainImage,asset.lottery.progressBack,asset.lottery.endImage,asset.lottery.dateImage,LotteryFrame.Back03,asset.lottery.textBack,asset.lottery.textBack,asset.lottery.rewardImage,asset.lottery.broadTitle"
+      imageRectString="-100|338|-50|473|13,155|674|20|397|13,159|666|24|389|13,157|218|25|355|13,593|218|25|355|13,282|216|201|19|13,160|428|346|27|13,270|145|389|20|13,454|272|389|20|13,594|230|25|355|13,588|226|23|36|13,588|226|155|36|13,601|121|30|19|13,601|216|162|19|13"
+      width="700"
+      height="435"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="LotteryFrame.Back01"
+      parentStyle="core.describeBackground_style11"
+      width="674"
+      height="397" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="LotteryFrame.Back02"
+      parentStyle="core.describeBackground_style27"
+      width="666"
+      height="389" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="lottery.disc.ScaleX"
+      resourceLink="asset.lottery.disc"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="LotteryFrame.Back03"
+      resourceLink="asset.lottery.rightback"
+      scaleGridString="30,30,99,52"
+      width="230"
+      height="355" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LotteryFrame.Btn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.lottery.btnBack"
+      iconStyle="asset.lottery.btnIcon"
+      width="192"
+      height="60"
+      iconInnerRectString="34,126,13,34,13"
+      x="275"
+      y="134" />
+    <component
+      classname="yishi.view.base.Progress"
+      stylename="LotteryFrame.progress"
+      progressStyle="asset.lottery.progressIcon"
+      mouseChildren="false"
+      mouseEnabled="false"
+      x="170"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.LotteryBoxItemCountTxt"
+      textFormatStyle="lottery.LotteryBoxItemCountTxt_t"
+      autoSize="none"
+      width="55"
+      height="22"
+      filterString="core.normal_f"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.LeftCount"
+      textFormatStyle="lottery.LeftCount_t"
+      autoSize="none"
+      width="50"
+      height="25"
+      filterString="core.normal_f"
+      x="324"
+      y="199" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.HasCost"
+      textFormatStyle="lottery.HasCost_t"
+      autoSize="none"
+      width="80"
+      height="22"
+      filterString="core.normal_f"
+      x="243"
+      y="326" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.NeedCost"
+      textFormatStyle="lottery.HasCost_t"
+      autoSize="none"
+      width="60"
+      height="22"
+      filterString="core.normal_f"
+      x="388"
+      y="326" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.endDays"
+      textFormatStyle="lottery.endDays_t"
+      autoSize="none"
+      width="38"
+      height="30"
+      filterString="core.normal_f"
+      x="417"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.endHours"
+      parentStyle="lottery.endDays"
+      x="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.endMins"
+      parentStyle="lottery.endDays"
+      x="544" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.endSecs"
+      parentStyle="lottery.endDays"
+      x="622" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="lottery.describe"
+      textFormatStyle="lottery.describe_t"
+      multiline="true"
+      wordWrap="true"
+      width="213"
+      filterString="core.normal_f"
+      x="600"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="lottery.ShowInfoPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="2"
+      vUnitIncrement="0"
+      width="220"
+      height="190"
+      x="599"
+      y="188" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="lottery.ShowInfoVBox"
+      x="0"
+      y="0"
+      spacing="2" />
+  </components>
+</style>

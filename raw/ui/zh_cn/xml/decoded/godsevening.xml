@@ -1,0 +1,671 @@
+<style
+  name="godsevening"
+  source="ui/zh_cn/swf/godsevening.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="GECheckRewardServerView.RewardItemText_t"
+      args="Arial,12,0xff8000,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GECheckRewardServerView.RewardBtnTxt_t"
+      args="Arial,14,0xa838f7,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GECheckRewardServerView.Prize2TxtStyle_t"
+      args="Arial,16,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GECheckRewardServerView.Prize4_t"
+      args="Arial,14,0xc5b47b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GEMainFrame.TeamATxt_t"
+      args="Arial,42,0xFFFFFF,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GEMainFrame.TeamBTxt_t"
+      args="Arial,42,0xFFFFFF,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GEMainFrame.TeamCTxt_t"
+      args="Arial,42,0xFFFFFF,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GERankPersonalView.Title_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GEGameOverServerItem.ServerName_t"
+      args="Arial,18,0xfce162,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.GEMainFrame.timeNumBmdGold" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.GEMainFrame.OpenTips"
+      stylename="GEMainFrame.OpenTips"
+      x="365"
+      y="210" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="GEMainFrame.YearSprite"
+      x="436"
+      y="205" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="GEMainFrame.MouthSprite"
+      x="531"
+      y="205" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="GEMainFrame.DaySprite"
+      x="600"
+      y="205" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="GEMainFrame.StartHourSprite"
+      x="657"
+      y="205" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="GEMainFrame.StartMinuteSprite"
+      x="689"
+      y="205" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="GEMainFrame.inspireContainer"
+      x="40"
+      y="53" />
+    <custom
+      classname="godsevening.GERankServerView"
+      stylename="godsevening.GERankServerView"
+      y="20" />
+    <custom
+      classname="godsevening.GERankPersonalView"
+      stylename="godsevening.GERankPersonalView"
+      y="20" />
+    <custom
+      classname="godsevening.GECheckRewardServerView"
+      stylename="godsevening.GECheckRewardServerView"
+      y="20" />
+    <custom
+      classname="godsevening.GECheckRewardPersonalView"
+      stylename="godsevening.GECheckRewardPersonalView"
+      y="20" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="GERankPersonalView.vbox"
+      x="10"
+      y="42"
+      spacing="5" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="GEGameOverFrame.ServerVBox"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="GEGameOverFrame.Item"
+      iconStyle="wechatgift.WechatGiftFrame.ItemIcon"
+      textStyle="wechatgift.WechatGiftFrame.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30"
+      showProfile="false"
+      x="380"
+      y="425" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="wechatgift.WechatGiftFrame.ItemIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="GEGameOverServerItem.RewardIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="80"
+      y="60" />
+  </customDisplay>
+  <components>
+    <!-- 主界面 start -->
+    <component
+      classname="godsevening.GEMainFrame"
+      stylename="godsevening.GEMainFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GEMainFrame.Bg"
+      resourceLink="asset.GEMainFrame.Bg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GEMainFrame.Tittle"
+      resourceLink="asset.GEMainFrame.TittleUpBg,asset.GEMainFrame.TittleDownBg,asset.GEMainFrame.Tittle"
+      imageRectString="0|629|0|199|13,150|333|129|41|13,190|252|92|75|13"
+      x="185"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GEMainFrame.VsImage"
+      resourceLink="asset.GEMainFrame.VsImage"
+      x="352"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GEMainFrame.closeImage"
+      resourceLink="asset.GEMainFrame.closeImage"
+      x="295"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GEMainFrame.TeamA"
+      textFieldStyle="GEMainFrame.TeamATxt"
+      colors="0xffffff,0xff2e2e,0x741e0a"
+      filterString="consortia.consortianame_f"
+      alphas="1,1,1"
+      ratios="60,120,230"
+      width="460"
+      height="60"
+      x="0"
+      y="343" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GEMainFrame.TeamATxt"
+      textFormatStyle="GEMainFrame.TeamATxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="460"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GEMainFrame.TeamB"
+      textFieldStyle="GEMainFrame.TeamBTxt"
+      colors="0xffffff,0x15b9e2,0x084dc0"
+      filterString="consortia.consortianame_f"
+      alphas="1,1,1"
+      ratios="60,120,230"
+      width="460"
+      height="60"
+      x="552"
+      y="343" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GEMainFrame.TeamBTxt"
+      textFormatStyle="GEMainFrame.TeamBTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="460"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GEMainFrame.TeamC"
+      textFieldStyle="GEMainFrame.TeamCTxt"
+      colors="0xffffff,0x17ce32,0x006a0f"
+      filterString="consortia.consortianame_f"
+      alphas="1,1,1"
+      ratios="60,120,230"
+      width="460"
+      height="60"
+      x="276"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GEMainFrame.TeamCTxt"
+      textFormatStyle="GEMainFrame.TeamCTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="460"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GEMainFrame.enterBtn"
+      backStyle="asset.GEMainFrame.EnterBtnBg"
+      iconStyle="asset.GEMainFrame.EnterBtnTxt"
+      iconInnerRectString="41,141,15,38,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="389"
+      y="420" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GEMainFrame.shopBtn"
+      backStyle="asset.GEMainFrame.ShopBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GEMainFrame.rankBtn"
+      backStyle="asset.GEMainFrame.RankBtnBg"
+      iconStyle="asset.GEMainFrame.RankBtnTxt"
+      iconInnerRectString="8,64,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GEMainFrame.checkRewardBtn"
+      backStyle="asset.GEMainFrame.CheckRewardBtnBg"
+      iconStyle="asset.GEMainFrame.CheckRewardBtnTxt"
+      iconInnerRectString="8,64,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GEMainFrame.helpBtn"
+      backStyle="asset.GEMainFrame.HelpBtnBg"
+      iconStyle="asset.GEMainFrame.HelpBtnTxt"
+      iconInnerRectString="8,64,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="900"
+      y="480" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="GEMainFrame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="godsEvening.GERankFrame.helpContent"
+      titleText="godsEvening.GERankFrame.helpTitle"
+      textWidth="363" />
+    <!-- 主界面 end -->
+    <!-- 主界面排行榜 start -->
+    <component
+      classname="godsevening.GERankFrame"
+      stylename="godsevening.GERankFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="55"
+      width="552"
+      height="530" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="GERankFrame.SelectedIconButtonHbox"
+      x="10"
+      y="-8"
+      spacing="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="GERankFrame.ServerBtn"
+      parentStyle="GECheckRewardFrame.ServerBtn"
+      selectedIconInnerRectString="20,60,8,20,13"
+      unselectedIconInnerRectString="20,60,8,20,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="GERankFrame.PersonalBtn"
+      parentStyle="GECheckRewardFrame.PersonalBtn"
+      selectedIconInnerRectString="18,65,6,20,13"
+      unselectedIconInnerRectString="18,65,6,20,13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GERankPersonalView.Bg"
+      resourceLink="asset.GERankPersonalView.Bg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.Rank"
+      textFormatStyle="GERankPersonalView.Title_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="5"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.NickName"
+      parentStyle="GERankPersonalView.Rank"
+      x="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.ServerName"
+      parentStyle="GERankPersonalView.Rank"
+      x="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.FightPower"
+      parentStyle="GERankPersonalView.Rank"
+      x="340" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.Score"
+      parentStyle="GERankPersonalView.Rank"
+      x="430" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GERankPersonalView.Tip"
+      resourceLink="asset.GERankPersonalView.Tip"
+      x="5"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GERankServerView.Tip"
+      resourceLink="asset.GERankServerView.Tip"
+      x="5"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.pageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="240"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GERankPersonalView.prePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="164"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GERankPersonalView.nextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="305"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GERankPersonalView.RankBg"
+      resourceLink="asset.GERankPersonalView.rank,GERankPersonalView.TxtBg,asset.GERankPersonalView.point,GERankPersonalView.TxtBg"
+      imageRectString="86|40|24|20|13,130|155|19|27|13,320|50|24|20|13,370|100|19|27|13"
+      x="3"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="GERankPersonalView.TxtBg"
+      resourceLink="asset.godsEvening.TxtBg_L,asset.godsEvening.TxtBg_M,asset.godsEvening.TxtBg_R" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.MyRankTxt"
+      parentStyle="warlords.WarlordsRankFrameMyRankTxt"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="145"
+      y="377" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalView.MyScoreTxt"
+      parentStyle="warlords.WarlordsRankFrameMyRankTxt"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="387"
+      y="377" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GERankPersonalItem.RankNum"
+      resourceLink="asset.GERankPersonalItem.rank1,asset.GERankPersonalItem.rank2,asset.GERankPersonalItem.rank3"
+      x="10"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalItem.Rank"
+      textFormatStyle="GodsEveningLeftPersonItem.txt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="5"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalItem.NickName"
+      parentStyle="GERankPersonalItem.Rank"
+      textFormatStyle="GodsEveningLeftPersonItem.txt_t2"
+      width="100"
+      autoSize="none"
+      x="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalItem.ServerName"
+      parentStyle="GERankPersonalItem.Rank"
+      textFormatStyle="GodsEveningLeftPersonItem.txt_t3"
+      width="100"
+      autoSize="none"
+      x="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalItem.FightPower"
+      parentStyle="GERankPersonalItem.Rank"
+      textFormatStyle="GodsEveningLeftPersonItem.txt_t1"
+      width="80"
+      autoSize="none"
+      x="325" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GERankPersonalItem.Score"
+      parentStyle="GERankPersonalItem.Rank"
+      textFormatStyle="GodsEveningLeftPersonItem.txt_t1"
+      x="445" />
+    <!-- 主界面排行榜 end -->
+    <!-- 查看奖励 start-->
+    <component
+      classname="godsevening.GECheckRewardFrame"
+      stylename="godsevening.GECheckRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="55"
+      width="510"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="GECheckRewardFrame.SelectedIconButtonHbox"
+      x="10"
+      y="-8"
+      spacing="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="GECheckRewardFrame.ServerBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.GECheckRewardFrame.ServerBtnTxt1"
+      unselectedIconStyle="asset.GECheckRewardFrame.ServerBtnTxt2"
+      selectedIconInnerRectString="20,60,8,20,13"
+      unselectedIconInnerRectString="20,60,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="GECheckRewardFrame.PersonalBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.GECheckRewardFrame.PersonalBtnTxt1"
+      unselectedIconStyle="asset.GECheckRewardFrame.PersonalBtnTxt2"
+      selectedIconInnerRectString="17,65,8,20,13"
+      unselectedIconInnerRectString="17,65,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GECheckRewardServerView.Bg"
+      resourceLink="asset.GECheckRewardFrame.Bg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.RewardItemText"
+      textFormatStyle="GECheckRewardServerView.RewardItemText_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="GECheckRewardServerView.RewardBtn"
+      textStyle="GECheckRewardServerView.RewardBtnTxt"
+      enableHtml="true"
+      tipStyle="yishi.view.tips.goods.TmpTips"
+      tipDirctions="4,1,6,5"
+      tipGapH="-25"
+      tipGapV="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      textFrameChange="false"
+      displacement="false"
+      x="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.RewardBtnTxt"
+      textFormatStyle="GECheckRewardServerView.RewardBtnTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GECheckRewardServerView.Prize1"
+      resourceLink="asset.GECheckRewardServerView.Prize1"
+      x="75"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GECheckRewardServerView.Prize2"
+      textFieldStyle="GECheckRewardServerView.Prize2TxtStyle"
+      colors="0xffffff,0x9b9b9b,0x636363"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="40"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.Prize2TxtStyle"
+      textFormatStyle="GECheckRewardServerView.Prize2TxtStyle_t"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20"
+      width="100" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GECheckRewardServerView.Prize3"
+      textFieldStyle="GECheckRewardServerView.Prize2TxtStyle"
+      colors="0xffffff,0xd1952b,0x5c2619"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="40"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.Prize4"
+      multiline="false"
+      wordWrap="false"
+      textFormatStyle="GECheckRewardServerView.Prize4_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      filterString="battle.HeroNameTxt_f"
+      x="42"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.Prize5"
+      parentStyle="GECheckRewardServerView.Prize4"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.Prize6"
+      parentStyle="GECheckRewardServerView.Prize4"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GECheckRewardServerView.Prize7"
+      parentStyle="GECheckRewardServerView.Prize4"
+      y="265" />
+    <!-- 查看奖励 end-->
+    <!-- 结算界面 start -->
+    <component
+      classname="godsevening.GEGameOverFrame"
+      stylename="godsevening.GEGameOverFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="45"
+      width="820"
+      height="580" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GEGameOverFrame.bg"
+      resourceLink="asset.GEGameOverFrame.bg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GEGameOverServerItem.Bg"
+      resourceLink="asset.GEGameOverServerItem.Bg1,asset.GEGameOverServerItem.Bg2,asset.GEGameOverServerItem.Bg3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GEGameOverServerItem.RankNum"
+      resourceLink="asset.GERankPersonalItem.rank1,asset.GERankPersonalItem.rank2,asset.GERankPersonalItem.rank3"
+      x="50"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GEGameOverServerItem.RewardCount"
+      parentStyle="warlords.WarlordsRankFrameMyRankTxt"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="130"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GEGameOverServerItem.ServerName"
+      textFormatStyle="GEGameOverServerItem.ServerName_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="160"
+      height="30"
+      x="90"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GEGameOverFrame.RewardGot"
+      resourceLink="asset.GEGameOverFrame.RewardGot"
+      x="224"
+      y="439" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wechatgift.WechatGiftFrame.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="38" />
+    <!-- 结算界面 end -->
+  </components>
+</style>

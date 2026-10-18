@@ -1,0 +1,2021 @@
+{
+ "rules": [
+  {
+   "note": "login: daily guide answer, then fall through to the data pushes below",
+   "on": 8322,
+   "req": "FinishedReqMsg",
+   "if": {
+    "template_id": 1
+   },
+   "stop": false,
+   "send": [
+    {
+     "code": 4152,
+     "msg": "LeedUpdatedRspMsg",
+     "data": {
+      "leed": [],
+      "leedProcess": 0,
+      "totalNum": 0,
+      "leadExtractTimes": 0,
+      "weekLeedProcess": 0,
+      "weekTotalNum": 0,
+      "buff_stop_date": "2026-01-01 00:00:00"
+     }
+    }
+   ]
+  },
+  {
+   "note": "login: fashion slots (ArmyManager.fashionInfoMsg), read by EquipView",
+   "on": 8322,
+   "req": "FinishedReqMsg",
+   "if": {
+    "template_id": 1
+   },
+   "stop": false,
+   "send": [
+    {
+     "code": 301,
+     "msg": "FashionInfoMsg",
+     "data": {
+      "gp": 0,
+      "grades": 1,
+      "wingAvata": 0,
+      "hatAvata": 0,
+      "armAvata": 0,
+      "clothAvata": 0,
+      "isHidenWingAvata": false,
+      "isHidenHatAvat": false,
+      "isHidenArmAvata": false,
+      "isHidenClothAvata": false,
+      "dragonWingAvata": 0,
+      "dragonHatAvata": 0,
+      "dragonArmAvata": 0,
+      "dragonClothAvata": 0,
+      "defaultFashion": 0
+     }
+    }
+   ]
+  },
+  {
+   "note": "login: bag (bagType 1) and hero 1 equipment (bagType 4), GoodsManager.__bagUpdateHandler; item uses SimpleItemInfoMsg layout because item.ItemInfoMsg collides with active.ItemInfoMsg in proto.json",
+   "on": 8322,
+   "req": "FinishedReqMsg",
+   "if": {
+    "template_id": 1
+   },
+   "stop": false,
+   "send": [
+    {
+     "code": 115,
+     "msg": "ItemMovedListMsg",
+     "data": {
+      "moved": [
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 0,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 100,
+         "template_id": 1891081,
+         "pos": 0,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 1,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 101,
+         "template_id": 1891083,
+         "pos": 1,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 2,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 102,
+         "template_id": 1891084,
+         "pos": 2,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 3,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 103,
+         "template_id": 1891086,
+         "pos": 3,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 4,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 104,
+         "template_id": 1895017,
+         "pos": 4,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 6,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 105,
+         "template_id": 1895018,
+         "pos": 6,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 0,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 200,
+         "template_id": 2050101,
+         "pos": 0,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 10,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 1,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 201,
+         "template_id": 2040101,
+         "pos": 1,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 5,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 2,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 202,
+         "template_id": 2030101,
+         "pos": 2,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 3,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 3,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 203,
+         "template_id": 2130001,
+         "pos": 3,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 2,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 4,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 204,
+         "template_id": 2170002,
+         "pos": 4,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 5,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 205,
+         "template_id": 230001,
+         "pos": 5,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 20,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 6,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 206,
+         "template_id": 208005,
+         "pos": 6,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 2,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 7,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 207,
+         "template_id": 1991061,
+         "pos": 7,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 8,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 208,
+         "template_id": 1991064,
+         "pos": 8,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 9,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 209,
+         "template_id": 2250001,
+         "pos": 9,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 4,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "login: accepted quests, TaskManage.__questUpdateHandler first load",
+   "on": 8322,
+   "req": "FinishedReqMsg",
+   "if": {
+    "template_id": 1
+   },
+   "stop": false,
+   "send": [
+    {
+     "code": 112,
+     "msg": "QuestUpdatedRspMsg",
+     "data": {
+      "quest": [
+       {
+        "template_id": 3,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 100,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 471,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 753,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 761,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 932,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       }
+      ],
+      "states_length": 33,
+      "states": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "login: friends via FriendManager.__addFriend",
+   "on": 8322,
+   "req": "FinishedReqMsg",
+   "if": {
+    "template_id": 1
+   },
+   "send": [
+    {
+     "code": 78,
+     "msg": "FriendInfoMsg",
+     "data": {
+      "user_id": 2,
+      "relation": 1,
+      "sex": 1,
+      "pic": 1,
+      "grades": 58,
+      "nick_name": "Arthur",
+      "online_state": 1,
+      "relation_grade": 1,
+      "relation_gp": 0,
+      "consortia_id": 0,
+      "consortia_name": "",
+      "result": true,
+      "add_msg": "",
+      "fight_capacity": 23800,
+      "job": 1,
+      "group_id": 0,
+      "chat_state": 0,
+      "vip_type": 0,
+      "is_vip": false,
+      "trans_grade": 0,
+      "changeBranch": 0
+     },
+     "delay": 50
+    },
+    {
+     "code": 78,
+     "msg": "FriendInfoMsg",
+     "data": {
+      "user_id": 3,
+      "relation": 1,
+      "sex": 0,
+      "pic": 1,
+      "grades": 61,
+      "nick_name": "Morgana",
+      "online_state": 1,
+      "relation_grade": 1,
+      "relation_gp": 0,
+      "consortia_id": 0,
+      "consortia_name": "",
+      "result": true,
+      "add_msg": "",
+      "fight_capacity": 24100,
+      "job": 3,
+      "group_id": 0,
+      "chat_state": 0,
+      "vip_type": 0,
+      "is_vip": false,
+      "trans_grade": 0,
+      "changeBranch": 0
+     },
+     "delay": 50
+    },
+    {
+     "code": 78,
+     "msg": "FriendInfoMsg",
+     "data": {
+      "user_id": 4,
+      "relation": 1,
+      "sex": 1,
+      "pic": 1,
+      "grades": 55,
+      "nick_name": "Lancelot",
+      "online_state": 1,
+      "relation_grade": 1,
+      "relation_gp": 0,
+      "consortia_id": 0,
+      "consortia_name": "",
+      "result": true,
+      "add_msg": "",
+      "fight_capacity": 23500,
+      "job": 2,
+      "group_id": 0,
+      "chat_state": 0,
+      "vip_type": 0,
+      "is_vip": false,
+      "trans_grade": 0,
+      "changeBranch": 0
+     },
+     "delay": 50
+    }
+   ]
+  },
+  {
+   "note": "daily guide progress update",
+   "on": 8322,
+   "send": [
+    {
+     "code": 4152,
+     "msg": "LeedUpdatedRspMsg",
+     "data": {
+      "leed": [],
+      "leedProcess": 0,
+      "totalNum": 0,
+      "leadExtractTimes": 0,
+      "weekLeedProcess": 0,
+      "weekTotalNum": 0,
+      "buff_stop_date": "2026-01-01 00:00:00"
+     }
+    }
+   ]
+  },
+  {
+   "note": "TaskManage.requestCanAcceptTask: add the remaining available quests",
+   "on": 5012,
+   "req": "QuestAddedMsg",
+   "send": [
+    {
+     "code": 112,
+     "msg": "QuestUpdatedRspMsg",
+     "data": {
+      "quest": [
+       {
+        "template_id": 504,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 505,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 754,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 763,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 764,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 766,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 785,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 786,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 788,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 799,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 816,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 858,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 905,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 922,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1802,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1832,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1854,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1855,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1897,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1899,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1920,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1924,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 1972,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       }
+      ],
+      "states_length": 33,
+      "states": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "FashionManager.getFashionBook (login and EquipView)",
+   "on": 8625,
+   "send": [
+    {
+     "code": 4542,
+     "msg": "FashionMsg",
+     "data": {
+      "template_id": 0,
+      "info": [],
+      "fashionIds": []
+     }
+    }
+   ]
+  },
+  {
+   "note": "FashionManager.getFashionPolish",
+   "on": 9635,
+   "send": [
+    {
+     "code": 408,
+     "msg": "FashionPolishMsg",
+     "data": {
+      "polishs": []
+     }
+    }
+   ]
+  },
+  {
+   "note": "MountsManager wild soul list (login, WildSoulFrame)",
+   "on": 8530,
+   "send": [
+    {
+     "code": 4427,
+     "msg": "MountAvatarMsg",
+     "data": {
+      "avatarInfo": [
+       {
+        "mount_tempId": 1003,
+        "is_exist": true,
+        "expair_date": "",
+        "active_date": "2026-01-01 00:00:00",
+        "validity": 0,
+        "star_level": 1,
+        "blessing": 0,
+        "param1": 0,
+        "param2": 0,
+        "is_buy_fly": false
+       },
+       {
+        "mount_tempId": 1102,
+        "is_exist": true,
+        "expair_date": "",
+        "active_date": "2026-01-01 00:00:00",
+        "validity": 0,
+        "star_level": 1,
+        "blessing": 0,
+        "param1": 0,
+        "param2": 0,
+        "is_buy_fly": false
+       },
+       {
+        "mount_tempId": 1117,
+        "is_exist": true,
+        "expair_date": "",
+        "active_date": "2026-01-01 00:00:00",
+        "validity": 0,
+        "star_level": 1,
+        "blessing": 0,
+        "param1": 0,
+        "param2": 0,
+        "is_buy_fly": true
+       }
+      ],
+      "soulScore": 150,
+      "count": 3,
+      "stamp": 1,
+      "totalPage": 1
+     }
+    }
+   ]
+  },
+  {
+   "note": "PlayerManager.sendDragonSoulRequest (DragonSoulView in the hero frame)",
+   "on": 8642,
+   "send": [
+    {
+     "code": 4555,
+     "msg": "FateListMsg",
+     "data": {
+      "fateInfo": []
+     }
+    }
+   ]
+  },
+  {
+   "note": "MysteryShopManager.sendRefreshGoodsList (ItemExchangeView)",
+   "on": 8483,
+   "req": "ShopFreshReqMsg",
+   "send": [
+    {
+     "code": 4384,
+     "msg": "ShopFreshRspMsg",
+     "data": {
+      "itemId": [],
+      "fresh_lastdate": "$nowdt",
+      "isCanBuy": [],
+      "buy_count": 0,
+      "max_buy_count": 10
+     }
+    }
+   ]
+  },
+  {
+   "note": "ShopManager.refreshTimeGoods (ShopTimeBuyView in the shop)",
+   "on": 8632,
+   "send": [
+    {
+     "code": 4547,
+     "msg": "ShopMsg",
+     "data": {
+      "hasDataInfo": [],
+      "refresh_date": "$nowdt",
+      "pay_type": 0,
+      "item_templateId": 0,
+      "refresh_interval": 3600
+     }
+    }
+   ]
+  },
+  {
+   "note": "ExchangeBoxManager.sendExchangeBoxOperate (ShopBoxView in the shop)",
+   "on": 9613,
+   "req": "FMReqMsg",
+   "send": [
+    {
+     "code": 367,
+     "msg": "FMResMsg",
+     "data": {
+      "op": "$req.op",
+      "type": "$req.type",
+      "item": []
+     }
+    }
+   ]
+  },
+  {
+   "note": "FriendSocketOutManager.sendRecommendFriend",
+   "on": 15013,
+   "send": [
+    {
+     "code": 85,
+     "msg": "RecommendListMsg",
+     "data": {
+      "girlList": [
+       {
+        "player_id": 5,
+        "nick_name": "Isolda",
+        "level": 57,
+        "sex": 0,
+        "attack": 15200,
+        "map_name": "Costa do Crepúsculo",
+        "trans_grade": 0,
+        "job": 3,
+        "changeBranch": 0
+       }
+      ],
+      "boyList": [
+       {
+        "player_id": 6,
+        "nick_name": "Tristan",
+        "level": 59,
+        "sex": 1,
+        "attack": 16100,
+        "map_name": "Costa do Crepúsculo",
+        "trans_grade": 0,
+        "job": 1,
+        "changeBranch": 0
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "FriendSocketOutManager.requestCrossFriendMsg (FriendsFrame and login)",
+   "on": 9606,
+   "send": [
+    {
+     "code": 347,
+     "msg": "FriendRelationGraphMsg",
+     "data": {
+      "friend": [],
+      "stranger": [],
+      "blacklist": [],
+      "stamp": 1,
+      "currentPage": 1,
+      "totalPage": 0
+     }
+    }
+   ]
+  },
+  {
+   "note": "IMManager.sendChangeIMState",
+   "on": 15029,
+   "req": "ChatStateMsg",
+   "send": [
+    {
+     "code": 4232,
+     "msg": "ChatStateMsg",
+     "data": {
+      "user_id": "$player.player_id",
+      "chat_state": "$req.chat_state",
+      "result": 1,
+      "replay_str": "$req.replay_str"
+     }
+    }
+   ]
+  },
+  {
+   "note": "PlayerManager.synchronizedSystime",
+   "on": 20008,
+   "send": [
+    {
+     "code": 4234,
+     "msg": "SynchronizedTimeMsg",
+     "data": {
+      "sys_curtime": "$nowdt",
+      "sys_millisecond": "$nowms"
+     }
+    }
+   ]
+  },
+  {
+   "note": "PlayerManager.checkAccelerator: no answer expected",
+   "on": 20010,
+   "send": []
+  },
+  {
+   "note": "OuterCitySocketOutManager.sendArmyPosRequest (world map scene)",
+   "on": 8328,
+   "send": [
+    {
+     "code": 4241,
+     "msg": "ArmyPositionMsg",
+     "data": {
+      "pos_x": 100,
+      "pos_y": 100,
+      "map_id": 1,
+      "pay_type": 0,
+      "left_energy": 500
+     }
+    }
+   ]
+  },
+  {
+   "note": "OuterCityManager.getBossInfo (world map scene enter)",
+   "on": 9525,
+   "req": "MapBossQuestMsg",
+   "send": [
+    {
+     "code": 4938,
+     "msg": "MapBossMsg",
+     "data": {
+      "count1": 0,
+      "count2": 0,
+      "count3": 0,
+      "bosslist": [],
+      "leftBossTime": 0,
+      "leftFogTime": 0,
+      "archaeologyKillCount": 0,
+      "atchaeologyMonsterCount": 0
+     }
+    }
+   ]
+  },
+  {
+   "note": "Reino do Céu: walking is local, the server only relays to other players",
+   "on": 8690,
+   "req": "SpacePlayerMoveMsg",
+   "send": []
+  },
+  {
+   "note": "Reino do Céu: node click, answered with the node id so SpaceEvent SELECT_NODE opens the node (simple.PropertyMsg param1 = field 1)",
+   "on": 8692,
+   "req": "PropertyMsg",
+   "send": [
+    {
+     "code": 4601,
+     "msg": "PropertyMsg",
+     "data": {
+      "temp_data": "$req.temp_data"
+     }
+    }
+   ]
+  },
+  {
+   "note": "Reino do Céu: leave, other players remove the army (CampaignExitMsg)",
+   "on": 8689,
+   "send": [
+    {
+     "code": 4593,
+     "msg": "CampaignExitMsg",
+     "data": {
+      "result": 1,
+      "player_id": "$player.player_id",
+      "army_id": 1,
+      "server_name": "$player.server_name"
+     }
+    }
+   ]
+  },
+  {
+   "note": "CampaignSocketOutManager.buyCount(1) from SelectCampaignFrame: no client listener for 4948, nothing to answer",
+   "on": 9536,
+   "send": []
+  },
+  {
+   "note": "guild search list (ConsortiaSeachLeftView, opened when consortia_id is 0)",
+   "on": 8213,
+   "req": "SearchConditionMsg",
+   "send": [
+    {
+     "code": 4139,
+     "msg": "ConsortiaSearchRspMsg",
+     "data": {
+      "total_rows": 3,
+      "is_reset": false,
+      "consortiaInfo": [
+       {
+        "consortia_id": 101,
+        "consortia_name": "Cavaleiros de Avalon",
+        "chairman_id": 2,
+        "chairman_name": "Arthur",
+        "levels": 5,
+        "current_count": 28,
+        "offer": 52000,
+        "honor": 1800,
+        "description": "Guilda ativa, todos os níveis",
+        "is_robot": false
+       },
+       {
+        "consortia_id": 102,
+        "consortia_name": "Ordem do Dragão",
+        "chairman_id": 3,
+        "chairman_name": "Morgana",
+        "levels": 4,
+        "current_count": 19,
+        "offer": 31000,
+        "honor": 950,
+        "description": "Batalhas de guilda toda noite",
+        "is_robot": false
+       },
+       {
+        "consortia_id": 103,
+        "consortia_name": "Lâminas do Norte",
+        "chairman_id": 4,
+        "chairman_name": "Lancelot",
+        "levels": 3,
+        "current_count": 12,
+        "offer": 14000,
+        "honor": 400,
+        "description": "Recrutando nível 40+",
+        "is_robot": false
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "guild apply list (ConsortiaControler.showFrame)",
+   "on": 8214,
+   "req": "SearchConditionMsg",
+   "send": [
+    {
+     "code": 4140,
+     "msg": "SimplePlayerListRspMsg",
+     "data": {
+      "total_rows": 0,
+      "playerInfo": [],
+      "uuid": ""
+     }
+    }
+   ]
+  },
+  {
+   "note": "manual: GET /debug/bag",
+   "on": "push:bag",
+   "send": [
+    {
+     "code": 115,
+     "msg": "ItemMovedListMsg",
+     "data": {
+      "moved": [
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 0,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 100,
+         "template_id": 1891081,
+         "pos": 0,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 1,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 101,
+         "template_id": 1891083,
+         "pos": 1,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 2,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 102,
+         "template_id": 1891084,
+         "pos": 2,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 3,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 103,
+         "template_id": 1891086,
+         "pos": 3,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 4,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 104,
+         "template_id": 1895017,
+         "pos": 4,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 4,
+        "change_obj_id": 1,
+        "change_pos": 6,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 105,
+         "template_id": 1895018,
+         "pos": 6,
+         "exist": true,
+         "object_id": 1,
+         "bag_type": 4,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 5,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 0,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 200,
+         "template_id": 2050101,
+         "pos": 0,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 10,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 1,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 201,
+         "template_id": 2040101,
+         "pos": 1,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 5,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 2,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 202,
+         "template_id": 2030101,
+         "pos": 2,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 3,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 3,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 203,
+         "template_id": 2130001,
+         "pos": 3,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 2,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 4,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 204,
+         "template_id": 2170002,
+         "pos": 4,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 5,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 205,
+         "template_id": 230001,
+         "pos": 5,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 20,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 6,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 206,
+         "template_id": 208005,
+         "pos": 6,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 2,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 7,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 207,
+         "template_id": 1991061,
+         "pos": 7,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 8,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 208,
+         "template_id": 1991064,
+         "pos": 8,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 1,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       },
+       {
+        "change_type": 1,
+        "change_obj_id": 0,
+        "change_pos": 9,
+        "item": {
+         "$type": "SimpleItemInfoMsg",
+         "id": 209,
+         "template_id": 2250001,
+         "pos": 9,
+         "exist": true,
+         "object_id": 0,
+         "bag_type": 1,
+         "bind": true,
+         "used": false,
+         "valid_date": 0,
+         "begin_date": "2026-01-01 00:00:00",
+         "count": 4,
+         "strengthen_grade": 0,
+         "is_new": false,
+         "user_id": "$player.player_id"
+        }
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "manual: GET /debug/quests",
+   "on": "push:quests",
+   "send": [
+    {
+     "code": 112,
+     "msg": "QuestUpdatedRspMsg",
+     "data": {
+      "quest": [
+       {
+        "template_id": 3,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 100,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 471,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 753,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 761,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       },
+       {
+        "template_id": 932,
+        "is_complete": false,
+        "condition_1": 0,
+        "condition_2": 0,
+        "condition_3": 0,
+        "condition_4": 0,
+        "completed_date": "2026-01-01 00:00:00",
+        "repeat_finish": 0,
+        "is_accept": true,
+        "is_select": false,
+        "add_date": "2026-01-01 00:00:00"
+       }
+      ],
+      "states_length": 33,
+      "states": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "note": "manual: GET /debug/friends",
+   "on": "push:friends",
+   "send": [
+    {
+     "code": 78,
+     "msg": "FriendInfoMsg",
+     "data": {
+      "user_id": 2,
+      "relation": 1,
+      "sex": 1,
+      "pic": 1,
+      "grades": 58,
+      "nick_name": "Arthur",
+      "online_state": 1,
+      "relation_grade": 1,
+      "relation_gp": 0,
+      "consortia_id": 0,
+      "consortia_name": "",
+      "result": true,
+      "add_msg": "",
+      "fight_capacity": 23800,
+      "job": 1,
+      "group_id": 0,
+      "chat_state": 0,
+      "vip_type": 0,
+      "is_vip": false,
+      "trans_grade": 0,
+      "changeBranch": 0
+     },
+     "delay": 50
+    },
+    {
+     "code": 78,
+     "msg": "FriendInfoMsg",
+     "data": {
+      "user_id": 3,
+      "relation": 1,
+      "sex": 0,
+      "pic": 1,
+      "grades": 61,
+      "nick_name": "Morgana",
+      "online_state": 1,
+      "relation_grade": 1,
+      "relation_gp": 0,
+      "consortia_id": 0,
+      "consortia_name": "",
+      "result": true,
+      "add_msg": "",
+      "fight_capacity": 24100,
+      "job": 3,
+      "group_id": 0,
+      "chat_state": 0,
+      "vip_type": 0,
+      "is_vip": false,
+      "trans_grade": 0,
+      "changeBranch": 0
+     },
+     "delay": 50
+    },
+    {
+     "code": 78,
+     "msg": "FriendInfoMsg",
+     "data": {
+      "user_id": 4,
+      "relation": 1,
+      "sex": 1,
+      "pic": 1,
+      "grades": 55,
+      "nick_name": "Lancelot",
+      "online_state": 1,
+      "relation_grade": 1,
+      "relation_gp": 0,
+      "consortia_id": 0,
+      "consortia_name": "",
+      "result": true,
+      "add_msg": "",
+      "fight_capacity": 23500,
+      "job": 2,
+      "group_id": 0,
+      "chat_state": 0,
+      "vip_type": 0,
+      "is_vip": false,
+      "trans_grade": 0,
+      "changeBranch": 0
+     },
+     "delay": 50
+    }
+   ]
+  },
+  {
+   "note": "manual: GET /debug/fashion",
+   "on": "push:fashion",
+   "send": [
+    {
+     "code": 301,
+     "msg": "FashionInfoMsg",
+     "data": {
+      "gp": 0,
+      "grades": 1,
+      "wingAvata": 0,
+      "hatAvata": 0,
+      "armAvata": 0,
+      "clothAvata": 0,
+      "isHidenWingAvata": false,
+      "isHidenHatAvat": false,
+      "isHidenArmAvata": false,
+      "isHidenClothAvata": false,
+      "dragonWingAvata": 0,
+      "dragonHatAvata": 0,
+      "dragonArmAvata": 0,
+      "dragonClothAvata": 0,
+      "defaultFashion": 0
+     }
+    }
+   ]
+  }
+ ]
+}

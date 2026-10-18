@@ -1,0 +1,249 @@
+<style
+  name="novice"
+  source="ui/zh_cn/swf/novice.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="novice.NewOpenBtnTxt_t"
+      args="Arial,16,0xfff8a8,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.novice.DialogIcon" />
+    <bitmapData
+      resourceLink="asset.novice.GuardImage"
+      stylename="asset.novice.GuardImage" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.novice.GuildFrameArrow"
+      stylename="novice.GuildFrameArrow" />
+    <custom
+      classname="asset.novice.NoviceWorld"
+      stylename="novice.NoviceWorld" />
+    <custom
+      classname="asset.novice.qteGuideConenctMC"
+      stylename="qteGuideConenct" />
+    <custom
+      classname="novice.Profile.conenctMC_1130"
+      stylename="toCastle_1130" />
+    <custom
+      classname="novice.Profile.conenctMC_1160"
+      stylename="toCastle_1160" />
+    <custom
+      classname="novice.Profile.conenctMC_2100"
+      stylename="Module_2100" />
+    <custom
+      classname="novice.Profile.conenctMC_3100"
+      stylename="toCastle_3100" />
+    <custom
+      classname="novice.Profile.conenctMC_3400"
+      stylename="Module_3400" />
+    <custom
+      classname="novice.Profile.conenctMC_3500"
+      stylename="toCastle_3500" />
+    <custom
+      classname="novice.Profile.conenctMC_3600"
+      stylename="toCastle_3600" />
+    <custom
+      classname="novice.Profile.conenctMC_3800"
+      stylename="toCastle_3800" />
+    <custom
+      classname="novice.Profile.conenctMC_4000"
+      stylename="toCastle_4000" />
+    <custom
+      classname="novice.Profile.conenctMC_4200"
+      stylename="toCastle_4200" />
+    <custom
+      classname="novice.Profile.conenctMC_4400"
+      stylename="toCastle_4400" />
+    <custom
+      classname="novice.Profile.conenctMC_4600"
+      stylename="toCastle_4600" />
+    <custom
+      classname="novice.Profile.conenctMC_4700"
+      stylename="toCastle_4700" />
+    <custom
+      classname="novice.Profile.conenctMC_4800"
+      stylename="toCastle_4800" />
+    <custom
+      classname="novice.Profile.conenctMC_4900"
+      stylename="toCastle_4900" />
+    <custom
+      classname="novice.Profile.conenctMC_5000"
+      stylename="toCastle_5000" />
+    <custom
+      classname="novice.Profile.conenctMC_5100"
+      stylename="toCastle_5100" />
+    <custom
+      classname="novice.Profile.conenctMC_5300"
+      stylename="toCastle_5300" />
+    <!--  新功能开放  -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="novice.NewOpenIcon"
+      iconHeight="110"
+      iconWidth="93"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="46"
+      loadingY="55"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="230"
+      y="80" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="novice.StartPlayBg1"
+      resourceLink="asset.novice.StartPlayBg,asset.novice.Logo"
+      imageRectString="-50|717|0|287|13,277|207|-2|76|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="novice.StartPlayBg2"
+      resourceLink="asset.novice.StartPlayBg,asset.novice.LogoII"
+      imageRectString="-50|717|0|287|13,179|450|-48|168|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="novice.StartPlayBg3"
+      resourceLink="asset.novice.StartPlayBg,asset.novice.LogoZhanQu"
+      imageRectString="-50|717|0|287|13,329|114|15|63|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="novice.StartPlayStartBtn"
+      backStyle="asset.novice.StartPlayBtnBg"
+      iconStyle="asset.novice.StartPlayTxtImg"
+      iconInnerRectString="14,115,1,44,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="334"
+      y="227" />
+    <!-- 新手指引框的背景2 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="novice.FrameBack01"
+      resourceLink="asset.novice.frameback01,asset.novice.frameback02,asset.novice.frameback03,asset.novice.frameback04,asset.novice.frameback05,asset.novice.frameback06,asset.novice.frameback07,asset.novice.frameback08,asset.novice.frameback09"
+      width="420"
+      height="130" />
+    <!-- 新手提示弹框的内容文字2  -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.novice.ContentText2"
+      textFormatStyle="core.novice.FrameContent_t2"
+      filterString="core.FrameContent_g"
+      autoSize="left"
+      wordWrap="true"
+      multiline="true"
+      width="350"
+      height="70" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="novice.name.ensure"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.core.SubmitBtnAsset"
+      iconInnerRectString="32,65,10,28,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="229"
+      y="109" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="asset.novice.close"
+      backStyle="asset.novice.Profile.close"
+      iconStyle="asset.novice.Profile.ensure"
+      iconInnerRectString="18,63,13,19,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="265"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="novice.QteCheckBtn"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="52"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="novice.QteCheckTxt"
+      textFormatStyle="core.BaseInputAlert_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="116"
+      height="20"
+      x="83"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="novice.QteDescribeTitleTxt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="250"
+      height="75"
+      x="2"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="novice.QteDescribeTxt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="250"
+      height="75"
+      x="2"
+      y="60" />
+    <component
+      classname="yishi.view.guild.QteUpgradeTipFrame"
+      stylename="noviceII.QteUpgradeTipFrame"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="core.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      frameMiniW="250"
+      frameMiniH="180"
+      width="250"
+      height="180" />
+    <!--  新功能开放  -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="novice.NewOpenMultiBg"
+      resourceLink="asset.novice.NewOpenBg,novice.NewOpenBgScaleX,asset.novice.NewOpenTxtImg,asset.novice.NewOpenIconBg"
+      imageRectString="0|270|0|248|13,540|270|0|248|13,88|350|15|41|13,43|484|37|196|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="novice.NewOpenBgScaleX"
+      resourceLink="asset.novice.NewOpenBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="novice.NewOpenBtn"
+      backStyle="asset.novice.NewOpenBtnBg"
+      textStyle="novice.NewOpenBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSizeAble="false"
+      backgoundInnerRectString="10,0,14,0"
+      width="360"
+      height="50"
+      x="80"
+      y="196"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="novice.NewOpenBtnTxt"
+      textFormatStyle="novice.NewOpenBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="340"
+      height="28" />
+  </components>
+</style>

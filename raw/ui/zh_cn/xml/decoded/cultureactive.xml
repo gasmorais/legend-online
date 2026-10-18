@@ -1,0 +1,594 @@
+<style
+  name="cultureactive"
+  source="ui/zh_cn/swf/cultureactive.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureactive.nameTxt_t"
+      args="Arial,12,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureactive.ProgressLevelTxt_t"
+      args="Arial,12,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureactive.descriptionTxt_t"
+      args="Arial,12,0xffc000,true,,,,,left"
+      letterSpacing="0"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortFrame.orderText_t"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortItem.orderText_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortItem.guildNameText_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortItem.serverNameText_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortFrame.myOrderText_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortFrame.desNoteText_t"
+      args="Arial,12,0x7ddf26,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortFrame.FallItemsLinkTxt_t"
+      args="Arial,12,0x00fffc,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveFrame.researchSkillBtnTextStyle_t"
+      args="Arial,14,0xfefbc6,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortRewardItem.OrderRewardTxt_t"
+      args="Arial,14,0xfefbc6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureActiveSort.noteTxt_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureActiveSort.orderTxt_t"
+      args="Arial,12,0xffecb4,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CultureActiveSortRewardItem.noteTxt_t"
+      args="Arial,12,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureactive.timeTxt_t"
+      args="Arial,12,0xfff200,,,,,,left"
+      leading="6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="cultureactive.socreAllTxt_t"
+      args="Arial,14,0xffc000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.cultureactive.Bg"
+      x="35"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.cultureactive.itemBg"
+      x="-32"
+      y="158" />
+    <bitmapData
+      resourceLink="asset.cultureactive.shopNote"
+      x="30"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.cultureactive.pageNumBg"
+      x="390"
+      y="550" />
+    <bitmapData
+      resourceLink="asset.cultureactive.rewardNote"
+      x="57"
+      y="184" />
+    <bitmapData
+      resourceLink="asset.cultureactive.iconBg"
+      x="67"
+      y="51" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.cultureactive.ProgressBar"
+      stylename="asset.cultureactive.ProgressBar"
+      x="24"
+      y="141" />
+    <custom
+      classname="cultureactive.CultureActiveView"
+      stylename="cultureactive.CultureActiveView"
+      x="38"
+      y="13" />
+    <custom
+      classname="cultureactive.CultureActiveItem"
+      stylename="cultureactive.CultureActiveItem"
+      x="0"
+      y="19" />
+    <custom
+      stylename="cultureactive.cultureActiveItemIcon"
+      classname="yishi.view.community.BaseIconView"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="25"
+      loadingY="25"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,5,4,7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="71"
+      y="55" />
+  </customDisplay>
+  <components>
+    <component
+      classname="cultureactive.CultureActiveFrame"
+      stylename="cultureactive.CultureActiveFrame"
+      parentStyle="core.Frame1"
+      width="913"
+      height="708" />
+    <component
+      classname="cultureactive.CultureActiveSortFrame"
+      stylename="cultureactive.CultureActiveSortFrame"
+      parentStyle="core.Frame2"
+      containerX="9"
+      containerY="43"
+      width="454"
+      height="542" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="cultureactive.PersonBtn"
+      unSelectedStyle="asset.cultureactive.TalentUnselectBack"
+      selectedStyle="asset.cultureactive.TalentSelectBack"
+      selectedIconStyle="asset.cultureactive.PersonSelectIcon"
+      unselectedIconStyle="asset.cultureactive.PersonUnselectIcon"
+      selectedIconInnerRectString="12,20,30,72,13"
+      unselectedIconInnerRectString="16,16,32,64,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-3"
+      y="30" />
+    <component
+      stylename="cultureactive.ConsortiaBtn"
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      unSelectedStyle="asset.cultureactive.TalentUnselectBack"
+      selectedStyle="asset.cultureactive.TalentSelectBack"
+      selectedIconStyle="asset.cultureactive.ConsortiaSelectIcon"
+      unselectedIconStyle="asset.cultureactive.ConsortiaUnselectIcon"
+      selectedIconInnerRectString="13,21,34,60,13"
+      unselectedIconInnerRectString="15,16,37,54,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="-3"
+      y="173" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="cultureactive.ServerBtn"
+      unSelectedStyle="asset.cultureactive.TalentUnselectBack"
+      selectedStyle="asset.cultureactive.TalentSelectBack"
+      selectedIconStyle="asset.cultureactive.ServerSelectIcon"
+      unselectedIconStyle="asset.cultureactive.ServerUnselectIcon"
+      selectedIconInnerRectString="13,21,27,77,13"
+      unselectedIconInnerRectString="14,16,33,69,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-3"
+      y="318" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cultureactive.receiveBtn"
+      backStyle="asset.cultureactive.receiveBtn"
+      iconStyle="asset.cultureactive.receiveTxt"
+      iconInnerRectString="26,44,12,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="47"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.nameTxt"
+      textFormatStyle="cultureactive.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="40"
+      x="0"
+      y="116" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="cultureactive.BaseItemView"
+      iconStyle="cultureactive.iconView"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="cultureactive.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="cultureactive.iconView"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="25"
+      loadingY="25"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="7"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.ProgressLevelTxt"
+      textFormatStyle="cultureactive.ProgressLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="38"
+      y="148" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.descriptionTxt"
+      textFormatStyle="cultureactive.descriptionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      height="40"
+      width="600"
+      x="43"
+      y="0" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cultureactive.LastPageBtn"
+      backStyle="asset.cultureactive.PageBtnBg"
+      iconStyle="asset.cultureactive.LastPageImg"
+      width="69"
+      height="29"
+      x="315"
+      y="550"
+      iconInnerRectString="9,52,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="cultureactive.NextPageBtn"
+      backStyle="asset.cultureactive.PageBtnBg"
+      iconStyle="asset.cultureactive.NextPageImg"
+      width="69"
+      height="29"
+      x="454"
+      y="551"
+      iconInnerRectString="9,52,5,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 页码数字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.PageTextStyle1"
+      parentStyle="shop.PageTextStyle1"
+      x="388"
+      y="555" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cultureactive.RankFrameBg"
+      resourceLink="core.describeBackground_style04,asset.cultureactive.SplitLine"
+      imageRectString="0|433|0|431|13,2|428|352|3|13"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cultureactive.RankFrameTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|432|0|34|13,68|22|3|28|13,194|22|3|28|13,300|22|3|28|13"
+      width="514"
+      height="34"
+      x="1"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.orderText"
+      textFormatStyle="CultureActiveSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="-13"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.guildNameText"
+      textFormatStyle="CultureActiveSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="130"
+      height="20"
+      x="67"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.serverNameText"
+      textFormatStyle="CultureActiveSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="115"
+      height="20"
+      x="192"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.scoreText"
+      textFormatStyle="CultureActiveSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="130"
+      height="35"
+      x="302"
+      y="29"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="CultureActiveSortFrame.lookPageBg"
+      resourceLink="asset.core.pageBg"
+      x="181"
+      y="391" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.lookPageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="185"
+      y="397" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CultureActiveSortFrame.lookLastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="107"
+      y="392" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CultureActiveSortFrame.lookNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="252"
+      y="393" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="CultureActiveSortFrame.vbox"
+      spacing="1"
+      x="5"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="CultureActiveSortFrame.sortTextImage"
+      resourceLink="asset.cultureactive.personTextImage,asset.cultureactive.guildTextImage,asset.cultureactive.serverTextImage"
+      x="5"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="CultureActiveSortFrame.scoreTextImage"
+      resourceLink="asset.cultureactive.personScoreImage,asset.cultureactive.guildScoreImage,asset.cultureactive.serverScoreImage"
+      x="212"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.myOrderText"
+      textFormatStyle="CultureActiveSortFrame.myOrderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="122"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.myScoreText"
+      textFormatStyle="CultureActiveSortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="326"
+      y="435" />
+    <!--积分排行榜-->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="CultureActiveSortItem.overBg"
+      parentStyle="core.TitleBack_Style888"
+      width="436"
+      x="-7"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortItem.orderText"
+      textFormatStyle="CultureActiveSortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="75"
+      height="20"
+      x="-3"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortItem.guildNameText"
+      textFormatStyle="CultureActiveSortItem.guildNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="140"
+      height="20"
+      x="55"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortItem.serverNameText"
+      textFormatStyle="CultureActiveSortItem.guildNameText_t,CultureActiveSortItem.serverNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="140"
+      height="20"
+      x="175"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortItem.scoreText"
+      textFormatStyle="CultureActiveSortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="301"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="CultureActiveSortItem.lineImage"
+      resourceLink="asset.core.gapLine02"
+      width="429"
+      height="2"
+      x="-3"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.desNoteText"
+      textFormatStyle="CultureActiveSortFrame.desNoteText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="430"
+      height="30"
+      x="5"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortFrame.fallItemsLinkTxt"
+      textFormatStyle="CultureActiveSortFrame.FallItemsLinkTxt_t"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="347"
+      y="399" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="cultureactive.RankFrameScoreBg"
+      resourceLink="asset.cultureactive.TxtBg_L,asset.cultureactive.TxtBg_M,asset.cultureactive.TxtBg_R"
+      width="104"
+      height="27"
+      x="323"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="CultureActiveFrame.sortBtn"
+      parentStyle="core.BrownBtn"
+      textStyle="CultureActiveFrame.researchSkillBtnTextStyle"
+      backgoundInnerRectString="15,6,5,13"
+      x="718"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveFrame.researchSkillBtnTextStyle"
+      textFormatStyle="CultureActiveFrame.researchSkillBtnTextStyle_t"
+      filterString="consortia.UpGradeButtonTextStyle_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortRewardItem.OrderRewardTxt"
+      textFormatStyle="CultureActiveSortRewardItem.OrderRewardTxt_t"
+      filterString="core.normal_f"
+      width="215"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="cultureActiveSort.ScrollPanel"
+      parentStyle="taskTrace.ScrollPanel"
+      width="267"
+      height="261"
+      x="5"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="cultureActiveSort.TaskItemVbox"
+      x="85"
+      y="0"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureActiveSort.noteTxt"
+      textFormatStyle="cultureActiveSort.noteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="228"
+      height="40"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureActiveSort.orderTxt"
+      textFormatStyle="cultureActiveSort.orderTxt_t"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CultureActiveSortRewardItem.noteTxt"
+      textFormatStyle="CultureActiveSortRewardItem.noteTxt_t"
+      filterString="core.normal_f"
+      width="73"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.timeTxt"
+      textFormatStyle="cultureactive.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="300"
+      height="40"
+      x="547"
+      y="550" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="cultureactive.socreAllTxt"
+      textFormatStyle="cultureactive.socreAllTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="25"
+      x="22"
+      y="556" />
+  </components>
+</style>

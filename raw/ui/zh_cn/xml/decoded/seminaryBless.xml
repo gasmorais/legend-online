@@ -1,0 +1,259 @@
+<style
+  name="seminarybless"
+  source="ui/zh_cn/swf/seminarybless.swf">
+  <sets>
+    <!--当前水晶数量 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminaryBless.BlessFrame.CostValueTxt_t"
+      args="Arial,18,0x95feff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminaryBless.BlessFrame.LeftTimeValueTxt_t"
+      args="Arial,14,0xf47c23,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminaryBless.BlessFrame.LeftCrystalValueTxt_t"
+      args="Arial,12,0xffd800,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminaryBless.BlessFrame.EffectTipTxt_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminaryBless.BlessFrame.CurrentLeftCrystalValueTxt_t"
+      args="Arial,18,0x95feff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="seminaryBless.BlessFrame.NeedCrystalValueTxt_t"
+      args="Arial,18,0xff0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessBackAsset"
+      scaleX="0.8"
+      x="68"
+      y="22" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessEffectAsset"
+      x="92"
+      y="29" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessCrystalCostAsset"
+      x="78"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessDiamondCostAsset"
+      x="60"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessLectTimeAsset"
+      x="144"
+      y="168" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessFrame.PercentAsset" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessEffectAssetII"
+      x="60"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessLectTimeAssetII"
+      x="105"
+      y="179" />
+    <bitmapData
+      resourceLink="asset.seminaryBless.BlessCrystalCostAssetII"
+      x="173"
+      y="170" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <!--祈福-->
+    <component
+      classname="seminaryBless.SeminaryBlessFrame"
+      stylename="seminaryBless.SeminaryBlessFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="seminaryBless.SeminaryBlessFrameBack"
+      moveInnerRectString="120,120,15,35,1"
+      titleOuterRectPosString="0,29,1"
+      closeInnerRectString="29,34,29,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="35"
+      containerY="40"
+      width="432"
+      height="356" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="seminaryBless.SeminaryBlessFrameBack"
+      resourceLink="seminaryBless.SeminaryBlessFrameBackAsset,seminaryBless.SeminaryBlessFrameTitleAsset"
+      imageRectString=",226|43|17|0|9" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="seminaryBless.SeminaryBlessFrameBackAsset"
+      resourceLink="asset.seminaryBless.BlessFrameBackAsset1,asset.seminaryBless.BlessFrameBackAsset2"
+      imageRectString="216|356|0|-108|9,216|356|0|108|9" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="seminaryBless.SeminaryBlessFrameTitleAsset"
+      resourceLink="asset.seminaryBless.BlessFrameTitleAsset1,asset.seminaryBless.BlessFrameTitleAsset2"
+      imageRectString="113|43|0|-56.5|9,113|43|0|56.5|9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.BlessFrame.EffectTipTxt"
+      textFormatStyle="seminaryBless.BlessFrame.EffectTipTxt_t"
+      filterString="core.normal_f"
+      x="57"
+      y="193"
+      width="250"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="seminaryBless.BlessFrame.CrystalCostValueBtn"
+      selectedIconStyle="asset.core.checkstyle_2.Selected"
+      unselectedIconStyle="asset.core.checkstyle_2.UnSelected"
+      selectedIconInnerRectString="0,22,0,23,13"
+      unselectedIconInnerRectString="0,22,0,23,13"
+      textStyle="seminaryBless.BlessFrame.CrystalCostValueTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="120"
+      height="23"
+      x="66"
+      y="187" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="seminaryBless.BlessFrame.DiamondCostValueBtn"
+      parentStyle="seminaryBless.BlessFrame.CrystalCostValueBtn"
+      textStyle="seminaryBless.BlessFrame.DiamondCostValueTxt"
+      x="207"
+      y="187" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.BlessFrame.CrystalCostValueTxt"
+      textFormatStyle="seminaryBless.BlessFrame.CostValueTxt_t"
+      autoSize="none"
+      width="56"
+      height="22"
+      filterString="core.normal_f"
+      x="23"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.BlessFrame.DiamondCostValueTxt"
+      parentStyle="seminaryBless.BlessFrame.CrystalCostValueTxt"
+      autoSize="none"
+      width="56"
+      height="22"
+      x="24"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.BlessFrame.LeftTimeValueTxt"
+      textFormatStyle="seminaryBless.BlessFrame.LeftTimeValueTxt_t"
+      autoSize="none"
+      width="30"
+      height="22"
+      filterString="core.normal_f"
+      x="174"
+      y="167" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.BlessFrame.LeftCrystalValueTxt"
+      textFormatStyle="seminaryBless.BlessFrame.LeftCrystalValueTxt_t"
+      autoSize="none"
+      width="140"
+      height="22"
+      filterString="core.normal_f"
+      x="111"
+      y="211" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.BlessFrame.CurrentLeftCrystalValueTxt"
+      textFormatStyle="seminaryBless.BlessFrame.CurrentLeftCrystalValueTxt_t,seminaryBless.BlessFrame.NeedCrystalValueTxt_t"
+      autoSize="none"
+      width="140"
+      height="22"
+      filterString="core.normal_f"
+      x="205"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="seminaryBless.BlessFrame.ConfirmBtn"
+      backStyle="asset.seminaryBless.BlessStartBtnAsset"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="97"
+      y="224" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="seminaryBless.BlessFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="298"
+      y="-17" />
+    <!-- 每次消耗光晶不再提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="seminaryBless.ExpendCrystalAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      containerY="15"
+      confirmStyle="seminaryBless.ExpendCrystalConfirmBtn"
+      cancelStyle="seminaryBless.ExpendCrystalCancelBtn"
+      checkStyle="seminaryBless.ExpendCrystalCheckBtn"
+      describeStyle="seminaryBless.ExpendCrystalDescribe"
+      width="350"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="seminaryBless.ExpendCrystalCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="77"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="seminaryBless.ExpendCrystalConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="27"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="seminaryBless.ExpendCrystalCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="153"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="seminaryBless.ExpendCrystalDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="left"
+      height="20"
+      x="-15"
+      y="16" />
+    <custom
+      classname="asset.seminaryBless.BlessFrame.EffectContain"
+      stylename="seminaryBless.BlessFrame.EffectContain"
+      x="290"
+      y="136" />
+    <custom
+      classname="asset.seminaryBless.BlessFrame.BlessStopEffectContain"
+      stylename="seminaryBless.BlessFrame.BlessStopEffectContain1"
+      x="126"
+      y="95" />
+    <custom
+      classname="asset.seminaryBless.BlessFrame.BlessStopEffectContain"
+      stylename="seminaryBless.BlessFrame.BlessStopEffectContain2"
+      x="166"
+      y="95" />
+    <custom
+      classname="asset.seminaryBless.BlessFrame.BlessStopEffectContain"
+      stylename="seminaryBless.BlessFrame.BlessStopEffectContain3"
+      x="205"
+      y="95" />
+  </components>
+</style>

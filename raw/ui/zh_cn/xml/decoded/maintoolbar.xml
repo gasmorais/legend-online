@@ -1,0 +1,963 @@
+<style
+  name="maintoolbar"
+  source="ui/zh_cn/swf/maintoolbar.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="mainToolBar.UpdateBroadCastDate_t"
+      args="Arial,14,0xffeb79,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mainToolBar.UpdateBroadCastTitle_t"
+      args="Arial,14,0xf5e3b1,,,,,,left"
+      letterSpacing="1"
+      leading="7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mainToolBar.UpdateBroadCastContent_t"
+      args="Arial,14,0xbf9048,,,,,,left"
+      letterSpacing="1"
+      leading="7" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="mainToolBar.UpdateBroadCastDate_g"
+      args="0x000000,1,0,0,1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mainToolBar.timeTxt_t"
+      args="Arial,20,0xfff4c2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mainToolBar.Warning_t"
+      letterSpacing="1"
+      args="Arial,14,0xfff200,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <!--经验条背景-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.PlayerExpBack"
+      y="0" />
+    <!--经验条分割线-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.PlayerExpSplice"
+      x="1"
+      y="-3" />
+    <!--系统更新-->
+    <bitmapData
+      resourceLink="asset.broadcast.UpdatePreAsset"
+      x="0"
+      y="237" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdateDateAsset"
+      x="145"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdateContentAsset"
+      x="15"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.mainToolBar.Back"
+      x="17"
+      y="276" />
+    <bitmapData
+      resourceLink="asset.broadcast.UpdateTitleBg" />
+    <bitmapData
+      resourceLink="asset.mainToolBar.IntensifyIcon"
+      x="0"
+      y="145" />
+    <bitmapData
+      resourceLink="asset.mainToolBar.timeBG"
+      x="-50"
+      y="95" />
+    <bitmapData
+      resourceLink="asset.mainToolBar.timeFontBG"
+      x="-30"
+      y="105" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="ui.maintoolbar.view.PlayerExperenceView"
+      stylename="mainToolBar.PlayerExpView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,4,0"
+      tipGapV="10"
+      x="32"
+      y="310" />
+    <custom
+      classname="asset.mainToolBar.Grow"
+      stylename="mainToolBar.Grow"
+      x="1"
+      y="-1" />
+    <!-- 转职离线经验闪烁 -->
+    <custom
+      classname="asset.mainToolBar.VocationGrow"
+      stylename="mainToolBar.VocationGrow"
+      x="-3"
+      y="0" />
+    <!--跨服继续撮合按钮-->
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.crossGoOnBtn"
+      back="mainToolBar.crossGoOnBtn.back"
+      button="mainToolBar.crossGoOnBtn.button"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--跨服继续撮合按钮-->
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.crossCancelBtn"
+      back="mainToolBar.crossCancelBtn.back"
+      button="mainToolBar.crossCancelBtn.button"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+  </customDisplay>
+  <components>
+    <!-- 经验条 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.PlayerExpProgress"
+      resourceLink="asset.mainToolBar.PlayerExpProgress"
+      x="2"
+      y="0" />
+    <!-- 离线经验条 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.PlayerOfflineExpProgress"
+      resourceLink="asset.mainToolBar.PlayerOfflineGp"
+      x="2"
+      y="0" />
+    <!-- 转职经验条 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.VocationExpProgress"
+      resourceLink="asset.mainToolBar.VocationExpProgress"
+      x="-7"
+      y="0" />
+    <!-- 转职离线经验条 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.VocationOfflineExpProgress"
+      resourceLink="asset.mainToolBar.VocationOfflineGp"
+      x="-7"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="broadcast.UpdateBackAsset"
+      resourceLink="asset.broadcast.UpdateBackAsset"
+      x="5"
+      y="26" />
+    <!--聊泡按钮-->
+    <component
+      stylename="mainToolBar.popTipBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.popTipMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.PopTipBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.popTipBtnMC"
+      x="0"
+      y="0" />
+    <!--商城按钮-->
+    <component
+      stylename="mainToolBar.stopBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.shopBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.ShopBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.stopBtnMC"
+      x="0"
+      y="0" />
+    <!--背包按钮-->
+    <component
+      stylename="mainToolBar.packBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.packBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.PackBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.packBtnMC"
+      x="0"
+      y="0" />
+    <!--任务-->
+    <component
+      stylename="mainToolBar.taskBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.taskBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.TaskBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.taskBtnMC"
+      x="0"
+      y="0" />
+    <!--铁匠铺按钮-->
+    <component
+      stylename="mainToolBar.storeBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.storeBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.storeBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.storeBtnMC"
+      x="0"
+      y="0" />
+    <!--坐骑按钮-->
+    <component
+      stylename="mainToolBar.mountBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.MountBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.mountBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.mountBtnMC"
+      x="0"
+      y="0" />
+    <!--技能按钮-->
+    <component
+      stylename="mainToolBar.skillBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.skillBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBarSkillBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.skillBtnMC"
+      x="0"
+      y="0" />
+    <!--占星按钮-->
+    <component
+      stylename="mainToolBar.StarBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.StarBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.StarBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.StarBtnMC"
+      x="0"
+      y="0" />
+    <!--英雄按钮-->
+    <component
+      stylename="mainToolBar.heroBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.heroBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.HeroBtn"
+      button="mainToolBar.heroBtnMC"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="20"
+      isFollowMouse="false"
+      displacement="false"
+      x="0"
+      y="0" />
+    <!--好友按钮-->
+    <component
+      stylename="mainToolBar.friendsBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.friendsBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.FriendsBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.friendsBtnMC"
+      x="0"
+      y="0" />
+    <!--求婚信息按钮-->
+    <component
+      stylename="mainToolBar.marryBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.marryBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.marryBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.marryBtnMC"
+      x="0"
+      y="0" />
+    <!--公会按钮-->
+    <component
+      stylename="mainToolBar.guildBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.guildBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.GuildBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.guildBtnMC"
+      x="0"
+      y="0" />
+    <!-- 返回按钮-->
+    <component
+      stylename="mainToolBar.returnBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.returnBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.ReturnBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.returnBtnMC"
+      displacementEnable="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DarkFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <!--战役按钮-->
+    <component
+      stylename="mainToolBar.battleBtnBgMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.battleBtnBgMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.BattleBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.battleBtnBgMC"
+      displacementEnable="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DarkFilter,core.GrayFilter"
+      tipDirctions="1"
+      x="0"
+      y="0" />
+    <!--城堡按钮-->
+    <component
+      stylename="mainToolBar.castleBtnBgMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.castleBtnBgMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.CastleBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.castleBtnBgMC"
+      displacementEnable="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DarkFilter,core.GrayFilter"
+      tipDirctions="1"
+      x="0"
+      y="0" />
+    <!--外城按钮-->
+    <component
+      stylename="mainToolBar.outerCityBgMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.outerCityBgMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.OuterCityBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.outerCityBgMC"
+      displacementEnable="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DarkFilter,core.GrayFilter"
+      tipDirctions="1"
+      x="0"
+      y="0" />
+    <!--推荐好友按钮-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.recommendBtn"
+      resourceLink="asset.mainToolBar.RecommendBtnImg"
+      x="294"
+      y="100" />
+    <!--邀请好友按钮-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.InviteBtnImg"
+      resourceLink="asset.mainToolBar.InviteBtnImg"
+      x="294"
+      y="45" />
+    <!--申请入队列表-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.applyJoinTeam"
+      resourceLink="asset.mainToolBar.applyJoinBtnImg"
+      x="528"
+      y="41" />
+    <!--位面入侵信息按钮-->
+    <component
+      stylename="mainToolBar.planesInvadeBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.planesInvadeBtnImg" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.planesInvadeBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.planesInvadeBtnMC"
+      x="400"
+      y="100" />
+    <!--充值按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mainToolBar.PayBtn"
+      backStyle="asset.mainToolBar.PayBtnBack"
+      iconStyle="asset.mainToolBar.PayBtnTxt"
+      iconInnerRectString="16,48,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="77"
+      height="33"
+      x="-54"
+      y="287" />
+    <!--战斗中公会聊天按钮-->
+    <component
+      stylename="maintoolbar.ConsortiaChatBtnAsset"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.maintoolbar.ConsortiaChatBtn" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="maintoolbar.ConsortiaChatBtn"
+      button="maintoolbar.ConsortiaChatBtnAsset"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      tipGapH="0"
+      tipGapV="5"
+      x="376"
+      y="2" />
+    <!--更新公告-->
+    <component
+      classname="yishi.view.frame.UpdateBroadCastFrame"
+      stylename="mainToolBar.BroadCastFrame"
+      parentStyle="core.Frame1"
+      containerX="14"
+      containerY="50"
+      width="651"
+      height="560" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="mainToolBar.UpdateBroadCastBack1"
+      parentStyle="core.describeBackground_style11"
+      width="619"
+      height="384"
+      x="1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="mainToolBar.UpdateBroadCastBack3"
+      parentStyle="core.FameBottomImage"
+      width="621"
+      height="53"
+      x="1"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mainToolBar.UpdateBroadCastBtn"
+      backStyle="asset.mainToolBar.ConsortiaBtnAsset"
+      iconStyle="asset.broadcast.UpdateBtnTxt"
+      iconInnerRectString="34,46,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="254"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="mainToolBar.UpdateBroadCastVScrollbar02"
+      parentStyle="core.VScrollbar02"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="0,0,10,10,0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="mainToolBar.UpdateBroadCastScroll"
+      vScrollbarStyle="mainToolBar.UpdateBroadCastVScrollbar02"
+      hScrollbarStyle="mainToolBar.UpdateBroadCastVScrollbar02"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,-20,2,-20,3"
+      viewportInnerRectString="-5,0,-10,0,5"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="590"
+      height="350"
+      x="8"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mainToolBar.UpdateBroadCastContent"
+      textFormatStyle="mainToolBar.UpdateBroadCastContent_t"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="550"
+      x="18"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mainToolBar.UpdateBroadCastDate"
+      textFormatStyle="mainToolBar.UpdateBroadCastDate_t"
+      filterString="mainToolBar.UpdateBroadCastDate_g"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="340"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="mainToolBar.BtnContainer"
+      x="125"
+      y="31" />
+    <!--英灵按钮-->
+    <component
+      stylename="mainToolBar.petBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.petBtnMc" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.PetBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.petBtnMC"
+      x="0"
+      y="0" />
+    <!--跨服继续撮合按钮-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.crossGoOnBtn.back"
+      resourceLink="asset.mainToolBar.crossGoOnBtn.back"
+      x="56"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.crossGoOnBtn.button"
+      resourceLink="asset.mainToolBar.crossGoOnBtn.button" />
+    <!--	跨服取消撮合	-->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.crossCancelBtn.back"
+      resourceLink="asset.mainToolBar.crossCancelBtn.back"
+      x="56"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mainToolBar.crossCancelBtn.button"
+      resourceLink="asset.mainToolBar.crossCancelBtn.button" />
+    <!--   跨副本时间     -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mainToolBar.timeTxt"
+      textFormatStyle="mainToolBar.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="40"
+      x="-40"
+      y="124" />
+    <!--考古按钮-->
+    <component
+      stylename="mainToolBar.archaeologyBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.archaeologyBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.archaeologyBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.archaeologyBtnMC"
+      y="0" />
+    <!--泰坦按钮-->
+    <component
+      stylename="mainToolBar.titanBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.titanBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.titanBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.titanBtnMC"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="mainToolBar.crossContiner" />
+    <!--   OpenModuleTips     -->
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.ShopBtnStrip"
+      x="33"
+      y="254"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.PackBtnStrip"
+      x="80"
+      y="260"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.PetBtnStrip"
+      x="127"
+      y="256"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.HeroBtnStrip"
+      x="174"
+      y="258"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.mountBtnStrip"
+      x="221"
+      y="257"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.StarBtnStrip"
+      x="268"
+      y="262"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.SkillBtnStrip"
+      x="315"
+      y="251"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.storeBtnStrip"
+      x="362"
+      y="256"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.archaeologyBtnStrip"
+      x="409"
+      y="251"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.FriendsBtnStrip"
+      x="456"
+      y="263"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.TitanBtnStrip"
+      x="223"
+      y="260"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.GuildBtnStrip"
+      x="503"
+      y="260"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <!--圣器按钮-->
+    <component
+      stylename="mainToolBar.petHallowsBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.petHallowsBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.petHallowsBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.petHallowsBtnMC"
+      x="-5"
+      y="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="mainToolBar.petHallowsBtnStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="123"
+      y="190" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.SkillBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.skillBtnMC"
+      x="0"
+      y="0" />
+    <component
+      stylename="mainToolBar.artifactBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.artifactBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.artifactBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.artifactBtnMC"
+      x="-5"
+      y="0" />
+    <component
+      stylename="mainToolBar.HeroRoadBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.HeroRoadBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.HeroRoadBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.HeroRoadBtnMC"
+      x="68"
+      y="200" />
+    <component
+      stylename="mainToolBar.nursingSpiritBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.nursingSpiritBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.nursingSpiritBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.nursingSpiritBtnMC"
+      x="-8"
+      y="0" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.ShopBtn"
+      button="mainToolBar.ShopBtn"
+      x="40"
+      y="254" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.PackBtn"
+      button="mainToolBar.PackBtn"
+      childButton="mainToolBar.artifactBtn"
+      x="87"
+      y="260" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.PetBtn"
+      button="mainToolBar.PetBtn"
+      childButton="mainToolBar.petHallowsBtn"
+      x="127"
+      y="257" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.HeroBtn"
+      button="mainToolBar.HeroBtn"
+      childButton="mainToolBar.nursingSpiritBtn"
+      x="286"
+      y="259" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.titanBtn"
+      button="mainToolBar.titanBtn"
+      x="340"
+      y="260" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.mountBtn"
+      button="mainToolBar.mountBtn"
+      childButton="mainToolBar.monsterBtn"
+      x="439"
+      y="258" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.StarBtn"
+      button="mainToolBar.StarBtn"
+      childButton="mainToolBar.avengerBtn"
+      x="240"
+      y="262" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.SkillBtn"
+      button="mainToolBar.SkillBtn"
+      childButton="mainToolBar.goddessBtn"
+      x="184"
+      y="251" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.storeBtn"
+      button="mainToolBar.storeBtn"
+      childButton="mainToolBar.stelesysBtn"
+      x="138"
+      y="256" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.archaeologyBtn"
+      button="mainToolBar.archaeologyBtn"
+      childButton="mainToolBar.proficiencyBtn"
+      x="0"
+      y="251" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.GuildBtn"
+      button="mainToolBar.GuildBtn"
+      x="388"
+      y="260" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.ReturnBtn"
+      button="mainToolBar.ReturnBtn"
+      x="550"
+      y="259" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.marryBtn"
+      button="mainToolBar.marryBtn"
+      isTween="false"
+      x="443"
+      y="100" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.PopTipBtn"
+      button="mainToolBar.PopTipBtn"
+      isTween="false"
+      x="801"
+      y="738" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.FriendsBtn"
+      button="mainToolBar.FriendsBtn"
+      isTween="false"
+      x="-20"
+      y="250" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.BattleBtn"
+      button="mainToolBar.BattleBtn"
+      isTween="false"
+      x="515"
+      y="167" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.OuterCityBtn"
+      button="mainToolBar.OuterCityBtn"
+      isTween="false"
+      x="515"
+      y="202" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.CastleBtn"
+      button="mainToolBar.CastleBtn"
+      isTween="false"
+      x="515"
+      y="202" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mainToolBar.Warning"
+      textFormatStyle="mainToolBar.Warning_t"
+      multiline="true"
+      wordWrap="true"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="425"
+      height="45"
+      x="-480"
+      y="250" />
+    <component
+      classname="ui.maintoolbar.view.MainToolButton"
+      stylename="mainToolBtn.DragonTalkerBtn"
+      button="mainToolBar.DragonTalkerBtn"
+      childButton="mainToolBar.titanBtn"
+      x="340"
+      y="255" />
+    <component
+      stylename="mainToolBar.DragonTalkerBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.DragonTalkerBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.DragonTalkerBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.DragonTalkerBtnMC"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.goddessBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.goddessBtnMC"
+      x="-10"
+      y="0" />
+    <component
+      stylename="mainToolBar.goddessBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.goddessBtnMC" />
+    <component
+      stylename="mainToolBar.monsterBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.monsterBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.monsterBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.monsterBtnMC"
+      x="-3"
+      y="0" />
+    <component
+      stylename="mainToolBar.avengerBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.avengerBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.avengerBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.avengerBtnMC"
+      x="-3"
+      y="0" />
+    <component
+      stylename="mainToolBar.proficiencyBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.proficiencyBtnMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.proficiencyBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.proficiencyBtnMC"
+      checkRedType="1"
+      x="-3"
+      y="0" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="mainToolBar.stelesysBtn"
+      parentStyle="mainToolBar.HeroBtn"
+      button="mainToolBar.stelesysBtnMC"
+      x="0"
+      y="0" />
+    <component
+      stylename="mainToolBar.stelesysBtnMC"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.mainToolBar.stelesysBtnMC" />
+  </components>
+</style>

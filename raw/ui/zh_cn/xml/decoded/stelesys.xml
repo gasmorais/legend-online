@@ -1,0 +1,1511 @@
+<style
+  name="stelesys"
+  source="ui/zh_cn/swf/stelesys.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.boxLvTxt_t"
+      args="Arial,14,0xf0a04d,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.attValueTxt_t"
+      args="Arial,12,0xa88a67,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.attValueTxt_t2"
+      args="Arial,12,0x1d9f43,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.backUseTxt_t"
+      args="Arial,12,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.attNameTxt_t"
+      args="Arial,12,0xa88a67,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.attNameTxt_t2"
+      args="Arial,12,0x1d9f43,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.intensifydoTxt_t"
+      args="Arial,12,0xa88a67,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.intensifySortTxt_t"
+      args="Arial,12,0xa88a67,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="stele.equip.stateTxtField_t"
+      args="Arial,12,0xa88a67,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.intensifyLockTxt_t"
+      args="Arial,12,0xee1a38,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.intensifyProTxt_t"
+      args="Arial,14,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.intensifyLvTxt_t"
+      args="Arial,14,0xf0a04d,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.stelaNameTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stela.advanceNeedMetrailTxt_t"
+      args="Arial,14,0xF0BF84,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.skillTitle_t"
+      args="Arial,12,0xc9f8ff,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.skillDes_t"
+      args="Arial,12,0x76a0a6,true,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stela.sortRadioTxt_t"
+      args="Arial,12,0xa88a67,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.refineMetrialTxt_t"
+      args="Arial,14,0xefb913,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.refineMLockTxt_t"
+      args="Arial,14,0xa88a67,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.refineMItemTxt_t"
+      args="Arial,12,0xa88a67,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.refineMItemNewTxt_t"
+      args="Arial,12,0x1d9f43,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="stelesys.switchNickTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.recyleMTxt_t"
+      args="Arial,14,0xffffff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.advanceNeedTxt_t"
+      args="Arial,14,0xf0bf84,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stelesys.intensifyAddLvTxt_t"
+      args="Arial,14,0x56e000,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="stela.glow"
+      args="0xb20000,1,3,3,4" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.stelesys.lock"
+      x="56"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.stelesys.lvBg"
+      x="1"
+      y="86" />
+    <bitmapData
+      resourceLink="asset.stelesys.canTensifyFlg"
+      x="511"
+      y="459" />
+    <bitmapData
+      resourceLink="asset.stelesys.fullIntensifyFlg"
+      x="561"
+      y="459" />
+    <bitmapData
+      resourceLink="asset.stelesys.RefreshBagCellComposeLock"
+      x="191"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.stelesys.chooseFkg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.stelesys.intensify.currBg"
+      x="69"
+      y="86" />
+    <bitmapData
+      resourceLink="asset.stelesys.intensifyLine"
+      x="77"
+      y="260" />
+    <bitmapData
+      resourceLink="asset.stelesys.progressBar"
+      x="8"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.stelesys.progressPreBar"
+      x="8"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.stelesys.backIcon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.stelesys.refineIcon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.stela.adMax"
+      x="544"
+      y="454" />
+    <bitmapData
+      resourceLink="asset.stela.ad1"
+      x="375"
+      y="456" />
+    <bitmapData
+      resourceLink="asset.stelesys.back1"
+      x="120"
+      y="51" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="stelesys.main.equipList"
+      vSpace="1"
+      hSpace="15"
+      y="39"
+      x="448" />
+    <custom
+      classname="stelesys.item.StelesysHexinItem"
+      stylename="stelesys.HexinBox"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="150"
+      isFollowMouse="false"
+      x="253"
+      y="68" />
+    <custom
+      classname="stelesys.item.StelesysFuzhuBox"
+      stylename="stelesys.fuzhuBox"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="150"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.stela.mainLineBox"
+      x="31"
+      y="116"
+      spacing="28" />
+    <custom
+      classname="stelesys.item.StelesysNameAndValueTxt"
+      stylename="stelesys.item.att1"
+      x="0"
+      y="117" />
+    <custom
+      classname="stelesys.item.StelesysNameAndValueTxt"
+      stylename="stelesys.item.att2"
+      x="0"
+      y="137" />
+    <custom
+      classname="stelesys.view.StelesysSortView"
+      stylename="stelesys.StelesysSortView"
+      x="0"
+      y="35" />
+    <custom
+      classname="stelesys.view.StelesysSwitchView"
+      stylename="stelesys.StelesysSwitchView"
+      x="230"
+      y="35" />
+    <custom
+      classname="stelesys.view.SteleSysChooseMenu"
+      stylename="stelesys.switchMenu"
+      x="305"
+      y="35" />
+    <custom
+      classname="stelesys.view.SteleSysChooseMenu"
+      stylename="stelesys.IntensifyMenu"
+      x="387"
+      y="35" />
+    <custom
+      classname="stelesys.view.StelesysBagView"
+      stylename="stelesys.switch.bagView"
+      titleCol="4"
+      titleListStyle="stele.switch.bagTitleList"
+      panelStyle="stele.switch.bagPanel"
+      stateStyle="ui.stelesys.switchBagValueTxt"
+      clsStyle="stelesys.cls.StelesysSwitchBox"
+      x="32"
+      y="75" />
+    <custom
+      classname="stelesys.item.StelesysSwitchBox"
+      stylename="stelesys.cls.StelesysSwitchBox"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="150"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="stele.switch.bagTitleList"
+      vSpace="15"
+      hSpace="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="stelesys.icon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="117"
+      iconWidth="150"
+      loadingStyle="asset.core.IconLoading"
+      loadingX="75"
+      loadingY="58"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.view.StelesysIntensifyBagView"
+      stylename="stelesys.intensify.bagView"
+      titleCol="4"
+      titleListStyle="stele.intensify.bagTitleList"
+      panelStyle="stele.intensify.bagPanel"
+      stateStyle="ui.stelesys.intensifyBagValueTxt"
+      clsStyle="stelesys.cls.StelesysMetrialBox"
+      x="390"
+      y="88" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="stele.intensify.bagTitleList"
+      vSpace="10"
+      hSpace="10" />
+    <custom
+      classname="stelesys.item.StelesysMetrialBox"
+      stylename="stelesys.cls.StelesysMetrialBox"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="130"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.item.StelaBackBoxItem"
+      stylename="stelesys.cls.StelaBackBoxItem"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="130"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.item.StelesysRecyleBoxItem"
+      stylename="stelesys.cls.StelesysRecyleBoxItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="88"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="675"
+      y="190" />
+    <custom
+      classname="stelesys.item.StelesysBackBoxItem"
+      stylename="stelesys.cls.StelesysBackBoxItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.view.StelesysBagView"
+      stylename="stelesys.advance.bagView"
+      titleCol="4"
+      titleListStyle="stele.intensify.bagTitleList"
+      panelStyle="stele.intensify.bagPanel"
+      clsStyle="stelesys.cls.StelesysAdvanceBox"
+      x="390"
+      y="88" />
+    <custom
+      classname="stelesys.item.StelesysAdvanceBoxItem"
+      stylename="stelesys.cls.StelesysAdvanceBox"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="130"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.item.StelesysIntensifyBox"
+      stylename="stelesys.intensify.currItem"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="130"
+      isFollowMouse="false"
+      x="127"
+      y="52" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="stelesys.intensify.progressHBar"
+      x="79"
+      y="193" />
+    <custom
+      classname="stelesys.item.StelesysNameAndValueTxt"
+      stylename="stelesys.intensify.addAtt1"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.item.StelesysNameAndValueTxt"
+      stylename="stelesys.intensify.addAtt2"
+      x="0"
+      y="17" />
+    <custom
+      stylename="stelesys.intensify.addAttVbox"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="5"
+      x="0"
+      y="0" />
+    <custom
+      stylename="stelesys.intensify.AttVbox1"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="0"
+      x="0"
+      y="0" />
+    <custom
+      stylename="stelesys.intensify.AttVbox2"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="0"
+      x="140"
+      y="0" />
+    <custom
+      stylename="asset.stele.stepBg"
+      classname="asset.stele.stepBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="stelesys.item.StelaReineBoxItem"
+      stylename="stelesys.refine.currItem"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="150"
+      isFollowMouse="false"
+      x="127"
+      y="192" />
+    <custom
+      classname="asset.stelesys.refineItemMc"
+      stylename="asset.stelesys.refineItemMc"
+      x="72"
+      y="155"
+      alpha="60"
+      mouseEnabled="false" />
+    <custom
+      classname="asset.stelesys.upMc"
+      stylename="asset.stelesys.upMc"
+      x="151"
+      y="282"
+      mouseEnabled="false"
+      width="589"
+      height="318" />
+    <custom
+      classname="stelesys.item.StelesysNameAndValueTxt"
+      stylename="stelesys.refine.att"
+      x="0"
+      y="117" />
+    <custom
+      classname="asset.stelesys.refineMc"
+      stylename="asset.stelesys.refineMc"
+      x="90"
+      y="18" />
+    <custom
+      classname="asset.stelesys.refineMc"
+      stylename="asset.stelesys.newrefineMc"
+      x="75"
+      y="18" />
+    <custom
+      classname="stelesys.view.SteleSysChooseMenu"
+      stylename="stelesys.backMenu"
+      x="20"
+      y="35" />
+    <custom
+      classname="stelesys.view.StelesysBagView"
+      stylename="stelesys.back.bagView"
+      titleCol="4"
+      titleListStyle="stele.intensify.bagTitleList"
+      stateStyle="ui.stelesys.backBagValueTxt"
+      panelStyle="stele.recyle.bagPanel"
+      clsStyle="stelesys.cls.StelaBackBoxItem"
+      x="25"
+      y="73" />
+    <custom
+      classname="stelesys.item.StelesysBoxItem"
+      stylename="ui.stela.tip.itemBox"
+      x="44" />
+    <custom
+      classname="stelesys.item.StelaSkillItem"
+      stylename="ui.stela.tip.skillItem"
+      x="12" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.stela.advance.skillItem"
+      x="46"
+      y="403" />
+    <custom
+      classname="stelesys.item.StelaSkillItem"
+      stylename="ui.stelesys.main.skillItem"
+      x="227"
+      y="413" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.stela.tip.refinevbox"
+      x="15" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.stela.tip.attvBox1"
+      x="20" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.stela.tip.attvBox2"
+      x="0"
+      y="217" />
+    <custom
+      classname="stelesys.item.StelaStepChooseBoxItem"
+      stylename="ui.stela.advance.stepItem"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="150"
+      isFollowMouse="false"
+      x="117"
+      y="35" />
+    <custom
+      classname="stelesys.item.StelaAdvanceChooseItem"
+      stylename="ui.stela.advance.chooseItem"
+      tipStyle="stelesys.view.StelesysboxTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="150"
+      isFollowMouse="false"
+      x="117"
+      y="209" />
+    <custom
+      stylename="ui.stelesys.refineCurrBox"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      strictHeight="43"
+      x="423"
+      y="129" />
+    <custom
+      stylename="ui.stelesys.refineNewBox"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      strictHeight="43"
+      x="698"
+      y="129" />
+    <custom
+      stylename="ui.stelesys.main.tipView"
+      classname="stelesys.view.StelesysboxTip"
+      x="1010"
+      y="68" />
+    <custom
+      stylename="ui.stelesys.switch.tipView"
+      classname="stelesys.view.StelesysboxTip"
+      x="770"
+      y="-22" />
+    <custom
+      stylename="stelesys.recyle.mVbox"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="15"
+      x="675"
+      y="97" />
+    <custom
+      stylename="stelesys.main.hexiSp"
+      classname="flash.display.Sprite"
+      x="97"
+      y="79" />
+    <custom
+      stylename="ui.stela.advance.currGradeItem"
+      classname="stelesys.item.StelesysAdvancTxtItem"
+      x="46"
+      y="355" />
+    <custom
+      stylename="ui.stela.advance.currRefineItem"
+      classname="stelesys.item.StelesysAdvancTxtItem"
+      x="46"
+      y="378" />
+    <custom
+      stylename="ui.asset.stelesys.backMc"
+      classname="asset.stelesys.backMc"
+      x="481"
+      y="255"
+      mouseEnabled="false" />
+    <custom
+      stylename="ui.stela.swithBitTxt"
+      classname="yishi.view.base.TextAddBitmap"
+      x="440"
+      y="32" />
+    <custom
+      stylename="ui.stela.intensifyBitTxt"
+      classname="yishi.view.base.TextAddBitmap"
+      x="540"
+      y="30" />
+    <custom
+      stylename="ui.stela.backBitTxt"
+      classname="yishi.view.base.TextAddBitmap"
+      x="180"
+      y="30" />
+    <custom
+      stylename="ui.stela.intensifyAddLvTxt"
+      classname="yishi.view.base.TextAddBitmap"
+      x="338"
+      y="205" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="stele.recyle.bagPanel"
+      parentStyle="stele.intensify.bagPanel"
+      height="399"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="stele.intensify.bagPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,510,0,0,2"
+      vScrollbarInnerRectString="0,0,0,0,3"
+      vScrollProxy="1"
+      width="510"
+      height="299"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="stele.switch.bagPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,693,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      width="693"
+      height="445"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.attValueTxt"
+      textFormatStyle="ui.stelesys.attValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="118"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.attValueTxt2"
+      textFormatStyle="ui.stelesys.attValueTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="100"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.attNameTxt"
+      textFormatStyle="ui.stelesys.attNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.attNameTxt2"
+      textFormatStyle="ui.stelesys.attNameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.box.attNameTxt"
+      parentStyle="ui.stelesys.attNameTxt"
+      width="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.box.attValueTxt"
+      parentStyle="ui.stelesys.attValueTxt"
+      x="70" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stelesys.mainBg"
+      resourceLink="asset.stelesys.mainBg,asset.stelesys.mainF2,asset.stelesys.mainF1,asset.stelesys.mainF0"
+      imageRectString="0|943|0|535|13,638|97|14|21|13,280|97|43|22|13,38|147|60|21|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.stelesys.boxBg"
+      resourceLink="asset.stelesys.boxBorder1,asset.stelesys.boxBorder2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.switchBtn"
+      backStyle="asset.stelesys.switchBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="97"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.boxLvTxt"
+      textFormatStyle="ui.stelesys.boxLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="20"
+      x="3"
+      y="92" />
+    <component
+      stylename="stelesys.SteleSysFrame"
+      classname="stelesys.SteleSysFrame"
+      parentStyle="core.Frame1"
+      width="985"
+      height="675"
+      containerX="-19"
+      containerY="0" />
+    <component
+      stylename="ui.stelesys.btnBox"
+      classname="com.pickgliss.ui.controls.container.HBox"
+      spacing="15"
+      x="58"
+      y="63" />
+    <component
+      stylename="ui.stelesys.starBox"
+      classname="com.pickgliss.ui.controls.container.HBox"
+      spacing="2"
+      x="12"
+      y="12" />
+    <component
+      stylename="ui.stelesys.border"
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      parentStyle="core.describeBackground_style11"
+      width="950"
+      height="540"
+      x="36"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.stelesys.mainBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.stelesys.SelectMainIcon"
+      unselectedIconStyle="asset.stelesys.UnSelectMainIcon"
+      selectedIconInnerRectString="25,44,9,17,13"
+      unselectedIconInnerRectString="25,42,9,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.stelesys.intensifyBtn"
+      parentStyle="ui.stelesys.mainBtn"
+      selectedIconStyle="asset.stelesys.SelectIntensifyIcon"
+      unselectedIconStyle="asset.stelesys.unSelectIntensifyIcon"
+      selectedIconInnerRectString="11,74,9,17,13"
+      unselectedIconInnerRectString="12,70,9,16,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.stelesys.advanceBtn"
+      parentStyle="ui.stelesys.mainBtn"
+      selectedIconStyle="asset.stelesys.SelectAdvanceIcon"
+      unselectedIconStyle="asset.stelesys.unSelectAdvanceIcon"
+      selectedIconInnerRectString="11,68,9,17,13"
+      unselectedIconInnerRectString="12,65,9,16,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.stelesys.refineBtn"
+      parentStyle="ui.stelesys.mainBtn"
+      selectedIconStyle="asset.stelesys.SelectRefineIcon"
+      unselectedIconStyle="asset.stelesys.unSelectRefineIcon"
+      selectedIconInnerRectString="7,80,9,21,13"
+      unselectedIconInnerRectString="9,76,9,20,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.stelesys.recycleBtn"
+      parentStyle="ui.stelesys.mainBtn"
+      selectedIconStyle="asset.stelesys.SelectReCycleIcon"
+      unselectedIconStyle="asset.stelesys.unSelectReCycleIcon"
+      selectedIconInnerRectString="23,45,10,16,13"
+      unselectedIconInnerRectString="24,43,10,15,13" />
+    <component
+      classname="stelesys.view.SteleSysmainView"
+      stylename="ui.stelesys.MainPage"
+      y="87"
+      x="40" />
+    <component
+      classname="stelesys.view.SteleIntensifyView"
+      stylename="ui.stelesys.IntensifyPage"
+      y="87"
+      x="40" />
+    <component
+      classname="stelesys.view.SteleSysAdvanceView"
+      stylename="ui.stelesys.AdvancePage"
+      y="87"
+      x="40" />
+    <component
+      classname="stelesys.view.SteleSysRefineView"
+      stylename="ui.stelesys.RefinePage"
+      y="87"
+      x="40" />
+    <component
+      classname="stelesys.view.SteleSysRecycleView"
+      stylename="ui.stelesys.RecyclePage"
+      y="87"
+      x="40" />
+    <component
+      stylename="ui.stelesys.main.leftBox1"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="10"
+      x="11"
+      y="101" />
+    <component
+      stylename="ui.stelesys.main.leftBox2"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="15"
+      x="-2"
+      y="112" />
+    <component
+      stylename="ui.stelesys.main.middleBox1"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="0"
+      x="218"
+      y="241" />
+    <component
+      stylename="ui.stelesys.main.middleBox2"
+      classname="com.pickgliss.ui.controls.container.VBox"
+      spacing="2"
+      x="218"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stelesys.previewBtn"
+      backStyle="asset.core.Style23Btn"
+      iconStyle="asset.stelesys.previewBtn"
+      iconInnerRectString="30,70,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="37"
+      y="473" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="stelesys.gBtn"
+      selectedIconStyle="asset.core.checkstyle_10.Selected"
+      unselectedIconStyle="asset.core.checkstyle_10.UnSelected"
+      selectedIconInnerRectString="0,23,0,23,13"
+      unselectedIconInnerRectString="0,23,0,23,13"
+      textStyle="ui.stela.sortRadioTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="23"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="stelesys.sort.restBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.stelesys.reset"
+      y="237"
+      x="12"
+      iconInnerRectString="25,45,10,19,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="stelesys.sort.confirm"
+      parentStyle="core.AlertButtonConfirm_1"
+      iconStyle="asset.stelesys.confirm"
+      y="237"
+      x="107"
+      iconInnerRectString="25,45,8,20,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="stelesys.switchBtn"
+      parentStyle="core.ThewCheckBtn"
+      textStyle="ui.stela.sortRadioTxt"
+      x="0"
+      y="0" />
+    <component
+      stylename="stelesys.SteleSwitchFrame"
+      classname="stelesys.SteleSwitchFrame"
+      parentStyle="core.Frame2"
+      width="770"
+      height="660"
+      containerX="11"
+      containerY="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifySortTxt"
+      textFormatStyle="ui.stelesys.intensifySortTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="0"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifydoTxt"
+      textFormatStyle="ui.stelesys.intensifydoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="262"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.intensifysortBtn"
+      backStyle="asset.stelesys.arrowBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="149"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.intensifyswitchBtn"
+      backStyle="asset.stelesys.arrowBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="365"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stelesys.menuBg"
+      resourceLink="asset.stelesys.condtion,asset.stelesys.main.txtBg"
+      imageRectString="214|47|5|18|13,257|126|0|27|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="stele.equip.stateTxt"
+      autoSize="none"
+      textFieldStyle="stele.equip.stateTxtField"
+      colors="0xffd972,0xffffff"
+      filterString="stela.glow"
+      alphas="1,1"
+      ratios="60,230"
+      width="100"
+      height="18"
+      x="36"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="stele.equip.stateTxtField"
+      textFormatStyle="stele.equip.stateTxtField_t"
+      autoSize="none"
+      width="100"
+      height="18"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="stele.metrial.stateTxt"
+      parentStyle="stele.equip.stateTxt"
+      x="12"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifyLockTxt"
+      textFormatStyle="ui.stelesys.intensifyLockTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="18"
+      x="214"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifyProTxt"
+      textFormatStyle="ui.stelesys.intensifyProTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="203"
+      height="19"
+      x="9"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifyLvTxt"
+      textFormatStyle="ui.stelesys.intensifyLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="20"
+      x="293"
+      y="202" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stelesys.intensifyDoBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.stelesys.intensifyDoBtn"
+      iconInnerRectString="53,48,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="687"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stelesys.stepDoBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.stele.stepUpBtn"
+      iconInnerRectString="53,50,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="729"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stelesys.refineDoBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.stelesys.refreshBtn"
+      iconInnerRectString="53,49,15,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="582"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stelesys.refineBg"
+      resourceLink="asset.stelesys.refreshBg,asset.stelesys.refine.lockBg,asset.stelesys.refine.lock,asset.stelesys.refine.txt"
+      imageRectString="0|943|0|535|13,420|113|345|29|13,419|37|342|37|13,524|141|417|20|13"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.refineReplaceBtn"
+      backStyle="asset.stele.RefreshReplaceSelectBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="819"
+      y="353" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stelesys.backBg"
+      resourceLink="asset.stelesys.backBg,asset.stelesys.backMetral,asset.stelesys.backFt2"
+      imageRectString="0|943|0|535|13,638|200|47|18|13,624|114|435|16|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stelesys.backDoBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.stelesys.backBtn"
+      iconInnerRectString="55,43,15,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="665"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stelesys.backArrow"
+      resourceLink="asset.stelesys.IntensifyIcon"
+      x="594"
+      y="195"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stelesys.IntensifyArrow"
+      resourceLink="asset.stelesys.IntensifyIcon"
+      x="131"
+      y="2"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.stelaNameTxt"
+      textFormatStyle="ui.stelesys.stelaNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="-55"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.tip.stelaNameTxt"
+      textFormatStyle="ui.stelesys.stelaNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="40"
+      wordWrap="true"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.mainStelaNameTxt"
+      parentStyle="ui.stelesys.stelaNameTxt"
+      x="198"
+      y="197" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineStelaNameTxt"
+      parentStyle="ui.stelesys.stelaNameTxt"
+      x="127"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="stelesys.switchNickTxt"
+      textFormatStyle="stelesys.switchNickTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      isAutoFitLength="true"
+      width="150"
+      height="20"
+      x="0"
+      y="117" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.skillTitle"
+      textFormatStyle="ui.stelesys.skillTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="40"
+      wordWrap="true"
+      x="2"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.skillDes"
+      textFormatStyle="ui.stelesys.skillDes_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      width="210"
+      height="80"
+      x="2"
+      y="32"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.sortView.line"
+      resourceLink="asset.tips.splitLine"
+      x="-19"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.tip.line1"
+      resourceLink="asset.tips.splitLine"
+      x="-12" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.tip.line2"
+      resourceLink="asset.tips.splitLine"
+      x="-12" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.switchView.line"
+      resourceLink="asset.tips.splitLine"
+      x="-19"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.switchView.line2"
+      resourceLink="asset.tips.splitLine"
+      x="-19"
+      y="244" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stela.sortRadioTxt"
+      textFormatStyle="ui.stela.sortRadioTxt_t"
+      autoSize="none"
+      width="80"
+      height="22"
+      filterString="core.normal_f"
+      x="28"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="stela.RefreshAttributeBtn"
+      unSelectedStyle="asset.stelesys.refine.lockKuang"
+      selectedStyle="asset.stelesys.refine.lock"
+      width="37"
+      height="37"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineMetrialTxt"
+      textFormatStyle="ui.stelesys.refineMetrialTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="682"
+      y="420" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.backMetrialTxt"
+      parentStyle="ui.stelesys.refineMetrialTxt"
+      x="772"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineMLockTxt"
+      textFormatStyle="ui.stelesys.refineMLockTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="456"
+      y="354" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineMItemTxt"
+      textFormatStyle="ui.stelesys.refineMItemTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="40"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineMItemTxt2"
+      parentStyle="ui.stelesys.refineMItemTxt"
+      x="250"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineMItemNewTxt"
+      textFormatStyle="ui.stelesys.refineMItemNewTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="22"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.refineMItemNewTxt2"
+      parentStyle="ui.stelesys.refineMItemNewTxt"
+      x="250"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.refineNewBtn"
+      backStyle="asset.stele.RefreshReplaceSelectBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="819"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.stelesys.recyleCoBg"
+      resourceLink="asset.stelesys.back1,asset.stelesys.back2,asset.stelesys.back3"
+      x="120"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.recyleMTxt"
+      textFormatStyle="ui.stelesys.recyleMTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="126"
+      y="57" />
+    <component
+      classname="stelesys.StelaUseFrame"
+      stylename="stelesys.StelaUseFrame"
+      parentStyle="core.Frame2"
+      width="308"
+      height="181" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.backHaseTxt"
+      textFormatStyle="ui.stelesys.backUseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="10"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.backUseTxt"
+      textFormatStyle="ui.stelesys.backUseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="10"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.mainUpBtn"
+      backStyle="asset.stelesys.mian.upBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stelesys.mainDownBtn"
+      backStyle="asset.stelesys.mian.downBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.switchBagValueTxt"
+      textFormatStyle="ui.stelesys.attValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="235"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifyBagValueTxt"
+      textFormatStyle="ui.stelesys.attValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="150"
+      y="132" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.backBagValueTxt"
+      textFormatStyle="ui.stelesys.attValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="143"
+      y="192" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.advanceTitleTxt"
+      textFormatStyle="ui.stelesys.attValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.advanceCurrLvTxt"
+      textFormatStyle="ui.stelesys.attValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="115"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.advanceUpFlgTxt"
+      textFormatStyle="ui.stelesys.refineMItemNewTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="180"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.advanceTargetLvTxt"
+      textFormatStyle="ui.stelesys.refineMItemNewTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="270"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.stela.intensify.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,316,0,0,2"
+      vScrollbarInnerRectString="0,0,0,0,3"
+      vScrollProxy="1"
+      width="316"
+      height="160"
+      x="45"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="stela.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      x="941"
+      y="25" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="stela.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="stela.helpFrame.content"
+      titleText="consortia.crossGuild.helpTitle"
+      width="650"
+      textWidth="550" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="stela.intensify.oneKeyBtn"
+      backStyle="asset.core.greenBack150"
+      iconStyle="asset.stelesys.oneKeyBtn"
+      iconInnerRectString="33,77,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="470"
+      y="452" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.stelesys.smallColorImg"
+      resourceLink="asset.stela.color1,asset.stela.color2,asset.stela.color3,asset.stela.color4,asset.stela.color5"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.advanceNeedTxt"
+      textFormatStyle="ui.stelesys.advanceNeedTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="375"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.asset.stelesys.refineIcon"
+      resourceLink="asset.stelesys.refineIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="665"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.asset.stelesys.backIcon"
+      resourceLink="asset.stelesys.backIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="740"
+      y="428" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.refine.rowBit"
+      resourceLink="asset.stelesys.IntensifyIcon"
+      x="648"
+      y="188"
+      scaleX="1" />
+    <component
+      stylename="ui.stelesys.switch.PageBar"
+      classname="yishi.view.base.PageBar"
+      nextBtnStyle="ui.stela.page.NextPageBtn"
+      preBtnStyle="ui.stela.page.LastPageBtn"
+      pageBackStyle="ui.stela.page.pageBg"
+      pageTxtStyle="ui.stela.page.PageTextStyle"
+      x="275"
+      y="543" />
+    <component
+      classname="yishi.view.base.PageBar"
+      stylename="ui.stelesys.intensify.PageBar"
+      parentStyle="ui.stelesys.switch.PageBar"
+      x="546"
+      y="392" />
+    <component
+      classname="yishi.view.base.PageBar"
+      stylename="ui.stelesys.advance.PageBar"
+      parentStyle="ui.stelesys.switch.PageBar"
+      x="546"
+      y="392" />
+    <component
+      classname="yishi.view.base.PageBar"
+      stylename="ui.stelesys.back.PageBar"
+      parentStyle="ui.stelesys.switch.PageBar"
+      x="174"
+      y="487" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stela.page.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.stela.page.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="148"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stela.page.PageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="83"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.stela.page.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="77"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stela.advanceNeedMetrailTxt"
+      textFormatStyle="ui.stela.advanceNeedMetrailTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="260"
+      height="20"
+      x="431"
+      y="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stelesys.intensifyAddLvTxt"
+      textFormatStyle="ui.stelesys.intensifyAddLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+  </components>
+</style>

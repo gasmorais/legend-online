@@ -1,0 +1,348 @@
+<style
+  name="luckylottery"
+  source="ui/zh_cn/swf/luckylottery.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryGoodsItem.baseItemViewTxt_t"
+      args="Arial,12,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryGoodsItem.numbeTxt_t"
+      args="Arial,12,0x00ff54,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryFrame.ruleDescTxt_t"
+      args="Arial,12,0xeee095,,,,,,left"
+      leading="5"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryFrame.specialAwardsItemTxt_t"
+      args="Arial,14,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryFrame.costNumberTxt_t"
+      args="Arial,14,0xb6b36a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryFrame.costDescTxt_t"
+      args="Arial,14,0xb6b36a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryFrame.leftTimeTxt_t"
+      args="Arial,12,0xb6b36a,,,,,,left"
+      letterSpacing="1"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LuckyLotteryFrame.leftCountTxt_t"
+      args="Arial,12,0xc39a59,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.lottery.disc" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="LuckyLotteryGoodsItem.flag"
+      classname="asset.luckylottery.iconEffect"
+      x="24"
+      y="24" />
+    <custom
+      stylename="LuckyLotteryGoodsItem.selctedMc"
+      classname="asset.luckylottery.selctedMc"
+      x="-3"
+      y="-3" />
+    <custom
+      stylename="LuckyLotteryFrame.canRefreshMc"
+      classname="asset.luckylottery.canRefreshMc"
+      x="692"
+      y="394" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="LuckyLotteryGoodsItem.baseItemView"
+      iconStyle="luckyLotteryGoodsItem.baseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="LuckyLotteryGoodsItem.baseItemViewTxt"
+      fashionTextY="46"
+      fashionIconY="42"
+      profileX="0"
+      profileY="0"
+      profileWidth="46"
+      profileHeight="46"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="luckyLotteryGoodsItem.baseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconWidth="46"
+      iconHeight="46"
+      loadingX="24"
+      loadingY="24"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="luckyLotteryGoodsItem.specialAwardsItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconWidth="60"
+      iconHeight="60"
+      loadingX="24"
+      loadingY="24"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="LuckyLotteryFrame.specialAwardsItemView"
+      iconStyle="luckyLotteryGoodsItem.specialAwardsItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="luckyLotteryGoodsItem.specialAwardsItemtTxt"
+      fashionTextY="46"
+      fashionIconY="42"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="713"
+      y="300" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="LuckyLotteryFrame.costItemView"
+      iconStyle="luckyLotteryGoodsItem.specialAwardsItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      fashionTextY="46"
+      fashionIconY="42"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="293"
+      y="457" />
+  </customDisplay>
+  <components>
+    <component
+      classname="luckylottery.LuckyLotteryFrame"
+      stylename="luckylottery.frame"
+      containerX="19"
+      containerY="68"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,3,25,29,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      width="885"
+      height="645" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LuckyLotteryFrame.refreshAwardsBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.lucklottery.refreshBtnBg"
+      iconStyle="asset.lucklottery.refreshBtnTxt"
+      width="114"
+      height="42"
+      iconInnerRectString="20,76,10,22,13"
+      x="692"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LuckyLotteryFrame.extractionBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backStyle="asset.lucklottery.extractionBtnBg"
+      iconStyle="asset.lucklottery.extractionBtnTxt"
+      width="166"
+      height="70"
+      iconInnerRectString="56,55,22,23,13"
+      x="670"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryGoodsItem.baseItemViewTxt"
+      textFormatStyle="LuckyLotteryGoodsItem.baseItemViewTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="46"
+      height="18"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.costItemNumberTxt"
+      textFormatStyle="LuckyLotteryGoodsItem.baseItemViewTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="258"
+      y="500" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyLotteryGoodsItem.specialAwardsItemtTxt"
+      textFormatStyle="LuckyLotteryGoodsItem.baseItemViewTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="18"
+      x="0"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryGoodsItem.numbeTxt"
+      textFormatStyle="LuckyLotteryGoodsItem.numbeTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="46"
+      height="22"
+      x="0"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.ruleDescTxt"
+      textFormatStyle="LuckyLotteryFrame.ruleDescTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="190"
+      height="230"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.specialAwardsItemTxt"
+      textFormatStyle="LuckyLotteryFrame.specialAwardsItemTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="25"
+      x="708"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.costNumberTxt"
+      textFormatStyle="LuckyLotteryFrame.costNumberTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="111"
+      height="25"
+      type="input"
+      restrict="0-9"
+      x="490"
+      y="462" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.costDescTxt"
+      textFormatStyle="LuckyLotteryFrame.costDescTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="196"
+      height="25"
+      x="355"
+      y="485" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="LuckyLotteryLeftItem.bg"
+      resourceLink="asset.luckyLotteryLeftItem.Bg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="LuckyLotteryFrame.leftBg"
+      resourceLink="asset.luckyLotteryFrame.leftBg"
+      x="-280"
+      y="-80" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="LuckyLotteryLeftItem.typeScaleFrameImg"
+      resourceLink="asset.luckyLotteryLeftItem.typeBg1,asset.luckyLotteryLeftItem.typeBg2,asset.luckyLotteryLeftItem.typeBg3,asset.uckyLotteryLeftItem.typeBg4"
+      x="20" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="LuckyLotteryFrame.rightBg"
+      resourceLink="1uckyLotteryFrame.border,1uckyLotteryFrame.centerBg,asset.1uckyLotteryFrame.bottomBg1,asset.1uckyLotteryFrame.bottomBg2,asset.1uckyLotteryFrame.bottomBg3,asset.1uckyLotteryFrame.bottomBg4,1uckyLotteryFrame.rightBg1,asset.1uckyLotteryFrame.rightBg2,asset.1uckyLotteryFrame.rightBg4,asset.1uckyLotteryFrame.rightBg5"
+      imageRectString="-2|-2|19,0|0|19,0|445|19,0|465|19,205|460|19,340|457|19,487|0|19,482|2|19,487|252|19,547|280|19"
+      x="148"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="1uckyLotteryFrame.border"
+      width="704"
+      height="538"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="1uckyLotteryFrame.centerBg"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="486"
+      height="445" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="1uckyLotteryFrame.rightBg1"
+      resourceLink="asset.luckyLotteryFrame.rightBg1"
+      scaleGridString="34,30,35,31"
+      width="210"
+      height="445" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="LuckyLotteryLeftItem.hbox"
+      spacing="-18"
+      x="145"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="LuckyLotteryFrame.vbox"
+      x="148"
+      y="0"
+      spacing="-8" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="LuckyLotteryFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,190,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="190"
+      height="210"
+      x="638"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.leftTimeTxt"
+      textFormatStyle="LuckyLotteryFrame.leftTimeTxt_t"
+      autoSize="none"
+      width="400"
+      height="25"
+      x="355"
+      y="507" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LuckyLotteryFrame.leftCountTxt"
+      textFormatStyle="LuckyLotteryFrame.leftCountTxt_t"
+      autoSize="none"
+      width="200"
+      height="68"
+      x="660"
+      y="427"
+      wordWrap="true" />
+  </components>
+</style>

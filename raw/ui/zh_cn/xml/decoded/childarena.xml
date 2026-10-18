@@ -1,0 +1,1122 @@
+<style
+  name="childarena"
+  source="ui/zh_cn/swf/childarena.swf">
+  <sets>
+    <!-- ChildArenaReadyFrame -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.activityTime_t"
+      letterSpacing="0"
+      args="Arial,14,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.activityDesc_t"
+      letterSpacing="0"
+      args="Arial,12,0xb9985f,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.myScore_t"
+      letterSpacing="0"
+      args="Arial,12,0xfae86c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.waitTimeTextField_t"
+      letterSpacing="0"
+      args="Arial,40,0xffed99,true,,,,,center" />
+    <!-- ChildArenaSeatItem -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.roleNum_t1"
+      letterSpacing="0"
+      args="Arial,12,0xc21a34,,,,,,center"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.roleNum_t2"
+      letterSpacing="0"
+      args="Arial,12,0x29d113,,,,,,center"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.roleName_t"
+      letterSpacing="0"
+      args="Arial,12,0x31b2e2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.roleLevel_t"
+      letterSpacing="0"
+      args="Arial,12,0xffe400,,,,,,center" />
+    <!-- ArenaChildItemView -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.fightingCapacity_t"
+      letterSpacing="0"
+      args="Arial,12,0xe8a820,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.childNum_t1"
+      letterSpacing="0"
+      args="Arial,14,0xc21a34,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.childNum_t2"
+      letterSpacing="0"
+      args="Arial,14,0x29d113,,,,,,center" />
+    <!-- ChildArenaHurtUpView -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.battle.roleNum_t"
+      letterSpacing="0"
+      args="Arial,12,0x29d113,,,,,,center"
+      underline="true" />
+    <!-- page -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="childarena.PageText_t"
+      letterSpacing="0"
+      args="Arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="childarena.PageText_f"
+      args="0x3c2000,1,1,1,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaSignFrame.signText1_t"
+      args="Arial,12,0x00c913,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaRightView.guessText_t"
+      args="Arial,12,0xe4d29c,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaRightView.sortTitleText_t"
+      args="Arial,12,0xb6e4ff,true,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaRightView.alertText_t"
+      args="Arial,12,0xfff6ce,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaLeftView.alertText_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaPlayerItem.nameText_t"
+      args="Arial,12,0xcecfd0,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaLeftView.leftTimeField_t"
+      args="Arial,30,0xffffff,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildArenaSignFrame.rewardItemText_t"
+      args="arial,12,0xffffff,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ChildArenaSignFrame.back"
+      x="5"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.ChildArenaHeadItemView.itemBack"
+      x="1"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.ChildArenaSignFrame.autoJoinImage"
+      x="537"
+      y="144" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="childarena.pageItems"
+      x="-13"
+      y="-47" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="childarena.StartBtn"
+      back="childarena.RoomRightStartBtnBack"
+      button="childarena.RoomRightStartBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="672"
+      y="338" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="childarena.CancelBtn"
+      back="childarena.RoomRightCancelBtnBack"
+      button="childarena.RoomRightCancelBtn"
+      x="671"
+      y="340" />
+    <custom
+      classname="childarena.ChildArenaRewardItem"
+      stylename="ChildArenaRightView.ChildArenaRewardItem"
+      x="5"
+      y="0" />
+    <custom
+      classname="childarena.ChildArenaLeftView"
+      stylename="ChildArenaMainFrame.leftView"
+      x="5"
+      y="45" />
+    <custom
+      classname="childarena.ChildArenaRightView"
+      stylename="ChildArenaMainFrame.rightView"
+      x="780"
+      y="45" />
+    <custom
+      classname="childarena.ChildArenaHeadItemView"
+      stylename="ChildArenaLeftView.childItem"
+      tipStyle="yishi.view.tips.ChildrenFigureTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="60"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ChildArenaRewardItem.item"
+      parentStyle="core.BaseItemView"
+      profileX="0"
+      profileY="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="childarena.ChildArenaPlayerItem"
+      stylename="ChildArenaLeftView.item"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ChildArenaHeadItemView.childIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="35"
+      loadingY="31"
+      iconWidth="45"
+      iconHeight="45"
+      x="0"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ChildArenaSignFrame.rewardItem"
+      iconStyle="ChildArenaSignFrame.rewardItem.CellIcon"
+      textStyle="ChildArenaSignFrame.rewardItemText"
+      parentStyle="core.BaseItemView"
+      profileWidth="64"
+      profileHeight="64"
+      isShowProfile="true"
+      strengthenX="32"
+      strengthenY="32"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ChildArenaSignFrame.rewardItem.CellIcon"
+      parentStyle="core.BaseItemViewIcon"
+      loadingX="32"
+      loadingY="32"
+      iconWidth="64"
+      iconHeight="64"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.ChildArenaRightView.lightMc"
+      stylename="ChildArenaRightView.lightMc"
+      x="53"
+      y="438" />
+  </customDisplay>
+  <components>
+    <!-- ######################## ChildArenaReadyFrame ######################## -->
+    <component
+      classname="childarena.ChildArenaReadyFrame"
+      stylename="childarena.ChildArenaReadyFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="51"
+      width="878"
+      height="609" />
+    <!-- 取消按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="childarena.RoomRightCancelBtnBack"
+      resourceLink="asset.childarena.RoomRightCancelBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="childarena.RoomRightCancelBtn"
+      resourceLink="asset.childarena.RoomRightCancelBtn" />
+    <!-- 开始按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="childarena.RoomRightStartBtnBack"
+      resourceLink="asset.childarena.RoomRightStartBtnBack"
+      x="61"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="childarena.RoomRightStartBtn"
+      resourceLink="asset.childarena.RoomRightStartBtn" />
+    <!-- 粗线框 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="childarena.BackBorder"
+      parentStyle="core.describeBackground_style11"
+      width="841"
+      height="501"
+      x="3"
+      y="11" />
+    <!-- 守卫竞技/剩余次数.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.leftTimes"
+      resourceLink="asset.childarena.leftTimes"
+      x="677"
+      y="472" />
+    <!-- 守卫竞技/下框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.bottomBack"
+      resourceLink="asset.childarena.bottomBack"
+      x="13"
+      y="330" />
+    <!-- 守卫竞技/活动时间.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.activityTimeBack"
+      resourceLink="asset.childarena.activityTimeBack"
+      x="90"
+      y="335" />
+    <!-- 守卫竞技/开始的底.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.startBack"
+      resourceLink="asset.childarena.startBack"
+      x="656"
+      y="327" />
+    <!-- 守卫竞技/快速.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.start"
+      resourceLink="asset.childarena.start"
+      x="685"
+      y="360" />
+    <!-- 守卫竞技/取消.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.cancel"
+      resourceLink="asset.childarena.cancel"
+      x="685"
+      y="385" />
+    <!-- 守卫竞技/更换守卫.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.changeChildTxtImg"
+      resourceLink="asset.childarena.changeChildTxtImg"
+      x="65"
+      y="124" />
+    <!-- 守卫竞技/匹配中.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.scanning"
+      resourceLink="asset.childarena.scanning"
+      x="215"
+      y="134" />
+    <!-- 更换守卫按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="childarena.changeBtn"
+      backStyle="asset.childarena.changeBtnBg"
+      iconStyle="asset.childarena.clickToChangeTxtImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="111"
+      height="37"
+      iconInnerRectString="18,74,10,20,13"
+      x="50"
+      y="215" />
+    <!-- 活动时间 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.activityTime"
+      textFormatStyle="childarena.activityTime_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="500"
+      height="20"
+      x="72"
+      y="349" />
+    <!-- 活动说明 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.activityDesc"
+      textFormatStyle="childarena.activityDesc_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="600"
+      height="110"
+      x="30"
+      y="372"
+      wordWrap="true"
+      multiline="true" />
+    <!-- 我的积分 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.myScore"
+      textFormatStyle="childarena.myScore_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="668"
+      y="471" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="childarena.waitTime"
+      colors="0xffed99,0xdec126"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="childarena.waitTimeTextField"
+      mouseEnabled="false"
+      width="180"
+      height="40"
+      x="420"
+      y="123" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.waitTimeTextField"
+      textFormatStyle="childarena.waitTimeTextField_t"
+      autoSize="none"
+      width="180"
+      height="40" />
+    <!-- ######################## ChildArenaListView ######################## -->
+    <component
+      classname="childarena.ChildArenaListView"
+      stylename="childarena.ChildArenaListView"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="14"
+      containerY="50"
+      escEnable="false"
+      moveEnable="false"
+      width="200"
+      height="506"
+      x="-209"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="childarena.headVbox"
+      spacing="-12"
+      x="-6"
+      y="-3" />
+    <!-- ######################## ChildArenaSeatItem ######################## -->
+    <!-- 守卫竞技/出战框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.fightRoleBack"
+      resourceLink="asset.childarena.fightRoleBack"
+      x="0"
+      y="0" />
+    <!-- 守卫竞技/增援框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.reinforceRoleBack"
+      resourceLink="asset.childarena.reinforceRoleBack"
+      x="0"
+      y="0" />
+    <!-- 守卫竞技/出战.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.fightTxtImg"
+      resourceLink="asset.childarena.fightTxtImg"
+      x="70"
+      y="280" />
+    <!-- 守卫竞技/增援.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.reinforceTxtImg"
+      resourceLink="asset.childarena.reinforceTxtImg"
+      x="70"
+      y="280" />
+    <!-- 守卫竞技/虚位以待.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.waitToSelectBack"
+      resourceLink="asset.childarena.waitToSelectBack"
+      x="52"
+      y="281" />
+    <!-- 守卫竞技/待续.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.waitToSelect"
+      resourceLink="asset.childarena.waitToSelect"
+      x="16"
+      y="27" />
+    <!-- 守卫竞技/序号框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.roleNumBack"
+      resourceLink="asset.childarena.roleNumBack"
+      x="0"
+      y="2" />
+    <!-- 守卫竞技/选中框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.selectedRole"
+      resourceLink="asset.childarena.selectedRole"
+      x="-4"
+      y="-6" />
+    <!-- 序号 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.roleNum"
+      textFormatStyle="childarena.roleNum_t1,childarena.roleNum_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="30"
+      height="20"
+      x="17"
+      y="7" />
+    <!-- 名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.roleName"
+      textFormatStyle="childarena.roleName_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="35"
+      y="8" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.roleLevel"
+      textFormatStyle="childarena.roleLevel_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="90"
+      height="20"
+      x="126"
+      y="9" />
+    <!-- ######################## ArenaChildItemView ######################## -->
+    <!-- 战斗力 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.fightingCapacity"
+      textFormatStyle="childarena.fightingCapacity_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="90"
+      height="40"
+      x="82"
+      y="51"
+      wordWrap="true"
+      multiline="true" />
+    <!-- 序号 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.childNum"
+      textFormatStyle="childarena.childNum_t1,childarena.childNum_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="30"
+      height="20"
+      x="6"
+      y="3" />
+    <!-- ######################## ChildArenaHurtUpView ######################## -->
+    <!-- 守卫竞技界面/头像框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childArenaHeadBack"
+      resourceLink="asset.battle.childArenaHeadBack"
+      x="30"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.childArenaHBox1"
+      x="-316"
+      y="-26"
+      spacing="-6" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="battle.childArenaHBox2"
+      x="18"
+      y="-26"
+      spacing="-9" />
+    <!-- 头像遮罩 -->
+    <bitmapData
+      resourceLink="asset.battle.childArena.processBg"
+      x="28"
+      y="74" />
+    <bitmapData
+      resourceLink="asset.battle.childArena.process1"
+      x="30"
+      y="78" />
+    <bitmapData
+      resourceLink="asset.battle.childArena.process2"
+      x="30"
+      y="78" />
+    <!-- 守卫竞技界面/血条1.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childArenaHp1"
+      resourceLink="asset.battle.childArenaHp1"
+      x="25"
+      y="71" />
+    <!-- 守卫竞技界面/血条2.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childArenaHp2"
+      resourceLink="asset.battle.childArenaHp2"
+      x="25"
+      y="71" />
+    <!-- 守卫竞技界面/文字框小.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.battle.SkillCountBack"
+      resourceLink="asset.battle.SkillCountBack"
+      x="44"
+      y="13" />
+    <!-- 守卫竞技界面/文字框大.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.battle.SkillBigCountBack"
+      resourceLink="asset.battle.SkillBigCountBack"
+      x="25"
+      y="71" />
+    <!-- 守卫竞技界面/文字框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.battle.roleNum"
+      textFormatStyle="childarena.battle.roleNum_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="30"
+      height="20"
+      x="69"
+      y="57" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="childarena.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="18"
+      loadingY="26"
+      iconWidth="40"
+      iconHeight="40"
+      x="0"
+      y="0" />
+    <!-- 守卫竞技界面/红光.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childArenaMask2"
+      resourceLink="asset.battle.childArenaMask2"
+      x="32"
+      y="24" />
+    <!-- 守卫竞技界面/黄光.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="battle.childArenaMask1"
+      resourceLink="asset.battle.childArenaMask1"
+      x="25"
+      y="25" />
+    <!-- ######################## ChildArenaSkillItemListView ######################## -->
+    <!-- 守卫竞技界面/换人.png -->
+    <bitmapData
+      resourceLink="asset.battle.childArenaSkillSwitch"
+      x="0"
+      y="0" />
+    <!-- 守卫竞技界面/增援.png -->
+    <bitmapData
+      resourceLink="asset.battle.childArenaSkillReinforce"
+      x="0"
+      y="0" />
+    <!-- ######################## 翻页按钮 ######################## -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childarena.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      x="0"
+      y="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childarena.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="120"
+      y="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="childarena.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="4"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childarena.PageText"
+      textFormatStyle="childarena.PageText_t"
+      filterString="childarena.PageText_f"
+      x="43"
+      y="3"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="childarena.ChildArenaSignFrame"
+      stylename="childarena.ChildArenaSignFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="51"
+      width="735"
+      height="635" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildArenaSignFrame.joinBtn1"
+      backStyle="asset.ChildArenaSignFrame.joinBtn1Back"
+      iconStyle="asset.ChildArenaSignFrame.joinBtn1Text1"
+      iconInnerRectString="37,65,7,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="540"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildArenaSignFrame.joinBtn2"
+      parentStyle="ChildArenaSignFrame.joinBtn1"
+      x="540"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildArenaSignFrame.enterBtn"
+      backStyle="asset.ChildArenaSignFrame.enterBtnBack"
+      iconStyle="asset.ChildArenaSignFrame.enterBtnText"
+      iconInnerRectString="54,75,14,35,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="260"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaSignFrame.signText1"
+      textFormatStyle="ChildArenaSignFrame.signText1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="201"
+      x="491"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaSignFrame.signText2"
+      parentStyle="ChildArenaSignFrame.signText1"
+      width="201"
+      x="515"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaSignFrame.warText1"
+      parentStyle="ChildArenaSignFrame.signText1"
+      width="256"
+      x="458"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaSignFrame.warText2"
+      parentStyle="ChildArenaSignFrame.signText1"
+      width="256"
+      x="435"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildArenaSignFrame.rewardHbox1"
+      spacing="5"
+      x="125"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildArenaSignFrame.rewardHbox2"
+      spacing="5"
+      x="125"
+      y="375" />
+    <component
+      classname="childarena.ChildArenaMainFrame"
+      stylename="childarena.ChildArenaMainFrame"
+      parentStyle="core.Frame1"
+      backStyle="asset.childarena.ChildArenaSignFrameBack"
+      closeInnerRectString="29,16,60,29,14"
+      containerX="15"
+      containerY="51"
+      width="1085"
+      height="640" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaMainFrame.titleImage"
+      resourceLink="asset.ChildArenaMainFrame.titleImage1,asset.ChildArenaMainFrame.titleImage2"
+      x="395"
+      y="-32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaRightView.guessText"
+      textFormatStyle="ChildArenaRightView.guessText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaRightView.warText"
+      parentStyle="ChildArenaRightView.guessText"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaRightView.sortTitleText"
+      textFormatStyle="ChildArenaRightView.sortTitleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="30"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaRightView.guessSelfText"
+      parentStyle="ChildArenaRightView.sortTitleText"
+      x="35"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildArenaRightView.guessBtn"
+      backStyle="asset.ChildArenaRightView.guessBtnBack"
+      iconStyle="asset.ChildArenaRightView.guessBtnText1"
+      iconInnerRectString="48,58,12,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="60"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaRightView.alertText"
+      textFormatStyle="ChildArenaRightView.alertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="245"
+      height="30"
+      x="10"
+      y="490"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildArenaRightView.rewardContiner"
+      x="-3"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildArenaRightView.btnContiner"
+      x="5"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaRewardItem.rankImage"
+      resourceLink="asset.ChildArenaRewardItem.rankImage1,asset.ChildArenaRewardItem.rankImage2,asset.ChildArenaRewardItem.rankImage3,asset.ChildArenaRewardItem.rankImage4,asset.ChildArenaRewardItem.rankImage5"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildArenaRewardItem.rewardHbox"
+      spacing="3"
+      x="60"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildArenaRightView.rankSelectBtn1"
+      selectedStyle="asset.core.checkstyle_2.Selected_1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected_1"
+      selectedIconStyle="asset.ChildArenaRewardItem.rankImage1"
+      unselectedIconStyle="asset.ChildArenaRewardItem.rankImage1"
+      selectedIconInnerRectString="25,44,1,17,13"
+      unselectedIconInnerRectString="25,44,1,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildArenaRightView.rankSelectBtn2"
+      selectedStyle="asset.core.checkstyle_2.Selected_1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected_1"
+      selectedIconStyle="asset.ChildArenaRewardItem.rankImage2"
+      unselectedIconStyle="asset.ChildArenaRewardItem.rankImage2"
+      selectedIconInnerRectString="25,44,1,17,13"
+      unselectedIconInnerRectString="25,44,1,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildArenaRightView.rankSelectBtn3"
+      selectedStyle="asset.core.checkstyle_2.Selected_1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected_1"
+      selectedIconStyle="asset.ChildArenaRewardItem.rankImage3"
+      unselectedIconStyle="asset.ChildArenaRewardItem.rankImage3"
+      selectedIconInnerRectString="25,44,1,17,13"
+      unselectedIconInnerRectString="25,44,1,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildArenaRightView.rankSelectBtn4"
+      selectedStyle="asset.core.checkstyle_2.Selected_1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected_1"
+      selectedIconStyle="asset.ChildArenaRewardItem.rankImage4"
+      unselectedIconStyle="asset.ChildArenaRewardItem.rankImage4"
+      selectedIconInnerRectString="25,44,1,17,13"
+      unselectedIconInnerRectString="25,44,1,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ChildArenaRightView.rankSelectBtn5"
+      selectedStyle="asset.core.checkstyle_2.Selected_1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected_1"
+      selectedIconStyle="asset.ChildArenaRewardItem.rankImage5"
+      unselectedIconStyle="asset.ChildArenaRewardItem.rankImage5"
+      selectedIconInnerRectString="25,55,1,17,13"
+      unselectedIconInnerRectString="25,55,1,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ChildArenaLeftView.formationBtn"
+      backStyle="asset.ChildArenaLeftView.formationBtnBack"
+      iconStyle="asset.ChildArenaLeftView.formationBtnText"
+      iconInnerRectString="35,86,20,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="315"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.periodImage"
+      resourceLink="asset.ChildArenaLeftView.periodImage1,asset.ChildArenaLeftView.periodImage2,asset.ChildArenaLeftView.periodImage3"
+      x="230"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaLeftView.alertText"
+      textFormatStyle="ChildArenaLeftView.alertText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="680"
+      height="20"
+      x="55"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaPlayerItem.back"
+      resourceLink="asset.ChildArenaPlayerItem.back1,asset.ChildArenaPlayerItem.back2,asset.ChildArenaPlayerItem.back3,asset.ChildArenaPlayerItem.back4"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaPlayerItem.nameText"
+      textFormatStyle="ChildArenaPlayerItem.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="-5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildArenaLeftView.itemContiner"
+      x="30"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ChildArenaLeftView.lineContiner"
+      x="105"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.lineImage01"
+      resourceLink="asset.ChildArenaLeftView.line011,asset.ChildArenaLeftView.line012,asset.ChildArenaLeftView.line013"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.lineImage02"
+      resourceLink="ChildArenaLeftView.lineImage021,ChildArenaLeftView.lineImage022,ChildArenaLeftView.lineImage023"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage021"
+      resourceLink="asset.ChildArenaLeftView.line011"
+      scaleX="-1"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage022"
+      resourceLink="asset.ChildArenaLeftView.line012"
+      scaleX="-1"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage023"
+      resourceLink="asset.ChildArenaLeftView.line013"
+      scaleX="-1"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.lineImage11"
+      resourceLink="asset.ChildArenaLeftView.line111,asset.ChildArenaLeftView.line112,asset.ChildArenaLeftView.line113"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.lineImage12"
+      resourceLink="ChildArenaLeftView.lineImage121,ChildArenaLeftView.lineImage122,ChildArenaLeftView.lineImage123"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage121"
+      resourceLink="asset.ChildArenaLeftView.line111"
+      scaleX="-1"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage122"
+      resourceLink="asset.ChildArenaLeftView.line112"
+      scaleX="-1"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage123"
+      resourceLink="asset.ChildArenaLeftView.line113"
+      scaleX="-1"
+      x="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.lineImage21"
+      resourceLink="asset.ChildArenaLeftView.line211,asset.ChildArenaLeftView.line212,asset.ChildArenaLeftView.line213"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaLeftView.lineImage22"
+      resourceLink="ChildArenaLeftView.lineImage221,ChildArenaLeftView.lineImage222,ChildArenaLeftView.lineImage223"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage221"
+      resourceLink="asset.ChildArenaLeftView.line211"
+      scaleY="-1"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage222"
+      resourceLink="asset.ChildArenaLeftView.line212"
+      scaleY="-1"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaLeftView.lineImage223"
+      resourceLink="asset.ChildArenaLeftView.line213"
+      scaleY="-1"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ChildArenaLeftView.leftTime"
+      colors="0xffd200,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="ChildArenaLeftView.leftTimeField"
+      width="180"
+      height="40"
+      x="325"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaLeftView.leftTimeField"
+      textFormatStyle="ChildArenaLeftView.leftTimeField_t"
+      autoSize="none"
+      width="180"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ChildArenaLeftView.childHbox"
+      spacing="5"
+      x="300"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ChildArenaHeadItemView.posImages"
+      resourceLink="asset.ChildArenaHeadItemView.posImages1,asset.ChildArenaHeadItemView.posImages2,asset.ChildArenaHeadItemView.posImages3,asset.ChildArenaHeadItemView.posImages4"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildArenaSignFrame.rewardItemText"
+      textFormatStyle="ChildArenaSignFrame.rewardItemText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-5"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="ChildArenaSignFrame.autoJoinBtn1"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_6.Selected"
+      width="22"
+      height="22"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSelect="false"
+      x="548"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="ChildArenaSignFrame.autoJoinBtn2"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_6.Selected"
+      width="22"
+      height="22"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSelect="false"
+      x="548"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaSignFrame.autoHelpImage1"
+      resourceLink="asset.ChildArenaSignFrame.autoHelpImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="668"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ChildArenaSignFrame.autoHelpImage2"
+      resourceLink="asset.ChildArenaSignFrame.autoHelpImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="668"
+      y="343" />
+  </components>
+</style>

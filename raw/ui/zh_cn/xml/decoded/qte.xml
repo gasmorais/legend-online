@@ -1,0 +1,83 @@
+<style
+  name="qte"
+  source="ui/zh_cn/swf/qte.swf">
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.qte.QTETimeBg" />
+  </bitmaps>
+  <customDisplay>
+    <!--	QTETraining	-->
+    <custom
+      classname="asset.task.QteBgMc"
+      stylename="task.QteBgMc"
+      x="60"
+      y="23" />
+    <custom
+      classname="asset.task.QteTimeMc"
+      stylename="task.QteTimeMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.task.CountDownMc"
+      stylename="task.CountDownMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.task.QteShine"
+      stylename="task.QteShine"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.task.SucceedMc"
+      stylename="task.SucceedMc"
+      x="0"
+      y="0" />
+    <!-- battle qte -->
+    <custom
+      classname="asset.qte.QTEItemOkEffect"
+      stylename="asset.qte.QTEItemOkEffect"
+      x="25"
+      y="25" />
+    <custom
+      classname="asset.qte.QTESuccess"
+      stylename="asset.qte.QTESuccess"
+      y="55" />
+    <custom
+      classname="asset.qte.QTEItemShowEf"
+      stylename="asset.qte.QTEItemShowEf" />
+    <custom
+      classname="asset.qte.QTEItem"
+      stylename="asset.qte.QTEItem" />
+    <custom
+      classname="asset.qte.QTETime"
+      stylename="qte.QTETime"
+      x="8"
+      y="8" />
+    <custom
+      classname="asset.qte.QTEShowEf"
+      stylename="asset.qte.QTEShowEf" />
+  </customDisplay>
+  <components>
+    <!--	QTETraining	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="task.QteCloseBtn"
+      backStyle="asset.task.QteCloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="500"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="task.QteRestartBtn"
+      backStyle="asset.core.Style12Btn"
+      iconStyle="asset.task.QteRestartBtnImg"
+      iconInnerRectString="65,104,17,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="task.OneKeyBtn"
+      parentStyle="core.UseButton"
+      x="424"
+      y="468" />
+  </components>
+</style>

@@ -1,0 +1,696 @@
+<style name="skyTreasure1" source="ui/zh_cn/swf/skytreasure1.swf">
+	<sets>
+		<set type="flash.text.TextFormat" stylename="skyTreasure.title_t"
+			args="微软雅黑,16,0xfcdfa7,true,,,,,center" />
+		<set type="flash.text.TextFormat" stylename="skyTreasure.label_t"
+			args="Arial,12,0xfcdfa7,true,,,,,left" />
+		<set type="flash.text.TextFormat" stylename="skyTreasure.number_t"
+			args="Arial,12,0xa1eefe,true,,,,,right" />
+		<set type="flash.text.TextFormat" stylename="skyTreasure.button_t"
+			args="Arial,14,0xffffff,true,,,,,center" />
+		<set type="flash.text.TextFormat" stylename="skyTreasure.desc_t"
+			args="Arial,11,0xc7b079,,,,,,left" leading="2" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.proTxt_t"
+			args="Arial,14,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.filters.GlowFilter" stylename="ui.SkybossName.Txt_f"
+			args="0xff6000,0.2,6,6,3" />
+
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.alliconNum_t"
+			args="Arial,14,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.cost1Num_t"
+			args="Arial,14,0xffebc5,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.cost10Num_t"
+			args="Arial,14,0xffebc5,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.cost50Num_t"
+			args="Arial,14,0xffebc5,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.cost1freeTime_t"
+			args="Arial,12,0x00ff00,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.actTime_t"
+			args="Arial,12,0x00f0ff,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.RankTime_t"
+			args="Arial,12,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.MyRank_t"
+			args="Arial,14,0xffebc5,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.MyCoin_t"
+			args="Arial,14,0xffebc5,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.MyRankName_t"
+			args="Arial,14,0xf4c688,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.MyCoinName_t"
+			args="Arial,14,0xf4c688,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.CoinRankName_t"
+			args="Arial,16,0xe3bf96,true,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.CoinRankDesc_t"
+			args="Arial,12,0xE3BF96,,,,,,left" leading="0"  letterSpacing="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.ItemNameTxt_t"
+			args="Arial,14,0x0099ff,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.ItemProTxt_t"
+			args="Arial,14,0xeae1c9,,,,,,right" leading="0" />
+		<set type="flash.text.TextFormat" stylename="SkyTreasureTabItem.Btn.text_t"
+			args="Arial,16,0xFFAF79,true,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="SkyTreasurerankItem.Btn.text_t"
+			args="Arial,12,0xFFF0D1,true,,,,,center" leading="0"  letterSpacing="0" />
+		<set type="flash.text.TextFormat" stylename="SkybossName.timeTxt1_t"
+			args="arial,16,0xff6000,true,,,,,center" />
+		<set type="flash.text.TextFormat" stylename="SkybossName.timeTxt2_t"
+			args="arial,40,0xff6000,true,,,,,center" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.tankRank_t"
+			args="Arial,16,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.RanKName_t"
+			args="Arial,16,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.tankcoin_t"
+			args="Arial,16,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.histankRank_t"
+			args="Arial,16,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.hisRanKserver_t"
+			args="Arial,16,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.histankbane_t"
+			args="Arial,16,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.myhisRankname_t"
+			args="Arial,14,0xf4c68b,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.myhisRank_t"
+			args="Arial,14,0xffebc5,,,,,,left" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.hisRankname_t"
+			args="Arial,14,0xffebc5,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.hisRankserver_t"
+			args="Arial,14,0xf4c68b,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.hisranktime_t"
+			args="Arial,14,0xf4c68b,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.lunpaihangName_t"
+			args="Arial,16,0xd1b186,true,,,,,center" leading="0" />
+
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.lunMycoin_t"
+			args="Arial,14,0xf4c68b,true,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.lunMyrank_t"
+			args="Arial,14,0xf4c68b,true,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.RankItemRank_t"
+			args="Arial,14,0xf4c688,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.RankItemCoin_t"
+			args="Arial,14,0xf4c688,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.RankItemname_t"
+			args="Arial,14,0xf4c688,,,,,,center" leading="0" />
+		<set type="flash.text.TextFormat" stylename="ui.SkyTreasure.RankItemServer_t"
+			args="Arial,14,0xf4c68b,,,,,,center" leading="0" />
+
+	</sets>
+	<bitmaps>
+		<bitmapData resourceLink="asset.skyTreasure.libiao2" x="580"
+			y="144" />
+		<bitmapData resourceLink="asset.skyTreasure.libiao1" x="0"
+			y="0" width="509" />
+		<bitmapData resourceLink="asset.skyTreasure.xian1" x="93"
+			y="7" />
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeItemBg"
+			x="0" y="3" />
+		<bitmapData resourceLink="asset.skyTreasure.tongguanhuawen1"
+			x="336" y="6" />
+		<bitmapData resourceLink="asset.skyTreasure.tongguanhuawen2"
+			x="118" y="6" />
+		<bitmapData resourceLink="asset.skyTreasure.xian7" x="250"
+			y="23" />
+		<bitmapData resourceLink="asset.skyTreasure.xian3" x="0" y="23" />
+		<!-- Tab_Menu1_Title1.png: 抽奖标签页背景 -->
+		<bitmapData resourceLink="asset.skyTreasure.LotteryBack" x="0"
+			y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.paihangbangbg"
+			x="450" y="15" />
+
+		<!-- Tab_Menu1_Title2.png: 兑换标签页背景 -->
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeBack"
+			x="0" y="0" />
+		<!-- 排行榜标签页背景 -->
+		<bitmapData resourceLink="asset.skyTreasure.RankBack" x="0"
+			y="0" />
+		<!-- 烂底条_褐.png: 兑换物品项背景 -->
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeItemBg"
+			x="0" y="0" />
+		<!-- 我的排名底条1.png 或 我的排名底条2.png: 排行项背景 -->
+		<bitmapData resourceLink="asset.skyTreasure.RankItemBg" x="0"
+			y="0" />
+		<!-- 天空秘宝顶部图标.png: 抽奖道具图标 -->
+		<bitmapData resourceLink="asset.skyTreasure.LotteryGoodsIcon"
+			x="0" y="0" />
+		<!-- 天空之石30x30.png: 兑换道具图标 -->
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeGoodsIcon"
+			x="0" y="0" />
+		<!-- 天空之证30x30.png: 钻石图标 -->
+		<bitmapData resourceLink="asset.skyTreasure.DiamondIcon" x="0"
+			y="0" />
+
+		<!-- 兼容代码中引用的 stylename/back 名称（可由 FLA 中的 Library linkage 对应） -->
+		<bitmapData resourceLink="asset.skyTreasure.LotteryViewBack"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeViewBack"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.RankViewBack"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeItemBack"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.RankItemBack"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.ExchangeItemIcon"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.RankRewardIcon"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.LotteryRecordIcon"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.ProbabilityIcon"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.FrameBack" x="0"
+			y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.LotteryNum" x="44"
+			y="261" />
+		<bitmapData resourceLink="asset.skyTreasure.itemBg" x="0"
+			y="0" />
+		<bitmapData resourceLink="asset.skysecrearytary.leftfengexianline"
+			x="134" y="0" height="477" />
+		<bitmapData resourceLink="asset.skysecrearytary.leftbg" x="4"
+			y="2" height="472" width="133" />
+		<bitmapData resourceLink="asset.skysecrearytary.leftfengexian"
+			x="140" y="385" width="523" />
+		<bitmapData resourceLink="asset.skyTreasure.LotteryBack1"
+			x="0" y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.LotteryBack" x="0"
+			y="0" />
+		<bitmapData resourceLink="asset.skyTreasure.lunpaihangicon"
+			x="426" y="13" />
+	</bitmaps>
+	<customDisplay>
+		<custom classname="secretary.item.SkyTreasureTabItem"
+			stylename="secretary.item.SkyTreasureTabItem" spacing="3" x="3" y="2" />
+
+		<custom classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.LotteryBtn" x="20" y="20" width="80" height="30" />
+		<custom classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.ExchangeBtn" x="110" y="20" width="80" height="30" />
+		<custom classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.RankBtn" x="200" y="20" width="80" height="30" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.LotteryGoodsText" textFormat="skyTreasure.label_t"
+			x="20" y="50" width="100" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.LotteryGoodsNum" textFormat="skyTreasure.number_t"
+			x="120" y="50" width="50" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.ExchangeGoodsText" textFormat="skyTreasure.label_t"
+			x="200" y="50" width="100" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.ExchangeGoodsNum" textFormat="skyTreasure.number_t"
+			x="300" y="50" width="50" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.DiamondText" textFormat="skyTreasure.label_t"
+			x="400" y="50" width="50" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.DiamondNum" textFormat="skyTreasure.number_t"
+			x="450" y="50" width="100" height="20" />
+
+		<custom classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="skyTreasure.LotteryScroll" x="20" y="140" width="725"
+			height="350" />
+		<custom classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="skyTreasure.RewardsScroll" x="20" y="140" width="725"
+			height="350" />
+		<custom classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="skyTreasure.RecordScroll" x="20" y="140" width="725"
+			height="350" />
+		<custom classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="skyTreasure.ExchangeScroll" x="20" y="90" width="725"
+			height="390" />
+		<custom classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="skyTreasure.RankScroll" x="20" y="90" width="725" height="390" />
+		<custom classname="skytreasure.SkyTreasureExchangeItem"
+			stylename="skyTreasure.ExchangeItem" width="700" height="60" />
+		<custom classname="skytreasure.SkyTreasureRankItem" stylename="skyTreasure.RankItem"
+			width="700" height="50" />
+
+		<!-- 视图背景 -->
+		<custom classname="com.pickgliss.ui.image.ScaleBitmapImage"
+			stylename="skyTreasure.LotteryViewBack" resourceLink="asset.skyTreasure.LotteryViewBack"
+			x="0" y="0" width="700" height="400" />
+		<custom classname="com.pickgliss.ui.image.ScaleBitmapImage"
+			stylename="skyTreasure.ExchangeViewBack" resourceLink="asset.skyTreasure.ExchangeViewBack"
+			x="0" y="0" width="700" height="400" />
+		<custom classname="com.pickgliss.ui.image.ScaleBitmapImage"
+			stylename="skyTreasure.RankViewBack" resourceLink="asset.skyTreasure.RankViewBack"
+			x="0" y="0" width="700" height="400" />
+
+		<!-- 排行视图内的文本 -->
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.MyRankText" textFormat="skyTreasure.label_t"
+			x="20" y="10" width="200" height="25" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.MyScoreText" textFormat="skyTreasure.label_t"
+			x="220" y="10" width="200" height="25" />
+
+		<!-- 兑换项内部样式 -->
+		<custom classname="com.pickgliss.ui.image.ScaleBitmapImage"
+			stylename="skyTreasure.ExchangeItemBack" resourceLink="asset.skyTreasure.ExchangeItemBack"
+			x="0" y="0" width="700" height="60" />
+		<custom classname="com.pickgliss.ui.image.Image" stylename="skyTreasure.ExchangeItemIcon"
+			resourceLink="asset.skyTreasure.ExchangeItemIcon" x="5" y="5" width="50"
+			height="50" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.ExchangeItemNameText" textFormat="skyTreasure.label_t"
+			x="60" y="10" width="200" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.ExchangeItemNeedNumText" textFormat="skyTreasure.number_t"
+			x="260" y="10" width="100" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.ExchangeItemHaveNumText" textFormat="skyTreasure.number_t"
+			x="360" y="10" width="100" height="20" />
+		<custom classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.ExchangeItemBtn" x="470" y="10" width="80"
+			height="25" />
+
+		<!-- 排行项内部样式 -->
+		<custom classname="com.pickgliss.ui.image.ScaleBitmapImage"
+			stylename="skyTreasure.RankItemBack" resourceLink="asset.skyTreasure.RankItemBack"
+			x="0" y="0" width="700" height="50" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.RankItemRankText" textFormat="skyTreasure.label_t"
+			x="10" y="10" width="50" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.RankItemNameText" textFormat="skyTreasure.label_t"
+			x="70" y="10" width="200" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.RankItemScoreText" textFormat="skyTreasure.number_t"
+			x="280" y="10" width="150" height="20" />
+		<custom classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="skyTreasure.RankItemRewardText" textFormat="skyTreasure.desc_t"
+			x="440" y="10" width="250" height="20" />
+
+		<custom classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="skyTreasure.otherVbox" spacing="13" x="10" y="5" />
+		<custom classname="com.pickgliss.ui.controls.container.HBox"
+			stylename="skyTreasure.otherHbox" spacing="13" x="10" y="5" />
+
+	</customDisplay>
+	<components>
+		<component classname="com.pickgliss.ui.text.GradientText"
+			stylename="SkyTreasureTabItem.Btn.title" colors="0xffc000,0xffffd5"
+			alphas="1,1" ratios="60,230" filterString="core.normal2_f" x="30" y="15"
+			width="140" height="40" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="SkyTreasureTabItem.Btn.text" textFormatStyle="SkyTreasureTabItem.Btn.text_t"
+			filterString="core.normal_f" autoSize="none" width="125" height="25" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="SkyTreasurerankItem.Btn.text" textFormatStyle="SkyTreasurerankItem.Btn.text_t"
+			filterString="core.normal_f" autoSize="none" width="85" height="56"  wordWrap="true"  x="-2"  y="4" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="SkyTreasurerankItem.Btn.text1" textFormatStyle="SkyTreasurerankItem.Btn.text_t"
+			filterString="core.normal_f" autoSize="none" width="105" height="52"
+			x="3" y="-5"  wordWrap="true" />
+
+		<component classname="com.pickgliss.ui.image.ScaleFrameImage"
+			stylename="ui.SkyTreasure.icon1" resourceLink="asset.skyTreasure.ExchangeGoodsIcon"
+			x="62" y="62" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.alliconNum" textFormatStyle="ui.SkyTreasure.alliconNum_t"
+			filterString="core.normal_f" autoSize="none" width="49" height="19"
+			x="92" y="65" />
+		<component classname="com.pickgliss.ui.image.ScaleFrameImage"
+			stylename="ui.SkyTreasure.icon2" resourceLink="asset.skyTreasure.ExchangeGoodsIcon"
+			x="52" y="375" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.cost1Num" textFormatStyle="ui.SkyTreasure.cost1Num_t"
+			filterString="core.normal_f" autoSize="none" width="55" height="19"
+			x="86" y="382" />
+		<component classname="com.pickgliss.ui.image.ScaleFrameImage"
+			stylename="ui.SkyTreasure.icon3" resourceLink="asset.skyTreasure.ExchangeGoodsIcon"
+			x="224" y="374" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.cost10Num" textFormatStyle="ui.SkyTreasure.cost10Num_t"
+			filterString="core.normal_f" autoSize="none" width="55" height="19"
+			x="258" y="381" />
+		<component classname="com.pickgliss.ui.image.ScaleFrameImage"
+			stylename="ui.SkyTreasure.icon4" resourceLink="asset.skyTreasure.ExchangeGoodsIcon"
+			x="411" y="374" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.cost50Num" textFormatStyle="ui.SkyTreasure.cost50Num_t"
+			filterString="core.normal_f" autoSize="none" width="55" height="19"
+			x="445" y="381" />
+
+
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.MyRank" textFormatStyle="ui.SkyTreasure.MyRank_t"
+			filterString="core.normal_f" autoSize="none" width="171" height="19"
+			x="615" y="272" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.MyCoin" textFormatStyle="ui.SkyTreasure.MyCoin_t"
+			filterString="core.normal_f" autoSize="none" width="175" height="19"
+			x="630" y="294" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.MyRankName" textFormatStyle="ui.SkyTreasure.MyRankName_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="19"
+			x="509" y="272" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.MyCoinName" textFormatStyle="ui.SkyTreasure.MyCoinName_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="19"
+			x="509" y="294" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.cost1freeTime" textFormatStyle="ui.SkyTreasure.cost1freeTime_t"
+			filterString="core.normal_f" autoSize="none" width="150" height="19"
+			x="17" y="441" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.RankTime" textFormatStyle="ui.SkyTreasure.RankTime_t"
+			filterString="core.normal_f" autoSize="none" width="286" height="22"
+			x="509" y="326" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.actTime" textFormatStyle="ui.SkyTreasure.actTime_t"
+			filterString="core.normal_f" autoSize="none" width="263" height="22"
+			x="534" y="446" />
+<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.proTxt1" textFormatStyle="ui.SkyTreasure.proTxt_t"
+			filterString="core.normal_f" autoSize="center" width="125" height="19"
+			x="2" y="49"  wordWrap="true" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.proTxt" textFormatStyle="ui.SkyTreasure.proTxt_t"
+			filterString="core.normal_f" autoSize="none" width="79" height="19"
+			x="2" y="49"  wordWrap="true" />
+	<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.LotteryBtn1" backStyle="asset.core.Style11Btn"
+			textStyle="ui.SkyTreasure.proTxt1" autoSizeAble="false" x="20" y="400"
+			backgoundInnerRectString="41,94,9,40,13"
+			width="125" height="45"  autoCenter="true" />
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.LotteryBtn10" backStyle="asset.core.Style11Btn"
+			textStyle="ui.SkyTreasure.proTxt1" autoSizeAble="false" x="195" y="400"
+						backgoundInnerRectString="41,94,9,40,13"
+			
+			width="125" height="45" />
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.LotteryBtn50" backStyle="asset.core.Style11Btn"
+						backgoundInnerRectString="41,94,9,40,13"
+			
+			textStyle="ui.SkyTreasure.proTxt1" autoSizeAble="false" x="380" y="400"
+			width="125" height="45" />
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.RankRewardBtn" backStyle="asset.skyTreasure.rankIcon"
+			textStyle="ui.SkyTreasure.proTxt" autoSizeAble="false" x="540" y="360"
+			backgoundInnerRectString="5,109,30,40,13"
+			width="65" height="65" offSetY="15"  autoCenter="true" />
+		<component classname="com.pickgliss.ui.controls.TextButton"
+			stylename="skyTreasure.LotteryRecordBtn" autoSizeAble="false"
+			backgoundInnerRectString="5,109,30,40,13"
+			backStyle="asset.skyTreasure.rewardIcon" textStyle="ui.SkyTreasure.proTxt"
+			x="627" y="360" width="65" height="65" offSetY="15" />
+		<component classname="com.pickgliss.ui.controls.TextButton"
+					backgoundInnerRectString="5,109,30,40,13"
+		
+			stylename="skyTreasure.ProbabilityBtn" backStyle="asset.skyTreasure.proIcon"
+			textStyle="ui.SkyTreasure.proTxt" autoSizeAble="false" x="711" y="360"
+			width="65" height="65" offSetY="15"  autoCenter="true" />
+
+		<component classname="skytreasure.SkyTreasureFrame1"
+			stylename="skytreasure.SkyTreasureFrame" parentStyle="core.Frame1" x="-50"
+			y="0" width="940" height="580" />
+		<custom classname="yishi.view.community.BaseItemView"
+			stylename="Sky.GameHallEastShopItemView.goodsIcon" iconStyle="Sky.GameHallEastShopItemView.itemViewIcon"
+			profileStyle="core.GoodsProfileBG" profileX="0" profileY="0"       textStyle="skytreasure.BaseItemText"
+			
+			profileWidth="65" profileHeight="65" showProfile="true" x="15" y="15" />
+			 <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skytreasure.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="18"
+      width="45"
+      x="20"
+      y="46" />
+		<custom classname="yishi.view.community.BaseIconView"
+			stylename="Sky.GameHallEastShopItemView.itemViewIcon" tipDirctions="4,6,5,7,0,1,2,3"
+			tipGapV="0" tipGapH="0" isFollowMouse="false" loadingStyle="asset.core.IconLoading"
+			loadingWidth="5" loadingHeight="5" loadingX="32" loadingY="32"
+			iconHeight="65" iconWidth="65" x="1" y="1" />
+
+		<component classname="skytreasure.pro.SkyTraesureProFrame"
+			stylename="skytreasure.pro.SkyTraesureProFrame" parentStyle="core.Frame1"
+			x="0" y="0" width="785" height="580" />
+
+		<component classname="skytreasure.rank.SkyTreasureRankFrame"
+			stylename="skytreasure.rank.SkyTreasureRankFrame" parentStyle="core.Frame1"
+			x="0" y="0" width="545" height="505" />
+
+
+		<component classname="skytreasure.reward.SkyTreasureCoinRankFrame"
+			stylename="skytreasure.reward.SkyTreasureCoinRankFrame" parentStyle="core.Frame1"
+			x="0" y="0" width="765" height="525" />
+
+
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasureFrame.tabSpanel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,130,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="1" width="130" height="420" x="5" y="9" />
+
+		<component classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+			stylename="skytreasure.rank.textBg"
+			resourceLink="asset.sky.TxtBgLeft,asset.sky.TxtBgMiddle,asset.sky.TxtBgRight"
+			x="45" y="63" width="130" height="27" />
+
+		<component classname="com.pickgliss.ui.controls.SelectedTextButton"
+			stylename="SkyTreasureCoinRankFrame.Btn" selectedStyle="asset.core.Style26SelectedBtn"
+			unSelectedStyle="asset.core.Style26UnSelectedBtn" textStyle="SkyTreasurerankItem.Btn.text"
+			backgoundInnerRectString="0,85,0,30,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="75" x="0" y="0" />
+
+		<component classname="com.pickgliss.ui.controls.SelectedTextButton"
+			stylename="SkyTreasureCoinRankFrame.Btn1" selectedStyle="asset.sky.Style108SelectedBtn"
+			unSelectedStyle="asset.sky.Style108UnSelectedBtn" textStyle="SkyTreasurerankItem.Btn.text1"
+			backgoundInnerRectString="3,108,-3,32,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="108" x="0" y="0" />
+
+
+		<component classname="com.pickgliss.ui.controls.SelectedTextButton"
+			stylename="SkyTreasureTabItem.Btn" selectedStyle="asset.core.Style193SelectedBtn"
+			unSelectedStyle="asset.core.Style193UnSelectedBtn" textStyle="SkyTreasureTabItem.Btn.text"
+			backgoundInnerRectString="0,125,16,53,13"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			width="125" x="0" y="0" />
+
+
+
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasureCoinRankFrame.tabSpanel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,204,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="1" width="220" height="420" x="5" y="9" />
+
+		<component classname="com.pickgliss.ui.image.Image"
+			stylename="ui.SkyTreasure.CoinRankBg" resourceLink="asset.skyTreasure.LotteryBack"
+			x="0" y="5" width="742" height="79" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.CoinRankName" textFormatStyle="ui.SkyTreasure.CoinRankName_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="21"
+			x="21" y="17" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.CoinRankDesc" textFormatStyle="ui.SkyTreasure.CoinRankDesc_t"
+			filterString="core.normal_f" autoSize="none" width="265" height="34"
+			x="17" y="37"  wordWrap="true" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.ItemNameTxt" textFormatStyle="ui.SkyTreasure.ItemNameTxt_t"
+			filterString="core.normal_f" autoSize="none" width="151" height="37"
+			x="86" y="11"  wordWrap="true" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.ItemProTxt" textFormatStyle="ui.SkyTreasure.ItemProTxt_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="21"
+			x="133" y="47" />
+
+		<component classname="com.pickgliss.ui.image.Scale9CornerImage"
+			stylename="secretary.view.SecretaryCompentView.back1"
+			resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+			width="919" height="480" x="-5" y="0" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.tankRank" textFormatStyle="ui.SkyTreasure.tankRank_t"
+			filterString="core.normal_f" autoSize="none" width="70" height="26"
+			x="503" y="52" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.RanKName" textFormatStyle="ui.SkyTreasure.RanKName_t"
+			filterString="core.normal_f" autoSize="none" width="52" height="21"
+			x="617" y="52" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.tankcoin" textFormatStyle="ui.SkyTreasure.tankcoin_t"
+			filterString="core.normal_f" autoSize="none" width="88" height="21"
+			x="708" y="52" />
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="skytreasure.GameHallEastShopDescFrame.contentScrollPanel"
+			vScrollbarStyle="core.VScrollbar03" viewportInnerRectString="0,765,0,0,2"
+			vScrollbarInnerRectString="15,0,0,0,3" vScrollProxy="1"
+			vUnitIncrement="5" width="750" height="484" x="0" y="0" />
+		<component classname="com.pickgliss.ui.text.GradientText"
+			stylename="skytreasure.Lo.bossNameTxt1" textFieldStyle="SkybossName.timeTxt1"
+			colors="0xffd972,0xffffff" alphas="1,1" ratios="60,230" filterString="ui.SkybossName.Txt_f"
+			autoSize="none" width="170" height="25" x="180" y="30" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="SkybossName.timeTxt1" textFormatStyle="SkybossName.timeTxt1_t"
+			autoSize="none" width="170" height="25" />
+
+
+		<component classname="com.pickgliss.ui.text.GradientText"
+			stylename="skytreasure.Lo.TimeTxt1" textFieldStyle="SkybossName.timeTxt2"
+			colors="0xffd972,0xffffff" alphas="1,1" ratios="60,230" filterString="ui.SkybossName.Txt_f"
+			autoSize="none" width="170" height="25" x="35" y="290" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.histankRank" textFormatStyle="ui.SkyTreasure.histankRank_t"
+			filterString="core.normal_f" autoSize="none" width="52" height="26"
+			x="20" y="7" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.hisRanKserver" textFormatStyle="ui.SkyTreasure.hisRanKserver_t"
+			filterString="core.normal_f" autoSize="none" width="52" height="21"
+			x="177" y="7" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.histankbane" textFormatStyle="ui.SkyTreasure.histankbane_t"
+			filterString="core.normal_f" autoSize="none" width="52" height="21"
+			x="369" y="7" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.myhisRankname" textFormatStyle="ui.SkyTreasure.myhisRankname_t"
+			filterString="core.normal_f" autoSize="none" width="76" height="19"
+			x="16" y="0" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.myhisRank" textFormatStyle="ui.SkyTreasure.myhisRank_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="19"
+			x="95" y="0" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.hisRankname" textFormatStyle="ui.SkyTreasure.hisRankname_t"
+			filterString="core.normal_f" autoSize="none" width="169" height="19"
+			x="326" y="2" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.hisRankserver" textFormatStyle="ui.SkyTreasure.hisRankserver_t"
+			filterString="core.normal_f" autoSize="none" width="140" height="19"
+			x="133" y="2" />
+
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="SkybossName.timeTxt2" textFormatStyle="SkybossName.timeTxt2_t"
+			autoSize="none" width="170" height="100" />
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="skyTreasure.ShowInfoVBox" x="0" y="0" spacing="2" />
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasure.ShowInfoPanel" vScrollbarStyle="core.VScrollbar03"
+			vScrollbarInnerRectString="18,0,1,2,3" viewportInnerRectString="0,2,0,2,5"
+			vScrollProxy="2" vUnitIncrement="0" width="220" height="190" x="599"
+			y="188" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.hisranktime" textFormatStyle="ui.SkyTreasure.hisranktime_t"
+			filterString="core.normal_f" autoSize="none" width="152" height="21"
+			x="186" y="7" />
+
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasureCoinRankView.panel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,710,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="1" vUnitIncrement="5" width="725" height="395" x="5" y="35" />
+
+
+
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="SkyTreasureCoinRankView.panelvBox" x="0" y="0" spacing="2" />
+
+
+		<custom classname="com.pickgliss.ui.controls.container.HBox"
+			stylename="skyTreasureCoinRankView.point.advanceRewardBox" spacing="5"
+			x="275" y="15" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.lunpaihangName" textFormatStyle="ui.SkyTreasure.lunpaihangName_t"
+			filterString="core.normal_f" autoSize="none" width="700" height="21"
+			x="0" y="8" />
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="skylun.ShowInfoVBox" x="0" y="35" spacing="2" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.lunMycoin" textFormatStyle="ui.SkyTreasure.lunMycoin_t"
+			filterString="core.normal_f" autoSize="none" width="165" height="21"
+			x="397" y="16" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.lunMyrank" textFormatStyle="ui.SkyTreasure.lunMyrank_t"
+			filterString="core.normal_f" autoSize="none" width="172" height="21"
+			x="149" y="16" />
+
+
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasureRankView.panel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,710,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="1" vUnitIncrement="5" width="725" height="395" x="5" y="30" />
+
+
+
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="SkyTreasureRankView.panelvBox" x="0" y="0" spacing="2" />
+
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasureHisRankView.panel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,490,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="1" vUnitIncrement="5" width="505" height="320" x="5" y="35" />
+
+
+
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="SkyTreasureHisRankView.panelvBox" x="0" y="0" spacing="2" />
+
+		<component classname="skytreasure.SkyShopBuyFrame"
+			stylename="skytreasure.SkyShopBuyFrame" parentStyle="core.QuickBuyFrame"
+			moveEnable="false" />
+
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.RankItemRank" textFormatStyle="ui.SkyTreasure.RankItemRank_t"
+			filterString="core.normal_f" autoSize="none" width="37" height="23"
+			x="2" y="12" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.RankItemCoin" textFormatStyle="ui.SkyTreasure.RankItemCoin_t"
+			filterString="core.normal_f" autoSize="none" width="52" height="23"
+			x="215" y="11" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.RankItemname" textFormatStyle="ui.SkyTreasure.RankItemname_t"
+			filterString="core.normal_f" autoSize="none" width="139" height="23"
+			x="57" y="2" />
+		<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.SkyTreasure.RankItemServer" textFormatStyle="ui.SkyTreasure.RankItemServer_t"
+			filterString="core.normal_f" autoSize="none" width="136" height="23"
+			x="59" y="25" />
+
+		<component classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="SkyTreasuremainRankView.panelvBox" x="15" y="0" spacing="2" />
+
+		<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="SkyTreasuremainRankView.panel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,265,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="1" vUnitIncrement="5" width="280" height="180" x="515"
+			y="80" />
+
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="skytreasurereward.Back01"
+      parentStyle="core.describeBackground_style27"
+      width="666"
+      height="389" />
+		<component classname="yishi.view.frame.SimpleHelpFrame"
+			stylename="SkyTreasuremainRankView.helperFrame" parentStyle="core.SimpleHelpFrame"
+			helpHtmlText="SkyTreasuremainRankView.helperFrame.HelpTitle.text"
+			titleText="friends.view.FriendsHelpFrame.title" textWidth="363" />
+
+		<component classname="com.pickgliss.ui.controls.BaseButton"
+			stylename="SkyTreasuremainRankView.helpBtn" backStyle="asset.core.HelpButton_01"
+			displacement="true"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			tipStyle="yishi.view.tips.OneLineTip" tipDirctions="7,5,4,6" tipGapV="0"
+			isFollowMouse="false" x="865" y="-45" />
+			
+			    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="skytrea.ExpendCrystalAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      width="280"
+      height="170" />
+      
+       <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="skywarlords.RankListCellRankImg"
+      resourceLink="asset.skywarlords.RankNumStyle02_1,asset.skywarlords.RankNumStyle02_2,asset.skywarlords.RankNumStyle02_3"
+      x="9"
+      y="-1" />
+	</components>
+</style>

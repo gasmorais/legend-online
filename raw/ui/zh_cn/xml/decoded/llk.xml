@@ -1,0 +1,483 @@
+<style
+  name="llk"
+  source="ui/zh_cn/swf/llk.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="LlkFrame.scoreTxt_t"
+      args="Arial,14,0xffc000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LlkGoodsItem.goodsName_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LlkGoodsItem.goodsCount_t"
+      args="Arial,16,0xffc000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LlkSortFrame.mySortTxt_t"
+      args="Arial,18,0xffe400,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="LlkSortFrame.mySortTxt_f"
+      args="0x000000,1,3,3,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="LlkSortItemView.appellTxt_t"
+      args="Arial,14,0xe5d29a,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.llk.gateNum" />
+    <bitmapData
+      resourceLink="asset.llk.boxNum" />
+    <bitmapData
+      resourceLink="asset.llk.combNum" />
+    <bitmapData
+      resourceLink="asset.llk.scoreNum" />
+    <bitmapData
+      resourceLink="asset.llk.llkGoodsIcon_2"
+      x="-6" />
+    <bitmapData
+      resourceLink="asset.llk.mySortImg"
+      x="10"
+      y="5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="cell.view.gemmazebag.GemMazeBagCell"
+      stylename="LlkBagItem.BagCell"
+      parentStyle="gemmaze.BagCell"
+      backgroundStyle="core.ItemBack2" />
+    <custom
+      classname="llk.view.LlkBoxItem"
+      stylename="LlkFrame.LlkBoxItem0"
+      tipStyle="yishi.view.tips.MultipleGoodsTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="50"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="85"
+      y="0" />
+    <custom
+      classname="llk.view.LlkBoxItem"
+      stylename="LlkFrame.LlkBoxItem1"
+      tipStyle="yishi.view.tips.MultipleGoodsTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="50"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="200"
+      y="0" />
+    <custom
+      classname="llk.view.LlkBoxItem"
+      stylename="LlkFrame.LlkBoxItem2"
+      tipStyle="yishi.view.tips.MultipleGoodsTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="50"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="315"
+      y="0" />
+    <custom
+      classname="llk.view.LlkBoxItem"
+      stylename="LlkFrame.LlkBoxItem3"
+      tipStyle="yishi.view.tips.MultipleGoodsTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="50"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="430"
+      y="0" />
+    <custom
+      classname="llk.view.LlkBoxItem"
+      stylename="LlkFrame.LlkBoxItem4"
+      tipStyle="yishi.view.tips.MultipleGoodsTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="50"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="545"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkSortFrame.mySortTxt"
+      textFormatStyle="LlkSortFrame.mySortTxt_t"
+      filterString="LlkSortFrame.mySortTxt_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="115"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="LlkBagView.HBox"
+      spacing="3"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="LlkBagView.panel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,1,4"
+      viewportInnerRectString="0,0,0,90,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="587"
+      height="62"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkGoodsItem.goodsName"
+      textFormatStyle="LlkGoodsItem.goodsName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="0"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkGoodsItem.goodsCount"
+      textFormatStyle="LlkGoodsItem.goodsCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="75"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="LlkGoodsItem.goodsIcon"
+      resourceLink="asset.llk.llkGoodsIcon_1,asset.llk.llkGoodsIcon_2"
+      x="12"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkGoodsItem.useBtn"
+      backStyle="asset.llk.llkGoodsBtnBack"
+      iconStyle="asset.llk.llkGoodsUseBtnIcon"
+      iconInnerRectString="15,39,13,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="69"
+      height="43"
+      x="-10"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkGoodsItem.buyBtn"
+      backStyle="asset.llk.llkGoodsBtnBack"
+      iconStyle="asset.llk.llkGoodsBuyBtnIcon"
+      iconInnerRectString="15,39,13,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="69"
+      height="43"
+      x="68"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkFrame.startBtn"
+      backStyle="asset.llk.startBtnBack"
+      iconStyle="asset.llk.startBtnIcon"
+      iconInnerRectString="46,141,17,37,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="234"
+      height="71"
+      x="183"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkFrame.sortBtn"
+      backStyle="asset.llk.sortBtnBack"
+      iconStyle="asset.llk.sortBtnIcon"
+      iconInnerRectString="14,63,12,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="91"
+      height="42"
+      x="633"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkFrame.allGetBtn"
+      backStyle="asset.llk.lkBagBtnBack"
+      iconStyle="asset.llk.allGetBtnIcon"
+      iconInnerRectString="7,54,6,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="27"
+      x="606"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkFrame.tidyBtn"
+      backStyle="asset.llk.lkBagBtnBack"
+      iconStyle="asset.llk.tidyBtnIcon"
+      iconInnerRectString="7,54,6,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="27"
+      x="684"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkFrame.scoreTxt"
+      textFormatStyle="LlkFrame.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="685"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkFrame.physicalTxt"
+      parentStyle="LlkFrame.scoreTxt"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkFrame.timeTxt"
+      parentStyle="LlkFrame.scoreTxt"
+      y="58" />
+    <component
+      classname="llk.view.LlkFrame"
+      stylename="llk.view.LlkFrame"
+      parentStyle="core.Frame1"
+      width="796"
+      height="590"
+      containerX="16"
+      containerY="62" />
+    <component
+      classname="llk.view.LlkSortFrame"
+      stylename="llk.view.LlkSortFrame"
+      parentStyle="core.Frame2"
+      width="615"
+      height="550"
+      containerX="15"
+      containerY="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="LlkBoxItem.icon"
+      resourceLink="asset.llk.levelBox_1,asset.llk.levelBox_2,asset.llk.levelBox_3,asset.llk.levelBox_4,asset.llk.levelBox_5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="LlkNodeView.bg"
+      resourceLink="llk.nodeBg.unselected,llk.nodeBg.selected" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="LlkNodeView.Icon"
+      resourceLink="asset.llk.nodeIcon_1,asset.llk.nodeIcon_2,asset.llk.nodeIcon_3,asset.llk.nodeIcon_4,asset.llk.nodeIcon_5,asset.llk.nodeIcon_6,asset.llk.nodeIcon_7,asset.llk.nodeIcon_8,asset.llk.nodeIcon_9,asset.llk.nodeIcon_10,asset.llk.nodeIcon_11,asset.llk.nodeIcon_12,asset.llk.nodeIcon_13,asset.llk.nodeIcon_14,asset.llk.nodeIcon_15,asset.llk.nodeIcon_16,asset.llk.nodeIcon_17,asset.llk.nodeIcon_18,asset.llk.nodeIcon_19,asset.llk.nodeIcon_20,asset.llk.nodeIcon_21,asset.llk.nodeIcon_22,asset.llk.nodeIcon_23,asset.llk.nodeIcon_24,asset.llk.nodeIcon_25,asset.llk.nodeIcon_26"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="llk.nodeBg.unselected"
+      resourceLink="asset.llk.nodeBg1"
+      x="0"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="llk.nodeBg.selected"
+      resourceLink="asset.llk.nodeBg1,asset.llk.nodeBg2"
+      imageRectString="0|51|2|50|13,5|48|0|48|13" />
+    <component
+      classname="yishi.view.base.Progress"
+      stylename="LlkFrame.progress"
+      progressStyle="asset.llk.progressFull"
+      x="0"
+      y="364" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkSortFrame.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="170"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkSortFrame.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="318"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkSortFrame.PageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="253"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="LlkSortFrame.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="247"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="LlkSortFrame.RankContentBg"
+      resourceLink="asset.llk.RankContentBg"
+      x="7"
+      y="39"
+      width="573" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="LlkSortFrame.FrameBg"
+      parentStyle="core.describeBackground_style06"
+      width="583"
+      height="425"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="LlkSortItemView.TopIcon"
+      resourceLink="asset.llk.RankTop1,asset.llk.RankTop2,asset.llk.RankTop3"
+      x="2"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkSortItemView.appellTxt"
+      parentStyle="PetChallengeTopListItemView.totalFightTxt"
+      width="100"
+      textFormatStyle="LlkSortItemView.appellTxt_t"
+      autoSize="none"
+      height="20"
+      x="400"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="LlkFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="720"
+      y="-35" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="LlkFrame.HelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="llk.view.LlkFrame.helpTxt"
+      titleText="public.help"
+      textWidth="400" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="LlkFrame.PhysicalAlertFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      confirmStyle="LlkFrame.PhysicalAlertConfirmBtn"
+      cancelStyle="LlkFrame.PhysicalAlertCancelBtn"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      describeStyle="LlkFrame.PhysicalAlertDescribe"
+      usebindPointStyle="LlkFrame.UseBindPoint"
+      showPromptStyle="auction.RefreshPrompt"
+      containerX="0"
+      containerY="15"
+      notJoinActPromptStyle="LlkFrame.notJoinActPromptTxt"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="450"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="LlkFrame.PhysicalAlertConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="90"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="LlkFrame.PhysicalAlertCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="230"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkFrame.PhysicalAlertDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="240"
+      x="12"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="LlkFrame.notJoinActPromptTxt"
+      textFormatStyle="auction.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="50"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="LlkFrame.UseBindPoint"
+      parentStyle="core.ThewCheckBtn"
+      x="100"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="LlkGoodsItem.useBtn2"
+      backStyle="asset.llk.llkGoodsBtnBack"
+      iconStyle="asset.llk.llkGoodsUseBtnIcon"
+      iconInnerRectString="15,39,13,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="69"
+      height="43"
+      x="34"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="airGarden.llk.startBtn"
+      backStyle="asset.llk.startBtnBack"
+      iconStyle="asset.llk.startBtnIcon"
+      iconInnerRectString="46,141,17,37,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="234"
+      height="71"
+      x="187"
+      y="131" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="airGarden.llk.timeTxt"
+      textFormatStyle="LlkFrame.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="653"
+      y="56" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="airGarden.llk.scoreTxt"
+      textFormatStyle="LlkFrame.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="687"
+      y="33" />
+  </components>
+</style>

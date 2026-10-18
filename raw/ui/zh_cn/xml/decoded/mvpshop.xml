@@ -1,0 +1,237 @@
+<style
+  name="mvpshop"
+  source="ui/zh_cn/swf/mvpshop.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="MvpShopGoodsItem.nameTxt_t"
+      args="Arial,13,0xeae1c9,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MvpShopGoodsItem.priceTxt_t"
+      args="Arial,14,0xbaad89,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mvpShopFrame.displayShowTxt_t"
+      args="Arial,16,0xfacf56,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mvpShopFrame.timeTxt_t"
+      args="Arial,14,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mvpShopFrame.descTxt_t"
+      args="Arial,12,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mvpShopFrame.freshTimeTxt_t"
+      args="Arial,12,0xc8b9b0,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mvpShopFrame.downTime.text_t"
+      args="Arial,14,0xfffc13,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mvpShopFrame.freshPointTxt_t"
+      args="Arial,16,0xeae1c9,,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.MvpShopFrame.leftBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.MvpShopFrame.rareGoodsTxt"
+      x="85"
+      y="418" />
+    <bitmapData
+      resourceLink="asset.MvpShopFrame.bottomBg"
+      x="265"
+      y="492"
+      width="502" />
+    <bitmapData
+      resourceLink="asset.MvpShopFrame.rareImg"
+      x="10"
+      y="10" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MvpShopGoodsItem.ItemBaseItemView"
+      parentStyle="shop.ItemBaseItemView"
+      textStyle="MvpShopGoodsItem.ItemBaseItemView.text" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="MvpShopFrame.BaseItemView"
+      iconStyle="core.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="44"
+      profileHeight="44"
+      showProfile="true"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="mvpshop.MvpShopFrame"
+      stylename="mvpshop.MvpShopFrame"
+      parentStyle="core.Frame1"
+      containerX="0"
+      containerY="0"
+      width="790"
+      height="615" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="mvpShopFrame.txtBg"
+      resourceLink="asset.MvpShopFrame.txtBg,asset.MvpShopFrame.time,asset.MvpShopFrame.desc"
+      imageRectString="0|0|19,15|11|19,15|47|19"
+      x="262"
+      y="60" />
+    <component
+      stylename="mvpShopFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="510"
+      height="395"
+      x="262"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="mvpShop.MvpShopGoodsItemBg"
+      resourceLink="asset.MvpShopFrame.GoodBoxBg,mvpShop.MvpShopGoodsItemAsset" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="mvpShop.MvpShopGoodsItemAsset"
+      resourceLink="asset.MvpShopFrame.GoodBoxBg,shop.MouseOver1"
+      imageRectString="0|251|0|101|13,0|251|-8|115|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MvpShopGoodsItem.nameTxt"
+      textFormatStyle="MvpShopGoodsItem.nameTxt_t"
+      filterString="core.normal_f"
+      x="85"
+      y="0"
+      autoSize="none"
+      width="160"
+      wordWrap="true"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MvpShopGoodsItem.priceTxt"
+      textFormatStyle="MvpShopGoodsItem.priceTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="130"
+      y="36"
+      width="75"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MvpShopGoodsItem.priceIcon"
+      resourceLink="asset.MvpShopFrame.point"
+      x="205"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MvpShopGoodsItem.ItemBaseItemView.text"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="14"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MvpShopGoodsItem.BuyBtn"
+      backStyle="shop.ShopBuyImage"
+      iconStyle="asset.MvpShopFrame.buyTxt"
+      iconInnerRectString="19,40,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="154"
+      y="61" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="mvpShopFrame.mvpPointBg"
+      resourceLink="asset.MvpShopFrame.displayShowBack,asset.MvpShopFrame.point,asset.MvpShopFrame.pointTxt"
+      imageRectString="0|0|19,4|7|19,25|5|19"
+      x="280"
+      y="520" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mvpShopFrame.displayShowTxt"
+      textFormatStyle="mvpShopFrame.displayShowTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="350"
+      y="526"
+      width="100"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mvpShopFrame.timeTxt"
+      textFormatStyle="mvpShopFrame.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="20"
+      x="300"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mvpShopFrame.descTxt"
+      textFormatStyle="mvpShopFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="505"
+      height="63"
+      wordWrap="true"
+      x="265"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mvpShopFrame.freshTimeTxt"
+      textFormatStyle="mvpShopFrame.freshTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="151"
+      height="20"
+      x="530"
+      y="168" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="mvpShopFrame.downTime"
+      timeTxtStyle="mvpShopFrame.downTime.text"
+      x="685"
+      y="167" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mvpShopFrame.downTime.text"
+      textFormatStyle="mvpShopFrame.downTime.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mvpShopFrame.quickRefreshBtn"
+      backStyle="asset.MvpShopFrame.quickRefreshBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="565"
+      y="510" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mvpShopFrame.freshPointTxt"
+      textFormatStyle="mvpShopFrame.freshPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="685"
+      y="525" />
+  </components>
+</style>

@@ -1,0 +1,1127 @@
+<style
+  name="yearactive"
+  source="ui/zh_cn/swf/yearactive.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookTimeTxt_t"
+      args="Arial,12,0xffdea1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookTitle_t"
+      args="Arial,14,0xffdea1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookxLv_t"
+      args="Arial,36,0xffd972,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookxFt_t"
+      args="Arial,14,0xfff59d,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.actNameTxt_t"
+      args="Arial,12,0xfcfad1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.actTimeTxt_t"
+      args="Arial,12,0xf2e4a5,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.enter2NumTxt_t"
+      args="Arial,14,0x00cc00,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.enterTimeTxt_t"
+      args="Arial,12,0xffdea1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggft2_t"
+      args="Arial,12,0xffdea1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggnum2_t"
+      args="Arial,14,0xefb913,true,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggTimeTxt_t"
+      args="Arial,12,0xffdea1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggft1_t"
+      args="Arial,14,0xffdea1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggNum1_t"
+      args="Arial,14,0xfff59d,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggleftTxt_t"
+      args="Arial,14,0xfff59d,true,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggRightTxt_t"
+      args="Arial,14,0xfff59d,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.enterHasTxt_t"
+      args="Arial,14,0xefb913,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.yearactiveGf_f"
+      args="0x6a0001,1,5,5,3" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.yearactiveGf_rf"
+      args="0xff0000,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookPassFt_t"
+      args="Arial,14,0xfff59d,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookkeynum_t"
+      args="Arial,14,0xdecfa4,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.lookBuykeynum_t"
+      args="Arial,14,0xdecfa4,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.yearactive.eggnum3_t"
+      args="Arial,24,0xfff9d4,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.yearactive.egg3_rf"
+      args="0x711153,3,5,5,3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.yearactive.hasGetFlg"
+      x="96"
+      y="175" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.cbg"
+      x="310"
+      y="141" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.itemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.boxPreBg"
+      x="809"
+      y="218" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.boxBg"
+      x="60"
+      y="316" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.ftbg"
+      x="42"
+      y="172" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.xLv"
+      x="144"
+      y="205" />
+    <bitmapData
+      resourceLink="asset.yearactive.bao.ft"
+      x="137"
+      y="288" />
+    <bitmapData
+      resourceLink="asset.yearactive.enter.typebg"
+      x="31"
+      y="101" />
+    <bitmapData
+      resourceLink="asset.SevenYear.coin"
+      x="32"
+      y="185" />
+    <bitmapData
+      resourceLink="asset.yearactive.egg.block"
+      x="333"
+      y="478" />
+    <bitmapData
+      resourceLink="asset.yearactive.egg.chargeBg"
+      x="684"
+      y="149" />
+    <bitmapData
+      resourceLink="asset.yearactive.egg.chargeFt"
+      x="736"
+      y="278" />
+    <bitmapData
+      resourceLink="asset.yearactive.egg.proBarBg"
+      x="205"
+      y="175" />
+    <bitmapData
+      resourceLink="asset.yearactive.egg.proBar"
+      x="217"
+      y="196" />
+    <bitmapData
+      resourceLink="asset.yearactive.day.box1"
+      x="27"
+      y="36" />
+    <bitmapData
+      resourceLink="asset.yearactive.day.box2"
+      x="27"
+      y="183" />
+    <bitmapData
+      resourceLink="asset.yearactive.CheckedImg"
+      x="24"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.yearactive.DateItemToday"
+      x="64"
+      y="5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="year2023.ui.item.YearActiveBoxItemUI"
+      stylename="ui.year2023.ui.item.YearActiveBoxItemUI"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.yearactive.lookpre.SimpleTileList"
+      vSpace="12"
+      hSpace="12"
+      x="75"
+      y="330" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.yearactive.lookBox.SimpleTileList"
+      vSpace="1"
+      hSpace="1"
+      x="327"
+      y="162" />
+    <custom
+      stylename="year2023.item.YearActiveTreasureBoxItem.item"
+      classname="year2023.item.YearActiveTreasureBoxItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="year2023.item.YearActivePrivateCItem"
+      stylename="ui.yearactive.prc"
+      x="67"
+      y="176" />
+    <custom
+      classname="asset.yearactive.enter.bgType2"
+      stylename="ui.yearactive.lookbigbg"
+      width="1039"
+      height="653"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="asset.yearactive.boxBtnMc"
+      stylename="ui.yearactive.boxBtn"
+      width="118"
+      height="105"
+      x="-3"
+      y="5" />
+    <custom
+      classname="asset.yearactive.boxMc"
+      stylename="ui.yearactive.boxMc"
+      width="161"
+      height="152"
+      x="-11"
+      y="-36"
+      mouseEnable="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.yearactive.lookPreIconIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ui.yearactive.lookPreIcon"
+      iconStyle="ui.yearactive.lookPreIconIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="852"
+      y="248" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ui.yearactive.lookLeftPreIcon"
+      iconStyle="ui.yearactive.lookPreIconIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.yearactive.enter.bgType1"
+      stylename="ui.yearactive.typeBg2"
+      width="1039"
+      height="653"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="asset.yearactive.enter.bgType2"
+      stylename="ui.yearactive.typeBg1"
+      width="1039"
+      height="653"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="year2023.ui.item.YearActive1UI"
+      stylename="ui.yearactive.dayItem1"
+      x="125"
+      y="143" />
+    <custom
+      classname="asset.yearactive.enter.bgType3"
+      stylename="ui.yearactive.enterItemBg1"
+      width="148"
+      height="117"
+      x="28"
+      y="59"
+      mouseEnable="false" />
+    <custom
+      classname="year2023.ui.item.YearActive3UI"
+      stylename="ui.yearactive.dayItem3"
+      x="332"
+      y="199" />
+    <custom
+      classname="asset.yearactive.enter.bgType3"
+      stylename="ui.yearactive.enterItemBg3"
+      width="193"
+      height="142"
+      x="5"
+      y="86"
+      mouseEnable="false" />
+    <custom
+      classname="year2023.ui.item.YearActive2UI"
+      stylename="ui.yearactive.dayItem2"
+      x="106"
+      y="347" />
+    <custom
+      classname="asset.yearactive.enter.bgType3"
+      stylename="ui.yearactive.enterItemBg2"
+      width="136"
+      height="109"
+      x="34"
+      y="105"
+      mouseEnable="false" />
+    <custom
+      classname="year2023.ui.item.YearActive4UI"
+      stylename="ui.yearactive.dayItem4"
+      x="509"
+      y="322" />
+    <custom
+      classname="asset.yearactive.enter.bgType3"
+      stylename="ui.yearactive.enterItemBg4"
+      width="193"
+      height="170"
+      x="5"
+      y="102"
+      mouseEnable="false" />
+    <custom
+      classname="year2023.ui.item.YearActive5UI"
+      stylename="ui.yearactive.dayItem5"
+      x="577"
+      y="149" />
+    <custom
+      classname="asset.yearactive.enter.bgType3"
+      stylename="ui.yearactive.enterItemBg5"
+      width="138"
+      height="119"
+      x="33"
+      y="31"
+      mouseEnable="false" />
+    <custom
+      classname="year2023.ui.item.YearActive6UI"
+      stylename="ui.yearactive.dayItem6"
+      x="762"
+      y="333" />
+    <custom
+      classname="asset.yearactive.enter.bgType3"
+      stylename="ui.yearactive.enterItemBg6"
+      width="184"
+      height="188"
+      x="8"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="asset.yearactive.eggEnterBtn"
+      stylename="ui.yearactive.enterBtn6"
+      width="120"
+      height="175"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="asset.yearactive.enter.bgType2"
+      stylename="ui.yearactive.eggBigBg"
+      width="1039"
+      height="653"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="asset.PumpingJoyFrame.pumpMc"
+      stylename="ui.yearactive.eggPlayMc"
+      width="257"
+      height="375"
+      x="539"
+      y="326"
+      mouseEnable="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.yearactive.eggRightIconIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ui.yearactive.eggRightIcon"
+      iconStyle="ui.yearactive.eggRightIconIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="59"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.yearactive.eggLeftIconIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ui.yearactive.eggLeftIcon"
+      iconStyle="ui.yearactive.eggLeftIconIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="feedBackFrame.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="26"
+      y="0" />
+    <custom
+      classname="year2023.ui.item.YearActiveXUI"
+      stylename="ui.yearactive.dayInfo6"
+      x="0"
+      y="-28" />
+    <custom
+      classname="year2023.ui.item.YearActiveXUI"
+      stylename="ui.yearactive.dayInfo5"
+      x="0"
+      y="-23" />
+    <custom
+      classname="year2023.ui.item.YearActiveXUI"
+      stylename="ui.yearactive.dayInfo4"
+      x="0"
+      y="68" />
+    <custom
+      classname="year2023.ui.item.YearActiveXUI"
+      stylename="ui.yearactive.dayInfo2"
+      x="0"
+      y="35" />
+    <custom
+      classname="year2023.ui.item.YearActiveXUI"
+      stylename="ui.yearactive.dayInfo3"
+      x="0"
+      y="35" />
+    <custom
+      classname="year2023.ui.item.YearActiveXUI"
+      stylename="ui.yearactive.dayInfo1"
+      x="0"
+      y="0" />
+    <custom
+      classname="year2023.item.YearActivePointItem"
+      stylename="ui.yearactive.enterGoldPrice"
+      x="888"
+      y="129" />
+    <custom
+      classname="year2023.item.YearActivePointItem"
+      stylename="ui.yearactive.shopGoldPrice"
+      x="821"
+      y="39" />
+    <custom
+      classname="year2023.item.YearActivePointItem"
+      stylename="ui.yearactive.dayGoldPrice"
+      x="825"
+      y="101" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.enterGet2"
+      backStyle="asset.theseuspvp.private.sgetBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="104"
+      y="185"
+      width="66"
+      height="29" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.enterMc6Btn"
+      backStyle="ui.yearactive.enterBtn6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="42"
+      y="-108" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.yearactive.lookNextBtn"
+      backStyle="asset.core.greenBack150"
+      iconStyle="asset.yearactive.bao.next"
+      iconInnerRectString="39,76,14,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="808"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.yearactive.xKeyBtnBg"
+      resourceLink="asset.carniver.rechargeBigBtn,asset.yearactive.bao.oneKey,asset.yearactive.bao.key"
+      imageRectString="0|0|19,10|36|19,35|64|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.xKeyBtn"
+      backStyle="ui.yearactive.xKeyBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="828"
+      y="453"
+      width="112"
+      height="112" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookTimeTxt"
+      textFormatStyle="ui.yearactive.lookTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="328"
+      height="20"
+      x="122"
+      y="612" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookTitle"
+      textFormatStyle="ui.yearactive.lookTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="465"
+      height="40"
+      wordWrap="true"
+      x="317"
+      y="136" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookxLv"
+      textFormatStyle="ui.yearactive.lookxLv_t"
+      filterString="ui.yearactiveGf_rf"
+      autoSize="none"
+      width="84"
+      height="42"
+      x="75"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookxFt"
+      textFormatStyle="ui.yearactive.lookxFt_t"
+      filterString="ui.yearactiveGf_rf"
+      autoSize="none"
+      width="186"
+      height="20"
+      x="790"
+      y="197" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.actNameTxt"
+      textFormatStyle="ui.yearactive.actNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="135"
+      height="20"
+      x="33"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.actTimeTxt"
+      textFormatStyle="ui.yearactive.actTimeTxt_t"
+      filterString="ui.yearactiveGf_f"
+      autoSize="none"
+      width="205"
+      height="20"
+      x="0"
+      y="133" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.actBtn1"
+      backStyle="asset.yearactive.enter.1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="45"
+      y="0"
+      width="110"
+      height="105" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.actBtn3"
+      backStyle="asset.yearactive.enter.3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="8"
+      y="0"
+      width="180"
+      height="143" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.actBtn2"
+      backStyle="asset.yearactive.enter.2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="35"
+      y="0"
+      width="132"
+      height="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.enter2NumTxt"
+      textFormatStyle="ui.yearactive.enter2NumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="22"
+      x="62"
+      y="194" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.actBtn4"
+      backStyle="asset.yearactive.enter.4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="28"
+      y="0"
+      width="148"
+      height="159" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.actBtn5"
+      backStyle="asset.yearactive.enter.5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="52"
+      y="0"
+      width="95"
+      height="80" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.entergIcon"
+      resourceLink="asset.yearactive.enter.icon"
+      x="888"
+      y="129"
+      scaleX="1"
+      width="31"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.enterHasTxt"
+      textFormatStyle="ui.yearactive.enterHasTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="926"
+      y="136" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.enterTimeTxt"
+      textFormatStyle="ui.yearactive.enterTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="328"
+      height="20"
+      x="114"
+      y="611" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.eggRechargeBtn"
+      backStyle="asset.yearactive.egg.chargeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="822"
+      y="350"
+      width="136"
+      height="136" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.eggPreBtn"
+      backStyle="asset.yearactive.egg.rewardBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="727"
+      y="502"
+      width="74"
+      height="76" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.yearactive.eggBtn1"
+      backStyle="asset.PumpingJoy.resource.mfm0f"
+      iconStyle="asset.PumpingJoy.resource.mfm06"
+      iconInnerRectString="29,99,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="355"
+      y="548" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.yearactive.eggBtn10"
+      backStyle="asset.PumpingJoy.resource.mfm0f"
+      iconStyle="asset.PumpingJoy.resource.mfm07"
+      iconInnerRectString="21,114,12,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="543"
+      y="548" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggicon1"
+      resourceLink="asset.yearactive.enter.icon"
+      x="451"
+      y="514"
+      scaleX="1"
+      width="31"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggicon1_2"
+      resourceLink="asset.yearactive.enter.icon"
+      x="641"
+      y="514"
+      scaleX="1"
+      width="31"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggft2"
+      textFormatStyle="ui.yearactive.eggft2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="20"
+      x="505"
+      y="522" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggnum2"
+      textFormatStyle="ui.yearactive.eggnum2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="20"
+      x="369"
+      y="521" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggnum2_2"
+      textFormatStyle="ui.yearactive.eggnum2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="20"
+      x="559"
+      y="521" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggTimeTxt"
+      textFormatStyle="ui.yearactive.eggTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="328"
+      height="20"
+      x="126"
+      y="612" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggNbk1"
+      resourceLink="asset.yearactive.egg.numBg"
+      x="98"
+      y="564"
+      scaleX="1"
+      width="241"
+      height="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggft1"
+      textFormatStyle="ui.yearactive.eggft1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="20"
+      x="104"
+      y="568" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggNum1"
+      textFormatStyle="ui.yearactive.eggNum1_t"
+      filterString="ui.yearactiveGf_rf"
+      autoSize="none"
+      width="73"
+      height="20"
+      x="280"
+      y="569" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggNbk2"
+      resourceLink="asset.yearactive.egg.numBg"
+      x="723"
+      y="351"
+      scaleX="1"
+      width="241"
+      height="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggft3"
+      textFormatStyle="ui.yearactive.eggft2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="20"
+      x="813"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggnum3"
+      textFormatStyle="ui.yearactive.eggnum3_t"
+      filterString="ui.yearactive.egg3_rf"
+      autoSize="none"
+      width="79"
+      height="30"
+      x="856"
+      y="351" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggicon2"
+      resourceLink="asset.yearactive.enter.icon"
+      x="822"
+      y="351"
+      scaleX="1"
+      width="31"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.egglrightTxt"
+      textFormatStyle="ui.yearactive.eggRightTxt_t"
+      filterString="ui.yearactiveGf_rf"
+      autoSize="none"
+      width="52"
+      height="20"
+      x="28"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggrightImg"
+      resourceLink="asset.yearactive.egg.line"
+      x="0"
+      y="30"
+      scaleX="1"
+      width="22"
+      height="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.eggleftTxt"
+      textFormatStyle="ui.yearactive.eggleftTxt_t"
+      filterString="ui.yearactiveGf_rf"
+      autoSize="none"
+      width="52"
+      height="20"
+      x="70"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.eggleftImg"
+      resourceLink="asset.yearactive.egg.line"
+      x="122"
+      y="30"
+      scaleX="1"
+      width="22"
+      height="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.day2gold"
+      resourceLink="asset.yearactive.enter.icon"
+      x="27"
+      y="187"
+      scaleX="1"
+      width="31"
+      height="30" />
+    <component
+      classname="year2023.frame.YearActiveDayFrame"
+      stylename="year2023.frame.YearActiveDayFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,90,29,14"
+      moveInnerRectString="376,50,50,0,9"
+      width="1039"
+      height="653"
+      containerY="0" />
+    <component
+      classname="year2023.frame.YearActiveEggFrame"
+      stylename="year2023.frame.YearActiveEggFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,90,29,14"
+      moveInnerRectString="376,50,50,0,9"
+      width="1039"
+      height="653"
+      containerY="0" />
+    <component
+      classname="year2023.frame.YearActiveLookFrame"
+      stylename="year2023.frame.YearActiveLookFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,90,29,14"
+      moveInnerRectString="376,50,50,0,9"
+      width="1039"
+      height="653"
+      containerY="0" />
+    <component
+      classname="year2023.frame.YearActiveEnterFrame"
+      stylename="year2023.frame.YearActiveEnterFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,90,29,14"
+      moveInnerRectString="376,50,50,0,9"
+      width="1039"
+      height="653"
+      containerY="0" />
+    <component
+      classname="year2023.frame.YeraActiveShopFrame"
+      stylename="year2023.frame.YeraActiveShopFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,90,29,14"
+      moveInnerRectString="376,50,50,0,9"
+      width="1039"
+      height="653"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="yearactive.shop.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="715 "
+      height="393"
+      x="169"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="yearactive.ItemShopTipsTextStyle"
+      textFormatStyle="shop.ShopTipsTextStyle_t"
+      filterString="shop.UpGradeButtonTextStyle_f"
+      autoSize="none"
+      wordWrap="true"
+      width="137"
+      height="40"
+      x="92"
+      y="45" />
+    <component
+      classname="year2023.frame.YearActiveTreasureBoxFrame"
+      stylename="year2023.frame.YearActiveTreasureBoxFrame"
+      parentStyle="core.Frame2"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="11"
+      containerY="50"
+      width="835"
+      height="605" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.prItemIdxTxt"
+      textFormatStyle="ui.theseuspvp.prItemIdxTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="20"
+      x="21"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.lookPassbg"
+      resourceLink="asset.yearactive.bao.itemBg"
+      x="823"
+      y="224"
+      scaleX="1"
+      width="116"
+      height="116" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookPassFt"
+      textFormatStyle="ui.yearactive.lookPassFt_t"
+      filterString="ui.yearactiveGf_rf"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="843"
+      y="271" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookkeynum"
+      textFormatStyle="ui.yearactive.lookkeynum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="20"
+      x="890"
+      y="523" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.lookBuybg"
+      resourceLink="asset.core.TextInputBG2"
+      x="848"
+      y="141"
+      scaleX="1"
+      width="87"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.loobuysicon"
+      resourceLink="asset.yearactive.bao.key"
+      x="850"
+      y="140"
+      scaleX="1"
+      width="29"
+      height="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookBuykeynum"
+      textFormatStyle="ui.yearactive.lookBuykeynum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="878"
+      y="148" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.lookbuyBtn"
+      backStyle="asset.core.UpButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="909"
+      y="146"
+      width="22"
+      height="21" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.yearactive.bqBtnbg"
+      resourceLink="asset.yearactive.btnbk,asset.yearactive.day.old"
+      imageRectString="0|66|0|29|13,7|4|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.yearactive.bqBtn"
+      backStyle="ui.yearactive.bqBtnbg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="13"
+      y="300"
+      width="66"
+      height="29" />
+    <component
+      classname="year2023.frame.YearactiveEggDropFrame"
+      stylename="year2023.frame.YearactiveEggDropFrame"
+      parentStyle="core.QuickBuyFrame"
+      closeInnerRectString="29,-17,-4,29,14"
+      containerX="5"
+      containerY="22"
+      width="583"
+      height="235" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.actTime2Txt"
+      textFormatStyle="ui.yearactive.actTimeTxt_t"
+      filterString="ui.yearactiveGf_f"
+      autoSize="none"
+      width="205"
+      height="20"
+      x="0"
+      y="154" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.lookRdwTitle"
+      textFormatStyle="ui.yearactive.lookTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="186"
+      height="40"
+      x="86"
+      y="296" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.goldPricebg"
+      resourceLink="asset.core.TextInputBG2"
+      x="0"
+      y="0"
+      scaleX="1"
+      width="87"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.yearactive.goldPriceIcon"
+      resourceLink="asset.yearactive.enter.icon"
+      x="-31"
+      y="0"
+      scaleX="1"
+      width="31"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.yearactive.goldPricenum"
+      textFormatStyle="ui.yearactive.lookBuykeynum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="87"
+      height="20"
+      x="0"
+      y="6" />
+  </components>
+</style>

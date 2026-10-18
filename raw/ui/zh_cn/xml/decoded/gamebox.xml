@@ -1,0 +1,381 @@
+<style
+  name="gamebox"
+  source="ui/zh_cn/swf/gamebox.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamebox.medalTxt_f"
+      args="Arial,14,0xddcda0,true,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamebox.medalDscTxt_f"
+      args="Arial,12,0xec2409,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamebox.exchangeItemNameTxt_f"
+      args="Arial,12,0xf7d54f,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamebox.exchangeCostTxt_f"
+      args="Arial,14,0xddcda0,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamebox.gameOpenDayTxt_f"
+      args="Arial,18,0xd8cca2,true,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gamebox.openAlertTxt_f"
+      args="Arial,14,0xfcae05,true,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.gamebox.gameboxitemBg" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameName1"
+      x="120"
+      y="17" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameName2"
+      x="70"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameName3"
+      x="70"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameName4"
+      x="95"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameboxitemRewardImg"
+      x="23"
+      y="264" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameItemLeft"
+      x="-36"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameItemRight"
+      x="295"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.gamebox.ExchangeTxtBgImg"
+      x="0"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.gamebox.ExchangeTxtImg"
+      x="62"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.gamebox.MedalBg"
+      x="8"
+      y="417" />
+    <bitmapData
+      resourceLink="asset.gamebox.MedalTxt"
+      x="39"
+      y="426" />
+    <bitmapData
+      resourceLink="asset.gamebox.ExchangeItemBg" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameImg1"
+      x="17"
+      y="61" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameImg2"
+      x="19"
+      y="60"
+      width="261" />
+    <bitmapData
+      resourceLink="asset.gamebox.gameImg3"
+      x="17"
+      y="61" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="gamebox.view.GameBoxExchangeView"
+      stylename="gamebox.GameBoxExchangeView"
+      x="760"
+      y="27" />
+    <custom
+      classname="gamebox.view.GameBoxExchangeItem"
+      stylename="gamebox.view.GameBoxExchangeItem1"
+      x="10"
+      y="35" />
+    <custom
+      classname="gamebox.view.GameBoxExchangeItem"
+      stylename="gamebox.view.GameBoxExchangeItem2"
+      x="10"
+      y="130" />
+    <custom
+      classname="gamebox.view.GameBoxExchangeItem"
+      stylename="gamebox.view.GameBoxExchangeItem3"
+      x="10"
+      y="225" />
+    <custom
+      classname="gamebox.view.GameBoxExchangeItem"
+      stylename="gamebox.view.GameBoxExchangeItem4"
+      x="10"
+      y="320" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamebox.ExchangeItemView"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="gamebox.ExchangeItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="gamebox.ExchangeItemView.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.ExchangeItemView.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="17"
+      y="40" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gamebox.ExchangeItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamebox.GameRewardItemView0"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="gamebox.ExchangeItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="gamebox.ExchangeItemView.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false"
+      x="20"
+      y="286" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamebox.GameRewardItemView1"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="gamebox.ExchangeItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="gamebox.ExchangeItemView.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false"
+      x="85"
+      y="286" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamebox.GameRewardItemView2"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="gamebox.ExchangeItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="gamebox.ExchangeItemView.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false"
+      x="150"
+      y="286" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gamebox.GameRewardItemView3"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="gamebox.ExchangeItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="gamebox.ExchangeItemView.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false"
+      x="215"
+      y="286" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="gamebox.GameboxMedalIcon0"
+      resourceLink="asset.gamebox.GameboxMedalIcon"
+      x="12"
+      y="421" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="gamebox.GameboxMedalIcon1"
+      resourceLink="asset.gamebox.GameboxMedalIcon"
+      x="143"
+      y="26" />
+  </customDisplay>
+  <components>
+    <component
+      classname="gamebox.GameBoxEnterFrame"
+      stylename="gamebox.GameBoxEnterFrameStyle"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="1015"
+      height="595" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamebox.gameitem.starBtn"
+      backStyle="asset.gamebox.gameboxitemStarBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="55"
+      y="390" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gamebox.Back"
+      parentStyle="core.describeBackground_style09"
+      x="0"
+      y="20"
+      width="983"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gamebox.rewardAreaBg"
+      parentStyle="core.describeBackground_style06"
+      width="215"
+      height="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.medalTxt"
+      textFormatStyle="gamebox.medalTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="105"
+      y="424" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.medalDscTxt"
+      textFormatStyle="gamebox.medalDscTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="45"
+      x="10"
+      y="447"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gamebox.ExchagneBtn"
+      backStyle="asset.core.ShopBuyBtn"
+      iconStyle="asset.gamebox.ExchangeTxt"
+      iconInnerRectString="20,40,3,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.exchangeItemNameTxt"
+      textFormatStyle="gamebox.exchangeItemNameTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="90"
+      y="10"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.exchangeCostTxt"
+      textFormatStyle="gamebox.exchangeCostTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="20"
+      x="100"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamebox.gameitem.LeftBtn"
+      backStyle="asset.gamebox.LeftBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="5"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gamebox.gameitem.RightBtn"
+      backStyle="asset.gamebox.RightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="680"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.gameOpenDayTxt"
+      textFormatStyle="gamebox.gameOpenDayTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="50"
+      x="43"
+      y="400"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gamebox.openAlertTxt"
+      textFormatStyle="gamebox.openAlertTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="20"
+      x="28"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gamebox.GameboxMedalIcon0"
+      resourceLink="asset.gamebox.GameboxMedalIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      x="12"
+      y="421" />
+  </components>
+</style>

@@ -1,0 +1,960 @@
+<style
+  name="gvgcross"
+  source="ui/zh_cn/swf/gvgcross.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.RankTopTips_t"
+      args="Arial,16,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.NotApplyTips_t"
+      args="Arial,16,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.TurnTips_t"
+      args="Arial,14,0xfffc03,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.TimeTips_t"
+      args="Arial,14,0xff0000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.TopText_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.NameText_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.ServerNameTxt_f"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.ConsortiaNameTxt_f"
+      args="Arial,22,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.round.unionNameGrayf"
+      args="Arial,24,0x00FFFF,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.round.unionNameGrayf2"
+      args="Arial,24,0x00FFFF,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.round.unionNameYellowf"
+      args="Arial,24,0xffc000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.round.areaNameGrayf"
+      args="Arial,14,0x00FFFF,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.round.areaNameYellowf"
+      args="Arial,14,0xffc000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.rankView.titleTxt_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.NameTxt_t1"
+      args="Arial,12,0xe4d29c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.NameTxt_t2"
+      args="Arial,12,0xff5a00,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.gvgcross.TeamBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.gvgcross.TeamTitleTxt"
+      x="51"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.gvgcross.TeamPlayerBg"
+      x="0"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTips1"
+      x="5"
+      y="418" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTips2"
+      x="152"
+      y="418" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTips3"
+      x="200"
+      y="418" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTips4"
+      x="20"
+      y="418" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTitle1"
+      x="25"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTitle2"
+      x="125"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTitle3"
+      x="240"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTitle4"
+      x="325"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.gvgcross.RankTitle5"
+      x="435"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.gvgcross.VSContentBg"
+      x="2"
+      y="34" />
+    <bitmapData
+      resourceLink="asset.gvgcross.VSContentLine"
+      x="2"
+      y="403" />
+    <bitmapData
+      resourceLink="asset.gvgcross.VSIcon"
+      x="120"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.gvgcross.vs"
+      x="180"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.gvgcross.failed" />
+    <bitmapData
+      resourceLink="asset.gvgcross.victory" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="gvgcross.view.warteam.GvgCrossEnterWarPlayerItem"
+      stylename="gvgcross.PlayerItem1"
+      x="0"
+      y="30" />
+    <custom
+      classname="gvgcross.view.warteam.GvgCrossEnterWarPlayerItem"
+      stylename="gvgcross.PlayerItem2"
+      x="0"
+      y="62" />
+    <custom
+      classname="gvgcross.view.warteam.GvgCrossEnterWarPlayerItem"
+      stylename="gvgcross.PlayerItem3"
+      x="0"
+      y="94" />
+    <custom
+      classname="gvgcross.view.warteam.GvgCrossEnterWarPlayerItem"
+      stylename="gvgcross.PlayerItem4"
+      x="0"
+      y="126" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="gvgcross.TeamList"
+      vSpace="3"
+      hSpace="3" />
+    <custom
+      classname="gvgcross.view.warteam.GvgCrossEnterWarAddView"
+      stylename="gvgcross.GvgCrossEnterWarAddView"
+      x="2" />
+    <custom
+      classname="gvgcross.view.ready.GvgCrossVSItem"
+      stylename="gvgcross.VSItem1"
+      x="2"
+      y="50" />
+    <custom
+      classname="gvgcross.view.ready.GvgCrossVSItem"
+      stylename="gvgcross.VSItem2"
+      x="2"
+      y="140" />
+    <custom
+      classname="gvgcross.view.ready.GvgCrossVSItem"
+      stylename="gvgcross.VSItem3"
+      x="2"
+      y="230" />
+    <custom
+      classname="gvgcross.view.ready.GvgCrossVSItem"
+      stylename="gvgcross.VSItem4"
+      x="2"
+      y="325" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="gvgcross.round.ContentContainer"
+      x="42"
+      y="36" />
+  </customDisplay>
+  <components>
+    <!-- 跨服公会战 -->
+    <component
+      classname="gvgcross.view.warteam.GvgCrossEnterWarFrame"
+      stylename="gvgcross.GvgCrossEnterWarFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveInnerRectString="0,120,0,45,1"
+      containerX="8"
+      containerY="20"
+      width="765"
+      height="405" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.EnterWarMemberText03"
+      textFormatStyle="gvg.Style.EnterWarMemberText03"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.EnterWarMemberText04"
+      textFormatStyle="gvg.Style.EnterWarMemberText04"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="250"
+      height="20"
+      x="80"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.WarmanTipsTxt"
+      textFormatStyle="gvg.WarmanTipsTxt_t01,gvg.WarmanTipsTxt_t02"
+      autoSize="none"
+      x="420"
+      y="0"
+      width="300"
+      height="20"
+      maxChars="50"
+      restrict="^ " />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gvgcross.TeamScroll"
+      vScrollbarStyle="core.VScrollbar03"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="14,3,0,-3,3"
+      viewportInnerRectString="0,30,17,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      vUnitIncrement="10"
+      width="758"
+      height="340"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.TeamIndex"
+      resourceLink="asset.gvgcross.Team01,asset.gvgcross.Team02,asset.gvgcross.Team03,asset.gvgcross.Team04,asset.gvgcross.Team05,asset.gvgcross.Team06,asset.gvgcross.Team07,asset.gvgcross.Team08,asset.gvgcross.Team09,asset.gvgcross.Team10"
+      x="33"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.State"
+      resourceLink="asset.gvgcross.TeamPlayerState1,asset.gvgcross.TeamPlayerState2,asset.gvgcross.TeamPlayerState3,gvgcross.TeamPlayerStateNone"
+      x="5"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gvgcross.TeamPlayerStateNone"
+      resourceLink="asset.gvgcross.TeamPlayerState1"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.JobIcon"
+      parentStyle="core.HeroVocation"
+      x="28"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gvgcross.VIPIcon"
+      resourceLink="asset.core.simpleVIPIcon"
+      x="54"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.VIPText"
+      textFormatStyle="campaign.GvgTop10Txt41_t"
+      autoSize="none"
+      x="72"
+      y="5"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.NameTxt"
+      textFormatStyle="gvgcross.NameTxt_t1,gvgcross.NameTxt_t2"
+      autoSize="none"
+      x="72"
+      y="5"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gvgcross.AddBtn"
+      backStyle="asset.gvgcross.TeamPlayerAdd"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gvgcross.DelBtn"
+      backStyle="asset.gvgcross.TeamPlayerDel"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="6" />
+    <!-- 跨服公会战 添加成员 -->
+    <component
+      classname="gvgcross.view.warteam.GvgCrossEnterWarAddFrame"
+      stylename="gvgcross.GvgCrossEnterWarAddFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveInnerRectString="0,120,0,45,1"
+      containerX="15"
+      containerY="30"
+      width="355"
+      height="435" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gvgcross.EnterWarRoleButton"
+      backStyle="asset.gvgcross.EnterWarNameTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="21"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gvgcross.EnterWarLevelButton"
+      backStyle="asset.gvgcross.EnterWarLevelTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gvgcross.EnterWarStateButton"
+      backStyle="asset.gvgcross.EnterWarStateTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="207"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="gvgcross.EnterWarAPButton"
+      backStyle="asset.gvgcross.EnterWarAPTxtImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="325"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.EnterWarItemBg"
+      resourceLink="asset.gvgcross.Itembg11,asset.gvgcross.Itembg21"
+      width="441"
+      height="32" />
+    <!-- 跨服公会战 查看排名 -->
+    <component
+      classname="gvgcross.view.ranklists.GvgCrossRankListFrame"
+      stylename="gvgcross.GvgCrossRankListFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      containerX="15"
+      containerY="50"
+      width="575"
+      height="545" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gvgcross.RankContentBg"
+      resourceLink="asset.gvgcross.RankContentBg"
+      x="7"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.RankGroupTips"
+      resourceLink="asset.gvgcross.GroupAsset1,asset.gvgcross.GroupAsset2,asset.gvgcross.GroupAsset3,asset.gvgcross.GroupAsset4"
+      x="98"
+      y="417" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankTopTips"
+      textFormatStyle="gvgcross.RankTopTips_t"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="170"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.NotApplyTips"
+      textFormatStyle="gvgcross.NotApplyTips_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="20"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gvgcross.RankItemVbox"
+      spacing="2"
+      x="8"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gvgcross.itemBgLight"
+      parentStyle="core.TitleBack_Style888"
+      x="2"
+      y="7"
+      width="524" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gvgcross.ItemBg"
+      resourceLink="gvgcross.itemBgLight" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.TopIcon"
+      resourceLink="asset.gvgcross.RankTop1,asset.gvgcross.RankTop2,asset.gvgcross.RankTop3"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.TopText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="4"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.NameText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="74"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.ServerNameText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="174"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.WinCountText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="294"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.ScoreText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="364"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.FightCapacityText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="434"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankListTitle.rankNum"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="12"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankListTitle.consortiaName"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="82"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankListTitle.serverName"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="182"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankListTitle.winCount"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="302"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankListTitle.totleScore"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="372"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.RankListTitle.fightTxt"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="80"
+      height="40"
+      x="442"
+      y="40" />
+    <!-- 跨服公会战 查看赛程 -->
+    <component
+      classname="gvgcross.view.ready.GvgCrossVSListFrame"
+      stylename="gvgcross.GvgCrossVSListFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      containerX="15"
+      containerY="50"
+      width="575"
+      height="545" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gvgcross.FrameBg"
+      parentStyle="core.describeBackground_style06"
+      width="543"
+      height="420"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.TurnTips"
+      textFormatStyle="gvgcross.TurnTips_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="390"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.TimeTips"
+      textFormatStyle="gvgcross.TimeTips_t"
+      autoSize="none"
+      width="280"
+      height="20"
+      x="2"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gvgcross.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="387"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.PageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="393"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gvgcross.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="310"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gvgcross.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="458"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.GroupBtn1"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.gvgcross.GroupUnselectedAsset1"
+      selectedIconStyle="asset.gvgcross.GroupSelectedAsset1"
+      unselectedIconInnerRectString="17,63,3,26,13"
+      selectedIconInnerRectString="14,72,4,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="12"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.GroupBtn2"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.gvgcross.GroupUnselectedAsset2"
+      selectedIconStyle="asset.gvgcross.GroupSelectedAsset2"
+      unselectedIconInnerRectString="24,51,3,26,13"
+      selectedIconInnerRectString="21,58,4,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="102"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.GroupBtn3"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.gvgcross.GroupUnselectedAsset3"
+      selectedIconStyle="asset.gvgcross.GroupSelectedAsset3"
+      unselectedIconInnerRectString="25,50,4,26,13"
+      selectedIconInnerRectString="21,59,4,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="192"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.GroupBtn4"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.gvgcross.GroupUnselectedAsset4"
+      selectedIconStyle="asset.gvgcross.GroupSelectedAsset4"
+      unselectedIconInnerRectString="24,52,4,26,13"
+      selectedIconInnerRectString="20,59,4,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="282"
+      y="5"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.ServerNameTxt"
+      textFormatStyle="gvgcross.ServerNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="250"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.ConsortiaNameTxt"
+      textFormatStyle="gvgcross.ConsortiaNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="250"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="gvgcross.LeftServerNameText"
+      autoSize="none"
+      textFieldStyle="gvgcross.ServerNameTxt"
+      colors="0xffffff,0xffb32e,0x741e0a"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="0,160,230"
+      width="250"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="gvgcross.LeftConsortiaNameText"
+      autoSize="none"
+      textFieldStyle="gvgcross.ConsortiaNameTxt"
+      colors="0xffffff,0xffb32e,0x741e0a"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="0,160,230"
+      width="250"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="gvgcross.RightServerNameText"
+      autoSize="none"
+      textFieldStyle="gvgcross.ServerNameTxt"
+      colors="0xffffff,0xffb32e,0x741e0a"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="0,160,230"
+      width="250"
+      x="290"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="gvgcross.RightConsortiaNameText"
+      autoSize="none"
+      textFieldStyle="gvgcross.ConsortiaNameTxt"
+      colors="0xffffff,0xffb32e,0x741e0a"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="0,160,230"
+      width="250"
+      x="290"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="miniMap.tower"
+      resourceLink="asset.gvgcrossui.towerGray,asset.gvgcrossui.towerBlue,asset.gvgcrossui.towerRed"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="miniMap.qi"
+      resourceLink="asset.gvgcrossui.qiGray,asset.gvgcrossui.qiBlue,asset.gvgcrossui.qiRed"
+      x="0"
+      y="0" />
+    <!-- 第几轮UI -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="gvgcross.round.Bg"
+      parentStyle="core.describeBackground_style11"
+      width="543"
+      height="366"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gvgcross.round.ContentBg"
+      resourceLink="asset.gvgcross.firstRoundBg,asset.gvgcross.secondRoundBg,asset.gvgcross.thirdRoundBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gvgcross.round.vbox"
+      x="5"
+      y="35"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.round.selectedIconButton1"
+      unSelectedStyle="asset.gvgcross.btnBg1"
+      selectedStyle="asset.gvgcross.btnBg2"
+      selectedIconStyle="asset.gvgcross.btnround12"
+      unselectedIconStyle="asset.gvgcross.btnround11"
+      selectedIconInnerRectString="8,18,6,77,13"
+      unselectedIconInnerRectString="8,18,6,77,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="1"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.round.selectedIconButton2"
+      unSelectedStyle="asset.gvgcross.btnBg1"
+      selectedStyle="asset.gvgcross.btnBg2"
+      selectedIconStyle="asset.gvgcross.btnround22"
+      unselectedIconStyle="asset.gvgcross.btnround21"
+      selectedIconInnerRectString="8,18,5,78,13"
+      unselectedIconInnerRectString="8,18,5,78,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="1"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.round.selectedIconButton3"
+      unSelectedStyle="asset.gvgcross.btnBg1"
+      selectedStyle="asset.gvgcross.btnBg2"
+      selectedIconStyle="asset.gvgcross.btnround32"
+      unselectedIconStyle="asset.gvgcross.btnround31"
+      selectedIconInnerRectString="9,18,6,78,13"
+      unselectedIconInnerRectString="9,18,6,78,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="1"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gvgcross.round.selectedIconButton4"
+      unSelectedStyle="asset.gvgcross.btnBg1"
+      selectedStyle="asset.gvgcross.btnBg2"
+      selectedIconStyle="asset.gvgcross.btnRank2"
+      unselectedIconStyle="asset.gvgcross.btnRank1"
+      selectedIconInnerRectString="8,18,15,61,13"
+      unselectedIconInnerRectString="8,18,15,61,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      y="1"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.round.LeftConsortiaName"
+      textFormatStyle="gvgcross.round.unionNameYellowf,gvgcross.round.unionNameGrayf"
+      autoSize="none"
+      multiline="false"
+      wordWrap="false"
+      filterString="core.DefaultFilter"
+      width="170"
+      height="30"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.round.LeftServerName"
+      textFormatStyle="gvgcross.round.areaNameYellowf,gvgcross.round.areaNameGrayf"
+      autoSize="none"
+      multiline="false"
+      wordWrap="false"
+      filterString="core.DefaultFilter"
+      width="170"
+      height="30"
+      x="0"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.round.RightConsortiaName"
+      parentStyle="gvgcross.round.LeftConsortiaName"
+      textFormatStyle="gvgcross.round.unionNameYellowf,gvgcross.round.unionNameGrayf2"
+      autoDisplay="true"
+      x="224" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.round.RightServerName"
+      parentStyle="gvgcross.round.LeftServerName"
+      x="224" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.gvgcrossTitle.rankNum"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      x="-25"
+      y="11"
+      width="180"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.gvgcrossTitle.consortiaName"
+      parentStyle="gvgcross.gvgcrossTitle.rankNum"
+      x="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.gvgcrossTitle.serverName"
+      parentStyle="gvgcross.gvgcrossTitle.rankNum"
+      x="210" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.gvgcrossTitle.fight"
+      parentStyle="gvgcross.gvgcrossTitle.rankNum"
+      x="340" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="gvgcross.rankItem.vbox"
+      spacing="15"
+      x="11"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.rankItem.rankNumTxt"
+      textFormatStyle="gvgcross.NameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="10"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.rankItem.consortiaNameTxt"
+      parentStyle="gvgcross.rankItem.rankNumTxt"
+      x="100"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.rankItem.serverNameTxt"
+      parentStyle="gvgcross.rankItem.rankNumTxt"
+      x="223"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gvgcross.rankItem.fightTxt"
+      parentStyle="gvgcross.rankItem.rankNumTxt"
+      x="345"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="miniMap.door"
+      resourceLink="asset.gvgcrossui.doorGray,asset.gvgcrossui.doorBlue,asset.gvgcrossui.doorRed"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="miniMap.vice"
+      resourceLink=",asset.gvgcrossui.viceBlue,asset.gvgcrossui.viceRed"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="gvg.ResCollectBtn"
+      backStyle="asset.gvgcrossui.ResCollectImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="miniMap.cityCenter"
+      resourceLink="asset.gvgcrossui.cityCenterGray,asset.gvgcrossui.cityCenterBlue,asset.gvgcrossui.cityCenterRed"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="miniMap.energyCrystal"
+      resourceLink="asset.gvgcrossui.energyCrystalGray,asset.gvgcrossui.energyCrystalBlue,asset.gvgcrossui.energyCrystalRed"
+      x="0"
+      y="0" />
+  </components>
+</style>

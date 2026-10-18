@@ -1,0 +1,845 @@
+<style
+  name="fish"
+  source="ui/zh_cn/swf/fish.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.levelText_f"
+      args="Arial,14,0xfcf2c6,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.ExpText_f"
+      args="Arial,12,0xf0eac4,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.countText_f"
+      args="Arial,19,0x95feff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.NameText_f"
+      args="Arial,14,0x00d2ff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.fishToll.countTxt_f"
+      args="Arial,14,0x00d2ff,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.fishCDText_f"
+      args="Arial,19,0x00fe00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.fishCDText_f2"
+      args="Arial,19,0xff0000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishHelpFrame.Text_f"
+      args="Arial,14,0xff0000,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishBagText_t"
+      args="Arial,12,0xeddb95,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.sort.titleTextFormat_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.sort.ItemTextValueStyle1_f"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.ScoreText_f"
+      args="Arial,14,0xf0eac4,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.SortText_f"
+      args="Arial,14,0xf0eac4,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishSimpleHelpFrame.text_f"
+      args="Arial,12,0xe4d29c,true,,,,,left"
+      letterSpacing="1"
+      leading="10" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.scoreText_f"
+      args="Arial,14,0x95feff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fish.FishFrame.SortLinkTxt_f"
+      args="Arial,14,0x00ff36,,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.fish.FishFrame.bg"
+      x="10"
+      y="25"
+      width="827"
+      height="434" />
+    <bitmapData
+      resourceLink="asset.fish.FishFrame.fishCDTxt"
+      x="200"
+      y="492" />
+    <bitmapData
+      resourceLink="asset.fish.fishTollBack"
+      x="-1"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.fish.fishToll1"
+      x="7"
+      y="7"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <bitmapData
+      resourceLink="asset.fish.fishToll2"
+      x="7"
+      y="7"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <bitmapData
+      resourceLink="asset.fish.fishToll3"
+      x="7"
+      y="7"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <bitmapData
+      resourceLink="asset.fish.fishToll4"
+      x="7"
+      y="7"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <bitmapData
+      resourceLink="asset.fish.FishHelpFrameBack"
+      x="-2"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.fish.FishHelpFrameCDTxt"
+      x="8"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.fish.FishViewBg"
+      x="6"
+      y="3"
+      width="819" />
+    <bitmapData
+      resourceLink="asset.fish.FishViewback1"
+      x="10"
+      y="96" />
+    <bitmapData
+      resourceLink="asset.fish.FishViewback2"
+      x="802"
+      y="96" />
+    <bitmapData
+      resourceLink="asset.fish.FishViewback3"
+      x="10"
+      y="416" />
+    <bitmapData
+      resourceLink="asset.fish.FishViewback4"
+      x="802"
+      y="416" />
+    <bitmapData
+      resourceLink="asset.FishSort.score"
+      x="10"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.FishSort.sort"
+      x="450"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.FishSort.sortBg"
+      x="530"
+      y="355" />
+    <bitmapData
+      resourceLink="asset.FishSort.line"
+      x="0"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.fish.FishFrame.count"
+      x="26"
+      y="55" />
+    <bitmapData
+      resourceLink="asset.fish.FishFrame.countBg"
+      x="41"
+      y="64" />
+    <bitmapData
+      resourceLink="asset.fish.FishFrame.countBorder"
+      x="124"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.fish.LevelNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fish.helpFrameBg"
+      x="-25"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.FishFrame.score"
+      x="20"
+      y="72" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.fish.FishLevelMc"
+      stylename="fish.FishLevelMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.fish.FishCDMc"
+      stylename="fish.FishCDMc"
+      x="16"
+      y="472" />
+    <custom
+      classname="asset.fish.shareMc"
+      stylename="fish.FishShareMc"
+      x="262"
+      y="479" />
+    <custom
+      classname="asset.fish.FishFrame.Lv"
+      stylename="fish.LevelTxtMc"
+      x="16"
+      y="40" />
+    <custom
+      classname="fish.view.FishView"
+      stylename="fish.FishView"
+      x="7"
+      y="95" />
+    <custom
+      classname="asset.fish.FishView.catchFishMc"
+      stylename="fish.FishView.catchFishMc"
+      x="325"
+      y="-95" />
+    <custom
+      classname="asset.fish.FishHelpView.helpTxtMc"
+      stylename="fish.FishHelpView.helpTxtMc"
+      x="710"
+      y="190" />
+    <custom
+      classname="fish.view.FishHelpView"
+      stylename="fish.FishHelpView"
+      x="0"
+      y="0" />
+    <custom
+      classname="cell.view.fishBag.FishBagCell"
+      stylename="fish.FishBagCell"
+      parentStyle="core.BaseItemView"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43" />
+    <custom
+      classname="fish.view.FishSortItemView"
+      stylename="fish.sort.FishSortItemAsset"
+      width="583"
+      height="30" />
+    <custom
+      classname="fish.useFishTool1"
+      stylename="fish.useFishTool1"
+      x="-400"
+      y="-10" />
+    <custom
+      classname="fish.useFishTool4"
+      stylename="fish.useFishTool4"
+      x="-400"
+      y="-10" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="fish.levelView"
+      x="75"
+      y="40"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="0"
+      tipDirctions="7,5,4,6"
+      tipGapH="0" />
+    <custom
+      classname="fish.view.FishToolItem"
+      stylename="view.FishToolItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="5"
+      tipDirctions="0,7,5,4,6"
+      tipGapH="0"
+      isFollowMouse="false" />
+    <custom
+      classname="asset.fish.backEffecMC"
+      stylename="fish.FishBackMc"
+      x="360"
+      y="330" />
+  </customDisplay>
+  <components>
+    <component
+      classname="fish.FishFrame"
+      stylename="fish.FishFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="875"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fish.FishFrame.back"
+      parentStyle="core.describeBackground_style11"
+      width="825"
+      height="512"
+      x="5000"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fish.FishFrame.fishBack"
+      parentStyle="core.describeBackground_style11"
+      width="825"
+      height="435"
+      x="10"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fish.FishFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="800"
+      y="-17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.SortLinkTxt"
+      textFormatStyle="fish.FishFrame.SortLinkTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="150"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.levelText"
+      textFormatStyle="fish.FishFrame.levelText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="25"
+      x="13"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.fishExpTxt"
+      textFormatStyle="fish.FishFrame.ExpText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="83"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.countText"
+      textFormatStyle="fish.FishFrame.countText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="25"
+      x="118"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.scoreText"
+      textFormatStyle="fish.FishFrame.scoreText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="90"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fish.FishFrame.fishBagBtn"
+      backStyle="asset.fish.view.fishBagBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="235"
+      y="-71" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.fishToll.countTxt"
+      textFormatStyle="fish.fishToll.countTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="7"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fish.FishFrame.hBox"
+      x="516"
+      y="30"
+      spacing="10" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="fish.FishFrame.fishCD"
+      timeTxtStyle="fish.FishFrame.fishCDText2"
+      x="270"
+      y="486" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.fishCDText2"
+      textFormatStyle="fish.FishFrame.fishCDText_f,fish.FishFrame.fishCDText_f2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishFrame.fishCDText"
+      textFormatStyle="fish.FishFrame.fishCDText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="30" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="fish.FishHelpView.helpTime"
+      timeTxtStyle="fish.FishFrame.fishCDText"
+      x="760"
+      y="160"
+      countStyle="2" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="fish.FishHelpView.helpBtn"
+      button="fish.FishHelpView.HelpBtnMc"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false"
+      x="760"
+      y="100" />
+    <component
+      stylename="fish.FishHelpView.HelpBtnMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.fish.FishHelpView.HelpBtnMc" />
+    <component
+      classname="fish.view.FishHelpFrame"
+      stylename="fish.FishHelpFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="250"
+      height="340" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.ConsortiaOutBg"
+      resourceLink="asset.fish.UnselectedBtn,asset.fish.FishHelpConstoria2"
+      imageRectString="0|93|0|33|13,14|60|4|25|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.ConsortiaOverBg"
+      resourceLink="asset.fish.selectedBtn,asset.fish.FishHelpConstoria1"
+      imageRectString="0|93|0|33|13,14|60|4|25|13" />
+		/&gt;
+		<component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fish.consortiaAsset"
+      resourceLink="fish.ConsortiaOutBg,fish.ConsortiaOverBg,fish.ConsortiaOverBg,fish.ConsortiaOutBg" /><component
+      stylename="fish.FishHelpFrame.consortiaBtn"
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      unSelectedStyle="fish.consortiaAsset"
+      selectedStyle="fish.consortiaAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="120"
+      y="180" /><component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.WorldOutBg"
+      resourceLink="asset.fish.UnselectedBtn,asset.fish.FishHelpWorld2"
+      imageRectString="0|93|0|33|13,15|60|4|25|13" /><component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.WorldOverBg"
+      resourceLink="asset.fish.selectedBtn,asset.fish.FishHelpWorld1"
+      imageRectString="0|93|0|33|13,15|60|4|25|13" />
+		/&gt;
+		<component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fish.worldAsset"
+      resourceLink="fish.WorldOutBg,fish.WorldOverBg,fish.WorldOverBg,fish.WorldOutBg" /><component
+      stylename="fish.FishHelpFrame.worldBtn"
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      unSelectedStyle="fish.worldAsset"
+      selectedStyle="fish.worldAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="11"
+      y="180" /><component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.PointOutBg"
+      resourceLink="asset.fish.UnselectedBtn,asset.fish.FishHelpPoint2"
+      imageRectString="0|93|0|33|13,14|64|4|25|13" /><component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.PointOverBg"
+      resourceLink="asset.fish.selectedBtn,asset.fish.FishHelpPoint1"
+      imageRectString="0|93|0|33|13,14|64|4|25|13" />
+		/&gt;
+		<component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fish.pointAsset"
+      resourceLink="fish.PointOutBg,fish.PointOverBg,fish.PointOverBg,fish.PointOutBg" /><component
+      stylename="fish.FishHelpFrame.pointBtn"
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      unSelectedStyle="fish.pointAsset"
+      selectedStyle="fish.pointAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="220" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishHelpFrame.Text"
+      textFormatStyle="fish.FishHelpFrame.Text_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="87"
+      height="20" /><component
+      classname="fish.view.FishBagFrame"
+      stylename="fish.FishBagFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="320"
+      height="300" /><component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fish.FishBagFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="295"
+      height="195"
+      x="-15"
+      y="0" /><component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fish.FishBagFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="285"
+      height="185"
+      x="-10"
+      y="5" /><component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="fish.FishBagPickupBtn"
+      backStyle="asset.core.TavernBtn"
+      textStyle="fish.FishBagBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="5,0,3,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="69"
+      height="27"
+      x="100"
+      y="196" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishBagBtnText"
+      textFormatStyle="fish.FishBagText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22" /><component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fish.FishBagScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="400"
+      height="235"
+      x="-10"
+      y="5" /><component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="fish.FishBagVBox"
+      x="-10"
+      y="6"
+      width="280"
+      spacing="2" /><component
+      classname="yishi.view.community.TimeDownBitmapView"
+      stylename="fish.FishHelpFrame.time"
+      timeTxtStyle="fish.FishFrame.fishCDText"
+      timeBitmapStyle="asset.fish.FishHelp.time"
+      x="25"
+      y="80" /><component
+      classname="fish.view.FishSortFrame"
+      stylename="fish.FishSortFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="700"
+      height="480" /><component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fish.FishSortBg"
+      parentStyle="core.describeBackground_style06"
+      width="680"
+      height="390"
+      x="-15"
+      y="5" /><component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fish.FishSortListBG"
+      parentStyle="core.describeBackground_style40"
+      width="670"
+      height="330"
+      x="-10"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.score"
+      textFormatStyle="fish.FishFrame.ScoreText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="25"
+      x="100"
+      y="358" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.sort"
+      textFormatStyle="fish.FishFrame.SortText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="540"
+      y="360" /><component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="fish.FishSort.ListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,1,-2,0,3"
+      viewportInnerRectString="0,0,5,2,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|fish.sort.FishSortItemAsset,29,583"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="652"
+      height="300"
+      x="7"
+      y="38" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.ItemTextStyle1"
+      textFormatStyle="fish.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="13"
+      y="20" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.ItemTextStyle2"
+      textFormatStyle="fish.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="113"
+      y="20" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.ItemTextStyle3"
+      textFormatStyle="fish.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="250"
+      y="20" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.ItemTextStyle4"
+      textFormatStyle="fish.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="380"
+      y="20" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSort.ItemTextStyle5"
+      textFormatStyle="fish.sort.titleTextFormat_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="505"
+      y="20" /><component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="fish.FishFrame.hBoxHelp"
+      x="176"
+      y="66"
+      spacing="16" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishHelp.nameText"
+      textFormatStyle="fish.FishFrame.NameText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="40"
+      x="-18"
+      y="-25"
+      wordWrap="true" /><component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fish.sort.HeroRankItemBack02"
+      parentStyle="core.TitleBack_Style888"
+      width="620"
+      height="29"
+      x="2"
+      y="4" /><component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fish.sort.ItemBg"
+      resourceLink=",fish.sort.HeroRankItemBack02"
+      height="25"
+      x="-3"
+      y="-3" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.sort.ItemTextValueStyle1"
+      textFormatStyle="fish.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="0"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.sort.ItemTextValueStyle2"
+      textFormatStyle="fish.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="113"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.sort.ItemTextValueStyle3"
+      textFormatStyle="fish.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="225"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.sort.ItemTextValueStyle4"
+      textFormatStyle="fish.sort.ItemTextValueStyle1_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="25"
+      x="355"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="fish.sort.ItemTextValueStyle5"
+      textFieldStyle="fish.sort.AppellNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="150"
+      x="475"
+      y="10" /><component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="fish.sort.ItemTextStyle2_vip"
+      textFieldStyle="fish.sort.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="75"
+      y="5"
+      width="100" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.sort.AppellNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="150"
+      height="20" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.sort.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" /><component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fish.FishFrame.CoolCDBtn"
+      backStyle="asset.queueBar.startBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="360"
+      y="492" /><component
+      classname="fish.view.FishSimpleHelpFrame"
+      stylename="fish.fishSimpleHelpFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="850"
+      height="630" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fish.FishSimpleHelpFrame.text"
+      textFormatStyle="fish.FishSimpleHelpFrame.text_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="600"
+      height="130"
+      x="0"
+      y="10" /><component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fish.FishFrame.TimeBgTurn"
+      resourceLink="asset.fish.FishFrame.TimeBg"
+      scaleX="-1" /><component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fish.FishFrame.countBg"
+      resourceLink="asset.fish.FishFrame.TimeBg,fish.FishFrame.TimeBgTurn"
+      imageRectString="0|193|0|58|13,386|193|0|58|13"
+      x="10"
+      y="470" /><component
+      classname="yishi.view.component.MovieButton"
+      stylename="fish.loveMc"
+      button="fish.loveEffecMC"
+      transparentEnable="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="-60"
+      tipDirctions="2,7,5,4,6"
+      tipGapH="0"
+      isFollowMouse="false"
+      displacement="false"
+      enable="false"
+      mouseChildren="true"
+      buttonMode="false"
+      x="-75"
+      y="-65" /><component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="fish.loveEffecMC"
+      resourceLink="asset.fish.loveEffecMC" /><component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fish.Spliceline"
+      resourceLink="asset.fish.Spliceline"
+      width="821"
+      height="4"
+      x="12"
+      y="95" /><component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fish.addBtn"
+      backStyle="asset.fish.FishFrame.add"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="35"
+      y="28" /></components>
+</style>

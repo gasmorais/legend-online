@@ -1,0 +1,880 @@
+<style  name="assaultwar"  source="ui/zh_cn/swf/assaultwar.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.HelpLinkTxt_t"
+      args="Arial,12,0x19d5f1,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.RankLinkTxt_t"
+      args="Arial,12,0x19d5f1,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.conditionTxt_t"
+      args="Arial,14,0xffcf2a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.moneyTxt_t"
+      args="Arial,14,0xffcf2a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.timesTxt_t"
+      args="Arial,14,0xffcf2a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.ServiceNameTxt_t"
+      args="Arial,12,0xdec975,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.redScreTxt_t"
+      args="Arial,14,0xfff600,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.blueScreTxt_t"
+      args="Arial,14,0xfff600,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.tiemsTxt_t"
+      args="Arial,14,0x3dff01,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.myScreTxt_t"
+      args="Arial,14,0xfff600,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.otherGoldTxt_t"
+      args="Arial,14,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.heroNameTxt_t"
+      args="Arial,12,0x23fffc,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.surplusTimeTxt_t"
+      args="Arial,12,0x23fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.fagTxt_t"
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="assaultwar.attackReduceTxt_t"
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set 
+      type="flash.text.TextFormat" 
+      stylename="assaultwar.rankNameTitle_t" 
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set 
+      type="flash.text.TextFormat" 
+      stylename="assaultwar.rankItemRank_t" 
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set 
+      type="flash.text.TextFormat" 
+      stylename="assaultwar.rankTipsTxt_t" 
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set 
+      type="flash.text.TextFormat" 
+      stylename="assaultwar.winTipsTxt01_t" 
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set 
+      type="flash.text.TextFormat" 
+      stylename="assaultwar.winTipsTxt02_t" 
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set 
+      type="flash.text.TextFormat" 
+      stylename="assaultwar.playerTipsTxt_t" 
+      args="Arial,12,0x00ff00,,,,,,center" />
+      
+      
+  </sets>
+  <bitmaps>
+    <bitmapData resourceLink="asset.assaultwar.startWarBack"/>
+    <bitmapData resourceLink="asset.assaultwar.titleBgImg"/>
+    <bitmapData resourceLink="asset.assaultwar.startWarCenterBack01"/>
+    <bitmapData resourceLink="asset.assaultwar.playerIcon"/>
+    <bitmapData resourceLink="asset.assaultwar.runnr01"/>
+    <bitmapData resourceLink="asset.assaultwar.runnr02"/>
+    <bitmapData resourceLink="asset.assaultwar.runnr03"/>
+    <bitmapData resourceLink="asset.assaultwar.playerHp"/>
+    <bitmapData resourceLink="asset.assaultwar.playerHpBack"/>
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="assaultwar.view.item.AssaultwarRunwayItem"
+      stylename="viewItem.AssaultwarRunwayItem01"
+      x="30"
+      y="0"/>
+    <custom
+      classname="assaultwar.view.item.AssaultwarRunwayItem"
+      stylename="viewItem.AssaultwarRunwayItem02"
+      x="15"
+      y="83"/>
+    <custom
+      classname="assaultwar.view.item.AssaultwarRunwayItem"
+      stylename="viewItem.AssaultwarRunwayItem03"
+      x="0"
+      y="165"/>
+    <custom
+      classname="assaultwar.view.AssaultwarRunwayView"
+      stylename="view.AssaultwarRunwayView"
+      x="78"
+      y="250"/>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="assalutwar.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22" 
+      x="8"
+      y="4" />
+    <custom
+      classname="assaultwar.view.item.AssaultwarHeadItem"
+      stylename="viewHeadItem.AssaultwarHeadItem"/>
+    <custom
+      classname="assaultwar.view.AssaultwarHeroView"
+      stylename="viewRedHead.AssaultwarHeroView"
+      x="100"
+      y="45"/>
+    <custom
+      classname="assaultwar.view.AssaultwarHeroView"
+      stylename="viewBlueHead.AssaultwarHeroView"
+      x="555"
+      y="45"/>
+    <custom
+      classname="assaultwar.view.AssaultwarCenterView"
+      stylename="viewTimes.AssaultwarCenterView"
+      x="420"
+      y="140"/>
+    <custom 
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="assalutwar.headHBox" 
+      spacing="10" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="assalutwar.RankItemVbox"
+      x="5"
+      y="45" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="assalutwar.bossIconStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-20"
+      isFollowMouse="false" />
+    <custom
+      classname="assaultwar.AssaultwarArmyHpView"
+      stylename="assaultwar.AssaultwarArmyHpView"
+      x="-37"
+      y="18" />
+  </customDisplay>
+  <components>
+    <!-- 报名界面 -->
+    <component
+      stylename="assaultwar.AssaultwarSignUpFrame"
+      classname="assaultwar.AssaultwarSignUpFrame"
+      parentStyle="core.Frame1"
+      width="683"
+      height="610"/>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="assaultwar.downBgBorder"
+      parentStyle="core.describeBackground_style04"
+      width="650"
+      height="159"/>
+    <component 
+      stylename="assaultwar.signUpBack" 
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      resourceLink="assaultwar.downBgBorder,asset.assaultwar.signUpBack,asset.assaultwar.downBg,asset.assaultwar.platformBg,asset.assaultwar.firstPlayer,asset.assaultwar.signUpCondition,asset.assaultwar.signUpMoney,asset.assaultwar.matchTimeIcon"	
+      imageRectString="0|345|19,0|0|19,2|348|19,194|269|19,285|300|19,262|364|19,262|384|19,262|416|19" 
+      x="0" 
+      y="0"/>
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.signupBtn"
+      backStyle="asset.assaultwar.btnBack"
+      iconStyle="asset.assaultwar.signUpBtnIcon"
+      iconInnerRectString="55,74,15,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.startBtn"
+      backStyle="asset.assaultwar.btnBack"
+      iconStyle="asset.assaultwar.startBtnIcon"
+      iconInnerRectString="30,119,15,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="435" /> 
+    <component 
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="assaultwar.signUpShopBtn" 
+      backStyle="asset.assaultwar.shopBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="57" 
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="assaultwar.signUpTitleImg"
+      resourceLink="asset.assaultwar.titleBgImg"
+      scaleX="-1" />
+    <component 
+      stylename="assaul.titleBgImg" 
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      resourceLink="asset.assaultwar.titleBgImg,assaultwar.signUpTitleImg"	
+      imageRectString="0|0|19,398|0|19" 
+      x="120" 
+      y="15"/>	
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.HelpLinkTxt"
+      textFormatStyle="assaultwar.HelpLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="53"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.RankLinkTxt"
+      textFormatStyle="assaultwar.RankLinkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="110"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.ServiceNameTxt"
+      textFormatStyle="assaultwar.ServiceNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="22"
+      x="248"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.conditionTxt"
+      textFormatStyle="assaultwar.conditionTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      width="100"
+      height="25"
+      x="351"
+      y="362" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.moneyTxt"
+      textFormatStyle="assaultwar.moneyTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      width="100"
+      height="25"
+      x="351"
+      y="389" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.timesTxt"
+      textFormatStyle="assaultwar.timesTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      width="180"
+      height="25"
+      x="351"
+      y="414" />
+    <component 
+      stylename="assaultwar.playerIcon" 
+      classname="com.pickgliss.ui.image.Image"  
+      resourceLink="asset.assaultwar.playerIcon"	
+      x="118" 
+      y="14"/>	
+    <!-- 开始战斗界面 -->
+    <component 
+      classname="com.pickgliss.ui.image.Image" 
+      stylename="assaultwar.startWarBack" 
+      resourceLink="asset.assaultwar.startWarBack" 
+      x="0"
+      y="0" />
+    <component
+      stylename="assaultwar.AssaultwarStartFrame"
+      classname="assaultwar.AssaultwarStartFrame"
+      parentStyle="core.Frame2"
+      backStyle="assaultwar.startWarBack"
+      moveInnerRectString="0,30,10,45,1"
+	  closeInnerRectString="29,13,27,29,14"
+      width="976"
+      height="602"/>
+    <component 
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="assaultwar.startShopBtn" 
+      backStyle="asset.assaultwar.shopBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="37" 
+      y="437" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      stylename="assaultwar.startWarTopBack" 
+      resourceLink="asset.assaultwar.startWarTopBack04,asset.assaultwar.startWarTopBack01,asset.assaultwar.startWarTopBack02,asset.assaultwar.startWarTopBack04,asset.assaultwar.startWarTypeBack02,asset.assaultwar.startWarTypeBack01"	
+      imageRectString="89|62|19,301|5|19,353|137|19,725|61|19,789|93|19,3|93|19" 
+      x="25" 
+      y="-47"/>
+    <component 
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="assaultwar.startAddTimeBtn" 
+      backStyle="asset.assaultwar.startWarCenterAddBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-45" 
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image" 
+      stylename="startWarCenterLeftBack" 
+      resourceLink="asset.assaultwar.startWarCenterBack01"
+      scaleX="-1" />
+    <component 
+      stylename="assaultwar.centerBack01" 
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      resourceLink="startWarCenterLeftBack,asset.assaultwar.startWarCenterBack01"	
+      imageRectString="-0|0|19,0|0|19" 
+      x="0" 
+      y="0"/>
+    <component 
+      stylename="assaultwar.centerBack02" 
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      resourceLink="asset.assaultwar.startWarCenterBack02,asset.assaultwar.startWarCenterBack03,asset.assaultwar.startWarCenterBack04"	
+      imageRectString="0|1|19,162|-4|19,269|-4|19" 
+      x="-166" 
+      y="3"/>
+    <component 
+      stylename="assaultwar.downBack" 
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      resourceLink="asset.assaultwar.startWarDownBack02,asset.assaultwar.startWarDownBack03,asset.assaultwar.startWarDownBack01,asset.assaultwar.startWarDownBack01,asset.assaultwar.startWarDownBack04"	
+      imageRectString="0|-9|19,208|0|19,208|29|19,474|29|19,474|0|19" 
+      x="140" 
+      y="459"/>	
+    <component 
+      classname="com.pickgliss.ui.image.Image" 
+      stylename="assaultwar.posRedBack" 
+      resourceLink="asset.assaultwar.startWarPos01" 
+      scaleX="0.7" 
+      scaleY="0.7" 
+      x="-60"
+      y="-30" />
+    <component 
+      stylename="assaultwar.posBlueBack" 
+      classname="com.pickgliss.ui.image.Image" 
+      resourceLink="asset.assaultwar.startWarPos02"  
+      scaleX="0.7" 
+      scaleY="0.7" 
+      x="660" 
+      y="-30"/>
+      
+    <component 
+      stylename="assaultwar.runway01" 
+      classname="com.pickgliss.ui.image.Image" 
+      resourceLink="asset.assaultwar.runnr01" 
+      mouseEnabled="false"
+      selectable="false"
+      y="-14"/>
+    <component 
+      stylename="assaultwar.runway02" 
+      classname="com.pickgliss.ui.image.Image" 
+      resourceLink="asset.assaultwar.runnr02" 
+      mouseEnabled="false"
+      selectable="false"
+      y="-14"/>
+    <component 
+      stylename="assaultwar.runway03" 
+      classname="com.pickgliss.ui.image.Image" 
+      resourceLink="asset.assaultwar.runnr03" 
+      mouseEnabled="false"
+      selectable="false"
+      y="-14"/>
+    <component 
+      stylename="assaultwar.redtypeIcon" 
+      classname="com.pickgliss.ui.image.ScaleFrameImage" 
+      resourceLink="asset.assaultwar.startWarTypeIcon01,asset.assaultwar.startWarTypeIcon02,asset.assaultwar.startWarTypeIcon03,asset.assaultwar.startWarTypeIcon04,asset.assaultwar.startWarTypeIcon05,asset.assaultwar.startWarTypeIcon06"  
+      x="45" 
+      y="68"/>
+    <component 
+      stylename="assaultwar.bluetypeIcon" 
+      classname="com.pickgliss.ui.image.ScaleFrameImage" 
+      resourceLink="asset.assaultwar.startWarTypeIcon01,asset.assaultwar.startWarTypeIcon02,asset.assaultwar.startWarTypeIcon03,asset.assaultwar.startWarTypeIcon04,asset.assaultwar.startWarTypeIcon05,asset.assaultwar.startWarTypeIcon06"  
+      x="830" 
+      y="68"/>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.redScreTxt"
+      textFormatStyle="assaultwar.redScreTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="163"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.blueScreTxt"
+      textFormatStyle="assaultwar.blueScreTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="565"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.tiemsTxt"
+      textFormatStyle="assaultwar.tiemsTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="365"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.myScreTxt"
+      textFormatStyle="assaultwar.myScreTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="436"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.otherGoldTxt"
+      textFormatStyle="assaultwar.otherGoldTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="208"
+      y="456" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.attackAddTxt"
+      parentStyle="assaultwar.otherGoldTxt"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="445"
+      y="459" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.needMoneyTxt01"
+      parentStyle="assaultwar.attackAddTxt"
+      x="415"
+      y="488" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.needMoneyTxt02"
+      parentStyle="assaultwar.attackAddTxt"
+      x="717"
+      y="459" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.screAddTxt"
+      parentStyle="assaultwar.attackAddTxt"
+      x="682"
+      y="488" />
+    <component 
+      classname="com.pickgliss.ui.image.Image" 
+      stylename="assaultwar.GoldIcon01" 
+      resourceLink="asset.core.SmallPointImg" 
+      x="457"
+      y="486" />
+    <component 
+      classname="com.pickgliss.ui.image.Image" 
+      stylename="assaultwar.GoldIcon02" 
+      resourceLink="asset.core.SmallPointImg" 
+      x="712"
+      y="486" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.rankStartBtn"
+      backStyle="asset.assaultwar.btnStartBack"
+      iconStyle="asset.assaultwar.rankBtnIcon"
+      iconInnerRectString="7,69,7,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="470"
+      y="86" /> 
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.inspireBtn"
+      backStyle="asset.assaultwar.btnStartBack"
+      iconStyle="asset.assaultwar.inspireBtnIcon"
+      iconInnerRectString="23,38,7,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="499"
+      y="475" /> 
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.hotBtn"
+      backStyle="asset.assaultwar.btnStartBack"
+      iconStyle="asset.assaultwar.hotBtnIcon"
+      iconInnerRectString="23,38,7,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="100"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="740"
+      y="470" /> 
+	<component 
+	  classname="com.pickgliss.ui.image.ScaleBitmapImage" 
+	  stylename="assalutwar.GoodsBack" 
+	  resourceLink="core.shop.goodsItemBack2" 
+	  scaleGridString="3,3,50,50" 
+	  width="60" 
+	  height="60" 
+	  smoothing="true"
+	  mouseChildren="false" 
+	  mouseEnabled="false" 
+      x="4"
+      y="0" />
+    <component
+      classname="yishi.view.community.HeadIconCell"
+      stylename="assalutwar.headIcon"
+      iconStyle="assalutwar.BaseIconView"
+      iconX="8"
+      iconY="4"
+      iconWidth="52"
+      iconHeight="52"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.heroNameTxt"
+      textFormatStyle="assaultwar.heroNameTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="82"
+      height="25"
+      x="-6"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.heroScoreTxt"
+      textFormatStyle="assaultwar.tiemsTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="82"
+      height="25"
+      x="-6"
+      y="42" />
+    <!-- 中间出战剩余时间等 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.surplusTimeTxt"
+      textFormatStyle="assaultwar.surplusTimeTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="80"
+      height="25"
+      x="-73"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.fagTxt"
+      textFormatStyle="assaultwar.fagTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="82"
+      height="25"
+      x="70"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.attackReduceTxt"
+      textFormatStyle="assaultwar.attackReduceTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="82"
+      height="25"
+      x="170"
+      y="5" />
+    <!-- 帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="assaultwar.AssaultwarHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="assaultwar.AssaultwarSignUpFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="600" />
+    <!-- 排行榜 -->
+    <component
+      stylename="assaultwar.AssaultwarRankFrame"
+      classname="assaultwar.AssaultwarRankFrame"
+      parentStyle="core.Frame1"
+      width="667"
+      height="520"/>
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="assaultwar.textBg1"
+      resourceLink="asset.assaultwar.TxtBgLeft,asset.assaultwar.TxtBgMiddle,asset.assaultwar.TxtBgRight"
+      width="70"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="assaultwar.textBg2"
+      resourceLink="asset.assaultwar.TxtBgLeft,asset.assaultwar.TxtBgMiddle,asset.assaultwar.TxtBgRight"
+      width="105"
+      height="27" />
+    <component 
+      stylename="assaultwar.rankBack" 
+      classname="com.pickgliss.ui.image.MutipleImage"  
+      resourceLink="asset.assaultwar.rankBack,asset.assaultwar.rankMyScore,asset.assaultwar.rankMyRank,assaultwar.textBg1,assaultwar.textBg2"	
+      imageRectString="0|0|19,349|364|19,102|364|19,192|359|19,434|359|19" 
+      x="0" 
+      y="5"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankRankTitle" 
+	  textFormatStyle="assaultwar.rankNameTitle_t" 
+	  filterString="core.normal_f" 
+	  autoSize="none" 
+	  width="85" 
+	  y="18"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankNameTitle" 
+	  parentStyle="assaultwar.rankRankTitle" 
+	  autoSize="none" 
+	  width="115" 
+	  x="85" />
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankJobTitle" 
+	  parentStyle="assaultwar.rankRankTitle" 
+	  autoSize="none" 
+	  width="85" 
+	  x="200"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankSeverTitle" 
+	  parentStyle="assaultwar.rankRankTitle" 
+	  autoSize="none" 
+	  width="115" 
+	  x="285"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankPowrTitle" 
+	  parentStyle="assaultwar.rankRankTitle" 
+	  autoSize="none" 
+	  width="90" 
+	  x="400"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankScoreTitle" 
+	  parentStyle="assaultwar.rankRankTitle" 
+	  autoSize="none" 
+	  width="138" 
+	  x="490"/>
+	<component 
+	  classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankItemRank" 
+	  textFormatStyle="assaultwar.rankItemRank_t" 
+	  filterString="core.normal_f" 
+	  autoSize="none" 
+	  width="85" 
+	  height="22" 
+	  x="0" 
+	  y="5" />
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankItemName" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="115" 
+	  x="85"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankItemJob" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="85" 
+	  x="200"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankItemSever" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="115" 
+	  x="285"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankItemPowr" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="90" 
+	  x="400"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.rankItemScore" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="138" 
+	  x="490"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.myRankTxt" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="80" 
+	  x="188"
+	  y="367"/>
+    <component 
+      classname="com.pickgliss.ui.text.FilterFrameText"
+	  stylename="assaultwar.myScoreTxt" 
+	  parentStyle="assaultwar.rankItemRank" 
+	  autoSize="none" 
+	  width="80" 
+	  x="447"
+	  y="367"/>
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="assaultwar.TopIcon"
+      resourceLink="asset.assaultwar.rankItemRank1,asset.assaultwar.rankItemRank2,asset.assaultwar.rankItemRank3"
+      x="25"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="assaultwar.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="282"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.rankPageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="285"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="210"
+      y="313" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="assaultwar.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="350"
+      y="313" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.rankTipsTxt"
+      textFormatStyle="assaultwar.rankTipsTxt_t"
+      autoSize="none"
+      width="542"
+      height="20"
+      x="21"
+      y="391" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.otherGoldTxt1"
+      textFormatStyle="assaultwar.otherGoldTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="203"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.winTipsTxt01"
+      textFormatStyle="assaultwar.winTipsTxt01_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="270"
+      height="25"
+      x="140"
+      y="473" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.winTipsTxt02"
+      textFormatStyle="assaultwar.winTipsTxt02_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="270"
+      height="25"
+      x="140"
+      y="498" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="assaultwar.playerTipsTxt"
+      textFormatStyle="assaultwar.playerTipsTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      selectable="false"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="-90"
+      y="0" />
+    <component 
+      stylename="assaultwar.warback" 
+      classname="com.pickgliss.ui.image.ScaleFrameImage" 
+      resourceLink="asset.assaultwar.startWarTopBack05,asset.assaultwar.startWarTopBack03"  
+      x="391" 
+      y="38"/>
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="assaultwar.playerHpBack"
+      resourceLink="asset.assaultwar.playerHpBack"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="assaultwar.playerHp"
+      resourceLink="asset.assaultwar.playerHp"
+      x="1"
+      y="3" />
+  </components>
+</style>

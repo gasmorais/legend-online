@@ -1,0 +1,231 @@
+package com.road.yishi.proto.item
+{
+   import com.netease.protobuf.Message;
+   import com.netease.protobuf.ReadUtils;
+   import com.netease.protobuf.WriteUtils;
+   import com.netease.protobuf.WritingBuffer;
+   import flash.errors.IOError;
+   import flash.utils.IDataInput;
+   import flash.utils.IExternalizable;
+   
+   public final class ItemUseMsg extends Message implements IExternalizable
+   {
+      
+      private var pos$field:int;
+      
+      private var hasField$0:uint = 0;
+      
+      private var count$field:int;
+      
+      private var bag_type$field:int;
+      
+      private var battle_id$field:String;
+      
+      private var friend_id$field:int;
+      
+      public function ItemUseMsg()
+      {
+         super();
+      }
+      
+      public function removePos() : void
+      {
+         hasField$0 &= 4294967294;
+         pos$field = new int();
+      }
+      
+      public function get hasPos() : Boolean
+      {
+         return (hasField$0 & 1) != 0;
+      }
+      
+      public function set pos(param1:int) : void
+      {
+         hasField$0 |= 1;
+         pos$field = param1;
+      }
+      
+      public function get pos() : int
+      {
+         return pos$field;
+      }
+      
+      public function removeCount() : void
+      {
+         hasField$0 &= 4294967293;
+         count$field = new int();
+      }
+      
+      public function get hasCount() : Boolean
+      {
+         return (hasField$0 & 2) != 0;
+      }
+      
+      public function set count(param1:int) : void
+      {
+         hasField$0 |= 2;
+         count$field = param1;
+      }
+      
+      public function get count() : int
+      {
+         return count$field;
+      }
+      
+      public function removeBagType() : void
+      {
+         hasField$0 &= 4294967291;
+         bag_type$field = new int();
+      }
+      
+      public function get hasBagType() : Boolean
+      {
+         return (hasField$0 & 4) != 0;
+      }
+      
+      public function set bagType(param1:int) : void
+      {
+         hasField$0 |= 4;
+         bag_type$field = param1;
+      }
+      
+      public function get bagType() : int
+      {
+         if(!hasBagType)
+         {
+            return 1;
+         }
+         return bag_type$field;
+      }
+      
+      public function removeBattleId() : void
+      {
+         battle_id$field = null;
+      }
+      
+      public function get hasBattleId() : Boolean
+      {
+         return battle_id$field != null;
+      }
+      
+      public function set battleId(param1:String) : void
+      {
+         battle_id$field = param1;
+      }
+      
+      public function get battleId() : String
+      {
+         return battle_id$field;
+      }
+      
+      public function removeFriendId() : void
+      {
+         hasField$0 &= 4294967287;
+         friend_id$field = new int();
+      }
+      
+      public function get hasFriendId() : Boolean
+      {
+         return (hasField$0 & 8) != 0;
+      }
+      
+      public function set friendId(param1:int) : void
+      {
+         hasField$0 |= 8;
+         friend_id$field = param1;
+      }
+      
+      public function get friendId() : int
+      {
+         return friend_id$field;
+      }
+      
+      final override public function writeToBuffer(param1:WritingBuffer) : void
+      {
+         if(hasPos)
+         {
+            WriteUtils.writeTag(param1,0,1);
+            WriteUtils.write$TYPE_INT32(param1,pos$field);
+         }
+         if(hasCount)
+         {
+            WriteUtils.writeTag(param1,0,2);
+            WriteUtils.write$TYPE_INT32(param1,count$field);
+         }
+         if(hasBagType)
+         {
+            WriteUtils.writeTag(param1,0,3);
+            WriteUtils.write$TYPE_INT32(param1,bag_type$field);
+         }
+         if(hasBattleId)
+         {
+            WriteUtils.writeTag(param1,2,4);
+            WriteUtils.write$TYPE_STRING(param1,battle_id$field);
+         }
+         if(hasFriendId)
+         {
+            WriteUtils.writeTag(param1,0,5);
+            WriteUtils.write$TYPE_INT32(param1,friend_id$field);
+         }
+      }
+      
+      final override public function readFromSlice(param1:IDataInput, param2:uint) : void
+      {
+         var _loc6_:* = 0;
+         var _loc5_:uint = 0;
+         var _loc3_:uint = 0;
+         var _loc8_:uint = 0;
+         var _loc7_:uint = 0;
+         var _loc4_:uint = 0;
+         while(param1.bytesAvailable > param2)
+         {
+            switch(((_loc6_ = ReadUtils.read$TYPE_UINT32(param1)) >>> 3) - 1)
+            {
+               case 0:
+                  if(_loc5_ != 0)
+                  {
+                     throw new IOError("Bad data format: ItemUseMsg.pos cannot be set twice.");
+                  }
+                  _loc5_++;
+                  pos = ReadUtils.read$TYPE_INT32(param1);
+                  break;
+               case 1:
+                  if(_loc3_ != 0)
+                  {
+                     throw new IOError("Bad data format: ItemUseMsg.count cannot be set twice.");
+                  }
+                  _loc3_++;
+                  count = ReadUtils.read$TYPE_INT32(param1);
+                  break;
+               case 2:
+                  if(_loc8_ != 0)
+                  {
+                     throw new IOError("Bad data format: ItemUseMsg.bagType cannot be set twice.");
+                  }
+                  _loc8_++;
+                  bagType = ReadUtils.read$TYPE_INT32(param1);
+                  break;
+               case 3:
+                  if(_loc7_ != 0)
+                  {
+                     throw new IOError("Bad data format: ItemUseMsg.battleId cannot be set twice.");
+                  }
+                  _loc7_++;
+                  battleId = ReadUtils.read$TYPE_STRING(param1);
+                  break;
+               case 4:
+                  if(_loc4_ != 0)
+                  {
+                     throw new IOError("Bad data format: ItemUseMsg.friendId cannot be set twice.");
+                  }
+                  _loc4_++;
+                  friendId = ReadUtils.read$TYPE_INT32(param1);
+                  break;
+               default:
+                  ReadUtils.skip(param1,_loc6_ & 7);
+            }
+         }
+      }
+   }
+}
+

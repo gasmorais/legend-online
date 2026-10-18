@@ -1,0 +1,748 @@
+<style
+  name="consortiagroupchat"
+  source="ui/zh_cn/swf/consortiagroupchat.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.contributePromptTextStyle_t"
+      args="Arial,12,0xceb482,,,,,,left" />
+    <!-- 公会成员文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.menberListTextStyle_t"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <!-- 聊天信息文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.outputTextStyle_t"
+      args="Arial,12,0x1c1c1c,,,,,,left,,,,2" />
+    <!-- 聊天信息本人文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.outputSelfTextStyle_t"
+      args="Arial,12,0x1c1c1c,,,,,,left,,,,2" />
+    <!-- 公会事件信息文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.infoTextStyle_t"
+      args="Arial,12,0x04ef25,,,,,,left,,,,2" />
+    <!-- 信息记录文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.historyTextStyle_t"
+      args="Arial,12,0x1c1c1c,,,,,,left" />
+    <!-- 信息记录本人文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.historySelfTextStyle_t"
+      args="Arial,12,0x1c1c1c,,,,,,left" />
+    <!-- 他人名字文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.historyNameTextStyle_t"
+      args="Arial,12,0x0024ff,,,,,,left" />
+    <!-- 本人名字文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.historySelfNameTextStyle_t"
+      args="Arial,12,0xbc3f07,,,,,,left" />
+    <!-- 公会事件信息记录文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.historyInfoTextStyle_t"
+      args="Arial,12,0x04ef25,,,,,,left" />
+    <!-- 我的公会按钮文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.consortiaBtnTextStyle_t"
+      args="Arial,12,0xfff9d2,,,,,,center" />
+    <!-- 关闭按钮文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.closeBtnTextStyle_t"
+      args="Arial,12,0xecdfa1" />
+    <!-- 公会公告标题文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.broadCastTitleTextStyle_t"
+      args="Arial,12,0xeb9504,,,,,,left" />
+    <!-- 安全提示文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.warningTextStyle_t"
+      args="Arial,12,0x7b7878,true,,,,,left" />
+    <!-- 滤镜 -->
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="consortiagroupchat.normal_f"
+      args="0x000000,0.5,4,4,3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.Vip_1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.Vip_2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.FrameBack_1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.FrameBack_2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.FrameBack_3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.Master_1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.Master_2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.Back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.ButtonBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.TitleBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.TitleText"
+      x="181"
+      y="-28" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.NoticeIcon"
+      x="6"
+      y="1" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.NoticeTitle"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.PlayerItemBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.PopTip"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.RightBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.RecordBtnBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.MiniCloseBtn"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.MinimizeBtn"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg4"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg5"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg6"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg7"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg8"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg9"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.consortiagroupchat.HistoryTitleText"
+      x="30"
+      y="-43" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="groupchat.view.ConsortiaGroupChatPlayerItem"
+      stylename="consortiagroupchat.PlayerItem" />
+    <!-- 公会成员列表头像 -->
+    <custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="consortiagroupchat.MenberListItemHeadCell"
+      backStyle="consortiagroupchat.MenberListItemHeadCellBack"
+      iconStyle="consortiagroupchat.MenberListItemHeadCellIcon"
+      iconX="2"
+      iconY="2"
+      iconWidth="20"
+      iconHeight="20"
+      x="23"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseFriendIcon"
+      stylename="consortiagroupchat.MenberListItemHeadCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="2"
+      loadingHeight="2"
+      loadingX="10"
+      loadingY="10" />
+  </customDisplay>
+  <components>
+    <!-- 公会聊天 -->
+    <component
+      classname="groupchat.ConsortiaGroupChatFrame"
+      stylename="consortiagroupchat.ConsortiaGroupChatFrame"
+      backStyle="consortiagroupchat.ConsortiaGroupChatFrameBack"
+      moveInnerRectString="0,59,0,20,1"
+      moveEnable="true"
+      escEnable="true"
+      containerX="5"
+      containerY="15"
+      width="602"
+      height="462" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="consortiagroupchat.ConsortiaGroupChatFrameBack"
+      resourceLink="asset.consortiagroupchat.FrameBack_1,asset.consortiagroupchat.FrameBack_2,asset.consortiagroupchat.FrameBack_3" />
+    <!-- 信息记录 -->
+    <component
+      classname="groupchat.view.ConsortiaGroupChatHistoryView"
+      stylename="consortiagroupchat.HistoryView"
+      titleStyle="core.FrameTitleText"
+      backStyle="consortiagroupchat.HistoryViewBg"
+      moveInnerRectString="0,33,0,25,1"
+      titleOuterRectPosString="0,12,1"
+      moveEnable="true"
+      enterEnable="false"
+      escEnable="true"
+      containerX="16"
+      containerY="40"
+      width="340"
+      height="462" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="consortiagroupchat.HistoryViewBg"
+      resourceLink="asset.consortiagroupchat.HistoryFrameBg1,asset.consortiagroupchat.HistoryFrameBg2,asset.consortiagroupchat.HistoryFrameBg3,asset.consortiagroupchat.HistoryFrameBg4,asset.consortiagroupchat.HistoryFrameBg5,asset.consortiagroupchat.HistoryFrameBg6,asset.consortiagroupchat.HistoryFrameBg7,asset.consortiagroupchat.HistoryFrameBg8,asset.consortiagroupchat.HistoryFrameBg9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.HistoryViewChatListBack"
+      resourceLink="asset.consortiagroupchat.Back"
+      scaleGridString="5,5,93,64"
+      width="315"
+      height="391"
+      x="-5"
+      y="-15" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="consortiagroupchat.HistoryViewChatList"
+      vScrollbarStyle="consortiagroupchat.VScrollbar"
+      vScrollbarInnerRectString="300,16,0,0,2"
+      viewportInnerRectString="0,0,0,0,5"
+      vScrollProxy="0"
+      vUnitIncrement="18"
+      width="315"
+      height="391"
+      x="-5"
+      y="-15" />
+    <!-- 翻页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.IMHistoryViewMiniCloseBtn"
+      backStyle="asset.consortiagroupchat.MiniCloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="290"
+      y="-39" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.IMHistoryViewFirstPageBtn"
+      parentStyle="core.MaxButton"
+      backStyle="asset.water.FirstPageBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,3,6"
+      tipGapH="-22"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="59"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.IMHistoryViewLastPageBtn"
+      parentStyle="core.MaxButton"
+      backStyle="asset.water.LastPageBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,3,6"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="225"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.IMHistoryViewPrePageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,3,6"
+      tipGapH="-22"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="111"
+      y="388"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.IMHistoryViewNextPageBtn"
+      parentStyle="core.MaxButton"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,3,6"
+      tipGapV="5"
+      isFollowMouse="false"
+      x="195"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="consortiagroupchat.IMHistoryViewPageBg"
+      resourceLink="asset.consortiagroupchat.PageBack"
+      x="130"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.IMHistoryViewPageTxt"
+      textFormatStyle="core.IMHistoryViewPageTxt_f"
+      filterString="consortiagroupchat.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="132"
+      y="390" />
+    <!-- 安全提示背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.WarningBack"
+      resourceLink="asset.consortiagroupchat.NoticeTitle"
+      scaleGridString="5,5,394,15"
+      width="403"
+      x="5"
+      y="2" />
+    <!-- 安全提示图标 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="consortiagroupchat.WarningIcon"
+      resourceLink="asset.core.IMChatInfoNoticeImg"
+      x="-9"
+      y="-2" />
+    <!-- 安全提示文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.WarningText"
+      textFormatStyle="consortiagroupchat.warningTextStyle_t"
+      autoSize="none"
+      width="364"
+      height="38"
+      x="25"
+      y="-2"
+      wordWrap="true" />
+    <!-- 聊天信息背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.ChatListBack"
+      resourceLink="asset.consortiagroupchat.Back"
+      scaleGridString="5,5,93,64"
+      width="403"
+      height="291"
+      x="5"
+      y="2" />
+    <!-- 聊天信息 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="consortiagroupchat.ChatList"
+      vScrollbarStyle="consortiagroupchat.VScrollbar"
+      vScrollbarInnerRectString="386,16,1,1,2"
+      viewportInnerRectString="0,25,0,30,5"
+      vScrollProxy="0"
+      vUnitIncrement="18"
+      width="404"
+      height="291"
+      x="5"
+      y="2" />
+    <!-- 聊天信息文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.ChatListText"
+      textFormatStyle="consortiagroupchat.outputTextStyle_t"
+      wordWrap="true"
+      multiline="true"
+      mouseWheelEnabled="false"
+      width="381"
+      x="4"
+      y="0" />
+    <!-- 输入框背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.InputBack"
+      resourceLink="asset.consortiagroupchat.Back"
+      scaleGridString="5,5,93,64"
+      width="404"
+      height="80"
+      x="5"
+      y="322" />
+    <!-- 输入框内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.InputText"
+      textFormatStyle="consortiagroupchat.outputTextStyle_t"
+      wordWrap="true"
+      multiline="false"
+      type="input"
+      mouseWheelEnabled="false"
+      autoSize="none"
+      width="405"
+      height="80"
+      x="5"
+      y="322" />
+    <!-- 公会公告框背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.BroadCastBack"
+      resourceLink="asset.consortiagroupchat.Back"
+      scaleGridString="5,5,93,64"
+      width="179"
+      height="120"
+      x="408"
+      y="28" />
+    <!-- 公会公告标题背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="consortiagroupchat.BroadCastTitleBack"
+      resourceLink="asset.consortiagroupchat.RightBack"
+      x="409"
+      y="1" />
+    <!-- 公会公告标题 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.BroadCastTitleText"
+      textFormatStyle="consortiagroupchat.broadCastTitleTextStyle_t"
+      filterString="consortiagroupchat.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="414"
+      y="3" />
+    <!-- 公会公告内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.BroadCastText"
+      textFormatStyle="consortiagroupchat.historyTextStyle_t"
+      wordWrap="true"
+      multiline="true"
+      type="input"
+      maxChars="70"
+      mouseWheelEnabled="false"
+      autoSize="none"
+      width="160"
+      height="96"
+      x="420"
+      y="32" />
+    <!-- 输入提示文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.BroadCastInputTipTextStyle"
+      textFormatStyle="consortiagroupchat.historyTextStyle_t"
+      x="420"
+      y="32"
+      autoSize="none"
+      width="160"
+      height="40"
+      wordWrap="true" />
+    <!-- 公会成员标题背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="consortiagroupchat.MenberListTitleBack"
+      resourceLink="asset.consortiagroupchat.RightBack"
+      x="409"
+      y="150" />
+    <!-- 公会成员标题 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.MenberListTitleText"
+      textFormatStyle="consortiagroupchat.broadCastTitleTextStyle_t"
+      filterString="consortiagroupchat.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="414"
+      y="152" />
+    <!-- 公会成员 -->
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="consortiagroupchat.MenberListPanel"
+      vScrollbarStyle="consortiagroupchat.VScrollbar"
+      vScrollbarInnerRectString="16,1,0,5,3"
+      viewportInnerRectString="0,0,0,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|consortiagroupchat.PlayerItem,32,160"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="60"
+      width="178"
+      height="265"
+      x="410"
+      y="177" />
+    <!-- 公会成员背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.PlayerItemBack"
+      resourceLink="asset.consortiagroupchat.PlayerItemBack"
+      scaleGridString="5,5,153,21"
+      width="160"
+      height="31"
+      x="0"
+      y="0" />
+    <!-- 公会成员列表管理员 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortiagroupchat.MenberListItemMaster"
+      resourceLink="consortiagroupchat.Master_1,asset.consortiagroupchat.Master_2"
+      x="3"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.Master_1"
+      resourceLink="asset.consortiagroupchat.Master_1"
+      scaleGridString="5,5,11,9"
+      width="19"
+      height="17"
+      x="0"
+      y="0" />
+    <!-- 公会成员列表头像背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortiagroupchat.MenberListItemHeadCellBack"
+      parentStyle="core.ItemBack"
+      width="24"
+      height="24" />
+    <!-- 公会成员列表名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.MenberListItemName"
+      textFormatStyle="consortiagroupchat.menberListTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="65"
+      y="6" />
+    <!-- 公会成员列表名字 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="consortiagroupchat.MenberListItemNameGradientText"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="consortiagroupchat.MenberListItemNameGradientTextField"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.MenberListItemNameGradientTextField"
+      textFormatStyle="consortiagroupchat.VipNameTxt_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="65"
+      y="6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortiagroupchat.VipNameTxt_f"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <!-- 公会成员列表VIP -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortiagroupchat.MenberListItemVip"
+      resourceLink="asset.consortiagroupchat.Vip_1,asset.consortiagroupchat.Vip_2"
+      x="130"
+      y="15" />
+    <!-- 最小化按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.MinimizeBtn"
+      backStyle="asset.consortiagroupchat.MinimizeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="537"
+      y="-15" />
+    <!-- 迷你关闭按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.MiniCloseBtn"
+      backStyle="asset.consortiagroupchat.MiniCloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="563"
+      y="-15" />
+    <!-- 按钮背景条 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="consortiagroupchat.ButtonBack"
+      resourceLink="asset.consortiagroupchat.ButtonBack"
+      x="0"
+      y="294" />
+    <!-- 我的公会按钮文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.ConsortiaBtnText"
+      textFormatStyle="consortiagroupchat.consortiaBtnTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="22" />
+    <!-- 我的公会按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortiagroupchat.ConsortiaBtn"
+      backStyle="asset.consortiagroupchat.RecordBtnBack"
+      parentStyle="core.SmallBrownBtn"
+      autoSizeAble="false"
+      backgoundInnerRectString="5,0,2,0"
+      textStyle="consortiagroupchat.ConsortiaBtnText"
+      x="255"
+      y="295"
+      width="85" />
+    <!-- 消息记录按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortiagroupchat.HistoryBtn"
+      parentStyle="consortiagroupchat.ConsortiaBtn"
+      x="342"
+      backgoundInnerRectString="-5,0,2,0"
+      width="65" />
+    <!-- 修改按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortiagroupchat.UpdateBtn"
+      backStyle="asset.consortiagroupchat.RecordBtnBack"
+      parentStyle="consortiagroupchat.ConsortiaBtn"
+      x="520"
+      y="124"
+      backgoundInnerRectString="-5,0,2,0"
+      width="64" />
+    <!-- 闪烁开关按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="consortiagroupchat.ShineSwitchBtn"
+      unSelectedStyle="asset.consortiagroupchat.ShineSwitchOpenImg"
+      selectedStyle="asset.consortiagroupchat.ShineSwitchCloseImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,6,4"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="30"
+      height="24"
+      x="10"
+      y="296" />
+    <!-- 表情面板按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortiagroupchat.ChatExpressionBtn"
+      backStyle="asset.chatII.ExpressionBtnAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="40"
+      y="298" />
+    <!-- 关闭按钮文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortiagroupchat.CloseBtnText"
+      textFormatStyle="consortiagroupchat.closeBtnTextStyle_t" />
+    <!-- 关闭按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortiagroupchat.CloseBtn"
+      backStyle="asset.core.Style14Btn"
+      textStyle="consortiagroupchat.CloseBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="17,0,6,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="75"
+      height="31"
+      x="252"
+      y="404" />
+    <!-- 发送按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortiagroupchat.SendBtn"
+      parentStyle="consortiagroupchat.CloseBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,3,7"
+      tipGapH="-25"
+      tipGapV="0"
+      x="335"
+      backgoundInnerRectString="19,0,6,0" />
+    <!-- 滚动条 -->
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="consortiagroupchat.VScrollbar"
+      parentStyle="core.VScrollbar03"
+      trackStyle="core.Scrollbar03_Back"
+      thumbStyle="core.Scrollbar03_Step"
+      decreaseButtonStyle="core.Scrollbar02_Up"
+      increaseButtonStyle="core.Scrollbar02_Down"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="1,1,15,15,0"
+      decreaseButtonInnerRectString="11,10,0,0,9"
+      increaseButtonInnerRectString="11,10,0,0,10"
+      orientation="0"
+      thumbMinSize="23" />
+    <component
+      classname="consortiachess.board.ChesspvpChatHistory"
+      stylename="chesspvp.HistoryView"
+      titleStyle="core.FrameTitleText"
+      backStyle="consortiagroupchat.HistoryViewBg"
+      moveInnerRectString="0,33,0,25,1"
+      titleOuterRectPosString="0,12,1"
+      moveEnable="true"
+      enterEnable="false"
+      escEnable="true"
+      containerX="16"
+      containerY="40"
+      width="293"
+      height="462" />
+  </components>
+</style>

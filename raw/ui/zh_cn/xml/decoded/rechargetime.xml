@@ -1,0 +1,172 @@
+<style
+  name="rechargetime"
+  source="ui/zh_cn/swf/rechargetime.swf">
+  <sets>
+    <set
+      args="0x000000,1,3,3,100"
+      stylename="castle.TimeBoxFilter_1"
+      type="flash.filters.GlowFilter" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="rechagetime.currIndexTxt_t"
+      args="Arial,14,0xffffff,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.rechargetime.BackAsset1" />
+    <bitmapData
+      resourceLink="asset.rechargetime.RoleAsset"
+      x="-35"
+      y="-65" />
+    <bitmapData
+      resourceLink="asset.rechargetime.PayBtnBackAsset" />
+    <bitmapData
+      resourceLink="asset.rechargetime.PayBtnTxtAsset" />
+    <bitmapData
+      resourceLink="asset.rechargetime.IconAsset" />
+    <bitmapData
+      resourceLink="asset.rechargetime.ValueAsset"
+      x="135"
+      y="163" />
+    <bitmapData
+      resourceLink="asset.rechargetime.upBack"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.rechargetime.middleBack"
+      x="2"
+      y="300" />
+    <bitmapData
+      resourceLink="asset.rechargetime.downBack"
+      x="2"
+      y="405" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="rechargetime.Item"
+      iconStyle="rechargetime.ItemIcon"
+      textStyle="rechargetime.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="rechargetime.ItemIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="rechargetime.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="38" />
+  </customDisplay>
+  <components>
+    <component
+      classname="firstpay.RechargeFrame"
+      stylename="firstpay.RechargeFrame"
+      parentStyle="core.Frame2"
+      containerX="14"
+      containerY="48"
+      width="560"
+      height="498"
+      closeInnerRectString="29,25,-40,29,14" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="rechargetime.bg"
+      parentStyle="core.describeBackground_style06"
+      x="0"
+      y="0"
+      width="532"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="rechargetime.ItemBox"
+      x="22"
+      y="226"
+      spacing="8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="rechargetime.nextItemBox"
+      x="22"
+      y="327"
+      spacing="8" />
+    <component
+      stylename="rechargetime.PayBtn"
+      classname="com.pickgliss.ui.controls.IconButton"
+      backStyle="asset.rechargetime.PayBtnBackAsset"
+      iconStyle="asset.rechargetime.PayBtnTxtAsset"
+      iconInnerRectString="29,117,10,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="259"
+      y="104" />
+    <custom
+      classname="asset.rechargetime.ButtonEffect"
+      stylename="rechargetime.ButtonEffect"
+      x="21"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="rechargetime.RewardItemBack"
+      resourceLink="asset.rechargetime.IconAsset"
+      x="-4"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="rechargetime.EquiptLightEffect"
+      resourceLink="asset.rechargetime.EquiptLightEffect" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="rechagetime.currIndexTxt"
+      textFormatStyle="rechagetime.currIndexTxt_t"
+      autoSize="none"
+      width="180"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="rechagetime.Gradient.currIndexTxt"
+      colors="0xe7b92d,0xffbe2"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="rechagetime.currIndexTxt"
+      mouseEnabled="false"
+      width="180"
+      height="20"
+      x="24"
+      y="199" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="rechagetime.Gradient.nextIndexTxt"
+      parentStyle="rechagetime.Gradient.currIndexTxt"
+      y="295" />
+  </components>
+</style>

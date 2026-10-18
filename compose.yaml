@@ -1,0 +1,50 @@
+name: legend-online
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: ../docker/server.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./:/app:ro
+      - ./logs:/app/logs
+    expose:
+      - "8787"
+
+  web:
+    build:
+      context: ./web
+      dockerfile: ../docker/web.Dockerfile
+      additional_contexts:
+        docker: ./docker
+    restart: unless-stopped
+    depends_on:
+      - server
+    volumes:
+      - ./web/public:/srv/public:ro
+    ports:
+      - "${LG_WEB_PORT:-8080}:80"
+
+  db:
+    image: postgres:17-alpine
+    profiles: ["db"]
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: lobr
+      POSTGRES_USER: lobr
+      POSTGRES_PASSWORD: lobr
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C.UTF-8"
+    ports:
+      - "127.0.0.1:5464:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lobr -d lobr"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:

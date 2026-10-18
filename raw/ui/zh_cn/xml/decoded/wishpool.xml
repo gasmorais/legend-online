@@ -1,0 +1,308 @@
+<style
+  name="wishpool"
+  source="ui/zh_cn/swf/wishpool.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="wishpoolFrame.descTxt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wishpoolFrame.refreshCostTxt_t"
+      args="Arial,14,0x95feff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wishpool.checkBtnTxt_t"
+      args="Arial,12,0xbaad99,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.wishpool.upImage3"
+      x="-20"
+      y="-35" />
+    <bitmapData
+      resourceLink="asset.wishpool.propBg"
+      x="9"
+      y="493" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="wishpool.itemView"
+      iconStyle="wishpool.itemView.icon"
+      textStyle="wishpool.itemView.text"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="56"
+      profileHeight="56"
+      isShowProfile="true"
+      strengthenX="28"
+      strengthenY="28" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="wishpool.itemView.icon"
+      parentStyle="core.BaseItemViewIcon"
+      loadingX="28"
+      loadingY="28"
+      iconWidth="56"
+      iconHeight="56"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="wishpool.rightGoodsItemView"
+      iconStyle="wishpool.rightGoodsItemView.icon"
+      textStyle="wishpool.rightGoodsItemView.text"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="45"
+      profileHeight="45"
+      isShowProfile="true"
+      strengthenX="22"
+      strengthenY="22" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="wishpool.rightGoodsItemView.icon"
+      parentStyle="core.BaseItemViewIcon"
+      loadingX="22"
+      loadingY="22"
+      iconWidth="45"
+      iconHeight="45"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.wishpool.success"
+      stylename="wishpoolFrame.successMovie"
+      x="-120"
+      y="-140" />
+    <custom
+      classname="asset.wishpool.failure"
+      stylename="wishpoolFrame.failureMovie"
+      x="445"
+      y="30" />
+  </customDisplay>
+  <components>
+    <component
+      classname="wishpool.WishPoolFrame"
+      stylename="wishpool.frame"
+      containerX="19"
+      containerY="68"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,3,25,29,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      width="980"
+      height="675" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="wishpoolFrame.bg"
+      resourceLink="wishpoolframe.border,asset.wishpool.bg,asset.wishpool.selectewish,asset.wishpool.rewardlook,asset.wishpool.rewardget,asset.wishpool.costbg,asset.wishpool.costbg,asset.core.SmallPointImg"
+      imageRectString="-2|-2|19,0|0|19,325|14|19,773|32|19,792|252|19,206|457|19,425|432|19,240|457|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="wishpoolframe.border"
+      width="948"
+      height="564"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="wishpool.selectedImg"
+      resourceLink="asset.wishpool.itemSelected"
+      x="-11"
+      y="-11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wishpoolFrame.refreshBtn"
+      backStyle="asset.wishpool.refreshBg"
+      iconStyle="asset.wishpool.refreshBtn"
+      iconInnerRectString="52,45,14,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="195"
+      y="478" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wishpoolFrame.freeRefreshBtn"
+      backStyle="asset.wishpool.refreshBg"
+      iconStyle="asset.wishpool.freeRefreshBtn"
+      iconInnerRectString="35,78,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="195"
+      y="478" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wishpoolFrame.wishBtn"
+      backStyle="asset.wishpool.wishBg"
+      iconStyle="asset.wishpool.wishBtn"
+      iconInnerRectString="52,45,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="415"
+      y="478" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wishpoolFrame.shopBtn"
+      backStyle="asset.wishpool.wishBg"
+      iconStyle="asset.wishpool.shopBtn"
+      iconInnerRectString="38,78,14,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="770"
+      y="478" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="wishpoolFrame.rewardShowPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,160,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="165"
+      height="192"
+      x="749"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="wishpoolFrame.hasGetGoodsPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,160,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="165"
+      height="175"
+      x="749"
+      y="275" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpoolFrame.descTxt"
+      textFormatStyle="wishpoolFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="80"
+      x="525"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpoolFrame.refreshCostTxt"
+      textFormatStyle="wishpoolFrame.refreshCostTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="80"
+      x="265"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpoolFrame.wishCostTxt"
+      textFormatStyle="wishpoolFrame.refreshCostTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="80"
+      x="490"
+      y="432" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="wishpoolFrame.timeDownView"
+      timeTxtStyle="wishpoolFrame.timeDownViewTxt"
+      x="241"
+      y="525" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpoolFrame.timeDownViewTxt"
+      textFormatStyle="wishpoolFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpool.itemView.text"
+      parentStyle="core.BaseItemText"
+      autoSize="none"
+      width="56"
+      height="20"
+      x="0"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpool.rightGoodsItemView.text"
+      parentStyle="core.BaseItemText"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="wishpoolFrame.hasGetGoodsVBox"
+      x="0"
+      y="0"
+      width="165"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="wishpoolFrame.upImage"
+      resourceLink="asset.wishpool.upImage1,asset.wishpool.upImage2,asset.wishpool.upImage3"
+      x="0"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpoolFrame.leftTimeTxt"
+      textFormatStyle="wishpoolFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="60"
+      width="200"
+      wordWrap="true"
+      x="570"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wishpool.checkBtnTxt"
+      textFormatStyle="wishpool.checkBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="446"
+      y="456" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="wishpool.checkBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="419"
+      y="454" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.wishpool.pointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="462"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.wishpool.prophasTxt"
+      textFormatStyle="shop.GiftTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="80"
+      x="44"
+      y="497" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.wishpool.propIcon"
+      resourceLink="asset.wishpool.sIcon"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="13"
+      y="493" />
+  </components>
+</style>

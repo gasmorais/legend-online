@@ -1,0 +1,459 @@
+<style
+  name="offerreward"
+  source="ui/zh_cn/swf/offerreward.swf">
+  <sets>
+    <!-- 任务标题名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskTitle_f1"
+      args="Arial,14,0xffffff,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskTitle_f2"
+      args="Arial,14,0x59cd41,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskTitle_f3"
+      args="Arial,14,0x32a2f8,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskTitle_f4"
+      args="Arial,14,0xa838f7,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskTitle_f5"
+      args="Arial,14,0xff8000,true,,,,,left"
+      letterSpacing="1" />
+    <!--	任务描述	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskContent_f"
+      args="Arial,12,0xe7d1a8,,,,,,left"
+      letterSpacing="0" />
+    <!--	奖励经验值	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.OfferTaskExpValueTxt_f"
+      args="Arial,14,0xe7d1a8,,,,,,left"
+      letterSpacing="1" />
+    <!--	任务刷新时间	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.TaskUpdateTimeText_f"
+      args="Arial,16,0xf6f0c9,true" />
+    <!--	每日悬赏次数	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.DailyCountTxt_f"
+      args="Arial,14,0xe3b911,,,,,,right"
+      letterSpacing="1" />
+    <!--	免费刷新次数	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.FreeCountTxt_f"
+      args="Arial,16,0xf6f0c9,true"
+      letterSpacing="1" />
+    <!--	帮助确定按钮	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.HelpConfirmBtnTxt_f"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+    <!--	放弃链接	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.GiveBackText_t"
+      args="Arial,12,0xd8be58,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="offerReward.notJoinActPrompt_t"
+      args="Arial,12,0xFF0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <!--	OfferRewardHelpFrame -->
+    <bitmapData
+      resourceLink="asset.offerReward.HelpTxtImg"
+      x="-7"
+      y="19" />
+    <!--	OfferTaskItem -->
+    <bitmapData
+      resourceLink="asset.offerReward.TaskIcon"
+      x="5"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.offerReward.RewardImg"
+      x="246"
+      y="22" />
+    <bitmapData
+      resourceLink="asset.offerReward.ExpIcon"
+      x="301"
+      y="22" />
+    <bitmapData
+      resourceLink="asset.offerReward.GoldIcon"
+      x="406"
+      y="22" />
+    <!--	OfferTimeView -->
+    <bitmapData
+      resourceLink="asset.offerReward.UpdateTimeBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.offerReward.warningImage"
+      x="340"
+      y="6" />
+  </bitmaps>
+  <customDisplay>
+    <!--	OfferTaskView -->
+    <custom
+      classname="offerreward.view.OfferTaskView"
+      stylename="offerReward.OfferTaskView"
+      x="7"
+      y="47" />
+    <custom
+      classname="offerreward.view.OfferTimeView"
+      stylename="offerReward.OfferTimeView"
+      x="5"
+      y="288" />
+    <custom
+      classname="offerreward.view.OfferCountView"
+      stylename="offerReward.OfferCountView"
+      x="157"
+      y="16" />
+  </customDisplay>
+  <components>
+    <!--	OfferRewardFrame	-->
+    <component
+      classname="offerreward.OfferRewardFrame"
+      stylename="offerReward.OfferRewardFrame"
+      parentStyle="core.Frame1"
+      containerX="19"
+      containerY="62"
+      width="614"
+      height="461" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="offerReward.OfferRewardFrameBack"
+      parentStyle="core.describeBackground_style11"
+      width="578"
+      height="356"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="offerReward.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="535"
+      y="-31" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="offerReward.TaskItemBg"
+      resourceLink="asset.offerReward.TaskItemBg"
+      x="0"
+      y="0"
+      width="563"
+      height="57" />
+    <!--	OfferRewardHelpFrame	-->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="offerReward.RewardHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="buildings.offerreward.OfferRewardHelpFrame.helpContent"
+      titleText="buildings.offerreward.OfferRewardHelpFrame.titleText"
+      textWidth="373" />
+    <!--	OfferTimeView -->
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="offerReward.TaskUpdateTime"
+      timeTxtStyle="offerReward.TaskUpdateTimeText"
+      x="161"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.TaskUpdateTimeText"
+      textFormatStyle="offerReward.TaskUpdateTimeText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="offerReward.QuickRefreshBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.offerReward.QuickRefreshTxtImg"
+      iconInnerRectString="26,99,12,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="-7"
+      tipGapH="-7"
+      isFollowMouse="false"
+      x="261"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="offerReward.FreeRefreshBtn"
+      parentStyle="offerReward.QuickRefreshBtn"
+      backStyle="offerReward.FreeRefreshBtnImg"
+      iconStyle="offerReward.FreeRefreshTxtImg"
+      iconInnerRectString="25,85,13,27,13"
+      autoCenter="false"
+      x="258"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.FreeCountTxt"
+      textFormatStyle="offerReward.FreeCountTxt_f"
+      x="369"
+      y="22"
+      filterString="core.normal_f" />
+    <!--	OfferTaskItem -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.OfferTaskTitle"
+      textFormatStyle="offerReward.OfferTaskTitle_f1,offerReward.OfferTaskTitle_f2,offerReward.OfferTaskTitle_f3,offerReward.OfferTaskTitle_f4,offerReward.OfferTaskTitle_f5"
+      filterString="core.normal_f"
+      x="36"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.OfferTaskContent"
+      textFormatStyle="offerReward.OfferTaskContent_f"
+      autoSize="none"
+      width="210"
+      height="35"
+      x="31"
+      y="21"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.OfferTaskExpValueTxt"
+      textFormatStyle="offerReward.OfferTaskExpValueTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="343"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.OfferTaskGoldValueTxt"
+      textFormatStyle="offerReward.OfferTaskExpValueTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="425"
+      y="22" />
+    <!-- 接受按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="offerReward.OfferTaskAcceptBtn"
+      backStyle="asset.core.BlueBtn"
+      iconStyle="asset.offerReward.AcceptTxtImg"
+      iconInnerRectString="18,42,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="478"
+      y="16" />
+    <!-- 完成按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="offerReward.OfferTaskCompletedBtn"
+      parentStyle="offerReward.OfferTaskAcceptBtn"
+      iconStyle="asset.offerReward.CompletedTxtImg"
+      iconInnerRectString="17,44,7,16,13" />
+    <!-- 立即完成按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="offerReward.OfferTaskQuickBtnBtn"
+      backStyle="asset.core.offerQuickBtn"
+      iconStyle="asset.offerReward.QuickCompletedTxtImg"
+      iconInnerRectString="14,68,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="463"
+      y="10" />
+    <!--	OfferCountView	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.DailyCountTxt"
+      textFormatStyle="offerReward.DailyCountTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="40"
+      x="135"
+      wordWrap="true"
+      y="-10" />
+    <!-- 悬赏刷新提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="offerReward.RefreshAlertFrame"
+      parentStyle="worldboss.RiverNotAlert"
+      confirmStyle="offerReward.RefreshConfirmBtn"
+      cancelStyle="offerReward.RefreshCancelBtn"
+      checkStyle="offerReward.RefreshCheckBtn"
+      describeStyle="offerReward.RefreshDescribe"
+      showPromptStyle="offerReward.RefreshPrompt"
+      usebindPointStyle="offerreward.UseBindPointBtn"
+      width="410"
+      height="210"
+      containerX="28"
+      containerY="20"
+      notJoinActPromptStyle="offerReward.notJoinActPromptTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.notJoinActPromptTxt"
+      textFormatStyle="offerReward.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerReward.RefreshCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="6"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerReward.RefreshConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="50"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerReward.RefreshCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="190"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.RefreshDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="40"
+      width="340"
+      x="10"
+      y="10"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.RefreshPrompt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="41"
+      y="30" />
+    <!-- 		<component classname="com.pickgliss.ui.image.Scale9CornerImage" stylename="asset.offerReward.TaskItemBg"  -->
+    <!-- 			resourceLink="asset.offerReward.style01_scale9bg1,asset.offerReward.style01_scale9bg2,asset.offerReward.style01_scale9bg3,asset.offerReward.style01_scale9bg4,asset.offerReward.style01_scale9bg5,asset.offerReward.style01_scale9bg6,asset.offerReward.style01_scale9bg7,asset.offerReward.style01_scale9bg8,asset.offerReward.style01_scale9bg9" -->
+    <!-- 			width="563" height="57" -->
+    <!-- 		/> -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="offerReward.TitleBg"
+      resourceLink="asset.offerReward.TitleBg"
+      x="-150"
+      y="-10" />
+    <!-- 是否开通精灵盟约 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="offerreward.view.OfferTaskItem.showKingContractTip"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="offerreward.view.confirmStyle"
+      cancelStyle="offerreward.view.cancelStyle"
+      checkStyle="offerreward.NotAlertCheckBtn"
+      describeStyle="offer.KingContractStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="offer.KingContractStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="-1"
+      containerY="30"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="250"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerreward.view.confirmStyle"
+      parentStyle="worldboss.RiverNotAlert_confirmStyle"
+      x="15"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerreward.view.cancelStyle"
+      parentStyle="worldboss.RiverNotAlert_cancelStyle"
+      x="140"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offer.KingContractStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="275"
+      height="100"
+      x="-11"
+      y="0"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerReward.GiveBackText"
+      textFormatStyle="offerReward.GiveBackText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="18"
+      x="360"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerreward.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="-4"
+      y="53"
+      fieldX="23" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="offerreward.NotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="62"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="offerReward.AllFinishBtn"
+      backStyle="asset.offerReward.allFinishBtnImg"
+      iconStyle="asset.offerReward.allFinishTxtImg"
+      iconInnerRectString="29,90,12,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="-7"
+      tipGapH="-7"
+      isFollowMouse="false"
+      x="413"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="offerRewardItem.bufferText"
+      textFormatStyle="offerReward.OfferTaskExpValueTxt_f"
+      autoSize="none"
+      width="235"
+      height="20"
+      x="244"
+      y="35" />
+  </components>
+</style>

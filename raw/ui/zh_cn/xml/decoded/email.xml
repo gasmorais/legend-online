@@ -1,0 +1,1126 @@
+<style
+  name="email"
+  source="ui/zh_cn/swf/email.swf">
+  <sets>
+    <!-- 滤镜 -->
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="email.filter_1"
+      args="0x1d1109,1,5,5,3" />
+    <!-- 选项卡文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.tab_unselect_t"
+      args="Arial,12,0xa68559,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.tab_select_t"
+      args="Arial,14,0xfff9d2,true,,,,,center" />
+    <!-- 已读样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.title_read_t"
+      args="Arial,12,0xb0b0b0,truer" />
+    <!-- 未读样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.title_unread_t"
+      args="Arial,12,0xfff584,true" />
+    <!-- 内容样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.content_t"
+      args="Arial,12,0xe2e1e1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.content_t2"
+      args="Arial,12,0xFF0000" />
+    <!-- 全选文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.all_select_t"
+      args="Arial,12,0xffea00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.all_unselect_t"
+      args="Arial,12,0xfff9d2,,,,,,center" />
+    <!-- 页数文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.page_text_t"
+      args="Arial,12,0xfff4c6,true,,,,,center" />
+    <!-- 普通按钮文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.button_text_t"
+      args="Arial,12,0xf0cf90,true,,,,,center" />
+    <!-- 邮件标题样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.content_title_text_t"
+      args="Arial,12,0xfff584,true" />
+    <!-- 邮件系统发送人 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.content_title_text_t2"
+      args="Arial,12,0xff0000,true" />
+    <!-- 邮件内容样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.content_text_t"
+      args="Arial,12,0xfaffad"
+      leading="9" />
+    <!-- 战报内容文字样式 -->
+    <!-- 主题文字样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.Combox1_TextStyle_t"
+      args="Arial,12,0xdad8b6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportTimeTxt_t"
+      letterSpacing="1"
+      args="Arial,12,0xfff112" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportPosTxt_t"
+      args="Arial,12,0xfff112"
+      leading="9" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportPosTxt1_t"
+      args="Arial,12,0xfff112,,,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportNicknameTxt_t"
+      args="Arial,14,0xfaffad,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportLevelTxt_t"
+      args="Arial,14,0xfaffad,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportFightTxt_t"
+      args="Arial,14,0xfaffad" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportFightValueTxt_t"
+      args="Arial,14,0xfaffad,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportGoldValueTxt_t1"
+      args="Arial,14,0xfff112,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.ReportGoldValueTxt_t2"
+      args="Arial,14,0xff0000,true,,,,,right" />
+    <!--	好友列表	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="email.comboxButton1Txt_t"
+      args="Arial,14,0xffeda7" />
+  </sets>
+  <bitmaps>
+    <!-- 页数 -->
+    <bitmapData
+      resourceLink="asset.email.PageBack"
+      x="259"
+      y="378" />
+    <!-- 未看邮件 -->
+    <bitmapData
+      resourceLink="asset.email.UnreadEmailIcon" />
+    <!-- 已看邮件 -->
+    <bitmapData
+      resourceLink="asset.email.ReadEmailIcon" />
+    <!-- 系统邮件 -->
+    <bitmapData
+      resourceLink="asset.email.SysEmailIcon" />
+    <!-- 未看战报 -->
+    <bitmapData
+      resourceLink="asset.email.UnreadReportIcon" />
+    <!-- 已看战报 -->
+    <bitmapData
+      resourceLink="asset.email.ReadReportIcon" />
+    <!-- 读邮件内容分界线 -->
+    <bitmapData
+      resourceLink="asset.core.WriteEmailLine" />
+    <!-- 战斗胜利 -->
+    <bitmapData
+      resourceLink="asset.email.ReportSuccessIcon"
+      x="247"
+      y="-17" />
+    <!-- 图k-.png -->
+    <bitmapData
+      resourceLink="asset.email.EmailItemIconBack"
+      x="32"
+      y="2" />
+    <!-- bg-d.jpg -->
+    <bitmapData
+      resourceLink="asset.email.EmailListBack"
+      x="7"
+      y="32" />
+    <!-- 战-报.png -->
+    <bitmapData
+      resourceLink="asset.email.EmailReportBtnUnselected"
+      x="19"
+      y="4" />
+    <!-- 战-报1.png-->
+    <bitmapData
+      resourceLink="asset.email.EmailReportBtnSelected"
+      x="19"
+      y="4" />
+    <!--收件箱1.png-->
+    <bitmapData
+      resourceLink="asset.email.EmailBtnUnselected"
+      x="8"
+      y="4" />
+    <!-- 收件箱.png-->
+    <bitmapData
+      resourceLink="asset.email.EmailBtnSelected"
+      x="8"
+      y="4" />
+    <!-- Tips1-->
+    <bitmapData
+      resourceLink="asset.email.ReadMailTips1" />
+    <!-- Tips2-->
+    <bitmapData
+      resourceLink="asset.email.ReadMailTips2" />
+    <!--发件人：.png-->
+    <bitmapData
+      resourceLink="asset.email.SendMailNameTxtImg"
+      x="15"
+      y="22" />
+    <!--敌方bg.png-->
+    <bitmapData
+      resourceLink="asset.email.BattleReportEnemyBg"
+      x="92"
+      y="1" />
+    <!--自己bg.png-->
+    <bitmapData
+      resourceLink="asset.email.BattleReportSelfBg"
+      x="92"
+      y="1" />
+    <!--光晶-->
+    <bitmapData
+      resourceLink="asset.email.CrystalIcon"
+      x="228"
+      y="86" />
+    <!--胜利奖励-->
+    <bitmapData
+      resourceLink="asset.email.RewardWords"
+      x="126"
+      y="100" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="email.EmailItemBaseIcon"
+      iconStyle="email.EmailItemBaseIconIcon"
+      x="35"
+      y="5"
+      mouseEnabled="false"
+      mouseChildren="false"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="email.EmailItemBaseIconIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="22"
+      loadingY="22" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="email.EmailItemStarBaseIconIcon"
+      iconHeight="0"
+      iconWidth="0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="0"
+      loadingY="0"
+      mouseEnabled="false"
+      mouseChildren="false"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="58"
+      y="27" />
+    <custom
+      classname="emailII.view.BattleReportItem"
+      stylename="email.BattleReportItem1"
+      x="19"
+      y="108" />
+    <custom
+      classname="emailII.view.BattleReportItem"
+      stylename="email.BattleReportItem2"
+      x="19"
+      y="252" />
+    <!-- 邮件列表-->
+    <custom
+      classname="emailII.view.EmailListView"
+      stylename="email.EmailListView"
+      x="19"
+      y="42" />
+    <!-- 读邮件-->
+    <custom
+      classname="emailII.view.ReadEmailView"
+      stylename="email.ReadEmailView" />
+    <!-- 读战报 -->
+    <custom
+      classname="emailII.view.ReadBattleReportView"
+      stylename="email.ReadReportView" />
+    <!-- 英雄头像 -->
+    <!-- 普通副将 -->
+    <custom
+      classname="yishi.view.community.HeroCell"
+      stylename="email.HeroCell"
+      backStyle="email.SubHeroBack01"
+      iconStyle="core.BaseIcon"
+      vocationStyle="core.HeroVocation"
+      mouseChildren="false"
+      mouseEnabled="false"
+      iconX="5"
+      iconY="5"
+      iconWidth="83"
+      iconHeight="83" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="email.GoodsItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="44"
+      iconHeight="44"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="21"
+      loadingY="22"
+      x="3"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="email.GoodsItem"
+      backgroundStyle="email.GoodItemBack"
+      iconStyle="email.GoodsItemIcon"
+      textStyle="email.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="3"
+      profileY="3"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="email.StarItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="0"
+      iconHeight="0"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="tips.StarTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="20"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="0"
+      loadingY="0"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="26"
+      y="26" />
+    <custom
+      classname="asset.email.NewEffect"
+      stylename="email.NewEffect"
+      x="151"
+      y="17" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="6"
+      y="30" />
+    <!--邮件-->
+    <component
+      classname="emailII.EmailFrame"
+      stylename="email.EmailFrame"
+      parentStyle="core.Frame2"
+      containerX="13"
+      containerY="55"
+      width="383"
+      height="503" />
+    <!-- 写邮件 -->
+    <component
+      classname="emailII.view.WriteEmailFrame"
+      stylename="email.WriteEmailFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="60"
+      width="383"
+      height="506" />
+    <!-- 读邮件 -->
+    <component
+      classname="emailII.view.ReadEmailFrame"
+      stylename="email.ReadFrame"
+      parentStyle="core.Frame2"
+      containerX="13"
+      width="383"
+      height="503" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="email.SubHeroBack01"
+      resourceLink="asset.core.army.SubHeroBack01" />
+    <!-- 图标 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="email.IconBack"
+      resourceLink="asset.email.UnreadEmailIcon,asset.email.ReadEmailIcon,asset.email.SysEmailIcon,asset.email.UnreadReportIcon,asset.email.ReadReportIcon" />
+    <!--9宫图背景9-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="email.DescribeBackground"
+      parentStyle="core.describeBackground_style09"
+      x="1"
+      y="27"
+      width="352"
+      height="348" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.ListBack"
+      resourceLink="email.DescribeBackground,asset.email.EmailListBack,asset.email.PageBack" />
+    <!-- 选项卡文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.TabText"
+      textFormatStyle="email.tab_unselect_t,email.tab_select_t,email.tab_select_t,email.tab_unselect_t"
+      filterString="email.filter_1"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <!-- 邮件选项卡 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="email.MailButtonBg1"
+      resourceLink="asset.core.Style8UnselectedBtn"
+      scaleY="-1"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="email.MailButtonBg2"
+      resourceLink="asset.core.Style8SelectedBtn"
+      scaleY="-1"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.MailButtonAsset1"
+      resourceLink="email.MailButtonBg1,asset.email.EmailBtnUnselected" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.MailButtonAsset2"
+      resourceLink="email.MailButtonBg2,asset.email.EmailBtnSelected" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="email.EmailBtn"
+      unSelectedStyle="email.MailButtonAsset1"
+      selectedStyle="email.MailButtonAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="8" />
+    <!-- 战报选项卡 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="email.BattleBtn"
+      unSelectedStyle="email.BattleButtonAsset1"
+      selectedStyle="email.BattleButtonAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="101"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.BattleButtonAsset1"
+      resourceLink="email.MailButtonBg1,asset.email.EmailReportBtnUnselected" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.BattleButtonAsset2"
+      resourceLink="email.MailButtonBg2,asset.email.EmailReportBtnSelected" />
+    <!--		 未读 -->
+    <!--		<component classname="com.pickgliss.ui.controls.SelectedCheckButton" stylename="email.ReadBtn" parentStyle="core.checkstyle_1.CheckButton" -->
+    <!--			textStyle="email.TabText" fieldX="10"  fieldY="2"-->
+    <!--			x="175" y="7"-->
+    <!--		/>-->
+    <!--		 全部 -->
+    <!--		<component classname="com.pickgliss.ui.controls.SelectedCheckButton" stylename="email.AllBtn" parentStyle="core.checkstyle_1.CheckButton" -->
+    <!--			textStyle="email.TabText" fieldX="10" fieldY="2"-->
+    <!--			x="240" y="7"-->
+    <!--		/>-->
+    <!-- 全选文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.AllSelectedText"
+      textFormatStyle="email.all_unselect_t,email.all_select_t,email.all_select_t,email.all_unselect_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="email.AllSelectedBtn"
+      backStyle="asset.core.SmallBrownBtn"
+      textStyle="email.AllSelectedText"
+      autoSizeAble="false"
+      backgoundInnerRectString="2,8,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="24"
+      x="2"
+      y="378" />
+    <!-- 删除按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="email.DeleteBtn"
+      parentStyle="email.AllSelectedBtn"
+      x="72"
+      y="378" />
+    <!-- 选取附件 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="email.AttachBtn"
+      parentStyle="email.AllSelectedBtn"
+      x="142"
+      y="378" />
+    <!-- 前一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="email.PrePageBtn"
+      parentStyle="core.MaxButton"
+      x="257"
+      y="379"
+      scaleX="-1"
+      scaleY="1" />
+    <!-- 后一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="email.NextPageBtn"
+      parentStyle="core.MaxButton"
+      x="329"
+      y="379" />
+    <!-- 页数文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.PageText"
+      textFormatStyle="email.page_text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="265"
+      y="380" />
+    <!-- 写邮件 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="email.WriteBtn"
+      backStyle="asset.email.WriteEmailBtn"
+      width="103"
+      height="43"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="232"
+      y="-15" />
+    <!-- 单个邮件选择按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="email.EmailItemSelectButton"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="7"
+      y="16" />
+    <!-- 单个邮件背景按钮 -->
+    <!-- 未选择时的按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="email.EmailItemBack"
+      resourceLink="core.TitleBack_Style13,core.TitleBack_Style16,core.TitleBack_Style11"
+      x="48"
+      y="-5" />
+    <!--	选中	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="email.EmailItemBackSelected"
+      parentStyle="core.ItemOver3"
+      width="312"
+      height="55"
+      x="28"
+      y="-1" />
+    <!-- 单个邮件删除按钮1 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="email.EmailItemDeleteButton"
+      backStyle="asset.email.EmailItemDeleteBack"
+      width="19"
+      height="18"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="279" />
+    <!-- 单个邮件名字文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.EmailItemNameText"
+      textFormatStyle="email.title_unread_t,email.title_read_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="216"
+      height="20"
+      isAutoFitLength="true"
+      x="90"
+      y="6" />
+    <!-- 单个邮件发件人文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.EmailItemPersonText"
+      textFormatStyle="email.content_t,email.content_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="90"
+      y="26"
+      isAutoFitLength="true" />
+    <!-- 单个邮件剩余时间文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.EmailItemLeftTimeText"
+      textFormatStyle="email.content_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="222"
+      y="26" />
+    <!-- 读邮件背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="email.ReadEmailBaseBack"
+      parentStyle="core.describeBackground_style09"
+      width="352"
+      height="370"
+      x="1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.ReadPrivateEmailBack"
+      resourceLink="email.ReadEmailBaseBack,core.privateBg,asset.email.SendMailNameTxtImg,asset.writeemail.MailSubjectTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.ReadSystemEmailBack"
+      resourceLink="email.ReadEmailBaseBack,core.systemBg,asset.email.SendMailNameTxtImg,asset.writeemail.MailSubjectTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.NewReadMailLeftBg"
+      resourceLink="asset.writeemail.ReadMailBg"
+      scaleX="-1"
+      x="177"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.NewReadMailRightBg"
+      resourceLink="asset.writeemail.ReadMailBg"
+      x="177"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.privateBg"
+      resourceLink="asset.writeemail.privateBg"
+      x="8"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.systemBg"
+      resourceLink="asset.writeemail.systemBg"
+      x="8"
+      y="6" />
+    <!-- 回复按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="email.ReplyBtn"
+      parentStyle="core.AlertButton"
+      x="71"
+      y="373" />
+    <!-- 关闭按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="email.CloseBtn"
+      parentStyle="core.AlertButton"
+      x="190"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="email.GmIcon"
+      resourceLink="asset.core.GmIcon"
+      x="73"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="email.ItemGmIcon"
+      resourceLink="asset.core.GmIcon"
+      y="8" />
+    <!-- 发件人 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.SenderValueText"
+      textFormatStyle="email.content_title_text_t,email.content_title_text_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="22"
+      x="95"
+      y="20"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.TitleValueText"
+      textFormatStyle="email.content_title_text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="265"
+      height="50"
+      x="70"
+      y="49"
+      wordWrap="true" />
+    <!-- 内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ContentText"
+      textFormatStyle="email.content_text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      maxChars="200"
+      multiline="true"
+      wordWrap="true"
+      width="305"
+      height="170"
+      x="0"
+      y="84" />
+    <!-- 提示文字 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="email.AlertText"
+      resourceLink="asset.email.ReadMailTips1,asset.email.ReadMailTips2"
+      x="16"
+      y="233" />
+    <!-- 附件 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="email.GoodsHBox"
+      spacing="7"
+      x="35"
+      y="302" />
+    <!-- 附件背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="email.GoodItemBack"
+      parentStyle="core.SubHeroBack"
+      width="51"
+      height="51" />
+    <!--写邮件Combox-->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="email.ConsortiaEmailView.memberBtn"
+      backStyle="asset.core.Style17Btn"
+      textStyle="email.comboxButton1Txt"
+      autoSizeAble="false"
+      backgoundInnerRectString="18,0,5,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="87"
+      height="30"
+      x="170"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ConsortiaEmailView.memberNameInput"
+      textFormatStyle="email.Combox1_TextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="155"
+      height="20"
+      x="0"
+      y="5"
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="email.comboxItembgB"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="email.comboxListCellAsset"
+      resourceLink=",email.comboxItembgB,email.comboxItembgB"
+      fillAlphaRect="true" />
+    <component
+      classname="yishi.view.adapter.EmailSelectedListAdapter"
+      stylename="email.comboxListCell"
+      backStyle="email.comboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="core.Combox1_TextStyle"
+      autoSizeAble="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="email.comboxButton1"
+      backStyle="asset.core.Style17Btn"
+      textStyle="email.comboxButton1Txt"
+      autoSizeAble="false"
+      backgoundInnerRectString="20,0,5,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="87"
+      height="30"
+      x="-84"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.comboxButton1Txt"
+      textFormatStyle="email.comboxButton1Txt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="email.ComboxListpanel1"
+      backgoundStyle="asset.email.WriteMailComboxBg"
+      backgoundInnerRectString="-3,146,-8,113,13"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="17,4,-2,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|email.comboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="email.RecipientsSearchListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|email.comboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="190"
+      height="156" />
+    <!-- 好友按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="email.friendsButtonSelectedImg"
+      resourceLink="asset.core.friendsButtonSelectedImg"
+      scaleY="-1"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.FriendsSelectedBg"
+      resourceLink="email.friendsButtonSelectedImg,asset.core.friendsFriendImg"
+      imageRectString="0|75|25|25|13,5|19|4|17|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.FriendsUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg"
+      imageRectString="0|75|0|25|13,5|19|4|17|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FriendsBtnTextStyle"
+      autoSize="none"
+      width="52"
+      height="20"
+      textFormatStyle="friends.buttonUnselected_t,friends.buttonUnselected_t,friends.buttonSelected_t,friends.buttonUnselected_t"
+      filterString="core.friendsNormal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="email.FriendsButton"
+      unSelectedStyle="email.FriendsUnselectedBg"
+      selectedStyle="email.FriendsSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-2"
+      y="104"
+      width="75"
+      height="25"
+      fieldX="22"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.Combox1_TextStyle"
+      textFormatStyle="email.Combox1_TextStyle_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      restrict="^ "
+      width="155"
+      height="20" />
+    <!-- 公会按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.UnionSelectedBg"
+      resourceLink="email.friendsButtonSelectedImg,asset.core.friendsUnionImg"
+      imageRectString="0|70|25|25|13,3|21|2|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.UnionUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg"
+      imageRectString="0|70|0|25|13,3|21|2|20|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="email.UnionButton"
+      unSelectedStyle="email.UnionUnselectedBg"
+      selectedStyle="email.UnionSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      width="70"
+      height="25"
+      fieldX="20"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="73"
+      y="104" />
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="email.Combox1"
+      listPanelStyle="email.ComboxListpanel1"
+      listInnerRectString="2,33,0,100,18"
+      textStyle="email.Combox1_TextStyle"
+      textInnerRectString="-253,236,30,-25,0"
+      buttonStyle="email.comboxButton1"
+      friendBtnStyle="email.FriendsButton"
+      consortiaBtnStyle="email.UnionButton"
+      width="138"
+      height="25"
+      x="330"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.WriteTitleValueText"
+      textFormatStyle="email.Combox1_TextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="155"
+      height="22"
+      x="77"
+      y="55"
+      type="input" />
+    <!-- 内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.WriteContentText"
+      textFormatStyle="email.content_text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      wordWrap="true"
+      multiline="true"
+      mouseWheelEnabled="false"
+      width="310"
+      height="165"
+      x="23"
+      y="89" />
+    <!-- 战报背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="email.ReportBack"
+      resourceLink="email.ReadEmailBaseBack,core.ReportLeftBg,core.ReportRightBg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.ReportLeftBg"
+      resourceLink="asset.writeemail.ReadMailBg"
+      scaleX="-1"
+      x="177"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.ReportRightBg"
+      resourceLink="asset.writeemail.ReadMailBg"
+      x="177"
+      y="6" />
+    <!--  战斗时间 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportTimeTxt"
+      textFormatStyle="email.ReportTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="18"
+      y="16" />
+    <!-- 战斗地点 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportPosTxt"
+      textFormatStyle="email.ReportPosTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="320"
+      height="20"
+      x="18"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportPosTxt1"
+      textFormatStyle="email.ReportPosTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      mouseEnabled="true"
+      y="39" />
+    <!-- 战斗内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportContentTxt"
+      textFormatStyle="email.ReportPosTxt_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="18"
+      y="63"
+      width="318"
+      height="46" />
+    <!-- 损失兵种 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportPawn1Txt"
+      parentStyle="email.ReportGoldTxt"
+      x="100"
+      y="76" />
+    <!-- 损失兵种值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportPawn1ValueTxt"
+      parentStyle="email.ReportGoldValueTxt"
+      x="195"
+      y="74" />
+    <!-- 损失兵种 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportPawn2Txt"
+      parentStyle="email.ReportGoldTxt"
+      x="100"
+      y="100" />
+    <!-- 损失兵种值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportPawn2ValueTxt"
+      parentStyle="email.ReportGoldValueTxt"
+      x="195"
+      y="98" />
+    <!-- 战斗力 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportFightTxt"
+      textFormatStyle="email.ReportFightTxt_t"
+      filterString="core.normal_f"
+      x="100"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportFightValueTxt"
+      textFormatStyle="email.ReportFightValueTxt_t"
+      autoSize="none"
+      width="120"
+      height="20"
+      filterString="core.normal_f"
+      x="195"
+      y="26" />
+    <!-- 金币 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportGoldTxt"
+      parentStyle="email.ReportFightTxt"
+      x="100"
+      y="52" />
+    <!--		<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="email.ReportCrystalTxt" -->
+    <!--			parentStyle="email.ReportGoldTxt"-->
+    <!--			x="100" y="76"-->
+    <!--		/>-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportGoldValueTxt"
+      textFormatStyle="email.ReportGoldValueTxt_t1,email.ReportGoldValueTxt_t2"
+      autoSize="none"
+      width="140"
+      height="40"
+      wordWrap="true"
+      filterString="core.normal_f"
+      x="190"
+      y="50" />
+    <!-- 获得光晶 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportCrystalValueTxt"
+      parentStyle="email.ReportFightValueTxt"
+      x="195"
+      y="99" />
+    <!-- 昵称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportNicknameTxt"
+      textFormatStyle="email.ReportNicknameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="25"
+      x="100"
+      y="1" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="email.ReportLevelTxt"
+      textFormatStyle="email.ReportLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      y="2" />
+    <!-- 关闭按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="email.ReportClose"
+      parentStyle="core.AlertButton"
+      x="130"
+      y="372" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="email.ReadEmailScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,3,1,2,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="325"
+      height="150"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="email.ReadEmailListVbox"
+      x="0"
+      y="0"
+      width="305"
+      spacing="2" />
+  </components>
+</style>

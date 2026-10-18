@@ -1,0 +1,350 @@
+<style
+  name="artifact"
+  source="ui/zh_cn/swf/artifact.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.treasureNum_t"
+      args="Arial,16,0xddcda0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.resetTxt_t"
+      args="Arial,14,0xddcda0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.lotteryTxt_t"
+      args="Arial,14,0xddcda0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.progressTxt_t"
+      args="Arial,14,0xddcda0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.progressDesTxt_t"
+      args="Arial,12,0xffc000,,,,,,left"
+      leading="3"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.buyCanTotalTextStyle_t"
+      args="Arial,12,0xddcda0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.buyCanTotalValueTextStyle_t"
+      args="Arial,12,0xddcda0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="artifact.remainTimeText_t"
+      args="Arial,14,0x00fff0,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.artifact.artifactBoxNote1"
+      x="46"
+      y="-25" />
+    <bitmapData
+      resourceLink="asset.artifact.vipBoxItemSelect"
+      x="-12"
+      y="-12" />
+    <bitmapData
+      resourceLink="asset.artifact.resetBmp"
+      x="229"
+      y="137" />
+    <bitmapData
+      resourceLink="asset.artifact.artifactLockBg"
+      x="-52"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.artifact.boxNote"
+      x="30"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.artifact.shopNote"
+      x="317"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.artifact.resetNote1"
+      x="-122"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.artifact.resetNote2"
+      x="-122"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.artifact.resetNote3"
+      x="-120"
+      y="62" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="artifact.ArtifactShopView"
+      stylename="artifact.ArtifactShopView"
+      x="151"
+      y="1" />
+    <custom
+      classname="artifact.ArtifactBoxView"
+      stylename="artifact.ArtifactBoxView"
+      x="50"
+      y="30" />
+    <custom
+      classname="artifact.ArtifactProgressView"
+      stylename="artifact.ArtifactProgressView"
+      x="487"
+      y="329" />
+    <custom
+      classname="artifact.ArtifactBoxItem"
+      stylename="artifact.ArtifactBoxItem" />
+    <custom
+      classname="asset.artifact.artifactOpenMc"
+      stylename="artifact.artifactOpenMc"
+      x="125"
+      y="63" />
+    <custom
+      classname="asset.artifact.goodsFlickerEffctMC"
+      stylename="artifact.goodsFlickerEffctMC"
+      width="85"
+      height="85"
+      x="-12"
+      y="-12" />
+    <custom
+      classname="asset.artifact.ProgressBar"
+      stylename="artifact.ProgressBar" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="artifact.shopItem"
+      iconStyle="artifact.shopItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="51"
+      profileHeight="51"
+      showProfile="true"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="artifact.shopItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="50"
+      loadingHeight="50"
+      loadingX="25"
+      loadingY="25"
+      x="0"
+      y="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="artifact.lotteryBtnStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="-30"
+      tipGapH="-10"
+      isFollowMouse="false"
+      x="61"
+      y="242" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="artifact.receiveStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,5,4,6"
+      tipGapV="-80"
+      tipGapH="-80"
+      isFollowMouse="false"
+      x="-44"
+      y="-2" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="artifact.progressStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false"
+      x="3"
+      y="1" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="artifact.resetBtnStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,7,6"
+      tipGapV="0"
+      tipGapH="-120"
+      isFollowMouse="false"
+      x="228"
+      y="79" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="artifact.resetTxtStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,7,6"
+      tipGapV="0"
+      tipGapH="-120"
+      isFollowMouse="false"
+      x="233"
+      y="140" />
+  </customDisplay>
+  <components>
+    <component
+      classname="artifact.ArtifactFrame"
+      stylename="artifact.ArtifactFrame"
+      parentStyle="core.Frame1"
+      containerX="12"
+      containerY="63"
+      width="875"
+      height="612" />
+    <component
+      classname="yishi.view.frame.ArtifactBuyFrame"
+      stylename="artifact.buyFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveEnable="false" />
+    <!-- 页码数字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.PageTextStyle1"
+      parentStyle="shop.PageTextStyle1"
+      x="412"
+      y="288" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="artifact.LastPageBtn"
+      parentStyle="shop.LastPageBtn"
+      x="335"
+      y="285" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="artifact.NextPageBtn"
+      parentStyle="shop.NextPageBtn"
+      x="487"
+      y="286" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="artifact.lotteryBtn"
+      backStyle="asset.artifact.artifactReceiveBtnBg"
+      iconInnerRectString="32,74,6,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.treasureNum"
+      textFormatStyle="artifact.treasureNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="60"
+      x="35"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="artifact.altarGoodsEffctMC"
+      resourceLink="asset.artifact.altarGoodsEffctMC"
+      x="23"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.VipBoxItemCountTxt"
+      parentStyle="armyII.VipBoxItemCountTxt"
+      textFormatStyle="core.baseitem_t"
+      autoSize="none"
+      width="38"
+      height="20"
+      x="16"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="artifact.resetBtn"
+      backStyle="asset.artifact.resetBtn"
+      iconStyle="asset.artifact.resetTxt"
+      iconInnerRectString="33,51,9,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="114"
+      height="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.resetTxt"
+      textFormatStyle="artifact.resetTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="60"
+      x="308"
+      y="136" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.lotteryTxt"
+      textFormatStyle="artifact.lotteryTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="60"
+      x="0"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.progressTxt"
+      textFormatStyle="artifact.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="125"
+      x="96"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.progressDesTxt"
+      textFormatStyle="artifact.progressDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      height="85"
+      width="320"
+      x="-119"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="artifact.receiveBtn"
+      backStyle="asset.artifact.receiveBtn"
+      iconStyle="asset.artifact.receiveTxt"
+      iconInnerRectString="3,61,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="78"
+      height="30"
+      x="206"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.buyCanTotalTxt"
+      textFormatStyle="artifact.buyCanTotalTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="138"
+      height="20"
+      x="10"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.buyCanTotalValueTxt"
+      textFormatStyle="artifact.buyCanTotalValueTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="20"
+      x="67"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="artifact.remainTimeText"
+      textFormatStyle="artifact.remainTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="-125"
+      y="139"
+      width="300"
+      height="25" />
+  </components>
+</style>

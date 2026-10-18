@@ -1,0 +1,308 @@
+<style
+  name="shoubang"
+  source="ui/zh_cn/swf/shoubang.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="vicepassword.tf1"
+      args="Arial,12,0x4a4a4a" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vicepassword.tf2"
+      args="Arial,12,0xe0c151,,,,,,left"
+      letterSpacing="0"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vicereset_Text_t"
+      args="Arial,12,0x31ff15,,,,,,left"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vicepassword.rewardText_t"
+      args="Arial,12,0xe0c151,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vicepassword.serviceText_t"
+      args="Arial,14,0xff9915,,,true,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.shoubang.bg"
+      x="-1"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.common.vp.icon" />
+  </bitmaps>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="shoubang.dibg"
+      parentStyle="core.describeBackground_style06"
+      width="693"
+      height="418" />
+    <component
+      classname="sort.shoubang.ShouBangFrame"
+      stylename="shoubang.frame"
+      parentStyle="core.Frame1"
+      width="737"
+      height="530" />
+    <component
+      classname="mainBar.vicePassword.SetVPView"
+      stylename="vicepassword.setvpviewui"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,60,0,45,1"
+      width="314"
+      height="386" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.p1"
+      textFormatStyle="vicepassword.tf1"
+      autoSize="none"
+      width="160"
+      height="31"
+      x="122"
+      y="32"
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.p2"
+      textFormatStyle="vicepassword.tf1"
+      autoSize="none"
+      width="165"
+      height="31"
+      x="122"
+      y="66"
+      type="input" />
+    <component
+      classname="mainBar.vicePassword.ChangeVPView"
+      stylename="vicepassword.changevpview"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,60,0,45,1"
+      width="314"
+      height="386" />
+    <component
+      classname="mainBar.vicePassword.ConfirmVPView"
+      stylename="vicepassword.checkvpview"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="35"
+      containerY="30"
+      width="292"
+      height="179" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vicepassword.back"
+      parentStyle="core.describeBackground_style11"
+      x="-3"
+      y="-4"
+      width="288"
+      height="300" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vicepassword.backcheck"
+      parentStyle="core.describeBackground_style11"
+      x="-3"
+      y="-4"
+      width="288"
+      height="132" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vicepassword.AlertButtonConfirm_2"
+      parentStyle="core.AlertButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      x="38"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vicepassword.AlertButtonCancel_2"
+      parentStyle="core.AlertButtonConfirm_1"
+      iconStyle="asset.core.CancelTxtAsset_01"
+      x="150"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.p3"
+      textFormatStyle="vicepassword.tf2"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      x="19"
+      y="100"
+      width="255"
+      height="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.change.p1"
+      textFormatStyle="vicepassword.tf1"
+      autoSize="none"
+      width="125"
+      height="31"
+      x="122"
+      y="16"
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.change.p2"
+      textFormatStyle="vicepassword.tf1"
+      autoSize="none"
+      width="125"
+      height="31"
+      x="122"
+      y="42"
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.change.p3"
+      textFormatStyle="vicepassword.tf1"
+      autoSize="none"
+      width="125"
+      height="31"
+      x="122"
+      y="68"
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.confirm.p1"
+      textFormatStyle="vicepassword.tf1"
+      autoSize="none"
+      width="125"
+      height="31"
+      x="151"
+      y="33"
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vicepassword.checkAlertButtonConfirm_2"
+      parentStyle="core.AlertButtonConfirm_1"
+      backStyle="asset.core.AlertBtnStyle_02"
+      x="38"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vicepassword.checkAlertButtonCancel_2"
+      parentStyle="core.AlertButtonConfirm_1"
+      iconStyle="asset.core.CancelTxtAsset_01"
+      x="160"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vicepassword.lockbtn"
+      backStyle="asset.common.vp.btn"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      enableHtml="false"
+      iconFrameChange="true"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0"
+      height="32"
+      width="25"
+      x="690"
+      y="-13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.btnresettxt"
+      textFormatStyle="vicereset_Text_t"
+      x="20"
+      y="0"
+      height="22" />
+    <component
+      classname="mainBar.vicePassword.BtnResetVp"
+      stylename="vicepassword.btnReset"
+      x="10"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vicepassword.imgReset"
+      backStyle="asset.vicepassword.reset"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      enableHtml="false"
+      iconFrameChange="true"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0"
+      height="23"
+      width="21"
+      x="0"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="vicepassword.helpbtn"
+      backStyle="asset.core.HelpBtnStyle_02"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="220"
+      y="-46" />
+    <component
+      stylename="vicepassword.serviceText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="vicepassword.serviceText_t"
+      type="dynamic"
+      width="100"
+      height="20"
+      x="185"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="vicepassword.firstRewardCon"
+      x="-20"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="vicepassword.rewardBack"
+      parentStyle="core.AlertFrameBaseBg"
+      width="320"
+      height="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vicepassword.rewardText"
+      textFormatStyle="vicepassword.rewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="280"
+      wordWrap="true"
+      x="25"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="vicepassword.rewardHbox"
+      spacing="5"
+      x="30"
+      y="50" />
+  </components>
+</style>

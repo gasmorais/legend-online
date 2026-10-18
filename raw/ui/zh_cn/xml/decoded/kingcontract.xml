@@ -1,0 +1,626 @@
+<style
+  name="kingcontract"
+  source="ui/zh_cn/swf/kingcontract.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.NameTxt_t"
+      args="Arial,12,0xf49000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.PriceTxt_t"
+      args="Arial,14,0xddcda0,true,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.TimeTxt_t1"
+      args="Arial,12,0xffecb4,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.TimeTxt_t2"
+      args="Arial,12,0xa8ff00,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.TipTitle_t"
+      args="Arial,14,0xffdd83,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.TipDay_t"
+      args="Arial,14,0x61f212,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.Time_t"
+      args="Arial,12,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.DiscribeTxt_t"
+      args="Arial,12,0xffecb4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.DiscribeTxt_t2"
+      args="Arial,12,0x878685" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.KingContractPresentFrame.TipsTxt_t"
+      args="Arial,12,0xfbf0d0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.KingContractPresentFrame.DiamondCountTxt_t"
+      args="Arial,14,0xfbf0d0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.KingContractPresentFrame.ItemNameStyle_t"
+      args="Arial,18,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.KingContractPresentFrame.comboxButtonTxt_t"
+      args="Arial,12,0xffeda7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.openLeftTxt_t"
+      args="Arial,12,0xfedd00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.kingcontractViewTxt_t"
+      args="Arial,12,0x3cfe00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="kingcontract.KingContractView.DiscribeTxt_t"
+      args="Arial,12,0x4efe00,,,,,,center"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.kingcontract.TimeBg"
+      x="16"
+      y="89"
+      width="52"
+      height="20" />
+    <bitmapData
+      resourceLink="asset.kingcontract.icon1" />
+    <bitmapData
+      resourceLink="asset.kingcontract.icon2" />
+    <bitmapData
+      resourceLink="asset.kingcontract.icon3" />
+    <bitmapData
+      resourceLink="asset.kingcontract.icon4" />
+    <bitmapData
+      resourceLink="asset.kingcontract.icon5" />
+    <bitmapData
+      resourceLink="asset.kingcontract.icon6" />
+    <bitmapData
+      resourceLink="asset.kingcontract.AD"
+      x="96"
+      y="347" />
+    <bitmapData
+      resourceLink="asset.kingcontract.friend.FriendNameBg"
+      x="12"
+      y="29" />
+    <bitmapData
+      resourceLink="asset.kingcontract.friend.RepeatNameBg"
+      x="12"
+      y="66" />
+    <bitmapData
+      resourceLink="asset.kingcontract.friendNameBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.kingcontract.friend.Discount"
+      x="260"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.kingcontract.gaiyaBg"
+      x="-138"
+      y="-95" />
+    <bitmapData
+      resourceLink="asset.kingcontract.itemsBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.kingcontract.diamondNum"
+      x="311"
+      y="343" />
+    <bitmapData
+      resourceLink="asset.kingcontract.leftTimeImg"
+      x="501"
+      y="431" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="kingcontract.KingItemIcon"
+      tipStyle="yishi.view.tips.KingTips"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="52"
+      iconWidth="52"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="23"
+      loadingY="23"
+      x="23"
+      y="6" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="kingcontract.ItemBox"
+      x="103"
+      y="13" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="kingcontract.SimpleTileList"
+      vSpace="-2"
+      hSpace="2"
+      x="96"
+      y="13" />
+  </customDisplay>
+  <components>
+    <!--基础弹框Frame-->
+    <component
+      classname="kingcontract.KingContractFrame"
+      stylename="kingcontract.KingContractFrame"
+      parentStyle="core.Frame1"
+      width="680"
+      height="555"
+      containerX="16"
+      containerY="56" />
+    <!--9宫图背景6-->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="kingcontract.Back"
+      parentStyle="core.describeBackground_style11"
+      width="558"
+      height="451"
+      x="92"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="kingcontract.RechargeBtn"
+      backStyle="asset.kingcontract.ConsumeBtnBg"
+      iconStyle="asset.kingcontract.BuyBtnTxt"
+      iconInnerRectString="2,112,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="340"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="kingcontract.FriendBtn"
+      backStyle="asset.kingcontract.ConsumeBtnBg"
+      iconStyle="asset.kingcontract.FriendBtnTxt"
+      iconInnerRectString="17,83,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="331"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.BuffNameTxt"
+      textFormatStyle="kingcontract.NameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="87"
+      height="20"
+      isAutoFitLength="true"
+      x="116"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.BuffPriceTxt"
+      textFormatStyle="kingcontract.PriceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="32"
+      height="20"
+      x="16"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="kingcontract.DiamondImg"
+      resourceLink="asset.kintgcontract.DiamondIcon"
+      x="48"
+      y="74" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.TimeTxt"
+      textFormatStyle="kingcontract.TimeTxt_t1,kingcontract.TimeTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="52"
+      height="20"
+      x="572"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.tips.titleTxt"
+      textFormatStyle="kingcontract.TipTitle_t"
+      filterString="core.normal_f"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.tips.dayTxt"
+      textFormatStyle="kingcontract.TipDay_t"
+      filterString="core.normal_f"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.tips.Time"
+      textFormatStyle="kingcontract.Time_t,kingcontract.DiscribeTxt_t2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.tips.DiscribeTxt"
+      textFormatStyle="kingcontract.DiscribeTxt_t,kingcontract.DiscribeTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="160"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="kingcontract.openMarket"
+      backStyle="asset.kingcontract.BtnBg"
+      iconStyle="asset.kingcontract.OpenMarketTxtImg"
+      iconInnerRectString="3,131,17,46,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="488"
+      y="282" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="kingcontract.fetchBtn"
+      parentStyle="kingcontract.openMarket"
+      iconStyle="asset.kingcontract.GetBuffTxtImg"
+      iconInnerRectString="11,118,17,46,13"
+      x="490"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="kingcontract.openNowBtn"
+      backStyle="asset.kingcontract.BtnBg"
+      iconStyle="asset.kingcontract.openNowIcon"
+      iconInnerRectString="20,100,8,61,13"
+      x="490"
+      y="362" />
+    <!--帮助	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="kingcontract.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="367"
+      y="-31" />
+    <!-- 精灵盟约帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="kingcontract.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="kingcontract.view.HelpFrame.helpContent"
+      titleText="kingcontract.view.HelpFrame.titleText"
+      textWidth="363" />
+    <!-- 钻石图标 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="kingcontract.DiamondIcon"
+      resourceLink="asset.kintgcontract.DiamondIcon"
+      x="200"
+      y="80" />
+    <!--赠送好友精灵盟约页面-->
+    <component
+      classname="kingcontract.KingContractPresentFrame"
+      stylename="kingcontract.KingContractPresentFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.quickBuyFrameBg"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleOuterRectPosString="0,-7,1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="0"
+      containerY="0"
+      width="380"
+      height="175" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="kingcontract.KingContractPresentFrame.Back"
+      parentStyle="core.describeBackground_style11"
+      width="393"
+      height="306"
+      x="3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="kingcontract.KingContractPresentFrame.BackBg.scaleX"
+      resourceLink="asset.kingcontract.BackBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.BackBg"
+      resourceLink="asset.kingcontract.BackBg,kingcontract.KingContractPresentFrame.BackBg.scaleX"
+      imageRectString="0|193|0|0|0,386|-193|0|0|0"
+      width="386"
+      height="299"
+      x="6"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="kingcontract.KingContractPresentFrame.friendNameBack"
+      resourceLink="asset.kingcontract.friendNameBack"
+      scaleGridString="5,5,172,22"
+      width="130"
+      height="32"
+      x="124"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.ItemBg"
+      resourceLink="asset.kingcontract.ItemOverBg,asset.kingcontract.ItemBg,asset.kingcontract.ItemIconBg,asset.kingcontract.ItemIcon"
+      imageRectString="0|232|0|98|13,7|219|6|85|13,15|68|13|69|13,19|60|18|60|13"
+      width="232"
+      height="98"
+      x="80"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractPresentFrame.ItemNameStyle"
+      textFormatStyle="kingcontract.KingContractPresentFrame.ItemNameStyle_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="80"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="kingcontract.KingContractPresentFrame.ItemName"
+      textFieldStyle="kingcontract.KingContractPresentFrame.ItemNameStyle"
+      colors="0xfac4ff,0xb304e5"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="170"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractPresentFrame.TipsTxt"
+      textFormatStyle="kingcontract.KingContractPresentFrame.TipsTxt_t"
+      filterString="core.normal_f"
+      x="70"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractPresentFrame.DiamondCountTxt"
+      textFormatStyle="kingcontract.KingContractPresentFrame.DiamondCountTxt_t"
+      filterString="core.normal_f"
+      x="170"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractPresentFrame.PeriodOfValidityTxt"
+      textFormatStyle="kingcontract.KingContractPresentFrame.TipsTxt_t"
+      filterString="core.normal_f"
+      x="170"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="kingcontract.KingContractPresentFrame.BuyBtn"
+      backStyle="asset.kingcontract.friend.BuyBtnBg"
+      iconStyle="asset.kingcontract.friend.BuyBtnTxt"
+      iconInnerRectString="19,80,8,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="130"
+      y="100" />
+    <!-- PresentComboxBox -->
+    <component
+      classname="kingcontract.PresentComboxBox"
+      stylename="kingcontract.KingContractPresentFrame.PresentComboxBox"
+      listPanelStyle="kingcontract.KingContractPresentFrame.ComboxListpanel"
+      listInnerRectString="22,33,10,100,18"
+      textStyle="kingcontract.KingContractPresentFrame.Combox_TextStyle"
+      textInnerRectString="-218,221,30,-25,0"
+      friendBtnStyle="kingcontract.KingContractPresentFrame.FriendsButton"
+      consortiaBtnStyle="kingcontract.KingContractPresentFrame.UnionButton"
+      buttonStyle="kingcontract.KingContractPresentFrame.ComboxFriendsButton"
+      width="138"
+      height="25"
+      x="349"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="kingcontract.KingContractPresentFrame.SearchListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,0,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|kingcontract.KingContractPresentFrame.comboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="124"
+      height="156" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="kingcontract.KingContractPresentFrame.ComboxListpanel"
+      backgoundStyle="asset.kingcontract.WriteVipComboxBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="13,4,-2,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|kingcontract.KingContractPresentFrame.comboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="yishi.view.adapter.EmailSelectedListAdapter"
+      stylename="kingcontract.KingContractPresentFrame.comboxListCell"
+      backStyle="kingcontract.KingContractPresentFrame.comboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="core.Combox1_TextStyle"
+      autoSizeAble="false"
+      width="138"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="kingcontract.KingContractPresentFrame.comboxListCellAsset"
+      resourceLink=",kingcontract.KingContractPresentFrame.comboxItembgB,kingcontract.KingContractPresentFrame.comboxItembgB"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="kingcontract.KingContractPresentFrame.comboxItembgB"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractPresentFrame.Combox_TextStyle"
+      textFormatStyle="kingcontract.KingContractPresentFrame.TipsTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      restrict="^ "
+      width="115"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractPresentFrame.comboxButtonTxt"
+      textFormatStyle="kingcontract.KingContractPresentFrame.comboxButtonTxt_t"
+      filterString="core.normal_f" />
+    <!-- 好友按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="kingcontract.KingContractPresentFrame.FriendsButton"
+      unSelectedStyle="kingcontract.KingContractPresentFrame.FriendsUnselectedBg"
+      selectedStyle="kingcontract.KingContractPresentFrame.FriendsSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-2"
+      y="104"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.FriendsUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.FriendsSelectedBg"
+      resourceLink="kingcontract.KingContractPresentFrame.friendsButtonSelectedImg,asset.core.friendsFriendImg" />
+    <!-- 公会按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="kingcontract.KingContractPresentFrame.UnionButton"
+      unSelectedStyle="kingcontract.KingContractPresentFrame.UnionUnselectedBg"
+      selectedStyle="kingcontract.KingContractPresentFrame.UnionSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      width="65"
+      height="25"
+      fieldX="15"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="104" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.UnionSelectedBg"
+      resourceLink="kingcontract.KingContractPresentFrame.friendsButtonSelectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.UnionUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="kingcontract.KingContractPresentFrame.friendsButtonSelectedImg"
+      resourceLink="asset.core.friendsButtonSelectedImg"
+      scaleY="-1"
+      y="24" />
+    <!-- 好友列表按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="kingcontract.KingContractPresentFrame.ComboxFriendsButton"
+      unSelectedStyle="kingcontract.KingContractPresentFrame.ComboxFriendsBtnAsset1"
+      selectedStyle="kingcontract.KingContractPresentFrame.ComboxFriendsBtnAsset2"
+      textStyle="kingcontract.KingContractPresentFrame.comboxButtonTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-65"
+      y="25"
+      fieldX="28"
+      fieldY="5"
+      width="100"
+      height="29"
+      autoSizeAble="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.ComboxFriendsBtnAsset1"
+      resourceLink="kingcontract.KingContractPresentFrame.ComboxFriendsUnselectedBg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="kingcontract.KingContractPresentFrame.ComboxFriendsBtnAsset2"
+      resourceLink="kingcontract.KingContractPresentFrame.ComboxFriendsSelectedBg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="kingcontract.KingContractPresentFrame.ComboxFriendsSelectedBg"
+      resourceLink="asset.kingcontract.friendsButtonImg,kingcontract.KingContractPresentFrame.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="kingcontract.KingContractPresentFrame.ComboxFriendsUnselectedBg"
+      resourceLink="asset.kingcontract.friendsButtonImg,kingcontract.KingContractPresentFrame.friendsFriendImg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="kingcontract.KingContractPresentFrame.friendsFriendImg"
+      resourceLink="asset.core.friendsFriendImg"
+      x="5"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.openLeftTxt"
+      textFormatStyle="kingcontract.openLeftTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.kingcontractViewTxt"
+      textFormatStyle="kingcontract.kingcontractViewTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.openRightTxt"
+      textFormatStyle="kingcontract.openLeftTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="kingcontract.KingContractView.DiscribeTxt"
+      textFormatStyle="kingcontract.KingContractView.DiscribeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="185"
+      height="40"
+      x="80"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="kingcontract.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,0,-3,0,3"
+      viewportInnerRectString="0,2,0,2,5"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      x="96"
+      y="13"
+      width="565"
+      height="330" />
+  </components>
+</style>

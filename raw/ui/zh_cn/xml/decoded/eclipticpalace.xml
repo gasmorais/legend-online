@@ -1,0 +1,368 @@
+<style
+  name="eclipticpalace"
+  source="ui/zh_cn/swf/eclipticpalace.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="EclipticPalace.EclipticPalaceFrame.childBufferText_t"
+      args="Arial,12,0xd1c9b1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="EclipticPalace.EclipticPalaceFrame.eventText_t"
+      args="Arial,12,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="EclipticPalace.EclipticPalaceFrame.rewardText_t"
+      args="Arial,12,0x24e1ed,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="EclipticPalace.EclipticPalaceFrame.helpText_t"
+      args="Arial,12,0xd1c9b1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="EclipticPalace.EclipticPalaceFrame.spiritText_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="EclipticPalaceFrame.declineText_t"
+      args="Arial,16,0xffffff,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.EclipticPalaceChallengeItem.selectBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceChallengeItem.lineImage"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceChallengeItem.rewardBack"
+      x="500"
+      y="85" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceBossItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceBossItem.eventImage"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceBossItem.fightImage"
+      x="50"
+      y="80" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceBossItem.stateImage"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalaceFrame.selectPathImage"
+      x="100"
+      y="85" />
+    <bitmapData
+      resourceLink="asset.EclipticPalace.mback.timeTextImage"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalace.titleTextImage.palace8"
+      x="-10"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalace.titleTextImage.palace9"
+      x="-15"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalace.titleTextImage.palace10"
+      x="-20"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalace.titleTextImage.palace11"
+      x="-10"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.EclipticPalace.titleTextImage.palace12"
+      x="-5"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="EclipticPalaceBossItem.bossItem"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      tipStyle="yishi.view.tips.OneLineTip"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      loadingX="29"
+      loadingY="29"
+      x="42"
+      y="42" />
+    <custom
+      classname="eclipticpalace.EclipticPalaceLayerProcessView"
+      stylename="EclipticPalaceFrame.bottomView"
+      x="105"
+      y="550" />
+    <custom
+      classname="asset.EclipticPalaceFrame.spiritMc"
+      stylename="EclipticPalaceFrame.spiritMc"
+      x="759"
+      y="402" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="EclipticPalaceRewardFrame.rewardItem"
+      backgroundStyle="core.ItemBack"
+      iconStyle="EclipticPalaceRewardFrame.rewardItem.icon"
+      textStyle="core.BaseItemText"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="25"
+      strengthenY="23" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="EclipticPalaceRewardFrame.rewardItem.icon"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="EclipticPalaceRewardFrame.rewardList"
+      vSpace="1"
+      hSpace="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="EclipticPalaceFrame.childIcon1"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="60"
+      iconHeight="60"
+      x="744"
+      y="120" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="EclipticPalaceFrame.childIcon2"
+      parentStyle="EclipticPalaceFrame.childIcon1"
+      x="844"
+      y="120" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.mback"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.EclipticPalace.mback.back,asset.EclipticPalace.mback.titleBack,asset.EclipticPalace.mback.timeBack"
+      imageRectString="0|0|19,286|-131|19,367|16|19"
+      x="37"
+      y="64" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.titleTextImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.EclipticPalace.titleTextImage.palace1,asset.EclipticPalace.titleTextImage.palace2,asset.EclipticPalace.titleTextImage.palace3,asset.EclipticPalace.titleTextImage.palace4,asset.EclipticPalace.titleTextImage.palace5,asset.EclipticPalace.titleTextImage.palace6,asset.EclipticPalace.titleTextImage.palace7,asset.EclipticPalace.titleTextImage.palace8,asset.EclipticPalace.titleTextImage.palace9,asset.EclipticPalace.titleTextImage.palace10,asset.EclipticPalace.titleTextImage.palace11,asset.EclipticPalace.titleTextImage.palace12"
+      x="447"
+      y="50" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.titleImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.EclipticPalace.titleImage.titleImage1,asset.EclipticPalace.titleImage.titleImage2,asset.EclipticPalace.titleImage.titleImage3,asset.EclipticPalace.titleImage.titleImage4,asset.EclipticPalace.titleImage.titleImage5,asset.EclipticPalace.titleImage.titleImage6,asset.EclipticPalace.titleImage.titleImage7,asset.EclipticPalace.titleImage.titleImage8,asset.EclipticPalace.titleImage.titleImage9,asset.EclipticPalace.titleImage.titleImage10,asset.EclipticPalace.titleImage.titleImage11,asset.EclipticPalace.titleImage.titleImage12"
+      x="472"
+      y="-19" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.pathImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.EclipticPalace.pathTypeImage.pathImage1,asset.EclipticPalace.pathTypeImage.pathImage2,asset.EclipticPalace.pathTypeImage.pathImage3"
+      x="782"
+      y="78" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="EclipticPalace.EclipticPalaceFrame.challengeBtn"
+      backStyle="EclipticPalace.challengeBtn.challengeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="765"
+      y="263" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="936"
+      height="530"
+      x="35"
+      y="61" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.tipImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.EclipticPalace.resource.tipImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="1,4,5,7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="903"
+      y="548" />
+    <component
+      stylename="eclipticpalace.EclipticPalaceFrame"
+      classname="eclipticpalace.EclipticPalaceFrame"
+      parentStyle="core.Frame1"
+      containerX="-20"
+      containerY="0"
+      width="968"
+      height="635" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.childBufferText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="EclipticPalace.EclipticPalaceFrame.childBufferText_t"
+      type="dynamic"
+      width="241"
+      height="65"
+      wordWrap="true"
+      x="700"
+      y="185" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.eventText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="EclipticPalace.EclipticPalaceFrame.eventText_t"
+      type="dynamic"
+      width="200"
+      height="37"
+      x="721"
+      y="239"
+      wordWrap="true" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.rewardText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="EclipticPalace.EclipticPalaceFrame.rewardText_t"
+      type="dynamic"
+      width="182"
+      height="20"
+      x="733"
+      y="376" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.helpText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="EclipticPalace.EclipticPalaceFrame.helpText_t"
+      type="dynamic"
+      width="465"
+      height="40"
+      x="106"
+      y="546" />
+    <component
+      stylename="EclipticPalace.EclipticPalaceFrame.spiritText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="EclipticPalace.EclipticPalaceFrame.spiritText_t"
+      type="dynamic"
+      width="101"
+      height="20"
+      x="776"
+      y="461" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="EclipticPalaceFrame.itemVbox"
+      spacing="-33"
+      x="70"
+      y="110" />
+    <component
+      stylename="EclipticPalaceChallengeItem.itemContiner"
+      classname="com.pickgliss.ui.core.Component"
+      x="0"
+      y="-5" />
+    <component
+      stylename="EclipticPalaceChallengeItem.rewardImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.EclipticPalaceChallengeItem.rewardImage1,asset.EclipticPalaceChallengeItem.rewardImage2"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="492"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="EclipticPalaceLayerProcessView.lineHbox"
+      spacing="-10"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="EclipticPalaceLayerProcessView.palaceHbox"
+      spacing="20"
+      x="0"
+      y="0" />
+    <component
+      classname="eclipticpalace.EclipticPalaceRewardFrame"
+      parentStyle="core.Frame2"
+      stylename="eclipticpalace.EclipticPalaceRewardFrame"
+      width="345"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="EclipticPalaceRewardFrame.bagScroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="302"
+      height="230"
+      x="-12"
+      y="0" />
+    <component
+      stylename="EclipticPalaceFrame.declineText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="EclipticPalaceFrame.declineText_t"
+      type="dynamic"
+      width="120"
+      height="20"
+      x="35"
+      y="-3" />
+    <component
+      stylename="EclipticPalaceFrame.declineContiner"
+      classname="com.pickgliss.ui.core.Component"
+      tipStyle="yishi.view.tips.OneLineTip"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="1,7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="435"
+      y="83" />
+  </components>
+</style>

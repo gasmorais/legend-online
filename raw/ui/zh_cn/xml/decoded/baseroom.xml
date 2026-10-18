@@ -1,0 +1,81 @@
+<style
+  name="baseroom"
+  source="ui/zh_cn/swf/baseroom.swf">
+  <set
+    type="flash.text.TextFormat"
+    stylename="RoomReadyTopView.readyNumText.text_t"
+    args="Arial,22,0x320f03,true,,,,,left"
+    letterSpacing="3" />
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="RoomReadyTopView.readyNumText.text_t"
+      args="微软雅黑,22,0x320f03,true,,,,,left"
+      letterSpacing="3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.baseroom.RoomPlayerFlag" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.baseroom.RoomPosClose"
+      stylename="asset.baseroom.RoomPosClose" />
+    <custom
+      classname="asset.baseroom.RoomPosExist"
+      stylename="asset.baseroom.RoomPosExist" />
+  </customDisplay>
+  <components>
+    <!-- 背景特效 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="baseroom.enterRoomEffect"
+      resourceLink="asset.baseroom.enterRoomEffect" />
+    <!--	房间准备状态	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="baseroom.RoomPlayer.stateImage"
+      resourceLink="asset.baseroom.hostState,asset.baseroom.readyState," />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="RoomReadyTopView.back"
+      resourceLink="asset.baseroom.readyTopImage,asset.baseroom.readyMidImage,asset.baseroom.readybotImage"
+      width="318"
+      height="90" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="RoomReadyTopView.readyNumText"
+      textFieldStyle="RoomReadyTopView.readyNumText.text"
+      colors="0xfcf8cb,0xfdf902,0xffd452,0xfcf8cb"
+      filterString="core.normal_f"
+      alphas="1,1,1,1"
+      ratios="0,100,120,255"
+      x="80"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RoomReadyTopView.readyNumText.text"
+      textFormatStyle="RoomReadyTopView.readyNumText.text_t"
+      filterString="PetChallengeSortItem.rankNumText_f4"
+      autoSize="none"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="RoomReadyTopView.back1"
+      resourceLink="asset.baseroom.readyTopImage,asset.baseroom.readyMidImage,asset.baseroom.readybotImage"
+      width="318"
+      height="90"
+      x="120"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="RoomReadyTopView.readyNumText1"
+      textFieldStyle="RoomReadyTopView.readyNumText.text"
+      colors="0xfcf8cb,0xfdf902,0xffd452,0xfcf8cb"
+      filterString="core.normal_f"
+      alphas="1,1,1,1"
+      ratios="0,100,120,255"
+      x="200"
+      y="185" />
+  </components>
+</style>

@@ -1,0 +1,246 @@
+<style
+  name="encogold"
+  source="ui/zh_cn/swf/encogold.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.DayTxt_t"
+      args="Arial,16,0xffc449,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.msgDayTxt_t"
+      args="Arial,12,0xeb9504,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.msgGoldTxt_t"
+      args="Arial,12,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.msgGetTxt_t"
+      args="Arial,12,0xb94bff,true,,,,,left"
+      letterSpacing="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.msgRuleTitleTxt_t"
+      args="Arial,12,0xecdb05,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.msgRuleTxt_t"
+      args="Arial,12,0xffe3b2,true,,,,,left,,,,0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.hasTimeTxt_t"
+      args="Arial,14,0x00ff06,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.hasGoldTxt_t"
+      args="Arial,14,0xff0000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="encoGold.tipsTxt_t"
+      args="Arial,12,0xff0000,true,,true,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.encoGold.back"
+      x="0"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.encoGold.proessBack"
+      x="330"
+      y="335" />
+    <bitmapData
+      resourceLink="asset.encoGold.proessShow"
+      x="330"
+      y="335" />
+    <bitmapData
+      resourceLink="asset.encoGold.goldIcon"
+      x="5"
+      y="18" />
+    <bitmapData
+      resourceLink="asset.encoGold.goldNum"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="encoGold.textSprite"
+      x="0"
+      y="0" />
+    <custom
+      classname="encoGold.view.EncoGoldMsgView"
+      stylename="encoGold.encoGoldMsgView"
+      x="435"
+      y="135" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="encoGold.msgVbox"
+      spacing="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="encoGold.scorepanel"
+      x="625"
+      y="96" />
+  </customDisplay>
+  <components>
+    <component
+      classname="encoGold.EncoGoldFrame"
+      stylename="encoGold.EncoGoldFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="40"
+      titleOuterRectPosString="0,26,1"
+      width="760"
+      height="605" />
+    <component
+      stylename="encoGold.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.encoGold.back01,asset.encoGold.back03,asset.encoGold.goldIcon,asset.encoGold.back02,asset.encoGold.circleBack,asset.encoGold.choseBack"
+      imageRectString="0|10|19,413|66|19,575|74|19,317|360|19,30|29|19,126|0|19"
+      x="25"
+      y="25" />
+    <component
+      stylename="encoGold.iconImages"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.encoGold.expendEncoGoldDay,asset.encoGold.maxEncoGoldDay,asset.encoGold.getEncoGoldDay"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.DayTxt"
+      textFormatStyle="encoGold.DayTxt_t"
+      autoSize="none"
+      width="90"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="encoGold.lastDayBtn"
+      backStyle="asset.encoGold.leftBtrnBack"
+      iconStyle="asset.encoGold.leftBtrnIcon"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="7,62,0,61,13"
+      x="42"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="encoGold.nextDayBtn"
+      backStyle="asset.encoGold.rightBtnBack"
+      iconStyle="asset.encoGold.rightBtnIcon"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      iconInnerRectString="9,54,5,56,13"
+      x="346"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.msgDayTxt"
+      textFormatStyle="encoGold.msgDayTxt_t"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="5"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.msgGoldTxt"
+      textFormatStyle="encoGold.msgGoldTxt_t"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="25"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.msgGetTxt"
+      textFormatStyle="encoGold.msgGetTxt_t"
+      autoSize="none"
+      width="253"
+      height="20"
+      x="2"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.msgRuleTitleTxt"
+      textFormatStyle="encoGold.msgRuleTitleTxt_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="10"
+      y="428" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.msgRuleTxt"
+      textFormatStyle="encoGold.msgRuleTxt_t"
+      autoSize="none"
+      width="710"
+      height="80"
+      multiline="true"
+      wordWrap="true"
+      x="10"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.hasTimeTxt"
+      textFormatStyle="encoGold.hasTimeTxt_t"
+      autoSize="none"
+      width="280"
+      height="35"
+      x="445"
+      y="45"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.hasGoldTxt"
+      textFormatStyle="encoGold.hasGoldTxt_t"
+      autoSize="none"
+      width="240"
+      height="20"
+      x="440"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="encoGold.scrollMsgPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,263,0,0,2"
+      vScrollbarInnerRectString="15,-5,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="2"
+      width="270"
+      height="157"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="encoGold.tipsSprite"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7"
+      tipGapH="-10"
+      tipGapV="-5"
+      x="90"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.tipsTxt"
+      textFormatStyle="encoGold.tipsTxt_t"
+      autoSize="none"
+      width="175"
+      height="20"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="encoGold.encoGoldBackTxt"
+      textFormatStyle="encoGold.hasTimeTxt_t"
+      autoSize="none"
+      width="280"
+      height="35"
+      x="420"
+      y="310"
+      wordWrap="true" />
+  </components>
+</style>

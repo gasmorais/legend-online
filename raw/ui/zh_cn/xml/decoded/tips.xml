@@ -1,0 +1,5827 @@
+<style
+  name="tips"
+  source="ui/zh_cn/swf/tips.swf">
+  <sets>
+    <!-- tips建筑名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.buildname_t1"
+      args="Arial,14,0xece057,true"
+      letterSpacing="0" />
+    <!-- tips英雄名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t1"
+      args="Arial,14,0xffffff"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t2"
+      args="Arial,14,0x59cd41"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t3"
+      args="Arial,14,0x32a2f8"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t4"
+      args="Arial,14,0xa838f7"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t5"
+      args="Arial,14,0xff8000"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t6"
+      args="Arial,14,0xce0f0f"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t1_2"
+      args="Arial,14,0xffffff,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t2_2"
+      args="Arial,14,0x59cd41,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t3_2"
+      args="Arial,14,0x32a2f8,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t4_2"
+      args="Arial,14,0xa838f7,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t5_2"
+      args="Arial,14,0xff8000,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t6_2"
+      args="Arial,14,0xce0f0f,,,,,,left"
+      letterSpacing="0" />
+    <!-- tips星运名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.starname_t1"
+      args="Arial,14,0x999999"
+      letterSpacing="1" />
+    <!-- tips星运名size12 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t1"
+      args="Arial,12,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t2"
+      args="Arial,12,0x59cd41" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t3"
+      args="Arial,12,0x32a2f8" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t4"
+      args="Arial,12,0xa838f7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t5"
+      args="Arial,12,0xff8000" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t6"
+      args="Arial,12,0xce0f0f" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetNameTxt_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetNameTxt_t2"
+      args="Arial,11,0x59cd41"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetNameTxt_t3"
+      args="Arial,11,0x32a2f8"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetNameTxt_t4"
+      args="Arial,11,0xc300ff"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetNameTxt_t5"
+      args="Arial,11,0xff9600"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetNameTxt_t6"
+      args="Arial,11,0xce0f0f"
+      letterSpacing="0" />
+    <!-- 卡牌 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CardProperty_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CardProperty_t2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CardProperty_t3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CardProperty_t4"
+      args="Arial,12,0xa838f7"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CardProperty_t5"
+      args="Arial,12,0xff8000"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CardProperty_t6"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="1" />
+    <!--	星运技能Buffer名	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarSkillText_f"
+      args="Arial,12,0xffffff"
+      leading="5"
+      letterSpacing="1" />
+    <!-- tips星力title -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarPowTipTitleText_f"
+      args="Arial,14,0xffffff,true"
+      letterSpacing="1" />
+    <!-- tips部队英雄等级 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herolevel_t1"
+      args="Arial,12,0xffffff,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herolevel_t2"
+      args="Arial,12,0x59cd41,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herolevel_t3"
+      args="Arial,12,0x32a2f8,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herolevel_t4"
+      args="Arial,12,0xa838f7,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herolevel_t5"
+      args="Arial,12,0xecc200,,,,,,right"
+      letterSpacing="1" />
+    <!-- 士兵名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.pawnname_t1"
+      args="Arial,14,0xffffff,true"
+      letterSpacing="0" />
+    <!-- tips等级 职业 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herovocation_t"
+      args="Arial,12,0xffffff" />
+    <!-- 战斗力 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.combatpower_f"
+      args="Arial,14,0xffecb4"
+      letterSpacing="1" />
+    <!-- tipsBUFFER 回合 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.buffTurnLeft_t"
+      args="Arial,12,0xffffff,,,,,,right"
+      letterSpacing="1" />
+    <!--buffer叠加层数-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.buffLayerNum_t"
+      args="Arial,12,0xffffff,true,,,,,right"
+      letterSpacing="1" />
+    <!-- tips属性 攻击-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroattack_t"
+      args="Arial,12,0xffecb4"
+      letterSpacing="0" />
+    <!-- tips属性 统帅-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herocaptain_t"
+      args="Arial,12,0xf15c02"
+      letterSpacing="1" />
+    <!-- tips改变属性值-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.herocaptain_value_t"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <!-- tips技能描述-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.pawnskill_t"
+      args="Arial,12,0xffe7b8"
+      letterSpacing="1" />
+    <!-- tips士兵评分-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.pawnvaluation_t"
+      args="Arial,12,0xffe7b8"
+      letterSpacing="1" />
+    <!-- 物品属性 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goods_t"
+      args="Arial,12,0xffffff"
+      letterSpacing="0" />
+    <!-- 道具名称 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodstype_t"
+      args="Arial,12,0xfff206"
+      letterSpacing="0" />
+    <!-- 时装等级 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.FashionLevelText_t"
+      args="Arial,13,0xff9b00,,,,,,right" />
+    <!-- 镶嵌属性 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodMountText_t1"
+      args="Arial,12,0x7b7b7b,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodMountText_t2"
+      args="Arial,12,0xeedb05,,,,,,left"
+      letterSpacing="0" />
+    <!-- 物品统帅和技能 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodskill_t1"
+      args="Arial,12,0x48d72a"
+      leading="2"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodskill_t2"
+      args="Arial,12,0x7d7d7d"
+      leading="2"
+      letterSpacing="0" />
+    <!-- 物品套装名字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodsuitname_t"
+      args="Arial,12,0xf5cc0f"
+      letterSpacing="0" />
+    <!-- 物品套装单件名字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodsuit_t1"
+      args="Arial,12,0x7d7d7d"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodsuit_t2"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <!-- 物品描述 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.gooddescribe_t"
+      args="Arial,12,0xe9c68c"
+      leading="5"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodsTimeTxt_t"
+      args="Arial,12,0x8eea17"
+      leading="5"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodsSendTxt_t"
+      args="Arial,12,0x979797"
+      leading="4"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodsFightingTxt_t"
+      args="Arial,12,0x00fffc,,,,,,right"
+      leading="5"
+      letterSpacing="1" />
+    <!-- 物品价格 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodprice_t"
+      args="Arial,12,0xffffff,,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodgradeCount_t"
+      args="Arial,12,0x01f0ed,,,,,,left"
+      letterSpacing="0" />
+    <!-- 是否绑定 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goods_bind_t_1"
+      args="Arial,12,0xee1a38,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goods_bind_t_2"
+      args="Arial,12,0x8eea17,,,,,,left"
+      letterSpacing="0" />
+    <!-- 装备类型 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodtype_t"
+      args="Arial,12,0xffffff,,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodtype_tt"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodtype_t_2"
+      args="Arial,12,0xb3b3b3,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodtype_tl"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodsEquiped_t"
+      args="Arial,14,0x838383,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.GoodsEquiped_t_2"
+      args="Arial,14,0x00FF00,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ComposeDescribeText_t"
+      args="Arial,12,0xb7b7b73,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ComposeNeedTxt_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <!-- 技能 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skillname_t"
+      args="Arial,14,0x2fb8ff,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skillname_t_2"
+      args="Arial,14,0x2fb8ff,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skilltype_t"
+      args="Arial,14,0x9aefec,true,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skillnext_t"
+      args="Arial,12,0xffc600,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SkillConditionTxt_t"
+      args="Arial,12,0xff292e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skillDisc_t1"
+      args="Arial,12,0xfff206,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skillDisc_t2"
+      args="Arial,12,0xb7b7b7,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SkillNeedTxt_t"
+      args="Arial,12,0xefeae2,,,,,,left"
+      letterSpacing="1" />
+    <!--	英灵	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.pettype_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <!-- 活动时装 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ActiveFashionText_t"
+      args="Arial,12,0xff9b00,,,,,,right"
+      letterSpacing="1" />
+    <!-- 建筑效果 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.buildeffect_t"
+      args="Arial,12,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.buildeffect_value_t"
+      args="Arial,12,0x9bff24"
+      leading="5"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.need_t"
+      args="Arial,12,0xffffff"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.need_value_t"
+      args="Arial,12,0xff0000"
+      letterSpacing="0" />
+    <!-- 下一等级建筑 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.buildnextgrade_t"
+      args="Arial,14,0xffffff,true"
+      letterSpacing="0" />
+    <!-- 外城TIPS -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_1"
+      args="Arial,14,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_2"
+      args="Arial,12,0xffecb4"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_3"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.bufferTime_t"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <!-- 副本节点TIPS -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.campaign.TextFormat_1"
+      args="Arial,14,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.campaign.TextFormat_2"
+      args="Arial,12,0xffecb4"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.campaign.TextFormat_3"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.campaign.TextFormat_4"
+      args="Arial,12,0xff0000"
+      letterSpacing="1" />
+    <!-- 领主 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.NameText_1"
+      args="Arial,12,0xfab634,,,,,,left" />
+    <!-- 好感度 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_4"
+      args="Arial,12,0xffae00" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_5"
+      args="Arial,12,0x9bff24" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_6"
+      args="Arial,12,0x999999" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_7"
+      args="Arial,12,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TextFormat_8"
+      args="Arial,12,0xfddaac" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="consortia.TipNicknameTextStyle_t"
+      args="Arial,12,0xdcb55c,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="consortia.UpGradeButtonTextStyle_f"
+      args="0x000000,1,2,2,3" />
+    <!--	地下迷宫	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MazeFloorTipTitleText_f"
+      args="Arial,14,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MazeFloorTipGoodText_f1"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MazeFloorTipGoodText_f2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MazeFloorTipGoodText_f3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MazeFloorTipGoodText_f4"
+      args="Arial,12,0xa838f7"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MazeFloorTipGoodText_f5"
+      args="Arial,12,0xff8000"
+      letterSpacing="1" />
+    <!--	PlayerMenu	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TipsMoveFriendBtnTextStyle_t"
+      args="Arial,12,0xffefbd,,,,,,left" />
+    <!-- extrabuffer -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ExtraBufferTitle_t"
+      args="Arial,14,0x2fb8ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ExtraBufferContent_t"
+      args="Arial,12,0xfff206,,,,,,left"
+      leading="3" />
+    <!--	农场作物	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipNameTxt_t1"
+      args="Arial,14,0xffffff,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipNameTxt_t2"
+      args="Arial,14,0x59cd41,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipNameTxt_t3"
+      args="Arial,14,0x32a2f8,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipNameTxt_t4"
+      args="Arial,14,0xa838f7,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipNameTxt_t5"
+      args="Arial,14,0xeb9504,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipNameTxt_t6"
+      args="Arial,14,0xce0f0f,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipPetNameTxt_t1"
+      args="Arial,14,0xffffff,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipPetNameTxt_t2"
+      args="Arial,14,0x59cd41,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipPetNameTxt_t3"
+      args="Arial,14,0x32a2f8,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipPetNameTxt_t4"
+      args="Arial,14,0xc300ff,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipPetNameTxt_t5"
+      args="Arial,14,0xff9600,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipPetNameTxt_t6"
+      args="Arial,14,0xce0f0f,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipTimeTxt_t"
+      args="Arial,12,0xefeae2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.CropTipAccelerateTxt_t"
+      args="Arial,12,0xffffff" />
+    <!--	vip	-->
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipCardTxt_f"
+      args="Arial,12,0xead496,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="vip.vipCardTipTxt_f"
+      args="Arial,14,0xfbf0d0,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MountTipTxt_t01"
+      args="Arial,12,0x48d72a,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MountTipTxt_t02"
+      args="Arial,12,0x9cc1cc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MountTipTxt_t03"
+      args="Arial,12,0xff292e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MountTipTxt_t04"
+      args="Arial,12,0xecdb07,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MountTipTxt.IsActivateTxt_t"
+      args="Arial,14,0xecdb07,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.RuneTipsNeedTxt_t"
+      args="Arial,12,0xecdb07,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TaskTraceNameText_t"
+      args="Arial,14,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.nameTxt_t"
+      args="Arial,14,0xa838f7,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.bandTxt_t1"
+      args="Arial,12,0xee1a38,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.bandTxt_t2"
+      args="Arial,12,0x8eea17,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.gradeTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.propertyValueTxt_t"
+      args="Arial,12,0xe3a966,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.propertyValueTxt_t1"
+      args="Arial,12,0x00ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.awakenSkillTxt_t"
+      args="Arial,12,0xffd800,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.fightingLabel_t"
+      args="Arial,12,0x00d2ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.fightingTxt_t"
+      args="Arial,12,0x00d2ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petTip.gradeLabel_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ringtask.rewardTitle_t"
+      args="Arial,12,0xfef500,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="BattleGuardItemTip.nameTxt_t"
+      args="Arial,14,0xffc62c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="BattleGuardItemTip.contentTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SocketItemView.txt_t"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <!-- 天穹之径奖励 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassTitleTxt_t1"
+      args="Arial,14,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassTitleTxt_t2"
+      args="Arial,14,0xffc62c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t1"
+      args="Arial,12,0x999999"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t4"
+      args="Arial,12,0xa838f7"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t5"
+      args="Arial,12,0xff8000"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t6"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t7"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t8"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SinglePassRewardTxt_t9"
+      args="Arial,12,0xa3a1a2"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MarryTip.LoverName_t"
+      args="Arial,12,0xff009b,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.fashionIdentityTipTxt_t1"
+      args="Arial,12,0xc50000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.fashionIdentityTipTxt_t2"
+      args="Arial,12,0x12ea17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.fashionProfileTxt_t1"
+      args="Arial,12,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.fashionProfileTxt_t2"
+      args="Arial,12,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.fashionProfileTxt_t3"
+      args="Arial,12,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MarryTipsDescribeText_t"
+      args="Arial,11,0xc3c122"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.timeboxtipformat"
+      args="Arial,12,0xf5cc0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goods_new_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetBoss.firstTxt_t"
+      args="Arial,12,0xfbfa22"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetBossTipsItem.rewardItemName_t"
+      args="Arial,12,0x08ff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goods_t_2"
+      args="Arial,12,0xb3b3b3,,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.LeagueRewardTxt01_t"
+      args="Arial,14,0xff8000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.LeagueRewardTxt05_t"
+      args="Arial,14,0xff8000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.castSelectedTxt01_t"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.castSelectedTxt02_t"
+      args="Arial,12,0xf5cc0f,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.marryTipNameLevel_t"
+      args="Arial,12,0xffffff,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petSkillItem_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petSkillItem_t2"
+      args="Arial,12,0x5cd443"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petSkillItem_t3"
+      args="Arial,12,0x33a6ff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petSkillItem_t4"
+      args="Arial,12,0xad38ff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petSkillItem_t5"
+      args="Arial,12,0xf5cc0f"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petSkillItem_t6"
+      args="Arial,12,0xb3b3b3"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tip.petEquipIcon.openConditionTxt_t"
+      args="Arial,12,0xFF0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetEquipNameTxt_t1"
+      args="Arial,12,0xffffff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetEquipNameTxt_t2"
+      args="Arial,12,0x59cd41,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetEquipNameTxt_t3"
+      args="Arial,12,0x32a2f8,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetEquipNameTxt_t4"
+      args="Arial,12,0xc300ff,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetEquipNameTxt_t5"
+      args="Arial,12,0xff9600,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.PetEquipNameTxt_t6"
+      args="Arial,12,0xce0f0f,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodsenchant_t1"
+      args="Arial,12,0x00fffc,,,,,,left"
+      leading="2"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RemotePetTip.physicsAttackTxt_t1"
+      args="Arial,14,0xc39a59,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RemotePetTip.physicsAttackTxt_t2"
+      args="Arial,14,0x12ea17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RemotePetTurnTip.dropTxt_t1"
+      args="Arial,12,0xc39a59,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RemotePetTurnTip.indexTxt_f"
+      args="Arial,12,0xb3b3b3,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RemotePetTurnTip.skillTxt_f"
+      args="Arial,12,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RemotePetTurnTip.mopupValue_f"
+      args="Arial,12,0xcd0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNameTxt_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNameTxt_t2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNameTxt_t3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNameTxt_t4"
+      args="Arial,12,0xc300ff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNameTxt_t5"
+      args="Arial,12,0xff9600"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ChildNameTxt_t6"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="1" />
+    <!-- 魔法卡牌升级按钮Tips -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.magiccardNameTxt_t"
+      args="Arial,14,0xFFFFFF,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.magiccardLvTxt_t"
+      args="Arial,12,0xFFFFFF,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.magiccardSkillNameTxt_t"
+      args="Arial,12,0x4ce82c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.magiccardnextLvTxt_t"
+      args="Arial,12,0xFFFFFF,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.magiccardLvUpNeedItemCountTxt_t1"
+      args="Arial,12,0xc2c2c2,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.magiccardLvUpNeedItemCountTxt_t2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TaskItemTips.itemNameTxt_t"
+      args="Arial,16,0x8299ec,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TaskItemTips.rewardTipsTxt_t"
+      leading="12"
+      args="Arial,16,0xc2c2c2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.TaskItemTips.tipsTxt_t"
+      args="Arial,12,0xd70707,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesRewardTip.resiText_t"
+      args="Arial,12,0x8eea17"
+      leading="1"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesRewardTip.planesNameText_t"
+      args="Arial,13,0x8eea17"
+      leading="1"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.pet.PowerTxt_t"
+      args="Arial,12,0x00fffc,,,,,,right" />
+    <!-- 新转职 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="changejob.branchTitleTxt_t"
+      args="Arial,14,0x9431db,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="changejob.branchDescTxt_t"
+      args="Arial,12,0xe9c68c,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="changejob.branchNeedTxt_t"
+      args="Arial,12,0xffc600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="changejob.branchNeedValueTxt_t1"
+      args="Arial,12,0x55c03b,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="changejob.branchNeedValueTxt_t2"
+      args="Arial,12,0x7b7b7b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyUpgradeRewardTips.LevelText_t"
+      args="Arial,14,0xFFFDE9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyUpgradeRewardTips.canGetText_t"
+      args="Arial,13,0xFFF7C1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyUpgradeRewardTips.appellText_t"
+      args="Arial,13,0xFFF7C1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ArchaeologyUpgradeRewardTips.nextLevelAlertText_t"
+      args="Arial,13,0xFCF2C6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabVictoryTip.descText_t"
+      args="Arial,13,0xacacac,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabVictoryTip.rewardText_t"
+      args="Arial,13,0xdd0404,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skilltitle.titleTxt_t1"
+      args="Arial,14,0xFFFDE9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.skilltitle.titleTxt_t2"
+      args="Arial,14,0xFFF7C1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.fashionComposeNoteTxt_t"
+      args="Arial,12,0xb3b3b3,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.EquipContent.IsActivateTxt_t"
+      args="Arial,12,0xecdb07,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.BufferItemTip.dispelText_t"
+      args="Arial,12,0x07adfa,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.BufferItemTip.maxLayerText_t"
+      args="Arial,12,0x818181,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.BufferItemTip.maxValueText_t"
+      args="Arial,12,0x818181,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.BufferItemTipNameText_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.catHouseRewardTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildCallTips.titleText_t"
+      args="Arial,13,0xfef500,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ChildCallTips.bufferText_t"
+      args="Arial,12,0x04EF25,,,,,,left"
+      letterSpacing="1"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t7"
+      args="Arial,14,0xff8000"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.StarItemName_t7"
+      args="Arial,12,0xff8000"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetContracAddTips.addPropText_t"
+      args="Arial,12,0xb3b3b3"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetContracAddTips.titleText_t"
+      args="Arial,12,0x5db2e3"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetHallowsLookTips.nameText_t"
+      args="Arial,12,0xfae6b4,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetHallowsLookItem.gradeText_t1"
+      args="Arial,12,0xfffb00,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetHallowsLookItem.gradeText_t2"
+      args="Arial,12,0xff1800,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.SumCampaignNameText_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.childNsEmblemResiUpText_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.childNsEmblemResiUpNameText_t"
+      args="Arial,14,0x0099ff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.childNsEmblemResiUpLevelText_t"
+      args="Arial,14,0x0ffffff,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PerkinLabExpTips.curRewardText_t"
+      args="Arial,12,0xebd691,,,,,,left"
+      letterSpacing="1"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.equipText_t"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.attText_t"
+      args="Arial,14,0xFFF200,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.suitTempText_t1"
+      args="Arial,13,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.suitTempText_t2"
+      args="Arial,13,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.mainAttText_t"
+      args="Arial,14,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.randomText_t1"
+      args="Arial,13,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.randomText_t2"
+      args="Arial,13,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.randomText_t3"
+      args="Arial,13,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.randomText_t4"
+      args="Arial,13,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.randomText_t5"
+      args="Arial,13,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerTalismanTips.randomText_t6"
+      args="Arial,13,0xce0f0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTalkerHeroEquipTips.refreshTitle_t"
+      args="Arial,12,0xb3b3b3,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MultiMessageTipItem.text_t"
+      args="Arial,14,0xcc9900,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.heroname_t7_2"
+      args="Arial,14,0xc25519,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ExtraBufferTitle_t2"
+      args="Arial,14,0xff3c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MonsterTips.fightText_t"
+      args="Arial,12,0xb3b3b3,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tip.MonsterAccessoriesTips.mainAttText_t"
+      args="Arial,12,0xffff00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tip.MonsterAccessoriesTips.effectTitleTxt_t"
+      args="Arial,12,0xfec400,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tip.MonsterAccessoriesTips.effectTxt_t"
+      args="Arial,12,0xfeff00,,,,,,left"
+      letterSpacing="1"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MonsterAccessoriesTipsItem.txt_t1"
+      args="Arial,14,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MonsterAccessoriesTipsItem.txt_t2"
+      args="Arial,14,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MonsterAccessoriesTipsItem.txt_t3"
+      args="Arial,14,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MonsterAccessoriesTipsItem.txt_t4"
+      args="Arial,14,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.MonsterAccessoriesTipsItem.txt_t5"
+      args="Arial,14,0xce0f0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.EastBlessTips.blessName_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.stokesOreGoodsShowTip.rewaredTitle"
+      args="Arial,12,0xfef500,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.goodskill_t3"
+      args="Arial,12,0xFAFAFA"
+      leading="2"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.consortianewBoss.bufferNameTxt_t"
+      args="Arial,14,0xff892a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.consortianewBoss.bufferDescTxt_t"
+      args="Arial,12,0xedbf83,,,,,,left"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.consortianewBoss.recoverTxt_t"
+      args="Arial,12,0xedbf83,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.ConsortiaNewBossUpdateTimeText_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.consortianewBoss.selfDamageTxt2_t"
+      args="Arial,12,0x48d72a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureAttributeItem.name_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureAttributeItem.value_t"
+      args="Arial,12,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureSkillItem.txt_t1"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureSkillItem.txt_t2"
+      args="Arial,12,0x59cd41,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureSkillItem.txt_t3"
+      args="Arial,12,0x32a2f8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureSkillItem.txt_t4"
+      args="Arial,12,0xa838f7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureSkillItem.txt_t5"
+      args="Arial,12,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.treasureSkillItem.txt_t6"
+      args="Arial,12,0xce0f0f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.theseusAttribute.tipItemTxt_t"
+      args="Arial,12,0x48D72A,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.theseusAttribute.tipTittt_t"
+      args="Arial,12,0xb3b3b3,,,,,,left"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <!-- 英雄tips分割线 -->
+    <bitmapData
+      resourceLink="asset.core.tipsLineImg" />
+    <!-- 建造时间 -->
+    <bitmapData
+      resourceLink="asset.tips.TimeIcon"
+      x="160"
+      y="3" />
+    <!-- 未开启.png -->
+    <bitmapData
+      resourceLink="asset.tips.equipHoldClosed" />
+    <!-- 未镶嵌.png -->
+    <bitmapData
+      resourceLink="asset.tips.equipUnmount" />
+    <!-- 已镶嵌.png -->
+    <bitmapData
+      resourceLink="asset.tips.equipMount1" />
+    <bitmapData
+      resourceLink="asset.tips.equipMount2" />
+    <bitmapData
+      resourceLink="asset.tips.equipMount3" />
+    <bitmapData
+      resourceLink="asset.tips.equipMount4" />
+    <bitmapData
+      resourceLink="asset.tips.equipMount5" />
+    <!--公会Tips-->
+    <!--分隔线.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsSeparatorbarImg"
+      x="1"
+      y="108" />
+    <!--私聊.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsPrivateChatIcon"
+      x="5"
+      y="5" />
+    <!--移动好友.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsMoveFriendIcon"
+      x="6"
+      y="1" />
+    <!--切磋.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsPK"
+      x="6"
+      y="1" />
+    <!--添加好友.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsAddFriendsIcon"
+      x="6"
+      y="1" />
+    <!--复制.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsCopyIcon"
+      x="1"
+      y="2" />
+    <!--黑名单.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsBlacklistIcon"
+      x="4"
+      y="1" />
+    <!--删除好友.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsDelFriendIcon"
+      x="6"
+      y="2" />
+    <!--查看.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsInfoIcon"
+      x="6"
+      y="-1" />
+    <!--邀请组队.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsInviteIcon"
+      x="5"
+      y="-1" />
+    <!--跟随.png-->
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsFollowIcon"
+      x="6"
+      y="-1" />
+    <!--	农场成熟进度条	-->
+    <bitmapData
+      resourceLink="asset.tips.MatureProgressBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.tips.MatureProgressImg"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.mainToolBar.TipsMarryIcon1"
+      x="4"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.tips.redProfileBg01"
+      x="0"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.tips.yellowProfileBg01"
+      x="0"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.tips.blueProfileBg01"
+      x="0"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.tips.greenProfileBg01"
+      x="0"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.tips.purpleProlfileBg01"
+      x="0"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.tips.addImg"
+      x="0"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.tips.numImg" />
+    <bitmapData
+      resourceLink="asset.tips.attributeFlag"
+      y="4"
+      x="4" />
+    <bitmapData
+      resourceLink="asset.tips.equipHoldClosed02"
+      x="7"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.tips.splitLine"
+      x="-2" />
+    <!-- 联赛周排名奖励 -->
+    <bitmapData
+      resourceLink="asset.tips.LeagueTitle"
+      x="23"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.tips.LeagueGroup1"
+      x="8"
+      y="85" />
+    <bitmapData
+      resourceLink="asset.tips.LeagueGroup2"
+      x="8"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.tips.LeagueGroup3"
+      x="8"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.tips.LeagueGroup4"
+      x="8"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.tips.equipnum" />
+    <bitmapData
+      resourceLink="asset.tips.numBg"
+      x="34"
+      y="36" />
+    <custom
+      classname="yishi.view.tips.TimePlusView"
+      stylename="Tips.TimePlusView"
+      timeTxtStyle="map.rightText"
+      x="10"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.tips.cardTitleNumAsset" />
+    <bitmapData
+      resourceLink="asset.tips.cardNumAsset" />
+    <bitmapData
+      resourceLink="asset.tips.cardBingoBg"
+      smoothing="true" />
+    <bitmapData
+      resourceLink="asset.PetHallowsLookTips.titleBg"
+      x="2" />
+    <bitmapData
+      resourceLink="asset.PerkinLabExpTips.curImage"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.PerkinLabExpTips.nextImage"
+      x="10" />
+    <bitmapData
+      resourceLink="asset.tips.blackProfileBg01"
+      x="0"
+      y="-10" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 副本节点tips -->
+    <custom
+      classname="yishi.view.tips.CampaignMapPhysicsTip"
+      stylename="tips.CampaignMapPhysicsTip"
+      titleTxtStyle="campaign.titleTxt"
+      leftTxtStyle="campaign.leftText"
+      rightTxtStyle="campaign.rightText" />
+    <!-- 外城节点tips -->
+    <custom
+      classname="yishi.view.tips.MapPhysicsTip"
+      stylename="tips.MapPhysicsTip"
+      titleTxtStyle="map.titleTxt"
+      leftTxtStyle="map.leftTxt"
+      rightTxtStyle="map.rightText" />
+    <!--	占星Tips	-->
+    <custom
+      classname="yishi.view.tips.goods.StarTip"
+      stylename="tips.StarTip" />
+    <!--  背包格子 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="tips.ChatEquipIcon"
+      iconStyle="core.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true"
+      x="10"
+      y="10" />
+    <!--	农场成熟进度条	-->
+    <custom
+      classname="flash.display.Shape"
+      stylename="tips.MatureProgressMask"
+      x="7"
+      y="7" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="petTip.headIcon"
+      parentStyle="pet.MorphSkillIcon"
+      iconBackStyle="petTip.headIcon.GoodsBack"
+      iconHeight="60"
+      iconWidth="60"
+      y="0"
+      x="10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SocketItemView.icon"
+      iconHeight="20"
+      iconWidth="20"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="tips.BaseItemView"
+      backgroundStyle="core.ItemBack"
+      iconStyle="core.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true" />
+    <!-- tip物品Icon -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="tips.showItemBaseItemViewIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="30"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="-9" />
+    <!-- tip宝石Item -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="tip.equipGemItem"
+      iconStyle="core.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true"
+      x="0"
+      y="0"
+      width="41"
+      height="41"
+      profileWidth="61"
+      profileHeight="61" />
+    <!-- tip宝石Icon -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="tip.equipGemIcon"
+      iconHeight="31"
+      iconWidth="31"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="14"
+      loadingY="14"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="PetBossTipsItem.BaseItemView"
+      backgroundStyle="core.ItemBack"
+      iconStyle="core.BaseItemViewIcon"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true"
+      x="25" />
+    <!-- 英灵装备Item -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="tips.PetEquipItemView"
+      iconStyle="tip.petEquipIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      profileWidth="40"
+      profileHeight="40"
+      x="23"
+      y="0" />
+    <!-- 英灵装备Icon -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="tip.petEquipIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="41"
+      iconHeight="41"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.tips.PetEquipIcon"
+      stylename="tips.petEquip0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.tips.PetEquipIcon"
+      stylename="tips.petEquip1"
+      x="90"
+      y="0" />
+    <custom
+      classname="yishi.view.tips.PetEquipIcon"
+      stylename="tips.petEquip2"
+      x="180"
+      y="0" />
+    <custom
+      classname="yishi.view.tips.PetEquipIcon"
+      stylename="tips.petEquip3"
+      x="0"
+      y="65" />
+    <custom
+      classname="yishi.view.tips.PetEquipIcon"
+      stylename="tips.petEquip4"
+      x="90"
+      y="65" />
+    <custom
+      classname="yishi.view.tips.PetEquipIcon"
+      stylename="tips.petEquip5"
+      x="180"
+      y="65" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="RemotePetTurnTip.dropItemIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="RemotePetTurnTip.dropItem"
+      iconStyle="RemotePetTurnTip.dropItemIcon"
+      textStyle="RemotePetTurnTip.dropItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="46"
+      profileHeight="46"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="planesRewardTip.BaseItemViewGoodsCellIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="planesRewardTip.BaseItemView"
+      iconStyle="planesRewardTip.BaseItemViewGoodsCellIcon"
+      textStyle="planesRewardTip.BaseItemText"
+      profileStyle="core.GoodsProfileBG" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="xmlui.advanceReward.hbox"
+      spacing="5"
+      x="14"
+      y="14" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ContinuePayRebateChestIconTip.BaseItemView"
+      iconStyle="ContinuePayRebateChestIconTip.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="ContinuePayRebateChestIconTip.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ContinuePayRebateChestIconTip.BaseItemViewIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="26"
+      loadingY="26"
+      iconHeight="45"
+      iconWidth="45"
+      x="1"
+      y="1" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="view.ShowAvatar"
+      y="91" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="tips.BufferItemTip.Icon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="30"
+      loadingY="28"
+      isFollowMouse="falsse"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="10"
+      y="-10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DragonTalkerTalismanTips.talismanIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="30"
+      loadingY="28"
+      x="17"
+      y="27" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="skyStepTip.BaseItemView"
+      backgroundStyle="core.ItemBack"
+      iconStyle="skyStepTip.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="skyStepTip.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="skyStepTip.BaseItemViewIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="30"
+      loadingY="30"
+      iconHeight="60"
+      iconWidth="60"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="xmlui.theseuswarequipTip.hbox"
+      strictWidth="15"
+      x="29"
+      y="74"
+      autoCenter="true" />
+    <custom
+      stylename="ui.tip.stone.equipInStoneItem"
+      classname="yishi.view.tips.rune.RuneXingItem"
+      iconStyle="ui.tip.stone.equipInStoneItem.BaseItemViewIcon"
+      suitStyle="army.rune.suitLine"
+      iconWidth="42"
+      iconHeight="42"
+      textStyle="core.BaseItemText" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.tip.stone.equipInStoneItem.BaseItemViewIcon"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      x="4"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.tip.stone.equipInStoneItem.BaseItemViewIcon2"
+      iconHeight="30"
+      iconWidth="30"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="15"
+      loadingY="15"
+      x="10"
+      y="10" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="tips.profileImg"
+      resourceLink=",asset.tips.greenProfileBg01,asset.tips.blueProfileBg01,asset.tips.purpleProlfileBg01,asset.tips.yellowProfileBg01,asset.tips.redProfileBg01,asset.tips.blackProfileBg01" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="tips.profileImg02"
+      resourceLink=",asset.tips.greenProfileBg02,asset.tips.blueProfileBg02,asset.tips.purpleProlfileBg02,asset.tips.yellowProfileBg02,asset.tips.redProfileBg02,asset.tips.blackProfileBg02" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="petTip.headIcon.GoodsBack"
+      parentStyle="core.GoodsBack"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="tips.ChatEquipCloseBtn"
+      backStyle="asset.core.closeBtn_style02"
+      transparentEnable="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="180"
+      y="-4" />
+    <!--公会Tips-->
+    <!--9宫图背景7-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.PlayerMenuBack"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="180"
+      height="245" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.PreviewSmallIconCellBack"
+      parentStyle="core.ItemBack"
+      width="65"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.ConsortiaPlayerMenuBack"
+      resourceLink="asset.mainToolBar.TipsBg02"
+      x="0"
+      y="244"
+      scaleGridString="10,10,147,20"
+      width="178" />
+    <!-- 昵称文字-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuNicknameTextStyle"
+      textFormatStyle="consortia.TipNicknameTextStyle_t"
+      autoSize="none"
+      width="150"
+      height="20"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      x="8"
+      y="11" />
+    <!-- 公会-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaNameTextStyle1"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="8"
+      y="29" />
+    <!-- 公会名称-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaNameTextStyle2"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="56"
+      y="29" />
+    <!-- 战斗力-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaAPTextStyle1"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="8"
+      y="67" />
+    <!-- 战斗力值-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaAPTextStyle2"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="80"
+      y="67" />
+    <!-- 等级-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaLevelTextStyle1"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="8"
+      y="48" />
+    <!-- 公会等级-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaLevelTextStyle2"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="53"
+      y="48" />
+    <!--排名-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaRankingTextStyle1"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="85"
+      y="48" />
+    <!-- 公会排名-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PlayerMenuConsortiaRankingTextStyle2"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="129"
+      y="48" />
+    <!--移动好友-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="consortia.TipsMoveFriendBtnAsset1"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsMoveFriendBtnSelectedOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsMoveFriendIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsMoveFriendBtnSelectedDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsMoveFriendIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsMoveFriendBtnAsset2"
+      resourceLink="consortia.TipsMoveFriendBtnSelectedDefault,consortia.TipsMoveFriendBtnSelectedOver,consortia.TipsMoveFriendBtnSelectedOver,consortia.TipsMoveFriendBtnSelectedDefault" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortia.TipsMoveFriendBtnTextStyle"
+      textFormatStyle="consortia.TipNicknameTextStyle_t,tips.TipsMoveFriendBtnTextStyle_t,tips.TipsMoveFriendBtnTextStyle_t,consortia.TipNicknameTextStyle_t"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      height="20" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsMoveFriendBtn"
+      unSelectedStyle="consortia.TipsMoveFriendBtnAsset2"
+      selectedStyle="consortia.TipsMoveFriendBtnAsset2"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="93" />
+    <!--私 聊-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsChatBtnSelectedOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsPrivateChatIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsChatBtnSelectedDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsPrivateChatIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsChatBtnAsset1"
+      resourceLink="consortia.TipsChatBtnSelectedDefault,consortia.TipsChatBtnSelectedOver,consortia.TipsChatBtnSelectedOver,consortia.TipsChatBtnSelectedDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsChatBtn"
+      unSelectedStyle="consortia.TipsChatBtnAsset1"
+      selectedStyle="consortia.TipsChatBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="93" />
+    <!--添加好友-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsAddFriendsBtnSelectedOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsAddFriendsIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsAddFriendsBtnSelectedDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsAddFriendsIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsAddFriendsBtnAsset1"
+      resourceLink="consortia.TipsAddFriendsBtnSelectedDefault,consortia.TipsAddFriendsBtnSelectedOver,consortia.TipsAddFriendsBtnSelectedOver,consortia.TipsAddFriendsBtnSelectedDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsAddFriendsBtn"
+      unSelectedStyle="consortia.TipsAddFriendsBtnAsset1"
+      selectedStyle="consortia.TipsAddFriendsBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="117" />
+    <!--复制名称-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsCopyNameBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsCopyIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsCopyNameBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsCopyIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsCopyNameBtnAsset1"
+      resourceLink="consortia.TipsCopyNameBtnDefault,consortia.TipsCopyNameBtnOver,consortia.TipsCopyNameBtnOver,consortia.TipsCopyNameBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsCopyNameBtn"
+      unSelectedStyle="consortia.TipsCopyNameBtnAsset1"
+      selectedStyle="consortia.TipsCopyNameBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="142" />
+    <!--黑名单-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsBlacklistBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsBlacklistIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsBlacklistBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsBlacklistIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsBlacklistBtnAsset1"
+      resourceLink="consortia.TipsBlacklistBtnDefault,consortia.TipsBlacklistBtnOver,consortia.TipsBlacklistBtnOver,consortia.TipsBlacklistBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsBlacklistBtn"
+      unSelectedStyle="consortia.TipsBlacklistBtnAsset1"
+      selectedStyle="consortia.TipsBlacklistBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="166" />
+    <!--删除好友-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsDelFriendBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsDelFriendIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsDelFriendBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsDelFriendIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsDelFriendBtnAsset1"
+      resourceLink="consortia.TipsDelFriendBtnDefault,consortia.TipsDelFriendBtnOver,consortia.TipsDelFriendBtnOver,consortia.TipsDelFriendBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsDelFriendBtn"
+      unSelectedStyle="consortia.TipsDelFriendBtnAsset1"
+      selectedStyle="consortia.TipsDelFriendBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="190" />
+    <!-- 切磋 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsPKBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsPK" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsPKBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsPK" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsPKBtnAsset1"
+      resourceLink="consortia.TipsPKBtnDefault,consortia.TipsPKBtnOver,consortia.TipsPKBtnOver,consortia.TipsPKBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsPKBtn"
+      unSelectedStyle="consortia.TipsPKBtnAsset1"
+      selectedStyle="consortia.TipsPKBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="consortia.TipsVBox"
+      x="0"
+      y="111"
+      spacing="0" />
+    <!--求婚-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsMarryBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsMarryIcon1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsMarryBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsMarryIcon1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsMarryBtnAsset1"
+      resourceLink="consortia.TipsMarryBtnDefault,consortia.TipsMarryBtnOver,consortia.TipsMarryBtnOver,consortia.TipsMarryBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsMarryBtn"
+      unSelectedStyle="consortia.TipsMarryBtnAsset1"
+      selectedStyle="consortia.TipsMarryBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <!--查看信息-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsInfoBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsInfoIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cconsortia.TipsInfoBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsInfoIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsInfoBtnAsset1"
+      resourceLink="cconsortia.TipsInfoBtnDefault,consortia.TipsInfoBtnOver,consortia.TipsInfoBtnOver,cconsortia.TipsInfoBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsInfoBtn"
+      unSelectedStyle="consortia.TipsInfoBtnAsset1"
+      selectedStyle="consortia.TipsInfoBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <!--邀请组队-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsInviteBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsInviteIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cconsortia.TipsInviteBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsInviteIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsInviteBtnAsset1"
+      resourceLink="cconsortia.TipsInviteBtnDefault,consortia.TipsInviteBtnOver,consortia.TipsInviteBtnOver,cconsortia.TipsInviteBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsInviteBtn"
+      unSelectedStyle="consortia.TipsInviteBtnAsset1"
+      selectedStyle="consortia.TipsInviteBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <!-- 申请如队 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsApplyBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsApplyBtnBg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsApplyBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsApplyBtnBg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsApplyBtnAsset1"
+      resourceLink="consortia.TipsApplyBtnDefault,consortia.TipsApplyBtnOver,consortia.TipsApplyBtnOver,consortia.TipsApplyBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsApplyBtn"
+      unSelectedStyle="consortia.TipsApplyBtnAsset1"
+      selectedStyle="consortia.TipsApplyBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="3"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <!--跟随-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsFollowBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsFollowIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cconsortia.TipsFollowBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsFollowIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsFollowBtnAsset1"
+      resourceLink="cconsortia.TipsFollowBtnDefault,consortia.TipsFollowBtnOver,consortia.TipsFollowBtnOver,cconsortia.TipsFollowBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsFollowBtn"
+      unSelectedStyle="consortia.TipsFollowBtnAsset1"
+      selectedStyle="consortia.TipsFollowBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="1"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <!--升职按钮-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="consortia.UpgradeBtnTextStyle"
+      textFormatStyle="tips.TipsMoveFriendBtnTextStyle_t"
+      filterString="consortia.UpGradeButtonTextStyle_f"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortia.UpgradeBtn"
+      backStyle="asset.mainToolBar.TipsPromotionBtnBg"
+      textStyle="consortia.UpgradeBtnTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="7,8,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="70"
+      height="24"
+      x="8"
+      y="279" />
+    <!--降职按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortia.DemotionBtn"
+      parentStyle="consortia.UpgradeBtn"
+      backStyle="asset.mainToolBar.TipsDemotionBtnBg"
+      x="82"
+      backgoundInnerRectString="9,8,3,13" />
+    <!--开除按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="consortia.FireBtn"
+      parentStyle="consortia.UpgradeBtn"
+      backStyle="asset.mainToolBar.TipsFiredBtnBg"
+      x="156"
+      backgoundInnerRectString="9,8,3,13" />
+    <!--提出房间按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="consortia.outRoomBtn"
+      backStyle="asset.core.RightTipOutRoomBG"
+      x="50"
+      y="230"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 屏幕中间提示的tip -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="tips.MessageTipAsset"
+      resourceLink="asset.tips.MessageTipAsset" />
+    <!--外城节点TIP-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.titleTxt"
+      textFormatStyle="tips.TextFormat_1"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.leftTxt"
+      textFormatStyle="tips.TextFormat_2"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="map.rightText"
+      textFormatStyle="tips.TextFormat_3"
+      filterString="core.normal_f" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="Tips.TimeDownView"
+      timeTxtStyle="map.rightText"
+      width="50" />
+    <!-- 副本节点 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="campaign.titleTxt"
+      textFormatStyle="tips.campaign.TextFormat_1"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="campaign.titleTxt_2"
+      textFormatStyle="tips.campaign.TextFormat_1"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      width="160" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="campaign.leftText"
+      textFormatStyle="tips.campaign.TextFormat_2"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="campaign.rightText"
+      textFormatStyle="tips.campaign.TextFormat_3,tips.campaign.TextFormat_4"
+      filterString="core.normal_f" />
+    <!-- 英雄tips -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.HeroTipLine1"
+      resourceLink="asset.core.tipsLineImg"
+      scaleGridString="10,0,222,1"
+      width="138"
+      x="0" />
+    <!-- 名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroNameText"
+      textFormatStyle="tips.heroname_t1,tips.heroname_t2,tips.heroname_t3,tips.heroname_t4,tips.heroname_t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="110"
+      x="5" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroLevelText"
+      textFormatStyle="tips.herovocation_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="18"
+      width="110"
+      x="5" />
+    <!-- 职业 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroVocationText"
+      textFormatStyle="tips.herovocation_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="18"
+      width="110"
+      x="5" />
+    <!-- 成长 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroGrowthText"
+      textFormatStyle="tips.herocaptain_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroGrowthValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 力量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroAttackText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroAttackValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 智力 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroAbilityText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroAbilityValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 敏捷 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroAgilityText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroAgilityValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 统帅 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroCaptainText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.HeroCaptainValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!--	领主tips	-->
+    <!--	昵称	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ThaneNameText"
+      textFormatStyle="tips.pawnname_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="23"
+      width="130"
+      x="5" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ThaneLevelText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 等级值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ThaneLevelValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!--	战斗力	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.CombatPowerText"
+      textFormatStyle="tips.combatpower_f"
+      filterString="core.normal_f" />
+    <!-- 士兵tips -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.TipContain"
+      x="10"
+      y="10"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tip.TipItemBox"
+      x="5"
+      y="0"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.PawnTipLine1"
+      parentStyle="tips.HeroTipLine1"
+      width="134"
+      x="-10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.PawnTipLine2"
+      parentStyle="tips.PawnTipLine1" />
+    <!-- 名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnNameText"
+      textFormatStyle="tips.pawnname_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="5" />
+    <!-- 等级 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.NumHBox"
+      x="5" />
+    <!-- 生命 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnLifeText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 生命值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnLifeValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 敏捷 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnAgilityText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 敏捷值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnAgilityValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 攻击 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnAttackText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 攻击值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnAttackValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 精神 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnAbilityText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 精神值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnAbilityValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 防御 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnDefenseText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 防御值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnDefenseValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 人口 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnPopulationText"
+      textFormatStyle="tips.heroattack_t"
+      filterString="core.normal_f" />
+    <!-- 人口值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnPopulationValueText"
+      textFormatStyle="tips.herocaptain_value_t"
+      filterString="core.normal_f" />
+    <!-- 特殊技 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnSkillText"
+      textFormatStyle="tips.pawnname_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="185"
+      height="20"
+      x="5" />
+    <!-- 特殊技值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PawnSkillValueText"
+      textFormatStyle="tips.goodskill_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="155"
+      x="5" />
+    <!-- 物品tips -->
+    <!-- tips.GoodsTotalBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.GoodsTotalBox"
+      spacing="0"
+      x="4" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.StarsTotalBox"
+      x="17"
+      y="26"
+      spacing="8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.StarsItemBox"
+      spacing="5" />
+    <!-- tips.GoodsTotalBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.GoodsSubBox"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.StarsSubBox"
+      x="-3"
+      y="0" />
+    <!-- tips.GoodsTotalBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.GoodsSubBox3"
+      x="0"
+      y="0"
+      spacing="2" />
+    <!-- tips.GoodsTotalBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.GoodsSubBox4"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="tips.MountIcon"
+      resourceLink="asset.tips.equipMount1,asset.tips.equipMount2,asset.tips.equipMount3,asset.tips.equipMount4,asset.tips.equipMount5,asset.tips.equipMount6,asset.tips.equipMount7,asset.tips.equipMount8,asset.tips.equipHoldClosed,asset.tips.equipUnmount"
+      width="19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodsEquiped"
+      textFormatStyle="tips.GoodsEquiped_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="230"
+      x="10"
+      y="-14" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodsEquiped_2"
+      textFormatStyle="tips.GoodsEquiped_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="180"
+      x="87"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodNameText"
+      parentStyle="tips.HeroNameText"
+      autoSize="none"
+      height="20"
+      width="230"
+      x="0"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodNameText_2"
+      parentStyle="tips.HeroNameText"
+      autoSize="none"
+      height="20"
+      width="210"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodNameText_3"
+      textFormatStyle="tips.heroname_t1_2,tips.heroname_t2_2,tips.heroname_t3_2,tips.heroname_t4_2,tips.heroname_t5_2,tips.heroname_t6_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="210"
+      x="71"
+      y="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.FashionLevelText"
+      textFormatStyle="tips.FashionLevelText_t"
+      autoSize="none"
+      x="72"
+      y="0"
+      width="150"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodsTypeTxt"
+      textFormatStyle="tips.goodstype_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="130"
+      x="72"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.StarNameText"
+      textFormatStyle="tips.starname_t1,tips.heroname_t2,tips.heroname_t3,tips.heroname_t4,tips.heroname_t5,tips.heroname_t6,tips.heroname_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="250"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.StarItemNameText"
+      textFormatStyle="tips.StarItemName_t1,tips.StarItemName_t2,tips.StarItemName_t3,tips.StarItemName_t4,tips.StarItemName_t5,tips.StarItemName_t6,tips.StarItemName_t6"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.StarPowTipTitleText"
+      textFormatStyle="tips.StarPowTipTitleText_f"
+      filterString="core.normal_f"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodMountText"
+      textFormatStyle="tips.GoodMountText_t1,tips.goods_t,tips.GoodMountText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="18"
+      x="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodIntensifyText"
+      textFormatStyle="tips.goods_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodIntensifyText_2"
+      textFormatStyle="tips.goods_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="18"
+      x="141" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodVocationText"
+      textFormatStyle="tips.goods_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="18"
+      x="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodTypeText"
+      textFormatStyle="tips.goodtype_tt"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodTypeText_2"
+      textFormatStyle="tips.goodtype_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="18"
+      x="-4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodBindText"
+      textFormatStyle="tips.goods_bind_t_1,tips.goods_bind_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="18"
+      x="107" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodBindText1"
+      textFormatStyle="tips.goods_bind_t_1,tips.goods_bind_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="135" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodBindText2"
+      textFormatStyle="tips.goods_bind_t_1,tips.goods_bind_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodBindText3"
+      textFormatStyle="tips.goods_bind_t_1,tips.goods_bind_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodStudyText"
+      textFormatStyle="tips.goods_bind_t_1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="125" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillCoolDownText"
+      textFormatStyle="tips.goodtype_tl"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="260"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodJobText"
+      parentStyle="tips.GoodIntensifyText"
+      x="-4"
+      width="200" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodGradeText"
+      parentStyle="tips.GoodIntensifyText"
+      x="-4"
+      width="225"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodGradeText_2"
+      textFormatStyle="tips.goods_t_2"
+      filterString="core.normal_f"
+      width="130"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodAttackText"
+      parentStyle="tips.GoodIntensifyText"
+      x="-4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodAttackAddText"
+      parentStyle="tips.GoodIntensifyText"
+      textFormatStyle="tips.goodskill_t1"
+      width="270"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodSkillText"
+      textFormatStyle="tips.goodskill_t1,tips.goodskill_t2"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="236"
+      height="18"
+      x="0"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.simpleGoodSkillText"
+      textFormatStyle="tips.goodskill_t1,tips.goodskill_t2"
+      wordWrap="true"
+      multiline="true"
+      width="252"
+      height="18"
+      x="10"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.StarSkillText"
+      textFormatStyle="tips.StarSkillText_f"
+      x="-4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SuitTitleText"
+      textFormatStyle="tips.goodsuitname_t"
+      autoSize="none"
+      width="226"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SuitItemText"
+      textFormatStyle="tips.goodsuit_t1,tips.goodsuit_t2"
+      autoSize="none"
+      width="206"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodDescribeText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="18"
+      width="220"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodsTimeTxt"
+      textFormatStyle="tips.GoodsTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="18"
+      width="176"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodsSendTxt"
+      textFormatStyle="tips.GoodsSendTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="40"
+      width="226"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodPriceText"
+      textFormatStyle="tips.goodprice_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="18"
+      x="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodgradeCountText"
+      textFormatStyle="tips.goodgradeCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ComposeDescribeText"
+      textFormatStyle="tips.ComposeDescribeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="18"
+      width="176"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ComposeNeedTxt"
+      textFormatStyle="tips.ComposeNeedTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="18"
+      width="300"
+      x="0" />
+    <!--技能-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.SkillTotalBox"
+      spacing="8"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.SkillSubBox"
+      x="0"
+      y="0"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillTypeText"
+      textFormatStyle="tips.skilltype_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="24"
+      x="40"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.SkillSpliceLine"
+      parentStyle="tips.HeroTipLine1"
+      width="246"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillNameText"
+      textFormatStyle="tips.skillname_t"
+      filterString="core.normal_f"
+      width="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.AttackModeBtnDescribeText"
+      textFormatStyle="tips.herovocation_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillDescribe1"
+      textFormatStyle="tips.skillDisc_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillDescribe2"
+      textFormatStyle="tips.skillDisc_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillNeedTxt"
+      textFormatStyle="tips.SkillNeedTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillNextGradeTxt"
+      textFormatStyle="tips.skillnext_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillConditionTxt"
+      textFormatStyle="tips.SkillConditionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="18" />
+    <!--buffer-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferItemTipNameText"
+      textFormatStyle="tips.herovocation_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="30"
+      x="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferItemTipTurnText"
+      textFormatStyle="tips.buffTurnLeft_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="30"
+      y="4" />
+    <!--buffer层数-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferLayerNumText"
+      textFormatStyle="tips.buffLayerNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="30"
+      x="3"
+      y="15" />
+    <!--			height='16' width="42" x="4" y="29"-->
+    <!--	占星Tips	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.StarGpText"
+      textFormatStyle="tips.goods_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="18"
+      x="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.StarPriceText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      height="18"
+      x="-4" />
+    <!--  建筑名称和等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildNameText"
+      textFormatStyle="tips.buildname_t1"
+      filterString="core.normal_f"
+      width="235"
+      height="18"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildEffectText"
+      textFormatStyle="tips.buildeffect_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="68"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildEffectValueText"
+      textFormatStyle="tips.buildeffect_value_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="160"
+      x="73" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildNextGradeText"
+      textFormatStyle="tips.buildnextgrade_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildPreBuildText"
+      textFormatStyle="tips.need_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="150"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildPreBuildResourcesValueText"
+      textFormatStyle="tips.need_t,tips.need_value_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="132"
+      x="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BuildPreBuildValueText"
+      textFormatStyle="tips.need_t,tips.need_value_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="160"
+      x="118" />
+    <!-- 好感度TIP -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.favour.FontI"
+      textFormatStyle="tips.TextFormat_4"
+      filterString="core.normal_f"
+      x="7"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.favour.FontII"
+      textFormatStyle="tips.TextFormat_5"
+      filterString="core.normal_f"
+      x="7"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.favour.FontIII"
+      textFormatStyle="tips.TextFormat_6"
+      filterString="core.normal_f"
+      x="7"
+      y="48"
+      width="200"
+      height="50"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.favour.LevelTxt"
+      textFormatStyle="tips.TextFormat_7"
+      filterString="core.normal_f"
+      x="62"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.favour.pcntTxt"
+      textFormatStyle="tips.TextFormat_8"
+      filterString="core.normal_f"
+      x="97"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.favour.teamTxt"
+      textFormatStyle="tips.TextFormat_5"
+      filterString="core.normal_f"
+      x="69"
+      y="28" />
+    <!--buffer倒计时-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="buffer.DiscribeTxt"
+      textFormatStyle="tips.campaign.TextFormat_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="160"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.bufferTime"
+      textFormatStyle="tips.bufferTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="140"
+      x="35" />
+    <!--	地下迷宫	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MazeFloorTipTitleText"
+      textFormatStyle="tips.MazeFloorTipTitleText_f"
+      filterString="core.normal_f"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MazeFloorTipGoodText"
+      textFormatStyle="tips.MazeFloorTipGoodText_f1,tips.MazeFloorTipGoodText_f2,tips.MazeFloorTipGoodText_f3,tips.MazeFloorTipGoodText_f4,tips.MazeFloorTipGoodText_f5"
+      filterString="core.normal_f"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="tips.PlayerMenuConsortiaBtn"
+      backStyle="asset.mainToolBar.ConsortiaBtnAsset"
+      iconStyle="asset.mainToolBar.ConsortiaAsset"
+      iconInnerRectString="22,77,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="31"
+      y="244" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="tips.KickBtn"
+      backStyle="asset.mainToolBar.ConsortiaBtnAsset"
+      iconStyle="asset.vehicleroom.KickAsset"
+      iconInnerRectString="23,70,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="31"
+      y="244" />
+    <!-- 聊天星云tips -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="chat.StarItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconWidth="0"
+      iconHeight="0"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="0"
+      loadingY="0"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="25"
+      y="25" />
+    <!-- extraBuffer -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ExtraBufferTitle"
+      textFormatStyle="tips.ExtraBufferTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="216"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ExtraBufferContent"
+      textFormatStyle="tips.ExtraBufferContent_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="20"
+      width="200"
+      x="10"
+      y="35" />
+    <!-- 士兵特性 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.PawnSpecialName"
+      textFormatStyle="tips.skillname_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.PawnSpecialDesc"
+      textFormatStyle="tips.skillDisc_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="240"
+      height="20"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="tips.CrystalIcon"
+      resourceLink="asset.core.Crystal"
+      x="58"
+      y="-10" />
+    <!-- 宝石套装 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.JewelTipName"
+      textFormatStyle="tips.buildeffect_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.JewelTipValue"
+      textFormatStyle="tips.buildeffect_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="148"
+      height="20"
+      x="96" />
+    <!--	农场作物	-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.CropTipTotalVBox"
+      spacing="3"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.CropTipHBox"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.CropTipNameTxt"
+      textFormatStyle="tips.CropTipNameTxt_t1,tips.CropTipNameTxt_t2,tips.CropTipNameTxt_t3,tips.CropTipNameTxt_t4,tips.CropTipNameTxt_t5,tips.CropTipNameTxt_t6,tips.CropTipPetNameTxt_t1,tips.CropTipPetNameTxt_t2,tips.CropTipPetNameTxt_t3,tips.CropTipPetNameTxt_t4,tips.CropTipPetNameTxt_t5,tips.CropTipPetNameTxt_t6"
+      filterString="core.normal_f"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.CropTipTimeTxt"
+      textFormatStyle="tips.CropTipTimeTxt_t"
+      filterString="core.normal_f"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.CropTipAccelerateTxt"
+      textFormatStyle="tips.CropTipAccelerateTxt_t"
+      filterString="core.normal_f"
+      x="32"
+      y="2" />
+    <!-- add by jax -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipCardTxt"
+      textFormatStyle="vip.vipCardTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="133"
+      height="40"
+      x="120"
+      y="48"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="vip.vipCardTipTxt"
+      textFormatStyle="vip.vipCardTipTxt_f"
+      filterString="core.filter_01"
+      autoSize="none"
+      width="290"
+      height="40"
+      y="88"
+      wordWrap="true"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="vip.vipCardIcon"
+      resourceLink="asset.taskTrace.card.icon"
+      x="59"
+      y="34"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="vip.useVipCardBtn"
+      backStyle="asset.taskTrace.card.BtnBack"
+      iconStyle="asset.taskTrace.card.use"
+      iconInnerRectString="19,89,10,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="98"
+      y="134"
+      width="130"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MountTipTxt"
+      textFormatStyle="tips.MountTipTxt_t01,tips.MountTipTxt_t02,tips.MountTipTxt_t03,tips.MountTipTxt_t04"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="0"
+      y="0"
+      width="175"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.attributeTxt"
+      textFormatStyle="tips.MountTipTxt_t01,tips.MountTipTxt_t02,tips.MountTipTxt_t03,tips.MountTipTxt_t04"
+      filterString="core.normal_f"
+      wordWrap="false"
+      multiline="false"
+      x="15"
+      y="0"
+      width="175"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ActiveFashionText"
+      textFormatStyle="tips.ActiveFashionText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="18"
+      x="107" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.RuneTipsNeedTxt"
+      textFormatStyle="tips.RuneTipsNeedTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="18"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.TaskTraceNameText"
+      textFormatStyle="tips.TaskTraceNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="170"
+      height="22"
+      x="8"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.TaskTraceLine"
+      parentStyle="tips.HeroTipLine1"
+      width="110"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.TaskTraceDescribeText"
+      textFormatStyle="taskTrace.ItemTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="18"
+      x="8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.TaskTraceNameVbox"
+      x="0"
+      y="5"
+      spacing="0" />
+    <!-- 副本次数（帝国讨伐令） -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="campaign.campaignCardIcon"
+      resourceLink="asset.taskTrace.campaigncard.icon"
+      x="59"
+      y="34"
+      width="50"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="campaign.useCampaignCardBtn"
+      backStyle="asset.core.Style26Btn"
+      iconStyle="asset.taskTrace.campaigncard.use"
+      iconInnerRectString="20,76,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="97"
+      y="120"
+      width="116"
+      height="43" />
+    <!-- 称号浏览 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.AppellInfoTips.AppellTopDescribe"
+      textFormatStyle="tips.campaign.TextFormat_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="204"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.AppellInfoTips.AppellTalkDescribe"
+      textFormatStyle="tips.campaign.TextFormat_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="204"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="tips.AppellInfoTips.AppellInfoTipsLine"
+      parentStyle="tips.HeroTipLine1"
+      width="134"
+      x="-10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.nameTxt"
+      textFormatStyle="tips.heroname_t1_2,tips.heroname_t2_2,tips.heroname_t3_2,tips.heroname_t4_2,tips.heroname_t5_2,tips.heroname_t6_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="40"
+      x="75"
+      y="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.bandTxt"
+      textFormatStyle="petTip.bandTxt_t1,petTip.bandTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="95"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.gradeLabel"
+      textFormatStyle="petTip.gradeLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="52"
+      height="20"
+      x="80"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.gradeTxt"
+      textFormatStyle="petTip.gradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="137"
+      y="56" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.carryGradeLabel"
+      textFormatStyle="petTip.gradeLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="80"
+      y="82" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.carryGradeTxt"
+      textFormatStyle="petTip.gradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="137"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.propertylabel"
+      textFormatStyle="petTip.gradeLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.propertyValueTxt"
+      textFormatStyle="petTip.propertyValueTxt_t,petTip.propertyValueTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.awakenSkillTxt"
+      textFormatStyle="petTip.awakenSkillTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="10"
+      y="233" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.skillTxt"
+      textFormatStyle="petTip.gradeLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.fightingLabel"
+      textFormatStyle="petTip.fightingLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petTip.fightingTxt"
+      textFormatStyle="petTip.fightingTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="petTip.line1"
+      resourceLink="asset.tips.lineBgImg2"
+      scaleGridString="10,0,60,1"
+      width="176"
+      x="10"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="petTip.line2"
+      resourceLink="asset.tips.lineBgImg2"
+      scaleGridString="10,0,60,1"
+      width="176"
+      x="10"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="petTip.vbox01"
+      x="10"
+      y="117"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="petTip.vbox02"
+      x="100"
+      y="118"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="petTip.vbox03"
+      x="10"
+      y="252"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="petTip.PetTypeImage"
+      resourceLink="asset.petTip.PetType101,asset.petTip.PetType102,asset.petTip.PetType103,asset.petTip.PetType104,asset.petTip.PetType105,asset.petTip.PetType106,asset.petTip.PetType107,asset.petTip.PetType108,asset.petTip.PetType109"
+      x="280"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PetTypeNameText"
+      textFormatStyle="tips.pettype_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="8"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ringtask.rewaredTitle"
+      textFormatStyle="tips.ringtask.rewardTitle_t"
+      filterString="core.normal_f"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ringtask.rewaredItemName"
+      textFormatStyle="tips.ringtask.rewardTitle_t"
+      filterString="core.normal_f"
+      x="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="BattleGuardItemTip.nameTxt"
+      textFormatStyle="BattleGuardItemTip.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="230"
+      height="20"
+      x="10"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="BattleGuardItemTip.contentTxt"
+      textFormatStyle="BattleGuardItemTip.contentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="225"
+      height="80"
+      x="10"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="BattleGuardItemTip.Line"
+      resourceLink="asset.core.tipsLineImg"
+      scaleGridString="10,0,222,1"
+      width="125"
+      x="0"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="BattleGuardItemTip.vbox01"
+      x="10"
+      y="38"
+      spacing="2"
+      strictHeight="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SocketItemView.txt"
+      textFormatStyle="SocketItemView.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="18"
+      x="23"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.SinglePassVBox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SinglePassTitleTxt1"
+      textFormatStyle="tips.SinglePassTitleTxt_t1"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SinglePassTitleTxt2"
+      textFormatStyle="tips.SinglePassTitleTxt_t2"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SinglePassRewardTxt"
+      textFormatStyle="tips.SinglePassRewardTxt_t1,tips.SinglePassRewardTxt_t2,tips.SinglePassRewardTxt_t3,tips.SinglePassRewardTxt_t4,tips.SinglePassRewardTxt_t5,tips.SinglePassRewardTxt_t6,tips.SinglePassRewardTxt_t7,tips.SinglePassRewardTxt_t8,tips.SinglePassRewardTxt_t9"
+      filterString="core.normal_f"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MarryTip.LoverName"
+      textFormatStyle="tips.MarryTip.LoverName_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="160"
+      height="20"
+      x="70"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MarryTipsDescribeText"
+      textFormatStyle="tips.MarryTipsDescribeText_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      width="222"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.fashionIdentityTipTxt"
+      textFormatStyle="tips.fashionIdentityTipTxt_t1,tips.fashionIdentityTipTxt_t2"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20"
+      width="178"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.fashionProfileTxt"
+      textFormatStyle="tips.fashionProfileTxt_t1,tips.fashionProfileTxt_t2,tips.fashionProfileTxt_t3"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="20"
+      width="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodDescribeText.Tmptips"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      height="36"
+      width="176"
+      x="10"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.timeboxtipVbox"
+      x="9"
+      y="65"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.tiemboxtiptitle"
+      textFormatStyle="tips.timeboxtipformat"
+      filterString="core.normal_f"
+      x="7"
+      y="0"
+      height="20"
+      width="230"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.rewardItemTxt"
+      textFormatStyle="tips.StarItemName_t1,tips.StarItemName_t2,tips.StarItemName_t3,tips.StarItemName_t4,tips.StarItemName_t5"
+      filterString="core.normal_f"
+      x="0"
+      y="50"
+      height="20" />
+    <!-- 宝石加成 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.gemAddStr"
+      textFormatStyle="tips.GoodMountText_t1,tips.goods_new_t,tips.GoodMountText_t2"
+      filterString="core.normal_f"
+      width="110"
+      height="18"
+      x="35"
+      y="9" />
+    <!-- 宝石加成基础值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.gemValue"
+      parentStyle="tips.gemAddStr"
+      y="0"
+      height="19" />
+    <!-- 宝石加成增加值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.gemAddValue"
+      parentStyle="tips.gemAddStr"
+      y="0"
+      height="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PetBoss.firstTxt"
+      textFormatStyle="tips.PetBoss.firstTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="310"
+      height="40"
+      x="0"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetBossTipsItem.rewardItemName"
+      textFormatStyle="PetBossTipsItem.rewardItemName_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="90"
+      height="40"
+      y="45"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.PetBossVBox"
+      x="10"
+      y="10"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.PetBossHBox"
+      x="0"
+      y="0"
+      spacing="1"
+      strictWidth="80" />
+    <!-- 联赛周排名奖励 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt01"
+      textFormatStyle="tips.LeagueRewardTxt01_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="127"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt02"
+      parentStyle="tips.LeagueRewardTxt01"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt03"
+      parentStyle="tips.LeagueRewardTxt01"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt04"
+      parentStyle="tips.LeagueRewardTxt01"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt05"
+      textFormatStyle="tips.LeagueRewardTxt05_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="168"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt06"
+      parentStyle="tips.LeagueRewardTxt05"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt07"
+      parentStyle="tips.LeagueRewardTxt05"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.LeagueRewardTxt08"
+      parentStyle="tips.LeagueRewardTxt05"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.castSelectedTxt"
+      textFormatStyle="tips.castSelectedTxt01_t,tips.castSelectedTxt02_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="195"
+      x="76"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.goodsFightingTxt"
+      textFormatStyle="tips.GoodsFightingTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="205"
+      x="133"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.marryTipNameLevel"
+      textFormatStyle="tips.marryTipNameLevel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="130"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.CardPropertyText"
+      textFormatStyle="tips.CardProperty_t1,tips.CardProperty_t2,tips.CardProperty_t3,tips.CardProperty_t4,tips.CardProperty_t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="250"
+      x="0"
+      y="0"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.skillCostTxt"
+      textFormatStyle="tips.goodtype_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="18"
+      x="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SkillNameText_2"
+      textFormatStyle="tips.skillname_t_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="50"
+      x="60"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.PetAttributeView.desctxt"
+      textFormatStyle="tips.petSkillItem_t1,tips.petSkillItem_t2,tips.petSkillItem_t3,tips.petSkillItem_t4,tips.petSkillItem_t5,tips.petSkillItem_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="170"
+      x="15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.petEquipIcon.equipNameTxt"
+      textFormatStyle="tips.PetEquipNameTxt_t1,tips.PetEquipNameTxt_t2,tips.PetEquipNameTxt_t3,tips.PetEquipNameTxt_t4,tips.PetEquipNameTxt_t5,tips.PetEquipNameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="90"
+      height="20"
+      x="0"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.petEquipIcon.openConditionTxt"
+      textFormatStyle="tip.petEquipIcon.openConditionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="70"
+      height="42"
+      x="8"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tip.MultipleGoodsTips.vbox"
+      x="10"
+      y="10"
+      spacing="3"
+      width="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.MultipleGoodsTips.txt"
+      textFormatStyle="tips.petSkillItem_t1,tips.petSkillItem_t2,tips.petSkillItem_t3,tips.petSkillItem_t4,tips.petSkillItem_t5,tips.petSkillItem_t6"
+      filterString="core.normal_f"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MountTipTxt.IsActivateTxt"
+      textFormatStyle="tips.MountTipTxt.IsActivateTxt_t"
+      filterString="core.normal_f"
+      x="150"
+      y="0"
+      width="175"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.tempNameText"
+      textFormatStyle="tips.GoodsTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="20"
+      x="10"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.countText"
+      textFormatStyle="tips.GoodsTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="360"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.titleText"
+      textFormatStyle="tips.skillname_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="250"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.descText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="320"
+      x="10"
+      y="10"
+      height="45" />
+    <!--任命队长-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="consortia.TipsAppointBtnOver"
+      resourceLink="asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsAppointBtnIcon" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="cconsortia.TipsAppointBtnDefault"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsAppointBtnIcon" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="consortia.TipsAppointBtnAsset1"
+      resourceLink="cconsortia.TipsAppointBtnDefault,consortia.TipsAppointBtnOver,consortia.TipsAppointBtnOver,cconsortia.TipsAppointBtnDefault" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="consortia.TipsAppointBtn"
+      unSelectedStyle="consortia.TipsAppointBtnAsset1"
+      selectedStyle="consortia.TipsAppointBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="3"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="tips.ChangeMastBtn"
+      backStyle="asset.mainToolBar.ConsortiaBtnAsset"
+      iconStyle="asset.steelmap.ChangeMastBtnTxt"
+      iconInnerRectString="20,74,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="31"
+      y="244" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTip.physicsAttackTxt"
+      textFormatStyle="RemotePetTip.physicsAttackTxt_t1,RemotePetTip.physicsAttackTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="22"
+      x="10"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.physicsDefenseTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.magicAttackTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.magicDefenseTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.hpTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.fireResTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.windResTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      x="140"
+      y="220"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.waterResTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.electResTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      x="140"
+      y="240"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.darkResTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      y="260" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      stylename="RemotePetTip.lightResTxt"
+      parentStyle="RemotePetTip.physicsAttackTxt"
+      x="140"
+      y="260"
+      width="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.dropTxt"
+      textFormatStyle="RemotePetTurnTip.dropTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="22"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.fristTxt"
+      textFormatStyle="RemotePetTurnTip.dropTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="22"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RemotePetTurnTip.dropHox"
+      x="10"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RemotePetTurnTip.fristHox"
+      x="10"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RemotePetTurnTip.vBox"
+      x="0"
+      y="90"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.skillTxt"
+      textFormatStyle="RemotePetTurnTip.skillTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="44"
+      x="10"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.mopupValue"
+      textFormatStyle="RemotePetTurnTip.mopupValue_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      wordWrap="true"
+      height="44"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.power"
+      textFormatStyle="RemotePetTip.physicsAttackTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="22"
+      x="100"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.indexTxt"
+      textFormatStyle="RemotePetTurnTip.indexTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="12"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RemotePetTurnTip.dropItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="4"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.planesNameText"
+      textFormatStyle="planesRewardTip.planesNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.resiText"
+      textFormatStyle="planesRewardTip.resiText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="230"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="planesRewardTip.rewardsGoodsHbox"
+      x="10"
+      y="20"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesRewardTip.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="2"
+      y="26" />
+    <!-- 魔法卡牌升级按钮Tips -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.magiccardNameTxt"
+      textFormatStyle="tips.magiccardNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      wordWrap="true"
+      height="44"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.magiccardLvTxt"
+      textFormatStyle="tips.magiccardLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="18"
+      x="131" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.magiccardSkillNameTxt"
+      textFormatStyle="tips.magiccardSkillNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="40"
+      x="30"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.magiccardnextLvTxt"
+      textFormatStyle="tips.magiccardnextLvTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="18"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.magiccardLvUpNeedItemTxt"
+      textFormatStyle="tips.magiccardLvUpNeedItemCountTxt_t1,tips.magiccardLvUpNeedItemCountTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="18"
+      wordWrap="true"
+      x="10" />
+    <!-- 寻宝任务道具Tips -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.TaskItemTips.itemNameTxt"
+      textFormatStyle="tips.TaskItemTips.itemNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="70"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.TaskItemTips.rewardTipsTxt"
+      textFormatStyle="tips.TaskItemTips.rewardTipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="25"
+      y="70"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.TaskItemTips.tipsTxt"
+      textFormatStyle="tips.TaskItemTips.tipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="185"
+      height="50"
+      x="10"
+      wordWrap="true" />
+    <!--	位面事件tips	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PlanesEventTips.titleText"
+      textFormatStyle="tips.skillname_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="180"
+      height="44"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PlanesEventTips.descText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="185"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PlanesEventTips.needGradeText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      width="150"
+      x="10"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PlanesEventTips.needEnergyText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      width="150"
+      x="10"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.pet.PowerTxt"
+      textFormatStyle="tips.pet.PowerTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="62" />
+    <!--		<component classname="com.pickgliss.ui.image.ScaleFrameImage"-->
+    <!--			stylename="tips.pet.lightStar"-->
+    <!--			resourceLink="asset.petTip.starLight,asset.petTip.starDark"-->
+    <!--			x="20" y="31" />-->
+    <custom
+      classname="asset.petTip.PropertyCoeBar"
+      stylename="tip.pet.PropertyCoeBar"
+      y="28"
+      x="81" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferItemTipCountText"
+      textFormatStyle="tips.buffTurnLeft_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="30"
+      height="20"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.bufferlistitemtip.turnBox"
+      y="20"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.bufferlistitemtip.countBox"
+      y="45"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.bufferlistitemtip.countVBox"
+      x="8"
+      y="8"
+      spacing="3" />
+    <!--	铂金实验室	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabKengTip.titleText"
+      textFormatStyle="tips.skillname_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="150"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabKengTip.timeText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="185"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabKengTip.rewardText"
+      textFormatStyle="tips.gooddescribe_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="205"
+      x="10"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ContinuePayRebateChestIconTip.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="3"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferItemTip.dispelText"
+      textFormatStyle="tips.BufferItemTip.dispelText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferItemTip.maxLayerText"
+      textFormatStyle="tips.BufferItemTip.maxLayerText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.BufferItemTip.maxValueText"
+      textFormatStyle="tips.BufferItemTip.maxValueText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="tips.bufferlistitemtip.layerBox"
+      spacing="10"
+      x="5" />
+    <!-- 新转职 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="changejob.branchTotalBox"
+      spacing="3"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="changejob.branchTitleTxt"
+      textFormatStyle="changejob.branchTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="changejob.branchDescTxt"
+      textFormatStyle="changejob.branchDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="120"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="changejob.branchNeedTxt"
+      textFormatStyle="changejob.branchNeedTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="changejob.branchNeedValueTxt"
+      textFormatStyle="changejob.branchNeedValueTxt_t1,changejob.branchNeedValueTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="120"
+      x="10"
+      y="0" />
+    <!--	考古奖励	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyUpgradeRewardTips.nextLevelAlertText"
+      textFormatStyle="ArchaeologyUpgradeRewardTips.nextLevelAlertText_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyUpgradeRewardTips.nextLevelText"
+      textFormatStyle="ArchaeologyUpgradeRewardTips.LevelText_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="150"
+      height="20"
+      x="105"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyUpgradeRewardTips.canGetText"
+      textFormatStyle="ArchaeologyUpgradeRewardTips.canGetText_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="100"
+      height="20"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyUpgradeRewardTips.appellText"
+      textFormatStyle="ArchaeologyUpgradeRewardTips.appellText_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="170"
+      height="20"
+      x="10"
+      y="55"
+      wordWrap="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ArchaeologyUpgradeRewardTips.mountText"
+      textFormatStyle="ArchaeologyUpgradeRewardTips.appellText_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="185"
+      height="20"
+      x="10"
+      y="75"
+      wordWrap="false" />
+    <!-- 铂金实验室连胜奖励	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabVictoryTip.descText"
+      textFormatStyle="PerkinLabVictoryTip.descText_t"
+      wordWrap="true"
+      width="160"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabVictoryTip.victoryCountText"
+      textFormatStyle="PerkinLabVictoryTip.descText_t"
+      wordWrap="true"
+      width="160"
+      height="20"
+      x="10"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabVictoryTip.rewardAlertText"
+      textFormatStyle="PerkinLabVictoryTip.descText_t"
+      wordWrap="true"
+      width="150"
+      height="20"
+      x="10"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabVictoryTip.rewardText"
+      textFormatStyle="PerkinLabVictoryTip.rewardText_t"
+      wordWrap="true"
+      width="150"
+      height="20"
+      x="24"
+      y="150" />
+    <!-- 守卫巡逻tips	-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildPatrolItemTip.Attvbox"
+      x="10"
+      y="90"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="tips.skilltiptile.bg"
+      resourceLink="asset.tips.skilltiptile.bg"
+      x="0"
+      y="0"
+      scaleY="0.7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.skilltitle.titleTxt"
+      textFormatStyle="tips.skilltitle.titleTxt_t1,tips.skilltitle.titleTxt_t2"
+      width="200"
+      height="20"
+      x="10"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.fashionComposeNoteTxt"
+      textFormatStyle="tips.fashionComposeNoteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="20"
+      x="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.EquipContent.IsActivateTxt"
+      textFormatStyle="tips.EquipContent.IsActivateTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="130" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="tips.catHouseMaterialIcon"
+      resourceLink="asset.tips.muban,asset.tips.masheng,asset.tips.rongbu,asset.tips.baozhi,asset.tips.mianhua,asset.tips.yumao,asset.tips.maobohe,asset.core.SmallGoldIcon,asset.core.SmallPointImg"
+      x="45"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.catHouseMaterialTxt"
+      parentStyle="cathouse.materialTxt"
+      autoSize="none"
+      x="70"
+      y="41"
+      width="33"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.catHouseRewardTxt"
+      textFormatStyle="tips.catHouseRewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="15"
+      y="10" />
+    <!-- 泰坦tips	-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DragonTitanTips.VBox"
+      spacing="4"
+      x="20"
+      y="57" />
+    <!--装备凝练	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.EquipConciseTips.Name"
+      textFormatStyle="tips.buildeffect_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="66"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.EquipConciseTips.Value"
+      textFormatStyle="tips.buildeffect_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="125"
+      height="20"
+      x="70" />
+    <!--	守卫召唤	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildCallTips.curText"
+      textFormatStyle="ChildCallTips.titleText_t"
+      width="200"
+      height="20"
+      x="5"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildCallTips.nextText"
+      textFormatStyle="ChildCallTips.titleText_t"
+      width="200"
+      height="20"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildCallTips.curVbox"
+      x="5"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildCallTips.nextVbox"
+      x="5"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildCallTips.bufferText"
+      textFormatStyle="ChildCallTips.bufferText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="275"
+      height="20" />
+    <!-- 所在区-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PlayerMenu.serverName"
+      parentStyle="tips.PlayerMenuNicknameTextStyle"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="8"
+      y="85" />
+    <!--   圣器   -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetContracAddTips.titleText"
+      textFormatStyle="PetContracAddTips.titleText_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="300"
+      height="34"
+      x="5"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetContracAddTips.addPropText"
+      textFormatStyle="PetContracAddTips.addPropText_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="200"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetContracAddTips.addTextVbox"
+      x="5"
+      y="35"
+      spacing="2" />
+    <!--   查看他人圣器   -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetHallowsLookItem.nameText"
+      textFormatStyle="PetHallowsLookItem.gradeText_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="34"
+      x="1"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetHallowsLookItem.gradeText"
+      textFormatStyle="PetHallowsLookItem.gradeText_t1,PetHallowsLookItem.gradeText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="82"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetHallowsLookItem.fightText"
+      textFormatStyle="PetHallowsLookItem.gradeText_t1,PetHallowsLookItem.gradeText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="135"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetHallowsLookTips.nameText"
+      textFormatStyle="PetHallowsLookTips.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="5"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetHallowsLookTips.stateText"
+      textFormatStyle="PetHallowsLookTips.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="70"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetHallowsLookTips.fightText"
+      textFormatStyle="PetHallowsLookTips.nameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="135"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetHallowsLookTips.vBox"
+      spacing="5"
+      x="0"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.SumCampaignNameText"
+      textFormatStyle="tips.SumCampaignNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="22"
+      x="8"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.childNsEmblemResiUpNameText"
+      textFormatStyle="tips.childNsEmblemResiUpNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="250"
+      height="22"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.childNsEmblemResiUpLevelText"
+      textFormatStyle="tips.childNsEmblemResiUpLevelText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="66"
+      height="22"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.childNsEmblemResiUpText"
+      textFormatStyle="tips.childNsEmblemResiUpText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="180"
+      height="22"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildNSTalentItemTips.nameText"
+      textFormatStyle="tips.skillname_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="350"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildNSTalentItemTips.curDescText"
+      textFormatStyle="tips.skillDisc_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildNSTalentItemTips.curAddValueText"
+      textFormatStyle="tips.skillDisc_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="10"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ChildNSTalentItemTips.nextVbox"
+      spacing="2"
+      x="0"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ChildNSTalentItemTips.lineImage"
+      parentStyle="tips.HeroTipLine1"
+      width="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildNSTalentItemTips.nextText"
+      textFormatStyle="tips.skillnext_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ChildNSTalentItemTips.nextDescText"
+      textFormatStyle="tips.skillDisc_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="480"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabExpTips.curRewardText"
+      textFormatStyle="PerkinLabExpTips.curRewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="480"
+      height="80"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PerkinLabExpTips.nextRewardText"
+      textFormatStyle="PerkinLabExpTips.curRewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="360"
+      height="80"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PerkinLabExpTips.nextVbox"
+      spacing="2"
+      x="0"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.armoryGradeTxt"
+      textFormatStyle="tips.goodstype_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="104"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.armoryTotalBox"
+      spacing="8"
+      x="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="DragonTalkerTalismanTips.talismanBack"
+      resourceLink="asset.DragonTalkerTalisman.talismanBack1,asset.DragonTalkerTalisman.talismanBack2,asset.DragonTalkerTalisman.talismanBack3,asset.DragonTalkerTalisman.talismanBack4,asset.DragonTalkerTalisman.talismanBack5,asset.DragonTalkerTalisman.talismanBack6"
+      x="3"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="DragonTalkerTalismanTips.profileBack"
+      resourceLink=",asset.DragonTalkerTalismanTips.profileBack1,asset.DragonTalkerTalismanTips.profileBack2,asset.DragonTalkerTalismanTips.profileBack3,asset.DragonTalkerTalismanTips.profileBack4,asset.DragonTalkerTalismanTips.profileBack5"
+      x="15"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.nameText"
+      textFormatStyle="tips.heroname_t1_2,tips.heroname_t2_2,tips.heroname_t3_2,tips.heroname_t4_2,tips.heroname_t5_2,tips.heroname_t6_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="165"
+      x="80"
+      y="28"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.equipText"
+      textFormatStyle="DragonTalkerTalismanTips.equipText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="105"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.attText"
+      textFormatStyle="DragonTalkerTalismanTips.attText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="15"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.suitText"
+      textFormatStyle="DragonTalkerTalismanTips.attText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="15"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DragonTalkerTalismanTips.attVbox"
+      spacing="2"
+      x="15"
+      y="128" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DragonTalkerTalismanTips.suitVbox"
+      spacing="0"
+      x="15"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.descText"
+      textFormatStyle="tips.castSelectedTxt01_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="180"
+      x="68"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DragonTalkerHeroEquipTips.back"
+      resourceLink="asset.DragonTalkerHeroEquipTips.back"
+      scaleGridString="90,200,120,240"
+      width="300"
+      height="319" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DragonTalkerHeroEquipTips.castContnier"
+      x="10"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DragonTalkerHeroEquipTips.mountContiner"
+      x="10"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DragonTalkerHeroEquipTips.refreshContiner"
+      x="10"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.mainAttText"
+      textFormatStyle="DragonTalkerTalismanTips.mainAttText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.randomText"
+      textFormatStyle="DragonTalkerTalismanTips.randomText_t1,DragonTalkerTalismanTips.randomText_t2,DragonTalkerTalismanTips.randomText_t3,DragonTalkerTalismanTips.randomText_t4,DragonTalkerTalismanTips.randomText_t5,DragonTalkerTalismanTips.randomText_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerTalismanTips.suitTempText"
+      textFormatStyle="DragonTalkerTalismanTips.suitTempText_t1,DragonTalkerTalismanTips.suitTempText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="230"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DragonTalkerTalismanTips.intensifyContiner"
+      x="195"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerHeroEquipTips.refreshTitle"
+      textFormatStyle="DragonTalkerHeroEquipTips.refreshTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="18"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTalkerAttTipsItem.propTxt"
+      textFormatStyle="tips.goodskill_t1,tips.goodskill_t2"
+      wordWrap="true"
+      multiline="true"
+      width="130"
+      height="18"
+      x="10"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MultiMessageTipItem.text"
+      textFormatStyle="tips.MultiMessageTipItem.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="600"
+      height="25"
+      wordWrap="true"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="MonsterTips.starHbox"
+      x="0"
+      y="30"
+      spacing="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MonsterTips.fightText"
+      textFormatStyle="MonsterTips.fightText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.MonsterAccessoriesTips.mainAttText"
+      textFormatStyle="tip.MonsterAccessoriesTips.mainAttText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.MonsterAccessoriesTips.effectTitleTxt"
+      textFormatStyle="tip.MonsterAccessoriesTips.effectTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tip.MonsterAccessoriesTips.effectTxt"
+      textFormatStyle="tip.MonsterAccessoriesTips.effectTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="40"
+      wordWrap="true"
+      x="10" />
+    <component
+      stylename="tips.MonsterAccessoriesTipsItem.icon"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.MonsterAccessoriesTips.icon1,asset.MonsterAccessoriesTips.icon2"
+      autoHCenter="true"
+      autoVCenter="true"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.MonsterAccessoriesTipsItem.txt"
+      textFormatStyle="tips.MonsterAccessoriesTipsItem.txt_t1,tips.MonsterAccessoriesTipsItem.txt_t2,tips.MonsterAccessoriesTipsItem.txt_t3,tips.MonsterAccessoriesTipsItem.txt_t4,tips.MonsterAccessoriesTipsItem.txt_t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="270"
+      x="10"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.EastBlessTips.Title"
+      textFormatStyle="tips.EastBlessTips.blessName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="116"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.EastBlessTips.vbox"
+      x="0"
+      y="30"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.EastBlessTips.blessLevel"
+      textFormatStyle="tips.ExtraBufferTitle_t,tips.ExtraBufferTitle_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="116"
+      height="20"
+      x="60"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.EastBlessTips.blessName"
+      textFormatStyle="tips.EastBlessTips.blessName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="116"
+      height="20"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.stokesOreGoodsShowTip.rewaredTitle"
+      textFormatStyle="tips.ringtask.rewardTitle_t"
+      filterString="core.normal_f"
+      x="0"
+      width="100"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DaimonSkillTip.line"
+      resourceLink="asset.core.tipsLineImg"
+      scaleGridString="10,0,222,1"
+      width="138"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="AvengerJewelryTips.gradeTxt"
+      textFormatStyle="tips.pettype_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="175"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="AvengerJewelryTips.propBox"
+      spacing="8"
+      x="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="tips.profileBack"
+      resourceLink=",core.greenItemTipsBg,core.blueItemTipsBg,core.purpleItemTipsBg,core.yellowItemTipsBg,core.redItemTipsBg,core.blackItemTipsBg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.consortianewBoss.bufferNameTxt"
+      textFormatStyle="tips.consortianewBoss.bufferNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      wordWrap="true"
+      width="120"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.consortianewBoss.bufferDescTxt"
+      textFormatStyle="tips.consortianewBoss.bufferDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="240"
+      wordWrap="true"
+      x="5"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.consortianewBoss.recoverTxt"
+      textFormatStyle="tips.consortianewBoss.recoverTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="60"
+      x="200"
+      y="10" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="tips.ConsortiaNewBossUpdateTime"
+      timeTxtStyle="tips.ConsortiaNewBossUpdateTimeText"
+      x="150"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.ConsortiaNewBossUpdateTimeText"
+      textFormatStyle="tips.ConsortiaNewBossUpdateTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyStepTip.txt"
+      textFormatStyle="changejob.branchDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="120"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="skyStepTip.hBox"
+      spacing="10"
+      x="15"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="skyStepTip.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="58"
+      x="0"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.consortianewBoss.selfDamageTxt2"
+      textFormatStyle="tips.consortianewBoss.selfDamageTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="24"
+      width="120"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.treasureAttributeItem.name"
+      textFormatStyle="tips.treasureAttributeItem.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.treasureAttributeItem.value"
+      textFormatStyle="tips.treasureAttributeItem.value_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="100"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.treasureSkillItem.txt"
+      textFormatStyle="tips.treasureSkillItem.txt_t1,tips.treasureSkillItem.txt_t2,tips.treasureSkillItem.txt_t3,tips.treasureSkillItem.txt_t4,tips.treasureSkillItem.txt_t5,tips.treasureSkillItem.txt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="theseuswarTip.TipsVBox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.theseusAttribute.tipItemTxt"
+      textFormatStyle="ui.theseusAttribute.tipItemTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="330"
+      height="20"
+      x="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.theseusAttribute.tipTittt"
+      textFormatStyle="ui.theseusAttribute.tipTittt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="oldPlayerReturnHeadItem.terminateBtnAsset1"
+      resourceLink="consortia.TipsMoveFriendBtnAsset1,asset.mainToolBar.TipsSelectedIcon,asset.mainToolBar.TipsSelectedIcon,consortia.TipsMoveFriendBtnAsset1" />
+    <component
+      classname="yishi.view.base.ConsortiaSelectedButton"
+      stylename="oldPlayerReturnHeadItem.terminateBtn"
+      unSelectedStyle="oldPlayerReturnHeadItem.terminateBtnAsset1"
+      selectedStyle="oldPlayerReturnHeadItem.terminateBtnAsset1"
+      textStyle="consortia.TipsMoveFriendBtnTextStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.DarkGrayFilter"
+      fieldX="41"
+      fieldY="3"
+      width="167"
+      height="23"
+      x="4"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.stone.proitemTxt"
+      textFormatStyle="tips.skillDisc_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="52"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="tips.WarframeTransformationView"
+      spacing="-6"
+      x="-21"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="WarframeTransformationView.vbox"
+      spacing="5"
+      x="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="tips.GoodNameText1_3"
+      textFormatStyle="tips.heroname_t1_2,tips.heroname_t2_2,tips.heroname_t3_2,tips.heroname_t4_2,tips.heroname_t5_2,tips.heroname_t6_2,tips.heroname_t7_2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="210"
+      x="76"
+      y="15" />
+  </components>
+</style>

@@ -1,0 +1,844 @@
+<style
+  name="raveparty"
+  source="ui/zh_cn/swf/raveparty.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyFrame.raveBtn.text_t1"
+      args="Arial,12,0xb08b56,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyFrame.raveBtn.text_t2"
+      args="Arial,14,0xffc34f,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyFrame.activeTimeText_t"
+      args="Arial,16,0x00fff0,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartySortItem.orderText_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartySortItem.guildNameText_t"
+      args="Arial,14,0x7ddf26,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartySortItem.serverNameText_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyScoreSortFrame.refreshTimeText_t"
+      args="Arial,12,0xeff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyScoreSortFrame.orderText_t"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartySortRewardFrame.sortText_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyView.myScoreText_t"
+      args="arial,12,0xffc600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyView.activeAlertText_t"
+      args="Arial,12,0xf90303,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyItemView.descText_t"
+      args="Arial,12,0xffc600,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyItemView.curScoreText_t"
+      args="Arial,12,0xffc600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyScoreView.gradeBar.text_t"
+      args="Arial,12,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyView.moreSeeText_t"
+      args="Arial,13,0xf90303,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyView.linkText_t"
+      args="Arial,13,0x12ea17,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyScoreView.scoreAlertText_t"
+      args="Arial,12,0xffc600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RavePartyScoreItemView.scoreText_t"
+      args="arial,14,0xffc600,,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.RavePartyFrame.rightBack"
+      x="208"
+      y="61" />
+    <bitmapData
+      resourceLink="asset.RavePartyView.myScoreImage"
+      x="10"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.RavePartyBoxImage.numberBitmap" />
+    <bitmapData
+      resourceLink="asset.RavePartyScoreItemView.numberBitmap" />
+    <bitmapData
+      resourceLink="asset.RavePartyScoreItemView.hasGetImage"
+      x="510"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.RavePartyScoreView.levelImage"
+      x="12"
+      y="55" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="raveparty.RavePartyView"
+      stylename="RavePartyFrame.raveView"
+      x="208"
+      y="60" />
+    <custom
+      classname="raveparty.RavePartyScoreView"
+      stylename="RavePartyFrame.scoreView"
+      x="208"
+      y="60" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="RavePartySortRewardFrame.gItem"
+      parentStyle="core.BaseItemView"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="RavePartyScoreItemView.gItem"
+      parentStyle="core.BaseItemView"
+      textStyle="RavePartyScoreItemView.BaseItemText"
+      iconStyle="RavePartyScoreItemView.BaseItemViewIcon"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="RavePartyScoreItemView.BaseItemViewIcon"
+      parentStyle="core.BaseItemViewIcon"
+      iconHeight="60"
+      iconWidth="60" />
+    <custom
+      classname="raveparty.sort.RavePartyScoreSortView"
+      stylename="RavePartyFrame.sortView"
+      x="208"
+      y="60" />
+  </customDisplay>
+  <components>
+    <component
+      classname="raveparty.RavePartyFrame"
+      stylename="raveparty.RavePartyFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="40"
+      titleOuterRectPosString="0,26,1"
+      width="870"
+      height="615" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="RavePartyFrame.border"
+      parentStyle="core.describeBackground_style06"
+      width="830"
+      height="465"
+      alpha="0.6"
+      x="5"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RavePartyFrame.btnVbox"
+      spacing="1"
+      x="11"
+      y="65" />
+    <!--    狂欢派对按钮  -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="RavePartyFrame.raveBtn"
+      selectedStyle="asset.RavePartyFrame.leftBtn2"
+      unSelectedStyle="asset.RavePartyFrame.leftBtn1"
+      textStyle="RavePartyFrame.raveBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <!--    个人积分  -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="RavePartyFrame.selfBtn"
+      selectedStyle="asset.RavePartyFrame.leftBtn2"
+      unSelectedStyle="asset.RavePartyFrame.leftBtn1"
+      textStyle="RavePartyFrame.raveBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <!--    公会积分  -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="RavePartyFrame.guildBtn"
+      selectedStyle="asset.RavePartyFrame.leftBtn2"
+      unSelectedStyle="asset.RavePartyFrame.leftBtn1"
+      textStyle="RavePartyFrame.raveBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <!--  服务器积分  -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="RavePartyFrame.serverBtn"
+      selectedStyle="asset.RavePartyFrame.leftBtn2"
+      unSelectedStyle="asset.RavePartyFrame.leftBtn1"
+      textStyle="RavePartyFrame.raveBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyFrame.raveBtn.text"
+      textFormatStyle="RavePartyFrame.raveBtn.text_t1,RavePartyFrame.raveBtn.text_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="22"
+      x="16"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyFrame.raveBtn.text2"
+      textFormatStyle="RavePartyFrame.raveBtn.text_t1,RavePartyFrame.raveBtn.text_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="174"
+      height="37"
+      x="10"
+      y="10"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyFrame.activeTimeText"
+      textFormatStyle="RavePartyFrame.activeTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="520"
+      height="22"
+      x="205"
+      y="28" />
+    <!--积分排行榜-->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="RavePartySortItem.overBg"
+      parentStyle="core.TitleBack_Style888"
+      width="616"
+      x="-44"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartySortItem.orderText"
+      textFormatStyle="RavePartySortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="75"
+      height="20"
+      x="4"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartySortItem.guildNameText"
+      textFormatStyle="RavePartySortItem.guildNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="140"
+      height="20"
+      x="84"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartySortItem.serverNameText"
+      textFormatStyle="RavePartySortItem.guildNameText_t,RavePartySortItem.serverNameText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="140"
+      height="20"
+      x="235"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartySortItem.scoreText"
+      textFormatStyle="RavePartySortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="390"
+      y="13" />
+    <component
+      classname="raveparty.sort.RavePartyScoreSortFrame"
+      stylename="raveparty.RavePartyScoreSortFrame"
+      parentStyle="core.Frame2"
+      containerX="13"
+      containerY="40"
+      titleOuterRectPosString="0,13,1"
+      width="546"
+      height="500" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="RavePartyScoreSortFrame.border"
+      parentStyle="core.describeBackground_style06"
+      width="527"
+      height="415"
+      alpha="0.6"
+      x="-5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="RavePartyScoreSortFrame.sortBack"
+      parentStyle="core.describeBackground_style40"
+      width="520"
+      height="295"
+      x="-1"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="RavePartyScoreSortFrame.bottomAllBg"
+      resourceLink="RavePartyScoreSortFrame.bottomBg,asset.RavePartyScoreSortFrame.lightImage,asset.raveParty.SortTxtImg,raveParty.bottomTxtBg,raveParty.bottomTxtBg"
+      imageRectString="0|610|0|55|13,-1|146|-5|17|13,65|38|26|14|13,105|82|20|27|13,450|120|20|27|13"
+      x="9"
+      y="402" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="RavePartyScoreSortFrame.bottomBg"
+      resourceLink="asset.RavePartyScoreSortFrame.bottomBg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="raveParty.bottomTxtBg"
+      resourceLink="asset.raveParty.TxtBgLeft,asset.raveParty.TxtBgMiddle,asset.raveParty.TxtBgRight" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="RavePartyScoreSortFrame.sortTextImage"
+      resourceLink="asset.RavePartyScoreSortFrame.guildTextImage,asset.RavePartyScoreSortFrame.serverTextImage"
+      x="10"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="RavePartyScoreSortFrame.scoreTextImage"
+      resourceLink="asset.RavePartyScoreSortFrame.guildScoreImage,asset.RavePartyScoreSortFrame.serverScoreImage"
+      x="332"
+      y="428" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.myOrderText"
+      textFormatStyle="RavePartySortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="120"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.myScoreText"
+      textFormatStyle="RavePartySortItem.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="471"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyScoreSortFrame.lookPageBg"
+      resourceLink="asset.core.pageBg"
+      x="465"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.lookPageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="468"
+      y="372" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RavePartyScoreSortFrame.lookLastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="394"
+      y="368" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RavePartyScoreSortFrame.lookNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="533"
+      y="368" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RavePartyScoreSortFrame.vbox"
+      spacing="1"
+      x="50"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.refreshTimeText"
+      textFormatStyle="RavePartyScoreSortFrame.refreshTimeText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="250"
+      height="20"
+      x="11"
+      y="367" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.orderText"
+      textFormatStyle="RavePartyScoreSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="40"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.guildNameText"
+      textFormatStyle="RavePartyScoreSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="155"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.serverNameText"
+      textFormatStyle="RavePartyScoreSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="250"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreSortFrame.scoreText"
+      textFormatStyle="RavePartyScoreSortFrame.orderText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="450"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RavePartyScoreView.guildScoreBtn"
+      backStyle="asset.RavePartyScoreView.ScoreBtnBack"
+      iconStyle="asset.RavePartyScoreView.guildScoreText"
+      iconInnerRectString="0,116,2,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false"
+      x="500"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RavePartyScoreView.serverScoreBtn"
+      backStyle="asset.RavePartyScoreView.ScoreBtnBack"
+      iconStyle="asset.RavePartyScoreView.serverScoreText"
+      iconInnerRectString="-2,121,2,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false"
+      x="500"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="RavePartySortItem.lineImage"
+      resourceLink="asset.core.gapLine02"
+      width="515"
+      height="2"
+      x="5"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyScoreSortFrame.rewardImage"
+      resourceLink="asset.RavePartyScoreSortFrame.rewardImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4"
+      tipGapH="5"
+      isFollowMouse="false"
+      x="259"
+      y="413" />
+    <!--查看排行奖励界面-->
+    <component
+      classname="raveparty.sort.RavePartySortRewardFrame"
+      stylename="raveparty.RavePartySortRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="35"
+      containerY="30"
+      moveEnable="false"
+      width="400"
+      height="380" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartySortRewardFrame.alertText"
+      textFormatStyle="RavePartyScoreSortFrame.refreshTimeText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="20"
+      x="85"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RavePartySortRewardFrame.vBox"
+      spacing="10"
+      x="-10"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RavePartySortRewardFrame.rewardHbox"
+      spacing="2"
+      x="85"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartySortRewardFrame.sortText"
+      textFormatStyle="RavePartySortRewardFrame.sortText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="0"
+      y="20" />
+    <!-- 狂欢界面 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.boxImage"
+      resourceLink="asset.RavePartyBoxImage.boxImage1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4"
+      tipGapH="5"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.boxImage1"
+      resourceLink="asset.RavePartyBoxImage.boxImage1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4"
+      tipGapH="5"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.boxImage2"
+      resourceLink="asset.RavePartyBoxImage.boxImage2"
+      parentStyle="RavePartyBoxImage.boxImage1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.boxImage3"
+      resourceLink="asset.RavePartyBoxImage.boxImage3"
+      parentStyle="RavePartyBoxImage.boxImage1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.boxImage4"
+      resourceLink="asset.RavePartyBoxImage.boxImage4"
+      parentStyle="RavePartyBoxImage.boxImage1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.boxImage5"
+      resourceLink="asset.RavePartyBoxImage.boxImage5"
+      parentStyle="RavePartyBoxImage.boxImage1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyView.myScoreText"
+      textFormatStyle="RavePartyView.myScoreText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="112"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyView.activeAlertText"
+      textFormatStyle="RavePartyView.activeAlertText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="7"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyView.moreSeeText"
+      textFormatStyle="RavePartyView.moreSeeText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="180"
+      height="20"
+      x="10"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyView.linkText"
+      textFormatStyle="RavePartyView.linkText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="235"
+      height="20"
+      x="205"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RavePartyView.vbox"
+      spacing="0"
+      x="2"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="RavePartyItemView.back"
+      resourceLink="asset.RavePartyItemView.back,asset.RavePartyItemView.titleback"
+      imageRectString="0|622|25|85|13,-1|235|-5|36|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="RavePartyItemView.titleImage"
+      resourceLink="asset.RavePartyItemView.titleImage1,asset.RavePartyItemView.titleImage2,asset.RavePartyItemView.titleImage3"
+      x="8"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyItemView.curScoreText"
+      textFormatStyle="RavePartyItemView.curScoreText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="150"
+      height="20"
+      x="235"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyItemView.descText"
+      textFormatStyle="RavePartyItemView.descText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="280"
+      height="50"
+      x="342"
+      y="-11"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RavePartyItemView.boxHbox"
+      spacing="65"
+      x="90"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="RavePartyBoxImage.boxTextContnier"
+      x="5"
+      y="30" />
+    <!--积分界面-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="RavePartyScoreItemView.back"
+      resourceLink="asset.RavePartyScoreItemView.back,asset.RavePartyScoreItemView.levelTextImage"
+      imageRectString="0|606|0|80|13,10|29|10|18|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="RavePartyScoreItemView.levelContnier"
+      x="35"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RavePartyScoreItemView.goodHbox"
+      spacing="5"
+      x="80"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RavePartyScoreItemView.getBtn"
+      backStyle="asset.RavePartyScoreItemView.getBtnBack"
+      iconStyle="asset.RavePartyScoreItemView.getBtnText"
+      iconInnerRectString="17,48,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="505"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="RavePartyScoreView.curScoreImage"
+      resourceLink="asset.RavePartyScoreView.curScoreImage1,asset.RavePartyScoreView.curScoreImage2,asset.RavePartyScoreView.curScoreImage3"
+      x="10"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreView.curScoreText"
+      textFormatStyle="RavePartyView.myScoreText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="115"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="RavePartyScoreView.levelContnier"
+      x="38"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="RavePartyScoreView.itemPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      vScrollbarInnerRectString="20,0,0,-2,3"
+      viewportInnerRectString="3,0,0,0,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="622"
+      height="345"
+      x="3"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RavePartyScoreView.itemVbox"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreItemView.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="50"
+      x="4"
+      y="39" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="RavePartyScoreView.gradeBar"
+      backgroundLink="asset.RavePartyScoreView.gradeBarBg"
+      barLink="asset.RavePartyScoreView.gradeBarColor"
+      textStyle="RavePartyScoreView.gradeBar.text"
+      barMargin="18,11,18,11"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="70"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreView.gradeBar.text"
+      textFormatStyle="RavePartyScoreView.gradeBar.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="RavePartyItemView.progressBar"
+      backgroundLink="asset.RavePartyItemView.progressBarBg"
+      barLink="asset.RavePartyItemView.progressBarColor"
+      textStyle="RavePartyScoreView.gradeBar.text"
+      barMargin="18,11,18,11"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyBoxImage.pointImage"
+      resourceLink="asset.core.SmallPointImg"
+      x="-5"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreView.scoreAlertText"
+      textFormatStyle="RavePartyScoreView.scoreAlertText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="615"
+      height="35"
+      x="8"
+      y="72"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RavePartyScoreItemView.scoreText"
+      textFormatStyle="RavePartyScoreItemView.scoreText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="50"
+      height="20"
+      x="0"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RavePartyScoreItemView.scoreImage"
+      resourceLink="asset.RavePartyScoreItemView.scoreImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4"
+      tipGapH="5"
+      isFollowMouse="false"
+      x="50"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="RavePartyFrame.guildCrossBtn"
+      selectedStyle="asset.RavePartyFrame.leftBtn2"
+      unSelectedStyle="asset.RavePartyFrame.leftBtn1"
+      textStyle="RavePartyFrame.raveBtn.text2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="RavePartyFrame.serverCrossBtn"
+      selectedStyle="asset.RavePartyFrame.leftBtn2"
+      unSelectedStyle="asset.RavePartyFrame.leftBtn1"
+      textStyle="RavePartyFrame.raveBtn.text2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="RavePartyScoreSortFrame.bigborder"
+      resourceLink="asset.RavePartyScoreSortFrame.bigBg"
+      width="621"
+      height="459"
+      alpha="0.6"
+      x="5"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="RavePartyScoreSortFrame.crossTextImage"
+      resourceLink="asset.RavePartyScoreSortFrame.guildCrossBg,asset.RavePartyScoreSortFrame.serverCrossBg"
+      x="1"
+      y="2" />
+  </components>
+</style>

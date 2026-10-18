@@ -1,0 +1,1197 @@
+<style
+  name="dragontitan"
+  source="ui/zh_cn/swf/dragontitan.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanFrame.titanName_t"
+      args="Arial,12,0xf4c68b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanFrame.titanLevel_t"
+      args="Arial,12,0xffe400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.currentLvl_t"
+      args="Arial,14,0x33a6ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.nextLvl_t"
+      args="Arial,14,0x33a6ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.currentProperty_t"
+      args="Arial,12,0xf1d8bf,,,,,,center"
+      leading="9" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.nextProperty_t"
+      args="Arial,12,0xefb913,,,,,,center"
+      leading="9" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.costStones_T"
+      args="Arial,12,0xfcdfa7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.costStonesNum_t"
+      args="Arial,14,0xfcdfa7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.currentStones_t"
+      args="Arial,12,0xfcdfa7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.currentStonesNum_t"
+      args="Arial,14,0xa2efff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanArrangeView.desc_t"
+      args="Arial,12,0x15aaff,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanDevelopView.orderNum_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ProgressView.progressNum_t"
+      args="Arial,14,0xf4fcde,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanInfoFrame.titanProperty_t"
+      args="Arial,14,0xf4fcde,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanSkillTipsItem.skillName_t"
+      args="Arial,12,0xb3b3b3,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanSkillTipsItem.skillDesc_t"
+      args="Arial,12,0xe9c68c,,,,,,left"
+      leading="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanFightingTips.titanSkill_t"
+      args="Arial,16,0xe9c68c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanTips.titanName_t"
+      args="Arial,16,0xad38ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanTips.titanSkill_t"
+      args="Arial,12,0xb3b3b3,,,,,,left"
+      leading="7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanFrame.spiritListTxt_t"
+      args="Arial,12,0xf4c68b,,,,,,left"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanInjectExplain.desc_t"
+      args="Arial,12,0x15aaff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitan.chargeProgressText_t"
+      args="Arial,12,0xfff7c9,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitan.chargeCellAttText_t"
+      args="Arial,14,0xfcdfa7,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitan.chargeCountText_t"
+      args="arial,14,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitan.AdditionText_t"
+      letterSpacing="1"
+      args="Arial,14,0xfff7d0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitan.chargeDescText_t"
+      args="Arial,12,0xff0b2d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DragonTitanArrangeView.hasCountText_t"
+      args="arial,14,0xFFE400,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="dragontitan.skillSelectCombox.text_t"
+      args="Arial,12,0xffe49c,,,,,,left"
+      letterSpacing="-1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.dragontitan.attBg"
+      x="0"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.dragontitan.getTxtBmp"
+      x="7"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.dragontitan.downArrow"
+      x="460"
+      y="180" />
+    <bitmapData
+      resourceLink="asset.dragontitan.point"
+      x="10" />
+    <bitmapData
+      resourceLink="asset.dragontitan.spiritProgressBg" />
+    <bitmapData
+      resourceLink="asset.dragontitan.spiritProgressContent" />
+    <bitmapData
+      resourceLink="asset.dragontitan.cricle" />
+    <bitmapData
+      resourceLink="asset.dragontitan.number" />
+    <bitmapData
+      resourceLink="asset.dragontitan.spiritItemDebris"
+      x="375"
+      y="263" />
+    <bitmapData
+      resourceLink="asset.dragontitan.descBg"
+      width="150" />
+    <bitmapData
+      resourceLink="asset.dragontitan.chargeProgressContent" />
+    <bitmapData
+      resourceLink="asset.dragontitan.chargeProgressBg" />
+    <bitmapData
+      resourceLink="asset.dragontitan.countBottomImage" />
+    <bitmapData
+      resourceLink="asset.dragontitan.lock" />
+    <bitmapData
+      resourceLink="asset.dragontitan.reinject"
+      x="113"
+      y="27" />
+    <bitmapData
+      resourceLink="asset.DragonTitanArrangeView.materialImage"
+      x="480"
+      y="295" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.DragonTitanSkillSlot.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.DragonTitanFrame.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="80"
+      iconWidth="80"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="40"
+      loadingY="40"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="16"
+      x="10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.DragonTitanIconItemView.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.DragonTitanSkillTipsItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="22" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.DragonTitanTips.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="10"
+      y="-10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.spirit.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="80"
+      iconWidth="80"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="40"
+      loadingY="40"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="113"
+      y="27" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="dragontitan.spirit.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="40"
+      loadingY="40"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="437"
+      y="120" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DragonTitanArrangeView.skillContiner"
+      paddingH="18"
+      paddingV="6"
+      rowCount="2"
+      columnCount="5"
+      width="500"
+      x="220"
+      y="110" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DragonTitanArrangeView.arrowContiner"
+      paddingH="75"
+      paddingV="50"
+      rowCount="2"
+      columnCount="4"
+      width="500"
+      x="292"
+      y="130" />
+  </customDisplay>
+  <components>
+    <!--泰坦 Frame-->
+    <component
+      classname="dragontitan.DragonTitanFrame"
+      stylename="dragontitan.DragonTitanFrame"
+      parentStyle="core.Frame1"
+      width="731"
+      height="495"
+      containerX="16"
+      containerY="62" />
+    <!--查看泰坦 Frame-->
+    <component
+      classname="dragontitan.DragonTitanInfoFrame"
+      stylename="dragontitan.DragonTitanInfoFrame"
+      parentStyle="core.Frame1"
+      width="403"
+      height="495"
+      containerX="16"
+      containerY="62" />
+    <!--选择头像 Frame-->
+    <component
+      classname="dragontitan.DragonTitanSelectFrame"
+      stylename="dragontitan.DragonTitanSelectFrame"
+      parentStyle="core.Frame1"
+      width="439"
+      height="290"
+      containerX="16"
+      containerY="62" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dragontitan.DragonTitanInfoFrameBack"
+      parentStyle="core.describeBackground_style11"
+      width="365"
+      height="379"
+      x="2"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dragontitan.DragonTitanFrameBack"
+      parentStyle="core.describeBackground_style11"
+      width="691"
+      height="379"
+      x="2"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="dragontitan.DragonTitanSelectFrameBack"
+      parentStyle="core.describeBackground_style11"
+      width="691"
+      height="379"
+      x="2"
+      y="7" />
+    <!-- 出战技能.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.fightSkillImgTxt"
+      resourceLink="asset.dragontitan.fightSkillImgTxt"
+      x="347"
+      y="64" />
+    <!-- 技 能.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.skillImgTxt"
+      resourceLink="asset.dragontitan.skillImgTxt"
+      x="73"
+      y="102" />
+    <!-- 技能出战顺序：.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.fightSkillOrderImgTxt"
+      resourceLink="asset.dragontitan.fightSkillOrderImgTxt"
+      x="209"
+      y="120" />
+    <!-- 经验值.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.experienceImgTxt"
+      resourceLink="asset.dragontitan.experienceImgTxt"
+      x="245"
+      y="266" />
+    <!-- 空技能框1.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.skillBg1"
+      resourceLink="asset.dragontitan.skillBg1"
+      x="0"
+      y="0" />
+    <!-- 空技能框2.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.skillBg2"
+      resourceLink="asset.dragontitan.skillBg2"
+      x="20"
+      y="128" />
+    <!-- 培 养.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.developImgTxt"
+      resourceLink="asset.dragontitan.developImgTxt"
+      x="324"
+      y="-99" />
+    <!-- 培养-暗.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.developImgTxt1"
+      resourceLink="asset.dragontitan.developImgTxt1"
+      x="290"
+      y="-129" />
+    <!-- 培养-亮.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.developImgTxt2"
+      resourceLink="asset.dragontitan.developImgTxt2"
+      x="504"
+      y="-88" />
+    <!-- 顺序底框.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.orderBg"
+      resourceLink="asset.dragontitan.orderBg"
+      x="-7"
+      y="-6" />
+    <!-- 图标/泰坦魂石.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.titanStoneIcon"
+      resourceLink="asset.dragontitan.titanStoneIcon"
+      x="0"
+      y="0" />
+    <!-- 选择头像窗口/选头像bg.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.selectIconBg"
+      resourceLink="asset.dragontitan.selectIconBg"
+      x="0"
+      y="0" />
+    <!-- 选中技能.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.selectedSkillBg"
+      resourceLink="asset.dragontitan.selectedSkillBg"
+      x="0"
+      y="0" />
+    <!-- 已装备角标.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.equippedCornerMark"
+      resourceLink="asset.dragontitan.equippedCornerMark"
+      x="32"
+      y="4" />
+    <!-- 右边bg1.jpg -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.rightBg"
+      resourceLink="asset.dragontitan.rightBg"
+      x="189"
+      y="36" />
+    <!-- 查看别人泰坦窗口/右边bg2.jpg -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.checkOthersTitanBg"
+      resourceLink="asset.dragontitan.checkOthersTitanBg"
+      x="190"
+      y="11" />
+    <!-- 组合-暗.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.arrangeImgTxt1"
+      resourceLink="asset.dragontitan.arrangeImgTxt1"
+      x="135"
+      y="-34" />
+    <!-- 组合-亮.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.arrangeImgTxt2"
+      resourceLink="asset.dragontitan.arrangeImgTxt2"
+      x="197"
+      y="-30" />
+    <!-- 左边bg.jpg -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.leftBg"
+      resourceLink="asset.dragontitan.leftBg"
+      x="6"
+      y="11" />
+    <!-- 箭头2.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.arrow"
+      resourceLink="asset.dragontitan.arrow"
+      x="422"
+      y="78" />
+    <!-- 培养界面/输入框-.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.inputBox"
+      resourceLink="asset.dragontitan.inputBox"
+      x="375"
+      y="298" />
+    <!-- 组合界面/技能框-锁定.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.lockSkill"
+      resourceLink="asset.dragontitan.lockSkill"
+      x="2"
+      y="2" />
+    <!-- 组合界面/箭头.png -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.skillArrow"
+      resourceLink="asset.dragontitan.skillArrow"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="dragontitan.btnHbox"
+      spacing="30"
+      x="216"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="dragontitan.developTabBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.dragontitan.developImgTxt2"
+      unselectedIconStyle="asset.dragontitan.developImgTxt1"
+      selectedIconInnerRectString="11,71,7,18,13"
+      unselectedIconInnerRectString="11,66,8,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="dragontitan.arrangeTabBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.dragontitan.arrangeImgTxt1"
+      unselectedIconStyle="asset.dragontitan.arrangeImgTxt2"
+      selectedIconInnerRectString="8,75,7,18,13"
+      unselectedIconInnerRectString="13,63,2,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dragontitan.switchBtn"
+      backStyle="asset.dragontitan.switchBtn"
+      x="47"
+      y="74"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dragontitan.developBtn"
+      backStyle="asset.dragontitan.developBtnBg"
+      iconStyle="asset.dragontitan.developImgTxt"
+      iconInnerRectString="10,107,8,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="375"
+      y="333"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.titanName"
+      textFormatStyle="DragonTitanFrame.titanName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="39"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.titanLevel"
+      textFormatStyle="DragonTitanFrame.titanLevel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="37"
+      y="62" />
+    <!-- 查看别人的泰坦抗性 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanInfoFrame.titanLvl"
+      textFormatStyle="DragonTitanDevelopView.currentLvl_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="178"
+      y="106" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.titanProperty"
+      textFormatStyle="DragonTitanDevelopView.currentProperty_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="160"
+      multiline="true"
+      wordWrap="true"
+      x="194"
+      y="144" />
+    <!-- 培养界面的文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.currentLvl"
+      textFormatStyle="DragonTitanDevelopView.currentLvl_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="214"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.nextLvl"
+      textFormatStyle="DragonTitanDevelopView.nextLvl_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="474"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.currentProperty"
+      textFormatStyle="DragonTitanDevelopView.currentProperty_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="160"
+      multiline="true"
+      wordWrap="true"
+      x="228"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.nextProperty"
+      textFormatStyle="DragonTitanDevelopView.nextProperty_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="160"
+      multiline="true"
+      wordWrap="true"
+      x="489"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.costStones"
+      textFormatStyle="DragonTitanDevelopView.costStones_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="40"
+      x="245"
+      y="298"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.costStonesNum"
+      textFormatStyle="DragonTitanDevelopView.costStonesNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      type="input"
+      restrict="0-9"
+      x="379"
+      y="302" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.currentStones"
+      textFormatStyle="DragonTitanDevelopView.currentStones_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="471"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanDevelopView.currentStonesNum"
+      textFormatStyle="DragonTitanDevelopView.currentStonesNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="592"
+      y="302" />
+    <!-- 组合界面的文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanArrangeView.desc"
+      textFormatStyle="DragonTitanArrangeView.desc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="420"
+      height="40"
+      x="225"
+      y="320"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanSkillSlot.orderNum"
+      textFormatStyle="DragonTitanDevelopView.orderNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="-2"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ProgressView.progressNum"
+      textFormatStyle="ProgressView.progressNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="22"
+      y="5" />
+    <!--	技能列表翻页	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dragontitan.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      x="139"
+      y="149"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dragontitan.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="246"
+      y="149"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="136"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dragontitan.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      x="175"
+      y="152"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <!-- 查看战时技能状态	-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanSkillTipsItem.skillName"
+      textFormatStyle="DragonTitanSkillTipsItem.skillName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanSkillTipsItem.skillDesc"
+      textFormatStyle="DragonTitanSkillTipsItem.skillDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="60"
+      multiline="true"
+      wordWrap="true"
+      x="70"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFightingTips.titanSkill"
+      textFormatStyle="DragonTitanFightingTips.titanSkill_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanTips.titanName"
+      textFormatStyle="DragonTitanTips.titanName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22"
+      x="19"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanTips.titanProperty"
+      textFormatStyle="DragonTitanTips.titanProperty_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="22"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanTips.titanSkill"
+      textFormatStyle="DragonTitanTips.titanSkill_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="260"
+      height="130"
+      multiline="true"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.spiritItemLittle"
+      resourceLink="asset.dragontitan.spiritItemLittle"
+      tipStyle="faterotary.FateStoneIcon_Tip"
+      x="175"
+      y="263" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="dragontitan.spiritTabBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.dragontitan.spiritLightTxt"
+      unselectedIconStyle="asset.dragontitan.spiritDarkTxt"
+      selectedIconInnerRectString="-1,90,6,24,13"
+      unselectedIconInnerRectString="2,83,7,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="dragontitan.energyTabBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.dragontitan.energyLightTxt"
+      unselectedIconStyle="asset.dragontitan.energyDarkTxt"
+      selectedIconInnerRectString="11,67,6,19,13"
+      unselectedIconInnerRectString="14,63,7,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitan.chargeProgressText"
+      textFormatStyle="DragonTitan.chargeProgressText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="95"
+      height="20" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="dragontitan.gridBg"
+      resourceLink="asset.dragontitan.gridBg"
+      x="107"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dragontitan.spiritSwitchBtn"
+      backStyle="asset.dragontitan.switchBtn"
+      x="146"
+      y="80"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.spiritTitanName"
+      textFormatStyle="DragonTitanFrame.titanName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="2"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.succedRateTxt"
+      textFormatStyle="DragonTitanFrame.titanName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="155"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.arrowUpTxt"
+      textFormatStyle="DragonTitanFrame.titanName_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="10"
+      height="20"
+      x="0"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.spiritAttListTxt"
+      textFormatStyle="DragonTitanFrame.spiritListTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      multiline="true"
+      width="10"
+      height="20"
+      x="25"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.costItemTxt"
+      textFormatStyle="DragonTitanDevelopView.costStones_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="35"
+      x="50"
+      y="248"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.rewardCountTxt"
+      textFormatStyle="DragonTitanDevelopView.costStones_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="40"
+      height="20"
+      x="478"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.currentItemTxt"
+      textFormatStyle="DragonTitanDevelopView.costStones_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="137"
+      height="35"
+      x="280"
+      y="258"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.countNameTxt"
+      textFormatStyle="DragonTitanDevelopView.costStones_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="57"
+      y="267" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.costItemCountTxt"
+      textFormatStyle="DragonTitanDevelopView.currentStonesNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="200"
+      y="263" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanFrame.currentItemCountTxt"
+      textFormatStyle="DragonTitanDevelopView.currentStonesNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="429"
+      y="269" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dragontitan.firstSpiritBtn"
+      backStyle="asset.dragontitan.developBtnBg"
+      iconStyle="asset.dragontitan.firstSpiritBtn"
+      iconInnerRectString="14,99,9,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="179"
+      y="295"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="dragontitan.chargeBtn"
+      backStyle="asset.dragontitan.developBtnBg"
+      iconStyle="asset.dragontitan.chargeBtn"
+      iconInnerRectString="26,76,14,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="179"
+      y="295"
+      autoCenter="false" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="dragontitan.progressCommon"
+      backgroundLink="asset.dragontitan.spiritProgressBg"
+      barLink="asset.dragontitan.spiritProgressContent"
+      textStyle="DragonTitanDevelopView.currentStonesNum"
+      x="30"
+      y="200" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="dragontitan.chargeBar"
+      backgroundLink="asset.dragontitan.chargeProgressBg"
+      barLink="asset.dragontitan.chargeProgressContent"
+      textStyle="DragonTitan.chargeProgressText"
+      x="222"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitan.chargeCellAttText"
+      textFormatStyle="DragonTitan.chargeCellAttText_t"
+      autoSize="left"
+      filterString="core.normal_f"
+      width="100"
+      height="30"
+      x="50"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DragonTitan.trainCountBottom"
+      resourceLink="asset.dragontitan.countBottomImage"
+      x="181"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitan.chargeCountText"
+      textFormatStyle="DragonTitan.chargeCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="180"
+      y="267" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="DragonTitan.chargeCellSelectBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      selectedIconInnerRectString="28,39,2,19,13"
+      unselectedIconInnerRectString="28,39,2,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="25"
+      displacement="false"
+      x="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mount.chargeCountBottom"
+      resourceLink="asset.mount.countBottomImage"
+      x="175"
+      y="264" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitan.AdditionText"
+      textFormatStyle="DragonTitan.AdditionText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="24"
+      x="163"
+      y="6" />
+    <component
+      classname="dragontitan.charge.DragonTitanChargeCell"
+      stylename="dragontitan.charge.DragonTitanChargeCell"
+      tipStyle="yishi.view.tips.PropertyTip"
+      x="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitan.chargeDesc"
+      textFormatStyle="DragonTitan.chargeDescText_t"
+      filterString="core.normal_f"
+      autoSize="center"
+      width="230"
+      height="20"
+      x="225"
+      y="234" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitan.injectExplain"
+      textFormatStyle="DragonTitanInjectExplain.desc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="290"
+      height="40"
+      x="6"
+      y="125"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="dragontitan.attBg"
+      resourceLink="asset.dragontitan.attBg"
+      scaleGridString="24,25,49,50"
+      width="135"
+      height="117"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DragonTitanArrangeView.stateBtn"
+      backStyle="asset.DragonTitanArrangeView.stateBtnBack1"
+      iconStyle="asset.DragonTitanArrangeView.stateBtnTxt1"
+      iconInnerRectString="20,76,8,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="365"
+      y="280" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DragonTitanArrangeView.hasCountText"
+      textFormatStyle="DragonTitanArrangeView.hasCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="655"
+      y="294" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="dragontitan.skillSelectCombox"
+      listPanelStyle="dragontitan.skillSelectCombox.ListPanel"
+      listInnerRectString="3,28,5,75,18"
+      textStyle="dragontitan.skillSelectCombox.text"
+      textInnerRectString="6,25,5,0,0"
+      buttonStyle="dragontitan.skillSelectCombox.btn"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="122"
+      height="25"
+      x="220"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="dragontitan.skillSelectCombox.text"
+      textFormatStyle="dragontitan.skillSelectCombox.text_t"
+      filterString="core.normal_f"
+      y="6"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="dragontitan.skillSelectCombox.ListPanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|dragontitan.skillSelectComboxListCell,24,120"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="dragontitan.skillSelectCombox.btn"
+      backStyle="asset.dragontitan.skillSelectCombox.btn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="yishi.view.adapter.SimpleTextCellAdapter"
+      stylename="dragontitan.skillSelectComboxListCell"
+      backStyle="dragontitan.skillSelectComboxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="dragontitan.skillSelectCombox.text"
+      autoSizeAble="false"
+      enableHtml="true"
+      textFrameChange="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="dragontitan.skillSelectComboxListCellBg"
+      resourceLink=",dragontitan.skillSelectComboxListCellItemBg,dragontitan.skillSelectComboxListCellItemBg"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="dragontitan.skillSelectComboxListCellItemBg"
+      resourceLink="asset.core.comboxItembgBg"
+      width="122"
+      height="25"
+      x="2" />
+    <component
+      classname="dragontitan.DragonTitanInfoView"
+      stylename="dragontitan.DragonTitanInfoView" />
+  </components>
+</style>

@@ -1,0 +1,1922 @@
+<style
+  name="dreamarena"
+  source="ui/zh_cn/swf/dreamarena.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArena.DreamArenaPetRightItem.petNameText_t"
+      args="Arial,12,0xffcc99,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArena.DreamArenaLeftItem.descText_t"
+      args="Arial,12,0xc79b6f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArena.DreamArenaFrame.descText_t"
+      args="Arial,14,0xffff99,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArena.DreamArenaFrame.hasTicketText_t"
+      args="Arial,12,0xe86c19,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaFormationFrame.fontBtn.text_t"
+      args="Arial,12,0xeffd249,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaRankView.rankText_t"
+      args="Arial,14,0xfaffad,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaRankItem.rankText_t"
+      args="Arial,12,0xfaffad,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaRewardItem.titleText_t"
+      args="Arial,14,0xff9900,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaRankRewardFrame.myRankText_t"
+      args="Arial,14,0xe86c19,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaFrame.costItem.text_t"
+      args="Arial,14,0xfff200,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaGoddessRightItem.NameText_t"
+      args="Arial,12,0xff3000,,,,,,left"
+      letterSpacing="0"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaGoddessRightItem.dedicationLv_t"
+      args="Arial,14,0x78ff00,,,,,,left"
+      letterSpacing="0"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaTitanSkillItem.orderNum_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaCommonSelectItem.selectBtnText_t"
+      args="Arial,12,0xffd8b2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaMatchingView.matchTime.text_t"
+      args="arial,18,0xFFFFCC,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.dreamarena.dreamAreaItemTitle_t"
+      args="Arial,12,0x9b6c66,false,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.dreamarea.chooseSkTitle_t"
+      args="Arial,14,0xc79b6f,false,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaFrame.winText_t"
+      args="Arial,14,0xd5ffd5,false,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArenaFrame.loseText_t"
+      args="Arial,14,0xffb5b5,false,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamArena.DreamArenaFrame.rewardText_t"
+      args="Arial,12,0x00d8ff,false,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="DreamAreanaPreviewRewardItem.winCountText_t"
+      args="arial,16,0xfff1e7,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.DreamArenaFrame.titleImage"
+      x="365"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.common.formationBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.DreamArenaPetRightItem.skillBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamArenaGoddessRightItem.headBack"
+      x="3"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.DreamArenaGoddessRightItem.skillBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaReportFrame.winBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaReportFrame.loseBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamArenaFrame.winGrapBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamArenaFrame.winBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamArenaFrame.loseGrapBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamArenaFrame.loseBit"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaReportFrame.winNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaReportFrame.LoseNum"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaPreviewRewardFrame.bg"
+      x="10"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaPreviewRewardItem.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.DreamAreanaPreviewRewardItem.winBit"
+      x="75"
+      y="37" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="DreamArena.DreamArenaPetRightItem.commonItem"
+      classname="dreamarena.item.DreamArenaCommonRightItem"
+      x="0"
+      y="0" />
+    <custom
+      stylename="DreamArena.DreamArenaHeroView.skillItem1"
+      classname="dreamarena.item.DreamArenaHeroSkillItem"
+      x="0"
+      y="130" />
+    <custom
+      stylename="DreamArena.DreamArenaHeroView.skillItem2"
+      classname="dreamarena.item.DreamArenaHeroSkillItem"
+      x="0"
+      y="289" />
+    <custom
+      stylename="DreamArena.DreamArenaGoddessView.goddessItem"
+      classname="dreamarena.item.DreamArenaCommonRightItem"
+      x="0"
+      y="0" />
+    <custom
+      stylename="DreamArena.DreamArenaDragonTalkerView.proficiencyView"
+      classname="dreamarena.view.DreamArenaProficiencyView"
+      x="419"
+      y="76" />
+    <custom
+      stylename="DreamArena.DreamArenaDragonTalkerView.talismanView"
+      classname="dreamarena.view.DreamArenaTalismanView"
+      x="0"
+      y="76" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.heroView"
+      classname="dreamarena.view.DreamArenaHeroView"
+      x="300"
+      y="62" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.dragonTalkerView"
+      classname="dreamarena.view.DreamArenaDragonTalkerView"
+      x="300"
+      y="62" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.petView"
+      classname="dreamarena.view.DreamArenaPetView"
+      x="300"
+      y="92" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.artifactView"
+      classname="dreamarena.view.DreamArenaArtifactView"
+      x="300"
+      y="62" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.goddessView"
+      classname="dreamarena.view.DreamArenaGoddessView"
+      x="300"
+      y="62" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.titanView"
+      classname="dreamarena.view.DreamArenaTitanView"
+      x="300"
+      y="62" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.mainChildView"
+      classname="dreamarena.view.DreamArenaMainChildView"
+      x="300"
+      y="62" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.slaveChildView"
+      classname="dreamarena.view.DreamArenaSlaveChildView"
+      x="300"
+      y="62" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaCommonSelectItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="30"
+      loadingY="30"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaTalismanSelectItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.DreamArenaTalismanTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="30"
+      loadingY="30"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaChildPetSelectItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="62"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="13"
+      y="13" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaChildSelectItem.childIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      tipStyle="yishi.view.tips.ChildrenFigureTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      x="12"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaPetRightItem.petIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.DreamArenaPetTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="22"
+      loadingY="22"
+      x="48"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaLeftItem.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="22"
+      loadingY="22"
+      x="15"
+      y="14" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaLeftItem.petIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="22"
+      loadingY="22"
+      x="75"
+      y="14" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaHeroView.headIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingX="22"
+      loadingY="22"
+      x="3"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArena.DreamArenaDragonTalkerView.heroIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="62"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="287"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaHeroSkillItem.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="14"
+      y="14" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaHeroSkillItem.DragonskillIcon1"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="25"
+      loadingY="25"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="6"
+      y="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaHeroSkillItem.DragonskillIcon2"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="25"
+      loadingY="25"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="59"
+      y="24" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaPetRightItem.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="2"
+      y="2" />
+    <custom
+      stylename="DreamArenaRankRewardFrame.RankView"
+      classname="dreamarena.view.DreamArenaRankView"
+      x="0"
+      y="40" />
+    <custom
+      stylename="DreamArenaRankRewardFrame.RewardView"
+      classname="dreamarena.view.DreamArenaRewardView"
+      x="0"
+      y="40" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaGoddessRightItem.goddessIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="51"
+      loadingY="38"
+      iconWidth="103"
+      iconHeight="76"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5"
+      y="7" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="DreamArenaGoddessRightItem.dedicationLv"
+      x="145"
+      y="59" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaGoddessRightItem.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      y="13"
+      x="15" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaTitanView.sortContiner"
+      paddingH="18"
+      paddingV="6"
+      rowCount="2"
+      columnCount="5"
+      width="500"
+      x="98"
+      y="47" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaTitanView.arrowContiner"
+      paddingH="75"
+      paddingV="50"
+      rowCount="2"
+      columnCount="4"
+      width="500"
+      x="170"
+      y="70" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaTitanView.equipContiner"
+      paddingH="18"
+      paddingV="6"
+      rowCount="2"
+      columnCount="6"
+      width="600"
+      x="47"
+      y="245" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaTitanSkillItem.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingX="30"
+      loadingY="30"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaFrame.ticketIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="344"
+      y="515" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaArtifactView.artifactCon"
+      paddingH="14"
+      paddingV="6"
+      rowCount="2"
+      columnCount="6"
+      width="620"
+      x="15"
+      y="15" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaMainChildView.childCon"
+      paddingH="40"
+      paddingV="4"
+      rowCount="3"
+      columnCount="5"
+      width="620"
+      x="50"
+      y="0" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaSlaveChildView.childCon"
+      paddingH="40"
+      paddingV="20"
+      rowCount="2"
+      columnCount="5"
+      width="620"
+      x="50"
+      y="40" />
+    <custom
+      stylename="DreamArenaDragonTalkerView.skillItem1"
+      classname="dreamarena.item.DreamArenaHeroSkillItem"
+      x="0"
+      y="195" />
+    <custom
+      stylename="DreamArenaDragonTalkerView.skillItem2"
+      classname="dreamarena.item.DreamArenaHeroSkillItem"
+      x="0"
+      y="310" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaRuneView.runeCon"
+      paddingH="30"
+      paddingV="10"
+      rowCount="2"
+      columnCount="5"
+      width="620"
+      x="30"
+      y="100" />
+    <custom
+      stylename="DreamArena.DreamArenaFrame.runeView"
+      classname="dreamarena.view.DreamArenaRuneView"
+      x="300"
+      y="62" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaPetRightItem.hallowIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="450"
+      y="20" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="DreamArenaChildSkillView.TileContainer"
+      paddingH="6"
+      paddingV="4"
+      rowCount="2"
+      columnCount="5"
+      x="10"
+      y="10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="DreamArenaChildSkillView.skillIcon"
+      loadingStyle="asset.core.IconLoading"
+      iconHeight="45"
+      iconWidth="45"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="DreamAreanaReportFrame.rewardItem"
+      parentStyle="core.normal.BaseItemView"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="dreamArena.DreamArenaFrame"
+      classname="dreamarena.DreamArenaFrame"
+      parentStyle="core.Frame1"
+      backStyle="asset.dreamarena.DreamArenaFrameBg"
+      containerX="0"
+      containerY="0"
+      width="976"
+      closeInnerRectString="29,18,25,29,14"
+      escEnable="false"
+      height="641" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArena.DreamArenaChildSelectItem.lookBtn"
+      backStyle="asset.DreamArena.lookBtn.n1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="44"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArena.DreamArenaFrame.formationBtn"
+      backStyle="asset.DreamArena.formationBtn.formationBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="109"
+      y="566" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArena.DreamArenaFrame.sortBtn"
+      backStyle="asset.DreamArena.sortBtn.sortBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="835"
+      y="507" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArena.DreamArenaFrame.matchBtn"
+      backStyle="asset.DreamArena.matchBtn.matchBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="547"
+      y="535" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamArena.DreamArenaCommonRightItem.selectBtn"
+      backStyle="asset.DreamArena.selectBtn.selectBack"
+      iconStyle="asset.DreamArena.selectBtn.icon"
+      iconInnerRectString="22,43,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="525"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamArena.DreamArenaChildPetSelectItem.selectBtn"
+      backStyle="asset.DreamArena.selectBtn.selectBack"
+      iconStyle="asset.DreamArena.selectBtn.icon"
+      iconInnerRectString="22,43,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1"
+      y="77" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamArena.DreamArenaCommonRightItem.hasSelectBtn"
+      backStyle="asset.DreamArena.selectBtn.selectBack"
+      iconStyle="asset.DreamArena.hasSelectedBtn.icon"
+      iconInnerRectString="17,52,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="525"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamArena.DreamArenaChildPetSelectItem.hasSelectBtn"
+      backStyle="asset.DreamArena.selectBtn.selectBack"
+      iconStyle="asset.DreamArena.hasSelectedBtn.icon"
+      iconInnerRectString="17,52,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1"
+      y="77" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArena.DreamArenaChildSelectItem.selectBtn"
+      backStyle="asset.DreamArena.newSelectBtn.newSelectBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="4"
+      y="69" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.nameImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.DreamArena.nameImage.itemType1,asset.DreamArena.nameImage.itemType2,asset.DreamArena.nameImage.itemType3,asset.DreamArena.nameImage.itemType4,asset.DreamArena.nameImage.itemType5,asset.DreamArena.nameImage.itemType6,asset.DreamArena.nameImage.itemType7,asset.DreamArena.nameImage.itemType8,asset.DreamArena.nameImage.itemType9,asset.DreamArena.nameImage.itemType10,asset.DreamArena.nameImage.itemType11"
+      x="69"
+      y="18" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.lineImage"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.gap"
+      scaleGridString="1,1,2,2"
+      width="4"
+      height="553"
+      x="294"
+      y="59" />
+    <component
+      stylename="DreamArena.DreamArenaProficiencyView.line"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.line"
+      x="-5"
+      y="-8" />
+    <component
+      stylename="DreamArena.DreamArenaTalismanView.line"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.line"
+      x="88"
+      y="-8" />
+    <component
+      stylename="DreamArena.DreamArenaTitanView.line"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.line"
+      x="191"
+      y="212" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.costImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.costImage"
+      x="509"
+      y="510" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.selectBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.selectBg"
+      x="-3"
+      y="-6" />
+    <component
+      stylename="DreamArena.DreamArenaCommonSelectItem.selectBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.DreamArenaCommonSelectItem.selectBg2"
+      x="-6"
+      y="-7" />
+    <component
+      stylename="DreamArena.DreamArenaChildSelectItem.selectBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.DreamArenaCommonSelectItem.selectBg2"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArena.DreamArenaCommonRightItem.lien1"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.lien1"
+      x="20"
+      y="-8" />
+    <component
+      stylename="DreamArena.DreamArenaCommonRightItem.line2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.lien1"
+      x="20"
+      y="86" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.rightBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.rightBg"
+      x="298"
+      y="63" />
+    <component
+      stylename="DreamArena.DreamArenaCommonRightItem.heroBack"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="628"
+      height="95"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArena.DreamArenaProficiencyView.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="205"
+      height="110"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArena.DreamArenaTalismanView.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="406"
+      height="110"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArena.DreamArenaTitanView.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="628"
+      height="212"
+      x="0"
+      y="219" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.rightBorder"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.rightBorder"
+      scaleGridString="57,58,46,37"
+      width="638"
+      height="439"
+      x="297"
+      y="59" />
+    <component
+      stylename="DreamArena.DreamArenaTitanView.title"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.title"
+      x="204"
+      y="206" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.itemBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.itemBack"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.nameBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.nameBack"
+      x="27"
+      y="16" />
+    <component
+      stylename="DreamArena.DreamArenaTitanView.sortImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.sortImage"
+      x="12"
+      y="12" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.leftBg"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.leftBg"
+      x="44"
+      y="60" />
+    <component
+      stylename="DreamArena.DreamArenaProficiencyView.title"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArenaProficiencyView.title"
+      x="61"
+      y="-9" />
+    <component
+      stylename="DreamArena.DreamArenaTalismanView.title"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArenaTalismanView.title"
+      x="96"
+      y="-10" />
+    <component
+      stylename="DreamArena.DreamArenaPetRightItem.hallowImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.resource.hallowImage"
+      x="426"
+      y="70" />
+    <component
+      stylename="DreamArena.DreamArenaPetRightItem.petNameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArena.DreamArenaPetRightItem.petNameText_t"
+      type="dynamic"
+      width="135"
+      height="20"
+      x="3"
+      y="71" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.descText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArena.DreamArenaLeftItem.descText_t"
+      type="dynamic"
+      width="102"
+      height="18"
+      x="71"
+      y="31" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.descText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArena.DreamArenaFrame.descText_t"
+      type="dynamic"
+      width="620"
+      height="40"
+      x="304"
+      y="578"
+      wordWrap="true" />
+    <component
+      stylename="DreamArena.DreamArenaFrame.hasTicketText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArena.DreamArenaFrame.hasTicketText_t"
+      type="dynamic"
+      width="167"
+      height="20"
+      x="654"
+      y="507" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DreamArena.DreamArenaFrame.leftVbox"
+      x="0"
+      y="0"
+      spacing="-13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArena.DreamArenaHeroView.headHbox"
+      x="182"
+      y="42"
+      spacing="20" />
+    <component
+      stylename="DreamArenaHeroView.selectBg2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.DreamArenaCommonSelectItem.selectBg2"
+      x="172"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaHeroSkillItem.skillHbox"
+      x="125"
+      y="15"
+      spacing="5" />
+    <component
+      stylename="DreamArenaHeroSkillItem.skillImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="DreamArenaHeroSkillItem.skillImage11,DreamArenaHeroSkillItem.skillImage21,DreamArenaHeroSkillItem.skillImage31,asset.DreamArenaHeroSkillItem.skillImage41,DreamArenaHeroSkillItem.skillImage12,DreamArenaHeroSkillItem.skillImage22,DreamArenaHeroSkillItem.skillImage32,asset.DreamArenaHeroSkillItem.skillImage42"
+      autoHCenter="true"
+      autoVCenter="true"
+      x="65"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaHeroSkillItem.skillImage11"
+      resourceLink="asset.DreamArenaHeroSkillItem.commonBg,asset.DreamArenaHeroSkillItem.skillBall11,asset.DreamArenaHeroSkillItem.skillText11"
+      imageRectString="0|0|19,11|12|19,-26|62|19"
+      width="87"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaHeroSkillItem.skillImage21"
+      resourceLink="asset.DreamArenaHeroSkillItem.commonBg,asset.DreamArenaHeroSkillItem.skillBall21,asset.DreamArenaHeroSkillItem.skillText21"
+      imageRectString="0|0|19,11|12|19,-31|62|19"
+      width="89"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaHeroSkillItem.skillImage31"
+      resourceLink="asset.DreamArenaHeroSkillItem.commonBg,asset.DreamArenaHeroSkillItem.skillBall31,asset.DreamArenaHeroSkillItem.skillText31"
+      imageRectString="0|0|19,11|12|19,-26|62|19"
+      width="88"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaHeroSkillItem.skillImage12"
+      resourceLink="asset.DreamArenaHeroSkillItem.commonBg,asset.DreamArenaHeroSkillItem.skillBall12,asset.DreamArenaHeroSkillItem.skillText12"
+      imageRectString="0|0|19,11|12|19,-26|62|19"
+      width="90"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaHeroSkillItem.skillImage22"
+      resourceLink="asset.DreamArenaHeroSkillItem.commonBg,asset.DreamArenaHeroSkillItem.skillBall22,asset.DreamArenaHeroSkillItem.skillText22"
+      imageRectString="0|0|19,11|12|19,-21|62|19"
+      width="89"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaHeroSkillItem.skillImage32"
+      resourceLink="asset.DreamArenaHeroSkillItem.commonBg,asset.DreamArenaHeroSkillItem.skillBall32,asset.DreamArenaHeroSkillItem.skillText32"
+      imageRectString="0|0|19,11|12|19,-21|62|19"
+      width="90"
+      height="82" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArena.DreamArenaHeroView.saveBtn"
+      backStyle="asset.DreamArena.DreamArenaHeroView.saveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="558"
+      y="400" />
+    <!-- 阵型界面 -->
+    <component
+      stylename="dreamArena.DreamArenaFormationFrame"
+      classname="dreamarena.DreamArenaFormationFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="50"
+      width="543"
+      height="496" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="DreamArenaFormationFrame.fontBtn1"
+      selectedIconStyle="asset.core.checkstyle_10.Selected"
+      unselectedIconStyle="asset.core.checkstyle_10.UnSelected"
+      selectedIconInnerRectString="0,23,0,23,13"
+      unselectedIconInnerRectString="0,23,0,23,13"
+      textStyle="DreamArenaFormationFrame.fontBtn.text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="23"
+      x="70"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="DreamArenaFormationFrame.fontBtn2"
+      parentStyle="DreamArenaFormationFrame.fontBtn1"
+      x="180" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="DreamArenaFormationFrame.backBtn1"
+      parentStyle="DreamArenaFormationFrame.fontBtn1"
+      x="290" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="DreamArenaFormationFrame.backBtn2"
+      parentStyle="DreamArenaFormationFrame.fontBtn1"
+      x="400" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaFormationFrame.fontBtn.text"
+      textFormatStyle="DreamArenaFormationFrame.fontBtn.text_t"
+      autoSize="none"
+      width="80"
+      height="22"
+      filterString="core.normal_f"
+      x="28"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaFormationFrame.saveBtn"
+      backStyle="asset.DreamArena.DreamArenaHeroView.saveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="435"
+      y="303" />
+    <component
+      stylename="DreamArenaFormationFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="517"
+      height="405"
+      x="0"
+      y="0" />
+    <!-- 排名奖励界面 -->
+    <component
+      stylename="dreamArena.DreamArenaRankRewardFrame"
+      classname="dreamarena.DreamArenaRankRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="50"
+      width="483"
+      height="416" />
+    <component
+      stylename="DreamArenaRankRewardFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border2"
+      scaleGridString="20,11,40,13"
+      width="460"
+      height="288"
+      x="0"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaRankRewardFrame.btnHbox"
+      x="15"
+      y="12"
+      spacing="21" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="DreamArenaRankRewardFrame.rankBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.DreamArenaRankRewardFrame.rankBtnSelectedTxt"
+      unselectedIconStyle="asset.DreamArenaRankRewardFrame.rankBtnUnSelectedTxt"
+      selectedIconInnerRectString="18,57,9,18,13"
+      unselectedIconInnerRectString="18,58,8,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="DreamArenaRankRewardFrame.rewardBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.DreamArenaRankRewardFrame.rewardBtnSelectedTxt"
+      unselectedIconStyle="asset.DreamArenaRankRewardFrame.rewardBtnUnSelectedTxt"
+      selectedIconInnerRectString="13,64,3,28,13"
+      unselectedIconInnerRectString="12,65,2,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      stylename="DreamArenaRankView.titleBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="DreamArenaRankView.titleTextBack,asset.Common.titleline,asset.Common.titleline"
+      imageRectString="0|0|19,75|2|19,340|2|19"
+      x="3"
+      y="2" />
+    <component
+      stylename="DreamArenaRankView.titleTextBack"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.common.titleTextBack"
+      scaleGridString="5,11,10,13"
+      width="455"
+      height="31" />
+    <component
+      stylename="DreamArenaRankView.rankText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRankView.rankText_t"
+      type="dynamic"
+      width="80"
+      height="20"
+      x="0"
+      y="9" />
+    <component
+      stylename="DreamArenaRankView.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DreamArenaRankView.rankText"
+      x="175"
+      y="9" />
+    <component
+      stylename="DreamArenaRankView.scoreText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DreamArenaRankView.rankText"
+      x="360"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DreamArenaRankView.itemBox"
+      x="0"
+      y="0"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="DreamArenaRankView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,454,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="454"
+      height="248"
+      x="3"
+      y="35" />
+    <component
+      stylename="DreamArenaRankItem.rankText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRankItem.rankText_t"
+      type="dynamic"
+      width="50"
+      height="20"
+      x="18"
+      y="12" />
+    <component
+      stylename="DreamArenaRankItem.nameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRankItem.rankText_t"
+      type="dynamic"
+      width="205"
+      height="20"
+      x="110"
+      y="12" />
+    <component
+      stylename="DreamArenaRankItem.scoreText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRankItem.rankText_t"
+      type="dynamic"
+      width="100"
+      height="20"
+      x="345"
+      y="12" />
+    <component
+      stylename="DreamArenaRankItem.line"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.common.itemLine"
+      x="20"
+      y="40"
+      scaleX="1.8" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DreamArenaRewardView.titleComponent"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArenaRewardView.titleBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="DreamArenaRankView.titleTextBack,asset.Common.titleline"
+      imageRectString="0|0|19,110|2|19"
+      x="3"
+      y="2" />
+    <component
+      stylename="DreamArenaRewardView.rankText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DreamArenaRankView.rankText"
+      x="10"
+      y="9"
+      width="100" />
+    <component
+      stylename="DreamArenaRewardView.rewardText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      parentStyle="DreamArenaRankView.rankText"
+      x="195"
+      y="9"
+      width="180" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DreamArenaRewardView.itemBox"
+      x="0"
+      y="0"
+      spacing="9" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="DreamArenaRewardView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,454,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="454"
+      height="248"
+      x="3"
+      y="35" />
+    <component
+      stylename="DreamArenaRewardItem.titleText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRewardItem.titleText_t"
+      type="dynamic"
+      width="85"
+      height="20"
+      x="13"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaRewardItem.rewardBox"
+      x="155"
+      y="7"
+      spacing="2" />
+    <component
+      stylename="DreamArenaRewardItem.line"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.common.itemLine2"
+      x="10"
+      y="60" />
+    <component
+      stylename="DreamArenaRankRewardFrame.myRankText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRankRewardFrame.myRankText_t"
+      type="dynamic"
+      width="120"
+      height="20"
+      x="340"
+      y="-5" />
+    <component
+      stylename="DreamArenaRankRewardFrame.myScoreText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="DreamArenaRankRewardFrame.myRankText_t"
+      type="dynamic"
+      width="134"
+      height="20"
+      x="340"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaFrame.ticketShowImage"
+      resourceLink="asset.DreamArenaFrame.ticketImageBg,asset.DreamArenaFrame.getTicketImage"
+      imageRectString="0|0|19,-3|64|19"
+      x="330"
+      y="500" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="DreamArenaFrame.costItem"
+      firstTxtLink="DreamArenaFrame.costItem.text"
+      iconLink="asset.DreamArenaFrame.smallTicketImage"
+      layout="right"
+      space="2"
+      xy="605,505" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaFrame.costItem.text"
+      textFormatStyle="DreamArenaFrame.costItem.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DreamArenaPetView.petVbox"
+      x="0"
+      y="0"
+      spacing="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaPetRightItem.skillHbox"
+      x="125"
+      y="17"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DreamArenaGoddessView.goddessVbox"
+      x="0"
+      y="0"
+      spacing="-16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaGoddessRightItem.NameText"
+      textFormatStyle="DreamArenaGoddessRightItem.NameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="40"
+      x="90"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaGoddessRightItem.gradeText"
+      textFormatStyle="DreamArenaGoddessRightItem.NameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="40"
+      x="90"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaGoddessRightItem.skillHbox"
+      x="265"
+      y="-3"
+      spacing="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaGoddessRightItem.dedicationLv.text"
+      textFormatStyle="DreamArenaGoddessRightItem.dedicationLv_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      stylename="DreamArenaPetRightItem.headBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArenaHeroSkillItem.skillBack"
+      x="32"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaTitanView.saveBtn"
+      backStyle="asset.DreamArena.DreamArenaHeroView.saveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="558"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaHeroView.skillArrow"
+      resourceLink="asset.common.skillArrow"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaTitanSkillItem.skillBg"
+      resourceLink="asset.DreamArenaTitanSkillItem.skillBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaTitanSkillItem.orderBg"
+      resourceLink="asset.DreamArenaTitanSkillItem.orderBg"
+      x="-7"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaTitanSkillItem.orderNum"
+      textFormatStyle="DreamArenaTitanSkillItem.orderNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="-2"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaTitanSkillItem.equipedImage"
+      resourceLink="asset.common.equipImage"
+      x="36"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaCommonSelectItemII.selectBg"
+      resourceLink="asset.DreamArena.DreamArenaCommonSelectItem.selectBg1"
+      x="1"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaArtifactView.back"
+      resourceLink="DreamArenaArtifactView.scaleBack,asset.DreamArenaArtifactView.titleback,asset.DreamArenaArtifactView.titleImage"
+      imageRectString="0|0|19,225|262|19,185|263|19"
+      x="0"
+      y="10" />
+    <component
+      stylename="DreamArenaArtifactView.scaleBack"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="628"
+      height="260" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaArtifactView.armoryHbox"
+      x="85"
+      y="310"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaArtifactView.saveBtn"
+      backStyle="asset.DreamArena.DreamArenaHeroView.saveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="558"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="DreamArena.DreamArenaCommonSelectItem.selectBtn"
+      backStyle="asset.common.greenBtn"
+      textStyle="DreamArenaCommonSelectItem.selectBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="-1,8,3,13"
+      width="58"
+      height="26"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaCommonSelectItem.selectBtnText"
+      textFormatStyle="DreamArenaCommonSelectItem.selectBtnText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      stylename="DreamArenaChildView.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="628"
+      height="122"
+      x="0"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaChildView.titleImage"
+      resourceLink="asset.DreamArenaChildView.titleback,asset.DreamArenaChildView.titleImage"
+      imageRectString="0|0|19,12|-3|19"
+      x="205"
+      y="307" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaChildView.petHbox"
+      x="140"
+      y="320"
+      spacing="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaChildView.saveBtn"
+      backStyle="asset.DreamArena.DreamArenaHeroView.saveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="558"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaChildSelectItem.hasSelectBtn"
+      backStyle="asset.DreamArenaChildSelectItem.hasSelectBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="4"
+      y="69" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaChildSelectItem.itemBg"
+      resourceLink="asset.DreamArenaHeroView.heroBack"
+      x="9"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DreamArenaCommonSelectItemII.itemBg"
+      resourceLink="asset.DreamArenaHeroSkillItem.skillBack"
+      x="8"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaTalismanView.talismanHbox"
+      x="8"
+      y="14"
+      spacing="-7" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaTalismanView.proficiencyHbox"
+      x="5"
+      y="14"
+      spacing="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArena.DreamArenaDragonTalkerView.headHbox"
+      x="182"
+      y="7"
+      spacing="20" />
+    <component
+      stylename="DreamArenaDragonTalkerView.selectBg2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArena.DreamArenaCommonSelectItem.selectBg2"
+      x="172"
+      y="-5" />
+    <!-- 匹配界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaMatchingView.matchingImage"
+      resourceLink="asset.DreamArenaMatchingView.matchingBack,asset.DreamArenaMatchingView.matchingImage"
+      imageRectString="0|0|19,160|18|19"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="DreamArenaMatchingView.matchTime"
+      timeTxtStyle="DreamArenaMatchingView.matchTime.text"
+      viewLen="2"
+      x="402"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaMatchingView.matchTime.text"
+      textFormatStyle="DreamArenaMatchingView.matchTime.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamArenaMatchingView.cancelBtn"
+      backStyle="asset.core.btnBack1"
+      iconStyle="asset.DreamArenaMatchingView.cancelBtn.icon"
+      iconInnerRectString="27,79,17,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="205"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaRuneView.saveBtn"
+      backStyle="asset.DreamArena.DreamArenaHeroView.saveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="553"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamArenaRuneView.back"
+      resourceLink="asset.DreamArenaChildView.titleback,asset.DreamArenaRuneView.titleImage"
+      imageRectString="0|0|19,40|-4|19"
+      x="201"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="DreamArenaFrame.leftPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      vScrollbarInnerRectString="15,0,0,-2,3"
+      viewportInnerRectString="3,0,0,0,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="252"
+      height="496"
+      x="42"
+      y="62" />
+    <component
+      stylename="DreamArenaPetRightItem.hallowBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArenaPetRightItem.skillBack"
+      x="447"
+      y="17" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.headBack"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArenaPetRightItem.skillBack"
+      x="12"
+      y="11" />
+    <component
+      stylename="DreamArena.DreamArenaLeftItem.headBackII"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.DreamArenaPetRightItem.skillBack"
+      x="72"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="DreamArenaChildSkillView.back"
+      parentStyle="core.commonTipBg"
+      width="270"
+      height="115"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="DreamArenaTalismanSelectView.twoSelectBtn"
+      backStyle="asset.common.greenBtn"
+      textStyle="DreamArenaCommonSelectItem.selectBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="-1,8,3,13"
+      width="58"
+      height="26"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="DreamArenaTalismanSelectView.fourSelectBtn"
+      backStyle="asset.common.greenBtn"
+      textStyle="DreamArenaCommonSelectItem.selectBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="-1,8,3,13"
+      width="58"
+      height="26"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.dreamarena.dreamAreaItemTitle"
+      textFormatStyle="ui.dreamarena.dreamAreaItemTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="16"
+      x="7"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArena.dragonSkillHbox"
+      x="20"
+      y="0"
+      spacing="5" />
+    <component
+      classname="dreamarena.item.DreamAreaDragonSelectSkillItem"
+      stylename="DreamArena.dragonSkillItem"
+      x="0"
+      y="0" />
+    <component
+      classname="dreamarena.item.DreamAreaDragonSkillBar"
+      stylename="dreamarena.item.DreamAreaDragonSkillBar1"
+      x="0"
+      y="225" />
+    <component
+      classname="dreamarena.item.DreamAreaDragonSkillBar"
+      stylename="dreamarena.item.DreamAreaDragonSkillBar2"
+      x="0"
+      y="310" />
+    <component
+      stylename="DreamArena.dragonskillScaleImg"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.DreamArena.resource.heroBack"
+      scaleGridString="20,10,40,20"
+      width="628"
+      height="208"
+      x="0"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.dreamarea.chooseSkTitle"
+      textFormatStyle="ui.dreamarea.chooseSkTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="179"
+      height="18"
+      x="26"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="DreamArenaFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="895"
+      y="25" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="dreamarena.DreamArenaFrame.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="dreamarena.DreamArenaFrame.helpFrame.content"
+      titleText="dreamarena.DreamArenaFrame.HelpTitle.text"
+      textWidth="500" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamArena.DreamArenaFrame.openBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.DreamArenaFrame.openBtn.icon"
+      iconInnerRectString="17,116,9,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="547"
+      y="535" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DreamArenaFrame.noOpenCon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DreamArenaFrame.openCon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaFrame.winText"
+      textFormatStyle="DreamArenaFrame.winText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="317"
+      y="515" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArenaFrame.loseText"
+      textFormatStyle="DreamArenaFrame.loseText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="317"
+      y="550" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaFrame.winHbox"
+      spacing="5"
+      x="375"
+      y="510" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaFrame.winGrayBox"
+      spacing="5"
+      x="375"
+      y="510" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaFrame.loseHbox"
+      spacing="5"
+      x="375"
+      y="545" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamArenaFrame.loseGrayBox"
+      spacing="5"
+      x="375"
+      y="545" />
+    <component
+      stylename="DreamArenaFrame.openBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.DreamArenaFrame.openBack,asset.DreamArenaFrame.openGrayBack"
+      imageRectString="0|0|19,0|35|19"
+      x="305"
+      y="510" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamArena.DreamArenaFrame.rewardText"
+      textFormatStyle="DreamArena.DreamArenaFrame.rewardText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="795"
+      y="505" />
+    <component
+      stylename="dreamArena.DreamAreanaReportFrame"
+      classname="dreamarena.DreamAreanaReportFrame"
+      parentStyle="core.Frame2"
+      containerX="0"
+      containerY="45"
+      width="503"
+      height="496" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="DreamAreanaReportFrame.bg"
+      resourceLink="asset.DreamAreanaReportFrame.bg,asset.DreamAreanaReportFrame.reportBit,asset.DreamAreanaReportFrame.winBit,asset.DreamAreanaReportFrame.loseBit,asset.DreamAreanaReportFrame.loseGetRewardBit"
+      imageRectString="0|0|19,160|67|19,174|122|19,282|122|19,181|214|19"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="DreamAreanaReportFrame.sureBtn"
+      backStyle="asset.core.Style44Btn"
+      iconStyle="asset.DreamAreanaReportFrame.sureBtn.icon"
+      iconInnerRectString="33,50,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamAreanaReportFrame.rewardHbox"
+      autoCenter="true"
+      spacing="15"
+      x="255"
+      y="248" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DreamAreanaReportFrame.winCon"
+      x="152"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="DreamAreanaReportFrame.loseCon"
+      x="263"
+      y="122" />
+    <component
+      stylename="dreamArena.DreamAreanaPreviewRewardFrame"
+      classname="dreamarena.DreamAreanaPreviewRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="0"
+      containerY="45"
+      width="503"
+      height="496" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="DreamAreanaPreviewRewardFrame.rewardPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,469,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="469"
+      height="370"
+      x="13"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="DreamAreanaPreviewRewardFrame.itemBox"
+      x="0"
+      y="0"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="DreamAreanaPreviewRewardItem.winCountText"
+      textFormatStyle="DreamAreanaPreviewRewardItem.winCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="DreamAreanaPreviewRewardItem.rewardHbox"
+      spacing="5"
+      x="125"
+      y="10" />
+  </components>
+</style>

@@ -1,0 +1,164 @@
+<style
+  name="godTreasure"
+  source="ui\zh_cn\swf\ancientgod.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="godTreasure.times.text_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godTreasure.gotdiamond.text_t"
+      args="Arial,24,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godTreasure.diamond_t"
+      args="Arial,20,0xffffff,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.godTreasure.congratulate"
+      x="135"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.godTreasure.input"
+      x="130"
+      y="315" />
+    <bitmapData
+      resourceLink="asset.godTreasure.decorate"
+      x="160"
+      y="320" />
+    <bitmapData
+      resourceLink="asset.godTreasure.diamond"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.godTreasure.boxEffect"
+      stylename="godTreasure.boxEffect"
+      x="330"
+      y="200" />
+  </bitmaps>
+  <components>
+    <!--古神 Frame-->
+    <component
+      classname="godtreasure.GodTreasureFrame"
+      stylename="godtreasure.frame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,80,0,45,1"
+      closeInnerRectString="28,0,10,28,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="17"
+      containerY="48"
+      width="700"
+      height="520" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="godtreasure.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="625"
+      y="-30" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="godtreasure.godtreasureHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="activity.godtreasure.godtreasureHelpFrame.helpContent"
+      titleText="activity.godtreasure.godtreasureHelpFrame.title"
+      textWidth="353" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="godTreasure.bg"
+      resourceLink="godTreasureFrame.bg1,asset.godTreasure.bg,asset.godTreasure.goddessImage,asset.godTreasure.pattern"
+      imageRectString="3|668|1|432|13,2|668|2|428|13,-210|399|-30|458|13,225|215|28|18|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="godTreasure.diamond1"
+      resourceLink="asset.godTreasure.diamond"
+      x="520"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="godTreasure.diamond2"
+      resourceLink="asset.godTreasure.diamond"
+      x="278"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="godTreasure.diamond3"
+      resourceLink="asset.godTreasure.diamond"
+      x="500"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="godTreasureFrame.bg1"
+      parentStyle="core.describeBackground_style06"
+      width="522"
+      height="387" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="godTreasure.jionBtn"
+      backStyle="asset.godTreasure.jionBtnBack"
+      iconStyle="asset.godTreasure.jionBtnTxt"
+      width="156"
+      height="63"
+      iconInnerRectString="23,114,18,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="godTreasure.inputDiamondTxt"
+      textFieldStyle="godTreasure.inputDiamondTxt.TxtField"
+      colors="0xffffff,0xfeed2f,0xdc8f34"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="213"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godTreasure.inputDiamondTxt.TxtField"
+      textFormatStyle="godTreasure.diamond_t"
+      autoSize="none"
+      mouseEnabled="false"
+      height="25"
+      width="70" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="godTreasure.outputDiamondTxt"
+      textFieldStyle="godTreasure.inputDiamondTxt.TxtField"
+      colors="0xffffff,0xfeed2f,0xdc8f34"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="60,140,220"
+      x="440"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godTreasure.times.text"
+      textFormatStyle="godTreasure.times.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="16"
+      x="305"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godTreasure.gotdiamond.text"
+      textFormatStyle="godTreasure.gotdiamond.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="26"
+      x="448"
+      y="72" />
+  </components>
+</style>

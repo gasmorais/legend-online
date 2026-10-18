@@ -1,0 +1,340 @@
+<style
+  name="politics"
+  source="ui/zh_cn/swf/politics.swf">
+  <sets>
+    <!-- 产量明细标题文字 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.yield_title_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="politics.yield_title_f"
+      args="0x000000,1,5,5,3" />
+    <!-- 产量明细值 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.yield_value_t"
+      args="Arial,14,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.yield_value_total_t"
+      args="Arial,14,0xffd800,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="politics.yield_value_total_f"
+      args="0x000000,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.LevyDescTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.LevyTxt_t"
+      args="Arial,14,0xffea00,"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.LevyValue_t"
+      args="Arial,16,0xffea00"
+      letterSpacing="1" />
+    <!-- 坐标 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="politics.field_pos_t"
+      args="Arial,14,0xe4d29c,true,,,,,center"
+      underline="true" />
+  </sets>
+  <bitmaps />
+  <customDisplay>
+    <!-- 野地明细 -->
+    <custom
+      classname="buildings.politics.view.PoliticsFieldView"
+      stylename="politics.FieldView"
+      x="8"
+      y="103" />
+    <!-- 产量明细标题 -->
+    <custom
+      classname="buildings.politics.view.FildTitleItem"
+      stylename="politics.FieldTitleItem"
+      x="-2"
+      y="3" />
+    <custom
+      classname="buildings.politics.view.LevyView"
+      stylename="politics.LevyView"
+      x="0"
+      y="100" />
+    <custom
+      classname="buildings.politics.view.LevyQueueItem"
+      stylename="politics.LevyQueue"
+      x="405"
+      y="28" />
+  </customDisplay>
+  <components>
+    <!--内政厅Frame-->
+    <component
+      classname="buildings.politics.view.PoliticsFrame"
+      stylename="politics.PoliticsFrame"
+      parentStyle="buildings.BaseBuildFrame"
+      width="662"
+      height="295" />
+    <!-- 选项卡按钮 -->
+    <!--	产量明细标题	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="politics.TitleBack"
+      parentStyle="core.TitleBack_Style05"
+      width="618" />
+    <!-- 产量明细标题基础产量文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.YieldBaseText"
+      textFormatStyle="politics.yield_title_t"
+      filterString="politics.yield_title_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="65"
+      y="7" />
+    <!-- 产量明细基础产量值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.YieldBaseValueText"
+      textFormatStyle="politics.yield_value_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="65"
+      y="7" />
+    <!-- 产量明细总产量值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.YieldTotalValueText"
+      textFormatStyle="politics.yield_value_total_t"
+      filterString="politics.yield_value_total_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="537"
+      y="7" />
+    <!-- 产量背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="politics.YieldItemBack"
+      resourceLink="politics.BlackBack,politics.GrayBack"
+      x="-3"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="politics.GrayBack"
+      parentStyle="core.TitleBack_Style888"
+      width="620" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="politics.BlackBack"
+      parentStyle="core.TitleBack_Style777"
+      width="620" />
+    <!-- 野地详情 -->
+    <!-- 资源名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldNameText"
+      parentStyle="politics.YieldBaseText"
+      x="10"
+      y="7"
+      width="130" />
+    <!-- 资源坐标 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldPosText"
+      parentStyle="politics.YieldBaseText"
+      x="159"
+      y="-2"
+      wordWrap="true"
+      width="100"
+      height="40" />
+    <!-- 资源产量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldYieldText"
+      parentStyle="politics.YieldBaseText"
+      x="283"
+      y="-2"
+      wordWrap="true"
+      width="100"
+      height="40" />
+    <!-- 剩余时间 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldTimeText"
+      parentStyle="politics.YieldBaseText"
+      x="385"
+      y="7"
+      width="115" />
+    <!-- 操作 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldOPText"
+      parentStyle="politics.YieldBaseText"
+      x="510"
+      y="7" />
+    <!-- 野地详情值 -->
+    <!-- 资源名称值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldNameValueText"
+      parentStyle="politics.YieldBaseValueText"
+      x="5"
+      y="7"
+      width="100" />
+    <!-- 资源坐标值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldPosValueText"
+      parentStyle="politics.YieldBaseValueText"
+      textFormatStyle="politics.field_pos_t"
+      autoSize="none"
+      width="180"
+      height="18"
+      x="115"
+      y="7" />
+    <!-- 资源产量值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldYieldValueText"
+      parentStyle="politics.YieldBaseValueText"
+      x="290"
+      y="7" />
+    <!-- 剩余时间值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.FieldTimeValueText"
+      parentStyle="politics.YieldBaseValueText"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="politics.TimeDownView"
+      timeTxtStyle="politics.FieldTimeValueText"
+      x="405"
+      y="7" />
+    <!-- 查看野地按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="politics.FieldLookButton"
+      backStyle="asset.core.zoomBtnImg"
+      width="20"
+      height="20"
+      autoSizeAble="false"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="540"
+      y="7"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,2"
+      tipGapV="10" />
+    <!-- 放弃野地按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="politics.FieldDeleteButton"
+      backStyle="asset.core.deleteBtnImg"
+      width="18"
+      height="16"
+      autoSizeAble="false"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="575"
+      y="7"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,2"
+      tipGapV="10" />
+    <!-- 野地滚动条 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="politics.ScrollPanel"
+      parentStyle="core.ScrollPanel"
+      width="620"
+      height="127"
+      y="33" />
+    <!-- 征收 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="politics.LevyBack"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="630"
+      height="89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.LevyDescTxt"
+      textFormatStyle="politics.LevyDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="350"
+      height="40"
+      x="22"
+      y="48"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.LevyTxt"
+      textFormatStyle="politics.LevyTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="22"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.LevyValueTxt"
+      textFormatStyle="politics.LevyValue_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="311"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.LevyGoldTxt"
+      textFormatStyle="politics.LevyTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="21"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="politics.LevyGoldValueTxt"
+      textFormatStyle="politics.LevyValue_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="25"
+      x="231"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="politics.LevyBtn"
+      iconStyle="asset.politics.LevyTxt"
+      backStyle="asset.core.ButtonStyle_02"
+      iconInnerRectString="9,95,9,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="510"
+      y="45" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="politics.LevyBtnStrip"
+      x="461"
+      y="7"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+  </components>
+</style>

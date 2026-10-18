@@ -1,0 +1,887 @@
+<style
+  name="heroroad"
+  source="ui/zh_cn/swf/heroroad.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.leftSelectedBtnText_t1"
+      args="Arial,14,0xfffefe,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.leftSelectedBtnText_t2"
+      args="Arial,14,0xfffefe,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.sellPriceTxt_t"
+      args="Arial,14,0xf6b600,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.descriptionTxt_t"
+      args="Arial,12,0xf6b600,,,,,,left"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.rewardTxt_t"
+      args="Arial,12,0x4fdd24,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadBoxItem.titleTxt_t"
+      args="Arial,12,0xffdf88,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadBoxItem.priceTxt_t"
+      args="Arial,14,0x00effe,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadBoxItem.activeTxt_t"
+      args="Arial,12,0xf6b600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.greenBar.progressTxt_t"
+      args="Arial,14,0xecdfa1,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadConfirmFrame.priceTxt_t"
+      args="Arial,14,0xecdfa1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadConfirmFrame.activeTxt_t"
+      args="Arial,12,0xf6b600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadItem.taskNoteTxt_t"
+      args="Arial,12,0xffd157,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadConfirmFrame.taskNoteTxt_t"
+      args="Arial,14,0xffba00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadItem.priceTxt_t"
+      args="Arial,14,0x00effe,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroroad.HeroRoadConfirmFrame.receiveNoteTxt_t"
+      args="Arial,14,0xecdfa1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroRoadAchievementItemView.titleTxt_t"
+      args="Arial,14,0xe3bf96,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroRoadGiftFrame.packageNameTxt_t"
+      args="Arial,16,0xfff177,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroRoadGiftFrame.priceTxt_t"
+      args="Arial,20,0x95feff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroRoadGiftFrame.descTxt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="heroRoadAchievementItemView.progressTxt_t"
+      args="Arial,14,0xff9000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.heroroad.Bg"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardItemBg" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemBg" />
+    <bitmapData
+      resourceLink="asset.heroroad.confirmBg"
+      x="0"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemImg1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemImg2"
+      x="-5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemImg3"
+      x="-7"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemImg4"
+      x="-7"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemImg5"
+      x="-6"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.heroroad.cardBoxItemImg6"
+      x="-6"
+      y="-4" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="heroroad.HeroRoadBoxItemView"
+      stylename="heroroad.HeroRoadBoxItemView"
+      x="0"
+      y="343" />
+    <custom
+      classname="heroroad.HeroRoadItemView"
+      stylename="heroroad.HeroRoadItemView"
+      x="201"
+      y="-13" />
+    <custom
+      classname="asset.heroroad.item.greenBar"
+      stylename="asset.heroroad.item.greenBar"
+      x="106"
+      y="312" />
+    <custom
+      stylename="heroroad.HeroRoadItemIcon1"
+      classname="yishi.view.community.BaseIconView"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="25"
+      loadingY="25"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,5,4,7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="23"
+      y="141" />
+    <custom
+      stylename="heroroad.HeroRoadItemIcon2"
+      classname="yishi.view.community.BaseIconView"
+      parentStyle="heroroad.HeroRoadItemIcon1"
+      x="99"
+      y="141" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="heroroad.topStrip1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="-15"
+      tipGapH="-20"
+      isFollowMouse="false"
+      x="18"
+      y="4" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="heroroad.topStrip2"
+      parentStyle="heroroad.topStrip1"
+      x="121"
+      y="3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="heroroad.topStrip3"
+      parentStyle="heroroad.topStrip1"
+      x="216"
+      y="3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="heroroad.topStrip4"
+      parentStyle="heroroad.topStrip1"
+      x="318"
+      y="4" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="heroroad.topStrip5"
+      parentStyle="heroroad.topStrip1"
+      x="413"
+      y="4" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="heroroad.topStrip8"
+      parentStyle="heroroad.topStrip1"
+      x="413"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="heroRoadAchievementItemView.ItemBaseItemView"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="heroRoadAchievementItemView.ItemBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="heroRoadAchievementItemView.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="6"
+      y="6" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="heroRoadAchievementItemView.ItemBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="1"
+      iconHeight="60"
+      iconWidth="60"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="heroroad.HeroRoadFrame"
+      stylename="heroroad.HeroRoadFrame"
+      parentStyle="core.Frame1"
+      width="950"
+      height="615" />
+    <component
+      classname="heroroad.HeroRoadConfirmFrame"
+      stylename="heroroad.HeroRoadConfirmFrame"
+      parentStyle="core.Frame2"
+      backStyle="asset.heroroad.confirmBg"
+      containerX="18"
+      containerY="31"
+      width="510"
+      height="226" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="heroroad.HeroRoadFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="916"
+      height="510"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.buyBtn"
+      backStyle="asset.heroroad.buyBtn"
+      iconStyle="asset.heroroad.buyTxt"
+      iconInnerRectString="38,70,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="98"
+      y="177"
+      width="126"
+      height="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.buyNote1"
+      textFormatStyle="heroroad.buyNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="85"
+      height="40"
+      x="128"
+      y="45" />
+    <component
+      classname="heroroad.HeroRoadTopButton"
+      stylename="heroroad.heroRoadTopButton1"
+      unSelectedStyle="asset.heroroad.growBtn1"
+      selectedStyle="asset.heroroad.growBtn2"
+      textStyle="heroroad.leftSelectedBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.leftSelectedBtnText"
+      textFormatStyle="heroroad.leftSelectedBtnText_t1,heroroad.leftSelectedBtnText_t2"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="30"
+      y="17"
+      width="136"
+      height="40" />
+    <component
+      classname="heroroad.HeroRoadTopButton"
+      stylename="heroroad.heroRoadTopButton2"
+      parentStyle="heroroad.heroRoadTopButton1"
+      unSelectedStyle="asset.heroroad.exploreBtn1"
+      selectedStyle="asset.heroroad.exploreBtn2"
+      x="100"
+      y="0" />
+    <component
+      classname="heroroad.HeroRoadTopButton"
+      stylename="heroroad.heroRoadTopButton3"
+      parentStyle="heroroad.heroRoadTopButton1"
+      unSelectedStyle="asset.heroroad.petBtn1"
+      selectedStyle="asset.heroroad.petBtn2"
+      x="200"
+      y="0" />
+    <component
+      classname="heroroad.HeroRoadTopButton"
+      stylename="heroroad.heroRoadTopButton4"
+      parentStyle="heroroad.heroRoadTopButton1"
+      unSelectedStyle="asset.heroroad.childBtn1"
+      selectedStyle="asset.heroroad.childBtn2"
+      x="300"
+      y="0" />
+    <component
+      classname="heroroad.HeroRoadTopButton"
+      stylename="heroroad.heroRoadTopButton5"
+      parentStyle="heroroad.heroRoadTopButton1"
+      unSelectedStyle="asset.heroroad.otherBtn1"
+      selectedStyle="asset.heroroad.otherBtn2"
+      x="400"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroroad.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="215"
+      y="123" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.sellPriceTxt"
+      textFormatStyle="heroroad.sellPriceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="284"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.buyConfirmBtn"
+      backStyle="asset.heroroad.buyComfirmBtn"
+      iconStyle="asset.heroroad.buyComfirmTxt"
+      iconInnerRectString="38,52,13,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="130"
+      height="52"
+      x="175"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.receiveConfirmBtn"
+      backStyle="asset.heroroad.buyComfirmBtn"
+      iconStyle="asset.heroroad.receiveComfirmTxt"
+      iconInnerRectString="38,52,13,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="130"
+      height="52"
+      x="175"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroroad.cardBoxItemBg"
+      resourceLink="asset.heroroad.cardBoxItemBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="heroroad.BaseItemView"
+      iconStyle="heroroad.iconView"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="heroroad.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="61"
+      profileHeight="61"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="heroroad.iconView"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="42"
+      loadingY="42"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="19"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.descriptTxt"
+      textFormatStyle="heroroad.descriptionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="138"
+      height="75"
+      x="19"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.rewardTxt"
+      textFormatStyle="heroroad.rewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="157"
+      height="35"
+      x="9"
+      y="105"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.buyVipBtn"
+      backStyle="asset.heroroad.buyVipBtn"
+      iconStyle="asset.heroroad.buyVipTxt"
+      iconInnerRectString="28,45,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="40"
+      x="-7"
+      y="81"
+      offSetY="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.receiveVipBtn"
+      backStyle="asset.heroroad.buyVipBtn"
+      iconStyle="asset.heroroad.receiveVipTxt"
+      iconInnerRectString="28,45,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="40"
+      x="-7"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.buyNormalBtn"
+      backStyle="asset.heroroad.buyBtn"
+      iconStyle="asset.heroroad.buyTxt"
+      iconInnerRectString="16,36,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="32"
+      x="90"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroroad.receiveNormalBtn"
+      backStyle="asset.heroroad.buyBtn"
+      iconStyle="asset.heroroad.receiveTxt"
+      iconInnerRectString="16,36,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="68"
+      height="32"
+      x="14"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadBoxItem.titleTxt"
+      textFormatStyle="heroroad.HeroRoadBoxItem.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="138"
+      height="20"
+      x="-26"
+      y="-18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadBoxItem.priceTxt"
+      textFormatStyle="heroroad.HeroRoadBoxItem.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="58"
+      height="20"
+      x="5"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadBoxItem.activeTxt"
+      textFormatStyle="heroroad.HeroRoadBoxItem.activeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="108"
+      height="40"
+      x="-14"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.greenBar.progressTxt"
+      textFormatStyle="heroroad.greenBar.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="412"
+      y="318" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadConfirmFrame.priceTxt"
+      textFormatStyle="heroroad.HeroRoadConfirmFrame.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="249"
+      y="124" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroroad.cardBoxItemBack"
+      resourceLink="asset.heroroad.cardBoxItemBg"
+      x="0"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroroad.cardItemBack"
+      resourceLink="asset.heroroad.cardItemBg"
+      x="0"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadItem.taskNoteTxt"
+      textFormatStyle="heroroad.HeroRoadItem.taskNoteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="108"
+      height="20"
+      x="18"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadConfirmFrame.taskNoteTxt"
+      textFormatStyle="heroroad.HeroRoadConfirmFrame.taskNoteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="445"
+      height="40"
+      x="15"
+      y="13"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadConfirmFrame.receiveNoteTxt"
+      textFormatStyle="heroroad.HeroRoadConfirmFrame.receiveNoteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="400"
+      height="20"
+      x="39"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadItem.priceTxt"
+      textFormatStyle="heroroad.HeroRoadItem.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="76"
+      y="224" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroroad.HeroRoadItem.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg"
+      scaleX="0.9"
+      scaleY="0.9"
+      x="127"
+      y="225" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroroad.HeroRoadConfirmFrame.activeTxt"
+      textFormatStyle="heroroad.HeroRoadConfirmFrame.activeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="108"
+      height="40"
+      x="185"
+      y="133" />
+    <component
+      stylename="magicpub.giftWill.cardBoxImg"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.heroroad.cardBoxItemImg1,asset.heroroad.cardBoxItemImg2,asset.heroroad.cardBoxItemImg3,asset.heroroad.cardBoxItemImg4,asset.heroroad.cardBoxItemImg5,asset.heroroad.cardBoxItemImg6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,5,4,7,6"
+      tipGapH="0"
+      tipGapV="0"
+      x="5"
+      y="3" />
+    <component
+      classname="heroroad.HeroRoadTopButton"
+      stylename="heroroad.heroRoadTopButton8"
+      parentStyle="heroroad.heroRoadTopButton1"
+      unSelectedStyle="asset.heroroad.advanceBtn1"
+      selectedStyle="asset.heroroad.advanceBtn2"
+      x="400"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadAchievementItemView.BaseItemText"
+      textFormatStyle="core.baseitem_t,core.baseitem_t1,core.baseitem_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="42"
+      x="15"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="btn1.unSelect"
+      resourceLink="asset.heroroad.leftTabBGI,asset.heroroad.btn1Unselect"
+      imageRectString="0|0|19,15|34|19" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="btn1.Select"
+      resourceLink="asset.heroroad.leftTabBGII,asset.heroroad.btn1Select"
+      imageRectString="0|0|19,14|32|19" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="heroroad.HeroRoadFrame.btn1"
+      unSelectedStyle="btn1.unSelect"
+      selectedStyle="btn1.Select"
+      x="-55"
+      y="10"
+      width="43"
+      height="152"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="heroroad.HeroRoadFrame.btn2"
+      unSelectedStyle="btn2.unSelect"
+      selectedStyle="btn2.Select"
+      x="-55"
+      y="150"
+      width="43"
+      height="152"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="btn2.unSelect"
+      resourceLink="asset.heroroad.leftTabBGI,asset.heroroad.btn2Unselect"
+      imageRectString="0|0|19,13|35|19" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="btn2.Select"
+      resourceLink="asset.heroroad.leftTabBGII,asset.heroroad.btn2Select"
+      imageRectString="0|0|19,13|32|19" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroRoadAchievementItemView.bg"
+      resourceLink="asset.heroraod.AchievementItemViewBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroRoadAchievementItemView.notAchieve"
+      resourceLink="asset.heroraod.AchievementNotAchieve"
+      x="675"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="heroroad.HeroRoadGiftFrame.bg"
+      resourceLink="asset.heroraod.HeroRoadGiftFrameBg1,asset.heroraod.HeroRoadGiftFrameBg2,asset.heroraod.HeroRoadGiftFrameBg3,asset.heroraod.HeroRoadGiftFrameBg4,asset.heroraod.HeroRoadGiftFrameBg5"
+      imageRectString="0|0|19,53|69|19,326|135|19,64|210|19,-192|-30|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="heroRoadAchievementItemView.rewardItemBg"
+      resourceLink="asset.heroraod.AchievementItemRewardBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadAchievementItemView.titleTxt"
+      textFormatStyle="heroRoadAchievementItemView.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="600"
+      height="30"
+      x="60"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadAchievementItemView.progressTxt"
+      textFormatStyle="heroRoadAchievementItemView.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="30"
+      x="300"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="heroRoadAchievementItemView.rewardHbox"
+      spacing="15"
+      x="60"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="heroroad.HeroRoadAchievementView.btnHbox"
+      spacing="15"
+      x="20"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="heroroad.HeroRoadAchievementView.vbox"
+      spacing="6"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroRoadAchievementItemView.getBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.heroroad.getBtn"
+      iconInnerRectString="33,50,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="710"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroRoadAchievementItemView.hasGetBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.heroroad.hasGetBtn"
+      iconInnerRectString="28,61,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="710"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="heroroad.HeroRoadAchievementView.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="912"
+      height="475"
+      x="0"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="heroroad.HeroRoadAchievementView.scollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,895,0,0,2"
+      vScrollbarInnerRectString="15,-5,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="2"
+      width="895"
+      height="460"
+      x="5"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="heroroad.allAchievementBtn"
+      selectedStyle="asset.core.Style108SelectedBtn"
+      unSelectedStyle="asset.core.Style108UnSelectedBtn"
+      selectedIconStyle="asset.heroroad.allAchievementBtnSelect"
+      unselectedIconStyle="asset.heroroad.allAchievementBtnUnSelect"
+      selectedIconInnerRectString="40,35,10,15,13"
+      unselectedIconInnerRectString="40,33,10,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="heroroad.roleAchievementBtn"
+      selectedStyle="asset.core.Style108SelectedBtn"
+      unSelectedStyle="asset.core.Style108UnSelectedBtn"
+      selectedIconStyle="asset.heroroad.roleAchievementBtnSelect"
+      unselectedIconStyle="asset.heroroad.roleAchievementBtnUnSelect"
+      selectedIconInnerRectString="11,88,4,29,13"
+      unselectedIconInnerRectString="13,84,5,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="heroroad.transcriptAchievementBtn"
+      selectedStyle="asset.core.Style108SelectedBtn"
+      unSelectedStyle="asset.core.Style108UnSelectedBtn"
+      selectedIconStyle="asset.heroroad.transcriptAchievementBtnSelect"
+      unselectedIconStyle="asset.heroroad.transcriptAchievementBtnUnSelect"
+      selectedIconInnerRectString="11,87,4,29,13"
+      unselectedIconInnerRectString="13,83,5,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="heroroad.competitiveAchievementBtn"
+      selectedStyle="asset.core.Style108SelectedBtn"
+      unSelectedStyle="asset.core.Style108UnSelectedBtn"
+      selectedIconStyle="asset.heroroad.competitiveAchievementBtnSelect"
+      unselectedIconStyle="asset.heroroad.competitiveAchievementBtnUnSelect"
+      selectedIconInnerRectString="11,87,4,26,13"
+      unselectedIconInnerRectString="13,83,5,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      stylename="heroroad.HeroRoadGiftFrame"
+      classname="heroroad.HeroRoadGiftFrame"
+      parentStyle=""
+      containerX="- 20"
+      containerY="0"
+      width="551"
+      height="406"
+      closestyle="core.CloseBtn"
+      closeInnerRectString="29,23,85,29,14"
+      moveInnerRectString="0,30,50,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadGiftFrame.packageNameTxt"
+      textFormatStyle="heroRoadGiftFrame.packageNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="30"
+      x="230"
+      y="172" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadGiftFrame.priceTxt"
+      textFormatStyle="heroRoadGiftFrame.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="30"
+      x="255"
+      y="335" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadGiftFrame.descTxt"
+      textFormatStyle="heroRoadGiftFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="30"
+      x="275"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="heroRoadGiftFrame.getBtn"
+      backStyle="asset.heroraod.AchievementPackageBuyBg"
+      iconStyle="asset.core.SmallPointImg"
+      iconInnerRectString="25,25,15,23,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="190"
+      y="320" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="heroRoadGiftFrame.countTime"
+      timeTxtStyle="heroRoadGiftFrame.UpdateTime.text"
+      x="215"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="heroRoadGiftFrame.UpdateTime.text"
+      textFormatStyle="heroRoadGiftFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+  </components>
+</style>

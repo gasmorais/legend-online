@@ -1,0 +1,196 @@
+<style
+  name="goldensheep"
+  source="ui/zh_cn/swf/goldensheep.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldensheep.GoldenSheepItemView.nameTxt_t1"
+      args="Arial,16,0xf5cdb0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldensheep.GoldenSheepItemView.nameTxt_t2"
+      args="Arial,16,0xffed26,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldensheep.GoldenSheepItemView.rewardTxt_t1"
+      args="Arial,16,0xece594,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldensheep.GoldenSheepItemView.rewardTxt_t2"
+      args="Arial,16,0xffed26,,,,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.goldensheep.boxMC"
+      stylename="goldensheep.GoldenSheepBoxFrame.boxMC"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.goldensheep.boxEffectMC"
+      stylename="goldensheep.GoldenSheepBoxFrame.boxEffectMC"
+      x="164"
+      y="-72" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="goldensheep.GoldenSheepFrame.rewardItemView"
+      iconStyle="goldensheep.GoldenSheepFrame.rewardItemViewIcon"
+      textStyle="goldensheep.GoldenSheepFrame.rewardItemTxt"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="272"
+      y="17" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="goldensheep.GoldenSheepFrame.rewardItemViewIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="24"
+      loadingY="24"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="goldensheep.GoldenSheepItemView.rewardItemView"
+      iconStyle="goldensheep.GoldenSheepItemView.rewardItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="32"
+      profileHeight="32"
+      showProfile="true"
+      x="250"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="goldensheep.GoldenSheepItemView.rewardItemViewIcon"
+      iconHeight="30"
+      iconWidth="30"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="15"
+      loadingY="15"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="goldensheep.GoldenSheepBoxFrame"
+      stylename="goldensheep.GoldenSheepBoxFrame" />
+    <component
+      classname="goldensheep.GoldenSheepFrame"
+      stylename="goldensheep.GoldenSheepFrame"
+      parentStyle="core.Frame1"
+      backStyle="asset.goldensheep.bg"
+      closeInnerRectString="29,10,145,29,14"
+      moveInnerRectString="410,100,75,-7,9"
+      containerX="30"
+      containerY="185"
+      width="447"
+      height="735" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="goldensheep.GoldenSheepFrame.rewardItemBg"
+      resourceLink="asset.goldensheep.goodsItemBg"
+      x="270"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldensheep.GoldenSheepFrame.rewardItemTxt"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="46"
+      height="16"
+      x="2"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="goldensheep.GoldenSheepFrame.rewardTipTxt"
+      resourceLink="asset.goldensheep.rewardTipTxt"
+      x="45"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="goldensheep.GoldenSheepFrame.noRewardTipTxt"
+      resourceLink="asset.goldensheep.noRewardTipTxt"
+      x="2"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="goldensheep.GoldenSheepFrame.vBox"
+      x="0"
+      y="0"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="goldensheep.GoldenSheepFrame.scrollPanel"
+      vScrollbarStyle="goldensheep.GoldenSheepFrame.scrollBar"
+      vScrollbarInnerRectString="360,16,0,0,2"
+      viewportInnerRectString="0,20,0,0,0"
+      vScrollProxy="0"
+      vUnitIncrement="18"
+      width="395"
+      height="413"
+      x="10"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="goldensheep.GoldenSheepFrame.scrollBar"
+      parentStyle="core.VScrollbar03"
+      trackStyle="core.Scrollbar03_Back"
+      thumbStyle="core.Scrollbar03_Step"
+      decreaseButtonStyle="core.Scrollbar02_Up"
+      increaseButtonStyle="core.Scrollbar02_Down"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="1,1,15,15,0"
+      decreaseButtonInnerRectString="11,10,0,0,9"
+      increaseButtonInnerRectString="11,10,0,0,10"
+      orientation="0"
+      thumbMinSize="23" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="goldensheep.GoldenSheepItemView.bg"
+      resourceLink="asset.goldensheep.itemBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldensheep.GoldenSheepItemView.nameTxt"
+      textFormatStyle="goldensheep.GoldenSheepItemView.nameTxt_t1,goldensheep.GoldenSheepItemView.nameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="70"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldensheep.GoldenSheepItemView.rewardTxt"
+      textFormatStyle="goldensheep.GoldenSheepItemView.rewardTxt_t1,goldensheep.GoldenSheepItemView.rewardTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="285"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="goldensheep.GoldenSheepItemView.luckyFlag"
+      resourceLink="asset.goldensheep.luckyFlag"
+      x="0"
+      y="0" />
+  </components>
+</style>

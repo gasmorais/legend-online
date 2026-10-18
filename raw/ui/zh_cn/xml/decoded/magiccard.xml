@@ -1,0 +1,735 @@
+<style
+  name="magiccard"
+  source="ui/zh_cn/swf/magiccard.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="magicCard.cardCell.NameTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="magicCard.cardCell.levelTxt_t"
+      args="Arial,12,0xffd800,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="magicCard.cardCell.propertyTxt_t"
+      args="Arial,10,0x000000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="magicCard.cardOrgCell.propertyTxt_t"
+      args="Arial,12,0x000000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MagicCardSlotView.ItemCountTxt_t"
+      args="Arial,14,0xffba01,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="magicCard.MagicCardSlotView.cardDscTxt_t"
+      args="Arial,12,0xa9a583,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.magicCardSlotView.downBack"
+      x="6"
+      y="442" />
+    <bitmapData
+      resourceLink="asset.magicCard.SelectedBorder" />
+    <bitmapData
+      resourceLink="asset.magicCard.border" />
+    <bitmapData
+      resourceLink="asset.magicCardSlotView.wing"
+      x="175"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.magicCardSlotView.NeedItemBg"
+      x="20"
+      y="474" />
+    <bitmapData
+      resourceLink="asset.magicCardSlotView.NeedItemTxt"
+      x="52"
+      y="481" />
+    <bitmapData
+      resourceLink="asset.magicCardSlotView.NeedItemIcon"
+      x="20"
+      y="480" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="magicCard.view.MagicCardSlotView"
+      stylename="magicCard.view.MagicCardSlotView"
+      x="144"
+      y="0" />
+    <custom
+      classname="magicCard.view.MagicCardSuitView"
+      stylename="magicCard.view.MagicCardSuitView"
+      x="0"
+      y="0" />
+    <!-- 套装 Item -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="magicCard.suitIcon"
+      iconHeight="0"
+      iconWidth="0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="60"
+      loadingY="31"
+      isFollowMouse="false"
+      x="5"
+      y="4" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="magicCard.suitName"
+      iconHeight="0"
+      iconWidth="0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="70"
+      loadingY="9"
+      isFollowMouse="false"
+      x="230"
+      y="22" />
+    <custom
+      classname="asset.magicCard.cardBoardEffect"
+      stylename="magicCard.cardBoardEffect"
+      x="0"
+      y="0" />
+    <!-- 卡槽 普通卡牌格子 -->
+    <custom
+      classname="magicCard.view.MagicCardCell"
+      stylename="magicCard.magicCardCell"
+      backgroundStyle="magicCard.cardCellBack"
+      iconStyle="magicCard.cardCellIcon"
+      nameStyle="magicCard.cardCell.nameTxt"
+      levelStyle="magicCard.cardSlot.Levelupmc"
+      levelTxtStyle="magicCard.cardCell.levelTxt"
+      propertyStyle="magicCard.cardCell.propertyTxt"
+      expStyle="magicCard.processBar"
+      x="1"
+      y="-2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="magicCard.cardCellIcon"
+      iconHeight="0"
+      iconWidth="0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="62"
+      loadingY="51"
+      isFollowMouse="false"
+      x="9"
+      y="33" />
+    <custom
+      classname="asset.magicCard.Levelupmc"
+      stylename="magicCard.cardSlot.Levelupmc"
+      x="33"
+      y="99" />
+    <custom
+      classname="asset.magicCard.processBar"
+      stylename="magicCard.processBar"
+      x="105"
+      y="80" />
+    <custom
+      classname="asset.magicCard.centerCardEffect"
+      stylename="magicCard.centerCardEffect"
+      x="0"
+      y="25" />
+    <!-- 卡槽 橙色卡牌格子 -->
+    <custom
+      classname="magicCard.view.MagicCardCell"
+      stylename="magicCard.magicCardOrgCell"
+      backgroundStyle="magicCard.cardCellBack"
+      iconStyle="magicCard.cardOrgCellIcon"
+      nameStyle="magicCard.cardOrgCell.nameTxt"
+      levelStyle="magicCard.cardSlot.Levelupmc"
+      levelTxtStyle="magicCard.cardCell.levelTxt"
+      propertyStyle="magicCard.cardOrgCell.propertyTxt"
+      expStyle="magicCard.processBar"
+      x="8"
+      y="10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="magicCard.cardOrgCellIcon"
+      parentStyle="magicCard.cardCellIcon"
+      x="8"
+      y="28" />
+    <custom
+      classname="asset.magicCardCheck.bgMC"
+      stylename="magicCardCheck.bgMC"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.MagicCardSlotItem.canActiveBG"
+      stylename="MagicCardSlotItem.canActiveBG"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.MagicCardSlotItem.ActiveMc"
+      stylename="MagicCardSlotItem.ActiveMc"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <!-- 卡牌窗体 -->
+    <component
+      classname="magicCard.MagicCardFrame"
+      stylename="magicCard.MagicCardFrame"
+      width="790"
+      height="630"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg1"
+      moveInnerRectString="0,80,0,45,1"
+      titleOuterRectPosString="0,25,1"
+      closeInnerRectString="29,-2,22,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="22"
+      containerY="64" />
+    <!-- 帮助说明 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="magicCard.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="714"
+      y="-46" />
+    <!-- 卡牌帮助窗体  -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="magicCard.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      titleText="card.CardHelpFrame.title"
+      helpHtmlText="card.CardHelpFrame.helpContent"
+      textWidth="350" />
+    <!-- 卡槽 背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="magicCard.CardSlotViewBack"
+      width="600"
+      height="527"
+      x="0"
+      y="0"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9" />
+    <!-- 卡槽 上背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="magicCard.CardSlotView.upBack"
+      resourceLink="asset.magicCardSlotView.upBack,magicCardSlotView.upRightBack"
+      imageRectString="2|297|3|440|13,596|297|3|440|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="magicCardSlotView.upRightBack"
+      resourceLink="asset.magicCardSlotView.upBack"
+      scaleX="-1" />
+    <!-- 卡牌仓库 寻宝之旅 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotView.treasureBtn"
+      backStyle="asset.magicCardSlotView.treasureBg"
+      width="160"
+      height="62"
+      autoCenter="false"
+      iconInnerRectString="0,117,0,38,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="423"
+      y="458" />
+    <component
+      stylename="maigcCardSlotView.treasureBtnImgTxt"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.magicCardSlotView.chest,asset.magicCardSlotView.treasureTxt"
+      imageRectString="2|43|5|38|13,46|73|15|22|13" />
+    <!-- 卡牌仓库 一键升级 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotView.levelupBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.magicCardSlotView.levelupTxt"
+      width="114"
+      height="42"
+      iconInnerRectString="20,73,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="380"
+      y="458" />
+    <!-- 卡牌仓库 一键激活 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotView.activeBtn"
+      backStyle="asset.core.ButtonStyle_02"
+      iconStyle="asset.magicCardSlotView.activeTxt"
+      width="114"
+      height="42"
+      iconInnerRectString="20,73,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="246"
+      y="458" />
+    <!--套装 背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="magicCard.CardSuitViewBack"
+      width="140"
+      height="527"
+      x="0"
+      y="0"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9" />
+    <!--套装 上按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="magicCard.upBtn"
+      backStyle="asset.magicCard.UnSelectedUp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      x="11"
+      y="5" />
+    <!--套装 下按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="magicCard.downBtn"
+      backStyle="asset.magicCard.UnSelectedDown"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      x="11"
+      y="500" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="magicCard.cardVBox"
+      isStrictHeight="true"
+      strictHeight="62"
+      x="10"
+      y="30"
+      spacing="5"
+      mouseEnabled="false" />
+    <!-- 卡槽 卡牌Item -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="magicCard.cardSlotItem.ItemBg"
+      resourceLink="asset.magicCardSlotView.unOpen,asset.magicCardSlotView.open"
+      isFollowMouse="false" />
+    <!-- 卡槽 卡牌发光 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="magicCard.cardSlotItem.shineBg"
+      parentStyle="shop.MouseOver1"
+      width="145"
+      height="195"
+      x="0"
+      y="-5" />
+    <!-- 卡槽 升级 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotItem.levelupBtn"
+      backStyle="asset.magicCard.LvUpImg"
+      width="80"
+      height="31"
+      iconInnerRectString="3,31,6,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.MagicCardLvUpTips"
+      isFollowMouse="false"
+      tipDirctions="3,4,5,6,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="33"
+      y="163" />
+    <!-- 卡槽 升级 
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotItem.levelupBtn"
+      backStyle="asset.magicCard.circleBg"
+      iconStyle="asset.magicCard.levelup"
+      width="34"
+      height="35"
+      iconInnerRectString="3,31,6,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,4,5,6,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="16"
+      y="165" />
+      -->
+    <!-- 卡槽 查看 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotItem.checkBtn"
+      parentStyle="magicCard.cardSlotItem.levelupBtn"
+      iconStyle="asset.magicCard.check"
+      iconInnerRectString="4,25,5,25,13"
+      x="100"
+      y="30"
+      backStyle="asset.magicCard.circleBg"
+      width="34"
+      height="35"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <!-- 卡槽 分享 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotItem.shareBtn"
+      parentStyle="magicCard.cardSlotItem.levelupBtn"
+      iconStyle="asset.magicCard.share"
+      iconInnerRectString="6,25,6,24,13"
+      x="100"
+      y="70"
+      backStyle="asset.magicCard.circleBg"
+      width="34"
+      height="35"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="magicCard.border"
+      resourceLink="asset.magicCard.border,asset.magicCard.borderGray"
+      isFollowMouse="false" />
+    <!-- 卡牌 卡牌背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="magicCard.cardCellBack"
+      resourceLink="magicCard.cardGrayBack,magicCard.cardGreenBack,magicCard.cardBlueBack,magicCard.cardPurpleBack,magicCard.cardOrangeBack" />
+    <!-- 卡牌 灰色卡牌背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="magicCard.cardGrayBack"
+      resourceLink="asset.magicCard.grayBack,magicCard.grayBackRight,asset.magicCard.grayBorder,asset.magicCard.gradeBack"
+      imageRectString="25|175|28|470|13,375|175|28|470|13,0|400|0|510|13,34|62|32|62|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="magicCard.grayBackRight"
+      resourceLink="asset.magicCard.grayBack"
+      scaleX="-1" />
+    <!-- 卡牌 绿色卡牌背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="magicCard.cardGreenBack"
+      resourceLink="asset.magicCard.greenBack,magicCard.greenBackRight,asset.magicCard.greenBorder,asset.magicCard.gradeBack"
+      parentStyle="magicCard.cardGrayBack" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="magicCard.greenBackRight"
+      resourceLink="asset.magicCard.greenBack"
+      scaleX="-1" />
+    <!-- 卡牌 蓝色卡牌背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="magicCard.cardBlueBack"
+      resourceLink="asset.magicCard.blueBack,magicCard.blueBackRight,asset.magicCard.blueBorder,asset.magicCard.gradeBack"
+      parentStyle="magicCard.cardGrayBack" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="magicCard.blueBackRight"
+      resourceLink="asset.magicCard.blueBack"
+      scaleX="-1" />
+    <!-- 卡牌 紫色卡牌背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="magicCard.cardPurpleBack"
+      resourceLink="asset.magicCard.purpleBack,magicCard.purpleBackRight,asset.magicCard.purpleBorder,asset.magicCard.gradeBack"
+      parentStyle="magicCard.cardGrayBack" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="magicCard.purpleBackRight"
+      resourceLink="asset.magicCard.purpleBack"
+      scaleX="-1" />
+    <!-- 卡牌 橙色卡牌背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="magicCard.cardOrangeBack"
+      resourceLink="asset.magicCard.orangeBack,magicCard.orangeBackRight,asset.magicCard.orangeBorder,asset.magicCard.grailBack"
+      parentStyle="magicCard.cardGrayBack" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="magicCard.orangeBackRight"
+      resourceLink="asset.magicCard.orangeBack"
+      scaleX="-1" />
+    <!-- 卡槽 卡牌名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.cardCell.nameTxt"
+      textFormatStyle="magicCard.cardCell.NameTxt_t"
+      autoSize="none"
+      width="95"
+      height="20"
+      x="38"
+      y="10"
+      isAutoFitLength="true" />
+    <!-- 卡槽 卡牌等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.cardCell.levelTxt"
+      textFormatStyle="magicCard.cardCell.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="0"
+      y="0" />
+    <!-- 卡槽 卡牌属性描述 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.cardCell.propertyTxt"
+      textFormatStyle="magicCard.cardCell.propertyTxt_t"
+      autoSize="none"
+      width="130"
+      height="40"
+      x="11"
+      y="135"
+      wordWrap="true"
+      isAutoFitLength="true" />
+    <!-- 卡槽 橙色卡牌Item -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="magicCard.cardSlotOrgItem.ItemBg"
+      resourceLink="asset.magicCardSlotView.unOpenOrg,asset.magicCardSlotView.openOrg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <!-- 卡槽 橙色卡牌发光 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="magicCard.cardSlotOrgItem.shineBg"
+      parentStyle="shop.MouseOver1"
+      width="188"
+      height="240"
+      x="0"
+      y="0" />
+    <!-- 橙色卡槽 升级 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotOrgItem.levelupBtn"
+      parentStyle="magicCard.cardSlotItem.levelupBtn"
+      x="38"
+      y="210" />
+    <!-- 橙色卡槽 查看 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotOrgItem.checkBtn"
+      parentStyle="magicCard.cardSlotItem.checkBtn"
+      x="78"
+      y="220" />
+    <!-- 橙色卡槽 分享 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotOrgItem.shareBtn"
+      parentStyle="magicCard.cardSlotItem.shareBtn"
+      x="118"
+      y="210" />
+    <!-- 卡槽 橙色 卡牌名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.cardOrgCell.nameTxt"
+      textFormatStyle="magicCard.cardCell.NameTxt_t"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="45"
+      y="16"
+      isAutoFitLength="true" />
+    <!-- 卡槽 橙色 卡牌属性描述 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.cardOrgCell.propertyTxt"
+      textFormatStyle="magicCard.cardOrgCell.propertyTxt_t"
+      autoSize="none"
+      width="140"
+      height="40"
+      x="15"
+      y="160"
+      wordWrap="true"
+      isAutoFitLength="true" />
+    <!-- 卡槽 套装动画 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="magicCard.redSuitEffecMC"
+      resourceLink="asset.magicCard.redSuitEffecMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="magicCard.suitEffecMC1"
+      button="magicCard.redSuitEffecMC"
+      transparentEnable="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6,7,4"
+      tipGapH="0"
+      tipGapV="20"
+      isFollowMouse="false"
+      displacement="false"
+      enable="false"
+      mouseChildren="true"
+      buttonMode="false"
+      x="267"
+      y="71" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="magicCard.suitEffecMC2"
+      parentStyle="magicCard.suitEffecMC1"
+      x="332"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="magicCard.blueSuitEffecMC"
+      resourceLink="asset.magicCard.blueSuitEffecMC" />
+    <component
+      classname="yishi.view.component.MovieButton"
+      stylename="magicCard.suitEffecMC3"
+      parentStyle="magicCard.suitEffecMC1"
+      button="magicCard.blueSuitEffecMC"
+      x="298"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="magicCard.leftBtn"
+      backStyle="asset.magicCardCheck.unSelectedLeft"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="-33"
+      y="234" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="magicCard.rightBtn"
+      parentStyle="magicCard.leftBtn"
+      backStyle="asset.magicCardCheck.unSelectedRight"
+      x="405"
+      y="234" />
+    <!-- 卡牌查看窗体 -->
+    <component
+      classname="magicCard.MagicCardCheckFrame"
+      stylename="magicCard.MagicCardCheckFrame"
+      width="520"
+      height="590"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,80,0,45,1"
+      titleOuterRectPosString="0,13,1"
+      closeInnerRectString="29,10,10,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="61"
+      containerY="35" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="magicCard.RiverNotAlert2"
+      parentStyle="worldboss.RiverNotAlert2"
+      confirmStyle="magicCard.RiverNotAlert_confirmStyle_2"
+      cancelStyle="magicCard.RiverNotAlert_cancelStyle_2"
+      checkStyle="magicCard.RiverNotAlertCheckBtn2"
+      describeStyle="magicCard.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="magicCard.AlertTextStyle"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="390"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="magicCard.RiverNotAlert_confirmStyle_2"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="50"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="magicCard.RiverNotAlert_cancelStyle_2"
+      parentStyle="core.AlertButton_2"
+      x="190"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="magicCard.RiverNotAlertCheckBtn2"
+      parentStyle="core.ThewCheckBtn"
+      x="110"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="40"
+      x="0"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <!-- 分解多余卡牌按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MagicCardSlotView.explainBtn"
+      backStyle="asset.magicCardSlotView.explain"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="240"
+      y="466" />
+    <!-- 魔粉数量文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MagicCardSlotView.ItemCountTxt"
+      textFormatStyle="MagicCardSlotView.ItemCountTxt_t"
+      autoSize="none"
+      width="75"
+      height="25"
+      x="113"
+      y="482" />
+    <!-- 卡牌激活按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCard.cardSlotItem.ActiveBtn"
+      width="120"
+      height="38"
+      backStyle="asset.magicCard.ActiveBgImg"
+      iconStyle="asset.magicCard.ActiveTxtImg"
+      iconInnerRectString="40,40,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,4,5,6,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="13"
+      y="158" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="magicCard.cardSlotItem.itemCountComponent"
+      x="0"
+      y="0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipGapV="20" />
+    <!-- 卡牌说明文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="magicCard.MagicCardSlotView.cardDscTxt"
+      textFormatStyle="magicCard.MagicCardSlotView.cardDscTxt_t"
+      autoSize="none"
+      width="210"
+      height="90"
+      x="198"
+      y="65"
+      wordWrap="true"
+      isAutoFitLength="true" />
+    <!-- 魔法旅馆 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="magicCardSlotView.magicpubBtn"
+      backStyle="asset.magicCardSlotView.magicpubBtnBmp"
+      iconStyle="asset.magicCardSlotView.magicpubTxtBmp"
+      iconInnerRectString="71,71,21,36,13"
+      width="160"
+      height="68"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="413"
+      y="449" />
+  </components>
+</style>

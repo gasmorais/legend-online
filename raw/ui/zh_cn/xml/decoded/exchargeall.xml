@@ -1,0 +1,841 @@
+<style
+  name="exchargeall"
+  source="ui/zh_cn/swf/exchargeall.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerankRightView.title.Field_t"
+      args="Arial,16,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerankRightView.describeText_t"
+      args="Arial,12,0xf2e4a5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerankRightView.timeText_t"
+      args="Arial,12,0xf4e3a6,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerankRightView.contentText_t"
+      args="Arial,12,0xf4e3a6,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerankRightView.condition_t"
+      args="Arial,12,0x00bff8,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerankRightView.process_t"
+      leading="4"
+      args="Arial,12,0xf2e4a5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.rightView.pageTextStyle1_T"
+      args="Arial,16,0xfffdf4,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.rightView.pageTextStyle1_T2"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargeRankRewardItem.title_t1"
+      args="Arial,12,0xd4d1d1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargeRankRewardItem.title_t2"
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargeRankRewardItem.title_vipText"
+      args="Arial,12,0xffb336,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargeRankRewardItem.title_chargeNumberText"
+      args="Arial,12,0x4cfffd,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.DataItemTimeText_t1"
+      args="Arial,12,0xefd89b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.DataItemTimeText_t2"
+      args="Arial,12,0xca432d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.DataItemTimeText_t3"
+      args="Arial,12,0x8d8b8b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.MainFrameTipText_t"
+      args="Arial,12,0xd1b792,,,,,,left"
+      leading="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.MyTodayCostText_t"
+      args="Arial,14,0xfff0d9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="exchargerank.MyTotalCount_t"
+      args="Arial,14,0xfff0d9,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.exchargeRanking.conditionImage"
+      x="5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.exchargerank.ReceivedImg"
+      x="470"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.exchargerank.exchargeRankRightViewBack1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.exchargerank.rightView.pageBg"
+      x="416"
+      y="410" />
+    <bitmapData
+      resourceLink="asset.exchargerank.vipIcon"
+      x="110"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.exchargerank.todayBg"
+      x="10"
+      y="228" />
+    <bitmapData
+      resourceLink="asset.exchargerank.todayCostBmp"
+      x="24"
+      y="316" />
+    <bitmapData
+      resourceLink="asset.exchargerank.totalCountBmp"
+      x="22"
+      y="378" />
+    <bitmapData
+      resourceLink="asset.exchargerank.todayTxtBg"
+      x="22"
+      y="338" />
+    <bitmapData
+      resourceLink="asset.exchargerank.todayTxtBg1"
+      x="22"
+      y="399" />
+    <bitmapData
+      resourceLink="asset.exchargerank.todayExchargeBmp"
+      x="22"
+      y="317" />
+    <bitmapData
+      resourceLink="asset.exchargerank.exchargeCountBmp"
+      x="14"
+      y="378" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <!-- 主窗体 -->
+    <component
+      classname="exchargerank.ExchargeRankingFrame"
+      stylename="excharerank.main"
+      parentStyle="core.Frame1"
+      closeInnerRectString="28,0,10,28,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="17"
+      containerY="48"
+      width="800"
+      height="543" />
+    <!-- 背景图片 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankFrame.back"
+      parentStyle="core.describeBackground_style06"
+      x="5"
+      y="18"
+      width="150"
+      height="428" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankFrame.rightBack"
+      parentStyle="core.describeBackground_style06"
+      x="160"
+      y="48"
+      width="600"
+      height="398" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRank.exchargerankBagView.Back"
+      parentStyle="core.describeBackground_style06"
+      x="160"
+      y="15"
+      width="600"
+      height="430" />
+    <!-- 奖励预览 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="exchargerank.rewardImage"
+      resourceLink="asset.exchargeRanking.rewardImageBg,asset.exchargeRanking.rewardImage"
+      imageRectString="30|370|0|39|13,137|157|10|23|13"
+      x="77"
+      y="0" />
+    <!-- 左侧的VBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="exchargeRankFrame.leftVBox"
+      x="3"
+      y="25"
+      spacing="10" />
+    <!-- 左侧按钮 -->
+    <component
+      classname="exchargerank.view.ExchargeRankLeftButton"
+      stylename="exchargeRankFrame.exchargeRankLeftBtn"
+      unSelectedStyle="asset.exchargerank.leftBtn1"
+      selectedStyle="asset.exchargerank.leftBtn2"
+      textStyle="exchargerank.leftSelectedBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="193"
+      height="55"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.leftSelectedBtnText"
+      textFormatStyle="exchargerank.leftSelectedBtnText_t1,exchargerank.leftSelectedBtnText_t2"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="30"
+      y="17"
+      width="136"
+      height="40" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="exchargeRankFrame.helpbtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="720"
+      y="-31" />
+    <!-- 右侧背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="exchargerank.exchargerankBagView.Bg"
+      resourceLink="asset.exchargerank.exchargeRankRightViewBack1"
+      imageRectString="0|595|0|425|13,0|527|364|53|13"
+      x="162"
+      y="17" />
+    <!-- 右侧标题 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="exchargerank.exchargerankBagView.title"
+      textFieldStyle="exchargerankRightView.title.Field"
+      colors="0xffffd5,0xffc000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      x="355"
+      y="23"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerankRightView.title.Field"
+      textFormatStyle="exchargerankRightView.title.Field_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="200"
+      height="22" />
+    <!-- 活动时间文字显示 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.exchargerankBagView.time"
+      textFormatStyle="exchargerankRightView.timeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="60"
+      width="500"
+      height="25" />
+    <!-- 活动内容 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.exchargerankBagView.content"
+      textFormatStyle="exchargerankRightView.contentText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="85"
+      width="500"
+      height="25" />
+    <!-- 活动条件 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.exchargerankBagView.condition"
+      textFormatStyle="exchargerankRightView.condition_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="80"
+      y="0"
+      height="23"
+      width="450" />
+    <!--  右侧物品展示VBox-->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="exchargeRankingRightView.itemVBox"
+      x="5" />
+    <!-- 右侧全局VBox -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="exchargeRankingRightView.totalVBox"
+      x="160"
+      y="0"
+      width="530"
+      spacing="4" />
+    <!-- 右侧滚动条 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="exchargeRankingRightView.panel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,592,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="592"
+      height="385"
+      x="165"
+      y="57" />
+    <!--右侧天数按钮排列 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="exchargerank.selectedIconButtonHbox"
+      x="160"
+      y="23"
+      spacing="0" />
+    <!--  上一天按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="exchargerank.rightView.preBtn"
+      iconInnerRectString="5,53,5,18,13"
+      backStyle="asset.exchargerank.pageBtnBg"
+      iconStyle="asset.exchargerank.pageBtnPreText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="335"
+      y="410" />
+    <!-- 下一天按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="exchargerank.rightView.nextBtn"
+      iconInnerRectString="5,53,5,18,13"
+      backStyle="asset.exchargerank.pageBtnBg"
+      iconStyle="asset.exchargerank.pageBtnNextText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="485"
+      y="410" />
+    <!-- 页码字数 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.rightView.pageTextStyle1"
+      textFormatStyle="exchargerank.rightView.pageTextStyle1_T"
+      autoSize="none"
+      x="415"
+      y="412"
+      width="60"
+      height="20" />
+    <!-- 充值排行上部背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="exchargerank.rightView.titleShineBg"
+      parentStyle="core.describeBackground_style40"
+      width="595"
+      height="350"
+      x="162"
+      y="49" />
+    <!-- 充值排行榜标题间距 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="exchargerank.rightView.titileGap"
+      resourceLink="asset.exchargerank.titleGap,asset.exchargerank.titleGap,asset.exchargerank.titleGap,asset.exchargerank.titleGap"
+      imageRectString="230|18|0|28|13,360|18|0|28|13,480|18|0|28|13,600|18|0|28|13"
+      x="20"
+      y="55" />
+    <!-- 标题栏目文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.rightView.rankTextStyle"
+      textFormatStyle="exchargerank.rightView.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="185"
+      y="62"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.rightView.userNameTextStyle"
+      textFormatStyle="exchargerank.rightView.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="280"
+      y="62"
+      width="80"
+      height="20"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.rightView.powerTextStyle"
+      textFormatStyle="exchargerank.rightView.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="405"
+      y="61"
+      width="80"
+      wordWrap="true"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.rightView.agencySeverTextStyle"
+      textFormatStyle="exchargerank.rightView.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="510"
+      y="62"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.rightView.exchanrgeNumberTextStyle"
+      textFormatStyle="exchargerank.rightView.pageTextStyle1_T2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="642"
+      y="51"
+      width="100"
+      wordWrap="true"
+      height="40" />
+    <!-- 顶部天数显示按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargerank,rightView.firstBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.exchargerank.selectedFirstBtn"
+      unselectedIconStyle="asset.exchargerank.unselectedFirstBtn"
+      selectedIconInnerRectString="25,48,7,19,13"
+      unselectedIconInnerRectString="24,48,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargerank,rightView.secondBtn"
+      parentStyle="exchargerank,rightView.firstBtn"
+      selectedIconStyle="asset.exchargerank.selectedSecondBtn"
+      unselectedIconStyle="asset.exchargerank.unselectedSecondBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargerank,rightView.thirdBtn"
+      parentStyle="exchargerank,rightView.firstBtn"
+      selectedIconStyle="asset.exchargerank.selectedThirdBtn"
+      unselectedIconStyle="asset.exchargerank.unselectedThirdBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargerank,rightView.fourBtn"
+      parentStyle="exchargerank,rightView.firstBtn"
+      selectedIconStyle="asset.exchargerank.selectedFourBtn"
+      unselectedIconStyle="asset.exchargerank.unselectedFourBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargerank,rightView.fiveBtn"
+      parentStyle="exchargerank,rightView.firstBtn"
+      selectedIconStyle="asset.exchargerank.selectedFiveBtn"
+      unselectedIconStyle="asset.exchargerank.unselectedFiveBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargerank,rightView.accumulativeBtn"
+      unSelectedStyle="asset.exchargerank.AccumulativeBtnUnselectedBack"
+      selectedStyle="asset.exchargerank.AccumulativeBtnSelectedBack"
+      selectedIconStyle="asset.exchargerank.AccumulativeBtn"
+      unselectedIconStyle="asset.exchargerank.AccumulativeBtn"
+      selectedIconInnerRectString="2,100,0,25,13"
+      unselectedIconInnerRectString="2,100,0,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="658"
+      y="20" />
+    <!-- 跨服排名列表每一行数据的分割线 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="exchargerank.dataItem.gap"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      width="595"
+      height="3"
+      y="55" />
+    <!-- 充值排行每一行的列表项文字显示 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.dataItem.rankText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="64"
+      width="90"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.dataItem.userNameText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="100"
+      y="64"
+      width="130"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.dataItem.levelText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="220"
+      y="64"
+      width="130"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.agencyServerText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="340"
+      y="64"
+      width="130"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.exchargeNumberText"
+      textFormatStyle="exchargerank.DataItemTimeText_t1,exchargerank.DataItemTimeText_t2,exchargerank.DataItemTimeText_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="475"
+      y="64"
+      width="120"
+      height="34"
+      wordWrap="true" />
+    <!-- 背包组件的头部文字显示 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargeRankRewardItem.title"
+      textFormatStyle="exchargeRankRewardItem.title_t1,exchargeRankRewardItem.title_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="385"
+      height="35"
+      x="0"
+      wordWrap="true" />
+    <!-- vip文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargeRankRewardItem.vipText"
+      textFormatStyle="exchargeRankRewardItem.title_vipText"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="0"
+      y="3" />
+    <!-- 充值数量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargeRankRewardItem.chargeNumberText"
+      textFormatStyle="exchargeRankRewardItem.title_chargeNumberText"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="35"
+      x="365"
+      y="3"
+      wordWrap="true" />
+    <!-- 背包里面的物品水平排列 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="exchargeRankRewardItem.hBox"
+      height="30"
+      x="0"
+      y="36"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="exchargeRankRewardItem.textBHox"
+      height="30"
+      x="0"
+      y="21"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="exchargeRankRewardItem.vBox"
+      height="30"
+      x="0"
+      y="0"
+      spacing="4" />
+    <!-- 领取按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="exchargeRankRewardItem.getBtn"
+      backStyle="asset.exchargeank.RewardItem.getBg"
+      x="470"
+      y="20"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="66"
+      height="29" />
+    <!-- 背包物品Item-->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="exchargerankFrame.BaseItemView"
+      iconStyle="exchargerank.ItemIcon"
+      textStyle="exchargerank.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="exchargerank.ItemIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="5"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="exchargerank.LightEffect"
+      resourceLink="asset.exchargerank.LightEffect"
+      x="27"
+      y="-27" />
+    <!-- 左侧按钮本文样式 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="exchargerankLeftButton.title"
+      colors="0xffc000,0xffffd5"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      x="30"
+      y="15"
+      width="140"
+      height="40" />
+    <!-- 跨服充值排名 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargeRankFrame.exchargeRankBtn"
+      unSelectedStyle="exchargerank.UnselectBack"
+      selectedStyle="exchargerank.SelectBack"
+      selectedIconStyle="asset.exchargerank.crossServerRank.Text2"
+      unselectedIconStyle="asset.exchargerank.crossServerRank.Text1"
+      selectedIconInnerRectString="-1,119,3,30,13"
+      unselectedIconInnerRectString="-1,119,3,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargeRankFrame.exchargeRewardBtn"
+      unSelectedStyle="exchargerank.UnselectBack"
+      selectedStyle="exchargerank.SelectBack"
+      selectedIconStyle="asset.exchargerank.crossServerReward.Text2"
+      unselectedIconStyle="asset.exchargerank.crossServerReward.Text1"
+      selectedIconInnerRectString="0,116,4,30,13"
+      unselectedIconInnerRectString="0,116,4,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="20"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="exchargeRankFrame.exchargeSingleRewardBtn"
+      unSelectedStyle="exchargerank.UnselectBack"
+      selectedStyle="exchargerank.SelectBack"
+      selectedIconStyle="asset.exchargerank.singleServerReward.Text2"
+      unselectedIconStyle="asset.exchargerank.singleServerReward.Text1"
+      selectedIconInnerRectString="0,115,4,30,13"
+      unselectedIconInnerRectString="0,115,4,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="20"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="exchargerank.UnselectBack"
+      resourceLink="asset.exchargerank.leftBtn1"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="exchargerank.SelectBack"
+      resourceLink="asset.exchargerank.leftBtn2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.MainFrameTipText"
+      textFormatStyle="exchargerank.MainFrameTipText_t"
+      autoSize="none"
+      wordWrap="true"
+      filterString="core.normal_f"
+      x="19"
+      y="241"
+      width="125"
+      height="97" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.MyTodayCostText"
+      textFormatStyle="exchargerank.MyTodayCostText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="34"
+      y="344"
+      width="90"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="exchargerank.MyTotalCount"
+      textFormatStyle="exchargerank.MyTotalCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="34"
+      y="405"
+      width="90"
+      height="22" />
+    <!-- item背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankRewardItem.itemBg"
+      resourceLink="asset.exchargeank.ItemBg"
+      scaleGridString="10,10,554,102"
+      width="574"
+      height="126"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankRewardItem.itemListBg"
+      resourceLink="asset.exchargeank.ItemListBg"
+      scaleGridString="10,10,439,68"
+      width="420"
+      height="80"
+      x="6"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankRewardItem2.itemBg"
+      resourceLink="asset.exchargeank.ItemBg"
+      scaleGridString="10,10,554,102"
+      width="574"
+      height="265"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankRewardItem2.itemListBg1"
+      resourceLink="asset.exchargeank.ItemListBg"
+      scaleGridString="10,10,439,68"
+      width="420"
+      height="100"
+      x="6"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankRewardItem2.itemListBg2"
+      resourceLink="asset.exchargeank.ItemListBg"
+      scaleGridString="10,10,439,68"
+      width="420"
+      height="100"
+      x="6"
+      y="151" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="exchargeRankRewardItem.itemList"
+      hScrollbarStyle="exchargeRankRewardItem.itemListHScrollbar"
+      hScrollbarInnerRectString="0,0,54,17,1"
+      viewportInnerRectString="0,0,-30,102,1"
+      hScrollProxy="0"
+      hUnitIncrement="60"
+      mouseWheelEnable="false"
+      width="410"
+      height="70"
+      x="0"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="exchargeRankRewardItem.itemListHScrollbar"
+      trackStyle="exchargeRankRewardItem.Scrollbar_BackH"
+      thumbStyle="core.Scrollbar04_StepH"
+      decreaseButtonStyle="core.Scrollbar04_left"
+      increaseButtonStyle="core.Scrollbar04_right"
+      trackInnerRectString="-2,-2,0,0,0"
+      thumbAreaInnerRectString="10,10,2,2,0"
+      decreaseButtonInnerRectString="0,0,11,12,11"
+      increaseButtonInnerRectString="0,0,11,12,12"
+      orientation="1"
+      thumbMinSize="38"
+      width="200"
+      height="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="exchargeRankRewardItem.Scrollbar_BackH"
+      parentStyle="core.Scrollbar04_BackH"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="exchargeRankRewardItem.hBox2"
+      height="30"
+      x="0"
+      y="30"
+      spacing="10" />
+  </components>
+</style>

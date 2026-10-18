@@ -1,0 +1,1359 @@
+<style
+  name="fashion"
+  source="ui/zh_cn/swf/fashion.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.nameText_t"
+      args="Arial,12,0xeeca00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionComposeView.rateText_t"
+      args="Arial,12,0xf6ff00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.helpConfirmBtnText_f"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.powerText_t"
+      args="Arial,12,0x79f050,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionComposeView.luckyCharmText_t"
+      args="Arial,12,0xddc543,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionComposeView.luckyCharmText_t2"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.powerNumText_t"
+      args="Arial,14,0x79f050,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FashionSwitchItem.NameText_t"
+      args="Arial,12,0xc8c3a9,,,,,,center"
+      leading="-1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="FashionSwitchItem.identityBtn.textf_t"
+      args="Arial,12,0xc8c3a9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.powerTxt2_t"
+      args="Arial,12,0xddc543,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.propertyTxt_t"
+      args="Arial,12,0x79f050,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.ProgressBarTxt_t"
+      args="Arial,14,0xc8c3a9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.ProgressLevelTxt_t"
+      args="Arial,14,0xc8c3a9,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.ProgressBarAddTxt_t"
+      args="Arial,14,0x38d0ff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshTxt_t"
+      args="Arial,14,0xffd378,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshProgressBarTxt_t"
+      args="Arial,12,0xcb9921,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshNeedNumTxt_t"
+      args="Arial,12,0xcb9921,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshHasNumTxt_t"
+      args="Arial,12,0xf0eac4,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshLastTxt_t"
+      args="Arial,12,0xb18f6f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.propertyRefreshTxt_t"
+      args="Arial,12,0xd4bc9b,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshNoLvTxt_t"
+      args="Arial,12,0xe40000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshAddAttriTxt_t"
+      args="Arial,12,0x79f050,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshAttriTxt_t1"
+      args="Arial,12,0xb18b6f,,,,,,left"
+      leading="-4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshAttriTxt_t2"
+      args="Arial,12,0xc19834,,,,,,left"
+      leading="-4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.refreshAttriTxt_t3"
+      args="Arial,12,0xa116b1,,,,,,left"
+      leading="-4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.fashionNumTxt_t"
+      args="Arial,12,0xf6e7a8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashion.fashionTipsTxt_t"
+      args="Arial,14,0xf6e7a8,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.propertyTipsTxt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fashionStoreFrame.changeShowBtn_Txt"
+      args="Arial,12,0xdebc98,,,,,,center"
+      letterSpacing="-1" />
+  </sets>
+  <bitmaps>
+    <!--分割线-->
+    <bitmapData
+      resourceLink="asset.fashion.refreshNeedNameBack"
+      width="160" />
+    <bitmapData
+      resourceLink="asset.playerinfo.hGapLine"
+      x="265"
+      y="320"
+      width="340"
+      height="5" />
+    <bitmapData
+      resourceLink="asset.fashion.vGapLine"
+      x="258"
+      y="40"
+      width="9"
+      height="459" />
+    <bitmapData
+      resourceLink="asset.fashion.composeSeal"
+      x="92"
+      y="99"
+      width="64"
+      height="65" />
+    <bitmapData
+      resourceLink="asset.FashionSwitchItem.NewImage"
+      x="10"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.FashionSwitchItem.NormalItemBg"
+      x="0"
+      y="105" />
+    <bitmapData
+      resourceLink="asset.fashion.levelBmp"
+      x="-41"
+      y="66" />
+    <bitmapData
+      resourceLink="asset.fashion.rightCircleNote"
+      x="146"
+      y="-39" />
+    <bitmapData
+      resourceLink="asset.fashion.ProgressBarBg"
+      x="-50"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.fashion.refreshPrBg"
+      x="-5"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.fashion.refreshBar"
+      x="-5"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.fashion.refreshBack03"
+      x="153"
+      y="349" />
+    <bitmapData
+      resourceLink="asset.fashion.changeShowBtn"
+      width="112"
+      height="32" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.fashion.bagBack"
+      stylename="asset.fashion.bagBack"
+      x="267"
+      y="325" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="fashion.LuckyCharmView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3"
+      iconWidth="50"
+      iconHeight="50"
+      x="32"
+      y="-11" />
+    <custom
+      classname="cell.view.fashionbag.FashionBagCell"
+      stylename="fashion.LuckyCharmView2"
+      textStyle="armyII.VipBoxItemCountTxt02"
+      iconStyle="vip.VIPReceiveIcon"
+      lockStyle="core.BagCellLock"
+      profileStyle="core.GoodsProfileBG"
+      profileX="2"
+      profileY="2"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3"
+      x="20"
+      y="415" />
+    <custom
+      classname="asset.fashionComposeView.back"
+      stylename="asset.fashionComposeView.back"
+      x="0"
+      y="12" />
+    <custom
+      classname="asset.fashion.ProgressGreenBar"
+      stylename="fashion.ProgressGreenBar"
+      x="11"
+      y="58" />
+    <custom
+      classname="asset.fashion.ProgressBlueBar"
+      stylename="fashion.ProgressBlueBar"
+      x="35"
+      y="49" />
+    <custom
+      classname="asset.fashion.composeResultNew"
+      stylename="fashion.composeResultNew"
+      x="0"
+      y="4" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="fashion.fashionProgressStrip"
+      tipStyle="yishi.view.tips.goods.FashionComposeTip"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="-40"
+      y="64" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="fashionstore.Frame"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      closestyle="core.CloseBtn"
+      moveInnerRectString="175,175,4,30,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="15"
+      containerY="40"
+      width="500"
+      height="300" />
+    <!--时装铁匠铺-->
+    <component
+      classname="fashion.FashionStoreFrame"
+      stylename="fashion.FashionStoreFrame"
+      parentStyle="fashionstore.Frame"
+      width="645"
+      height="580" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fashionstore.Frame.back"
+      parentStyle="core.describeBackground_style11"
+      width="610"
+      height="465"
+      x="0"
+      y="38" />
+    <!-- 职业背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fashionStoreFrame.heroBack"
+      resourceLink="asset.fashion.WarriorBack,asset.fashion.HunterBack,asset.fashion.WizardBack,asset.fashion.WarriorBackVocation,asset.fashion.HunterBackVocation,asset.fashion.WizardBackVocation"
+      x="3"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashionStoreFrame.rightBack"
+      resourceLink="fashion.rightBack.scaleX,asset.fashion.rightBack,asset.fashion.rightCircleBack"
+      imageRectString="169|169|0|278|13,169|169|0|278|13,0|341|0|321|13"
+      x="267"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fashion.rightBack.scaleX"
+      resourceLink="asset.fashion.rightBack"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashionStoreFrame.bagBack"
+      resourceLink="asset.fashion.bagBack,fashion.bagBack.scaleX"
+      imageRectString="169|169|0|135|13,169|169|0|135|13"
+      x="267"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fashion.bagBack.scaleX"
+      resourceLink="asset.fashion.bagBack"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionStoreFrame.composeBtn.UnSelected"
+      backStyle="asset.fashion.UnSelectedBack"
+      iconStyle="asset.fashion.composeUnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="161"
+      height="42"
+      iconInnerRectString="57,52,16,17,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionStoreFrame.composeBtn.Selected"
+      backStyle="asset.fashion.SelectedBack"
+      iconStyle="asset.fashion.composeSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="161"
+      height="42"
+      iconInnerRectString="54,55,14,18,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="fashionStoreFrame.composeBtn"
+      unSelectedStyle="fashionStoreFrame.composeBtn.UnSelected"
+      selectedStyle="fashionStoreFrame.composeBtn.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionStoreFrame.switchBtnUnSelected"
+      backStyle="asset.fashion.UnSelectedBack"
+      iconStyle="asset.fashion.switchUnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="161"
+      height="42"
+      iconInnerRectString="49,64,16,16,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionStoreFrame.switchBtnSelected"
+      backStyle="asset.fashion.SelectedBack"
+      iconStyle="asset.fashion.switchSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="161"
+      height="42"
+      iconInnerRectString="47,67,14,17,13"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="fashionStoreFrame.switchBtn"
+      unSelectedStyle="fashionStoreFrame.switchBtnUnSelected"
+      selectedStyle="fashionStoreFrame.switchBtnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="170"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.levelText"
+      textFormatStyle="armyII.EquipNickLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="9"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.nameText"
+      textFormatStyle="armyII.EquipNickNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="212"
+      height="20"
+      x="50"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.powerText"
+      textFormatStyle="fashionStoreFrame.powerText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="9"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.powerNumText"
+      textFormatStyle="fashionStoreFrame.powerNumText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="85"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashionComposeView.back"
+      resourceLink="asset.fashion.composeMaterial.Back1,asset.fashion.composeMaterial.Back1,asset.fashion.composeMaterial.Back2,asset.fashion.composeMaterial.Back2,asset.fashion.composeMaterial.image,asset.fashion.composeMaterial.image,asset.fashion.composeResultl.Back"
+      imageRectString="0|82|0|82|13,160|82|0|82|13,15|50|15|50|13,175|50|15|50|13,21|38|30|23|13,181|38|30|23|13,60|124|64|122|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashionComposeView.cellBack"
+      resourceLink="asset.fashion.composeMaterial.Back2,asset.fashion.composeMaterial.image"
+      imageRectString="0|50|0|50|13,6|38|15|23|13"
+      x="-3"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionComposeView.composeBtn"
+      backStyle="asset.fashion.composeBtnBack"
+      iconStyle="asset.fashion.composeBtnIcon"
+      iconInnerRectString="25,63,12,26,13"
+      width="114"
+      height="50"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="64"
+      y="239" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashionComposeView.helpBtn"
+      backStyle="asset.fashion.helpBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="219"
+      y="239" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashionSwitchView.helpBtn"
+      parentStyle="fashionComposeView.helpBtn"
+      x="252"
+      y="164" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionComposeView.rateText"
+      textFormatStyle="fashionComposeView.rateText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="20"
+      x="54"
+      y="242" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionComposeView.goldText"
+      textFormatStyle="fashionComposeView.rateText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="230"
+      y="243" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashionSwitchView.cellBack"
+      resourceLink="asset.fashion.composeMaterialIcon"
+      imageRectString="9|45|21|19|13"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashionSwitchView.cellBack2"
+      resourceLink="asset.fashion.composeMaterialIcon"
+      imageRectString="12|38|24|18|13"
+      x="-10"
+      y="-10" />
+    <custom
+      classname="cell.view.fashionbag.FashionBagCell"
+      stylename="fashion.fashionBagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="store.StoreBagCellIcon"
+      textStyle="core.BaseItemText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.composeCellText"
+      textFormatStyle="core.baseitem_t,core.baseitem_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="2"
+      y="26" />
+    <!-- 合成位置1 -->
+    <custom
+      classname="cell.view.fashionbag.FashionBagCell"
+      stylename="fashion.composeCell1"
+      backgroundStyle="fashionSwitchView.cellBack2"
+      iconStyle="store.StoreBagCellIcon"
+      textStyle="fashion.composeCellText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      x="1"
+      y="1"
+      unRegister="1" />
+    <!-- 合成位置2 -->
+    <custom
+      classname="cell.view.fashionbag.FashionBagCell"
+      stylename="fashion.composeCell2"
+      backgroundStyle="fashionSwitchView.cellBack2"
+      iconStyle="store.StoreBagCellIcon"
+      textStyle="fashion.composeCellText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="store.ProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      x="1"
+      y="1" />
+    <custom
+      classname="cell.view.fashionbag.FashionBagCell"
+      stylename="fashion.compose.resultCell"
+      iconStyle="fashion.BaseItemViewIcon"
+      textStyle="fashion.resultCellText"
+      equipStyle="asset.core.HeroEquipIcon"
+      profileStyle="core.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="42"
+      fashionIconY="36"
+      showProfile="true"
+      profileWidth="60"
+      profileHeight="60"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="fashion.BaseItemViewIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="32"
+      loadingY="32"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="fashion.BaseItemViewIcon2"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="32"
+      loadingY="32"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="-50"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="FashionSwitchItem.GoodsItem"
+      textStyle="core.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="42"
+      fashionIconY="36"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="fashion.BaseItemViewIcon2"
+      x="22"
+      y="22" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashionStoreFrame.preBtn"
+      parentStyle="auction.prePageBtn"
+      x="96"
+      y="96" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashionStoreFrame.nextBtn"
+      parentStyle="auction.nextPageBtn"
+      x="200"
+      y="96" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.pageText"
+      parentStyle="auction.PageTxt"
+      x="133"
+      y="100" />
+    <!-- 时装合成帮助 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fashionComposeView.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fashion.view.compose.helpFrameContent"
+      titleText="fashion.view.compose.helpFrameTitle"
+      textWidth="353" />
+    <!-- 时装切换帮助 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fashionSwitchView.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fashion.view.switch.helpFrameContent"
+      titleText="fashion.view.switch.helpFrameTitle"
+      textWidth="500" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fashionSwitchView.helpFrame2"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fashion.view.switch.helpFrameContent2"
+      titleText="fashion.view.switch.helpFrameTitle"
+      textWidth="500" />
+    <!-- 成功率文字 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="fishionComposeView.composeRate"
+      colors="0xfff8ad,0xff9c00"
+      alphas="1,1"
+      ratios="60,230"
+      x="-40"
+      y="242" />
+    <!-- 所需黄金 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="fishionComposeView.needGold"
+      colors="0xfff8ad,0xff9c00"
+      alphas="1,1"
+      ratios="60,230"
+      x="132"
+      y="242" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashion.buyBtn"
+      backStyle="asset.fashion.FashionBtnBack"
+      iconStyle="asset.fashion.BuyFashionTxt"
+      iconInnerRectString="11,125,9,28,13"
+      width="145"
+      height="46"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="112"
+      y="452"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.weaponBtn.UnSelectedStyle"
+      resourceLink="asset.fashion.UnSelectedBtnBack,asset.fashion.WeaponUnSelectedIcon"
+      imageRectString="0|80|0|32|13,17|44|7|16|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.weaponBtn.SelectedStyle"
+      resourceLink="asset.fashion.SelectedBtnBack,asset.fashion.WeaponSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,17|47|7|17|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionBag.weaponBtn"
+      unSelectedStyle="fashion.weaponBtn.UnSelectedStyle"
+      selectedStyle="fashion.weaponBtn.SelectedStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-3"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.clothBtn.UnSelectedStyle"
+      resourceLink="asset.fashion.UnSelectedBtnBack,asset.fashion.ClothesUnSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,5|67|7|18|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.clothBtn.SelectedStyle"
+      resourceLink="asset.fashion.SelectedBtnBack,asset.fashion.ClothesSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,5|72|7|19|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionBag.clothBtn"
+      unSelectedStyle="fashion.clothBtn.UnSelectedStyle"
+      selectedStyle="fashion.clothBtn.SelectedStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="80"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.hatBtn.UnSelectedStyle"
+      resourceLink="asset.fashion.UnSelectedBtnBack,asset.fashion.HairUnSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,9|59|7|22|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.hatBtn.SelectedStyle"
+      resourceLink="asset.fashion.SelectedBtnBack,asset.fashion.HairSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,9|63|7|23|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionBag.hatBtn"
+      unSelectedStyle="fashion.hatBtn.UnSelectedStyle"
+      selectedStyle="fashion.hatBtn.SelectedStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.wingBtn.UnSelectedStyle"
+      resourceLink="asset.fashion.UnSelectedBtnBack,asset.fashion.WingUnSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,22|31|7|16|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.wingBtn.SelectedStyle"
+      resourceLink="asset.fashion.SelectedBtnBack,asset.fashion.WingSelectedIcon"
+      parentStyle="fashion.weaponBtn.UnSelectedStyle"
+      imageRectString="0|80|0|32|13,22|33|7|17|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionBag.wingBtn"
+      unSelectedStyle="fashion.wingBtn.UnSelectedStyle"
+      selectedStyle="fashion.wingBtn.SelectedStyle"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="245"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="FashionComposeView.luckyCharmBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.fashion.checkstyle_2.Selected"
+      selectedIconStyle="asset.fashion.LuckyCharmBg"
+      unselectedIconStyle="asset.fashion.LuckyCharmBg"
+      selectedIconInnerRectString="28,60,-15,55,13"
+      unselectedIconInnerRectString="28,60,-15,55,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="25"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3"
+      x="195"
+      y="205"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionComposeView.luckyCharmText"
+      textFormatStyle="fashionComposeView.luckyCharmText_t,fashionComposeView.luckyCharmText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="33"
+      y="18" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="fashion.ComposeNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="worldboss.RiverNotAlert_confirmStyle_2"
+      cancelStyle="worldboss.RiverNotAlert_cancelStyle_2"
+      checkStyle="worldboss.RiverNotAlertCheckBtn2"
+      describeStyle="fashion.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="fashion.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="-1"
+      containerY="30"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="340"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="320"
+      height="100"
+      x="10"
+      y="0"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionSwitchView.weaponBtn"
+      parentStyle="FashionBag.weaponBtn"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionSwitchView.clothBtn"
+      parentStyle="FashionBag.clothBtn"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionSwitchView.hatBtn"
+      parentStyle="FashionBag.hatBtn"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="FashionSwitchView.wingBtn"
+      parentStyle="FashionBag.wingBtn"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="FashionSwitchItem.FashionItemBg"
+      resourceLink="asset.FashionSwitchItem.ItemBg01,asset.FashionSwitchItem.ItemBg02" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="FashionSwitchItem.profile"
+      resourceLink="asset.FashionSwitchItem.ItemS,asset.FashionSwitchItem.ItemA,asset.FashionSwitchItem.ItemB,asset.FashionSwitchItem.ItemC,asset.FashionSwitchItem.ItemD"
+      x="77"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="FashionSwitchItem.MouseOver"
+      parentStyle="shop.MouseOver1"
+      width="112"
+      height="190"
+      x="-5"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="FashionSwitchView.SaveBtn"
+      backStyle="asset.FashiohSwitchView.SaveBtnBack"
+      iconStyle="asset.FashiohSwitchView.SaveBtnIcon"
+      iconInnerRectString="6,104,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="115"
+      height="46"
+      x="-275"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="FashionSwitchView.TipsImage"
+      resourceLink="asset.FashiohSwitchView.SaveBtnBack,asset.FashiohSwitchView.SaveBtnIcon"
+      imageRectString="0|115|0|46|13,-4|120|12|24|13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="5"
+      tipGapH="0"
+      x="-275"
+      y="400"
+      filterString="core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="FashionSwitchView.bg"
+      resourceLink="asset.FashionSwitchView.BgImage,FashionSwitchView.BgImage.ScaleX"
+      imageRectString="0|169|0|135|13,338|169|0|135|13"
+      x="-9"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="FashionSwitchView.BgImage.ScaleX"
+      resourceLink="asset.FashionSwitchView.BgImage"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FashionSwitchItem.NameText"
+      textFormatStyle="FashionSwitchItem.NameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="101"
+      height="34"
+      x="1"
+      y="105"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="FashionSwitchItem.identityBtn"
+      autoSizeAble="false"
+      backStyle="asset.FashionSwitchItem.ItemBtnBack"
+      iconStyle="asset.FashionSwitchItem.IdentityIcon"
+      textStyle="FashionSwitchItem.identityBtn.text"
+      iconInnerRectString="-2,22,4,22,13"
+      backgoundInnerRectString="5,100,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="98"
+      height="30"
+      x="3"
+      y="140"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="FashionSwitchItem.identityBtn.text"
+      colors="0xffffff,0xf1cd9e"
+      alphas="1,1"
+      ratios="0,180"
+      filterString="core.normal2_f"
+      textFieldStyle="FashionSwitchItem.identityBtn.textf"
+      mouseEnabled="false"
+      width="100"
+      height="19"
+      y="8"
+      x="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="FashionSwitchItem.identityBtn.textf"
+      textFormatStyle="FashionSwitchItem.identityBtn.textf_t"
+      autoSize="none"
+      x="0"
+      y="0"
+      width="100"
+      height="19"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.powerTxt2"
+      textFormatStyle="fashionStoreFrame.powerTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="20"
+      x="15"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.propertyTxt"
+      textFormatStyle="fashionStoreFrame.propertyTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="100"
+      x="15"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="FashionSwitchItem.activityBtn"
+      autoSizeAble="false"
+      backStyle="asset.FashionSwitchItem.ActivityBtnBack"
+      iconStyle="asset.FashionSwitchItem.ActivityBtnTxt"
+      iconInnerRectString="22,62,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="106"
+      height="40"
+      x="0"
+      y="137" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.resultCellText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="15"
+      y="40" />
+    <!-- 时装显示1 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.ProgressBarTxt"
+      textFormatStyle="fashion.ProgressBarTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="90"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.ProgressLevelTxt"
+      textFormatStyle="fashion.ProgressLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="42"
+      x="-15"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.ProgressBarAddTxt"
+      textFormatStyle="fashion.ProgressBarAddTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="290"
+      y="63" />
+    <!-- 前一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashion.PrePageBtn"
+      backStyle="asset.fashion.PrePageBtn"
+      x="67"
+      y="203"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <!-- 后一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashion.NextPageBtn"
+      backStyle="asset.fashion.NextPageBtn"
+      x="152"
+      y="203"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <!-- 首页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashion.MinPageBtn"
+      backStyle="asset.fashion.MinPageBtn"
+      x="33"
+      y="203"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <!-- 尾页 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="fashion.MaxPageBtn"
+      backStyle="asset.fashion.MaxPageBtn"
+      x="186"
+      y="204"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.ComposeGoodsNumTxt"
+      textFormatStyle="store.ComposeGoodsNumTxt_t"
+      type="input"
+      restrict="0-9"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="104"
+      y="207"
+      width="40"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fashion.ComposeNumBg"
+      resourceLink="asset.fashion.ComposeNumBg"
+      x="99"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionStoreFrame.refreshBtnUnSelected"
+      backStyle="asset.fashion.UnSelectedBack"
+      iconStyle="asset.fashion.refreshUnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="160"
+      height="42"
+      offSetY="3"
+      iconInnerRectString="40,78,11,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashionStoreFrame.refreshBtnSelected"
+      backStyle="asset.fashion.SelectedBack"
+      iconStyle="asset.fashion.refreshSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="160"
+      height="42"
+      offSetY="3"
+      iconInnerRectString="40,78,11,24,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="fashionStoreFrame.refreshBtn"
+      unSelectedStyle="fashionStoreFrame.refreshBtnUnSelected"
+      selectedStyle="fashionStoreFrame.refreshBtnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="330"
+      y="0" />
+    <component
+      stylename="xmlui.fas.refreshBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.fashion.refreshBack01,asset.fashion.refreshCapText,asset.fashion.refreshArmText,asset.fashion.refreshClothesText,asset.fashion.refreshWingText,asset.fashion.ProgressBarBg,asset.fashion.refreshBack02"
+      imageRectString="0|0|19,30|129|19,158|239|19,267|129|19,162|19|19,0|300|19,2|323|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshLvTxt"
+      textFormatStyle="fashion.refreshTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="0"
+      y="0"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshProgressTxt"
+      textFormatStyle="fashion.refreshProgressBarTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="-30"
+      y="44"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.refreshBtn.back"
+      resourceLink="asset.fashion.refreshBtnIcon01,asset.fashion.refreshBtnIcon02"
+      imageRectString="-7|66|0|18|13,107|23|0|26|13"
+      x="10"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fashion.refreshBtn"
+      backStyle="asset.fashion.refreshBtnBack"
+      iconStyle="fashion.refreshBtn.back"
+      iconInnerRectString="17,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      offSetX="10"
+      offSetY="16"
+      x="103"
+      y="123" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fashion.refreshNeedGoodBack"
+      resourceLink="asset.fashion.refreshNeedNameBack,asset.fashion.refreshNeedName"
+      imageRectString="-25|0|19,-11|1|19"
+      x="117"
+      y="170" />
+    <component
+      stylename="fashion.fashionEffect01"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.fashion.refreshQicon01,asset.fashion.refreshGemIcon01,asset.fashion.refreshGemIcon03"
+      imageRectString="21|0|19,0|14|19,188|14|19"
+      x="66"
+      y="28" />
+    <component
+      stylename="fashion.fashionEffect02"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.fashion.refreshGemIcon01,asset.fashion.refreshGemIcon02,asset.fashion.refreshQicon02"
+      imageRectString="13|0|19,11|188|19,0|20|19"
+      x="53"
+      y="42" />
+    <component
+      stylename="fashion.fashionEffect03"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.fashion.refreshGemIcon03,asset.fashion.refreshGemIcon04,asset.fashion.refreshQicon03"
+      imageRectString="14|0|19,12|188|19,0|19|19"
+      x="240"
+      y="42" />
+    <component
+      stylename="fashion.fashionEffect04"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.fashion.refreshGemIcon02,asset.fashion.refreshGemIcon04,asset.fashion.refreshQicon04"
+      imageRectString="1|15|19,189|15|19,24|0|19"
+      x="63"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fashion.refreshChoseBack"
+      resourceLink="fashion.fashionEffect01,fashion.fashionEffect02,fashion.fashionEffect03,fashion.fashionEffect04" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshNeedNumTxt"
+      textFormatStyle="fashion.refreshNeedNumTxt_t"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      filterString="core.normal_f"
+      x="163"
+      y="139"
+      width="48"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshHasNumTxt"
+      textFormatStyle="fashion.refreshHasNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="217"
+      y="170"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.propertyRefreshTxt"
+      textFormatStyle="fashionStoreFrame.propertyRefreshTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="145"
+      x="10"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshAttriTxt"
+      textFormatStyle="fashion.refreshAttriTxt_t1,fashion.refreshAttriTxt_t2,fashion.refreshAttriTxt_t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="35"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshAddAttriTxt"
+      textFormatStyle="fashion.refreshAddAttriTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.refreshNoLvTxt"
+      textFormatStyle="fashion.refreshNoLvTxt_t,fashion.refreshAddAttriTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.fashionNumTxt"
+      textFormatStyle="fashion.fashionNumTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="5"
+      y="302"
+      width="65"
+      height="55"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashion.fashionTipsTxt"
+      textFormatStyle="fashion.fashionTipsTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="70"
+      y="327"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.propertyTipsTxt"
+      textFormatStyle="fashionStoreFrame.propertyTipsTxt_t"
+      autoSize="none"
+      wordWrap="true"
+      filterString="core.normal_f"
+      x="10"
+      y="375"
+      width="255"
+      height="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.propertyShowTxt"
+      textFormatStyle="fashionStoreFrame.propertyTipsTxt_t"
+      autoSize="none"
+      wordWrap="true"
+      filterString="core.normal_f"
+      x="35"
+      y="70"
+      width="130"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      stylename="fashionStoreFrame.propertyShowImg"
+      resourceLink="asset.fashion.propertyShowImg"
+      x="15"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="fashionStoreFrame.changeShowBtn"
+      backStyle="asset.fashion.changeShowBtn"
+      textStyle="fashionStoreFrame.changeShowBtn_text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="82"
+      height="32"
+      x="485"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fashionStoreFrame.changeBg"
+      resourceLink="asset.fashion.changeShowBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="485"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fashionStoreFrame.changeShowBtn_text"
+      textFormatStyle="fashionStoreFrame.changeShowBtn_Txt"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="112"
+      height="32"
+      wordWrap="true" />
+  </components>
+</style>

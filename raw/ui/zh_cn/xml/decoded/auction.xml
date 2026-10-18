@@ -1,0 +1,2418 @@
+<style
+  name="auction"
+  source="ui/zh_cn/swf/auction.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.ListTitleText_f"
+      args="Arial,12,0xf9e8c5,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.PageTxt_f"
+      args="Arial,14,0xfff9d2,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.DiamondTxt_f"
+      args="Arial,18,0x95feff,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.SearchComBoxTxt_f"
+      args="Arial,12,0x826b63,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellSubmitTopTip_f"
+      args="Arial,12,0x91b7cb,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellSubmitItemName_f"
+      args="Arial,12,0xc9e0ea,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellSubmitPrice_f"
+      args="Arial,18,0x95feff,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.searchInput_f"
+      args="Arial,12,0x826b63,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellSubmitCarryingCost_f"
+      args="Arial,12,0xd6c9a1,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellTimeLimitU_f"
+      args="Arial,12,0xf6ebcb,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellTimeLimit_f"
+      args="Arial,12,0xfff600,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.categorySub_f"
+      args="Arial,14,0xdea731,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.categorySubU_f"
+      args="Arial,14,0xe7d5ad,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellListMemberNum_f"
+      args="Arial,12,0xd6c9a1,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellListMemberCn_f"
+      args="Arial,12,0xd6c9a1,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.sellListMemberName_f"
+      args="Arial,12,0xd6c9a1,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.searchListMemberName_f"
+      args="Arial,12,0xecdfa1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.auctionConfitm_t"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.Describe_t"
+      args="Arial,12,0xfdf4c7,,,,,,left"
+      leading="5"
+      indent="28"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.DailyCountTxt_f"
+      args="Arial,14,0xe3b911,,,,,,right"
+      letterSpacing="1" />
+    <!-- 神秘商店 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.MysteryShopBuyUpdateTimeText_f"
+      args="Arial,16,0xf6f0c9,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.MysteryShopFreeCountTxt_f"
+      args="Arial,16,0xf6f0c9,true"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.MysteryGoodsNameTextStyle_t"
+      args="Arial,12,0xeae1c9,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.MysteryGoodsValueTextStyle_t"
+      args="Arial,15,0xddcda0,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.GoodsListTxt_f"
+      args="Arial,14,0x5da424,,,true,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.hotSearchItem.name_t"
+      args="Arial,12,0x5bd6ff,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.GoodsNameTextStyle_t1"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="auction.notJoinActPrompt_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.auction.searchNameLabelBMD"
+      x="0.35"
+      y="11.85" />
+    <bitmapData
+      resourceLink="asset.auction.searchGradeLabelBMD"
+      x="158.35"
+      y="11.85" />
+    <bitmapData
+      resourceLink="asset.auction.searchQualityLabelBMD"
+      x="316"
+      y="11.85" />
+    <bitmapData
+      resourceLink="asset.auction.searchJobLabelBMD"
+      x="476.3"
+      y="11.85" />
+    <bitmapData
+      resourceLink="asset.auction.searchAvailableLabelBMD"
+      x="662"
+      y="11.85" />
+    <bitmapData
+      resourceLink="asset.auction.searchNameInputBackBMD" />
+    <bitmapData
+      resourceLink="asset.core.PageNumBack"
+      x="35"
+      y="-1.5"
+      width="67" />
+    <bitmapData
+      resourceLink="asset.auction.Corner" />
+    <bitmapData
+      resourceLink="asset.auction.sellLeftFlag"
+      x="-7"
+      y="-15" />
+    <bitmapData
+      resourceLink="asset.auction.goldIcon"
+      x="161"
+      y="358" />
+    <bitmapData
+      resourceLink="asset.auction.CategorySmallItemLine"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.auction.CategorySmallItemArrow"
+      x="11"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.auction.searchComboBoxArrowBMD"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.auction.AuctionPriceLabelBMD"
+      x="-15"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.auction.DiamondBigIcon" />
+    <bitmapData
+      resourceLink="asset.auction.arrowsUp" />
+    <bitmapData
+      resourceLink="asset.auction.arrowsDown" />
+    <bitmapData
+      resourceLink="asset.auction.AuctionNumIcon"
+      x="-31"
+      y="6" />
+    <!-- 市场 -->
+    <bitmapData
+      resourceLink="asset.auction.MarketBg"
+      x="-9"
+      y="-18"
+      width="566"
+      height="325" />
+    <bitmapData
+      resourceLink="asset.auction.Mask"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.auction.MysteryShopIcon"
+      x="45"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.auction.AuctionShopIcon"
+      x="45"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.core.PrePageBtn"
+      x="-5" />
+    <!-- 神秘商店 -->
+    <bitmapData
+      resourceLink="asset.auction.UpdateTimeBg"
+      x="235"
+      y="340" />
+    <bitmapData
+      resourceLink="asset.auction.Line"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.auction.Goods"
+      x="48"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.auction.Price"
+      x="162"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.auction.Probability"
+      x="242"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.auction.TxtBg"
+      x="48"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.auction.LeftTimeTxt"
+      x="396"
+      y="365" />
+    <bitmapData
+      resourceLink="asset.auction.hotSearchBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.auction.hotSearchImage"
+      x="118"
+      y="43" />
+    <bitmapData
+      resourceLink="asset.auction.BuyTipTxt"
+      x="245"
+      y="387" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.auction.sellBack"
+      stylename="auction.sellSubmitBack"
+      x="2"
+      y="3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="auction.timeLeftTip"
+      tipWidth="150"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      width="80"
+      height="22" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="auction.UnitPriceTip"
+      tipWidth="200"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      width="80"
+      height="22" />
+    <custom
+      classname="auction.view.supermarket.MysteryShopView"
+      stylename="auction.MysteryShop"
+      x="275"
+      y="-15" />
+    <custom
+      classname="auction.view.supermarket.AuctionShopView"
+      stylename="auction.AuctionShop"
+      x="-10"
+      y="-15" />
+    <custom
+      classname="auction.view.mysteryshop.BuyGoodsList"
+      stylename="auction.BuyGoodsList"
+      x="7"
+      y="47" />
+    <custom
+      classname="auction.view.mysteryshop.BuyCountView"
+      stylename="auction.BuyCountView"
+      x="157"
+      y="16" />
+    <custom
+      classname="auction.view.mysteryshop.BuyTimeView"
+      stylename="auction.BuyTimeView"
+      x="5"
+      y="260" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.buyBtnImg1"
+      resourceLink="asset.auction.TopBtnUnselectBMD,asset.auction.TopBtnBuyUnselectBMD"
+      imageRectString="0|123|0|38|13,-6|132|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.buyBtnImg2"
+      resourceLink="asset.auction.TopBtnSelectBMD,asset.auction.TopBtnBuySelectBMD"
+      imageRectString="0|123|0|38|13,-6|132|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.sellBtnImg1"
+      resourceLink="asset.auction.TopBtnUnselectBMD,asset.auction.TopBtnSellUnselectBMD"
+      imageRectString="0|123|0|38|13,1|120|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.sellBtnImg2"
+      resourceLink="asset.auction.TopBtnSelectBMD,asset.auction.TopBtnSellSelectBMD"
+      imageRectString="0|123|0|38|13,1|120|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.sellPetBtnImg1"
+      resourceLink="asset.auction.TopBtnUnselectBMD,asset.auction.TopBtnSellPetUnselectBMD"
+      imageRectString="0|123|0|38|13,-7|135|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.sellPetBtnImg2"
+      resourceLink="asset.auction.TopBtnSelectBMD,asset.auction.TopBtnSellPetSelectBMD"
+      imageRectString="0|123|0|38|13,0|125|-1|41|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.recordBtnImg1"
+      resourceLink="asset.auction.TopBtnUnselectBMD,asset.auction.TopBtnRecordUnselectBMD"
+      imageRectString="0|123|0|38|13,8|108|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.recordBtnImg2"
+      resourceLink="asset.auction.TopBtnSelectBMD,asset.auction.TopBtnRecordSelectBMD"
+      imageRectString="0|123|0|38|13,8|108|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.limitBtnImg1"
+      resourceLink="asset.auction.TopBtnUnselectBMD,asset.auction.TopBtnLimitUnselectBMD"
+      imageRectString="0|123|0|38|13,-11|144|-2|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.bar.limitBtnImg2"
+      resourceLink="asset.auction.TopBtnSelectBMD,asset.auction.TopBtnLimitSelectBMD"
+      imageRectString="0|123|0|38|13,-11|144|-2|42|13" />
+    <!-- 购买物品按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.buySelectBtn"
+      backStyle="auction.bar.buyBtnImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.buyUnselectBtn"
+      backStyle="auction.bar.buyBtnImg1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="auction.bar.buyBtn"
+      unSelectedStyle="auction.bar.buyUnselectBtn"
+      selectedStyle="auction.bar.buySelectBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="100"
+      y="9" />
+    <!-- 出售物品按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.sellSelectBtn"
+      backStyle="auction.bar.sellBtnImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.sellUnselectBtn"
+      backStyle="auction.bar.sellBtnImg1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="auction.bar.sellBtn"
+      unSelectedStyle="auction.bar.sellUnselectBtn"
+      selectedStyle="auction.bar.sellSelectBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="228"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.sellPetSelectBtn"
+      backStyle="auction.bar.sellPetBtnImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.sellPetUnselectBtn"
+      backStyle="auction.bar.sellPetBtnImg1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="auction.bar.sellPetBtn"
+      unSelectedStyle="auction.bar.sellPetUnselectBtn"
+      selectedStyle="auction.bar.sellPetSelectBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="355"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.searchListCellBack"
+      resourceLink=",asset.core.ListCellBack,asset.core.ListCellBack"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.searchListCellTxt"
+      textFormatStyle="auction.searchListMemberName_f"
+      filterString="core.filter_01"
+      autoSize="none"
+      width="93"
+      height="20" />
+    <component
+      classname="yishi.view.adapter.SimpleAreaCellAdapter"
+      stylename="auction.searchListCell"
+      backStyle="auction.searchListCellBack"
+      backgoundInnerRectString="0,86,0,19,13"
+      textStyle="auction.searchListCellTxt"
+      autoSizeAble="false"
+      width="86"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="auction.searchComboListPanel"
+      backgoundStyle="core.describeBackground_style13"
+      backgoundInnerRectString="0,99,0,44,13"
+      viewportInnerRectString="2,95,2,40,13"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,1,3,2,3"
+      vScrollProxy="1"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|armyII.InformationSexListCell,20,97"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <!-- 我的竞拍按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.recordSelectBtn"
+      backStyle="auction.bar.recordBtnImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.recordUnselectBtn"
+      backStyle="auction.bar.recordBtnImg1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="auction.bar.recordBtn"
+      unSelectedStyle="auction.bar.recordUnselectBtn"
+      selectedStyle="auction.bar.recordSelectBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="483"
+      y="9" />
+    <!-- 限时竞拍按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.limitSelectBtn"
+      backStyle="auction.bar.limitBtnImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.bar.limitUnselectBtn"
+      backStyle="auction.bar.limitBtnImg1" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="auction.bar.limitBtn"
+      unSelectedStyle="auction.bar.limitUnselectBtn"
+      selectedStyle="auction.bar.limitSelectBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="612"
+      y="9" />
+    <!-- 拍卖行窗口 -->
+    <component
+      classname="auction.view.AuctionFrame"
+      stylename="auction.AuctionFrame"
+      closestyle="core.CloseBtn"
+      backStyle="asset.auction.AuctionFrameBack"
+      closeInnerRectString="29,6,2,29,14"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,4,1"
+      moveInnerRectString="0,30,0,45,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="15"
+      containerY="40"
+      width="905"
+      height="580" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.searchInputTxtStyle"
+      textFormatStyle="auction.searchInput_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextInput"
+      stylename="auction.searchInputTxt"
+      filterString="core.normal_f"
+      textStyle="auction.searchInputTxtStyle"
+      autoSize="none"
+      wordWrap="false"
+      width="100"
+      height="25"
+      maxChars="20"
+      x="50"
+      y="10" />
+    <!-- 搜索中的重置按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.search.resetBtn"
+      backStyle="asset.auction.searchResetBackBMD"
+      iconStyle="asset.auction.searchResetTxtBMD"
+      iconInnerRectString="36.95,49,6.85,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-0.75"
+      y="39" />
+    <!-- 搜索中的搜索按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.search.searchBtn"
+      backStyle="asset.auction.searchBtnBackBMD"
+      iconStyle="asset.auction.searchBtnTxtBMD"
+      iconInnerRectString="27.05,38,8.35,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="729.15"
+      y="4.05" />
+    <!-- 搜索中的可用物品 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="auction.search.availableBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      width="22"
+      height="22"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="640"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="asset.auction.searchComboBtnBack"
+      resourceLink="asset.auction.searchNameInputBackBMD,asset.auction.searchComboBoxArrowBMD"
+      imageRectString="0|106|0|27|13,91.45|9|10.35|8|13" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="asset.auction.searchComboBtn"
+      backStyle="asset.auction.searchComboBtnBack"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.SearchComBoxTxt"
+      textFormatStyle="auction.SearchComBoxTxt_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="75"
+      height="20"
+      maxChars="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="auction.SearchComboList"
+      backgoundStyle="core.describeBackground_style13"
+      backgoundInnerRectString="0,0,3,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,5,2,2,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|auction.searchListCell,20,40"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="auction.SearchComboList3"
+      parentStyle="auction.SearchComboList"
+      backgoundInnerRectString="0,105,0,84,13" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="auction.SearchComboBox"
+      listPanelStyle="auction.SearchComboList"
+      listInnerRectString="0,25,0,82,18"
+      textStyle="auction.SearchComBoxTxt"
+      textInnerRectString="7,75,4,20,13"
+      buttonStyle="asset.auction.searchComboBtn"
+      selctedPropName="text"
+      width="106"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="auction.SearchGradeComboBox"
+      parentStyle="auction.SearchComboBox"
+      x="203.45"
+      y="5.25"
+      listPanelStyle="auction.SearchComboList" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="auction.SearchJobComboBox"
+      parentStyle="auction.SearchComboBox"
+      x="520.45"
+      y="5.25"
+      listPanelStyle="auction.SearchComboList3" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="auction.SearchQualityComboBox"
+      parentStyle="auction.SearchComboBox"
+      x="361.05"
+      y="5.25"
+      listPanelStyle="auction.SearchComboList" />
+    <!-- 大背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.AuctionFrameBorder"
+      resourceLink="asset.auction.AuctionFrameBorder"
+      scaleGridString="10,10,60,45"
+      width="830.5"
+      height="468"
+      x="22"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitleIcon"
+      height="20"
+      y="7"
+      width="44" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitleName"
+      height="20"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitleGrade"
+      height="20"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitleTime"
+      height="20"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitleMan"
+      height="20"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitlePrice"
+      height="20"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.TitleButton"
+      stylename="auction.ListTitleCurPrice"
+      height="20"
+      y="7" />
+    <!-- 分类栏背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.buy.categoryBack"
+      parentStyle="core.describeBackground_style06"
+      width="220"
+      height="376" />
+    <!-- 购买栏结果背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.buy.resultBack"
+      parentStyle="core.describeBackground_style06"
+      width="601"
+      height="376" />
+    <!-- 出售提交栏背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.sell.sellBack"
+      parentStyle="core.describeBackground_style06"
+      width="219"
+      height="458" />
+    <!-- 出售栏结果背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.sell.resultBack"
+      parentStyle="core.describeBackground_style06"
+      width="601"
+      height="458" />
+    <!-- 我的竞拍栏结果背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.record.resultBack"
+      parentStyle="core.describeBackground_style06"
+      width="824"
+      height="460"
+      x="0"
+      y="1" />
+    <!-- 钻石背景1 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.diamondBackImg1"
+      resourceLink="asset.auction.DiamondBack,asset.auction.DiamondBigIcon,asset.auction.DiamondWord"
+      imageRectString="0|177|0|33|13,7|26|3|29|13,30|43|4|27|13"
+      x="6"
+      y="8" />
+    <!-- 钻石背景2 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.diamondBackImg2"
+      parentStyle="auction.diamondBackImg1"
+      x="6"
+      y="10.75" />
+    <!-- 钻石背景3 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.diamondBackImg3"
+      parentStyle="auction.diamondBackImg1"
+      x="5"
+      y="14" />
+    <!-- 钻石文本1 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.DiamondTxt1"
+      textFormatStyle="auction.DiamondTxt_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="95"
+      height="30"
+      maxChars="10"
+      x="85.75"
+      y="11.9" />
+    <!-- 钻石文本2 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.DiamondTxt2"
+      parentStyle="auction.DiamondTxt1"
+      x="83.75"
+      y="15.9" />
+    <!-- 钻石文本3 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.DiamondTxt3"
+      parentStyle="auction.DiamondTxt1"
+      x="82.75"
+      y="17.9" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.prePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      tipWidth="150"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,4,5,6"
+      isFollowMouse="false" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.nextPageBtn"
+      parentStyle="auction.prePageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="112.8" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.PageTxt"
+      textFormatStyle="auction.PageTxt_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="58"
+      height="20"
+      maxChars="10"
+      x="39.75"
+      y="3.9" />
+    <!-- 竞价按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.auctionBtn"
+      backStyle="asset.auction.AuctionBtnBack"
+      iconStyle="asset.auction.AuctionBtnTxt"
+      iconInnerRectString="25.95,54,8.9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="375"
+      y="5" />
+    <!-- 一口价按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.fixedPriceBtn"
+      backStyle="asset.auction.FixedPriceBtnBack"
+      iconStyle="asset.auction.FixedPriceBtnTxt"
+      iconInnerRectString="20.25,64,10,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="489"
+      y="5" />
+    <!-- 我的竞拍中的竞价按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.auctionBtn3"
+      parentStyle="auction.auctionBtn"
+      x="601"
+      y="12" />
+    <!-- 我的竞拍中的一口价按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.fixedPriceBtn3"
+      parentStyle="auction.fixedPriceBtn"
+      x="711"
+      y="12" />
+    <!-- 取消竞拍按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.cancelBtn"
+      backStyle="asset.auction.CancelAucBtnBack"
+      iconStyle="asset.auction.CancelAucBtnTxt"
+      iconInnerRectString="28.2,75,12.7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="471"
+      y="7" />
+    <!-- 拐角上的饰品 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.categoryCorner1"
+      resourceLink="asset.auction.Corner"
+      x="1"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.categoryCorner2"
+      parentStyle="auction.categoryCorner1"
+      x="219"
+      y="0"
+      rotation="90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.categoryCorner3"
+      parentStyle="auction.categoryCorner1"
+      x="0"
+      y="375"
+      rotation="270" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.categoryCorner4"
+      parentStyle="auction.categoryCorner1"
+      x="219"
+      y="375"
+      rotation="180" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.buyCorner1"
+      parentStyle="auction.categoryCorner1"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.buyCorner2"
+      parentStyle="auction.categoryCorner1"
+      x="600"
+      y="1"
+      rotation="90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.buyCorner3"
+      parentStyle="auction.categoryCorner1"
+      x="0"
+      y="376"
+      rotation="270" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.buyCorner4"
+      parentStyle="auction.categoryCorner1"
+      x="601"
+      y="376"
+      rotation="180" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.sellCorner2"
+      parentStyle="auction.categoryCorner1"
+      x="219"
+      y="0"
+      rotation="90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.sellResultCorner1"
+      parentStyle="auction.categoryCorner1"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.sellResultCorner2"
+      parentStyle="auction.categoryCorner1"
+      x="601"
+      y="1"
+      rotation="90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.sellResultCorner3"
+      parentStyle="auction.categoryCorner1"
+      x="0"
+      y="457"
+      rotation="270" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.sellResultCorner4"
+      parentStyle="auction.categoryCorner1"
+      x="601"
+      y="457"
+      rotation="180" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.recordCorner1"
+      parentStyle="auction.categoryCorner1"
+      x="1"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.recordCorner2"
+      parentStyle="auction.categoryCorner1"
+      x="823"
+      y="2"
+      rotation="90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.recordCorner3"
+      parentStyle="auction.categoryCorner1"
+      x="0"
+      y="460"
+      rotation="270" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.recordCorner4"
+      parentStyle="auction.categoryCorner1"
+      x="823"
+      y="460"
+      rotation="180" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.startAuctionBtnBack"
+      resourceLink="asset.auction.startSellBtnBmd1,asset.auction.startSellBtnBmd2,asset.auction.startSellBtnBmd3"
+      imageRectString="0|220|0|70|13,15|45|12|42|13,68|147|20|26|13" />
+    <!-- 开始拍卖按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.startAuctionBtn"
+      backStyle="auction.startAuctionBtnBack"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="-3"
+      y="400" />
+    <!-- 出售提交栏相关文本 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellSubmitTopTipTxt"
+      textFormatStyle="auction.sellSubmitTopTip_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="200"
+      height="40"
+      maxChars="50"
+      x="7.75"
+      y="31"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellSubmitItemNameTxt"
+      textFormatStyle="auction.sellSubmitItemName_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="115"
+      height="70"
+      maxChars="20"
+      x="92"
+      y="80"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellSubmitPriceTxtStyle"
+      textFormatStyle="auction.sellSubmitPrice_f" />
+    <component
+      classname="com.pickgliss.ui.controls.TextInput"
+      stylename="auction.sellSubmitPriceTxt1"
+      filterString="core.normal_f"
+      textStyle="auction.sellSubmitPriceTxtStyle"
+      width="175"
+      height="25"
+      maxChars="20"
+      x="8.75"
+      y="178" />
+    <component
+      classname="com.pickgliss.ui.controls.TextInput"
+      stylename="auction.sellSubmitPriceTxt2"
+      parentStyle="auction.sellSubmitPriceTxt1"
+      x="9.75"
+      y="242" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellSubmitCarryingCostTxt"
+      textFormatStyle="auction.sellSubmitCarryingCost_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="50"
+      height="20"
+      maxChars="10"
+      x="109"
+      y="361" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellTimeLimitTxt"
+      textFormatStyle="auction.sellTimeLimit_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="60"
+      height="20"
+      maxChars="50"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellTimeLimitTxtU"
+      textFormatStyle="auction.sellTimeLimitU_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="60"
+      height="20"
+      maxChars="50"
+      x="0"
+      y="0" />
+    <!-- 出售提交栏相关文本 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="auction.sellTimeLimitSelectedBtn"
+      backStyle="asset.auction.timeLimit2"
+      textStyle="auction.sellTimeLimitTxt"
+      autoSizeAble="false"
+      width="65"
+      height="25"
+      backgoundInnerRectString="2,59,3,25,13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="auction.sellTimeLimitUnselectedBtn"
+      backStyle="asset.auction.timeLimit1"
+      textStyle="auction.sellTimeLimitTxtU"
+      backgoundInnerRectString="2,59,3,25,13"
+      autoSizeAble="false"
+      width="65"
+      height="25" />
+    <component
+      classname="auction.view.common.TimeLimitButton"
+      stylename="auction.sellTimeLimitBtn1"
+      unSelectedStyle="auction.sellTimeLimitUnselectedBtn"
+      selectedStyle="auction.sellTimeLimitSelectedBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="7"
+      y="309" />
+    <component
+      classname="auction.view.common.TimeLimitButton"
+      stylename="auction.sellTimeLimitBtn2"
+      parentStyle="auction.sellTimeLimitBtn1"
+      x="76"
+      y="309" />
+    <component
+      classname="auction.view.common.TimeLimitButton"
+      stylename="auction.sellTimeLimitBtn3"
+      parentStyle="auction.sellTimeLimitBtn1"
+      x="145"
+      y="309" />
+    <!-- 列表相关的样式 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listItemSelectS"
+      resourceLink="asset.auction.listItemSelectIcon,core.TitleBack_Style04"
+      imageRectString="0|40|0|40|13,39|557|-1|44|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listItemUnselectS"
+      resourceLink="asset.auction.listItemUnselectIcon,core.TitleBack_Style02"
+      imageRectString="0|40|0|40|13,39|557|-1|44|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.listItemOverS"
+      parentStyle="core.ItemOver2"
+      width="597"
+      height="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listItemSelectL"
+      resourceLink="asset.auction.listItemSelectIcon,core.TitleBack_Style04"
+      imageRectString="0|40|0|40|13,39|780|-1|44|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listItemUnselectL"
+      resourceLink="asset.auction.listItemUnselectIcon,core.TitleBack_Style02"
+      imageRectString="0|40|0|40|13,39|780|-1|44|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.listItemOverL"
+      parentStyle="core.ItemOver2"
+      width="820"
+      height="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listTitleBmdS"
+      resourceLink="core.TitleBack_Style01,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|599|0|32|13,45|22|3|28|13,162|22|3|28|13,210|22|3|28|13,280|22|3|28|13,370|22|3|28|13,480|22|3|28|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listTitleBmdL"
+      resourceLink="core.TitleBack_Style01,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|822|0|32|13,45|22|3|28|13,180|22|3|28|13,260|22|3|28|13,400|22|3|28|13,548|22|3|28|13,685|22|3|28|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberNameTxtS"
+      textFormatStyle="auction.sellListMemberName_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="100"
+      height="30"
+      maxChars="20"
+      x="42"
+      y="11"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberGradeTxtS"
+      textFormatStyle="auction.sellListMemberNum_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="47"
+      height="20"
+      maxChars="10"
+      x="160.45"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberTimeLeftTxtS"
+      textFormatStyle="auction.sellListMemberCn_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="72"
+      height="20"
+      maxChars="10"
+      x="208.55"
+      y="12"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberSalerTxtS"
+      textFormatStyle="auction.sellListMemberCn_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="91"
+      height="20"
+      maxChars="50"
+      x="283.4"
+      y="12"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listPriceBackS1"
+      resourceLink="asset.auction.ListPriceBack,asset.auction.DiamondIcon"
+      imageRectString="0|103|0|23|13,86.05|18|3.1|17|13"
+      x="375"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberFixedPriceTxtS"
+      textFormatStyle="auction.sellListMemberNum_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="100"
+      height="20"
+      maxChars="50"
+      x="377"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listPriceBackS2"
+      parentStyle="auction.listPriceBackS1"
+      x="485"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberCurrPriceTxtS"
+      textFormatStyle="auction.sellListMemberNum_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="100"
+      height="20"
+      maxChars="50"
+      x="487"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberNameTxtL"
+      textFormatStyle="auction.sellListMemberName_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="138"
+      height="30"
+      maxChars="20"
+      x="45"
+      y="11"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberGradeTxtL"
+      textFormatStyle="auction.sellListMemberNum_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="83"
+      height="20"
+      maxChars="10"
+      x="182"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberTimeLeftTxtL"
+      textFormatStyle="auction.sellListMemberCn_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="140"
+      height="20"
+      maxChars="10"
+      x="263"
+      y="12"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberSalerTxtL"
+      textFormatStyle="auction.sellListMemberCn_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="147"
+      height="20"
+      maxChars="50"
+      x="402"
+      y="12"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listPriceBackL1"
+      parentStyle="auction.listPriceBackS1"
+      x="572" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberFixedPriceTxtL"
+      parentStyle="auction.listMemberFixedPriceTxtS"
+      x="576" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.listPriceBackL2"
+      parentStyle="auction.listPriceBackS1"
+      x="708" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listMemberCurrPriceTxtL"
+      parentStyle="auction.listMemberCurrPriceTxtS"
+      x="713" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="asset.auction.CategoryBigItemBtn1"
+      unSelectedStyle="asset.auction.CategoryBigItemBack1"
+      selectedStyle="asset.auction.CategoryBigItemBack2"
+      selectedIconStyle="asset.auction.CategoryBigItemIcon1_2"
+      unselectedIconStyle="asset.auction.CategoryBigItemIcon1_2"
+      selectedIconInnerRectString="65,65,-3,40,13"
+      unselectedIconInnerRectString="65,65,-3,40,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="196"
+      height="34"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="asset.auction.CategoryBigItemBtn2"
+      unSelectedStyle="asset.auction.CategoryBigItemBack1"
+      selectedStyle="asset.auction.CategoryBigItemBack2"
+      selectedIconStyle="asset.auction.CategoryBigItemIcon2_2"
+      unselectedIconStyle="asset.auction.CategoryBigItemIcon2_2"
+      selectedIconInnerRectString="65,64,-3,40,13"
+      unselectedIconInnerRectString="65,64,-3,40,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="196"
+      height="34"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="asset.auction.CategoryBigItemBtn3"
+      unSelectedStyle="asset.auction.CategoryBigItemBack1"
+      selectedStyle="asset.auction.CategoryBigItemBack2"
+      selectedIconStyle="asset.auction.CategoryBigItemIcon3_2"
+      unselectedIconStyle="asset.auction.CategoryBigItemIcon3_2"
+      selectedIconInnerRectString="45,102,-3,40,13"
+      unselectedIconInnerRectString="45,102,-3,40,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="196"
+      height="34"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="asset.auction.CategoryBigItemBtn5"
+      unSelectedStyle="asset.auction.CategoryBigItemBack1"
+      selectedStyle="asset.auction.CategoryBigItemBack2"
+      selectedIconStyle="asset.auction.CategoryBigItemIcon4_2"
+      unselectedIconStyle="asset.auction.CategoryBigItemIcon4_2"
+      selectedIconInnerRectString="55,83,-3,40,13"
+      unselectedIconInnerRectString="55,83,-3,40,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="196"
+      height="34"
+      displacement="false" />
+    <!-- 分类搜索子选项 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.categorySubTxt"
+      textFormatStyle="auction.categorySub_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="160"
+      height="20"
+      maxChars="10"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.categorySubTxtU"
+      textFormatStyle="auction.categorySubU_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="160"
+      height="20"
+      maxChars="10"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="auction.categorySelectedBtn"
+      backStyle="asset.auction.CategorySmallItemBack2"
+      textStyle="auction.categorySubTxt"
+      autoSizeAble="false"
+      width="191"
+      height="20"
+      backgoundInnerRectString="40,160,1,25,13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="auction.categoryUnselectedBtn"
+      backStyle="asset.auction.CategorySmallItemBack1"
+      textStyle="auction.categorySubTxtU"
+      backgoundInnerRectString="40,160,1,25,13"
+      autoSizeAble="false"
+      width="191"
+      height="20" />
+    <component
+      classname="auction.view.common.TimeLimitButton"
+      stylename="auction.categorySubBtn"
+      unSelectedStyle="auction.categoryUnselectedBtn"
+      selectedStyle="auction.categorySelectedBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="2"
+      y="3" />
+    <!-- 背包相关 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.bag.Bg"
+      resourceLink="asset.auction.AuctionFrameBorder"
+      scaleGridString="10,10,60,45"
+      width="353"
+      height="381" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.ProfileBG"
+      parentStyle="core.GoodsProfileBG"
+      x="1"
+      y="1" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="auction.bag.SimpleTileList"
+      vSpace="-1"
+      hSpace="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="auction.bag.Scroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="359"
+      height="370"
+      x="7"
+      y="7" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="acution.BagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="auction.view.sell.AuctionSellBagCell"
+      stylename="acution.BagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="acution.BagCellIcon"
+      textStyle="core.BaseItemText"
+      profileStyle="auction.ProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <component
+      classname="auction.view.sell.AuctionBagFrame"
+      stylename="auction.AuctionBagFrame"
+      parentStyle="core.Frame2"
+      width="383"
+      height="490"
+      containerX="17"
+      containerY="57" />
+    <component
+      classname="auction.view.sell.PetSellView"
+      stylename="auction.PetSellView"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="0,30,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="295"
+      height="140" />
+    <!-- 分类搜索栏滚动面板 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="auction.search.Scroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="0"
+      hScrollProxy="2"
+      width="212"
+      height="368"
+      x="3"
+      y="4" />
+    <!-- 竞拍价格输入框 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.AuctionInputBack"
+      parentStyle="core.InputBack_Style_05"
+      width="180"
+      height="30"
+      x="61"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.AuctionInputText"
+      textFormatStyle="core.RoomPasswdInputTxt_t"
+      filterString="core.normal_f"
+      multiline="false"
+      wordWrap="false"
+      type="input"
+      autoSize="none"
+      width="180"
+      height="30"
+      x="60"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.AuctionInputWarmText"
+      textFormatStyle="core.RoomPasswdWarmTxt_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      autoSize="none"
+      width="200"
+      height="24"
+      x="40"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.AuctionConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="9"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.AuctionCancelBtn"
+      parentStyle="core.AlertButtonCancel_1"
+      x="159"
+      y="75" />
+    <component
+      classname="auction.view.common.AuctionInputFrame"
+      stylename="auction.AuctionInputFrame"
+      parentStyle="core.Frame2"
+      width="340"
+      height="205" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="auction.sellTargetCellIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="5"
+      y="5"
+      iconWidth="63"
+      iconHeight="61" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.sellTargetCellText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="7"
+      y="46" />
+    <custom
+      classname="auction.view.sell.AuctionSellTargetCell"
+      stylename="auction.sellTargetCell"
+      iconStyle="auction.sellTargetCellIcon"
+      textStyle="auction.sellTargetCellText"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="47"
+      strengthenY="45"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,1,2,0,3"
+      x="12"
+      y="67" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="auction.listGoodItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="4"
+      y="6"
+      iconWidth="33"
+      iconHeight="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.listGoodItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="20"
+      x="7"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="auction.listGoodItemS"
+      iconStyle="auction.listGoodItemIcon"
+      textStyle="auction.listGoodItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="3"
+      profileY="3"
+      profileWidth="36"
+      profileHeight="38"
+      showProfile="true"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="0"
+      strengthenY="0"
+      x="-1"
+      y="-1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="auction.listGoodItemL"
+      parentStyle="auction.listGoodItemS" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.auctionhelpBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      backStyle="asset.core.HelpButton_01"
+      x="839"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.listItemAuctionedIconS"
+      resourceLink="asset.auction.listItemAuctionedIcon"
+      x="135"
+      y="8"
+      tipWidth="150"
+      tipGapV="0"
+      tipGapH="-10"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,4,5,6"
+      width="80"
+      height="22"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.listItemAuctionedIconL"
+      parentStyle="auction.listItemAuctionedIconS"
+      x="155"
+      y="8" />
+    <!--拍卖数量选择-->
+    <component
+      classname="auction.view.sell.AuctionSellNumPane"
+      stylename="auction.AuctionSellNumFrame"
+      parentStyle="core.Frame2"
+      width="340"
+      height="225" />
+    <!--增加数量-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.AddButton"
+      backStyle="asset.auction.addButton"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="26"
+      height="18"
+      x="241"
+      y="7" />
+    <!--	减少数量-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.ReduceButton"
+      parentStyle="auction.AddButton"
+      backStyle="asset.auction.reduceButton"
+      y="23" />
+    <!--出售数量-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.AuctionBuyNumText"
+      textFormatStyle="core.RoomPasswdInputTxt_t"
+      filterString="core.normal_f"
+      multiline="false"
+      wordWrap="false"
+      type="input"
+      autoSize="none"
+      width="180"
+      height="30"
+      x="60"
+      y="11" />
+    <!-- 市场 -->
+    <component
+      classname="auction.SupermarketFrame"
+      stylename="auction.SupermarketFrame"
+      parentStyle="core.Frame1"
+      width="606"
+      height="439"
+      containerX="26"
+      containerY="84" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.DescribeText"
+      textFormatStyle="auction.Describe_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="100"
+      multiline="true"
+      wordWrap="true"
+      x="45"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.MysteryShopButton"
+      backStyle="asset.auction.MysteryShopBtnBg"
+      iconStyle="asset.auction.EnterBtnTxt"
+      iconInnerRectString="39,58,12,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="77"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.AuctionShopButton"
+      parentStyle="auction.MysteryShopButton"
+      backStyle="asset.auction.AuctionShopBtnBg"
+      iconStyle="asset.auction.EnterBtnTxt"
+      iconInnerRectString="39,58,12,23,13"
+      x="77"
+      y="240" />
+    <!-- 神秘商店 -->
+    <component
+      classname="auction.view.mysteryshop.MysteryShopFrame"
+      stylename="auction.MysteryShopFrame"
+      parentStyle="core.Frame1"
+      containerX="19"
+      containerY="63"
+      width="774"
+      height="517" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="auction.MysteryShopFrameLeftBackBg"
+      parentStyle="core.describeBackground_style11"
+      width="228"
+      height="408"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="auction.MysteryShopFrameRightBackBg"
+      parentStyle="core.describeBackground_style11"
+      width="506"
+      height="371"
+      x="230"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.ProjectRareItem"
+      resourceLink="asset.auction.ProjectTxtBg,asset.auction.ProjectRareItemTxt"
+      imageRectString="0|0|0|0|0,74|78|5|19|13"
+      x="0"
+      y="1"
+      width="224"
+      height="28" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.ProjectLuckyPlayer"
+      resourceLink="asset.auction.ProjectTxtBg,asset.auction.ProjectLuckyPlayerTxt"
+      imageRectString="0|0|0|0|0,84|64|5|19|13"
+      x="0"
+      y="147"
+      width="224"
+      height="28" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.MysteryShopFrame.LuckyPlayerBg.scaleX"
+      resourceLink="asset.auction.LuckyPlayerBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.MysteryShopFrame.LuckyPlayerBg.scaleY"
+      resourceLink="asset.auction.LuckyPlayerBg"
+      scaleY="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.MysteryShopFrame.LuckyPlayerBg.scaleXY"
+      resourceLink="asset.auction.LuckyPlayerBg"
+      scaleX="-1"
+      scaleY="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.LeftBack"
+      resourceLink="asset.auction.LuckyPlayerBg,auction.MysteryShopFrame.LuckyPlayerBg.scaleY,auction.MysteryShopFrame.LuckyPlayerBg.scaleX,auction.MysteryShopFrame.LuckyPlayerBg.scaleXY"
+      imageRectString="0|111|0|177|0,0|111|354|-177|0,222|-111|0|177|0,222|-111|354|-177|0"
+      width="222"
+      height="354"
+      x="3"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="auction.MysteryShopFrame.RightBack"
+      parentStyle="core.describeBackground_style25"
+      width="500"
+      height="365"
+      x="233"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.MysteryShopFrame.BottomBg.scaleX"
+      resourceLink="asset.auction.BottomBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.BottomBg"
+      resourceLink="asset.auction.BottomBg,auction.MysteryShopFrame.BottomBg.scaleX"
+      imageRectString="0|249|0|0|0,498|-249|0|0|0"
+      width="498"
+      height="66"
+      x="233"
+      y="337" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.ConsumePointsBg"
+      resourceLink="asset.auction.ConsumePointsBg,asset.auction.ConsumePointsTxt"
+      imageRectString="0|0|0|0|0,7|49|10|16|13"
+      x="245"
+      y="350"
+      width="155"
+      height="35" />
+    <!-- 神秘商店-稀有物品 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="auction.MysteryShopFrame.BaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="auction.MysteryShopFrame.BaseItemView"
+      iconStyle="auction.MysteryShopFrame.BaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <!-- 神秘商店-幸运玩家-ScrollPanel -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="auction.MysteryShopFrame.ScrollPanel"
+      vScrollbarStyle="auction.MysteryShopFrame.VScrollbar"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="4,-2,8,0,5"
+      vScrollProxy="0"
+      vUnitIncrement="10"
+      width="228"
+      height="230"
+      x="0"
+      y="177" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="auction.MysteryShopFrame.VScrollbar"
+      parentStyle="core.VScrollbar02"
+      trackStyle="consortia.Scrollbar04_Back"
+      trackInnerRectString="1,2,0,0,0"
+      thumbAreaInnerRectString="1,1,10,10,0"
+      width="15"
+      height="260" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="auction.MysteryShopFrame.Vbox"
+      width="440"
+      spacing="0"
+      height="305" />
+    <!-- 购买物品、积分兑换 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.SelectedTableBtnAsset"
+      resourceLink="asset.core.SelectedTableBtn_style1_L,asset.core.SelectedTableBtn_style1_C,asset.core.SelectedTableBtn_style1_R"
+      imageRectString="0|56|0|42|13,56|20|0|42|13,76|57|0|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopFrame.UnSelectedTableBtnAsset"
+      resourceLink="asset.core.UnSelectedTableBtn_style1_L,asset.core.UnSelectedTableBtn_style1_C,asset.core.UnSelectedTableBtn_style1_R"
+      imageRectString="0|48|0|37|13,48|22|0|37|13,70|57|0|37|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="auction.MysteryShopFrame.SelectBuyItemBtn"
+      selectedStyle="auction.MysteryShopFrame.SelectedTableBtnAsset"
+      unSelectedStyle="auction.MysteryShopFrame.UnSelectedTableBtnAsset"
+      selectedIconStyle="asset.auction.SelectBuyItemTxt"
+      unselectedIconStyle="asset.auction.SelectBuyItemTxt"
+      selectedIconInnerRectString="35,62,7,30,13"
+      unselectedIconInnerRectString="35,62,7,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="260"
+      y="0"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="auction.MysteryShopFrame.SelectExchangeItemBtn"
+      parentStyle="auction.MysteryShopFrame.SelectBuyItemBtn"
+      selectedIconInnerRectString="32,64,13,20,13"
+      unselectedIconInnerRectString="32,64,13,20,13"
+      selectedIconStyle="asset.auction.SelectExchangeItemTxt"
+      unselectedIconStyle="asset.auction.SelectExchangeItemTxt"
+      x="400"
+      y="0" />
+    <!-- 神秘商店-Page -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.MysteryShopFrame.PageBg"
+      resourceLink="asset.core.pageBg"
+      x="576"
+      y="357" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryShopFrame.PageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="578"
+      y="363" />
+    <!-- 神秘商店-上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.MysteryShopFrame.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="500"
+      y="360" />
+    <!-- 神秘商店-下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.MysteryShopFrame.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="648"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryShopFrame.EventItemMsgTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="left"
+      wordWrap="true"
+      width="200"
+      x="0"
+      y="0" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="auction.MysteryShopHelpBtn"
+      parentStyle="auction.auctionhelpBtn"
+      x="695"
+      y="-31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.DailyCountTxt"
+      textFormatStyle="auction.DailyCountTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="195"
+      height="40"
+      x="526"
+      y="-1"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.GoodsListTxt"
+      textFormatStyle="auction.GoodsListTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="168"
+      height="20"
+      x="380"
+      y="16" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="auction.MysteryShopBuyUpdateTime"
+      timeTxtStyle="auction.MysteryShopBuyUpdateTimeText"
+      x="508"
+      y="362" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryShopBuyUpdateTimeText"
+      textFormatStyle="auction.MysteryShopBuyUpdateTimeText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.MysteryShopQuickRefreshBtn"
+      backStyle="asset.core.Style11Btn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,0,0"
+      tipGapV="-5"
+      isFollowMouse="false"
+      iconStyle="asset.auction.QuickRefreshTxtImg"
+      iconInnerRectString="31,91,16,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="575"
+      y="344"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryShopFreeCountTxt"
+      textFormatStyle="auction.MysteryShopFreeCountTxt_f"
+      x="514"
+      y="24"
+      filterString="core.normal_f" />
+    <!-- 神秘商店item -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.MysteryShopGoodsItemOver"
+      parentStyle="core.ItemOver3"
+      mouseEnabled="false"
+      mouseChildren="false"
+      width="251"
+      height="101"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.MysteryShopGoodsItemAsset"
+      resourceLink="asset.auction.GoodBoxNew,auction.MouseOver1"
+      imageRectString="0|251|0|101|13,0|251|-8|115|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.MysteryShopGoodsItemBg"
+      resourceLink="asset.auction.GoodBoxNew,auction.MysteryShopGoodsItemAsset" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="auction.MouseOver1"
+      parentStyle="shop.MouseOver1"
+      width="251"
+      height="115" />
+    <!--购买按钮-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.MysteryShopBuyImage"
+      resourceLink="asset.core.ShopBuyBtn,asset.core.ShopBuyBtn,asset.core.ShopBuyBtn2,asset.core.ShopBuyBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.MysteryShopBuyBtn"
+      backStyle="auction.MysteryShopBuyImage"
+      iconStyle="asset.core.ShopBuyTxt"
+      iconInnerRectString="19,40,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="auction.MysteryShopBoughtBtn"
+      backStyle="auction.MysteryShopBuyImage"
+      iconStyle="asset.auction.Bought"
+      iconInnerRectString="15,50,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="65" />
+    <!-- goodsName -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryGoodsNameTextStyle"
+      textFormatStyle="auction.MysteryGoodsNameTextStyle_t"
+      x="80"
+      y="15"
+      autoSize="none"
+      width="165"
+      height="60"
+      wordWrap="true" />
+    <!-- goodsValue -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryGoodsValueTextStyle"
+      textFormatStyle="auction.MysteryGoodsValueTextStyle_t"
+      autoSize="none"
+      x="150"
+      y="39"
+      width="70"
+      height="20" />
+    <!-- 图标 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.MysteryGoodsValueIcon"
+      resourceLink="asset.auction.DiamondIcon"
+      x="220"
+      y="40" />
+    <!-- 积分兑换-value -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryGoodsPointsTextStyle"
+      textFormatStyle="auction.MysteryGoodsValueTextStyle_t"
+      autoSize="none"
+      x="130"
+      y="38"
+      width="70"
+      height="20" />
+    <!-- 积分兑换-图标 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.MysteryGoodsPointsIcon"
+      resourceLink="asset.auction.PointsImg"
+      x="201"
+      y="40" />
+    <!-- ItemView -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="auction.MysteryBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="65"
+      iconWidth="65"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="auction.MysteryBaseItemView"
+      iconStyle="auction.MysteryBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="true"
+      x="15"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="auction.AuctionFramePaneBack.Scale9CornerImage"
+      parentStyle="core.describeBackground_style25"
+      width="823"
+      height="460"
+      x="24"
+      y="44" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="auction.TopBarBackBMD.MutipleImage"
+      resourceLink="asset.auction.TopBarBackBMD"
+      x="50"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="auction.TopBarBackBMD.scaleXImage"
+      resourceLink="asset.auction.TopBarBackBMD"
+      scaleX="-1" />
+    <!-- 神秘商店刷新提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="auction.MysteryShopRefreshAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="auction.MysteryShopRefreshConfirmBtn"
+      cancelStyle="auction.MysteryShopRefreshCancelBtn"
+      checkStyle="auction.MysteryShopRefreshCheckBtn"
+      describeStyle="auction.MysteryShopRefreshDescribe"
+      usebindPointStyle="auction.MysteryShopRefreshUseBindPoint"
+      showPromptStyle="auction.RefreshPrompt"
+      containerY="18"
+      width="395"
+      height="210"
+      notJoinActPromptStyle="auction.notJoinActPromptTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.notJoinActPromptTxt"
+      textFormatStyle="auction.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="-15"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.RefreshPrompt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="41"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="auction.MysteryShopRefreshCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="0"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="auction.MysteryShopRefreshUseBindPoint"
+      parentStyle="core.ThewCheckBtn"
+      x="0"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="auction.MysteryShopRefreshConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="30"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="auction.MysteryShopRefreshCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="165"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.MysteryShopRefreshDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="350"
+      x="-10"
+      y="10"
+      wordWrap="true" />
+    <!-- 神秘商店物品列表 -->
+    <component
+      classname="auction.view.mysteryshop.goodslist.GoodsListFrame"
+      stylename="auction.GoodsListFrame"
+      parentStyle="core.Frame2"
+      background="auction.GoodsListBack"
+      titleBg="auction.TitleBg"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="35"
+      containerY="40"
+      titleText="auction.view.mysteryshop.MysteryShopFrame.GoodsListTitleText"
+      width="363"
+      height="496" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="auction.GoodsListBack"
+      parentStyle="core.describeBackground_style04"
+      x="-18"
+      y="4"
+      width="327"
+      height="396" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="auction.TitleBg"
+      resourceLink="asset.auction.Title_L,asset.auction.Title_C,asset.auction.Title_R"
+      x="-14"
+      y="10"
+      width="319"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="auction.OneBg"
+      resourceLink="asset.auction.One_L,asset.auction.One_C,asset.auction.One_R"
+      width="292"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="auction.SecBg"
+      resourceLink="asset.auction.Sec_L,asset.auction.Sec_C,asset.auction.Sec_R"
+      width="292"
+      height="50" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.ItemBg"
+      resourceLink="auction.OneBg,auction.SecBg"
+      x="2"
+      y="1" />
+    <!-- Name -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.GoodsNameTextStyle"
+      textFormatStyle="auction.GoodsNameTextStyle_t1"
+      x="48"
+      y="15"
+      autoSize="none"
+      width="110"
+      height="20" />
+    <!-- Price -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.GoodsValueTextStyle"
+      textFormatStyle="auction.MysteryGoodsValueTextStyle_t"
+      autoSize="none"
+      x="140"
+      y="15"
+      width="70"
+      height="20" />
+    <!-- 钻石图标 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="auction.GoodsValueIcon"
+      resourceLink="asset.auction.DiamondIcon"
+      x="210"
+      y="16" />
+    <!-- ProTxt -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.GoodsProTextStyle"
+      textFormatStyle="auction.MysteryGoodsNameTextStyle_t"
+      x="172"
+      y="15"
+      autoSize="none"
+      width="110"
+      height="20" />
+    <!-- ItemView -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="auction.GoodsListItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="20"
+      loadingY="20"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="auction.GoodsListItemView"
+      iconStyle="auction.GoodsListItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="40"
+      profileHeight="40"
+      showProfile="true"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="auction.GoodsListScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,0,8,-5,3"
+      viewportInnerRectString="1,0,8,335,1"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      x="-13"
+      y="35"
+      width="315"
+      height="355" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="auction.GoodsListVbox"
+      spacing="1" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="auction.hotSearchItem.IconView"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="2"
+      loadingHeight="2"
+      loadingX="12"
+      loadingY="12"
+      iconWidth="20"
+      iconHeight="20"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="auction.hotSearchItem.name"
+      textFormatStyle="auction.hotSearchItem.name_t"
+      autoSize="left"
+      x="38"
+      y="3"
+      width="80"
+      height="18" />
+    <!-- 拍卖行帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="auction.auctionHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="auction.view.AuctionHelp.helpContent"
+      titleText="Auction.auction.view.WaterHelp.titleText"
+      textWidth="440" />
+  </components>
+</style>

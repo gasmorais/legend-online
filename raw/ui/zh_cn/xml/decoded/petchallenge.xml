@@ -1,0 +1,1489 @@
+<style
+  name="petchallenge"
+  source="ui/zh_cn/swf/petchallenge.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeCDView.remainTimesLabel.txt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupNameField_t"
+      args="Arial,16,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeCDView.cdTxt.txt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeCDView.remainTimesTxt_t"
+      args="Arial,18,0xfff4c2,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.scoreLabel_t"
+      args="Arial,12,0xffba00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.rankingLabel_t"
+      args="Arial,16,0xffba00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.dayRewardTxt_t"
+      args="Arial,12,0x48d72a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.propertyTxt_t"
+      args="Arial,12,0x48d72a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.buffNameTxt_t"
+      args="Arial,12,0xc600ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.lookRewardBtn.txt_t"
+      args="Arial,12,0x00fffc,,,,,,left"
+      underline="true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.countTxt_t"
+      args="Arial,12,0x48d72a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeTeamView.optipTxt_t"
+      args="Arial,12,0xff0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeListItemView.totalFightTxt_t1"
+      args="Arial,14,0xffba00,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeListItemView.totalFightTxt_t2"
+      args="Arial,14,0x00fffc,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeListItemView.nameTxt_t1"
+      args="Arial,13,0xff8000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeListItemView.nameTxt_t2"
+      args="Arial,12,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengePetListInfoItemView.fightLabel_t"
+      args="Arial,13,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengePetListInfoItemView.fightTxt_t"
+      args="Arial,12,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengePetListInfoView.titleTxt_t"
+      args="Arial,12,0xFFDD83,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeWeekRewardTipView.titleTxt_t"
+      args="Arial,12,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petchallenge.descText_t"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeWeekRewardTipView.rewardTxt_t"
+      args="Arial,12,0xffecb4,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="petchallenge.PetChallengeReportFrameTxt_t"
+      args="Arial,14,0xff8000" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengePetListInfoItemView.gradeTxt_t"
+      args="Arial,12,0x00fffc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeListItemView.rankingTxt_t1"
+      args="Arial,14,0xff9c00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeListItemView.rankingTxt_t2"
+      args="Arial,14,0xff9c00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeTopListItemView.Txt_t1"
+      args="Arial,14,0xe5d29a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeTopListItemView.Txt_t2"
+      args="Arial,14,0xe5d29a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeTopListItemView.NumberTxt_t1"
+      args="Arial,14,0xe5d29a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeTopListItemView.NumberTxt_t2"
+      args="Arial,14,0xe5d29a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeEventFrame.Txt_t1"
+      args="Arial,12,0xe1dcb4,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.dayRewardNameTxt_t"
+      args="Arial,13,0xffba00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortItem.fightText_t"
+      args="Arial,15,0xffba00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortItem.rankNumText.text_t1"
+      args="微软雅黑,16,0x320f03,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortItem.rankNumText.text_t2"
+      args="微软雅黑,16,0x320f03,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortItem.rankNumText.text_t3"
+      args="微软雅黑,16,0x230b03,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortItem.rankNumText.text_t4"
+      args="微软雅黑,16,0x230b03,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="PetChallengeSortItem.rankNumText_f1"
+      args="0x320f03,1,2,2,50,1,true" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="PetChallengeSortItem.rankNumText_f2"
+      args="0xffffff,1,2,2,50,1,true" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="PetChallengeSortItem.rankNumText_f3"
+      args="0xffa44b,1,2,2,50,1,true" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="PetChallengeSortItem.rankNumText_f4"
+      args="0x5dc342,1,2,2,50,1,true" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="PetChallengeInfoView.rankText.text_f"
+      args="0xf8dd27,1,2,2,50,1,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortView.nextRefreshTime_t"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortView.leftTime_t"
+      args="Arial,12,0x48d72a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.rewardAlertText_t"
+      args="Arial,14,0xffba00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupLabel_t1"
+      args="Arial,12,0xfc7bfe,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupLabel_t2"
+      args="Arial,12,0x62f2ff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupLabel_t3"
+      args="Arial,12,0xfefefb,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupLabel_t4"
+      args="Arial,12,0xe2c22b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupLabel_t5"
+      args="Arial,12,0xc3ceb6,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.groupLabel_t6"
+      args="Arial,12,0x80cd25,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeCDView.leftCountText_t"
+      args="Arial,14,0xff0000,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortItem.scoreText_t"
+      args="Arial,14,0xf00fffc,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeInfoView.rankText.text_t"
+      args="微软雅黑,22,0x211200,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename=".PetChallengeHeadItem.fightText_t"
+      args="arial,12,0xffba00,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeWeekRewardTipView.alertText_t"
+      args="Arial,13,0xff0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.petchallenge.RankingImg" />
+    <bitmapData
+      resourceLink="asset.petchallenge.PetDayRankTxt"
+      x="164"
+      y="38" />
+    <bitmapData
+      resourceLink="asset.petchallenge.PetWeekRankTxt"
+      x="20"
+      y="38" />
+    <bitmapData
+      resourceLink="asset.petchallenge.EventIcon1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.petchallenge.EventIcon2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.petchallenge.LogFrameLine"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.petchallenge.NoRankingImg"
+      x="50"
+      y="72" />
+    <bitmapData
+      resourceLink="asset.PetChallengeInfoView.rankImage"
+      y="70" />
+    <bitmapData
+      resourceLink="asset.PetChallengeSortItem.petIconBack"
+      x="90"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.PetChallengeTeamView.scoreBitmap" />
+    <bitmapData
+      resourceLink="asset.PetChallengeFrame.back"
+      x="-1"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.PetChallengeResiPointView.numberBitmap1" />
+    <bitmapData
+      resourceLink="asset.PetChallengeResiPointView.numberBitmap2" />
+    <bitmapData
+      resourceLink="asset.PetChallengeResiPointView.numberBitmap3" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.petchallenge.Back"
+      stylename="petchallenge.Back"
+      x="4"
+      y="4" />
+    <!-- <custom classname="petchallenge.views.PetChallengeListView" -->
+    <!-- stylename="PetChallengeFrame.listView" x="0" y="0" /> -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetChallengeTeamItemView.headIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetChallengePetListInfoItemView.headIcon"
+      parentStyle="pet.MorphSkillIcon"
+      iconBackStyle="core.GoodsBack"
+      iconHeight="50"
+      iconWidth="50"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetFormationPetHeadView.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="95"
+      iconHeight="58"
+      x="2"
+      y="2" />
+    <custom
+      classname="petchallenge.views.PetChallengeSkillView"
+      stylename="petchallenge.PetChallengeSkillView"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetChallengeInfoView.RewardCellIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="petchallenge.PetChallengeReportFrameRankContainer"
+      x="268"
+      y="36" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetChallengeSkillView.SkillBookIcon"
+      parentStyle="petSkill.SkillBookIcon"
+      iconHeight="40"
+      iconWidth="40"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="PetChallengeCDView.startBtn"
+      back="PetChallengeCDView.startBtnBack"
+      button="PetChallengeCDView.startBtn.btn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="20" />
+    <custom
+      classname="petchallenge.views.PetChallengeListView"
+      stylename="PetChallengeFrame.listView"
+      x="-5"
+      y="14" />
+    <custom
+      classname="petchallenge.views.PetChallengeInfoView"
+      stylename="PetChallengeFrame.infoView"
+      x="530"
+      y="30" />
+    <custom
+      classname="petchallenge.views.PetChallengeTeamView"
+      stylename="PetChallengeFrame.teamView"
+      x="530"
+      y="230" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetChallengeSortItem.petIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="25"
+      loadingY="25"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,0,6"
+      tipGapV="-15"
+      tipGapH="-20"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="PetChallengeInfoView.rewardItemView"
+      iconStyle="PetChallengeInfoView.rewardItemView.icon"
+      textStyle="PetChallengeInfoView.rewardItemView.itemViewText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="45"
+      profileHeight="45"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PetChallengeInfoView.rewardItemView.icon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="petchallenge.PetChallengeFrame"
+      stylename="petchallenge.PetChallengeFrame"
+      parentStyle="core.Frame1"
+      width="963"
+      height="620"
+      containerX="16"
+      containerY="62" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeCDView.remainTimesLabel"
+      textFieldStyle="PetChallengeCDView.remainTimesLabel.txt"
+      colors="0xffffff,0xfffcd6,0xdba30d"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,80,250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeCDView.remainTimesLabel.txt"
+      textFormatStyle="PetChallengeCDView.remainTimesLabel.txt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeCDView.remainTimesTxt"
+      textFormatStyle="PetChallengeCDView.remainTimesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="22"
+      x="88"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.rankingLabel"
+      textFormatStyle="PetChallengeInfoView.rankingLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="147"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.dayRewardTxt"
+      textFormatStyle="PetChallengeInfoView.dayRewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="60"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.lookRewardBtn.txt"
+      textFormatStyle="PetChallengeInfoView.lookRewardBtn.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.countTxt"
+      textFormatStyle="PetChallengeInfoView.countTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="60"
+      height="20"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetChallengeTeamItemView.headBack"
+      resourceLink="asset.petchallenge.HeadBackImg"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeListItemView.totalFightTxt"
+      textFormatStyle="PetChallengeListItemView.totalFightTxt_t1,PetChallengeListItemView.totalFightTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="22"
+      x="0"
+      y="-151" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeListItemView.rankingTxt"
+      textFormatStyle="PetChallengeListItemView.rankingTxt_t1,PetChallengeListItemView.rankingTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="22"
+      x="-80"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetChallengePetListInfoView.titleBg"
+      resourceLink="asset.core.frameTitleImage2"
+      width="200"
+      height="17"
+      y="-7"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetChallengePetListInfoView.closeBtn"
+      backStyle="asset.core.closeBtn_style01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32"
+      y="-12"
+      x="185" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengePetListInfoView.titleTxt"
+      textFormatStyle="PetChallengePetListInfoView.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="22"
+      y="-11" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetChallengePetListInfoView.vBox"
+      x="10"
+      y="10"
+      strictHeight="50"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengePetListInfoItemView.fightLabel"
+      textFormatStyle="PetChallengePetListInfoItemView.fightLabel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22"
+      x="55"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengePetListInfoItemView.fightTxt"
+      textFormatStyle="PetChallengePetListInfoItemView.fightTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="101"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengePetListInfoItemView.nameTxt"
+      parentStyle="pet.PetNameTxt"
+      autoSize="none"
+      width="120"
+      x="55"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengePetListInfoItemView.gradeTxt"
+      parentStyle="PetChallengePetListInfoItemView.fightLabel"
+      textFormatStyle="PetChallengePetListInfoItemView.gradeTxt_t"
+      x="140"
+      y="28"
+      width="40" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="petchallenge.PetChallengeListItemView.body"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4"
+      tipGapV="20"
+      tipGapH="40"
+      isFollowMouse="false" />
+    <component
+      classname="petchallenge.PetFormationFrame"
+      stylename="petchallenge.PetFormationFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="290,290,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="650"
+      height="470" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetFormationFrame.border"
+      parentStyle="core.describeBackground_style04"
+      x="-16"
+      y="-2"
+      width="631"
+      height="402" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PetFormationFrame.back"
+      resourceLink="asset.petformation.Back,asset.petformation.Title"
+      imageRectString="0|624|0|395|13,183|258|0|45|13"
+      x="-14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetFormationFrame.listBack"
+      parentStyle="core.commonTipBg"
+      x="-193"
+      y="15"
+      width="160"
+      height="402" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetFormationFrame.vBox"
+      x="-190"
+      y="18"
+      spacing="-3"
+      scaleY="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetFormationPetHeadView.border"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="154"
+      height="63" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetFormationPetHeadView.back"
+      resourceLink="asset.petformation.PetItemBg"
+      y="3"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetFormationPetHeadView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="right"
+      x="0"
+      y="5"
+      width="150"
+      height="22"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetFormationPetHeadView.gradeTxt"
+      textFormatStyle="pet.PetItemGrade_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="83"
+      y="35"
+      width="66"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetFormationItemView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      y="-190" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetChallengeSkillSelectView.bg"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="160"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetChallengeSkillSelectView.hBox"
+      spacing="5"
+      strictWidth="50"
+      strictHeight="50"
+      x="8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeWeekRewardTipView.titleTxt"
+      textFormatStyle="PetChallengeWeekRewardTipView.titleTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeWeekRewardTipView.titleTxt2"
+      textFormatStyle="PetChallengeWeekRewardTipView.titleTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeWeekRewardTipView.rewardTxt"
+      textFormatStyle="PetChallengeWeekRewardTipView.rewardTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeWeekRewardTipView.rewardTxt2"
+      textFormatStyle="PetChallengeWeekRewardTipView.rewardTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetChallengeWeekRewardTipView.vbox"
+      x="10"
+      spacing="4" />
+    <!-- 英灵竞技奖励面板 -->
+    <component
+      classname="yishi.view.frame.PetChallengeReportFrame"
+      stylename="petchallenge.PetChallengeReportFrame" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="petchallenge.PetChallengeReportFrameBg"
+      resourceLink="petchallenge.BgStyle01,asset.petchallenge.LaceStyle01,petchallenge.LaceStyle01Turn,asset.petchallenge.PetReportTxt,asset.petchallenge.PetRankReportRewardTxt"
+      imageRectString="0|534|0|187|13,113|90|-6|24|13,435|90|-6|24|13,195|164|-12|38|13,20|90|73|30|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="petchallenge.BgStyle01"
+      resourceLink="asset.petchallenge.BgStyle01_U,asset.petchallenge.BgStyle01_M,asset.petchallenge.BgStyle01_D" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="petchallenge.LaceStyle01Turn"
+      resourceLink="asset.petchallenge.LaceStyle01"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petchallenge.PetChallengeReportFrameConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="225"
+      y="143" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petchallenge.PetChallengeReportFrameConfirmBtn1"
+      backStyle="asset.petchallenge.getBg"
+      iconStyle="asset.petchallenge.getText"
+      iconInnerRectString="9,45,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="450"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="petchallenge.PetChallengeReportFrameConfirmBtn2"
+      backStyle="asset.petchallenge.getBg"
+      iconStyle="asset.petchallenge.getText"
+      iconInnerRectString="9,45,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="450"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petchallenge.PetChallengeReportFrameRankTxt"
+      parentStyle="PetChallengeInfoView.rankingLabel"
+      x="120"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="petchallenge.PetChallengeReportFrame.groupName"
+      parentStyle="PetChallengeInfoView.groupName"
+      x="290"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petchallenge.PetChallengeReportFrameTxt1"
+      textFormatStyle="petchallenge.PetChallengeReportFrameTxt_t"
+      filterString="core.normal_f"
+      x="125"
+      y="76"
+      width="190"
+      height="35"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petchallenge.PetChallengeReportFrameTxt2"
+      textFormatStyle="petchallenge.PetChallengeReportFrameTxt_t"
+      filterString="core.normal_f"
+      x="320"
+      y="76"
+      width="200"
+      height="35"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petchallenge.PetChallengeReportFrameTxt3"
+      textFormatStyle="petchallenge.PetChallengeReportFrameTxt_t"
+      filterString="core.normal_f"
+      x="125"
+      y="106"
+      width="190"
+      height="35"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petchallenge.PetChallengeReportFrameTxt4"
+      textFormatStyle="petchallenge.PetChallengeReportFrameTxt_t"
+      filterString="core.normal_f"
+      x="320"
+      y="106"
+      width="200"
+      height="35"
+      wordWrap="true" />
+    <component
+      classname="petchallenge.views.PetFormationPetHeadView"
+      stylename="petchallenge.PetFormationPetHeadView"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetChallengeSkillView.ItemBack"
+      parentStyle="core.ItemBack"
+      x="0"
+      y="0"
+      width="40"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetChallengeFrame.helpBtn"
+      parentStyle="petFrame.helpBtn"
+      x="886"
+      y="-40" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="PetChallengeFrame.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="PetChallengeFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeTopListItemView.rankingTxt"
+      textFormatStyle="PetChallengeTopListItemView.NumberTxt_t1,PetChallengeTopListItemView.NumberTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="53"
+      height="22"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeTopListItemView.severTxt"
+      textFormatStyle="PetChallengeTopListItemView.NumberTxt_t1,PetChallengeTopListItemView.NumberTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="210"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeTopListItemView.scoreTxt"
+      textFormatStyle="PetChallengeTopListItemView.NumberTxt_t1,PetChallengeTopListItemView.NumberTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="22"
+      x="325"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeTopListItemView.nameTxt"
+      textFormatStyle="PetChallengeTopListItemView.Txt_t1,PetChallengeTopListItemView.Txt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="22"
+      x="75"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeInfoView.groupName"
+      textFieldStyle="PetChallengeInfoView.groupNameField"
+      colors="0xffffff,0x49fffd,0x0072ff,0x24d8ff"
+      filterString="core.normal2_f"
+      alphas="1,1,1,1"
+      ratios="0,90,170,255"
+      width="60"
+      height="22"
+      x="178"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.groupNameField"
+      textFormatStyle="PetChallengeInfoView.groupNameField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.dayRewardNameTxt"
+      textFormatStyle="PetChallengeInfoView.dayRewardNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="5"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="petchallengeWeek.bagScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      height="320" />
+    <!-- 英灵竞技新 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetChallengeSortItem.lookbBtn"
+      backStyle="asset.petchallenge.LookOverImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,3,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="143"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeSortItem.groupTextIcon"
+      resourceLink="asset.PetChallengeSortItem.groupTextIcon1,asset.PetChallengeSortItem.groupTextIcon2,asset.PetChallengeSortItem.groupTextIcon3,asset.PetChallengeSortItem.groupTextIcon4,asset.PetChallengeSortItem.groupTextIcon5,asset.PetChallengeSortItem.groupTextIcon6"
+      x="324"
+      y="20" />
+    <!-- 第几名 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeSortItem.rankIcon"
+      resourceLink="asset.PetChallengeSortItem.rankIcon1,asset.PetChallengeSortItem.rankIcon2,asset.PetChallengeSortItem.rankIcon3,asset.PetChallengeSortItem.rankIcon4"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetChallengeSortView.board"
+      parentStyle="core.describeBackground_style04"
+      x="12"
+      y="43"
+      width="495"
+      height="425" />
+    <!-- 英灵竞技挑战队列新 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetChallengeCDView.leftCountBg"
+      resourceLink="asset.water.Expback"
+      x="-10"
+      y="-35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetChallengeCDView.leftTextImage"
+      resourceLink="asset.PetChallengeCDView.leftTextImage"
+      x="20"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="PetChallengeCDView.startBtnBack"
+      resourceLink="asset.PetChallengeCDView.startBtnBack"
+      x="61"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="PetChallengeCDView.startBtn.btn"
+      resourceLink="asset.PetChallengeCDView.startBtn.btn" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeWeekRewardTipView.kingRewardAlert"
+      textFormatStyle="PetChallengeWeekRewardTipView.titleTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      width="260"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="petchallenge.descText"
+      textFormatStyle="petchallenge.descText_t"
+      autoSize="left"
+      mouseEnabled="false"
+      x="550"
+      y="54"
+      width="260"
+      height="40"
+      wordWrap="true" />
+    <!--7.1新英灵竞技-->
+    <!-- 队伍信息	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PetChallengeTeamView.back"
+      resourceLink="asset.PetChallengeTeamView.back,asset.PetChallengeTeamView.myTeamImage,asset.PetChallengeTeamView.scoreImage,asset.PetChallengeTeamView.fightImage,asset.PetChallengeTeamView.addImage"
+      imageRectString="0|396|0|281|13,155|119|5|26|13,115|70|225|21|13,0|205|252|22|13,188|17|228|16|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeTeamView.alertTxt"
+      textFormatStyle="PetChallengeTeamView.optipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="396"
+      height="20"
+      x="0"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PetChallengeTeamView.scoreContiner"
+      x="205"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PetChallengeTeamView.fightContiner"
+      x="200"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetChallengeTeamItemView.adjustBtn"
+      backStyle="asset.PetChallengeTeamItemView.adjustBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="7"
+      y="7" />
+    <!-- 个人信息	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="PetChallengeInfoView.back"
+      resourceLink="asset.PetChallengeInfoView.back,asset.PetChallengeInfoView.scoreAddImage,asset.PetChallengeInfoView.myInfoImage,asset.PetChallengeInfoView.rewardImage"
+      imageRectString="0|396|0|201|13,80|238|3|26|13,2|96|120|24|13,10|78|155|37|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PetChallengeInfoView.petTypeContiner"
+      x="60"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="PetChallengeInfoView.lookRewardBtn"
+      textStyle="PetChallengeInfoView.lookRewardBtn.txt"
+      backgoundInnerRectString="1,8,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="48"
+      height="24"
+      autoSizeAble="false"
+      displacement="false"
+      x="315"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.rankText"
+      textFormatStyle="PetChallengeListItemView.nameTxt_t2"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="110"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.groupLabel"
+      textFormatStyle="PetChallengeInfoView.groupLabel_t1,PetChallengeInfoView.groupLabel_t2,PetChallengeInfoView.groupLabel_t3,PetChallengeInfoView.groupLabel_t4,PetChallengeInfoView.groupLabel_t5,PetChallengeInfoView.groupLabel_t6"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="75"
+      height="20"
+      x="165"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.nextScoreText"
+      textFormatStyle="PetChallengeInfoView.scoreLabel_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="150"
+      height="35"
+      wordWrap="true"
+      x="245"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.propertyTxt"
+      textFormatStyle="PetChallengeInfoView.propertyTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.buffNameTxt"
+      textFormatStyle="PetChallengeInfoView.buffNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="0"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PetChallengeInfoView.otherReward"
+      x="120"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetChallengeInfoView.goodsReward"
+      x="95"
+      y="150"
+      spacing="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeInfoView.rewardItemView.itemViewText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="2"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeResiPointView.resiImage"
+      resourceLink="asset.PetChallengeResiPointView.resiImage1,asset.PetChallengeResiPointView.resiImage2,asset.PetChallengeResiPointView.resiImage3,asset.PetChallengeResiPointView.resiImage4,asset.PetChallengeResiPointView.resiImage5,asset.PetChallengeResiPointView.resiImage6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeResiPointView.addImage"
+      resourceLink="asset.PetChallengeResiPointView.addImage1,asset.PetChallengeResiPointView.addImage2,asset.PetChallengeResiPointView.addImage3"
+      x="38"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PetChallengeResiPointView.pointContiner"
+      x="50"
+      y="8" />
+    <!--   列表信息    -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.nameAndServer"
+      textFormatStyle="PetChallengeListItemView.nameTxt_t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="35"
+      wordWrap="true"
+      x="275"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.fightText"
+      textFormatStyle="PetChallengeSortItem.fightText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="355"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.scoreText"
+      textFormatStyle="PetChallengeSortItem.scoreText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="275"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeSortItem.groupIcon"
+      resourceLink="asset.PetChallengeSortItem.groupIcon1,asset.PetChallengeSortItem.groupIcon2,asset.PetChallengeSortItem.groupIcon3,asset.PetChallengeSortItem.groupIcon4,asset.PetChallengeSortItem.groupIcon5,asset.PetChallengeSortItem.groupIcon6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      x="417"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetChallengeSortItem.challengeBtn"
+      backStyle="asset.PetChallengeSortItem.challengeBtnBack"
+      iconStyle="asset.PetChallengeSortItem.challengeBtnText"
+      iconInnerRectString="12,42,25,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="428"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeSortItem.resultImage"
+      resourceLink="asset.PetChallengeSortItem.resultWinImage,asset.PetChallengeSortItem.resultLostImage"
+      x="397"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="PetChallengeFrame.sortBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.PetChallengeFrame.sortSelectBtn"
+      unselectedIconStyle="asset.PetChallengeFrame.sortUnSelectBtn"
+      selectedIconInnerRectString="12,51,8,19,13"
+      unselectedIconInnerRectString="15,51,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="PetChallengeFrame.challengeBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.PetChallengeFrame.challengeSelectBtn"
+      unselectedIconStyle="asset.PetChallengeFrame.challengeUnSelectBtn"
+      selectedIconInnerRectString="10,65,-2,31,13"
+      unselectedIconInnerRectString="10,65,-2,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="PetChallengeFrame.reportBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.PetChallengeFrame.reportSelectBtn"
+      unselectedIconStyle="asset.PetChallengeFrame.reportUnSelectBtn"
+      selectedIconInnerRectString="5,78,7,16,13"
+      unselectedIconInnerRectString="5,78,8,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetChallengeFrame.btnHbox"
+      spacing="30"
+      x="45"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetChallengeSortItem.fightImage"
+      resourceLink="asset.petchallenge.TotalFightTxtImg"
+      x="260"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="petchallenge.BackBorder"
+      parentStyle="core.describeBackground_style11"
+      width="928"
+      height="490"
+      x="0"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortView.nextRefreshTime"
+      textFormatStyle="PetChallengeSortView.nextRefreshTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="35"
+      x="370"
+      y="460"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetChallengeSortView.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="150"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetChallengeSortView.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="300"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetChallengeSortView.PageBg"
+      resourceLink="asset.core.pageBg"
+      x="227"
+      y="462" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortView.PageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="230"
+      y="468" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetChallengeSortView.itemVbox"
+      x="16"
+      y="45"
+      spacing="2" />
+    <!-- 第一名 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeSortItem.rankNumText1"
+      textFieldStyle="PetChallengeSortItem.rankNumText.text1"
+      colors="0xffffff,0xffd200,0x8b5025,0xffd200"
+      filterString="core.normal_f"
+      alphas="1,1,1,1"
+      ratios="0,140,195,255"
+      x="5"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.rankNumText.text1"
+      textFormatStyle="PetChallengeSortItem.rankNumText.text_t1"
+      filterString="PetChallengeSortItem.rankNumText_f1"
+      autoSize="none"
+      width="80"
+      height="30" />
+    <!-- 第二名 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeSortItem.rankNumText2"
+      textFieldStyle="PetChallengeSortItem.rankNumText.text2"
+      colors="0xffffff,0xffffff,0x807b44,0xffffff"
+      filterString="core.normal_f"
+      alphas="1,1,1,1"
+      ratios="0,84,198,255"
+      x="10"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.rankNumText.text2"
+      textFormatStyle="PetChallengeSortItem.rankNumText.text_t2"
+      filterString="PetChallengeSortItem.rankNumText_f2"
+      autoSize="none"
+      width="80"
+      height="30" />
+    <!-- 第三名 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeSortItem.rankNumText3"
+      textFieldStyle="PetChallengeSortItem.rankNumText.text3"
+      colors="0xffffff,0x8b4100,0x8b4100"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,215,255"
+      x="10"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.rankNumText.text3"
+      textFormatStyle="PetChallengeSortItem.rankNumText.text_t3"
+      filterString="PetChallengeSortItem.rankNumText_f3"
+      autoSize="none"
+      width="80"
+      height="30" />
+    <!-- 其他名次 -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeSortItem.rankNumText4"
+      textFieldStyle="PetChallengeSortItem.rankNumText.text4"
+      colors="0xffffff,0x386419,0x386419"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,215,255"
+      x="5"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortItem.rankNumText.text4"
+      textFormatStyle="PetChallengeSortItem.rankNumText.text_t4"
+      filterString="PetChallengeSortItem.rankNumText_f4"
+      autoSize="none"
+      width="80"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename=".PetChallengeHeadItem.fightText"
+      textFormatStyle=".PetChallengeHeadItem.fightText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="16"
+      x="0"
+      y="54" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="PetChallengeItemView.headHbox"
+      spacing="25"
+      strictWidth="60"
+      x="20"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeCDView.leftCountText"
+      textFormatStyle="PetChallengeCDView.leftCountText_t"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="155"
+      height="20"
+      x="12"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PetChallengeCDView.cdTxt"
+      textFieldStyle="PetChallengeCDView.cdTxt.txt"
+      colors="0xffffff,0xfffcd6,0xdba30d"
+      filterString="core.normal_f"
+      alphas="1,1,1"
+      ratios="0,80,255"
+      x="410"
+      y="-13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeCDView.cdTxt.txt"
+      textFormatStyle="PetChallengeCDView.cdTxt.txt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PetChallengeCDView.coolDownBtn"
+      backStyle="asset.queueBar.startBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="475"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortView.challengeAlertText"
+      textFormatStyle="PetChallengeSortView.leftTime_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="255"
+      height="20"
+      x="15"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeWeekRewardTipView.alertText"
+      textFormatStyle="PetChallengeWeekRewardTipView.alertText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="585"
+      height="33"
+      wordWrap="true" />
+  </components>
+</style>

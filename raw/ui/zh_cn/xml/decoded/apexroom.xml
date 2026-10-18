@@ -1,0 +1,315 @@
+<style
+  name="apexroom"
+  source="ui/zh_cn/swf/apexroom.swf">
+  <sets>
+    <!-- 右侧界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomScore_t"
+      args="Arial,14,0xfbf23f,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomMyRank_t"
+      args="Arial,14,0xfbf23f,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRightViewStr1_t"
+      args="Arial,12,0xe1d687,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRightViewStr2_t"
+      args="Arial,12,0xe1d687,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRightViewStr3_t"
+      args="Arial,12,0xe1d687,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRightViewTurn_t"
+      args="Arial,12,0x3cdc5c,false,,,,,center"
+      leading="0" />
+    <!-- 顶视图 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomTopTurn_t"
+      args="Arial,20,0xf8efb6,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomTopTime_t"
+      args="Arial,20,0xf8efb6,false,,,,,center"
+      leading="0" />
+    <!-- 排行榜项 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRankName_t"
+      args="Arial,12,0xf5f3b8,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRankRank_t"
+      args="Arial,12,0xf5f3b8,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.apexroom.txtRoomRankScore_t"
+      args="Arial,12,0xf5f3b8,false,,,,,center"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <!-- 右侧界面 -->
+    <bitmapData
+      resourceLink="asset.apexroom.RoomTopRemainTimeTxt"
+      x="8"
+      y="-13" />
+    <bitmapData
+      resourceLink="asset.apexroom.str.current"
+      x="672"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.apexroom.str.yusai"
+      x="686"
+      y="95" />
+    <!-- 顶视图 -->
+    <bitmapData
+      resourceLink="asset.apexroom.top.str1"
+      x="66"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.apexroom.top.str4"
+      x="56"
+      y="49" />
+    <bitmapData
+      resourceLink="asset.apexroom.top.str2"
+      x="202"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.apexroom.top.str3"
+      x="170"
+      y="49" />
+    <bitmapData
+      resourceLink="asset.apexroom.top.str5"
+      x="93"
+      y="34" />
+    <!-- 角色 -->
+    <bitmapData
+      resourceLink="asset.apexroom.box" />
+    <!-- 排行榜项 -->
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="apex.room.ApexRoomView"
+      stylename="apex.room.ApexRoomView" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="apexroom.PlayerFigure_4"
+      x="1310"
+      y="280" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="apexroom.PlayerFigure_3"
+      x="1090"
+      y="347" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="apexroom.PlayerFigure_2"
+      x="870"
+      y="347" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="apexroom.PlayerFigure_1"
+      x="650"
+      y="280" />
+  </customDisplay>
+  <components>
+    <!-- 右侧界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apexroom.rightViewBg"
+      resourceLink="asset.apexroom.bg4,asset.apexroom.bg3,asset.apexroom.str.teamScore,asset.apexroom.str.myrank1,asset.apexroom.str.title,asset.apexroom.str.current"
+      imageRectString="0|234|148|272|13,0|237|0|148|13,7|65|356|26|13,116|74|361|17|13,71|99|20|23|13,78|73|74|16|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apexroom.btnRoomRank"
+      backStyle="asset.apexroom.btn.rank"
+      iconStyle="asset.apexroom.str.rank"
+      iconInnerRectString="16,57,5,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="16"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.apexroom.btnRoomTeam"
+      backStyle="asset.apexroom.btn.team"
+      iconStyle="asset.apexroom.str.team"
+      iconInnerRectString="13,67,0,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="129"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomScore"
+      textFormatStyle="ui.apexroom.txtRoomScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="18"
+      x="73"
+      y="358" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomMyRank"
+      textFormatStyle="ui.apexroom.txtRoomMyRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="49"
+      height="18"
+      x="190"
+      y="358" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRightViewStr1"
+      textFormatStyle="ui.apexroom.txtRoomRightViewStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="23"
+      x="5"
+      y="159" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRightViewStr2"
+      textFormatStyle="ui.apexroom.txtRoomRightViewStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="23"
+      x="63"
+      y="159" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRightViewStr3"
+      textFormatStyle="ui.apexroom.txtRoomRightViewStr3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="20"
+      x="163"
+      y="159" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.apexroom.btnRightViewHelp"
+      backStyle="asset.apexroom.btnHelp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="207"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRightViewTurn"
+      textFormatStyle="ui.apexroom.txtRoomRightViewTurn_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="181"
+      height="16"
+      x="31"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.apexroom.imgRoomRightViewTurn"
+      resourceLink="asset.apexroom.turn1,asset.apexroom.turn2,asset.apexroom.turn3,asset.apexroom.turn4"
+      x="76"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="apexroom.rightView.vbox"
+      x="38"
+      y="32"
+      spacing="17" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="apex.scrollPanel.roomRank"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-8,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="210"
+      height="159"
+      x="16"
+      y="192" />
+    <component
+      classname="apex.ApexHelpFrame"
+      stylename="apex.room.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="apex.help.hall.content"
+      titleText="apex.help.hall"
+      textWidth="600"
+      isOpenScorll="true" />
+    <!-- 顶视图 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomTopTurn"
+      textFormatStyle="ui.apexroom.txtRoomTopTurn_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="35"
+      x="128"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomTopTime"
+      textFormatStyle="ui.apexroom.txtRoomTopTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="35"
+      x="173"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.apexroom.apexRoomTopBg"
+      resourceLink="asset.apexroom.RoomTopBg_D,asset.apexroom.RoomTopBg_U,asset.apexroom.RoomTopBg_M"
+      imageRectString="1|318|75|20|13,0|318|0|21|13,1|318|21|54|13"
+      x="0"
+      y="0" />
+    <!-- 排行榜项 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRankName"
+      textFormatStyle="ui.apexroom.txtRoomRankName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="129"
+      height="21"
+      x="30"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRankRank"
+      textFormatStyle="ui.apexroom.txtRoomRankRank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="26"
+      height="16"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.apexroom.txtRoomRankScore"
+      textFormatStyle="ui.apexroom.txtRoomRankScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="16"
+      x="152"
+      y="0" />
+  </components>
+</style>

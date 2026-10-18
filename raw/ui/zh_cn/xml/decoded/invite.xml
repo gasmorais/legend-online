@@ -1,0 +1,533 @@
+<style
+  name="invite"
+  source="ui/zh_cn/swf/invite.swf">
+  <sets>
+    <!-- 好友Item未选中 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomInvite.format_6"
+      args="Arial,14,0xfff0a8,,,,,,center" />
+    <!-- 好友Item选中 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomInvite.format_vip"
+      args="Arial,14,0xfcc64d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_8"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_10"
+      args="Arial,12,0xe7c88b,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_11"
+      args="Arial,12,0xffae00,,,,,,right" />
+    <!-- 快速邀请 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_12"
+      args="Arial,12,0xe9d2af,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_13"
+      args="Arial,12,0x472309,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_14"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_15"
+      args="Arial,12,0xff8e2a,true,,,,,left" />
+    <!-- <set type="flash.filters.ColorMatrixFilter" stylename="invite.GrayFilter" args="0.5,0.69,0.31,0,0,0.5,0.69,0.31,0,0,0.5,0.69,0.31,0,0,0,0,0,1,0"/> -->
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="room.friendsNormal_f"
+      args="0x000000,1,4,4,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveSortFrame.sortTitle_t"
+      args="Arial,14,0xe7c88b,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <!-- 房间右边框 -->
+    <bitmapData
+      resourceLink="asset.invite.inviteHallBG"
+      x="5"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.invite.inviteItemHLINE"
+      x="2"
+      y="26"
+      width="280" />
+    <bitmapData
+      resourceLink="asset.core.checkstyle_2.SelectedImg"
+      x="225" />
+    <!-- 好友Item经过背景 -->
+    <bitmapData
+      resourceLink="asset.invite.FriendsItemOverBg" />
+    <!-- 好友Item选中背景 -->
+    <bitmapData
+      resourceLink="asset.invite.FriendsItemSelectBg" />
+    <!-- 男头相 -->
+    <bitmapData
+      resourceLink="asset.invite.BoyImg"
+      x="2"
+      y="1" />
+    <!-- 女头相 -->
+    <bitmapData
+      resourceLink="asset.invite.GirlImg"
+      x="2"
+      y="1" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <!-- 搜索框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomInvite.SearchTextStyle"
+      autoSize="none"
+      textFormatStyle="friends.search_t"
+      filterString="core.normal_f"
+      type="input"
+      restrict="^ "
+      x="6"
+      y="4"
+      width="220"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="roomInvite.searchBg"
+      resourceLink="asset.invite.FriendsSearchBg"
+      width="257"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="roomInvite.searchBtn"
+      unSelectedStyle="asset.invite.FriendsSearchBtnImg"
+      selectedStyle="asset.invite.FriendsSearchReturnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="232"
+      y="3" />
+    <!--搜索结果字体 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomInvite.AutoSearchTextStyle"
+      autoSize="none"
+      textFormatStyle="friends.searchTip_t"
+      filterString="core.normal_f"
+      restrict="^ "
+      x="45"
+      y="12"
+      height="20"
+      width="120" />
+    <!--搜索结果背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="roomInvite.searchResultBg"
+      parentStyle="core.commonTipBg"
+      x="-4"
+      y="5" />
+    <!-- 邀请 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.RoomInviteFrameBg5"
+      resourceLink="core.FrameBackgoundBase2"
+      imageRectString="-18|-15|0|23|0" />
+    <component
+      classname="room.view.invite.RoomInviteFrame"
+      stylename="room.RoomInviteFrame"
+      parentStyle="core.Frame5"
+      backStyle="room.RoomInviteFrameBg5"
+      titleOuterRectPosString="0,12,1"
+      width="335"
+      height="442" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="roomInvite.FriendsButton"
+      unSelectedStyle="roomInvite.FriendsUnselectedBg"
+      selectedStyle="roomInvite.FriendsSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="55"
+      y="34"
+      width="65"
+      height="25"
+      fieldX="21"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="WeddingInviteframe.FriendsButton"
+      parentStyle="roomInvite.FriendsButton"
+      x="9"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="WeddingInviteframe.UnionButton"
+      parentStyle="roomInvite.UnionButton"
+      x="85"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="roomInvite.FriendsSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedImg,asset.core.friendsFriendImg"
+      imageRectString="0|75|0|24|13,5|19|4|17|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="roomInvite.FriendsUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg"
+      imageRectString="0|75|0|24|13,5|19|4|17|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="roomInvite.UnionButton"
+      unSelectedStyle="roomInvite.UnionUnselectedBg"
+      selectedStyle="roomInvite.UnionSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="-14"
+      y="34"
+      width="65"
+      height="25"
+      fieldX="16"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="roomInvite.UnionSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedImg,asset.core.friendsUnionImg"
+      imageRectString="0|65|0|25|13,1|21|2|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="roomInvite.UnionUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg"
+      imageRectString="0|65|0|24|13,1|21|2|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="roomInvite.hallSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedImg,asset.invite.inviteHallBG"
+      imageRectString="0|65|0|24|13,5|17|6|14|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="roomInvite.hallUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.invite.inviteHallBG"
+      imageRectString="0|65|0|24|13,5|17|6|14|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="roomInvite.hallButton"
+      unSelectedStyle="roomInvite.hallUnselectedBg"
+      selectedStyle="roomInvite.hallSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      x="135"
+      y="34"
+      width="65"
+      height="25"
+      fieldX="16"
+      fieldY="2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="roomInvite.updateBtn"
+      parentStyle="core.BrownBtn"
+      textStyle="core.armymanage.ButtonText"
+      backgoundInnerRectString="8,8,5,13"
+      x="130"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="roomInvite.QuickInviteBtn"
+      parentStyle="core.GreenBtn"
+      textStyle="core.armymanage.ButtonText"
+      backgoundInnerRectString="9,8,6,13"
+      x="30"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="WeddingInviteframe.QuickInviteBtn"
+      backStyle="asset.core.offerQuickBtn"
+      textStyle="core.armymanage.ButtonText"
+      autoSizeAble="false"
+      backgoundInnerRectString="16,16,8,8"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="35"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="WeddingInviteframe.OneKeyInviteBtn"
+      parentStyle="WeddingInviteframe.QuickInviteBtn"
+      textStyle="core.armymanage.ButtonText"
+      x="148"
+      y="300"
+      width="133" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="roomInvite.ListBG"
+      parentStyle="core.describeBackground_style04"
+      width="280"
+      height="243"
+      x="-22"
+      y="57" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="WeddingInviteframe.BG"
+      parentStyle="core.describeBackground_style04"
+      width="305"
+      height="277"
+      x="1"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="roomInvite.inviteItemBg"
+      resourceLink="roomInvite.FriendsItemOverBg,asset.invite.FriendsItemOverBg"
+      width="245"
+      height="24"
+      x="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="roomInvite.FriendsItemOverBg"
+      resourceLink="asset.invite.FriendsItemOverBg"
+      width="245"
+      height="24"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="roomInvite.sexIconBG"
+      resourceLink="asset.invite.GirlImg,asset.invite.BoyImg"
+      x="2"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomInvite.inviteItemNameTextStyle"
+      autoSize="none"
+      textFormatStyle="roomInvite.format_6,roomInvite.format_vip"
+      filterString="room.friendsNormal_f"
+      x="15"
+      y="1"
+      width="109"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="roomInvite.inviteItemNameGradientText"
+      colors="0xfff8ad,0xff9c00"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="roomInvite.inviteItemNameGradientTextField"
+      x="20"
+      y="1"
+      width="135"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomInvite.inviteItemNameGradientTextField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      x="0"
+      y="0"
+      width="135"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomInvite.inviteItemJobTextStyle"
+      autoSize="none"
+      textFormatStyle="room.format_10,room.format_11"
+      filterString="room.friendsNormal_f"
+      x="106"
+      y="2"
+      width="30"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roomInvite.inviteItemLevelTextStyle"
+      autoSize="none"
+      textFormatStyle="room.format_10,room.format_11"
+      filterString="room.friendsNormal_f"
+      x="155"
+      y="2"
+      width="38"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="roomInvite.inviteBtnBtn"
+      backStyle="asset.invite.inviteBtnBG"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="195"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="roomInvite.ListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="18,5,0,0,3"
+      viewportInnerRectString="0,22,0,0,0"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|room.view.invite.InviteItem,30,213"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="305"
+      height="240"
+      x="-21"
+      y="60"
+      hScrollProxy="0"
+      vScrollProxy="0"
+      vUnitIncrement="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="WeddingInviteframe.panel"
+      vScrollbarStyle="core.VScrollbar01"
+      viewportInnerRectString="0,302,1,1,2"
+      vScrollbarInnerRectString="18,0,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="298"
+      height="200"
+      x="3"
+      y="98" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="WeddingInviteframe.vBox"
+      spacing="2"
+      strictHeight="32" />
+    <!-- 快速邀请 -->
+    <component
+      classname="room.view.invite.QuickInviteFrame"
+      stylename="invite.QuickInviteFrame"
+      parentStyle="core.Frame2"
+      width="400"
+      height="328" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="invite.DarkBackGroundInput"
+      resourceLink="asset.invite.localBack,asset.invite.crossBack"
+      x="-17"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="invite.BackGroundInput"
+      resourceLink="asset.invite.localInput,asset.invite.crossInput"
+      x="-7"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="invite.InviteTitle"
+      textFormatStyle="room.format_15"
+      filterString="core.filter_01"
+      x="-7"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="invite.InviteContent"
+      textFormatStyle="room.format_12,room.format_13"
+      wordWrap="true"
+      multiline="false"
+      maxChars="84"
+      mouseWheelEnabled="false"
+      autoSize="none"
+      width="325"
+      height="55"
+      x="0"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="invite.Notice"
+      textFormatStyle="room.format_14"
+      filterString="core.filter_01"
+      autoSize="none"
+      width="350"
+      height="40"
+      wordWrap="true"
+      x="-12"
+      y="128" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="invite.QuickInviteFrame.BackGroundDown"
+      parentStyle="core.FameBottomImage"
+      width="360"
+      height="54"
+      x="-17"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="invite.ConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_2"
+      iconStyle="asset.core.ConfirmTxtAsset_01"
+      x="35"
+      y="184" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="invite.CancelBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      iconStyle="asset.core.CancelTxtAsset_01"
+      x="195"
+      y="184" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="WeddingInviteframe.titleBg"
+      resourceLink="asset.core.titleBg1,asset.core.titleBg2,asset.core.titleBg3"
+      width="298"
+      height="35"
+      x="5"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="WeddingInviteframe.title2"
+      textFormatStyle="GodArriveSortFrame.sortTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="195"
+      x="48"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="roomInvite.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="135"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="invite.backBorder"
+      parentStyle="core.describeBackground_style04"
+      width="367"
+      height="216"
+      x="-20"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="invite.selfAreaBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.invite.SelfArea1"
+      selectedIconStyle="asset.invite.SelfArea2"
+      unselectedIconInnerRectString="12,75,4,23,13"
+      selectedIconInnerRectString="12,75,4,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="-3"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="invite.crossAreaBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.invite.CrossArea1"
+      selectedIconStyle="asset.invite.CrossArea2"
+      unselectedIconInnerRectString="13,73,6,19,13"
+      selectedIconInnerRectString="13,73,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="100"
+      y="-10" />
+    <component
+      classname="theseusdoublepvproom.invite.TheseusTeamInviteFrame"
+      stylename="theseusdoublepvproom.invite.TheseusTeamInviteFrame"
+      parentStyle="core.Frame5"
+      backStyle="room.RoomInviteFrameBg5"
+      titleOuterRectPosString="0,12,1"
+      width="306"
+      height="442" />
+  </components>
+</style>

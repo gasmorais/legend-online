@@ -1,0 +1,776 @@
+<style
+  name="onlinereward"
+  source="ui/zh_cn/swf/onlinereward.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="onlinereward.titleText_t1"
+      args="Arial,18,0xfff000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="onlinereward.titleText_t2"
+      args="Arial,18,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="onlinereward.txt_t"
+      args="Arial,12,0xe8e8e8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TimingRewardFrame.desTxtField_t"
+      args="Arial,14,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TimingRewardFrame.txt_t1"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TimingRewardFrame.txt_t2"
+      args="Arial,12,0x59cd41,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TimingRewardFrame.txt_t3"
+      args="Arial,12,0x32a2f8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TimingRewardFrame.txt_t4"
+      args="Arial,12,0xa838f7,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="TimingRewardFrame.txt_t5"
+      args="Arial,12,0xecc200,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="KarnevalFrame.expenseTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="KarnevalFrame.middleTxt_t"
+      args="Arial,12,0xf1b433,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="KarnevalFrame.minuTxt_t"
+      args="Arial,14,0x00ffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="KarnevalFrame.totalTxt_t"
+      args="Arial,14,0x00ffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="KarnevalFrame.sortTxt_t"
+      args="Arial,14,0x00ffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExpenseItem.expenseTxt_t"
+      args="Arial,14,0x00ffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExpenseItem.name_t"
+      args="Arial,14,0xe4d29c,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExpenseItem.vipNameNameField_t"
+      args="Arial,14,0xffffff,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="KarnevalBagItem.titleField_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="specialfunny.WANRewardFrame.ActTitleTxt_t"
+      args="Arial,22,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="specialfunny.WANRewardFrame.ActContentTxt_t"
+      args="Arial,14,0xe4b278,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="specialfunny.WANRewardFrame.CountDownText_t"
+      args="Arial,16,0xffffff,true,,,,,center"
+      leading="8" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="KarnevalBagItem.titleGlowFilter"
+      args="0x271d08,1,3,3,3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.onlinereward.image1"
+      x="5"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.onlinereward.image2"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.onlinereward.image3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.onlinereward.title"
+      x="45"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.onlinereward.KarnevalHasGet"
+      x="242"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.onlinereward.KarnevaEmptyImg"
+      x="17"
+      y="-6" />
+    <bitmapData
+      resourceLink="asset.onlinereward.StarBagCell"
+      width="50"
+      height="50"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.onlinereward.KarnevalEnd"
+      x="505"
+      y="41" />
+  </bitmaps>
+  <customDisplay>
+    <!--  KarnevalBagItem物品格子 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="KarnevalBagItem.BaseItemView"
+      backgroundStyle="KarnevalBagItem.ItemBack"
+      iconStyle="KarnevalBagItem.BaseItemViewIcon"
+      textStyle="KarnevalBagItem.BaseItemText"
+      profileStyle="KarnevalBagItem.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="25"
+      fashionIconY="20"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="26"
+      strengthenY="26"
+      showProfile="true" />
+    <!-- onlinereward物品格子 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="onlinereward.BaseItemView"
+      backgroundStyle="onlinereward.ItemBack"
+      iconStyle="onlinereward.BaseItemViewIcon"
+      textStyle="onlinereward.BaseItemText"
+      profileStyle="onlinereward.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="40"
+      fashionIconY="35"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="33"
+      strengthenY="33"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="onlinereward.BaseItemViewIcon"
+      iconHeight="58"
+      iconWidth="58"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="29"
+      loadingY="29"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="KarnevalBagItem.BaseItemViewIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="21"
+      loadingY="21"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="KarnevalBagItem.PlayerStarBagCellIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="0"
+      loadingY="1"
+      iconWidth="60"
+      iconHeight="60"
+      tipStyle="tips.StarTip"
+      tipDirctions="4,6,0,3,5,7"
+      tipGapH="10"
+      tipGapV="5"
+      x="25"
+      y="25" />
+    <!--WAN平台推广 Frame-->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="specialfunny.WANRewardFrame.Item"
+      iconStyle="firstpay.ItemIcon"
+      textStyle="firstpay.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+  </customDisplay>
+  <components>
+    <!--全民大狂欢 Frame-->
+    <component
+      classname="specialfunny.karneval.KarnevalFrame"
+      stylename="specialfunny.karneval.KarnevalFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="61"
+      width="708"
+      height="615" />
+    <!--定时礼包 Frame-->
+    <component
+      classname="specialfunny.TimingRewardFrame"
+      stylename="specialfunny.TimingRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="40"
+      width="331"
+      height="290" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="onlinereward.GoodsProfileBG"
+      parentStyle="core.GoodsProfileBG"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="KarnevalBagItem.GoodsProfileBG"
+      parentStyle="core.GoodsProfileBG"
+      width="45"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="onlinereward.ItemBack"
+      parentStyle="core.goods.ItemBack"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="KarnevalBagItem.ItemBack"
+      parentStyle="core.goods.ItemBack"
+      width="45"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="onlinereward.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="18"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalBagItem.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="45"
+      x="2"
+      y="28" />
+    <!--在线时长 Frame-->
+    <component
+      classname="specialfunny.OnLineRewardFrame"
+      stylename="specialfunny.OnLineRewardFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="64"
+      width="385"
+      height="365"
+      backStyle="OnLineRewardFrame.FrameBack" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="OnLineRewardFrame.FrameBack"
+      resourceLink="core.FrameBackgoundBase1"
+      imageRectString="-18|-15|0|23|0" />
+    <!-- 标题 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="onlinereward.titleText"
+      textFormatStyle="onlinereward.titleText_t1,onlinereward.titleText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="25"
+      x="71"
+      y="-2"
+      maxChars="3" />
+    <!-- 物品名 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="onlinereward.txt"
+      textFormatStyle="onlinereward.txt_t"
+      filterString="core.normal_f"
+      multiline="true"
+      wordWrap="true"
+      width="87"
+      height="40"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="onllinereward.back1"
+      parentStyle="core.describeBackground_style27"
+      x="0"
+      y="0"
+      width="350"
+      height="250" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="onllinereward.back2"
+      parentStyle="core.describeBackground_style26"
+      x="7"
+      y="30"
+      width="335"
+      height="156" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="onllinereward.getBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.onlinereward.getReward1"
+      x="103"
+      y="194"
+      width="151"
+      height="50"
+      iconInnerRectString="28,94,12,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="TimingRewardFrame.back1"
+      parentStyle="core.describeBackground_style06"
+      width="362"
+      height="207"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="TimingRewardFrame.back2"
+      resourceLink="asset.onlinereward.style25"
+      scaleGridString="10,10,70,30"
+      width="356"
+      height="201"
+      x="3"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="TimingRewardFrame.back3"
+      parentStyle="core.describeBackground_style38"
+      width="340"
+      height="105"
+      x="11"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="TimingRewardFrame.desTxt"
+      textFieldStyle="TimingRewardFrame.desTxtField"
+      colors="0xffffff,0xffd45f"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="0,255"
+      width="286"
+      height="20"
+      x="4"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="TimingRewardFrame.desTxtField"
+      textFormatStyle="TimingRewardFrame.desTxtField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="286"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="TimingRewardFrame.getBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.onlinereward.getReward2"
+      x="103"
+      y="152"
+      width="151"
+      height="50"
+      iconInnerRectString="29,92,13,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="TimingRewardFrame.timeText"
+      textFormatStyle="onlinereward.titleText_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="80"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="TimingRewardFrame.hBox1"
+      x="23"
+      y="51"
+      spacing="0"
+      strictWidth="80" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="TimingRewardFrame.hBox2"
+      x="13"
+      y="115"
+      spacing="0"
+      strictWidth="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="TimingRewardFrame.txt"
+      textFormatStyle="TimingRewardFrame.txt_t1,TimingRewardFrame.txt_t2,TimingRewardFrame.txt_t3,TimingRewardFrame.txt_t4,TimingRewardFrame.txt_t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="KarnevalFrame.bg"
+      resourceLink="core.describeBackground_style11,asset.onlinereward.Karnevalbg,asset.onlinereward.KarnevalVeins,Veins.ScaleX,asset.onlinereward.KarnevalFirst,asset.onlinereward.KarnevalSecond,asset.onlinereward.KarnevalThird,asset.onlinereward.KarnevalReadMiddle,ReadMiddle.ScaleX"
+      imageRectString="&#xD;&#xA;                    0|674|0|491|13,&#xD;&#xA;                    3|668|3|476|13,&#xD;&#xA;                    0|104|0|175|13,&#xD;&#xA;                    676|104|0|175|13,&#xD;&#xA;                    200|88|10|35|13,&#xD;&#xA;                    200|88|50|35|13,&#xD;&#xA;                    200|88|90|35|13,&#xD;&#xA;                    -42|380|168|46|13,&#xD;&#xA;                    718|380|168|46|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="Veins.ScaleX"
+      resourceLink="asset.onlinereward.KarnevalVeins"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ReadMiddle.ScaleX"
+      resourceLink="asset.onlinereward.KarnevalReadMiddle"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.expenseTxt"
+      textFormatStyle="KarnevalFrame.expenseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="650"
+      height="20"
+      x="0"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.middleTxt"
+      textFormatStyle="KarnevalFrame.middleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="676"
+      height="20"
+      x="15"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.middleEndTxt"
+      textFormatStyle="KarnevalFrame.middleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="676"
+      height="20"
+      x="0"
+      y="493" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="KarnevalFrame.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg,asset.core.SmallPointImg,asset.core.SmallPointImg"
+      imageRectString="255|23|118|21|13,75|23|118|21|13,81|23|157|21|13"
+      x="300"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.totalTxt"
+      textFormatStyle="KarnevalFrame.totalTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="310"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.mineTxt"
+      textFormatStyle="KarnevalFrame.totalTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="495"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.sortTxt"
+      textFormatStyle="KarnevalFrame.sortTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="635"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.needTxt"
+      textFormatStyle="KarnevalFrame.middleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="344"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalFrame.minuTxt"
+      textFormatStyle="KarnevalFrame.minuTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="78"
+      y="492" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ExpenseItem.vipIcon"
+      resourceLink="asset.core.simpleVIPIcon"
+      x="0"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ExpenseItem.vipName"
+      textFieldStyle="ExpenseItem.vipNameNameField"
+      colors="0xfec236,0xfdff78"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="0,255"
+      width="100"
+      height="20"
+      x="22"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExpenseItem.vipNameNameField"
+      textFormatStyle="ExpenseItem.vipNameNameField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExpenseItem.name"
+      textFormatStyle="ExpenseItem.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="22"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExpenseItem.expenseTxt"
+      textFormatStyle="ExpenseItem.expenseTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="102"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ExpenseItem.pointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="175"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="KarnevalFrame.playerVbox"
+      x="285"
+      y="22"
+      strictHeight="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="KarnevalBagItem.title"
+      textFieldStyle="KarnevalBagItem.titleField"
+      colors="0xffffff,0xffea00,0xffdb49,0xc85000,0xffa524"
+      filterString="KarnevalBagItem.titleGlowFilter"
+      alphas="1,1,1,1,1"
+      ratios="10,60,90,180,255"
+      width="180"
+      height="20"
+      x="55"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalBagItem.titleField"
+      textFormatStyle="KarnevalBagItem.titleField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="180"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="KarnevalBagItem.hBox"
+      x="10"
+      y="37"
+      spacing="0"
+      strictWidth="60" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="KarnevalBagItem.getBtn"
+      backStyle="asset.onlinereward.KarnevalBagItemBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="252"
+      y="46" />
+    <custom
+      classname="cell.view.starbag.StarBagCell"
+      stylename="KarnevalBagItem.StarBagCell"
+      backgroundStyle="asset.onlinereward.StarBagCell"
+      iconStyle="KarnevalBagItem.PlayerStarBagCellIcon"
+      levelStyle="KarnevalBagItem.StarLevelTxt"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-10"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="KarnevalBagItem.StarLevelTxt"
+      parentStyle="star.StarNameTxt"
+      height="20"
+      width="50"
+      x="-10"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="KarnevalFrame.BottleHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="628"
+      y="-37" />
+    <!-- 全民大狂欢帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="KarnevalFrame.BottleHelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="specialfunny.karneval.KarnevalFrame.helpTxt"
+      titleText="public.help"
+      textWidth="400" />
+    <!--WAN平台推广 Frame-->
+    <component
+      classname="specialfunny.WANRewardFrame"
+      stylename="specialfunny.WANRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="47"
+      width="595"
+      height="445" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="specialfunny.WANRewardFrame.FrameBg"
+      resourceLink="asset.onlinereward.FrameBg" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="specialfunny.WANRewardFrame.ActTitleTxt"
+      textFieldStyle="specialfunny.WANRewardFrame.ActTitleTxtStyle"
+      colors="0xffc926,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="150,230"
+      x="200"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="specialfunny.WANRewardFrame.ActTitleTxtStyle"
+      textFormatStyle="specialfunny.WANRewardFrame.ActTitleTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="specialfunny.WANRewardFrame.ActContentTxt"
+      textFormatStyle="specialfunny.WANRewardFrame.ActContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="400"
+      height="140"
+      x="130"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="specialfunny.WANRewardFrame.CountDownBtn"
+      backStyle="specialfunny.WANRewardFrame.CountDownBtnBg"
+      backgoundInnerRectString="120,24,8,20"
+      textStyle="specialfunny.WANRewardFrame.CountDownText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="233"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="specialfunny.WANRewardFrame.CountDownBtnBg"
+      resourceLink="asset.onlinereward.GetBtnBg,asset.onlinereward.GetBtnCountDown"
+      imageRectString="0|177|0|43|13,22|132|9|25|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="specialfunny.WANRewardFrame.CountDownText"
+      textFormatStyle="specialfunny.WANRewardFrame.CountDownText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="specialfunny.WANRewardFrame.GetBtn"
+      backStyle="specialfunny.WANRewardFrame.GetBtnBg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="233"
+      y="312" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="specialfunny.WANRewardFrame.GetBtnBg"
+      resourceLink="asset.onlinereward.GetBtnBg,asset.onlinereward.GetBtnTxt"
+      imageRectString="0|177|0|43|13,48|80|11|31|13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="specialfunny.WANRewardFrame.ItemContainer"
+      x="110"
+      y="240"
+      spacing="13" />
+  </components>
+</style>

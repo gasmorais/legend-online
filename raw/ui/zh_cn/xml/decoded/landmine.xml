@@ -1,0 +1,377 @@
+<style
+  name="landmine"
+  source="ui/zh_cn/swf/landmine.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="landmine.LandMineTeamFrame.leftTimeValueTxt_t"
+      args="Arial,12,0xfa9a33,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="landmine.LandMineTeamFrame.helpContentTxt_t"
+      args="Arial,14,0xf2e4a5,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="landmine.LandMineHeroView.nameTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="landmine.LandMineTeamHeroView.nameTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.landmine.teamWaitTipsNumberAsset" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="landmine.LandMineHeroView.roleContainer"
+      scaleX="0.57"
+      scaleY="0.57"
+      x="0"
+      y="0" />
+    <custom
+      classname="landmine.LandMineTeamHeroView"
+      stylename="landmine.LandMineTeamFrame.heroView1"
+      x="0"
+      y="130" />
+    <custom
+      classname="landmine.LandMineTeamHeroView"
+      stylename="landmine.LandMineTeamFrame.heroView2"
+      x="150"
+      y="100" />
+    <custom
+      classname="landmine.LandMineTeamHeroView"
+      stylename="landmine.LandMineTeamFrame.heroView3"
+      x="300"
+      y="130" />
+    <custom
+      classname="landmine.LandMineTeamHeroView"
+      stylename="landmine.LandMineTeamFrame.heroView4"
+      x="450"
+      y="100" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="landmine.LandMineTeamHeroView.showAvatar"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="landmine.LandMineTeamFrame.itemContainer"
+      x="200"
+      y="422" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="landmine.LandMineTeamFrame.rewardItemView"
+      iconStyle="landmine.LandMineTeamFrame.rewardItemViewIcon"
+      textStyle="landmine.LandMineTeamFrame.rewardItemTxt"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="landmine.LandMineTeamFrame.rewardItemViewIcon"
+      iconHeight="58"
+      iconWidth="58"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="29"
+      loadingY="29"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="landmine.LandMineTeamWaitView.countDownTxtContainer"
+      x="217"
+      y="23" />
+    <custom
+      classname="asset.landmine.moveEffectMC"
+      stylename="landmine.LandMineHeroView.moveEffectMC"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.landmine.trapEffectMC"
+      stylename="landmine.LandMineHeroView.trapEffectMC"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="landmine.LandMineTeamFrame"
+      stylename="landmine.LandMineTeamFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="65"
+      width="920"
+      height="645" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="landmine.LandMineTeamFrame.frameBg"
+      resourceLink="asset.landmine.teamFrameBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="landmine.LandMineTeamFrame.leftTimeTxt"
+      resourceLink="asset.landmine.leftTimeTxt"
+      x="25"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="landmine.LandMineTeamFrame.leftTimeValueTxt"
+      textFormatStyle="landmine.LandMineTeamFrame.leftTimeValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="24"
+      x="150"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="landmine.LandMineTeamFrame.rewardTitleTxt"
+      resourceLink="asset.landmine.rewardTitleTxt"
+      x="40"
+      y="438" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="landmine.LandMineTeamFrame.helpTitleTxt"
+      resourceLink="asset.landmine.helpTitleTxt"
+      x="725"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="landmine.LandMineTeamFrame.helpContentTxt"
+      textFormatStyle="landmine.LandMineTeamFrame.helpContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="200"
+      x="660"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="landmine.LandMineTeamFrame.startBtn"
+      backStyle="asset.landmine.startBtnBg"
+      iconStyle="asset.landmine.startBtnTxt"
+      iconInnerRectString="35,67,6,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="700"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="landmine.LandMineTeamFrame.rewardItemTxt"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="16"
+      x="2"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="landmine.LandMineTeamWaitView.tipsImg"
+      resourceLink="asset.landmine.teamWaitTipsImg"
+      x="0"
+      y="0" />
+    <component
+      classname="landmine.LandMineFrame"
+      stylename="landmine.LandMineFrame"
+      containerX="0"
+      containerY="0"
+      width="1000"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="landmine.LandMineView.frameBg"
+      resourceLink="asset.landmine.frameBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.castleBtnStart"
+      backStyle="asset.landmine.castleAsset1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="46"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.castleBtnEnd"
+      backStyle="asset.landmine.castleAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1050"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn00"
+      backStyle="asset.landmine.stoneAsset1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="29"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn01"
+      backStyle="asset.landmine.stoneAsset5"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="223"
+      y="392" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn02"
+      backStyle="asset.landmine.stoneAsset1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="388"
+      y="502" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn03"
+      backStyle="asset.landmine.stoneAsset3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="542"
+      y="625" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn10"
+      backStyle="asset.landmine.stoneAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="114"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn11"
+      backStyle="asset.landmine.stoneAsset6"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="263"
+      y="226" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn12"
+      backStyle="asset.landmine.stoneAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="542"
+      y="402" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn13"
+      backStyle="asset.landmine.stoneAsset3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="749"
+      y="603" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn20"
+      backStyle="asset.landmine.stoneAsset3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="351"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn21"
+      backStyle="asset.landmine.stoneAsset7"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="485"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn22"
+      backStyle="asset.landmine.stoneAsset7"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="734"
+      y="392" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn23"
+      backStyle="asset.landmine.stoneAsset7"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="961"
+      y="564" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn30"
+      backStyle="asset.landmine.stoneAsset2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="612"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn31"
+      backStyle="asset.landmine.stoneAsset8"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="687"
+      y="208" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn32"
+      backStyle="asset.landmine.stoneAsset9"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="918"
+      y="349" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn33"
+      backStyle="asset.landmine.stoneAsset11"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1145"
+      y="515" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn40"
+      backStyle="asset.landmine.stoneAsset4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="821"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn41"
+      backStyle="asset.landmine.stoneAsset7"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="886"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn42"
+      backStyle="asset.landmine.stoneAsset10"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1069"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="landmine.LandMineView.stoneBtn43"
+      backStyle="asset.landmine.stoneAsset1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1249"
+      y="321" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="landmine.LandMineHeroView.nameTxt"
+      textFormatStyle="landmine.LandMineHeroView.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="-25"
+      y="-100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="landmine.LandMineTeamHeroView.nameTxt"
+      textFormatStyle="landmine.LandMineTeamHeroView.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="0"
+      y="-50" />
+  </components>
+</style>

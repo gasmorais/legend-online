@@ -1,0 +1,253 @@
+<style
+  name="chargelottery"
+  source="ui/zh_cn/swf/chargelottery.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="chargelottery.leftTimeTxt_t"
+      args="Arial,14,0x00ff06,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chargelottery.leftCountText_t"
+      args="Arial,12,0xffdfa1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chargelottery.rechargeText_t"
+      args="Arial,12,0xffdfa1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chargelottery.desText_t"
+      args="Arial,11,0xFFDFA1,,,,,,left"
+      letterSpacing="1"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chargelottery.shengyuNote_t"
+      args="Arial,12,0xffdfa1,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="chargelottery.BaseItemText_t"
+      args="Arial,12,0xffffff,true,,,,,right"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.chargelottery.vipBoxItemSelect"
+      x="-7"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.chargelottery.vipBoxItemSelect2"
+      x="-11"
+      y="-13" />
+    <bitmapData
+      resourceLink="asset.chargelottery.Bg"
+      x="168"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.chargelottery.personBg"
+      x="-263"
+      y="-81" />
+    <bitmapData
+      resourceLink="asset.chargelottery.dongtaizhanshi"
+      x="655"
+      y="138" />
+    <bitmapData
+      resourceLink="asset.chargelottery.guizeshuoming"
+      x="653"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.chargelottery.itemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chargelottery.numBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.chargelottery.specialItem"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="chargelottery.ChargeLotteryItem"
+      stylename="chargelottery.ChargeLotteryItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.chargelottery.goodsFlickerEffctMC"
+      stylename="chargelottery.goodsFlickerEffctMC"
+      width="85"
+      height="85"
+      x="-12"
+      y="-12" />
+    <custom
+      classname="asset.chargelottery.goodsFlickerEffctMC2"
+      stylename="chargelottery.goodsFlickerEffctMC2"
+      width="85"
+      height="85"
+      x="-5"
+      y="-7" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="chargelottery.shopItem"
+      iconStyle="chargelottery.shopItemIcon"
+      textStyle="chargelottery.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="51"
+      profileHeight="51"
+      showProfile="true"
+      x="5"
+      y="5" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="chargelottery.shopItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="25"
+      loadingY="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.BaseItemText"
+      textFormatStyle="chargelottery.BaseItemText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="42"
+      x="8"
+      y="32" />
+  </customDisplay>
+  <components>
+    <component
+      classname="chargelottery.ChargeLotteryFrame"
+      stylename="chargelottery.ChargeLotteryFrame"
+      parentStyle="core.Frame1"
+      width="900"
+      height="566"
+      containerX="13"
+      containerY="56" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="chargelottery.chargelotteryFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="704"
+      height="467"
+      x="165"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="chargelottery.altarGoodsEffctMC"
+      resourceLink="asset.chargelottery.altarGoodsEffctMC"
+      x="23"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="chargelottery.receiveBtn"
+      backStyle="asset.chargelottery.receiveBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="248"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="chargelottery.receiveAllBtn"
+      backStyle="asset.chargelottery.receiveAllBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="413"
+      y="266" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.leftTimeTxt"
+      textFormatStyle="chargelottery.leftTimeTxt_t"
+      autoSize="none"
+      width="350"
+      height="20"
+      x="351"
+      y="436" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.leftCountText"
+      textFormatStyle="chargelottery.leftCountText_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="314"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.rechargeText"
+      textFormatStyle="chargelottery.rechargeText_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="457"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.desText"
+      textFormatStyle="chargelottery.desText_t"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="100"
+      x="665"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.shengyuNote"
+      textFormatStyle="chargelottery.shengyuNote_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="235"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="chargelottery.chongzhiNote"
+      textFormatStyle="chargelottery.shengyuNote_t"
+      autoSize="none"
+      width="75"
+      height="30"
+      x="397"
+      y="87"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="chargelottery.ScrollPanel"
+      vScrollbarStyle="chargelottery.VScrollbar"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="4,-2,8,10,5"
+      vScrollProxy="0"
+      vUnitIncrement="10"
+      width="205"
+      height="248"
+      x="660"
+      y="174" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="chargelottery.VScrollbar"
+      parentStyle="core.VScrollbar02"
+      trackStyle="consortia.Scrollbar04_Back"
+      trackInnerRectString="1,2,0,0,0"
+      thumbAreaInnerRectString="1,1,10,10,0"
+      width="15"
+      height="260" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="chargelottery.Vbox"
+      width="440"
+      spacing="0"
+      height="305" />
+  </components>
+</style>

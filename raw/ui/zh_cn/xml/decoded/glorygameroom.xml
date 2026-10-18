@@ -1,0 +1,119 @@
+<style
+  name="glorygameroom"
+  source="ui/zh_cn/swf/glorygameroom.swf">
+  <sets>
+    <!-- 顶视图 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.glorygameroom.txtRoomTopTurn_t"
+      args="Arial,20,0xf8efb6,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.glorygameroom.txtRoomTopTime_t"
+      args="Arial,20,0xf8efb6,false,,,,,center"
+      leading="0" />
+    <!--右视图 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.glorygameroom.txtGloryGameRoomScore_t"
+      args="Arial,14,0xffff00,false,,,,,left"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.glorygameroom.FinalRoomTopRemainTimeTxt"
+      x="52"
+      y="48" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.extra"
+      x="114"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.turn1"
+      x="46"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.turn2"
+      x="66"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.turn3"
+      x="66"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.turn4"
+      x="66"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.turn5"
+      x="90"
+      y="16" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.result"
+      x="55"
+      y="25" />
+    <!--右视图 -->
+    <bitmapData
+      resourceLink="asset.glorygameroom.PrelimBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.MyPrelimScoreTxt"
+      x="33"
+      y="51" />
+    <bitmapData
+      resourceLink="asset.glorygameroom.MyPrelimRankTxt"
+      x="33"
+      y="50" />
+  </bitmaps>
+  <customDisplay></customDisplay>
+  <components>
+    <!-- 顶视图 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.glorygameroom.txtRoomTopTurn"
+      textFormatStyle="ui.glorygameroom.txtRoomTopTurn_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="35"
+      x="-33"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.glorygameroom.txtRoomTopTime"
+      textFormatStyle="ui.glorygameroom.txtRoomTopTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="35"
+      x="123"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.glorygameroom.topBg"
+      resourceLink="asset.glorygameroom.FinalRoomTopBg_D,asset.glorygameroom.FinalRoomTopBg_U,asset.glorygameroom.FinalRoomTopBg_M"
+      imageRectString="1|318|75|20|13,0|318|0|21|13,1|318|21|54|13"
+      x="0"
+      y="0" />
+    <!--右视图 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.glorygameroom.btnGloryGameRoomRightTeam"
+      backStyle="asset.glorygameroom.TeamFormationBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="70"
+      y="129" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.glorygameroom.txtGloryGameRoomScore"
+      textFormatStyle="ui.glorygameroom.txtGloryGameRoomScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="18"
+      x="135"
+      y="48" />
+  </components>
+</style>

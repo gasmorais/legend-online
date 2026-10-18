@@ -1,0 +1,564 @@
+<style
+  name="fighting"
+  source="ui/zh_cn/swf/fighting.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.integral_t1"
+      args="Arial,30,0xdd0606,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.integral_t2"
+      args="Arial,30,0xddbc06,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.integral_t3"
+      args="Arial,30,0x1bbc17,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.desction_t1"
+      args="Arial,12,0xdd0606,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.desction_t2"
+      args="Arial,12,0xddbc06,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.desction_t3"
+      args="Arial,12,0x1bbc17,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.gotoTxt_t"
+      args="Arial,14,0xf3d482,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="fighting.petFight_t"
+      args="Arial,18,0xe2d18b,,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.fighting.fightItemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fightingGoto"
+      x="335"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.fightingGotoMouseOverImg"
+      x="335"
+      y="32" />
+    <bitmapData
+      resourceLink="asset.fighting.bg" />
+    <bitmapData
+      resourceLink="asset.fighting.bg3" />
+    <bitmapData
+      resourceLink="asset.fighting.PetBg"
+      x="15"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.fighting.splitLine" />
+    <bitmapData
+      resourceLink="asset.fighting.FightCapacityTxt"
+      x="42"
+      y="303" />
+    <bitmapData
+      resourceLink="asset.fighting.fashionIcon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.equipIconTxt"
+      x="25"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.fighting.gemIconTxt"
+      x="25"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.talentAndRuneIconTxt"
+      x="6"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.starIconTxt"
+      x="25"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.petIconTxt"
+      x="12"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.consortiaTechnologyIconTxt"
+      x="2"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.fashionIconTxt"
+      x="15"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.mountsIconTxt"
+      x="15"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.battleIconTxt"
+      x="15"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.childIconTxt"
+      x="17"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.fighting.technologyIconTxt"
+      x="10"
+      y="0" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <!-- FightingFrame -->
+    <component
+      classname="fighting.FightingFrame"
+      stylename="fighting.FightingFrame"
+      parentStyle="core.Frame1"
+      containerX="19"
+      containerY="68"
+      width="575"
+      height="548" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fighting.frameBg2"
+      parentStyle="core.describeBackground_style09"
+      x="-7"
+      y="-1"
+      width="549"
+      height="435" />
+    <!-- FightingItem -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.typeIconImage"
+      resourceLink="asset.fighting.equipIcon,asset.fighting.gemIcon,asset.fighting.battleIcon,asset.fighting.starIcon,asset.fighting.petIcon,asset.fighting.consortiaTechnologyIcon,asset.fighting.mountsIcon,asset.fighting.fashionIcon,asset.fighting.childIcon,asset.fighting.technologyIcon"
+      x="15"
+      y="16"
+      autoSize="true"
+      autoSizeAble="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.typeTxtImage"
+      resourceLink="asset.fighting.equipIconTxt,asset.fighting.gemIconTxt,asset.fighting.battleIconTxt,asset.fighting.starIconTxt,asset.fighting.petIconTxt,asset.fighting.consortiaTechnologyIconTxt,asset.fighting.mountsIconTxt,asset.fighting.fashionIconTxt,asset.fighting.childIconTxt,asset.fighting.technologyIconTxt"
+      x="0"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.integralTxt"
+      textFormatStyle="fighting.integral_t1,fighting.integral_t2,fighting.integral_t3,fighting.integral_t3"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="55"
+      height="34"
+      x="76"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.integralImage"
+      resourceLink="asset.fighting.redFraction,asset.fighting.yellowFraction,asset.fighting.greenFraction,asset.fighting.greenFraction"
+      x="129"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.desctionTxt"
+      textFormatStyle="fighting.desction_t1,fighting.desction_t2,fighting.desction_t3,fighting.desction_t3"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="165"
+      height="50"
+      x="176"
+      y="17"
+      autoSizeAble="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.linkTxt"
+      textFormatStyle=""
+      autoSize="none"
+      filterString="core.normal_f"
+      width="60"
+      height="24"
+      x="156"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.upgradeBtn"
+      backStyle="asset.fighting.buleBtnbg"
+      iconStyle="asset.fighting.upgradeTxt"
+      iconInnerRectString="13,65,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="418"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.gotoTxt"
+      textFormatStyle="fighting.gotoTxt_t"
+      filterString="core.normal_f"
+      width="143"
+      height="22"
+      x="285"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="fighting.gotoTxtButton"
+      textStyle="fighting.gotoTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="0,8,8,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="80"
+      height="20"
+      x="345"
+      y="24" />
+    <!-- fightingPetFrame -->
+    <component
+      classname="fighting.FightingPetFrame"
+      stylename="fighting.FightingPetFrame"
+      parentStyle="core.Frame1"
+      containerX="19"
+      containerY="63"
+      width="620"
+      height="540" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="fighting.frameBg3"
+      parentStyle="fighting.frameBg2"
+      x="-7"
+      y="-1"
+      width="594"
+      height="436" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fighting.petBg.scaleX"
+      resourceLink="asset.fighting.bg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="fighting.petFrameBg"
+      resourceLink="asset.fighting.bg,fighting.petBg.scaleX,asset.fighting.bg3"
+      imageRectString="0|291|0|0|0,582|-291|0|0|0,0|0|361|0|0"
+      width="582"
+      height="423"
+      x="-1"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="fighting.ShowViewBack"
+      parentStyle="core.describeBackground_style11"
+      width="233"
+      height="258"
+      x="13"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fighting.line"
+      resourceLink="asset.fighting.splitLine"
+      height="2"
+      x="1"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.petFightTxt"
+      textFormatStyle="fighting.petFight_t"
+      filterString="core.normal_f"
+      width="318"
+      height="22"
+      x="105"
+      y="20"
+      autoSizeAble="false"
+      wordWrap="false"
+      autoSize="none" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.petFightIntegralTxt"
+      parentStyle="fighting.integralTxt"
+      x="372"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.petintegralImage"
+      parentStyle="fighting.integralImage"
+      x="427"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.PetNameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="26"
+      y="83"
+      width="150"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.returnBackBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.fighting.returnMain"
+      iconInnerRectString="18,117,12,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="204"
+      y="377" />
+    <!-- FightPetItem -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.petItemintegralImage"
+      resourceLink="asset.fighting.petQualityTxt,asset.fighting.petQualificationTxt,asset.fighting.petSkill,asset.fighting.itemTxt01,asset.fighting.itemTxt02,asset.fighting.itemTxt03,asset.fighting.itemTxt04,asset.fighting.itemTxt05"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.petItemgotoBtn"
+      backStyle="asset.fighting.buleBtnbg"
+      iconStyle="asset.fighting.upgradeTxt"
+      iconInnerRectString="13,65,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="201"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.petItemlearningBtn"
+      parentStyle="fighting.petItemgotoBtn"
+      iconInnerRectString="20,43,11,21,13"
+      iconStyle="asset.fighting.learning" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.petItemEquipUpgradeBtn"
+      parentStyle="fighting.petItemgotoBtn"
+      iconInnerRectString="24,43,11,21,13"
+      iconStyle="asset.fighting.upgradeTechnologyTxt" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.petItemupgrageBtn"
+      parentStyle="fighting.petItemgotoBtn"
+      iconInnerRectString="24,43,11,21,13"
+      iconStyle="asset.fighting.childUpgradeBtnTxt" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.petItemintensifyBtn"
+      parentStyle="fighting.petItemgotoBtn"
+      iconInnerRectString="13,65,9,21,13"
+      iconStyle="asset.fighting.intensifyTxt" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.petItemrefineryBtn"
+      parentStyle="fighting.petItemgotoBtn"
+      iconInnerRectString="13,65,9,21,13"
+      iconStyle="asset.fighing.starRefineryGoToIcon" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.petItemdesctionTxt"
+      textFormatStyle="fighting.desction_t1,fighting.desction_t2,fighting.desction_t3,fighting.desction_t3"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="200"
+      height="40"
+      x="0"
+      y="38"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fighting.splitLine01"
+      parentStyle="fighting.line"
+      x="244"
+      y="154" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="fighting.splitLine02"
+      parentStyle="fighting.line"
+      x="244"
+      y="248" />
+    <!-- FightingEquipGemFrame -->
+    <component
+      classname="fighting.FightingEquipGemFrame"
+      stylename="fighting.FightingEquipGemFrame"
+      parentStyle="core.Frame1"
+      containerX="19"
+      containerY="63"
+      width="620"
+      height="540" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.equip_GemIcon"
+      resourceLink="asset.fighting.equip_gemIcon01,asset.fighting.equip_gemIcon02,asset.fighting.equip_gemIcon03,asset.fighting.equip_gemIcon11,asset.fighting.equip_gemIcon04,asset.fighting.equip_gemIcon05,asset.fighting.equip_gemIcon06,asset.fighting.equip_gemIcon07,asset.fighting.equip_gemIcon08,asset.fighting.equip_gemIcon09,asset.fighting.equip_gemIcon10"
+      x="17"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.equip_GemTitle"
+      resourceLink="asset.fighting.equipIntensifyTxt,asset.fighting.equipRefreshTxt,asset.fighting.equipQualityTxt,asset.fighting.equipMouldTxt,asset.fighting.gemTxt,asset.fighting.soulMarkingTxt,asset.fighting.hightLevelSoulMarkingTxt,asset.fighting.starTxt,asset.fighting.starRefineryTxt,asset.fighting.technologyTxt,asset.fighting.consortiaSkillTxt"
+      x="99"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.equip_GemDesctionTxt"
+      textFormatStyle="fighting.desction_t1,fighting.desction_t2,fighting.desction_t3,fighting.desction_t3"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="360"
+      height="50"
+      x="102"
+      y="53"
+      wordWrap="true" />
+    <!-- ICONBUTTON_01 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn01"
+      parentStyle="fighting.petItemgotoBtn"
+      iconInnerRectString="11,65,10,21,13"
+      iconStyle="asset.fighting.intensifyTxt"
+      x="463"
+      y="20" />
+    <!-- ICONBUTTON_02 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn02"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="13,65,10,21,13"
+      iconStyle="asset.fighting.howToGetTxt" />
+    <!-- ICONBUTTON_03 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn03"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="13,65,11,21,13"
+      iconStyle="asset.fighting.refreshTxt" />
+    <!-- ICONBUTTON_04 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn04"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="11,65,10,21,13"
+      iconStyle="asset.fighting.mountTxt" />
+    <!-- ICONBUTTON_05 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn05"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="13,65,10,21,13"
+      iconStyle="asset.fighting.upgradeTxt" />
+    <!-- ICONBUTTON_06 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn06"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="13,65,10,21,13"
+      iconStyle="asset.fighting.starGotoIcon" />
+    <!-- ICONBUTTON_07 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn07"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="13,65,10,21,13"
+      iconStyle="asset.fighing.starRefineryGoToIcon" />
+    <!-- ICONBUTTON_08 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn08"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="24,43,10,21,13"
+      iconStyle="asset.fighting.upgradeTechnologyTxt" />
+    <!-- ICONBUTTON_09 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="fighting.equip_GemGoToBtn09"
+      parentStyle="fighting.equip_GemGoToBtn01"
+      iconInnerRectString="24,43,10,21,13"
+      iconStyle="asset.fighting.equipMouldBtnTxt" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.equipOrGemFightTxt"
+      parentStyle="fighting.petFightTxt"
+      x="0"
+      y="16"
+      width="318"
+      autoSizeAble="false"
+      wordWrap="false"
+      autoSize="none" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="fighting.equipOrGemFightIntegralTxt"
+      parentStyle="fighting.integralTxt"
+      x="308"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="fighting.equipOrGemintegralImage"
+      parentStyle="fighting.integralImage"
+      x="360"
+      y="24" />
+    <!-- 品质说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fighting.helpFrame_1"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fighting.helpFrame.tilte01"
+      titleText="fighting.helpFrame.context01"
+      textWidth="363" />
+    <!-- 天赋&符文 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fighting.helpFrame_3"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fighting.helpFrame.tilte03"
+      titleText="fighting.helpFrame.context03"
+      textWidth="363" />
+    <!-- 星运说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fighting.helpFrame_4"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fighting.helpFrame.tilte04"
+      titleText="fighting.helpFrame.context04"
+      textWidth="363" />
+    <!-- 坐骑说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="fighting.helpFrame_7"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="fighting.helpFrame.tilte07"
+      titleText="fighting.helpFrame.context07"
+      textWidth="363" />
+    <!-- ScrollPanel -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fighting.scrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,1,-2,-2,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      viewportInnerRectString="1,0,417,-2,4"
+      width="532"
+      height="413"
+      x="0"
+      y="10"
+      hScrollbarInnerRectString="5,22,20,150,4"
+      hScrollProxy="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fighting.EquipGemFrameScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      viewportInnerRectString="1,560,0,0,2"
+      width="577"
+      height="312"
+      x="0"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="fighting.PetFrameScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,2,2,-57,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      viewportInnerRectString="1,334,20,-22,2"
+      width="335"
+      height="250"
+      x="243"
+      y="55" />
+  </components>
+</style>

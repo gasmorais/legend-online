@@ -1,0 +1,357 @@
+<style
+  name="redemptionroad"
+  source="ui/zh_cn/swf/redemptionroad.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadMainFrame.processText_t"
+      args="arial,16,0xffddac,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadChapterFrame.layerText_t"
+      args="Arial,16,0xe3bf96,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadChapterFrame.bufferTitle_t"
+      args="Arial,14,0xd5ffd5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadChapterFrame.bufferDesc_t"
+      args="Arial,12,0x23b32c,,,,,,left"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadChapterFrame.debufferTitle_t"
+      args="Arial,14,0xffb5b5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadChapterFrame.debufferDesc_t"
+      args="Arial,12,0xff0000,,,,,,left"
+      leading="3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="RedemptionRoadDiffItem.cdText_t"
+      args="arial,14,0xff0000,true,,,,,right"
+      leading="2" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.RedemptionRoadDiffItem.selectBg"
+      x="14"
+      y="-3" />
+    <bitmapData
+      resourceLink="asset.RedemptionRoadNodeItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RedemptionRoadNodeItem.topBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RedemptionRoadNodeItem.selectBg"
+      x="-3"
+      y="-17" />
+    <bitmapData
+      resourceLink="asset.RedemptionRoadDiffItem.clearanceImage"
+      x="312"
+      y="5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="RedemptionRoadMainFrame.rewardItem"
+      parentStyle="core.BaseItemView"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="RedemptionRoadChapterFrame.rewardItem"
+      parentStyle="core.BaseItemView"
+      x="0"
+      y="0" />
+    <custom
+      stylename="RedemptionRoadNodeItem.bossIcon"
+      classname="yishi.view.community.BaseIconView"
+      loadingStyle="asset.core.IconLoading"
+      tipStyle="yishi.view.tips.OneLineTip"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="6"
+      loadingHeight="6"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6"
+      tipGapH="0"
+      tipGapV="0"
+      loadingX="29"
+      loadingY="29"
+      x="20"
+      y="22" />
+  </customDisplay>
+  <components>
+    <component
+      classname="redemptionroad.RedemptionRoadMainFrame"
+      stylename="redemption.RedemptionRoadMainFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="65"
+      width="760"
+      height="565" />
+    <component
+      stylename="RedemptionRoadMainFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="720"
+      height="454"
+      x="-2"
+      y="-3" />
+    <component
+      stylename="RedemptionRoadMainFrame.mainBg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.RedemptionRoadMainFrame.leftBg,asset.RedemptionRoadMainFrame.rightBg,asset.RedemptionRoadMainFrame.flowerBg,RedemptionRoadMainFrame.rightFlowerBg,asset.RedemptionRoadMainFrame.title,asset.RedemptionRoadMainFrame.processTitleBg,asset.RedemptionRoadMainFrame.rewardTitleBg"
+      imageRectString="0|0|19,491|0|19,3|0|19,488|0|19,510|20|19,557|130|19,537|230|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RedemptionRoadMainFrame.rightFlowerBg"
+      resourceLink="asset.RedemptionRoadMainFrame.flowerBg"
+      scaleX="-1" />
+    <component
+      stylename="RedemptionRoadMainFrame.diffImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.RedemptionRoadMainFrame.diffImage1,asset.RedemptionRoadMainFrame.diffImage2,asset.RedemptionRoadMainFrame.diffImage3"
+      x="568"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadMainFrame.processText"
+      textFormatStyle="RedemptionRoadMainFrame.processText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="22"
+      x="565"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RedemptionRoadMainFrame.rewardBox"
+      x="605"
+      y="263"
+      spacing="5"
+      autoCenter="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RedemptionRoadMainFrame.startBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.RedemptionRoadMainFrame.startBtnIcon"
+      iconInnerRectString="37,77,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="528"
+      y="360" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="RedemptionRoadMainFrame.diffBox"
+      x="15"
+      y="35"
+      spacing="10" />
+    <component
+      stylename="RedemptionRoadDiffItem.diffImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.RedemptionRoadDiffItem.diffImage1,asset.RedemptionRoadDiffItem.diffImage2,asset.RedemptionRoadDiffItem.diffImage3"
+      x="170"
+      y="35" />
+    <component
+      classname="redemptionroad.RedemptionRoadChapterFrame"
+      stylename="redemption.RedemptionRoadChapterFrame"
+      parentStyle="core.Frame1"
+      containerX="20"
+      containerY="65"
+      width="760"
+      height="565" />
+    <component
+      stylename="RedemptionRoadChapterFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="720"
+      height="454"
+      x="-2"
+      y="-3" />
+    <component
+      stylename="RedemptionRoadChapterFrame.mainBg"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.RedemptionRoadChapterFrame.rightBg,asset.RedemptionRoadChapterFrame.rewardTitleBg"
+      imageRectString="491|0|19,497|235|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RedemptionRoadChapterFrame.rewardBox"
+      x="605"
+      y="278"
+      spacing="10"
+      autoCenter="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="RedemptionRoadChapterFrame.startBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.RedemptionRoadChapterFrame.startBtnIcon"
+      iconInnerRectString="54,49,14,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="528"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadChapterFrame.layerText"
+      textFormatStyle="RedemptionRoadChapterFrame.layerText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="22"
+      x="625"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadChapterFrame.bufferTitle"
+      textFormatStyle="RedemptionRoadChapterFrame.bufferTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="22"
+      x="497"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadChapterFrame.bufferDesc"
+      textFormatStyle="RedemptionRoadChapterFrame.bufferDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="55"
+      wordWrap="true"
+      x="500"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadChapterFrame.debufferTitle"
+      textFormatStyle="RedemptionRoadChapterFrame.debufferTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="22"
+      x="497"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadChapterFrame.debufferDesc"
+      textFormatStyle="RedemptionRoadChapterFrame.debufferDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="55"
+      wordWrap="true"
+      x="500"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RedemptionRoadChapterFrame.leftFlower"
+      resourceLink="asset.RedemptionRoadMainFrame.flowerBg"
+      x="3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="RedemptionRoadChapterFrame.rightFlower"
+      resourceLink="asset.RedemptionRoadMainFrame.flowerBg"
+      scaleX="-1"
+      x="488"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="RedemptionRoadChapterFrame.nodePanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,470,0,0,2"
+      vScrollbarInnerRectString="17,8,25,25,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="495"
+      height="445"
+      x="2"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="RedemptionRoadChapterFrame.nodeCon"
+      width="475"
+      height="1394" />
+    <component
+      stylename="RedemptionRoadNodeItem.stateImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.RedemptionRoadNodeItem.stateImage1,asset.RedemptionRoadNodeItem.stateImage2"
+      autoVCenter="true"
+      autoHCenter="true"
+      x="42"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="RedemptionRoadChapterFrame.nodeBox"
+      x="252"
+      y="0"
+      spacing="40"
+      autoCenter="true" />
+    <component
+      stylename="RedemptionRoadChapterFrame.nodeBg"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.RedemptionRoadChapterFrame.nodeBg1,asset.RedemptionRoadChapterFrame.nodeBg2,asset.RedemptionRoadChapterFrame.nodeBg3"
+      x="0"
+      y="0" />
+    <component
+      stylename="RedemptionRoadDiffItem.itemBack"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.RedemptionRoadDiffItem.itemBack1,asset.RedemptionRoadDiffItem.itemBack2,asset.RedemptionRoadDiffItem.itemBack3"
+      x="0"
+      y="0" />
+    <component
+      stylename="RedemptionRoadChapterFrame.diffImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.RedemptionRoadMainFrame.diffImage1,asset.RedemptionRoadMainFrame.diffImage2,asset.RedemptionRoadMainFrame.diffImage3"
+      x="523"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="RedemptionRoadChapterFrame.lineCon" />
+    <component
+      stylename="RedemptionRoadDiffItem.cdBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.RedemptionRoadDiffItem.cdBack,asset.RedemptionRoadDiffItem.cdTextImage"
+      imageRectString="0|399|0|62|13,70|281|2|28|13"
+      x="22"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadDiffItem.cdText"
+      textFormatStyle="RedemptionRoadDiffItem.cdText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="125"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="RedemptionRoadDiffItem.cdBtn"
+      backStyle="asset.RedemptionRoadDiffItem.cdBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="RedemptionRoadMainFrame.refreshTipTxt"
+      parentStyle="kingcontract.openLeftTxt"
+      x="507"
+      y="409"
+      width="200"
+      height="34"
+      wordWrap="true" />
+  </components>
+</style>

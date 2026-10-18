@@ -1,0 +1,159 @@
+<style
+  name="demonroadshop"
+  source="ui/zh_cn/swf/demonroadshop.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="demonroadshop.GiftTextStyle1_t"
+      args="Arial,16,0xfacf56,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.demoinroadshop.icon"
+      x="416"
+      y="277" />
+    <bitmapData
+      resourceLink="asset.shop.demonroadIcon"
+      x="13"
+      y="433"
+      scaleX="0.6"
+      scaleY="0.6" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="view.subshop.DemonRoadShopExchangeView"
+      stylename="ui.demonroadshop.view"
+      x="4"
+      y="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="demonroadecchange.playerBagViewList"
+      vSpace="0"
+      hSpace="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="demonroadecchange.exchageBagViewList"
+      vSpace="0"
+      hSpace="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="demonroadshop.exchangeStripView"
+      parentStyle="shop.areslordsShopTip.StripView"
+      x="429"
+      y="296" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="demonroad.soloveBaseItemView"
+      parentStyle="quickbuy.BuyBaseItemView"
+      showProfile="false"
+      x="99"
+      y="17" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="demonroad.solveContainer"
+      x="2"
+      y="-36" />
+  </customDisplay>
+  <components>
+    <component
+      classname="view.subshop.DemonRoadShopExchangeFrame"
+      stylename="view.subshop.DemonRoadShopExchangeFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="746"
+      height="508" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="demonroadshop.back1"
+      parentStyle="core.describeBackground_style09"
+      x="-10"
+      y="-4"
+      width="722"
+      height="405" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.demonroadshop.back"
+      resourceLink="asset.demonroadshop.1,asset.demonroadshop.1,asset.demonroadshop.4,asset.demonroadshop.2,asset.demonroadshop.3,asset.demonroadshop.ft"
+      imageRectString="0|2|19,341|1|19,330|0|19,10|8|19,352|8|19,460|300|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.demonroadshop.cancel"
+      backStyle="asset.demonroadshop.btnBg2"
+      iconStyle="asset.demonroadshop.btn2"
+      iconInnerRectString="35,61,11,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="543"
+      y="334" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.demonroadshop.exchangeBtn"
+      backStyle="asset.demonroadshop.btnBg1"
+      iconStyle="asset.demonroadshop.btn1"
+      iconInnerRectString="34,61,11,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="376"
+      y="334" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="demonroadexchange.playerBagScroll"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,338,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="338"
+      height="359"
+      x="0"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="demonroadexchange.exchangeBagScroll"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,345,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="342"
+      height="225"
+      x="352"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="demonroadexchange.countTxt"
+      parentStyle="stop.ComMoneyTextStyle"
+      textFormatStyle="demonroadshop.GiftTextStyle1_t"
+      x="154"
+      y="163" />
+    <component
+      classname="view.subshop.DemonRoadSolveFrame"
+      stylename="view.subshop.DemonRoadSolveFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveEnable="false"
+      height="310" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.demonroadshop.solveback"
+      resourceLink="asset.demoinroad.solveBg,asset.demoinroad.solveNum,asset.demoinroad.solveFt,asset.demoinroad.solveIcon"
+      imageRectString="0|269|0|260|13,18|82|123|27|13,12|87|161|27|13,120|30|158|30|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="demonroad.solveBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.demoinroad.solveBtn"
+      iconInnerRectString="42,43,12,22,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="70"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="demonroad.solveInputBg"
+      resourceLink="asset.core.TextInputBG2"
+      x="96"
+      y="159" />
+  </components>
+</style>

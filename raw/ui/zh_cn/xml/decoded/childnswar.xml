@@ -1,0 +1,372 @@
+<style
+  name="childnswar"
+  source="ui/zh_cn/swf/childnswar.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="childnswar.choosePosTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.childnswar.teamBg"
+      x="-16"
+      y="-671" />
+    <bitmapData
+      resourceLink="asset.childnswar.team.add"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.childnswar.topViewTitle"
+      x="91"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.childnswar.shopFt"
+      x="35"
+      y="342" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="childnswar.item.ChildNswarAvater"
+      stylename="ui.childnswar.av1"
+      x="98"
+      y="25" />
+    <custom
+      classname="childnswar.item.ChildNswarAvater"
+      stylename="ui.childnswar.av2"
+      x="280"
+      y="25" />
+    <custom
+      classname="childnswar.item.ChildNswarAvater"
+      stylename="ui.childnswar.av3"
+      x="470"
+      y="25" />
+    <custom
+      classname="childnswar.item.ChildNswarAvater"
+      stylename="ui.childnswar.av4"
+      x="185"
+      y="190" />
+    <custom
+      classname="childnswar.item.ChildNswarAvater"
+      stylename="ui.childnswar.av5"
+      x="363"
+      y="190" />
+    <custom
+      classname="childnswar.item.ChildNswarRankItem"
+      stylename="ui.childnswar.rank.myItem"
+      x="154"
+      y="549" />
+    <custom
+      classname="childnswar.item.ChildNswarRankTopItem"
+      stylename="ui.childnswar.allsTopIt"
+      x="242"
+      y="45" />
+    <custom
+      classname="childnswar.item.ChildNswarRedItem"
+      stylename="ui.childnswar.mRed"
+      x="28"
+      y="80" />
+    <custom
+      classname="childnswar.item.ChildNswarBuleItem"
+      stylename="ui.childnswar.mBule"
+      x="128"
+      y="294" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.childnswar.bg"
+      resourceLink="asset.childnswar.teamBg,asset.childnswar.teamBtnBg,asset.childnswar.teamBtnBg,asset.childnswar.teamMain,asset.childnswar.teamOther,asset.childnswar.teamftbg,asset.childnswar.teamft"
+      imageRectString="0|625|6|406|13,11|40|0|174|13,11|40|162|174|13,20|33|41|126|13,19|32|216|126|13,223|398|328|17|13,284|201|327|21|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.c1"
+      resourceLink="asset.childnswar.team.stand1"
+      x="28"
+      y="110"
+      scaleX="1"
+      width="239"
+      height="67" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.c3"
+      resourceLink="asset.childnswar.team.stand1"
+      x="115"
+      y="271"
+      scaleX="1"
+      width="239"
+      height="67" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.c2"
+      resourceLink="asset.childnswar.team.stand2"
+      x="215"
+      y="110"
+      scaleX="1"
+      width="239"
+      height="67" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.c4"
+      resourceLink="asset.childnswar.team.stand2"
+      x="300"
+      y="271"
+      scaleX="1"
+      width="239"
+      height="67" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.childnswar.cancelBtn"
+      backStyle="asset.childnswar.teamCancelBtnBg"
+      iconStyle="asset.childnswar.teamCancelBtn"
+      iconInnerRectString="27,38,11,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="154"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.childnswar.confirmBtn"
+      backStyle="asset.childnswar.teamConfimBtnBg"
+      iconStyle="asset.childnswar.teamConfimBtn"
+      iconInnerRectString="27,39,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="419"
+      y="353" />
+    <component
+      classname="childnswar.frame.ChildNswarTeamFrame"
+      stylename="childnswar.frame.ChildNswarTeamFrame"
+      parentStyle="core.Frame1"
+      closeInnerRectString="29,10,20,29,14"
+      containerX="11"
+      containerY="56"
+      moveInnerRectString="376,37,10,0,9"
+      width="660"
+      height="510" />
+    <component
+      classname="childnswar.frame.ChildNswarRewardFrame"
+      stylename="childnswar.frame.ChildNswarRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.FrameBg2"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="583"
+      height="652"
+      containerX="-19"
+      containerY="0" />
+    <component
+      classname="childnswar.frame.ChildNswarRankFrame"
+      stylename="childnswar.frame.ChildNswarRankFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,10,40,29,14"
+      containerY="0"
+      moveInnerRectString="376,37,10,0,9"
+      width="878"
+      height="646" />
+    <component
+      classname="childnswar.frame.ChildNswarResultFrame"
+      stylename="childnswar.frame.ChildNswarResultFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      moveInnerRectString="376,37,10,0,9"
+      width="942"
+      height="474"
+      containerY="0" />
+    <component
+      classname="childnswar.frame.ChildNswarBuyTimeFrame"
+      stylename="childnswar.frame.ChildNswarBuyTimeFrame"
+      parentStyle="core.QuickBuyFrame"
+      moveEnable="false"
+      width="326"
+      height="340" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="childnswar.ScenehelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="childnswar.Scene.helpTip"
+      titleText="consortia.crossGuild.helpTitle"
+      width="550"
+      textWidth="450" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.childnswar.sceneTeamBtn"
+      backStyle="asset.childnswar.teamBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.childnswar.sceneRewardBtn"
+      backStyle="asset.childnswar.rewardBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.childnswar.sceneShopBtn"
+      backStyle="asset.childnswar.shopBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.childnswar.sceneRankBtn"
+      backStyle="asset.childnswar.rankBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="211" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.childnswar.bottomIcon"
+      resourceLink="asset.childnswar.iconB1,asset.childnswar.iconB2,asset.childnswar.iconB3,asset.childnswar.iconB4,asset.childnswar.iconB5,asset.childnswar.iconB6"
+      autoHCenter="true"
+      x="246"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.leftIconm1"
+      resourceLink="asset.childnswar.leftIconm1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="43"
+      y="434"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.leftIconm2"
+      resourceLink="asset.childnswar.leftIconm2"
+      parentStyle="ui.childnswar.leftIconm1"
+      x="43"
+      y="350"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.leftIconm3"
+      resourceLink="asset.childnswar.leftIconm3"
+      parentStyle="ui.childnswar.leftIconm1"
+      x="37"
+      y="261"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.leftIconm4"
+      resourceLink="asset.childnswar.leftIconm4"
+      parentStyle="ui.childnswar.leftIconm1"
+      x="41"
+      y="177"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.leftIconm5"
+      resourceLink="asset.childnswar.leftIconm5"
+      parentStyle="ui.childnswar.leftIconm1"
+      x="32"
+      y="88"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.leftIconm6"
+      resourceLink="asset.childnswar.leftIconm6"
+      parentStyle="ui.childnswar.leftIconm1"
+      x="37"
+      y="0"
+      scaleX="1" />
+    <component
+      stylename="childnswar.ChildNswarChooseView"
+      classname="childnswar.view.ChildNswarChooseView"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,18,5,29,14"
+      containerX="0"
+      containerY="25"
+      width="203"
+      height="480"
+      escEnable="false"
+      x="-235"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.childnswar.top1Icon"
+      resourceLink="asset.childnswar.iconS1,asset.childnswar.iconS2,asset.childnswar.iconS3,asset.childnswar.iconS4,asset.childnswar.iconS5,asset.childnswar.iconS6"
+      x="179"
+      y="121"
+      autoHCenter="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      parentStyle="ui.childnswar.top1Icon"
+      stylename="ui.childnswar.top2Icon"
+      x="58"
+      y="126" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      parentStyle="ui.childnswar.top1Icon"
+      stylename="ui.childnswar.top3Icon"
+      x="299"
+      y="126" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      parentStyle="ui.childnswar.top1Icon"
+      stylename="ui.childnswar.allsIcon"
+      x="383"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="childnswar.team.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      x="578"
+      y="-33" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="chilsnswar.team.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="childnswar.team.helpTip"
+      titleText="consortia.crossGuild.helpTitle"
+      width="550"
+      textWidth="450" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.childnswar.MidStepIcon"
+      resourceLink="asset.childnswar.leftIconm1,asset.childnswar.leftIconm2,asset.childnswar.leftIconm3,asset.childnswar.leftIconm4,asset.childnswar.leftIconm5,asset.childnswar.leftIconm6"
+      autoHCenter="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.childnswar.buyIcon"
+      resourceLink="asset.childnswar.fgjIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="164"
+      y="408"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.chilsnswar.standImg"
+      resourceLink="asset.childnswar.team.stand1,asset.childnswar.team.stand2,asset.childnswar.team.stand3"
+      x="-65"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.childnswar.shopTab6"
+      parentStyle="ui.theseuspvp.shopTab1"
+      selectedIconStyle="asset.childnswar.shop.STab6"
+      unselectedIconStyle="asset.childnswar.shop.UnSTab6"
+      unselectedIconInnerRectString="20,47,8,23,13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="childnswar.choosePosTxt"
+      textFormatStyle="childnswar.choosePosTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="70"
+      y="23" />
+  </components>
+</style>

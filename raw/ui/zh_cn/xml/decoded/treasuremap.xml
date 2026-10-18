@@ -1,0 +1,324 @@
+<style
+  name="treasuremap"
+  source="ui/zh_cn/swf/treasuremap.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.yellowMapTxt_t"
+      args="Arial,24,0xeb9504,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.silverMapTxt_t"
+      args="Arial,24,0xa838f7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.blueMapTxt_t"
+      args="Arial,24,0x32a2f8,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.greenMapTxt_t"
+      args="Arial,24,0x59cd41,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.getTimesTxt_t"
+      args="Arial,16,0xeb310d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.rewardTxt_t"
+      args="Arial,14,0xfff6ca,,,,,,left"
+      leading="6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.tipsTxt_t"
+      args="Arial,12,0xae1c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="treasuremap.checkMapTxt_t"
+      args="Arial,14,0xf6ee09,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.treasuremap.getBg"
+      x="2"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.treasuremap.getMapNameBg"
+      x="135"
+      y="251" />
+    <bitmapData
+      resourceLink="asset.treasuremap.getTimesImg"
+      x="457"
+      y="361" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapAsset1"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapAsset2"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapAsset3"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapAsset4"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapBgAsset1"
+      x="4"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapBgAsset2"
+      x="4"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapBgAsset3"
+      x="4"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapBgAsset4"
+      x="4"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapSelected1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapSelected2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapSelected3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.treasuremap.MapSelected4"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="flash.display.Sprite"
+      stylename="treasuremap.TreasureMapGetFrame.Container"
+      x="4"
+      y="7" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="treasuremap.TreasureMapUseFrame.Container"
+      x="48"
+      y="22" />
+  </customDisplay>
+  <components>
+    <!-- 藏宝图-领取藏宝图 -->
+    <component
+      classname="map.internals.view.treasuremap.TreasureMapGetFrame"
+      stylename="treasuremap.TreasureMapGetFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,60,0,45,1"
+      containerX="13"
+      containerY="43"
+      width="659"
+      height="476" />
+    <!-- 刷新奖励按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="treasuremap.TreasureMapGetFrame.RefreshBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.treasuremap.refreshTxt"
+      iconInnerRectString="15,64,10,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="true"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,0"
+      tipGapH="0"
+      tipGapV="0"
+      x="423"
+      y="251" />
+    <!-- 一键刷新按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="treasuremap.TreasureMapGetFrame.QuicklyRefreshBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.treasuremap.oneKeyRefreshTxt"
+      iconInnerRectString="15,64,10,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="true"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,0"
+      tipGapH="0"
+      tipGapV="0"
+      x="521"
+      y="251" />
+    <!-- 领取宝图按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="treasuremap.TreasureMapGetFrame.GetBtn"
+      backStyle="asset.core.Style12Btn"
+      iconStyle="asset.treasuremap.getMapTxt"
+      iconInnerRectString="72,87,19,26,13"
+      x="198"
+      y="321"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 藏宝图名称 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="treasuremap.TreasureMapGetFrame.TreasureNameTxt"
+      textFormatStyle="treasuremap.greenMapTxt_t,treasuremap.blueMapTxt_t,treasuremap.silverMapTxt_t,treasuremap.yellowMapTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="102"
+      y="254"
+      width="325"
+      height="28" />
+    <!-- 提示文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="treasuremap.TreasureMapGetFrame.TipsTxt"
+      textFormatStyle="treasuremap.tipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="290"
+      width="200"
+      height="20" />
+    <!-- 领取次数 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="treasuremap.TreasureMapGetFrame.getTimesTxt"
+      textFormatStyle="treasuremap.getTimesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="561"
+      y="359"
+      width="60"
+      height="20" />
+    <!-- 9宫格背景图 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="treasuremap.TreasureMapUseFrame.scaleGetBg"
+      resourceLink="asset.treasuremap.scaleBg01,asset.treasuremap.scaleBg02,asset.treasuremap.scaleBg03,asset.treasuremap.scaleBg04,asset.treasuremap.scaleBg05,asset.treasuremap.scaleBg06,asset.treasuremap.scaleBg07,asset.treasuremap.scaleBg08,asset.treasuremap.scaleBg09"
+      width="631"
+      height="388"
+      x="0"
+      y="4" />
+    <!-- 藏宝图奖励 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="treasuremap.TreasureMapGetItemView.MapRewardTxt"
+      textFormatStyle="treasuremap.rewardTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="6"
+      y="150"
+      width="140"
+      height="70"
+      wordWrap="true" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="treasuremap.TreasureMapGetFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="true"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32"
+      x="585"
+      y="-34" />
+    <!-- 帮组文档 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="treasuremap.TreasureMapGetFrame.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="map.internals.view.treasuremap.TreasureMapGetFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <!-- 藏宝图-使用藏宝图 -->
+    <component
+      classname="map.internals.view.treasuremap.TreasureMapUseFrame"
+      stylename="treasuremap.TreasureMapUseFrame"
+      parentStyle="core.Frame2"
+      backStyle="asset.treasuremap.FrameBg"
+      closestyle="treasuremap.TreasureMapUseFrame.CloseBtn"
+      closeInnerRectString="45,-9,32,38,14"
+      moveInnerRectString="0,30,32,45,1"
+      titleOuterRectPosString="0,38,1"
+      containerX="13"
+      containerY="43"
+      width="455"
+      height="491" />
+    <!-- 立即挖掘按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="treasuremap.TreasureMapUseFrame.DigBtn"
+      backStyle="asset.treasuremap.digBtnBg"
+      iconStyle="asset.treasuremap.digBtnTxt"
+      width="156"
+      height="55"
+      iconInnerRectString="32,92,15,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="136"
+      y="365" />
+    <!-- 查看地图 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="treasuremap.TreasureMapUseFrame.CheckMap"
+      textFormatStyle="treasuremap.checkMapTxt_t"
+      mouseEnabled="true"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="302"
+      y="385" />
+    <!-- 关闭按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="treasuremap.TreasureMapUseFrame.CloseBtn"
+      backStyle="asset.core.closeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="treasuremap.TreasureMapUseFrame.helpBtn"
+      backStyle="asset.core.helpBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      x="406"
+      y="21"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32" />
+    <!-- 地图外框 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="treasuremap.TreasureMapUseFrame.mapBg"
+      resourceLink="asset.treasuremap.bg01,asset.treasuremap.bg02,asset.treasuremap.bg03,asset.treasuremap.bg04,asset.treasuremap.bg05,asset.treasuremap.bg06,asset.treasuremap.bg07,asset.treasuremap.bg08,asset.treasuremap.bg09"
+      width="357"
+      height="354"
+      x="36"
+      y="12" />
+    <!-- 帮组文档 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="treasuremap.TreasureMapUseFrame.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="map.internals.view.treasuremap.TreasureMapUseFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+  </components>
+</style>

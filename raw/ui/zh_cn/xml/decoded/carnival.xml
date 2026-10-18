@@ -1,0 +1,985 @@
+<style
+  name="carnival"
+  source="ui/zh_cn/swf/carnival.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.onLineTimeTxt_t"
+      args="Arial,12,0xffdea1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.giftNeedPt_t"
+      args="Arial,12,0xffdea1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.carnTabTxt_t1"
+      args="Arial,16,0xf1f6ff,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.carnTabTxt_t2"
+      args="Arial,16,0x7e9dc2,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.yearScoreTxt_t"
+      args="Arial,12,0xf1f6ff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.chargeTimeTxt_t"
+      args="Arial,12,0xffeed1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.pointNumTx_t"
+      args="Arial,14,0x95feff,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.carnival.pointNumTx_f"
+      args="0x110900,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.retTimeTxt_t"
+      args="Arial,12,0xf1f6ff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.taskTitleTxt_t"
+      args="Arial,14,0xffeed1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.taskDesTxt_t"
+      args="Arial,12,0xffdea1,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.taskScoreTxt_t"
+      args="Arial,12,0xffdea1,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.carnTurnDesTxt_t"
+      args="Arial,12,0xd99364,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.carnTurnTimeTxt_t"
+      args="Arial,12,0xbf9a96,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.giftBoxTargetTxt_t"
+      args="Arial,12,0xffdea1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.getBaoDes_t"
+      args="Arial,14,0x553E24,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.getBaoGNum_t"
+      args="Arial,14,0xf1f6ff,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.gameRewardTxt_t"
+      args="Arial,12,0xffdea1,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.gameNTitle_t"
+      args="Arial,14,0xffdb8b,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.carnival.gameNTitle_f"
+      args="0x683100,1,5,5,2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.turnLogT_t"
+      args="Arial,12,0xfffee6,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.carnival.turnLogT_f"
+      args="0xff7e00,1,5,5,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.turnDi1_t"
+      args="Arial,12,0xf1f6ff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.activeTimes_t"
+      args="Arial,12,0xf1f6ff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.carnival.activeTimes_f"
+      args="0x110900,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.carnival.onLineAllTimeTxt_t"
+      args="Arial,14,0xe2eeff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.carnival.onLineAllTimeTxt_f"
+      args="0x00c6ff,1,5,5,4" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.carniver.score"
+      x="0"
+      y="-5" />
+    <bitmapData
+      resourceLink="asset.carniver.yearNextTitle"
+      x="-10"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.timeSetBg"
+      x="32"
+      y="545" />
+    <bitmapData
+      resourceLink="asset.carniver.onLineBoxBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.giftBoxBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.buyFlg"
+      x="87"
+      y="212" />
+    <bitmapData
+      resourceLink="asset.carniver.yearSmallBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.buyBtn"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.carniver.yearBigBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.stand"
+      x="14"
+      y="188" />
+    <bitmapData
+      resourceLink="asset.carniver.fullGet"
+      x="271"
+      y="43" />
+    <bitmapData
+      resourceLink="asset.carniver.getTimeBg"
+      x="477"
+      y="311" />
+    <bitmapData
+      resourceLink="asset.carniver.rewardLight"
+      x="-17"
+      y="-17" />
+    <bitmapData
+      resourceLink="asset.carniver.rewardState"
+      x="-10"
+      y="-8" />
+    <bitmapData
+      resourceLink="asset.carniver.turnBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.turnTitle"
+      x="18"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.carniver.turnDesBg"
+      x="81"
+      y="450" />
+    <bitmapData
+      resourceLink="asset.carniver.turnFullFlg"
+      x="85"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.carniver.turnNeedBg"
+      x="24"
+      y="351" />
+    <bitmapData
+      resourceLink="asset.carniver.giftptBg"
+      x="74"
+      y="198" />
+    <bitmapData
+      resourceLink="asset.carniver.getBao.mk"
+      x="374"
+      y="128" />
+    <bitmapData
+      resourceLink="asset.carniver.game.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.carniver.game.title"
+      x="19"
+      y="261" />
+    <bitmapData
+      resourceLink="asset.carniver.getBao.down"
+      x="516"
+      y="296" />
+    <bitmapData
+      resourceLink="asset.carniver.getBao.up"
+      x="516"
+      y="119" />
+    <bitmapData
+      resourceLink="asset.carniver.getBtn"
+      y="5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.carniver.pointMcc"
+      stylename="asset.carniver.pointMcc"
+      mouseEnabled="false"
+      x="321"
+      y="88" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.carniver.needBaogIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="10"
+      loadingY="10"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="20"
+      iconHeight="20"
+      x="507"
+      y="422" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.carnival.turnNextPt"
+      x="210"
+      y="360" />
+    <custom
+      classname="carnvial.utils.MoveSomeController"
+      stylename="ui.carnival.duoBaoCC.f1"
+      x="348"
+      y="164" />
+    <custom
+      classname="carnvial.utils.MoveSomeController"
+      stylename="ui.carnival.duoBaoCC.f2"
+      x="712"
+      y="265" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.carnival.gameRwHbox"
+      spacing="10"
+      x="149"
+      y="296"
+      autoCenter="true" />
+    <custom
+      classname="carnvial.utils.MoveSomeController"
+      stylename="ui.carnival.turnNumCC.f1"
+      x="328"
+      y="201" />
+    <custom
+      classname="carnvial.utils.MoveSomeController"
+      stylename="ui.carnival.turnNumCC.f2"
+      x="248"
+      y="201" />
+    <custom
+      classname="carnvial.utils.MoveSomeController"
+      stylename="ui.carnival.turnNumCC.f3"
+      x="168"
+      y="201" />
+    <custom
+      classname="carnvial.utils.MoveSomeController"
+      stylename="ui.carnival.turnNumCC.f4"
+      x="88"
+      y="201" />
+    <custom
+      classname="asset.carnival.turnBtnMc"
+      stylename="asset.carnival.turnBtnMc"
+      x="420"
+      y="195" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.carnival.onLinePanelList"
+      x="12"
+      y="43"
+      hSpace="5"
+      vSpace="20" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.carnival.taskScollBox"
+      spacing="5"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="ui.carnival.recharge.allCountBit"
+      x="140"
+      y="511" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.carnival.yearTargetScoreBit"
+      x="90"
+      y="17" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="ui.carnival.firstBit"
+      x="521"
+      y="164" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="ui.carnival.secondBit"
+      x="521"
+      y="224" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="ui.carnival.thirdBit"
+      x="521"
+      y="283" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="ui.carnival.fourBit"
+      x="521"
+      y="343" />
+    <custom
+      classname="yishi.view.base.TextAddBitmap"
+      stylename="ui.carnival.giftPtBit"
+      x="90"
+      y="192" />
+    <custom
+      classname="carnvial.item.CarnivalTurnItem"
+      stylename="ui.carnival.CarnivalTurnItem"
+      x="158"
+      y="-2" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.carnival.onLineHbox"
+      spacing="10"
+      x="127"
+      y="59"
+      autoCenter="true" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.carnival.giftTList"
+      x="62"
+      y="91"
+      hSpace="5"
+      vSpace="5" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.carnival.yearSList"
+      x="32"
+      y="43"
+      hSpace="5"
+      vSpace="5" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.carnival.yearBList"
+      x="32"
+      y="253"
+      hSpace="5"
+      vSpace="5" />
+    <custom
+      classname="yishi.view.base.HRollItemPanel"
+      stylename="ui.carnival.yearRollPanel"
+      x="246"
+      y="86" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.carnival.yearRollPanel.HBox"
+      x="0"
+      y="0"
+      spacing="5" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.carnival.yearNextNeed"
+      x="147"
+      y="43" />
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="ui.carnival.yearScoreBit"
+      x="30"
+      y="520" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.carnival.mainVbox"
+      x="37"
+      y="116"
+      spacing="15" />
+    <custom
+      classname="carnvial.view.CarnvialYearPage"
+      stylename="ui.carnivar.CarnvialYearPage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalRechargePage"
+      stylename="ui.carnivar.CarnivalRechargePage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalLuckPage"
+      stylename="ui.carnivar.CarnivalLuckPage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalDiscountPage"
+      stylename="ui.carnivar.CarnivalDiscountPage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalBaoPage"
+      stylename="ui.carnivar.CarnivalBaoPage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalDayTaskPage"
+      stylename="ui.carnivar.CarnivalDayTaskPage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalGamePage"
+      stylename="ui.carnivar.CarnivalGamePage"
+      x="206"
+      y="96" />
+    <custom
+      classname="carnvial.view.CarnivalOnlinePage"
+      stylename="ui.carnivar.CarnivalOnlinePage"
+      x="206"
+      y="96" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ui.carnivar.rechargeOutItem"
+      x="-10"
+      y="-10" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.yearRollPanel.LeftBtn"
+      backStyle="asset.carniver.rollRightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      scaleX="-1"
+      x="-10"
+      y="168" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.yearRollPanel.RightBtn"
+      backStyle="asset.carniver.rollRightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="536"
+      y="168" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.onLineTimeTxt"
+      textFormatStyle="ui.carnival.onLineTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="194"
+      height="20"
+      x="32"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.OnLinehasGet"
+      resourceLink="asset.carniver.getFlg"
+      x="92"
+      y="136"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.onLineGetBtn"
+      backStyle="asset.carniver.aBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="80"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.carnival.onLineBtnTxt"
+      resourceLink="asset.carniver.getBtn,asset.carniver.lockBtn"
+      x="46"
+      y="6"
+      autoHCenter="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.carnival.giftIdx"
+      resourceLink="asset.carniver.giftt1,asset.carniver.giftt2,asset.carniver.giftt3,asset.carniver.giftt4"
+      x="40"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.giftBtn"
+      backStyle="asset.carniver.aBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="81"
+      y="211" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.giftNeedPt"
+      textFormatStyle="ui.carnival.giftNeedPt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="183"
+      height="18"
+      x="41"
+      y="66" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.carnival.giftBtnTxt"
+      resourceLink="asset.carniver.freeBuyBtn,asset.carniver.buyBtn,asset.carniver.lockBtn"
+      x="47"
+      y="4"
+      autoHCenter="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.yearSbtn"
+      backStyle="asset.carniver.aBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="157" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.yearSget"
+      resourceLink="asset.carniver.getFlg"
+      x="46"
+      y="152"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.yearScoreBg"
+      resourceLink="asset.carniver.numBg"
+      x="24"
+      y="521"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.yearBbtn"
+      backStyle="asset.carniver.aBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="368" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.yearBget"
+      resourceLink="asset.carniver.getFlg"
+      x="48"
+      y="360"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.carnTabTxt"
+      textFormatStyle="ui.carnival.carnTabTxt_t1,ui.carnival.carnTabTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="22"
+      x="0"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.yearScoreTxt"
+      textFormatStyle="ui.carnival.yearScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="32"
+      y="526" />
+    <component
+      classname="carnvial.CarnvialMainFrame"
+      stylename="carnvial.CarnvialMainFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closestyle="com.pickgliss.ui.controls.BaseButton"
+      closeInnerRectString="29,10,20,29,14"
+      containerX="0"
+      containerY="0"
+      moveInnerRectString="376,100,10,0,9"
+      width="1055"
+      height="682" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.chargeTimeTxt"
+      textFormatStyle="ui.carnival.chargeTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="139"
+      height="18"
+      x="479"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.rechargeCountTxtBg"
+      resourceLink="asset.carniver.numBg"
+      x="31"
+      y="513"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.rechargeCountTxt"
+      textFormatStyle="ui.carnival.yearScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="32"
+      y="518" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.onLineAllTimeTxt"
+      textFormatStyle="ui.carnival.onLineAllTimeTxt_t"
+      filterString="ui.carnival.onLineAllTimeTxt_f"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="142"
+      y="518" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.pointNumTx"
+      textFormatStyle="ui.carnival.pointNumTx_t"
+      filterString="ui.carnival.pointNumTx_f"
+      autoSize="none"
+      width="80"
+      height="18"
+      x="27"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.retTimeTxt"
+      textFormatStyle="ui.carnival.retTimeTxt_t"
+      filterString="ui.carnival.pointNumTx_f"
+      autoSize="none"
+      width="170"
+      height="18"
+      x="37"
+      y="549" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.taskTitleTxt"
+      textFormatStyle="ui.carnival.taskTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="20"
+      x="32"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.taskDesTxt"
+      textFormatStyle="ui.carnival.taskDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="337"
+      height="40"
+      wordWrap="true"
+      x="11"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.taskScoreTxt"
+      textFormatStyle="ui.carnival.taskScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="354"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.taskGetbtn"
+      backStyle="asset.carniver.aBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="435"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.taskGetFlg"
+      resourceLink="asset.carniver.getFlg"
+      x="442"
+      y="20"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.carnival.taskBtnIcon"
+      resourceLink="asset.carniver.getBtn,asset.carniver.noComplete"
+      autoHCenter="true"
+      x="48"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.carnival.taskScollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,560,0,0,2"
+      vScrollbarInnerRectString="15,-5,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="2"
+      width="560"
+      height="455"
+      x="221"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.giftBoxTargetTxt"
+      textFormatStyle="ui.carnival.giftBoxTargetTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="238"
+      height="40"
+      wordWrap="true"
+      x="10"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.carnival.carnTurnArrow"
+      resourceLink="asset.carniver.turnArrow"
+      x="322"
+      y="128"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.carnTurnDesTxt"
+      textFormatStyle="ui.carnival.carnTurnDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="282"
+      height="40"
+      wordWrap="true"
+      x="80"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.carnTurnTimeTxt"
+      textFormatStyle="ui.carnival.carnTurnTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="207"
+      height="16"
+      x="122"
+      y="316" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.carnival.chargeDoBtn"
+      backStyle="asset.carniver.rechargeBigBtn"
+      iconStyle="asset.carniver.doRewardBtn"
+      iconInnerRectString="22,67,43,31,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="489"
+      y="204" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.carnival.getBaoBg"
+      resourceLink="asset.carniver.getBao.bg,asset.carniver.getBao.title"
+      imageRectString="0|46|19,340|0|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.carnival.getBaoStartBtn"
+      backStyle="asset.carniver.getBao.btnBg"
+      iconStyle="asset.carniver.getBao.startBtn"
+      iconInnerRectString="15,62,18,17,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="633"
+      y="383" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.getBaoDes"
+      textFormatStyle="ui.carnival.getBaoDes_t"
+      autoSize="none"
+      width="209"
+      height="175"
+      x="76"
+      y="75"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.getBaoGNum"
+      textFormatStyle="ui.carnival.getBaoGNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="84"
+      height="18"
+      x="528"
+      y="424" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.carnival.gameIcons"
+      resourceLink="asset.carniver.game.g1,asset.carniver.game.g2,asset.carniver.game.g3"
+      x="17"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.gameStartBtn"
+      backStyle="asset.carniver.game.startbtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="63"
+      y="393" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.gameRewardTxt"
+      textFormatStyle="ui.carnival.gameRewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="278"
+      height="18"
+      x="12"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.gameNTitle"
+      textFormatStyle="ui.carnival.gameNTitle_t"
+      filterString="ui.carnival.gameNTitle_f"
+      autoSize="none"
+      width="284"
+      height="20"
+      x="10"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.game.LeftBtn"
+      backStyle="asset.carniver.rollRightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      scaleX="-1"
+      x="20"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.game.RightBtn"
+      backStyle="asset.carniver.rollRightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="781"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.turnLogT"
+      textFormatStyle="ui.carnival.turnLogT_t"
+      filterString="ui.carnival.turnLogT_f"
+      autoSize="none"
+      width="128"
+      height="22"
+      x="489"
+      y="92" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.turnDi1"
+      textFormatStyle="ui.carnival.turnDi1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="500"
+      y="142" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.turnDi2"
+      textFormatStyle="ui.carnival.turnDi1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="500"
+      y="201" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.turnDi3"
+      textFormatStyle="ui.carnival.turnDi1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="500"
+      y="261" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.turnDi4"
+      textFormatStyle="ui.carnival.turnDi1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="104"
+      height="20"
+      x="500"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.activeTimes"
+      textFormatStyle="ui.carnival.activeTimes_t"
+      filterString="ui.carnival.activeTimes_f"
+      autoSize="none"
+      width="374"
+      height="20"
+      x="628"
+      y="612" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="958"
+      y="69" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ui.carivalHelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="338"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="50"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="carnival.helpTip"
+      titleText="public.help"
+      textWidth="338" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.txtMemoryCardScore"
+      textFormatStyle="ui.airgardengame.txtMemoryCardScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="18"
+      x="613"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.txtSuHaCardScore"
+      textFormatStyle="ui.airgardengame.txtMemoryCardScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="18"
+      x="610"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.carnival.txtLineScore"
+      textFormatStyle="ui.airgardengame.txtMemoryCardScore_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="18"
+      x="601"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.carnival.rechageBtn"
+      backStyle="asset.carniver.rechargeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="469"
+      y="386" />
+  </components>
+</style>

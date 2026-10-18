@@ -1,0 +1,1194 @@
+<style
+  name="daylight"
+  source="ui/zh_cn/swf/daylight.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightView.blueDefendInfoTxt_t"
+      args="Arial,12,0xffffe1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightView.blueScoreTxt_t"
+      args="Arial,12,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightView.blueRaidInfoTxt_t"
+      args="Arial,12,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightAvatarView.infoTxt_t"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightTopBar.blueScoreTxt_t"
+      args="Arial,14,0x4dbbee,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightTopBar.blueConsoriaTxt_t"
+      args="Arial,14,0x4dbbee,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightTopBar.redScoreTxt_t"
+      args="Arial,14,0xff0b2d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightTopBar.redConsoriaTxt_t"
+      args="Arial,14,0xff0b2d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightRightView.rankListTxt_t"
+      args="Arial,12,0xffdb5d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightRightView.infoStateValueTxt_t1"
+      args="Arial,12,0x0cff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightRightView.infoStateValueTxt_t2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightRightView.infoKillValueTxt_t"
+      args="Arial,12,0x0cff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightBufferItemView.buffTxt_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightScoreRankItemView.rankTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightScoreRankItemView.nameTxt_t1"
+      underline="true"
+      args="Arial,12,0x4dbbee,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightScoreRankItemView.nameTxt_t2"
+      underline="true"
+      args="Arial,12,0xff0b2d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightScoreRankItemView.serverNameTxt_t"
+      args="Arial,12,0xffc852,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightPersonRewardItemView.rankTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="daylight.DayLightPersonRewardItemView.numTxt_t"
+      args="Arial,14,0xfecc1f,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.daylight.NumberAsset1" />
+    <bitmapData
+      resourceLink="asset.daylight.NumberAsset2" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="mainBar.StripView"
+      stylename="daylight.DayLightTopBar.buleScoreTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      x="53"
+      y="16" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="daylight.DayLightTopBar.redScoreTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      x="287"
+      y="16" />
+    <custom
+      classname="asset.daylight.BuleScoreBar"
+      stylename="daylight.DayLightTopBar.buleScoreBar"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.daylight.RedScoreBar"
+      stylename="daylight.DayLightTopBar.redScoreBar"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.daylight.MiniBuleScoreBar"
+      stylename="daylight.DayLightView.blueScoreBar"
+      x="86"
+      y="108" />
+    <custom
+      classname="asset.daylight.MiniRedScoreBar"
+      stylename="daylight.DayLightView.redScoreBar"
+      x="86"
+      y="370" />
+    <custom
+      classname="asset.daylight.EnemyScareMC"
+      stylename="daylight.DayLightView.blueLairFleeMC"
+      x="850"
+      y="207" />
+    <custom
+      classname="asset.daylight.EnemyScareMC"
+      stylename="daylight.DayLightView.redLairFleeMC"
+      x="850"
+      y="465" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.blueLairLaunchContainer"
+      x="865"
+      y="97" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.redLairLaunchContainer"
+      x="865"
+      y="355" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.reviveViewContainer"
+      x="480"
+      y="85" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.reviveCountContainer"
+      x="150"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.battleInfoViewContainer"
+      x="480"
+      y="85" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.battleInfoCountContainer1"
+      x="150"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="daylight.DayLightView.battleInfoCountContainer2"
+      x="211"
+      y="0" />
+    <custom
+      classname="sandbox.daylight.DayLightBufferItemView"
+      stylename="daylight.DayLightRightView.bufferItem1"
+      x="5"
+      y="34" />
+    <custom
+      classname="sandbox.daylight.DayLightBufferItemView"
+      stylename="daylight.DayLightRightView.bufferItem2"
+      x="5"
+      y="72" />
+    <custom
+      classname="sandbox.daylight.DayLightBufferItemView"
+      stylename="daylight.DayLightRightView.bufferItem3"
+      x="5"
+      y="110" />
+    <custom
+      classname="sandbox.daylight.DayLightBufferItemView"
+      stylename="daylight.DayLightRightView.bufferItem4"
+      x="5"
+      y="148" />
+    <custom
+      classname="sandbox.daylight.DayLightBufferItemView"
+      stylename="daylight.DayLightRightView.bufferItem5"
+      x="5"
+      y="186" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="daylight.DayLightBufferItemView.buffIcon"
+      tipStyle="daylight.DayLightBufferItemView.MultipleLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="17"
+      loadingY="17"
+      iconWidth="33"
+      iconHeight="33"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="daylight.DayLightBufferItemView.MultipleLineTip"
+      enableHtml="true"
+      contentWidth="160" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="daylight.DayLightPersonRewardItemView.goodsItem"
+      iconStyle="PetChallengeInfoView.RewardCellIcon"
+      textStyle="selecteCP.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileWidth="41"
+      profileHeight="41"
+      showProfile="true"
+      width="41"
+      height="41"
+      x="110"
+      y="15" />
+  </customDisplay>
+  <components>
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="daylight.HelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="worldboss.view.BaseHelpFrame.RvR2HelpContent"
+      titleText="worldboss.view.BaseHelpFrame.RvR2HelpTitle"
+      textWidth="452" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.Bg"
+      resourceLink="asset.daylight.DayLightBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.blueDefendInfoBg"
+      resourceLink="asset.daylight.InfoBg1"
+      x="87"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.blueDefendInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="91"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.blueBlessingInfoBg"
+      resourceLink="asset.daylight.InfoBg1"
+      x="87"
+      y="242" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.blueBlessingInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="91"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.blueLairInfoBg"
+      resourceLink="asset.daylight.InfoBg2"
+      x="795"
+      y="254" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.blueLairInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="159"
+      height="16"
+      x="804"
+      y="257" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.blueScoreTxt"
+      textFormatStyle="daylight.DayLightView.blueScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="22"
+      x="86"
+      y="111" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.blueLairAvatar"
+      resourceLink="asset.daylight.Enemy4"
+      x="845"
+      y="197" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.blueRaidAvatar"
+      resourceLink="asset.daylight.Hero2"
+      x="50"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.blueRaidInfoBg"
+      resourceLink="asset.daylight.InfoBg6"
+      x="40"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.blueRaidInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueRaidInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="16"
+      x="40"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightView.blueDefendBtn"
+      backStyle="asset.daylight.DefendBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="266" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.redDefendInfoBg"
+      resourceLink="asset.daylight.InfoBg1"
+      x="87"
+      y="480" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.redDefendInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="91"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.redBlessingInfoBg"
+      resourceLink="asset.daylight.InfoBg1"
+      x="87"
+      y="502" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.redBlessingInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="91"
+      y="505" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.redLairInfoBg"
+      resourceLink="asset.daylight.InfoBg2"
+      x="805"
+      y="514" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.redLairInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="16"
+      x="809"
+      y="517" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.redScoreTxt"
+      textFormatStyle="daylight.DayLightView.blueScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="22"
+      x="86"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.redLairAvatar"
+      resourceLink="asset.daylight.Enemy4"
+      x="845"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.redRaidAvatar"
+      resourceLink="asset.daylight.Hero1"
+      x="50"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.redRaidInfoBg"
+      resourceLink="asset.daylight.InfoBg6"
+      x="10"
+      y="465" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightView.redRaidInfoTxt"
+      textFormatStyle="daylight.DayLightView.blueRaidInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="16"
+      x="10"
+      y="464" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightView.redDefendBtn"
+      backStyle="asset.daylight.DefendBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="526" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightView.helpBtn"
+      backStyle="asset.daylight.HelpBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1130"
+      y="0" />
+    <!-- 倒计时 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.reviveTipImg"
+      resourceLink="asset.daylight.ReviveCountTimeTxt"
+      x="37"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.battleInfoTipImg"
+      resourceLink="asset.daylight.StartCountTimeTxt"
+      x="0"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightView.battleInfoColonImg"
+      resourceLink="asset.daylight.ColonAsset"
+      x="193"
+      y="0" />
+    <!-- 战场视图 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightBattleView.attackBtn1"
+      backStyle="asset.daylight.AttackBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-22"
+      y="-45" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightBattleView.attackBtn2"
+      backStyle="asset.daylight.AttackBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-22"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightBattleView.attackBtn3"
+      backStyle="asset.daylight.AttackBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-22"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightBattleView.attackBtn4"
+      backStyle="asset.daylight.AttackBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-22"
+      y="99" />
+    <!-- 战斗单位视图 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="daylight.DayLightAvatarView.avatar"
+      resourceLink="daylight.DayLightAvatarView.hero1,daylight.DayLightAvatarView.hero2,daylight.DayLightAvatarView.enemy1,daylight.DayLightAvatarView.enemy2,daylight.DayLightAvatarView.enemy3,daylight.DayLightAvatarView.enemy4"
+      x="-19"
+      y="-50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.hero1"
+      resourceLink="asset.daylight.Hero1"
+      x="4"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.hero2"
+      resourceLink="asset.daylight.Hero2"
+      x="4"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.enemy1"
+      resourceLink="asset.daylight.Enemy1"
+      x="4"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.enemy2"
+      resourceLink="asset.daylight.Enemy2"
+      x="4"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.enemy3"
+      resourceLink="asset.daylight.Enemy3"
+      x="1"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.enemy4"
+      resourceLink="asset.daylight.Enemy4"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightAvatarView.infoBg"
+      resourceLink="asset.daylight.InfoBg5"
+      x="-15"
+      y="-15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightAvatarView.infoTxt"
+      textFormatStyle="daylight.DayLightAvatarView.infoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="31"
+      height="16"
+      x="-15"
+      y="-16" />
+    <!-- 顶部视图 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.bg"
+      resourceLink="asset.daylight.TopBarBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.titleImg"
+      resourceLink="asset.daylight.TitleTxt"
+      x="190"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.blueLogo"
+      resourceLink="asset.daylight.BlueTeamLogo"
+      x="-4"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.blueScoreLabel"
+      resourceLink="asset.daylight.BlueScoreLabel"
+      x="115"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightTopBar.blueScoreTxt"
+      textFormatStyle="daylight.DayLightTopBar.blueScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="157"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.blueCountLabel"
+      resourceLink="asset.daylight.BlueCountLabel"
+      x="49"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightTopBar.blueCountTxt"
+      textFormatStyle="daylight.DayLightTopBar.blueScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="22"
+      height="20"
+      x="99"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightTopBar.blueConsoriaTxt"
+      textFormatStyle="daylight.DayLightTopBar.blueConsoriaTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="20"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.redLogo"
+      resourceLink="asset.daylight.RedTeamLogo"
+      x="444"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.redScoreLabel"
+      resourceLink="asset.daylight.RedScoreLabel"
+      x="319"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightTopBar.redScoreTxt"
+      textFormatStyle="daylight.DayLightTopBar.redScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="359"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightTopBar.redCountLabel"
+      resourceLink="asset.daylight.RedCountLabel"
+      x="392"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightTopBar.redCountTxt"
+      textFormatStyle="daylight.DayLightTopBar.redScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="22"
+      height="20"
+      x="442"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightTopBar.redConsoriaTxt"
+      textFormatStyle="daylight.DayLightTopBar.redConsoriaTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="320"
+      y="60" />
+    <!-- 右边视图 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightRightView.Bg"
+      resourceLink="asset.daylight.RightBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightRightView.titleImg"
+      resourceLink="asset.daylight.RightTitleTxt"
+      x="3"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.rankListTxt"
+      textFormatStyle="daylight.DayLightRightView.rankListTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="105"
+      height="16"
+      x="105"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoTeamTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="3"
+      y="235" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="daylight.DayLightRightView.infoTeamImg"
+      resourceLink="asset.daylight.TeamIcon1,asset.daylight.TeamIcon2"
+      x="95"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoStateTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="3"
+      y="252" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoStateValueTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t,daylight.DayLightRightView.infoStateValueTxt_t1,daylight.DayLightRightView.infoStateValueTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="68"
+      y="252" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoKillTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="31"
+      x="0"
+      y="273"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightRightView.infoKillValueBg"
+      resourceLink="asset.daylight.InfoBg3"
+      x="85"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoKillValueTxt"
+      textFormatStyle="daylight.DayLightRightView.infoKillValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="16"
+      x="85"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoExchangeTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="81"
+      height="31"
+      x="110"
+      y="273"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightRightView.infoExchangeValueBg"
+      resourceLink="asset.daylight.InfoBg3"
+      x="185"
+      y="278" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoExchangeValueTxt"
+      textFormatStyle="daylight.DayLightRightView.infoKillValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="24"
+      height="16"
+      x="185"
+      y="278" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoScoreTxt"
+      textFormatStyle="daylight.DayLightView.blueDefendInfoTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="16"
+      x="5"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightRightView.infoScoreValueBg"
+      resourceLink="asset.daylight.InfoBg4"
+      x="85"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightRightView.infoScoreValueTxt"
+      textFormatStyle="daylight.DayLightRightView.infoKillValueTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="42"
+      height="16"
+      x="85"
+      y="310" />
+    <!-- BUFF视图 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightBufferItemView.buffTxt"
+      textFormatStyle="daylight.DayLightBufferItemView.buffTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="31"
+      x="35"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightBufferItemView.buffUseBtn"
+      backStyle="asset.daylight.UseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="daylight.DayLightBufferItemView.buffExchangeBtn"
+      backStyle="asset.daylight.ExchangeBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="156"
+      y="8" />
+    <!-- 排行榜 -->
+    <component
+      classname="sandbox.daylight.DayLightScoreRankFrame"
+      stylename="daylight.DayLightRankListFrame"
+      parentStyle="core.Frame2"
+      containerX="9"
+      containerY="46"
+      width="655"
+      height="425" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="daylight.DayLightScoreRankFrame.border"
+      parentStyle="core.describeBackground_style04"
+      width="635"
+      height="340"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daylight.DayLightScoreRankFrame.back"
+      parentStyle="core.describeBackground_style40"
+      width="625"
+      height="332"
+      x="5"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="daylight.DayLightScoreRankFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,2,2,1,3"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      viewportInnerRectString="1,0,1,290,1"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="630"
+      height="299"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="daylight.DayLightScoreRankFrame.vBox"
+      strictHeight="33"
+      spacing="0"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankFrame.titleTxt"
+      textFormatStyle="flameTempleScoreRankView.titleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="0"
+      y="0" />
+    <!-- 排行榜Item -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daylight.DayLightScoreRankItemView.overBg"
+      parentStyle="core.TitleBack_Style888"
+      width="610"
+      height="32"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="daylight.DayLightScoreRankItemView.lineImg"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|444|0|2|13,525|80|0|2|13"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankItemView.rankTxt"
+      textFormatStyle="daylight.DayLightScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="16"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankItemView.nameTxt"
+      textFormatStyle="daylight.DayLightScoreRankItemView.nameTxt_t1,daylight.DayLightScoreRankItemView.nameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="center"
+      width="150"
+      height="20"
+      x="140"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankItemView.serverNameTxt"
+      textFormatStyle="daylight.DayLightScoreRankItemView.serverNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="205"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankItemView.scoreTxt"
+      textFormatStyle="daylight.DayLightScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="370"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankItemView.killTxt"
+      textFormatStyle="daylight.DayLightScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="505"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightScoreRankItemView.honnerTxt"
+      textFormatStyle="daylight.DayLightScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="498"
+      y="8" />
+    <!-- 结算面板 -->
+    <component
+      classname="sandbox.daylight.DayLightGameOverFrame"
+      stylename="daylight.DayLightGameOverFrame"
+      parentStyle="core.Frame2"
+      containerX="9"
+      containerY="46"
+      width="475"
+      height="505" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="daylight.DayLightGameOverFrame.border"
+      parentStyle="core.describeBackground_style04"
+      width="451"
+      height="308"
+      x="1"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daylight.DayLightGameOverFrame.back"
+      parentStyle="core.describeBackground_style40"
+      width="442"
+      height="300"
+      x="6"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="daylight.DayLightGameOverFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,2,2,1,3"
+      viewportInnerRectString="1,0,1,266,1"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="445"
+      height="266"
+      x="5"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="daylight.DayLightGameOverFrame.vBox"
+      strictHeight="33"
+      spacing="0"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightGameOverFrame.rewardLabel"
+      resourceLink="asset.daylight.RewardsImg"
+      y="50"
+      x="15" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightGameOverFrame.scoreImg"
+      resourceLink="asset.daylight.JifenTxtImg"
+      y="75"
+      x="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="daylight.DayLightGameOverFrame.scoreTxtBack"
+      resourceLink="asset.sort.TxtBgLeft,asset.sort.TxtBgMiddle,asset.sort.TxtBgRight"
+      width="120"
+      height="27"
+      x="90"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverFrame.scoreTxt"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="85"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="daylight.DayLightGameOverFrame.viewRewardsBtn"
+      textStyle="daylight.DayLightGameOverFrame.viewRewardsBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="2,8,4,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="78"
+      height="31"
+      x="310"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverFrame.viewRewardsBtnTxt"
+      textFormatStyle="flameTempleRightView.rankBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="daylight.DayLightGameOverFrame.rewardC"
+      resourceLink="asset.daylight.BoxIconAsset"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,0"
+      tipGapV="-5"
+      isFollowMouse="false"
+      x="120"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="daylight.DayLightGameOverItemView.overBg"
+      parentStyle="core.TitleBack_Style888"
+      width="425"
+      height="32"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="daylight.DayLightGameOverItemView.lineImg"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|270|0|2|13,351|80|0|2|13"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverItemView.serverNameTxt"
+      textFormatStyle="flameTempleScoreRankItemView.serverNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="100"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverItemView.scoreTxt"
+      textFormatStyle="flameTempleScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="220"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverItemView.killTxt"
+      textFormatStyle="flameTempleScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="290"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverItemView.honnerTxt"
+      textFormatStyle="flameTempleScoreRankItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="345"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightGameOverItemView.nameTxt"
+      textFormatStyle="flameTempleScoreRankItemView.nameTxt_t1,flameTempleScoreRankItemView.nameTxt_t2"
+      filterString="core.normal_f"
+      autoSize="center"
+      mouseEnabled="true"
+      selectable="false"
+      width="130"
+      height="20"
+      x="55"
+      y="7" />
+    <!-- 个人积分奖励面板 -->
+    <component
+      classname="sandbox.daylight.DayLightPersonRewardFrame"
+      stylename="daylight.DayLightPersonRewardFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      moveInnerRectString="0,30,0,30,1"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-4,1"
+      containerX="0"
+      containerY="30"
+      width="230"
+      height="458"
+      y="0"
+      x="470" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="daylight.DayLightPersonRewardFrame.border"
+      parentStyle="core.describeBackground_style04"
+      width="225"
+      height="380"
+      x="1"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="daylight.DayLightPersonRewardFrame.vBox"
+      spacing="0"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="daylight.DayLightPersonRewardFrame.line"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|60|0|2|13,141|80|0|2|13"
+      x="-10"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightPersonRewardItemView.rankTxt"
+      textFormatStyle="daylight.DayLightPersonRewardItemView.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="0"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="daylight.DayLightPersonRewardItemView.numTxt"
+      textFormatStyle="daylight.DayLightPersonRewardItemView.numTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="155"
+      y="31" />
+  </components>
+</style>

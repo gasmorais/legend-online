@@ -1,0 +1,94 @@
+<style
+  name="rename"
+  source="ui/zh_cn/swf/rename.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="rename.renameFrameDescribeTxt_t"
+      args="Arial,12,0x13b541,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="rename.renameFrameDescribeErrorTxt_t"
+      args="Arial,12,0xFF0000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="rename.renameFrameWarningTxt_t"
+      args="Arial,12,0xFF5A04,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="rename.ReNameTxt_t"
+      args="Arial,20,0xFFfA04,,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="rename.GlowFilter"
+      args="0xf3cf23,1,5,5,5" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.rename.ReNameBgAsset" />
+    <bitmapData
+      resourceLink="asset.rename.InputNameTipAsset"
+      x="115"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.rename.ReNameFreeTipAsset"
+      x="115"
+      y="16" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="rename.CloseBtn"
+      backStyle="asset.rename.CloseBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="500"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="rename.SubmitBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.core.SubmitBtnAsset"
+      iconInnerRectString="32,65,10,28,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="235"
+      y="161" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="rename.ReNameTxt"
+      textFormatStyle="rename.ReNameTxt_t"
+      autoSize="none"
+      x="206"
+      y="82"
+      height="30"
+      width="180"
+      restrict="^ "
+      type="input" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="rename.RenameFrameDescribeTxt"
+      textFormatStyle="rename.renameFrameDescribeErrorTxt_t,rename.renameFrameDescribeTxt_t"
+      autoSize="none"
+      x="150"
+      y="119"
+      height="20"
+      width="310" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="rename.RenameFrameWarningTxt"
+      textFormatStyle="rename.renameFrameWarningTxt_t,rename.renameFrameWarningTxt_t"
+      autoSize="none"
+      x="150"
+      y="138"
+      height="20"
+      width="300" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="rename.ShaiziBtn"
+      backStyle="asset.rename.ShaiziBtn"
+      filterString="core.DefaultFilter,rename.GlowFilter,core.DefaultFilter,core.GrayFilter"
+      x="392"
+      y="76" />
+  </components>
+</style>

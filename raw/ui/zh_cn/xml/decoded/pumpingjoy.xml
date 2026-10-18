@@ -1,0 +1,363 @@
+<style
+  name="pumpingjoy"
+  source="ui/zh_cn/swf/pumpingjoy.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoy.mfm00_n4_mfm0_t"
+      args="Arial,14,0xfff600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoy.mfm00_n5_mfm0_t"
+      args="Arial,14,0xfff600,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoy.mfm00_n6_mfm0_t"
+      args="Arial,18,0x95feff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoy.mfm00_n12_mfm0_t"
+      args="Arial,14,0xfbf0ce,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoyFrame.activeLeftTimeField_t"
+      args="Arial,20,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoyRewardItem.itemText_t"
+      args="Arial,12,0xffffff,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PumpingJoy.t2"
+      args="Arial,12,0x19d5f1,,,true,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="pumpingjoy.PumpingJoyShowRewardItem"
+      stylename="PumpingJoyFrame.rewardItem" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="PumpingJoyRewardItem.item"
+      iconStyle="PumpingJoyRewardItem.item.icon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="PumpingJoyRewardItem.itemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="28"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PumpingJoyRewardItem.item.icon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="25"
+      loadingY="38"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="pumpingjoy.PumpingJoyRewardItem"
+      stylename="PumpingJoyRewardFrame.item" />
+    <custom
+      classname="asset.PumpingJoyRewardFrame.goodsFlyMc1"
+      stylename="PumpingJoyRewardFrame.goodsFlyMc1"
+      x="-255"
+      y="-205" />
+    <custom
+      classname="asset.PumpingJoyRewardFrame.goodsFlyMc10"
+      stylename="PumpingJoyRewardFrame.goodsFlyMc10"
+      x="-160"
+      y="-150" />
+    <custom
+      classname="asset.PumpingJoyRewardItem.ballMc1"
+      stylename="PumpingJoyRewardItem.ballMc1"
+      x="-455"
+      y="-245" />
+    <custom
+      classname="asset.PumpingJoyRewardItem.ballMc2"
+      stylename="PumpingJoyRewardItem.ballMc2"
+      x="-455"
+      y="-245" />
+    <custom
+      classname="asset.PumpingJoyRewardItem.ballMc3"
+      stylename="PumpingJoyRewardItem.ballMc3"
+      x="-455"
+      y="-245" />
+    <custom
+      classname="asset.PumpingJoyFrame.pumpMc"
+      stylename="PumpingJoyFrame.pumpMc"
+      x="695"
+      y="300" />
+    <custom
+      classname="asset.PumpingJoyShowRewardItem.redBackMc"
+      stylename="PumpingJoyShowRewardItem.redBackMc"
+      x="-128"
+      y="-367" />
+    <custom
+      classname="asset.PumpingJoyRewardItem.redBackMc"
+      stylename="PumpingJoyRewardItem.redBackMc"
+      x="-330"
+      y="-330" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="PumpingJoy.mfm00.pumpBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.PumpingJoy.resource.mfm03,asset.PumpingJoy.resource.mfm0c,asset.PumpingJoy.resource.mfm0a"
+      imageRectString="0|0|19,463|457|19,248|459|19"
+      x="36"
+      y="67" />
+    <component
+      stylename="PumpingJoyPumpingJoyFrame.couponImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.PumpingJoy.resource.mfm08,asset.PumpingJoy.resource.mfm09"
+      imageRectString="0|0|19,18|-2|19"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,4,6,5,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="290"
+      y="530" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PumpingJoy.mfm00.shopBtn"
+      backStyle="asset.PumpingJoy.resource.mfm04"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="53"
+      y="498" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PumpingJoy.mfm00.getBtn"
+      backStyle="asset.PumpingJoy.resource.mfm05"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="177"
+      y="566" />
+    <component
+      stylename="PumpingJoy.mfm00.luckyImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.PumpingJoy.resource.mfm0d"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="171"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PumpingJoy.mfm00.onePumpBtn"
+      backStyle="asset.PumpingJoy.resource.mfm0f"
+      iconStyle="asset.PumpingJoy.resource.mfm06"
+      iconInnerRectString="30,99,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="507"
+      y="553" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PumpingJoy.mfm00.tenPumpBtn"
+      backStyle="asset.PumpingJoy.resource.mfm0f"
+      iconStyle="asset.PumpingJoy.resource.mfm07"
+      iconInnerRectString="22,114,12,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="677"
+      y="552" />
+    <component
+      stylename="PumpingJoy.mfm00.timeImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.PumpingJoy.resource.mfm0e"
+      x="141"
+      y="626" />
+    <component
+      stylename="PumpingJoy.mfm00.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="812"
+      height="555"
+      x="33"
+      y="64" />
+    <component
+      stylename="pumpingjoy.PumpingJoyFrame"
+      classname="pumpingjoy.PumpingJoyFrame"
+      parentStyle="core.Frame1"
+      containerX="-14"
+      containerY="0"
+      width="855"
+      height="703" />
+    <component
+      stylename="PumpingJoy.mfm00_n5_mfm0"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="PumpingJoy.mfm00_n5_mfm0_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="674"
+      y="523" />
+    <component
+      stylename="PumpingJoy.mfm00_n6_mfm0"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="PumpingJoy.mfm00_n6_mfm0_t"
+      type="dynamic"
+      width="113"
+      height="22"
+      x="385"
+      y="530" />
+    <component
+      stylename="PumpingJoy.mfm00_n12_mfm0"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="PumpingJoy.mfm00_n12_mfm0_t"
+      type="dynamic"
+      width="70"
+      height="22"
+      x="187"
+      y="550" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PumpingJoyFrame.activeLeftTime"
+      colors="0xfef9db,0xffd40c"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="PumpingJoyFrame.activeLeftTimeField"
+      width="150"
+      height="25"
+      x="312"
+      y="629" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PumpingJoyFrame.activeLeftTimeField"
+      textFormatStyle="PumpingJoyFrame.activeLeftTimeField_t"
+      autoSize="none"
+      width="150"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="PumpingJoyFrame.exchangeLeftTime"
+      parentStyle="PumpingJoyFrame.activeLeftTime"
+      x="645"
+      y="634" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PumpingJoyRewardItem.back"
+      resourceLink="asset.PumpingJoyRewardItem.back1,asset.PumpingJoyRewardItem.back2,asset.PumpingJoyRewardItem.back3"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PumpingJoyRewardItem.itemText"
+      textFormatStyle="PumpingJoyRewardItem.itemText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="5"
+      y="5" />
+    <component
+      stylename="PumpingJoyFrame.floorImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.PumpingJoyFrame.floorImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="817"
+      y="521" />
+    <component
+      stylename="PumpingJoyFrame.scoreImage"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.PumpingJoy.resource.mfm0a,asset.PumpingJoyFrame.scoreImage,asset.PumpingJoyFrame.scoreTextImage"
+      imageRectString="268|469|19,273|474|19,295|471|19"
+      x="16"
+      y="102" />
+    <component
+      stylename="PumpingJoyFrame.scoreText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="PumpingJoy.mfm00_n6_mfm0_t"
+      type="dynamic"
+      width="113"
+      height="22"
+      x="385"
+      y="575" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PumpingJoyRewardItem.openBtn"
+      backStyle="asset.PumpingJoyRewardItem.openBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-20"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="PumpingJoyRewardFrame.allOpenBtn"
+      backStyle="asset.PumpingJoyRewardFrame.allOpenBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="360" />
+    <component
+      stylename="PumpingJoyRewardFrame.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.PumpingJoyRewardFrame.back"
+      scaleGridString="30,40,50,60"
+      x="11"
+      y="49" />
+    <component
+      stylename="PumpingJoyRewardFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      x="8"
+      y="46" />
+    <component
+      stylename="pumpingjoy.PumpingJoyRewardFrame"
+      classname="pumpingjoy.PumpingJoyRewardFrame"
+      parentStyle="core.Frame2"
+      containerX="0"
+      containerY="0"
+      width="445"
+      height="310" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="PumpingJoyRewardFrame.TileContainer"
+      x="5"
+      y="40" />
+    <component
+      classname="pumpingjoy.PumpingJoyDropFrame"
+      stylename="pumpingjoy.PumpingJoyDropFrame"
+      parentStyle="core.QuickBuyFrame"
+      closeInnerRectString="29,-17,-4,29,14"
+      containerX="5"
+      containerY="22"
+      width="578"
+      height="235" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pumpingjoy.PumpingJoyAwardLook"
+      textFormatStyle="PumpingJoy.t2"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="449"
+      y="473" />
+  </components>
+</style>

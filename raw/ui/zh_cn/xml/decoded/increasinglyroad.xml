@@ -1,0 +1,257 @@
+<style
+  name="increasinglyroad"
+  source="ui/zh_cn/swf/increasinglyroad.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="increasinglyroad.activePressTxt_t"
+      args="Arial,14,0xffffff,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="increasinglyroad.descTxt_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="increasinglyroadLayerItemView.iconItemText_t"
+      args="Arial,16,0xffffff,true,,,,,right"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.base.NumberBitmap"
+      stylename="increasinglyroad.layerBitMap"
+      x="785"
+      y="20" />
+    <custom
+      classname="asset.increasinglyroadLayerItemView.battleMc"
+      stylename="increasinglyroadLayerItemView.battleMc"
+      x="10"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="increasinglyroadLayerItemView.BaseItemView"
+      parentStyle="core.BaseItemView"
+      textStyle="increasinglyroadLayerItemView.iconItemText"
+      profileX="0"
+      profileY="0"
+      scaleX="0.7"
+      scaleY="0.7" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="increasinglyroadLayerItemView.icon"
+      iconX="3"
+      iconY="3"
+      iconWidth="250"
+      iconHeight="300"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="20"
+      loadingHeight="20"
+      loadingX="125"
+      loadingY="150"
+      x="10"
+      y="11"
+      scaleX="0.65"
+      scaleY="0.65" />
+      /&gt;
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="increasinglyroadLayerItemView.iconItemText"
+      textFormatStyle="increasinglyroadLayerItemView.iconItemText_t"
+      parentStyle="core.BaseItemText" />
+    <component
+      classname="increasinglyroad.IncreasinglyRoadFrame"
+      stylename="increasinglyroad.IncreasinglyRoadFrame"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.bg"
+      resourceLink="asset.increasinglyroad.bg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.titleBg"
+      resourceLink="asset.increasinglyroad.titleBg"
+      x="560"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.titleBg2"
+      resourceLink="asset.increasinglyroad.titleBg2"
+      x="593"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.leftBg"
+      resourceLink="asset.increasinglyroad.leftBg"
+      x="50"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.progressBg"
+      resourceLink="asset.increasinglyroad.progressBg"
+      x="511"
+      y="683" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.progressImg"
+      resourceLink="asset.increasinglyroad.progressImg"
+      x="525"
+      y="693" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroad.smallBg"
+      resourceLink="asset.increasinglyroad.smallBg"
+      x="467"
+      y="669" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroadLayerItemView.bg"
+      resourceLink="asset.increasinglyroad.itemView.bg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroadLayerItemView.bg2"
+      resourceLink="asset.increasinglyroad.itemView.bg2"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="9"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroadLayerItemView.selectedBg"
+      resourceLink="asset.increasinglyroad.itemView.selectedBg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroadLayerItemView.iconBg"
+      resourceLink="asset.increasinglyroad.itemView.iconBg"
+      x="15"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="increasinglyroadLayerItemView.successBg"
+      resourceLink="asset.increasinglyroad.itemView.successBg"
+      x="15"
+      y="135" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="increasinglyroadLayerItemView.iconHox"
+      spacing="10"
+      y="162"
+      x="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="increasinglyroad.activePressTxt"
+      textFormatStyle="increasinglyroad.activePressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="20"
+      x="596"
+      y="692" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="increasinglyroad.buyActiveBtn"
+      backStyle="asset.increasinglyroad.buyActiveBtnImg"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="835"
+      y="685" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="increasinglyroad.upBtn"
+      backStyle="asset.increasinglyroad.pageBtnBg"
+      iconStyle="asset.increasinglyroad.pageUpTxtImg"
+      iconInnerRectString="10,56,5,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="505"
+      y="627"
+      height="31"
+      backgoundInnerRectString="-15,105,0,31,13"
+      width="113" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="increasinglyroad.downBtn"
+      backStyle="asset.increasinglyroad.pageBtnBg"
+      iconStyle="asset.increasinglyroad.pageDownTxtImg"
+      iconInnerRectString="10,56,5,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="905"
+      y="627"
+      backgoundInnerRectString="-15,105,0,31,13"
+      height="31"
+      width="102" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="increasinglyroad.refreshBtn"
+      backStyle="asset.increasinglyroad.refreshBtnBack"
+      iconStyle="asset.increasinglyroad.refreshBtnTxt"
+      iconInnerRectString="17,36,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="905"
+      y="742" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="increasinglyroad.descTxt"
+      textFormatStyle="increasinglyroad.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="45"
+      width="395"
+      wordWrap="true"
+      x="498"
+      y="738" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="IncreasinglyRoadFrame.shopBtn"
+      backStyle="asset.increasinglyroad.iShopBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="1049"
+      y="680" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="increasinglyroadLayerHboxItemView.LightEffect"
+      resourceLink="asset.increasinglyroad.LightEffect"
+      x="27"
+      y="-27" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="increasinglyroadLayerItemView.mopupBtn"
+      backStyle="asset.increasinglyroad.itemView.mopupBg"
+      iconStyle="asset.increasinglyroad.itemView.mopupTxt"
+      iconInnerRectString="53,29,15,18,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="205" />
+  </components>
+</style>

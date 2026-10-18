@@ -1,0 +1,225 @@
+<style
+  name="publicchairs"
+  source="ui/zh_cn/swf/publicchairs.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.luckNote_t"
+      args="Arial,14,0xff7200,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.chairsNote_t"
+      args="Arial,12,0xff0000,,,,,,center"
+      leading="2"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.chairsNames_t"
+      args="Arial,16,0x00ff30,,,,,,center"
+      leading="4"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.currentChairsTxt_t"
+      args="Arial,12,0xffdf88,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.rewardCountsTxt_t"
+      args="Arial,12,0xffdf88,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.leftTimeTxt_t"
+      args="Arial,14,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.fashionProgressTxt_t"
+      args="Arial,14,0xecdfa1,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicchairs.chairsNoteTxt_t"
+      args="Arial,14,0xfff000,true,,,,,center"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.publicchairs.Bg"
+      x="-127"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.publicchairs.chairsNote1"
+      x="201"
+      y="406" />
+    <bitmapData
+      resourceLink="asset.publicchairs.chairsNote2Bg"
+      x="301"
+      y="315" />
+    <bitmapData
+      resourceLink="asset.publicchairs.chairsRedBg"
+      x="283"
+      y="284" />
+    <bitmapData
+      resourceLink="asset.publicchairs.chairsRedBg2"
+      x="494"
+      y="426" />
+    <bitmapData
+      resourceLink="asset.publicchairs.chairsNote3"
+      x="432"
+      y="108" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.publicchairs.greenBar"
+      stylename="asset.publicchairs.greenBar"
+      x="294"
+      y="400" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="publicchairs.fashionProgressStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="357"
+      y="406" />
+  </customDisplay>
+  <components>
+    <component
+      classname="publicchairs.PublicChairsFrame"
+      stylename="publicchairs.PublicChairsFrame"
+      parentStyle="core.Frame1"
+      width="685"
+      height="593" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="publicchairs.publicchairsFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="916"
+      height="510"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="publicchairs.itemIcon1"
+      resourceLink="asset.publicchairs.itemIcon1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="280"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="publicchairs.itemIcon2"
+      parentStyle="publicchairs.itemIcon1"
+      resourceLink="asset.publicchairs.itemIcon2"
+      x="241"
+      y="298" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicchairs.chargeBtn"
+      backStyle="asset.publicchairs.chargeBtn"
+      iconStyle="asset.publicchairs.chargeTxt"
+      iconInnerRectString="28,101,19,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="372"
+      y="202" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicchairs.receiveBtn"
+      backgoundInnerRectString="-10,135,0,46,13"
+      backStyle="asset.publicchairs.receiveBtn"
+      iconStyle="asset.publicchairs.receiveTxt"
+      iconInnerRectString="18,78,13,21,13"
+      width="140"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="396"
+      y="436"
+      height="53" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.luckNote"
+      textFormatStyle="publicchairs.luckNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="45"
+      x="406"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.chairsNote"
+      textFormatStyle="publicchairs.chairsNote_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="40"
+      x="403"
+      y="156" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.chairsNames"
+      textFormatStyle="publicchairs.chairsNames_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      width="200"
+      height="80"
+      x="403"
+      y="83" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.currentChairsTxt"
+      textFormatStyle="publicchairs.currentChairsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="256"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.rewardCountsTxt"
+      textFormatStyle="publicchairs.rewardCountsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="85"
+      height="20"
+      x="467"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.leftTimeTxt"
+      textFormatStyle="publicchairs.leftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="256"
+      y="382"
+      width="406"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.fashionProgressTxt"
+      textFormatStyle="publicchairs.fashionProgressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="398"
+      y="408" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicchairs.chairsNoteTxt"
+      textFormatStyle="publicchairs.chairsNoteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      height="80"
+      width="330"
+      x="323"
+      y="285" />
+  </components>
+</style>

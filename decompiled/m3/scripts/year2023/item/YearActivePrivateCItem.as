@@ -1,0 +1,134 @@
+package year2023.item
+{
+   import com.pickgliss.ui.ComponentFactory;
+   import com.pickgliss.ui.controls.BaseButton;
+   import com.pickgliss.ui.image.Image;
+   import com.pickgliss.ui.text.FilterFrameText;
+   import com.pickgliss.utils.ObjectUtils;
+   import flash.display.Bitmap;
+   import flash.display.Sprite;
+   import flash.events.MouseEvent;
+   import manager.LanguageMgr;
+   import managers.YearActiveManager;
+   import yishi.utils.SimpleAlertHelper;
+   import yishi.view.base.TextAddBitmap;
+   
+   public class YearActivePrivateCItem extends Sprite
+   {
+      
+      private var _unlockbg:Bitmap;
+      
+      private var _noramlBox:Bitmap;
+      
+      private var _advanceBox:Bitmap;
+      
+      private var _prcnormaltxt:FilterFrameText;
+      
+      private var _prcadvtxt:FilterFrameText;
+      
+      private var _priceNum:TextAddBitmap;
+      
+      private var _unLockBtn:BaseButton;
+      
+      private var _lockFlg:Image;
+      
+      private var _advacePrice:int;
+      
+      public function YearActivePrivateCItem()
+      {
+         super();
+         initView();
+         initEvent();
+      }
+      
+      private function initView() : void
+      {
+         _unlockbg = ComponentFactory.Instance.creatBitmap("asset.yearactive.day.bg1");
+         _noramlBox = ComponentFactory.Instance.creatBitmap("asset.yearactive.day.box1");
+         _advanceBox = ComponentFactory.Instance.creatBitmap("asset.yearactive.day.box2");
+         _prcnormaltxt = ComponentFactory.Instance.creatComponentByStylename("ui.theseuspvp.prcnormaltxt");
+         _prcadvtxt = ComponentFactory.Instance.creatComponentByStylename("ui.theseuspvp.prcadvtxt");
+         _unLockBtn = ComponentFactory.Instance.creatComponentByStylename("ui.theseuspvp.gloryAdvBtn");
+         _priceNum = ComponentFactory.Instance.creatCustomObject("ui.theseuspvp.gloryPriceBit");
+         _priceNum.initView("ui.carnival.pointNumTx","asset.core.SmallPointImg");
+         _lockFlg = ComponentFactory.Instance.creatComponentByStylename("ui.theseuspvp.private.adVancelock");
+         addChild(_unlockbg);
+         addChild(_noramlBox);
+         addChild(_advanceBox);
+         addChild(_prcnormaltxt);
+         addChild(_prcadvtxt);
+         addChild(_priceNum);
+         addChild(_unLockBtn);
+         addChild(_lockFlg);
+         _prcnormaltxt.text = LanguageMgr.GetTranslation("yearactivity.day.normal");
+         _prcadvtxt.text = LanguageMgr.GetTranslation("yearactivity.day.advance");
+         _unLockBtn.enable = false;
+      }
+      
+      public function set advacePrice(param1:int) : void
+      {
+         _advacePrice = param1;
+         _priceNum.setText("" + _advacePrice);
+      }
+      
+      public function updateState(param1:Boolean) : void
+      {
+         _unLockBtn.enable = !param1;
+         _lockFlg.visible = !param1;
+      }
+      
+      private function initEvent() : void
+      {
+         _unLockBtn.addEventListener("click",unLockHandler);
+      }
+      
+      private function removeEvent() : void
+      {
+         _unLockBtn.removeEventListener("click",unLockHandler);
+      }
+      
+      private function unLockHandler(param1:MouseEvent) : void
+      {
+         var _loc2_:String = LanguageMgr.GetTranslation("public.confirm");
+         var _loc3_:String = LanguageMgr.GetTranslation("public.cancel");
+         var _loc4_:String = LanguageMgr.GetTranslation("public.prompt");
+         var _loc5_:String = LanguageMgr.GetTranslation("yearactivity.day.AdvanceAlert",_advacePrice);
+         SimpleAlertHelper.instance.data = [__alertResponse];
+         SimpleAlertHelper.instance.popAlerFrame(_loc4_,_loc5_,_loc2_,_loc3_,true,false,false);
+      }
+      
+      private function __alertResponse(param1:Boolean, param2:Boolean) : void
+      {
+         if(param1)
+         {
+            YearActiveManager.ins.doSomething(5);
+         }
+      }
+      
+      public function dispose() : void
+      {
+         removeEvent();
+         ObjectUtils.disposeObject(_unlockbg);
+         _unlockbg = null;
+         ObjectUtils.disposeObject(_noramlBox);
+         _noramlBox = null;
+         ObjectUtils.disposeObject(_advanceBox);
+         _advanceBox = null;
+         ObjectUtils.disposeObject(_prcnormaltxt);
+         _prcnormaltxt = null;
+         ObjectUtils.disposeObject(_prcadvtxt);
+         _prcadvtxt = null;
+         ObjectUtils.disposeObject(_priceNum);
+         _priceNum = null;
+         ObjectUtils.disposeObject(_unLockBtn);
+         _unLockBtn = null;
+         ObjectUtils.disposeObject(_lockFlg);
+         _lockFlg = null;
+         if(parent)
+         {
+            parent.removeChild(this);
+         }
+      }
+   }
+}
+

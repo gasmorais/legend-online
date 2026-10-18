@@ -1,0 +1,704 @@
+<style
+  name="publicegg"
+  source="ui/zh_cn/swf/publicegg.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.chairsNote_t"
+      args="Arial,12,0xffdf88,true,,,,,center"
+      leading="2"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.currentChairsTxt_t"
+      args="Arial,12,0xffdf88,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.publiceggProgressTxt_t"
+      args="Arial,14,0xecdfa1,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.item.leftTimeTxt_t"
+      args="Arial,12,0xf2e4a5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.leftTimeTxt_t"
+      args="Arial,12,0xf2e4a5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.confirm.leftTimeTxt_t"
+      args="Arial,12,0xf2e4a5,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.item.nameTxt_t"
+      args="Arial,14,0xdec899,true,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.item.noteTxt_t"
+      args="Arial,13,0xb0846a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.item.pointTxt_t"
+      args="Arial,14,0x00ffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.item.leftTxt_t"
+      args="Arial,12,0xe5cca3,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.UseButtonText_t"
+      args="Arial,14,0x00ffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.leftTimeTxt_t"
+      args="Arial,12,0xfff200,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.PublicEggConfirmFrame.noteTxt_t"
+      args="Arial,12,0xfff600,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicegg.remainTimeText_t"
+      args="Arial,14,0x00fff0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="publicgift.hasRechargeTxt_t"
+      args="Arial,12,0xfff200,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.publicegg.Bg"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.itemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.Bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.noOpenImg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.openingTxt"
+      x="40"
+      y="130" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg1"
+      x="-15"
+      y="-44" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg2"
+      x="-44"
+      y="-49" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg3"
+      x="-40"
+      y="-54" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg4"
+      x="-58"
+      y="-59" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg5"
+      x="-50"
+      y="-51" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg6"
+      x="-42"
+      y="-50" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.beerBg7"
+      x="-79"
+      y="-56" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.exchargeNum" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.confirmBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.confirmSmallBg"
+      x="295"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.confirmRewardImg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.receivedImg"
+      x="300"
+      y="42" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.leftTimeBg"
+      x="10"
+      y="163"
+      width="380" />
+    <bitmapData
+      resourceLink="asset.publicgift.bg"
+      x="-30"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.publicgift.itemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.publicgift.itemline"
+      x="20"
+      y="113" />
+    <bitmapData
+      resourceLink="asset.publicsummon.bg"
+      x="-29"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.publicsummon.person"
+      x="-201"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.publicsummon.conditionImage"
+      x="100"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.publicsummon.processImage"
+      x="100"
+      y="60" />
+    <bitmapData
+      resourceLink="asset.publicsummon.rewardTitleBack"
+      x="100"
+      y="113" />
+    <bitmapData
+      resourceLink="asset.publicsummon.rewardTitle"
+      x="100"
+      y="113" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.timeBg"
+      x="275"
+      y="478" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.timeNote"
+      x="271"
+      y="483" />
+    <bitmapData
+      resourceLink="asset.publicegg.egg.receivedImg1"
+      x="562"
+      y="21" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.publicegg.egg.greenBar"
+      stylename="asset.publicegg.egg.greenBar"
+      x="200"
+      y="30" />
+    <custom
+      classname="publicegg.PublicEggView"
+      stylename="publicegg.PublicEggView"
+      x="3"
+      y="43" />
+    <custom
+      classname="publicegg.PublicGiftView"
+      stylename="publicegg.PublicGiftView"
+      x="32"
+      y="32" />
+    <custom
+      classname="publicegg.PublicSummonView"
+      stylename="publicegg.PublicSummonView"
+      x="32"
+      y="32" />
+  </customDisplay>
+  <components>
+    <component
+      classname="publicegg.PublicEggGiftExchargeFrame"
+      stylename="publicegg.PublicEggGiftExchargeFrame"
+      parentStyle="core.Frame1"
+      width="888"
+      height="655" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="publicegg.PublicEggGiftExchargeFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="854"
+      height="518"
+      x="0"
+      y="40" />
+    <component
+      classname="publicegg.frame.PublicGiftFrame"
+      stylename="publicegg.frame.PublicGiftFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="60"
+      width="888"
+      height="619" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="publicegg.PublicGiftFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="853"
+      height="517"
+      x="0"
+      y="0" />
+    <component
+      classname="publicegg.frame.PublicEggFrame"
+      stylename="publicegg.frame.PublicEggFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="60"
+      width="888"
+      height="621" />
+    <component
+      classname="publicegg.PublicEggConfirmFrame"
+      stylename="publicegg.PublicEggConfirmFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="45"
+      width="432"
+      height="500" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="publicegg.PublicEggFrame.back"
+      resourceLink="asset.core.style11_scale9bg1,asset.core.style11_scale9bg2,asset.core.style11_scale9bg3,asset.core.style11_scale9bg4,asset.core.style11_scale9bg5,asset.core.style11_scale9bg6,asset.core.style11_scale9bg7,asset.core.style11_scale9bg8,asset.core.style11_scale9bg9"
+      width="854"
+      height="518"
+      x="0"
+      y="0" />
+    <!-- 激情夏日tab -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="publicegg.eggTabBtn"
+      unSelectedStyle="publicegg.tabBtnImg"
+      selectedStyle="publicegg.tabBtnSelectedImg"
+      selectedIconStyle="asset.publicegg.eggSelectImg"
+      unselectedIconStyle="asset.publicegg.eggImg"
+      selectedIconInnerRectString="22,109,5,31,13"
+      unselectedIconInnerRectString="25,104,4,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="160"
+      height="40"
+      x="157"
+      y="4"
+      transparentEnable="true" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="publicegg.tabBtnImg"
+      resourceLink="asset.publicegg.btnLeft,asset.publicegg.btnCenter,asset.publicegg.btnRight"
+      imageRectString="0|48|0|37|13,48|55|0|37|13,103|57|0|37|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="publicegg.tabBtnSelectedImg"
+      resourceLink="asset.publicegg.selectedBtnLeft,asset.publicegg.selectedBtnCenter,asset.publicegg.selectedBtnRight"
+      imageRectString="0|48|0|37|13,48|55|0|37|13,103|57|0|37|13" />
+    <!-- 夏日好礼 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="publicegg.giftTabBtn"
+      parentStyle="publicegg.eggTabBtn"
+      selectedIconStyle="asset.publicegg.giftSelectImg"
+      unselectedIconStyle="asset.publicegg.giftImg"
+      selectedIconInnerRectString="46,73,5,33,13"
+      unselectedIconInnerRectString="46,73,5,33,13"
+      x="349"
+      y="4" />
+    <!-- 夏日BOSS召唤 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="publicegg.exchargeTabBtn"
+      parentStyle="publicegg.eggTabBtn"
+      selectedIconStyle="asset.publicegg.exchargeSelectImg"
+      unselectedIconStyle="asset.publicegg.exchargeImg"
+      selectedIconInnerRectString="19,120,3,31,13"
+      unselectedIconInnerRectString="24,113,5,30,13"
+      x="540"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicegg.egg.freeBtn"
+      backStyle="asset.publicegg.egg.greenBtnImg"
+      iconStyle="asset.publicegg.egg.freeTxtImg"
+      iconInnerRectString="25,44,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="98"
+      height="42"
+      x="32"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicegg.egg.receiveBtn"
+      backStyle="asset.publicegg.egg.greenBtnImg"
+      iconStyle="asset.publicegg.egg.receiveTxtImg"
+      iconInnerRectString="24,48,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="98"
+      height="42"
+      x="32"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicegg.egg.exchargeBtn"
+      backStyle="publicegg.egg.redBtnImg"
+      iconStyle="asset.core.SmallPointImg"
+      iconInnerRectString="25,25,11,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="110"
+      height="44"
+      x="25"
+      y="128"
+      offSetX="-15" />
+    <!-- 红色按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="publicegg.egg.redBtnImg"
+      resourceLink="asset.publicegg.egg.redBtnImg"
+      scaleGridString="10,10,30,20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="publicegg.egg.beerFrameImage"
+      resourceLink="asset.publicegg.egg.beerBg1,asset.publicegg.egg.beerBg2,asset.publicegg.egg.beerBg3,asset.publicegg.egg.beerBg4,asset.publicegg.egg.beerBg5,asset.publicegg.egg.beerBg6,asset.publicegg.egg.beerBg7"
+      x="76"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="publicegg.confirm.beerFrameImage"
+      parentStyle="publicegg.egg.beerFrameImage"
+      x="203"
+      y="96" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="publicegg.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="215"
+      y="123" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="publicgift.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg"
+      x="760"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicegg.egg.allRewardBtn"
+      backStyle="asset.publicegg.egg.allRewardBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="558"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="publicegg.egg.confirmRewardImg"
+      resourceLink="asset.publicegg.egg.confirmRewardImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="305"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="publicegg.confirm.BaseItemView"
+      iconStyle="publicegg.confirm.iconView"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="publicegg.confirm.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="61"
+      profileHeight="61"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="publicegg.confirm.iconView"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="42"
+      loadingY="42"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.confirm.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="19"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.publiceggProgressTxt"
+      textFormatStyle="publicegg.publiceggProgressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="310"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.item.leftTimeTxt"
+      textFormatStyle="publicegg.item.leftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="-1"
+      y="157"
+      width="160"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.leftTimeTxt"
+      textFormatStyle="publicegg.leftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="330"
+      y="484"
+      width="300"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.confirm.leftTimeTxt"
+      textFormatStyle="publicegg.confirm.leftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="125"
+      y="10"
+      width="160"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="publicgift.RewardsListScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,2,4,-2,3"
+      viewportInnerRectString="0,17,2,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="855"
+      height="228"
+      x="-50"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="publicgift.RewardsVBox"
+      x="0"
+      y="0"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="publicgift.LuckShowListScrollPanel"
+      parentStyle="publicgift.RewardsListScrollPanel"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="publicgift.LuckShowVBox"
+      x="493"
+      y="235"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="publicgift.item.RewardsHBox"
+      x="300"
+      y="38"
+      spacing="12" />
+    <!-- 背包物品Item-->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="publicgift.item.BaseItemView"
+      iconStyle="publicgift.item.ItemIcon"
+      textStyle="publicgift.item.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="publicgift.item.ItemIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.item.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="5"
+      y="30" />
+    <!-- 好礼Item-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.item.nameTxt"
+      textFormatStyle="publicgift.item.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="60"
+      width="270"
+      x="26"
+      y="41"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.item.noteTxt"
+      textFormatStyle="publicgift.item.noteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="400"
+      x="224"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.item.pointTxt"
+      textFormatStyle="publicgift.item.pointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="100"
+      x="682"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.item.leftTxt"
+      textFormatStyle="publicgift.item.leftTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="210"
+      x="640"
+      y="89" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicgift.item.buyBtn"
+      backStyle="asset.publicgift.greenBtnBmp"
+      iconStyle="asset.publicgift.buyTxtBmp"
+      iconInnerRectString="34,63,9,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="681"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="publicgift.item.receiveBtn"
+      backStyle="asset.publicgift.greenBtnBmp"
+      iconStyle="asset.publicgift.receiveTxtBmp"
+      iconInnerRectString="32,64,10,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="681"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.UseButtonText"
+      textFormatStyle="publicgift.UseButtonText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="124"
+      height="32"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="publicgift.item.exchargeBtn"
+      backStyle="asset.publicgift.greenBtnBmp"
+      textStyle="publicgift.UseButtonText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="128"
+      height="42"
+      backgoundInnerRectString="0,8,10,13"
+      x="681"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.leftTimeTxt"
+      textFormatStyle="publicgift.leftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="262"
+      y="495"
+      width="300"
+      height="20" />
+    <component
+      classname="mainBar.StripView"
+      stylename="publicegg.frame.tipsStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="573"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.PublicEggConfirmFrame.noteTxt"
+      textFormatStyle="publicegg.PublicEggConfirmFrame.noteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="10"
+      y="165"
+      width="400"
+      height="30"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicegg.remainTimeText"
+      textFormatStyle="publicegg.remainTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="307"
+      y="490"
+      width="300"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="publicgift.item.panel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-5,4"
+      viewportInnerRectString="0,0,-5,90,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="180"
+      height="60"
+      x="300"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="publicgift.hasRechargeTxt"
+      textFormatStyle="publicgift.hasRechargeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="87"
+      y="495"
+      width="300"
+      height="20" />
+  </components>
+</style>

@@ -1,0 +1,2090 @@
+<style
+  name="mounts"
+  source="ui/zh_cn/swf/mounts.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.MountNameText_t"
+      args="Arial,12,0xF3FF2D,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.MountGradeText_t"
+      args="Arial,14,0x99f131,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.MountSpeedTxt_t"
+      args="Arial,16,0xffeec1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.GrowValueTxt_t"
+      args="Arial,14,0xfff6d9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.AdditionText_t"
+      args="Arial,14,0xfff7d0,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.PropertyGradeText_t"
+      args="Arial,12,0xfff7c9,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mount.restTxt_t"
+      args="Arial,14,0xdbc494,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.nameTxt_t"
+      args="Arial,12,0xf3e9c1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.nameTxt_t02"
+      args="Arial,12,0xf3e9c1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.nameGradeTxt_t"
+      args="Arial,12,0x99f131,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.PageText_t"
+      args="Arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.helpertxt_t"
+      args="Arial,13,0xffdd85,,,,,,left,,,,6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.helperBtnTxt_t"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.propertyTipTxt01_t"
+      args="Arial,12,0x48d72a,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.propertyTipTxt02_t"
+      args="Arial,12,0xecdb05,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.propertyTipTxt03_t"
+      args="Arial,12,0xff292e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxt01_t"
+      args="Arial,14,0xff8000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxt02_t"
+      args="Arial,12,0x48d72a,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxt03_t"
+      args="Arial,12,0x9cc1cc,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxt04_t"
+      args="Arial,12,0xff292e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxt05_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxt06_t"
+      args="Arial,12,0xff292e,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.wildsoulTipTxtNeed_t"
+      args="Arial,12,0xecdb07,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.curNumLabel_t"
+      args="Arial,12,0xfcdfa7,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.curNumValue_t"
+      args="Arial,12,0xa2efff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.CreditValue_t"
+      args="Arial,16,0xfacf56,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="wildsoul.PageText_f"
+      args="0x3c2000,1,1,1,3" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="mounts.PropertyGradeText_f"
+      args="0x000000,1,3,3,6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="asset.promotion.BlessBarTxt_t"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mountsPromotion.promotCountTxt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mountsPromotionView.successTxt_t"
+      args="Arial,16,0xffeb11,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mountsPromotionItemView.addTxt_t"
+      args="Arial,14,0x00ff36,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="mountsPromotionItemView.addTxt_f"
+      args="0x31200c,1,4,4,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.descTxt_t1"
+      args="Arial,14,0xffd668,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.descTxt_t2"
+      args="Arial,14,0x858585,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="wildsoul.descTxt_f1"
+      args="0x2c0e07,1,5,5,5" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="wildsoul.descTxt_f2"
+      args="0x232323,1,5,5,5" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="wildsoul.filter_01"
+      args="0x000000,1,3,3,1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.countDown_f"
+      args="Arial,12,0xc8a46d" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mount.trainCountText_t"
+      args="arial,14,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountKingTrainItemView.baseUpText_t"
+      args="arial,14,0x00ff36,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountKingTrainView.preLevelText_t"
+      args="arial,12,0xffcc00,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountKingTrainView.preBaseText_t"
+      args="Arial,12,0xffcc00,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountKingTrainView.nameTxt_t"
+      args="Arial,16,0xf3ff2d,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="mounts.curlvlText_t"
+      args="Arial,12,0xffff00,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="wildsoul.getBtnText_t"
+      args="Arial,12,0xfff091,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.inputText_t"
+      args="Arial,16,0xffc766,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.itemCountText_t"
+      args="Arial,16,0xffc766,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.strengthText_t"
+      args="Arial,18,0xffea00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.abilityText_t"
+      args="Arial,18,0xffea00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.ArmorText_t"
+      args="Arial,18,0xffea00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.physiqueText_t"
+      args="Arial,18,0xffea00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.skillGradeText_t"
+      args="Arial,12,0xf5fe00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="MountRefiningSoulItem.percentText_t"
+      args="Arial,14,0xfff6d9,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.mounts.MainBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mounts.PropertyItemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mounts.PropertyTextBg"
+      x="7"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.mounts.SelecedBorder"
+      x="-1"
+      y="-2" />
+    <bitmapData
+      resourceLink="asset.mounts.SmallSelecedBorder"
+      x="7"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.mounts.PropertyGradeBarBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mounts.BottomBg"
+      x="7"
+      y="305"
+      height="110" />
+    <bitmapData
+      resourceLink="asset.mounts.MountNameBg"
+      x="12"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.mounts.MountGrowValue"
+      x="7"
+      y="200" />
+    <bitmapData
+      resourceLink="asset.mounts.MoveSpeed"
+      x="-5"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.mounts.Temp"
+      x="12"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.mounts.MountBg"
+      x="10"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.wildsoul.TipTxt"
+      x="310"
+      y="416" />
+    <bitmapData
+      resourceLink="asset.wildsoul.OverBg"
+      x="-9"
+      y="-9" />
+    <bitmapData
+      resourceLink="asset.wildsoul.Lock"
+      x="67"
+      y="55" />
+    <bitmapData
+      resourceLink="asset.wildsoul.PageNumBack"
+      x="488"
+      y="368" />
+    <bitmapData
+      resourceLink="asset.mounts.WildSoulBtnBg"
+      x="10"
+      y="244" />
+    <bitmapData
+      resourceLink="asset.mounts.CurNumBg"
+      x="313"
+      y="264" />
+    <bitmapData
+      resourceLink="asset.wildsoul.CreditsTxt"
+      x="25"
+      y="406" />
+    <bitmapData
+      resourceLink="asset.mounts.VIPAsset"
+      x="0"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.mounts.discountBack"
+      x="580"
+      y="218" />
+    <bitmapData
+      resourceLink="asset.promotion.CountTxt"
+      x="15"
+      y="376" />
+    <bitmapData
+      resourceLink="asset.promotion.CountImg"
+      x="50"
+      y="373" />
+    <bitmapData
+      resourceLink="asset.mount.trainCountImage" />
+    <bitmapData
+      resourceLink="asset.mount.countBottomImage" />
+    <bitmapData
+      resourceLink="asset.mountKing.alertImage"
+      x="0"
+      y="373" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.mounts.MainBg"
+      stylename="mounts.MainBg"
+      resourceLink="asset.mounts.MainBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="mounts.PropertyItem"
+      stylename="mounts.PropertyItem"
+      tipStyle="yishi.view.tips.PropertyTip"
+      isFollowMouse="false"
+      tipDirctions="6,3,4,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="mounts.WildSoulItem"
+      stylename="mounts.WildSoulItem"
+      tipStyle="yishi.view.tips.MountTip"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="yishi.view.tips.OneLineTip"
+      stylename="mounts.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="6"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="asset.mounts.PropertyGradeBar"
+      stylename="mounts.PropertyGradeBar"
+      x="150"
+      y="13" />
+    <custom
+      classname="asset.mounts.Levelupmc"
+      stylename="mounts.Levelupmc"
+      x="238"
+      y="435" />
+    <custom
+      classname="asset.mounts.Levelupmc"
+      stylename="mounts.PropLevelupmc"
+      x="108"
+      y="113" />
+    <custom
+      classname="asset.mounts.levelupeffect"
+      stylename="mounts.levelupeffect2"
+      x="-39"
+      y="-32" />
+    <custom
+      classname="asset.mounts.porplevelupeffect"
+      stylename="mounts.porplevelupeffect2"
+      x="155"
+      y="148" />
+    <custom
+      classname="asset.castle.BuildLevelUpEffectMC"
+      stylename="mounts.levelupeffect"
+      x="155"
+      y="289" />
+    <custom
+      classname="asset.mounts.porplevelupeffect"
+      stylename="mounts.porplevelupeffect"
+      x="230"
+      y="25" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="mounts.specialBtnMc"
+      x="78"
+      y="-26" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.leftBg"
+      resourceLink="asset.promotion.LeftBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.rightBg"
+      resourceLink="asset.promotion.RightBg"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.separateLine"
+      resourceLink="asset.core.style11_scale9bg6"
+      x="266"
+      y="0"
+      height="415" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.starGradeImg"
+      resourceLink="asset.promotion.StarGradeImg"
+      x="14"
+      y="23" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.propertyAddImg"
+      resourceLink="asset.promotion.PropertyAddImg"
+      x="14"
+      y="64" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.propertyBack"
+      resourceLink="asset.promotion.PropertyBack"
+      x="3"
+      y="99" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.blessImg"
+      resourceLink="asset.promotion.BlessImg"
+      x="60"
+      y="250" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.blessBack"
+      resourceLink="asset.promotion.BlessBack"
+      x="63"
+      y="270" />
+    <custom
+      classname="asset.promotion.BlessBar"
+      stylename="mountsPromotionView.blessBar"
+      x="76"
+      y="279" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.successImg"
+      resourceLink="asset.promotion.SuccessImg"
+      x="150"
+      y="301" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionItemView.propertyImg"
+      x="-25"
+      y="0"
+      scaleX="1"
+      scaleY="1" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionItemView.propertyImg2"
+      x="145"
+      y="0"
+      scaleX="1"
+      scaleY="1" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionItemView.upArrow"
+      resourceLink="asset.promotion.UpArrow"
+      x="270"
+      y="0"
+      scaleX="1"
+      scaleY="1" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.arrow"
+      resourceLink="asset.promotion.Arrow"
+      x="155"
+      y="158" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="mountsPromotionView.maxGradeImg"
+      resourceLink="asset.promotion.MaxGradeTxt"
+      x="210"
+      y="168" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="wildSoulFrame.commontTxt"
+      resourceLink="asset.promotion.CommentTxt"
+      x="330"
+      y="0" />
+    <custom
+      classname="asset.promotion.BlessBar"
+      stylename="MountKingTrainView.expBar"
+      x="76"
+      y="279" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="MountKingTrainView.separateLine"
+      resourceLink="asset.core.style11_scale9bg6"
+      x="266"
+      y="0"
+      height="415" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="MountKingTrainView.changeBtnStripView"
+      tipWidth="200"
+      tipGapV="0"
+      tipGapH="0"
+      tipStyle="yishi.view.tips.MultipleLineTip"
+      tipDirctions="0"
+      width="140"
+      height="22"
+      x="511"
+      y="384" />
+    <custom
+      classname="asset.MountRefiningSoulItem.levelUpMc"
+      stylename="MountRefiningSoulItem.levelUpMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.MountRefiningSoulFrame.skillUpMc"
+      stylename="MountRefiningSoulFrame.skillUpMc"
+      x="350"
+      y="310" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="mounts.soulscore"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      isFollowMouse="false"
+      tipGapV="430"
+      tipGapH="0"
+      x="73"
+      y="-5" />
+    <component
+      classname="mounts.MountsFrame"
+      stylename="mounts.MountsFrame"
+      parentStyle="core.Frame1"
+      width="665"
+      height="530"
+      containerX="16"
+      containerY="62" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="mounts.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="585"
+      y="-43" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mounts.MainBgBorder"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="631"
+      height="422" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="mounts.LeftBg"
+      parentStyle="core.describeBackground_style11"
+      width="294"
+      height="290"
+      x="8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mounts.RightBg"
+      parentStyle="core.describeBackground_style04"
+      x="309"
+      y="6"
+      width="317"
+      height="290" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.MountNameText"
+      textFormatStyle="mounts.MountNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="34"
+      x="15"
+      y="11"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.MountGradeText"
+      textFormatStyle="mounts.MountGradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="24"
+      x="-7"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mounts.WildSoulBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.mounts.WildSoulTxt"
+      iconInnerRectString="32,56,12,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="mounts.StrengthBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      selectedIconStyle="asset.mounts.StrengthTxt"
+      unselectedIconStyle="asset.mounts.StrengthTxt"
+      selectedIconInnerRectString="25,36,4,17,13"
+      unselectedIconInnerRectString="25,36,4,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="25"
+      displacement="false"
+      x="4"
+      y="10"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="mounts.IntellectBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      selectedIconStyle="asset.mounts.IntellectTxt"
+      unselectedIconStyle="asset.mounts.IntellectTxt"
+      selectedIconInnerRectString="25,73,4,18,13"
+      unselectedIconInnerRectString="25,73,4,18,13"
+      width="100"
+      height="25"
+      displacement="false"
+      x="4"
+      y="10"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="mounts.StaminaBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      selectedIconStyle="asset.mounts.StaminaTxt"
+      unselectedIconStyle="asset.mounts.StaminaTxt"
+      selectedIconInnerRectString="25,37,4,17,13"
+      unselectedIconInnerRectString="25,37,4,17,13"
+      width="100"
+      height="25"
+      displacement="false"
+      x="4"
+      y="10"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="mounts.ArmorBtn"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      selectedIconStyle="asset.mounts.ArmorTxt"
+      unselectedIconStyle="asset.mounts.ArmorTxt"
+      selectedIconInnerRectString="25,58,4,18,13"
+      unselectedIconInnerRectString="25,58,4,18,13"
+      width="100"
+      height="25"
+      displacement="false"
+      x="4"
+      y="10"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.AdditionText"
+      textFormatStyle="mounts.AdditionText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="24"
+      x="12"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.PropertyGradeText"
+      textFormatStyle="mounts.PropertyGradeText_t"
+      filterString="mounts.PropertyGradeText_f"
+      autoSize="none"
+      width="140"
+      height="24"
+      x="153"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="mounts.DomesticateBtn"
+      backStyle="asset.mounts.trainBtn"
+      delayClickTime="400"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="490"
+      y="218" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="mounts.AdvancedDomesticateBtn"
+      backStyle="asset.mounts.advTrainBtn"
+      delayClickTime="400"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="450"
+      y="213" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.MountSpeedTxt"
+      textFormatStyle="mounts.MountSpeedTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="24"
+      x="311"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.GrowValueTxt"
+      textFormatStyle="mounts.GrowValueTxt_t"
+      filterString="mounts.PropertyGradeText_f"
+      autoSize="none"
+      width="193"
+      height="24"
+      x="280"
+      y="377" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="mounts.Vbox"
+      x="314"
+      y="12"
+      spacing="1"
+      height="200"
+      isStrictHeight="true"
+      strictHeight="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mount.dismountBtn"
+      backStyle="asset.mount.mountBottomImage"
+      iconStyle="asset.mount.mountOff"
+      iconInnerRectString="35,46,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      ipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="165"
+      y="250"
+      tipStyle="yishi.view.tips.OneLineTip" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mount.mountBtn"
+      backStyle="asset.mount.mountBottomImage"
+      iconStyle="asset.mount.mountOn"
+      iconInnerRectString="35,46,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      ipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="165"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mount.restTxt"
+      textFormatStyle="mount.restTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20" />
+    <component
+      classname="mounts.WildSoulFrame"
+      stylename="mounts.WildSoulFrame"
+      parentStyle="core.Frame1"
+      width="730"
+      height="560"
+      containerX="16"
+      containerY="68" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="mounts.helpBtn2"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="650"
+      y="-50" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="wildsoul.BgBorder"
+      parentStyle="core.describeBackground_style11"
+      width="693"
+      height="421"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wildsoul.prePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="401"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wildsoul.nextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="563"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wildsoul.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      x="486"
+      y="373"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="wildsoul.changeBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.wildsoul.ChangeTxt"
+      iconInnerRectString="18,119,13,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="511"
+      y="384" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wildsoul.nameTxt"
+      textFormatStyle="wildsoul.nameTxt_t,wildsoul.nameTxt_t02"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="40"
+      wordWrap="true"
+      x="1"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wildsoul.nameGradeTxt"
+      textFormatStyle="wildsoul.nameGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="wildsoul.normalBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.wildsoul.Normal_2"
+      unselectedIconStyle="asset.wildsoul.Normal_1"
+      selectedIconInnerRectString="19,61,6,19,13"
+      unselectedIconInnerRectString="20,60,6,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="10"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="wildsoul.specialBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.wildsoul.Special_2"
+      unselectedIconStyle="asset.wildsoul.Special_1"
+      selectedIconInnerRectString="21,59,9,18,13"
+      unselectedIconInnerRectString="21,59,9,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="mounts.MountHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="mounts.helpTxt"
+      titleText="mounts.HelpTitle"
+      textWidth="363"
+      width="355"
+      height="360" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mounts.HelperFrameBg"
+      parentStyle="core.describeBackground_style04"
+      x="-18"
+      y="4"
+      width="318"
+      height="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.helpertxt"
+      autoSize="none"
+      multiline="true"
+      textFormatStyle="mounts.helpertxt_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="310"
+      height="197"
+      x="-10"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="mounts.helperBtn"
+      parentStyle="core.GreenBtn"
+      textStyle="mounts.helperBtnTxt"
+      x="102"
+      y="235"
+      width="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.helperBtnTxt"
+      textFormatStyle="mounts.helperBtnTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.propertyTipTxt01"
+      textFormatStyle="mounts.propertyTipTxt01_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="220"
+      height="24"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.propertyTipTxt02"
+      textFormatStyle="mounts.propertyTipTxt02_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="220"
+      height="24"
+      x="10"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.propertyTipTxt03"
+      textFormatStyle="mounts.propertyTipTxt02_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="220"
+      height="24"
+      x="10"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.propertyTipTxt04"
+      textFormatStyle="mounts.propertyTipTxt03_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="220"
+      height="24"
+      x="10"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxt01"
+      textFormatStyle="mounts.wildsoulTipTxt01_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="245"
+      height="24"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxt02"
+      textFormatStyle="mounts.wildsoulTipTxt02_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="175"
+      height="200"
+      x="10"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxt03"
+      textFormatStyle="mounts.wildsoulTipTxt03_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="175"
+      height="145"
+      x="10"
+      y="138" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxtNeed"
+      textFormatStyle="mounts.wildsoulTipTxtNeed_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      width="175"
+      height="60"
+      x="10"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxt04"
+      textFormatStyle="mounts.wildsoulTipTxt04_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="175"
+      height="24"
+      x="10"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxt05"
+      textFormatStyle="mounts.wildsoulTipTxt05_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="175"
+      height="24"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.wildsoulTipTxt06"
+      textFormatStyle="mounts.wildsoulTipTxt06_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="175"
+      height="24"
+      x="10"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="mounts.TabButtonMc"
+      resourceLink="asset.mount.TabButtonMc"
+      x="142"
+      y="-8"
+      width="101"
+      height="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.curNumLabel"
+      textFormatStyle="mounts.curNumLabel_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="175"
+      height="24"
+      x="328"
+      y="270" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.curNumValue"
+      textFormatStyle="mounts.curNumValue_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="160"
+      height="24"
+      x="455"
+      y="270" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.CreditValue"
+      textFormatStyle="mounts.CreditValue_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="175"
+      height="24"
+      x="62"
+      y="404" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="mounts.discountImage"
+      resourceLink="asset.mounts.discount01,asset.mounts.discount02,asset.mounts.discount03,asset.mounts.discount04,asset.mounts.discount05,asset.mounts.discount06,asset.mounts.discount07,asset.mounts.discount08,asset.mounts.discount09"
+      x="594"
+      y="223" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="wildSoulItem.starBox"
+      mouseEnabled="false"
+      x="10"
+      y="135"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="wildSoulItem.star"
+      resourceLink="asset.wildsoul.EmptyStar,asset.wildsoul.FullStar"
+      y="0"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="wildSoulItem.promotBtn"
+      backStyle="asset.wildsoul.AdvanceBtn"
+      x="125"
+      y="130"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mountsPromotionView.nameTxt"
+      textFormatStyle="mounts.MountNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24"
+      x="15"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="asset.promotion.BlessBarTxt"
+      textFormatStyle="asset.promotion.BlessBarTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="127"
+      y="277" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mountsPromotion.promotCountTxt"
+      textFormatStyle="mountsPromotion.promotCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      height="22"
+      x="85"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mountsPromotionView.successTxt"
+      textFormatStyle="mountsPromotionView.successTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="215"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mountsPromotionView.promotBtn"
+      delayClick="true"
+      backStyle="asset.button.Button001"
+      iconStyle="asset.promotion.PromotTxt"
+      iconInnerRectString="50,52,13,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="35"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mountsPromotionView.advPromotBtn"
+      delayClick="true"
+      backStyle="asset.button.Button001"
+      iconStyle="asset.promotion.AdvPromotTxt"
+      iconInnerRectString="42,67,13,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="212"
+      y="320" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mountsPromotionView.returnBtn"
+      backStyle="asset.pet.RedBtn"
+      iconStyle="asset.promotion.ReturnTxt"
+      iconInnerRectString="7,34,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="334"
+      y="378" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mountsPromotionItemView.oldTxt"
+      textFormatStyle="mounts.AdditionText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="43"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mountsPromotionItemView.newTxt"
+      parentStyle="mountsPromotionItemView.oldTxt"
+      x="215" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mountsPromotionItemView.addTxt"
+      textFormatStyle="mountsPromotionItemView.addTxt_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="240"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="mountsPromotionView.vBox"
+      x="50"
+      y="115"
+      spacing="10"
+      strictHeight="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wildsoul.descTxt"
+      textFormatStyle="wildsoul.descTxt_t1,wildsoul.descTxt_t2"
+      filterString="core.normal_f,wildsoul.descTxt_f2"
+      autoSize="none"
+      width="165"
+      height="20"
+      x="0"
+      y="135" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="mounts.PromotionHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="mounts.PromotionHelpTxt"
+      titleText="mounts.PromotionHelpTitle"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.countDownTxt"
+      textFormatStyle="mounts.countDown_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="5"
+      y="15" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="mounts.RiverNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="mounts.RiverNotAlert_confirmStyle"
+      cancelStyle="mounts.RiverNotAlert_cancelStyle"
+      checkStyle="mounts.RiverNotAlertCheckBtn"
+      describeStyle="mounts.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="mounts.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="8"
+      containerY="30"
+      usebindPointStyle="mounts.UseBindPointBtn"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="400"
+      height="210"
+      notJoinActPromptStyle="mounts.notJoinActPromptTxt"
+      showJoinActPrompt="true" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="mounts.RiverNotAlert2"
+      parentStyle="worldboss.RiverNotAlert2"
+      confirmStyle="mounts.RiverNotAlert_confirmStyle_2"
+      cancelStyle="mounts.RiverNotAlert_cancelStyle_2"
+      checkStyle="mounts.RiverNotAlertCheckBtn2"
+      describeStyle="mounts.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="mounts.AlertTextStyle"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="370"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.notJoinActPromptTxt"
+      textFormatStyle="campaign.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="25"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.RiverNotAlert_confirmStyle_2"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="50"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.RiverNotAlert_cancelStyle_2"
+      parentStyle="core.AlertButton_2"
+      x="190"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.RiverNotAlertCheckBtn2"
+      parentStyle="core.ThewCheckBtn"
+      x="110"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.RiverNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="70"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.RiverNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="210"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="380"
+      height="40"
+      x="0"
+      y="0"
+      multiline="false"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="mounts.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="mounts.CurNumBg"
+      resourceLink="asset.mounts.CurNumBg"
+      scaleGridString="20,15,80,20"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="true"
+      tipWidth="150"
+      width="293"
+      x="320"
+      y="266" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="wildsoul.vipOrKing"
+      resourceLink="asset.mounts.VIPAsset,asset.mounts.KingAsset"
+      x="118"
+      y="3" />
+    <!--    <component classname="com.pickgliss.ui.controls.SimpleBitmapButton" stylename="mounts.AdvancedDomesticateBtn" backStyle="asset.mounts.advTrainBtn" delayClickTime="400" tipStyle="yishi.view.tips.OneLineTip" isFollowMouse="false" tipDirctions="3,6,4,7" tipGapH="0" tipGapV="0" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" x="450" y="213"/>-->
+    <!--    <component classname="com.pickgliss.ui.controls.SelectedIconButton" stylename="wildsoul.specialBtn" unSelectedStyle="core.PlayerInfoTabUnselectBack" selectedStyle="core.PlayerInfoTabSelectBack" selectedIconStyle="asset.wildsoul.Special_2" unselectedIconStyle="asset.wildsoul.Special_1" selectedIconInnerRectString="30,40,8,18,13" unselectedIconInnerRectString="30,39,9,18,13" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" width="90" height="38" x="0" y="-2"/>-->
+    <!--新坐骑系统-->
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="mounts.mountShopBtn"
+      backStyle="asset.mount.mountShopImage"
+      delayClickTime="400"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="18"
+      y="308" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mount.trainCountText"
+      textFormatStyle="mount.trainCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="405"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mount.trainCountImage"
+      resourceLink="asset.mount.trainCountImage"
+      x="315"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mount.trainCountBottom"
+      resourceLink="asset.mount.countBottomImage"
+      x="400"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="mounts.WildSoulItem.ItemBg"
+      resourceLink="asset.wildsoul.ItemBg,asset.wildsoul.kingItemBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mounts.kingTrainBtn"
+      backStyle="asset.wildsoul.kingTrainBtn"
+      iconStyle="asset.wildsoul.kingTrainText"
+      iconInnerRectString="58,46,2,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      ipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="3"
+      y="134" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="wildsoul.magicBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.mount.magic.select"
+      unselectedIconStyle="asset.mount.magic.Unselect"
+      selectedIconInnerRectString="25,43,8,18,13"
+      unselectedIconInnerRectString="25,43,9,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="-40"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="wildsoul.livestockBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.mount.livestock.select"
+      unselectedIconStyle="asset.mount.livestock.Unselect"
+      selectedIconInnerRectString="30,38,10,13,13"
+      unselectedIconInnerRectString="30,38,10,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="-102"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="wildsoul.beastBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.mount.beast.select"
+      unselectedIconStyle="asset.mount.beast.Unselect"
+      selectedIconInnerRectString="35,34,10,13,13"
+      unselectedIconInnerRectString="30,34,10,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="-140"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="wildsoul.technologyBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.mount.technology.select"
+      unselectedIconStyle="asset.mount.technology.Unselect"
+      selectedIconInnerRectString="18,63,8,17,13"
+      unselectedIconInnerRectString="18,63,9,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="-178"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="mounts.WildSoulItem.kingBoard"
+      resourceLink="asset.wildsoul.kingBoardBg"
+      x="-4"
+      y="-12" />
+    <!--	兽王培养UI-->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainItemView.propertyImg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainItemView.propertyImg2"
+      x="165"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainItemView.preBaseTxt"
+      textFormatStyle="mounts.AdditionText_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="60"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainItemView.preAddText"
+      textFormatStyle="mounts.AdditionText_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="95"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainItemView.nextBaseTxt"
+      textFormatStyle="mounts.AdditionText_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="225"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainItemView.nextAddTxt"
+      textFormatStyle="mounts.AdditionText_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="294"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainItemView.nextUpText"
+      textFormatStyle="MountKingTrainItemView.baseUpText_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="268"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainItemView.nextAddUpText"
+      textFormatStyle="MountKingTrainItemView.baseUpText_t"
+      filterString="mountsPromotionItemView.addTxt_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="332"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainItemView.upArrow"
+      resourceLink="asset.promotion.UpArrow"
+      x="295"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainItemView.upArrow2"
+      resourceLink="asset.promotion.UpArrow"
+      x="367"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.leftBg"
+      resourceLink="asset.promotion.LeftBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.rightBg"
+      resourceLink="asset.promotion.RightBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.lightImage"
+      resourceLink="asset.MountKingTrainView.lightImage"
+      x="1"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.nameTxt"
+      textFormatStyle="MountKingTrainView.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="24"
+      x="45"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.propertyAddImg"
+      resourceLink="asset.mountKing.mountAddImage"
+      x="15"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="MountKingTrainView.vBox"
+      x="15"
+      y="105"
+      spacing="10"
+      strictHeight="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.trainImage"
+      resourceLink="asset.mountKing.trainValueImage"
+      x="12"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.trainCount"
+      resourceLink="asset.mountKing.trainCountImage"
+      x="10"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.ownImage"
+      resourceLink="asset.mountKing.ownTextImage"
+      x="15"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.mountCoinImage"
+      resourceLink="asset.mount.mountCoinImage"
+      x="60"
+      y="337" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.blessBack"
+      resourceLink="asset.promotion.BlessBack"
+      x="63"
+      y="270" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.expTxt"
+      textFormatStyle="asset.promotion.BlessBarTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="127"
+      y="277" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.trainCountBottom"
+      resourceLink="asset.mount.countBottomImage"
+      x="120"
+      y="307" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.trainCountText"
+      textFormatStyle="mount.trainCountText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="125"
+      y="309" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.ownCountTxt"
+      textFormatStyle="asset.promotion.BlessBarTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="42"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MountKingTrainView.trainBtn"
+      delayClick="true"
+      backStyle="asset.button.Button001"
+      iconStyle="asset.mountKing.trainTextImage"
+      iconInnerRectString="37,80,10,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="242"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MountKingTrainView.returnBtn"
+      parentStyle="mountsPromotionView.returnBtn"
+      x="334"
+      y="378" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.preLevelText"
+      textFormatStyle="MountKingTrainView.preLevelText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="-41"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.nextLevelText"
+      textFormatStyle="MountKingTrainView.preLevelText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="155"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.preBaseText"
+      textFormatStyle="MountKingTrainView.preBaseText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="5"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.preAddText"
+      textFormatStyle="MountKingTrainView.preBaseText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="75"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.nextBaseText"
+      textFormatStyle="MountKingTrainView.preBaseText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="200"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountKingTrainView.nextAddText"
+      textFormatStyle="MountKingTrainView.preBaseText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="149"
+      height="20"
+      x="270"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="MountKingTrainView.maxTextImage"
+      resourceLink="asset.mountKing.maxAlertImage"
+      x="198"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mounts.curlvlText"
+      textFormatStyle="mounts.curlvlText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="24"
+      x="10"
+      y="10" />
+    <component
+      classname="mainBar.StripView"
+      stylename="mount.speedStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      mouseChildren="true"
+      mouseEnabled="true"
+      x="265"
+      y="344" />
+    <!-- <component classname="com.pickgliss.ui.controls.SimpleBitmapButton" 
+			stylename="mounts.AdvancedDomesticateBtn" backStyle="asset.mounts.advTrainBtn" 
+			delayClickTime="400" tipStyle="yishi.view.tips.OneLineTip" isFollowMouse="false" 
+			tipDirctions="3,6,4,7" tipGapH="0" tipGapV="0" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" 
+			x="450" y="213"/> -->
+    <!-- <component classname="com.pickgliss.ui.controls.SelectedIconButton" 
+			stylename="wildsoul.specialBtn" unSelectedStyle="core.PlayerInfoTabUnselectBack" 
+			selectedStyle="core.PlayerInfoTabSelectBack" selectedIconStyle="asset.wildsoul.Special_2" 
+			unselectedIconStyle="asset.wildsoul.Special_1" selectedIconInnerRectString="30,40,8,18,13" 
+			unselectedIconInnerRectString="30,39,9,18,13" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" 
+			width="90" height="38" x="0" y="-2"/> -->
+    <!-- 兽魂/背景.jpg -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="wildsoul.BigBg"
+      resourceLink="asset.wildsoul.BigBg"
+      x="0"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="wildsoul.getBtn"
+      backStyle="asset.wildsoul.get"
+      textStyle="wildsoul.getBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="28,8,5,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="29"
+      x="39"
+      y="94" />
+    <!-- 确定修改按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="wildsoul.getBtnText"
+      textFormatStyle="wildsoul.getBtnText_t"
+      filterString="core.normal_f"
+      width="100"
+      height="20" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="wildsoul.promotBtnStrip"
+      x="223"
+      y="14"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.mBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.MountRefiningSoul.mback.back,asset.MountRefiningSoul.mback.trainImage,asset.MountRefiningSoul.mback.inputBack,asset.MountRefiningSoul.mback.soulItemImage"
+      imageRectString="0|666|0|509|13,91|147|432|17|13,246|73|428|26|13,345|203|432|19|13"
+      x="37"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.refiningSoulBtn"
+      backStyle="asset.MountRefiningSoul.refiningSoulBtn.soulBtnBg"
+      iconStyle="asset.MountRefiningSoul.refiningSoulBtn.icon"
+      iconInnerRectString="42,63,11,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="298"
+      y="526" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="674"
+      height="518"
+      x="34"
+      y="63" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.itemImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MountRefiningSoul.resource.itemImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,0,7,4,6"
+      isFollowMouse="false"
+      tipGapV="0"
+      tipGapH="0"
+      x="589"
+      y="499" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.skillImage"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.MountRefiningSoul.resource.skillImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4,6"
+      isFollowMouse="false"
+      tipGapV="0"
+      tipGapH="0"
+      x="331"
+      y="232" />
+    <component
+      stylename="mountrefiningsoul.MountRefiningSoulFrame"
+      classname="mounts.MountRefiningSoulFrame"
+      parentStyle="core.Frame1"
+      containerX="-20"
+      containerY="0"
+      escEnable="false"
+      width="707"
+      height="625" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.inputText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.inputText_t"
+      type="input"
+      restrict="0-9"
+      width="69"
+      height="23"
+      x="284"
+      y="497" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.itemCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.itemCountText_t"
+      type="dynamic"
+      width="123"
+      height="23"
+      x="615"
+      y="497" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.strengthText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.strengthText_t"
+      type="dynamic"
+      width="69"
+      height="23"
+      x="158"
+      y="231" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.abilityText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.abilityText_t"
+      type="dynamic"
+      width="69"
+      height="28"
+      x="486"
+      y="230" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.ArmorText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.ArmorText_t"
+      type="dynamic"
+      width="69"
+      height="23"
+      x="565"
+      y="419" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.physiqueText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.physiqueText_t"
+      type="dynamic"
+      width="69"
+      height="23"
+      x="104"
+      y="418" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.skillGradeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.skillGradeText_t"
+      type="dynamic"
+      width="70"
+      height="25"
+      x="335"
+      y="315" />
+    <component
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.skillNameText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoul.MountRefiningSoulFrame.abilityText_t"
+      type="dynamic"
+      width="220"
+      height="23"
+      x="263"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="mount.refiningSouleBtn"
+      backStyle="asset.core.offerQuickBtn"
+      iconStyle="asset.mount.refiningSouleBtnText"
+      iconInnerRectString="11,74,10,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="520"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="MountRefiningSoulItem.headImage"
+      resourceLink="asset.MountRefiningSoulItem.headImage01,asset.MountRefiningSoulItem.headImage02,asset.MountRefiningSoulItem.headImage03,asset.MountRefiningSoulItem.headImage04"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="2,7,5,4,6"
+      isFollowMouse="false"
+      tipGapV="0"
+      tipGapH="0"
+      x="0"
+      y="0" />
+    <component
+      stylename="MountRefiningSoulItem.percentText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="MountRefiningSoulItem.percentText_t"
+      type="dynamic"
+      width="60"
+      height="20"
+      x="25"
+      y="98" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="MountRefiningSoul.MountRefiningSoulFrame.expBar"
+      backgroundLink="asset.MountRefiningSoulFrame.expBarBg"
+      barLink="asset.MountRefiningSoulFrame.expBarColor"
+      textStyle="MountRefiningSoulFrame.expBar.text"
+      barMargin="24,9,24,10"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="128"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="MountRefiningSoulFrame.expBar.text"
+      textFormatStyle="MountRefiningSoulItem.percentText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="mount.flyMountBtn"
+      backStyle="asset.mount.flyMountBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="15"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="mount.notFlyMountBtn"
+      backStyle="asset.mount.notFlyMountBtn"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="15"
+      y="45" />
+  </components>
+</style>

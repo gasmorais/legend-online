@@ -1,0 +1,2866 @@
+{
+ "description": "Mapa do mundo do cliente Legend Online BR: cenas, transições, mundos interligados, dungeons/salas. Ver docs/WORLD.md. Referências relativas a decompiled/.",
+ "generated_from": "docs/WORLD.md (sessão de mapeamento); carregado por tools/db/load_world.py",
+ "scenes": [
+  {
+   "scene_type": "EMPTY_SCENE",
+   "name_pt": "Cena vazia (transição forçada)",
+   "class_name": "yishi.scene.EmptyScene",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/yishi/scene/EmptyScene.as:87",
+   "project_png": null,
+   "ui_resources": [],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:123-124",
+   "entities": "nenhuma",
+   "enter_summary": "SceneManager.forceSetScene: setScene(mesma cena, force=true) passa por EMPTY_SCENE e reentra (recarrega campanha/espaço).",
+   "exit_summary": "emptyScene() chama setScene(_tempType) logo em seguida (SceneManager.as:226-244)."
+  },
+  {
+   "scene_type": "CASTLE_SCENE",
+   "name_pt": "Castelo (cidade interna)",
+   "class_name": "castle.CastleSceneView",
+   "class_module": "m4",
+   "class_source_ref": "m4/scripts/castle/CastleSceneView.as:389-391",
+   "project_png": "4.png",
+   "ui_resources": [
+    "castlemap1",
+    "core",
+    "common",
+    "castle",
+    "queuebar",
+    "flytocastle?newbieProcess==19000"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:298-308",
+   "scene_type_id": 1,
+   "client_state": 0,
+   "enter_castle_flag": true,
+   "is_hub": true,
+   "map_rule": "sem MapInfos: fundo castle.InnerCityBg1 (castlemap1); limites = tamanho da imagem",
+   "layers": [
+    "CastleBackgroundLayer",
+    "CastleAnimalLayer",
+    "CastleWalkLayer (prédios + NPCs + herói)",
+    "CastleAirlayer",
+    "FogBorderLayer (névoa 88 px)",
+    "CastleNameLayer (nomes, fora do mapa)"
+   ],
+   "entities": "prédios de BuildingTempInfos (CastleBuildingView: SonType 901 Prefeitura, 402 Quartel, 501 Santuário, 1507 Labirinto, 1509 Residência/fazenda, 1511 Transmissor, 1601 Bar, 1701 Laboratório, 1801 Mina); atalhos que levam ao Reino do Céu (1503→nó 6 Coliseu/Glória, 1502→nó 2 Portal dos Heróis, 1510→nó 1 Recompensas, 1506→nó 8); 8 NPCs andantes (CastleNPCView)",
+   "requirements": "botão do minimapa habilitado com nível ≥ 11 (SmallMapBar.as:551); primeira entrada no fim do tutorial (newbieProcess 19000 toca flytocastle)",
+   "enter_summary": "setScene(\"CASTLE_SCENE\") → envia 8747 C_ENTER_CASTLE(param7=true) + 5035 state 0. Gatilhos: login sem estado especial (BaseManager.__loginStateHandler), botão Castelo do minimapa, returnScene quando spaceMapId=0/inCastle/nível<16.",
+   "exit_summary": "Botão Reino do Céu (enterToSpace → 8688 → 4595), Cidade externa (worldmap), prédios que abrem molduras ou goSpaceAndFind; desafio/coliseu (CHANLLENGE_ROOM_SCENE)."
+  },
+  {
+   "scene_type": "SPACE_SCENE",
+   "name_pt": "Reino do Céu (lobby/hub)",
+   "class_name": "map.space.SpaceSceneController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/map/space/SpaceSceneController.as:918-920",
+   "project_png": "3.png",
+   "ui_resources": [
+    "queuebar",
+    "map",
+    "campaign"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:433-437",
+   "scene_type_id": 10,
+   "enter_castle_flag": false,
+   "map_ids": [
+    10000
+   ],
+   "is_hub": true,
+   "map_rule": "sempre 10000 (Reino do Céu, MapInfos.Type 5, 9000×6000 px, MapFileId 10000); BaseManager força RoomPlayerMsg.campaignId=10000 em 4595",
+   "layers": [
+    "BgLayer (tiles 300 px de mapmaterial/land/10000)",
+    "_footLayer (pegadas)",
+    "SpaceBuildingLayer (Resource=2: mapmaterial/build/<SonType>.swf)",
+    "SpaceWalkLayer (exércitos/jogadores + SpaceNpcLayer + SpaceApexLayer)",
+    "_topLayer",
+    "MapNameLayer (Stage3D)"
+   ],
+   "entities": "58 nós de MapNodeInfos (game.map_nodes): 36 NPCs de diálogo (61), portal nó 5 'Ilha dos Einherjars, Transmissor' (171 → mapa 20001 nó 2000101), nascimento nó 14 (40), 20 Pilhas de Presentes (300); outros jogadores (RoomPlayerMsg) e 19 robôs (SpaceTemplateManager)",
+   "requirements": "botão habilitado com nível ≥ 16 (SmallMapBar.as:553); SwitchPageHelp.returnScene só devolve SPACE_SCENE com spaceMapId≠0, !inCastle e nível ≥ 16 (SwitchPageHelp.as:1955-1970)",
+   "enter_summary": "SwitchPageHelp.enterToSpace → 8688 C_PLAYER_SPACE_ENTER(PropertyMsg.param1=10000) → servidor 4595 U_C_PLAYER_SPACE_CREATE (RoomEnterMsg) → BaseManager.__createSpaceHandler → SpaceManager.setup(10000) → setScene(\"SPACE_SCENE\",{isShowLoading:false},force) se isEnterSpaceNow(). Retorno de campanha/batalha: 4606 U_C_PLAYER_RETURN_TO_SPACE ou returnToSpace().",
+   "exit_summary": "Diálogos de NPC abrem molduras/salas (opção 2 = lista de salas PvE); portal nó 5 → Ilha de Einherjar (campanha 20000); botão Castelo; criação de campanha (125) troca para CAMPAIGN_MAP_SCENE; sala (12) para PVE/PVP_ROOM_SCENE."
+  },
+  {
+   "scene_type": "OUTER_CITY_SCENE",
+   "name_pt": "Cidade externa (mundos 1-5)",
+   "class_name": "map.outercity.OuterCityController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/map/outercity/OuterCityController.as:576-578",
+   "project_png": "3.png",
+   "ui_resources": [
+    "map",
+    "outercity",
+    "maphorse",
+    "tips",
+    "framebg"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:441-447",
+   "scene_type_id": 2,
+   "client_state": 3,
+   "map_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    100
+   ],
+   "map_rule": "MapInitData.mapTempInfo.Id; sem parâmetro (ou Id 100) usa o mundo do castelo do jogador: PlayerManager.currentPlayerModel.mapNodeInfo.info.mapId, vindo de BaseCastleMsg em 4153 U_C_LOAD_CASTLE e atualizado por 105 (OuterCityController.as:150-161)",
+   "layers": [
+    "fundo: MapBackgroundView3D (tiles 512 px mapmaterial/land/<mapId>/tile_<x>_<y>.jpg | .png.atf Stage3D, 20×20) ou MapRenderLayer (<5000 px, mapa 100)",
+    "OuterCityMainBuidingLayer (castelos 201/202, terras 20/22, filmes 201)",
+    "OuterCityNpcLayer (terras tipo 21)",
+    "WorldWalkLayer (exércitos, A*)",
+    "OuterCityBorderLayer (borda 150 px)",
+    "OuterCityDenseFogLayer (névoa 0.8 com furos)",
+    "OuterCityCloudView (Id≠100)",
+    "baús do chefe, info do chefe, arqueologia"
+   ],
+   "entities": "castelos BaseCastle (sonType 100 vazio, 201 normal, 202 VIP; menu entrar/mover castelo/atacar), terras selvagens WildLand (20 campo/mina, 21 monstro, 22 tesouro), exércitos UserArmy, chefe do mapa e baús (4938-4940), nós de arqueologia (297)",
+   "requirements": "nível ≥ 13 (SwitchPageHelp.gotoOuterCity:725) — botão do minimapa abre o mapa-múndi com nível ≥ 15; não pode estar em CAMPAIGN_MAP_SCENE nem em varredura",
+   "enter_summary": "setScene(\"OUTER_CITY_SCENE\") (5035 state 3) por MainToolBar.__gotoOuterCityHandler, tecla Q, gotoOuterCity, relatórios, 105 (castelo movido) e fim de batalha battleType 1-5/3841; depois 5004 U_C_USER_DISPLAY / 5181 / 8201 pedem os chunks visíveis. Não há opcode de entrar/sair.",
+   "exit_summary": "BTN_ENTER do próprio castelo ou tecla Q → CASTLE_SCENE; botões do minimapa; mapa-múndi → 5176 (mover castelo) → 105 → recarrega OUTER_CITY_SCENE no novo mundo."
+  },
+  {
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "name_pt": "Mapa de campanha/instância",
+   "class_name": "map.campaign.CampaignMapController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/map/campaign/CampaignMapController.as:598-600",
+   "project_png": "3.png",
+   "ui_resources": [
+    "map",
+    "campaign?!novice",
+    "maze?nível≥12",
+    "pvpmap?pvp/4101/5401",
+    "svsmap?5401",
+    "molong?9996/4202",
+    "quiz?5101",
+    "monopoly?5201/7701/4101",
+    "farmmap+farm+water?5601-5605",
+    "groupfbmovie?2291-2294",
+    "duskarea?4901/4701/4101",
+    "worldboss?5000-5100",
+    "vehicle+snowball+steelmap?veículo ativo",
+    "vehicle+steelmap+unrealshooting?5703",
+    "airgarden?7000",
+    "thessbox?40101-43000"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:309-386",
+   "scene_type_id": 3,
+   "client_state": 4,
+   "map_rule": "CampaignManager.instance.mapModel.mapId = RoomCreatedMsg.room.campaignId (125); qualquer MapInfos Type 1 (1105 mapas) + atividades",
+   "layers": [
+    "BgLayer (tiles 300 px) | MapRenderLayer (≤5000 px, bitmap único) | OuterCityStaticLayer (>5000 px, blocos 1000 px)",
+    "_footLayer",
+    "_farmLayer",
+    "CampaignMainBuidingLayer (nós Resource≠1: prédios/monstros estáticos)",
+    "CampaignWalkLayer (exércitos + NpcLayer)",
+    "_skillLayer",
+    "_effectLayer",
+    "_topUILayer",
+    "FogView (névoa hexagonal, mapas checkFogMap)"
+   ],
+   "entities": "nós CampaignNodeMsg (127 U_C_CAMPAIGN_NODE, 4264 add, 128 update): 40 início, 41 fim/chefe, 42 monstro, 61 NPC, 62/63/171 portais, 91 coleta, 92 baú…; exércitos dos jogadores (RoomPlayerMsg em 21)",
+   "requirements": "campanha solo: nível ≥ Campaigns.MinLevel (gotoCampaignById); equipe (Capacity>1): nível ≥ 20; tutorial: newbieProcess < 19000 → 10002",
+   "enter_summary": "servidor 125 U_C_CAMPAIGN_CREATE (RoomCreatedMsg{created_type 1 criar/2 entrar/3 transferir/4 convite, room, is_cross}) → BaseManager.__createCampaignHandler → CampaignManager.setup(campaignId) → setScene(\"CAMPAIGN_MAP_SCENE\",…,force=true); depois 21 U_C_CAMPAIGN_ENTER (RoomEnterMsg) e 127 nós.",
+   "exit_summary": "botão Voltar → 5025 U_C_CAMPAIGN_ROOM_EXIT (RoomExitMsg) ou 5120; servidor 22 U_C_CAMPAIGN_EXIT (CampaignExitMsg) → exitBack → returnToSpace/GameHall; portal → novo 125 (created_type 3); batalha → BATTLE_SCENE."
+  },
+  {
+   "scene_type": "SINGLE_CAMPAIGN_MAP_SCENE",
+   "name_pt": "Campanha solo (constante sem classe)",
+   "class_name": null,
+   "class_module": null,
+   "class_source_ref": null,
+   "project_png": null,
+   "ui_resources": [],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as:18",
+   "is_dead_code": true,
+   "enter_summary": "nenhum setScene usa a constante; a campanha solo de trilha é CAMPAIGN_MAP_SCENE com SingleCampaignMapView (WorldBossHelper.checkPve)."
+  },
+  {
+   "scene_type": "BATTLE_SCENE",
+   "name_pt": "Batalha",
+   "class_name": "battle.BattleSceneView",
+   "class_module": "m10",
+   "class_source_ref": "m10/scripts/battle/BattleSceneView.as:185-187",
+   "project_png": "10.png",
+   "ui_resources": [
+    "qte?!novice"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:387-392",
+   "scene_type_id": 4,
+   "client_state": 5,
+   "map_rule": "cenário sceneIma/<BattleGround>/map<BattleGround>.swf do mapa onde a luta começou",
+   "enter_summary": "157 U_B_PREPARE → CreateGameTransaction → EnterBattleController.switchToBattle → setScene(\"BATTLE_SCENE\",{isShowLoading:false}) (core_module/scripts/battle/control/EnterBattleController.as:234); transição EnterBattleSceneSwitchAnimation.",
+   "exit_summary": "BattleResultHandler.exitBattle escolhe a cena por battleType (BattleResultHandler.as:93-551): preScene (CAMPAIGN/SPACE/CASTLE), OUTER_CITY (1-5, 3841), CHANLLENGE (16), SKYBOX (293), INCREASINGLY (3893), DARK_MAZE (3898), SANDBOX (3876), PLANE_CRISRIS (3877), STARAREA (3892), THESE_PVP (3907), THESE_Double (3912), SECRET_WAR (3908), CHILD_NS_WAR (3911)…"
+  },
+  {
+   "scene_type": "TRAINER_SCENE",
+   "name_pt": "Treino de novato (legado)",
+   "class_name": null,
+   "class_module": null,
+   "class_source_ref": null,
+   "project_png": null,
+   "ui_resources": [
+    "novice"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:393-395",
+   "is_dead_code": true,
+   "enter_summary": "sem classe em getClassByType/create (create devolve null); o tutorial usa CAMPAIGN_MAP_SCENE no mapa 10002."
+  },
+  {
+   "scene_type": "PVE_ROOM_SCENE",
+   "name_pt": "Sala PvE (Portal dos Heróis)",
+   "class_name": "mvc.controler.RoomControl",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/RoomControl.as:127-129",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "room"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:396-399",
+   "scene_type_id": 5,
+   "client_state": 2,
+   "is_room": true,
+   "enter_summary": "12 U_C_CAMPAIGN_ROOM_CREATE (RoomMsg.room_type 0) → BaseManager.__createRoomHandler → setScene(\"PVE_ROOM_SCENE\").",
+   "exit_summary": "sair da sala → returnToSpace({isOpenPveRoomList:true}) (RoomControl.as:40-48); início → 125 → CAMPAIGN_MAP_SCENE."
+  },
+  {
+   "scene_type": "PVP_ROOM_SCENE",
+   "name_pt": "Sala PvP",
+   "class_name": "mvc.controler.PvpRoomControl",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/PvpRoomControl.as:112-114",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "pvproomlist",
+    "roompvp"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:400-404",
+   "scene_type_id": 6,
+   "client_state": 6,
+   "is_room": true,
+   "enter_summary": "12 U_C_CAMPAIGN_ROOM_CREATE (room_type 1) → setScene(\"PVP_ROOM_SCENE\").",
+   "exit_summary": "returnToSpace({isOpenPvpRoomList:true}) (PvpRoomControl.as:39); partida → BATTLE_SCENE."
+  },
+  {
+   "scene_type": "FARM",
+   "name_pt": "Fazenda (cena legada)",
+   "class_name": "farm.FarmSceneView",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/farm/FarmSceneView.as:49-51",
+   "project_png": "7.png",
+   "ui_resources": [
+    "farmmap",
+    "farm",
+    "water"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:405-409",
+   "scene_type_id": 7,
+   "enter_castle_flag": true,
+   "is_dead_code": true,
+   "layers": [
+    "FarmMapView",
+    "friendListView",
+    "farmInfoView",
+    "farmToolbar",
+    "farmResourcesView"
+   ],
+   "enter_summary": "nenhum setScene(\"FARM\") no cliente BR; a fazenda/casa atual é CAMPAIGN_MAP_SCENE nos mapas 5501-5505 (checkInHome) e 5601-5605 (checkInHouse), entrada por 8873 C_HOME_OP (ChildrenOpMsg opType 1002/1003; home/HomeSender.as:114-130).",
+   "exit_summary": "MainToolBar.__returnClickHandler: case FARM → enterToSpace/returnToSpace (MainToolBar.as:1609-1618)."
+  },
+  {
+   "scene_type": "WARLORDS_ROOM",
+   "name_pt": "Sala Warlords (constante sem classe)",
+   "class_name": null,
+   "class_module": null,
+   "class_source_ref": null,
+   "project_png": null,
+   "ui_resources": [],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as:28",
+   "is_dead_code": true
+  },
+  {
+   "scene_type": "MULTILORDS_ROOM",
+   "name_pt": "Sala Multi-Senhores",
+   "class_name": "mvc.controler.MultilordsRoomController",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/MultilordsRoomController.as:88-90",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "warlordsroom",
+    "multilordsroom"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:416-420",
+   "scene_type_id": 13,
+   "is_room": true,
+   "enter_summary": "12 (room_type 5) → setScene(\"MULTILORDS_ROOM\"); criação 8849 C_MUTIL_LORDS_ROOMCREATE.",
+   "exit_summary": "returnToSpace({isOpenPveRoomList:true}) (MultilordsRoomController.as:38)."
+  },
+  {
+   "scene_type": "MATELORDS_ROOM",
+   "name_pt": "Sala Mate Lords",
+   "class_name": "mvc.controler.MatelordsRoomController",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/MatelordsRoomController.as:93-95",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "warlordsroom",
+    "matelordsroom"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:428-432",
+   "is_room": true,
+   "enter_summary": "12 (room_type 8) → setScene(\"MATELORDS_ROOM\"); criação 8976 C_MATE_LORDS_ROOM_CREATE.",
+   "exit_summary": "returnToSpace({isOpenPveRoomList:true}) (MatelordsRoomController.as:39)."
+  },
+  {
+   "scene_type": "VEHICLE",
+   "name_pt": "Corrida de veículos",
+   "class_name": "com.map.vehicle.VehicleSceneController",
+   "class_module": "m17",
+   "class_source_ref": "m17/scripts/com/map/vehicle/VehicleSceneController.as:52-54",
+   "project_png": "17.png",
+   "ui_resources": [
+    "map",
+    "vehicle",
+    "vehicleroomlist",
+    "campaign"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:410-415",
+   "scene_type_id": 8,
+   "map_ids": [
+    3001
+   ],
+   "enter_summary": "125 com room.campaignId 3001 → BaseManager.createVehicle → setScene(\"VEHICLE\",…,force) (BaseManager.as:2544-2548, 2621-2634).",
+   "exit_summary": "fim da corrida → returnScene."
+  },
+  {
+   "scene_type": "VEHICLE_ROOM_SCENE",
+   "name_pt": "Sala de veículos (constante sem classe)",
+   "class_name": null,
+   "class_module": null,
+   "class_source_ref": null,
+   "project_png": null,
+   "ui_resources": [],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as:36",
+   "is_dead_code": true,
+   "enter_summary": "room_type 2 abre a moldura vehicleroomlist em vez de uma cena (BaseManager.as:2662-2665)."
+  },
+  {
+   "scene_type": "CHANLLENGE_ROOM_SCENE",
+   "name_pt": "Coliseu (desafio)",
+   "class_name": "colosseum.ChallengeSceneControl",
+   "class_module": "m13",
+   "class_source_ref": "m13/scripts/colosseum/ChallengeSceneControl.as:31-33",
+   "project_png": "13.png",
+   "ui_resources": [
+    "colosseum"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:438-440",
+   "scene_type_id": 11,
+   "enter_summary": "SwitchPageHelp.gotoColosseumFrame / preSceneData.isOpenColosseum → setScene(\"CHANLLENGE_ROOM_SCENE\"); ChallengeManager.enterScene guarda a origem.",
+   "exit_summary": "Voltar → CASTLE_SCENE se enterScene era o castelo, senão enterToSpace (MainToolBar.as:1639-1649)."
+  },
+  {
+   "scene_type": "PLANES_WAR_SCENE",
+   "name_pt": "Guerra dos Planos",
+   "class_name": "planeswar.PlanesWarSceneView",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/planeswar/PlanesWarSceneView.as:54-56",
+   "project_png": "3.png",
+   "ui_resources": [
+    "map",
+    "planes"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:448-451",
+   "scene_type_id": 20,
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1619-1623); batalha 3843 volta para PLANES_WAR ou CASTLE."
+  },
+  {
+   "scene_type": "SKYBOX_ROAD_SCENE",
+   "name_pt": "Estrada da Caixa Celeste",
+   "class_name": "skyboxroad.SkyBoxRoadFrame",
+   "class_module": "m11",
+   "class_source_ref": "m11/scripts/skyboxroad/SkyBoxRoadFrame.as:236-238",
+   "project_png": "11.png",
+   "ui_resources": [
+    "skyboxroad"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:452-454",
+   "exit_summary": "Voltar → enterToSpace (MainToolBar.as:1650-1654); batalha 293 volta para a cena."
+  },
+  {
+   "scene_type": "FINAL_DEFENSE_SCENE",
+   "name_pt": "Defesa Final",
+   "class_name": "finaldefense.FinalDefenseScene",
+   "class_module": "m11",
+   "class_source_ref": "m11/scripts/finaldefense/FinalDefenseScene.as:79-81",
+   "project_png": null,
+   "ui_resources": [
+    "finaldefense"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:455-457",
+   "exit_summary": "Voltar → enterToSpace (MainToolBar.as:1655-1657)."
+  },
+  {
+   "scene_type": "ARESLORDS_ROOM",
+   "name_pt": "Sala Ares Lords",
+   "class_name": "mvc.controler.AresLordsRoomController",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/AresLordsRoomController.as:93-95",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "warlordsroom",
+    "areslordsroom"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:458-462",
+   "is_room": true,
+   "enter_summary": "12 (room_type 9) → setScene(\"ARESLORDS_ROOM\").",
+   "exit_summary": "returnToSpace({isOpenPveRoomList:true}) (AresLordsRoomController.as:39)."
+  },
+  {
+   "scene_type": "UNREAL_SHOOTING_ROOM",
+   "name_pt": "Sala da Caça Fantástica",
+   "class_name": "mvc.controler.UnrealShootingRoomController",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/UnrealShootingRoomController.as:28-30",
+   "project_png": "9.png",
+   "ui_resources": [
+    "map",
+    "baseroom",
+    "warlordsroom",
+    "unrealshootingroom",
+    "vehicle"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:463-469",
+   "scene_type_id": 23,
+   "is_room": true,
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1710-1714); o jogo ocorre em CAMPAIGN_MAP_SCENE mapa 5703."
+  },
+  {
+   "scene_type": "SANDBOX_SCENE",
+   "name_pt": "Matança de Madrugada (Luz do Dia)",
+   "class_name": "sandbox.SandboxSceneController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/sandbox/SandboxSceneController.as:106-108",
+   "project_png": "3.png",
+   "ui_resources": [
+    "queuebar",
+    "map",
+    "campaign",
+    "daylight?isDayLight"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:470-478",
+   "scene_type_id": 25,
+   "enter_summary": "login com LoginStateMsg.state 6 (SandboxManager.loginToSandboxFlag) ou entrada pelo evento.",
+   "exit_summary": "returnToSpace (SandboxSceneController.as:62); batalha 3876 volta para SANDBOX ou SPACE."
+  },
+  {
+   "scene_type": "PLANE_CRISRIS",
+   "name_pt": "Crise dos Planos",
+   "class_name": "crisis.PlaneCrisisSecenView",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/crisis/PlaneCrisisSecenView.as:54-56",
+   "project_png": "3.png",
+   "ui_resources": [
+    "map",
+    "planecrisis"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:479-482",
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1663-1667); batalha 3877 → PLANE_CRISRIS, GAME_HALL ou SPACE."
+  },
+  {
+   "scene_type": "GAME_HALL_SCENE",
+   "name_pt": "Salão do Jogo",
+   "class_name": "gamehall.GameHallSceneController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/gamehall/GameHallSceneController.as:141-143",
+   "project_png": "3.png",
+   "ui_resources": [
+    "map",
+    "gamehall"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:483-486",
+   "scene_type_id": 26,
+   "enter_summary": "NPC 44 Angelina (opção 135) / preSceneData.isOpenGameHall → setScene(\"GAME_HALL_SCENE\"); login com state 7.",
+   "exit_summary": "returnToSpace({isOpenGameHall:true}) (GameHallSceneController.as:46)."
+  },
+  {
+   "scene_type": "APEX_ROOM",
+   "name_pt": "Sala da Liga do Pico (Apex)",
+   "class_name": "mvc.controler.ApexRoomController",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/ApexRoomController.as:93-95",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "apexroom"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:487-490",
+   "is_room": true,
+   "enter_summary": "12 (room_type 14) → setScene(\"APEX_ROOM\").",
+   "exit_summary": "returnToSpace({isOpenPveRoomList:true}) (ApexRoomController.as:39)."
+  },
+  {
+   "scene_type": "CROSS_GUILD_SCENE",
+   "name_pt": "Guerra de Guildas Inter-Servidor",
+   "class_name": "consortia.view.crossguild.CrossGuildWarSceneView",
+   "class_module": "m6",
+   "class_source_ref": "m6/scripts/consortia/view/crossguild/CrossGuildWarSceneView.as:44-46",
+   "project_png": "6.png",
+   "ui_resources": [
+    "map",
+    "crossguild"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:491-494",
+   "exit_summary": "setScene(SwitchPageHelp.returnScene) (CrossGuildWarSceneView.as:80); batalha 296 volta para a cena."
+  },
+  {
+   "scene_type": "STARAREA_SCENE",
+   "name_pt": "Exploração Espaço-Tempo",
+   "class_name": "stararea.StarareaController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/stararea/StarareaController.as:42-44",
+   "project_png": "3.png",
+   "ui_resources": [
+    "stararea",
+    "map"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:495-498",
+   "scene_type_id": 27,
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1720-1724); batalha 3892 → STARAREA ou SPACE."
+  },
+  {
+   "scene_type": "GLORY_GAME_SCENE",
+   "name_pt": "Jogo da Glória (sala)",
+   "class_name": "mvc.controler.GloryGameRoomController",
+   "class_module": "core_module",
+   "class_source_ref": "core_module/scripts/mvc/controler/GloryGameRoomController.as:93-95",
+   "project_png": "9.png",
+   "ui_resources": [
+    "baseroom",
+    "glorygameroom"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:499-502",
+   "is_room": true,
+   "enter_summary": "12 (room_type 15) → setScene(\"GLORY_GAME_SCENE\").",
+   "exit_summary": "returnToSpace({isOpenPveRoomList:true}) (GloryGameRoomController.as:39)."
+  },
+  {
+   "scene_type": "INCREASINGLY_ROAD_SCENE",
+   "name_pt": "Estrada Progressiva",
+   "class_name": "increasinglyroad.IncreasinglyRoadFrame",
+   "class_module": "m11",
+   "class_source_ref": "m11/scripts/increasinglyroad/IncreasinglyRoadFrame.as:441-443",
+   "project_png": "11.png",
+   "ui_resources": [
+    "increasinglyroad"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:503-505",
+   "exit_summary": "Voltar → enterToSpace (MainToolBar.as:1678-1680)."
+  },
+  {
+   "scene_type": "SELF_CHESS_SCENE",
+   "name_pt": "Auto-xadrez (Supremacia do Legend)",
+   "class_name": "chess.SelfChessSceneController",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/chess/SelfChessSceneController.as:41-43",
+   "project_png": "3.png",
+   "ui_resources": [
+    "selfchess"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:506-508",
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1685-1689)."
+  },
+  {
+   "scene_type": "DARK_MAZE_SCENE",
+   "name_pt": "Labirinto Negro",
+   "class_name": "darkmaze.DarkMazeMainFrame",
+   "class_module": "m11",
+   "class_source_ref": "m11/scripts/darkmaze/DarkMazeMainFrame.as:390-392",
+   "project_png": "11.png",
+   "ui_resources": [
+    "darkmaze"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:509-511",
+   "entities": "22 nós fixos",
+   "exit_summary": "Voltar → darkMazeOperation(7) + enterToSpace (MainToolBar.as:1681-1684)."
+  },
+  {
+   "scene_type": "SECRET_ADVENTURE_SCENE",
+   "name_pt": "Expedição do Eremitério",
+   "class_name": "secretadventure.SecretAdventureScene",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/secretadventure/SecretAdventureScene.as:46-48",
+   "project_png": "3.png",
+   "ui_resources": [
+    "map",
+    "secretadventure"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:512-515",
+   "scene_type_id": 28,
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1690-1694); batalha 3904."
+  },
+  {
+   "scene_type": "THESE_PVP_SCENE",
+   "name_pt": "Arena de Teseu (1v1)",
+   "class_name": "theseuspvpscene.TheseusPvpScene",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/theseuspvpscene/TheseusPvpScene.as:65-67",
+   "project_png": "3.png",
+   "ui_resources": [
+    "theseuspvp"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:516-518",
+   "scene_type_id": 29,
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1695-1699); batalha 3907 volta para a cena."
+  },
+  {
+   "scene_type": "THESE_Double_PVP_SCENE",
+   "name_pt": "Arena Multiplayer de Teseu (dupla)",
+   "class_name": "theseusDoublepvpscene.TheseusDoublePvpScene",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/theseusDoublepvpscene/TheseusDoublePvpScene.as:125-127",
+   "project_png": "3.png",
+   "ui_resources": [
+    "baseroom",
+    "roompvp",
+    "theseuspvp",
+    "christmas",
+    "campaign"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:421-427",
+   "scene_type_id": 32,
+   "is_room": true,
+   "enter_summary": "12 (room_type 16) → setScene(\"THESE_Double_PVP_SCENE\").",
+   "exit_summary": "returnToSpace({isOpenPveRoomList:true}) (TheseusDoublePvpScene.as:44); batalha 3912."
+  },
+  {
+   "scene_type": "SECRET_WAR_SCENE",
+   "name_pt": "Guerra Secreta 2023",
+   "class_name": "war2023.view.SecretWarSecen",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/war2023/view/SecretWarSecen.as:47-49",
+   "project_png": "3.png",
+   "ui_resources": [
+    "secretwar"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:519-521",
+   "scene_type_id": 30,
+   "entities": "17 nós fixos + ligações",
+   "enter_summary": "login com state 8 (SecretWarManager.loginToSecretWarFlag) ou entrada pelo evento.",
+   "exit_summary": "batalha 3908: volta à cena se a guerra não acabou."
+  },
+  {
+   "scene_type": "CHILD_NS_WAR_SCENE",
+   "name_pt": "Arena do Espírito de Proteção",
+   "class_name": "childnswar.ChildNswarScene",
+   "class_module": "m3",
+   "class_source_ref": "m3/scripts/childnswar/ChildNswarScene.as:66-68",
+   "project_png": "3.png",
+   "ui_resources": [
+    "theseuspvp",
+    "childnswar"
+   ],
+   "source_ref": "core_module/scripts/yishi/scene/SceneType.as; core_module/scripts/yishi/scene/SceneCreate.as:522-525",
+   "scene_type_id": 31,
+   "exit_summary": "Voltar com confirmação (MainToolBar.as:1705-1709); batalha 3911."
+  }
+ ],
+ "scene_transitions": [
+  {
+   "from_scene": null,
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "login: LoginStateMsg (6) sem estado especial",
+   "opcode": 6,
+   "opcode_name": "U_C_PLAYER_LOGINSTATEE",
+   "opcode_direction": "accept",
+   "proto_message": "LoginStateMsg",
+   "condition_pt": "newbieProcess ≥ 19000 e (nível ≤ 16, ou nível > 16 com newbieProcess < 36000 → grava 36000)",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1904-1960"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "login de novato: envia treino; servidor cria a campanha 10002 (Monte do Dragão Divino)",
+   "opcode": 5127,
+   "opcode_name": "U_C_CAMPAIGN_TRAINING",
+   "opcode_direction": "send",
+   "proto_message": "NoviceReqMsgMsg",
+   "condition_pt": "newbieProcess < 19000 (type=1); com < 15000 o loader já pré-carrega o mapa 10002",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1941-1947; core_module/scripts/yishi/lunch/StartupResourcesLoader.as:209-228"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "login dentro de instância (LoginStateMsg.state 4): a campanha é recriada por 125",
+   "opcode": 6,
+   "opcode_name": "U_C_PLAYER_LOGINSTATEE",
+   "opcode_direction": "accept",
+   "proto_message": "LoginStateMsg",
+   "condition_pt": "state = 4",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1920-1924"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "BATTLE_SCENE",
+   "trigger_pt": "login dentro de batalha (state 5 → BattleManager.loginToBattleFlag)",
+   "opcode": 6,
+   "opcode_name": "U_C_PLAYER_LOGINSTATEE",
+   "opcode_direction": "accept",
+   "proto_message": "LoginStateMsg",
+   "condition_pt": "state = 5",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1925-1928"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "SANDBOX_SCENE",
+   "trigger_pt": "login na Matança de Madrugada (state 6)",
+   "opcode": 6,
+   "opcode_name": "U_C_PLAYER_LOGINSTATEE",
+   "opcode_direction": "accept",
+   "proto_message": "LoginStateMsg",
+   "condition_pt": "state = 6",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1929-1932"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "GAME_HALL_SCENE",
+   "trigger_pt": "login no Salão do Jogo (state 7)",
+   "opcode": 6,
+   "opcode_name": "U_C_PLAYER_LOGINSTATEE",
+   "opcode_direction": "accept",
+   "proto_message": "LoginStateMsg",
+   "condition_pt": "state = 7",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1933-1936"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "SECRET_WAR_SCENE",
+   "trigger_pt": "login na Guerra Secreta (state 8)",
+   "opcode": 6,
+   "opcode_name": "U_C_PLAYER_LOGINSTATEE",
+   "opcode_direction": "accept",
+   "proto_message": "LoginStateMsg",
+   "condition_pt": "state = 8",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1937-1939"
+  },
+  {
+   "from_scene": "CASTLE_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "botão Reino do Céu do minimapa (SwitchPageHelp.enterToSpace)",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple).param1=10000",
+   "condition_pt": "nível ≥ 16 (SmallMapBar.as:553)",
+   "source_ref": "core_module/scripts/mainBar/SmallMapBar.as:854-857; core_module/scripts/map/space/manager/SpaceSocketOutManager.as:48-54"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "servidor cria o espaço: BaseManager.__createSpaceHandler → setScene(SPACE_SCENE,{isShowLoading:false},force)",
+   "opcode": 4595,
+   "opcode_name": "U_C_PLAYER_SPACE_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomEnterMsg",
+   "condition_pt": "player[0] é o próprio jogador e SwitchPageHelp.isEnterSpaceNow() (fora de sala, batalha de login, castelo, sandbox, game hall, guerra secreta)",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:323,1345-1372"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "servidor devolve ao espaço (fim de campanha/atividade): __returnSpaceHandler",
+   "opcode": 4606,
+   "opcode_name": "U_C_PLAYER_RETURN_TO_SPACE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomEnterMsg",
+   "condition_pt": "cena atual ≠ SPACE e não é batalha battleType 16",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:324,1374-1402"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "botão Castelo do minimapa",
+   "opcode": 8747,
+   "opcode_name": "C_ENTER_CASTLE",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple).param7=true",
+   "condition_pt": "nível ≥ 11",
+   "source_ref": "core_module/scripts/mainBar/SmallMapBar.as:859-862; core_module/scripts/yishi/scene/SceneManager.as:169-173"
+  },
+  {
+   "from_scene": "CASTLE_SCENE",
+   "to_scene": "OUTER_CITY_SCENE",
+   "trigger_pt": "MainToolBar/tecla Q/guia diário → SwitchPageHelp.gotoOuterCity",
+   "opcode": 5035,
+   "opcode_name": "U_PLAYER_CLIENT_STATE",
+   "opcode_direction": "send",
+   "proto_message": "LoginStateMsg.state=3",
+   "condition_pt": "nível ≥ 13, sem varredura",
+   "source_ref": "core_module/scripts/yishi/SwitchPageHelp.as:721-744; core_module/scripts/yishi/keyboard/KeyBoardRegister.as:748"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "OUTER_CITY_SCENE",
+   "trigger_pt": "tecla Q / atalhos (gotoOuterCity)",
+   "opcode": 5035,
+   "opcode_name": "U_PLAYER_CLIENT_STATE",
+   "opcode_direction": "send",
+   "proto_message": "LoginStateMsg.state=3",
+   "condition_pt": "nível ≥ 13",
+   "source_ref": "core_module/scripts/yishi/SwitchPageHelp.as:721-744"
+  },
+  {
+   "from_scene": "OUTER_CITY_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "BTN_ENTER no próprio castelo ou tecla Q",
+   "opcode": 8747,
+   "opcode_name": "C_ENTER_CASTLE",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple).param7=true",
+   "condition_pt": null,
+   "source_ref": "m3/scripts/map/outercity/view/mapphysics/MapPhysicsCastle.as:92; core_module/scripts/yishi/keyboard/KeyBoardRegister.as:767"
+  },
+  {
+   "from_scene": "OUTER_CITY_SCENE",
+   "to_scene": "OUTER_CITY_SCENE",
+   "trigger_pt": "mapa-múndi: mover o castelo para outro mundo (1-5) → resposta 105 → TransferOuterCityAction recarrega a cena",
+   "opcode": 5176,
+   "opcode_name": "U_C_BUILDING_TRANSCASTLE",
+   "opcode_direction": "send",
+   "proto_message": "CastleReqMsg{mag_id, pos_x, pos_y, pay_type}",
+   "condition_pt": "energia do Transmissor (prédio -11) ≥ 200, senão pago; fora de campanha/sala; exército parado",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; core_module/scripts/yishi/manager/PlayerManager.as:1850-1872; core_module/scripts/yishi/actions/map/TransferOuterCityAction.as:164-172"
+  },
+  {
+   "from_scene": "OUTER_CITY_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "botão Reino do Céu (enterToSpace)",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": "nível ≥ 16",
+   "source_ref": "core_module/scripts/mainBar/SmallMapBar.as:854-857"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "servidor cria/entra na campanha (portal 8692, seleção de campanha, sala iniciada, convite): __createCampaignHandler",
+   "opcode": 125,
+   "opcode_name": "U_C_CAMPAIGN_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomCreatedMsg{created_type, room, is_cross, campignId}",
+   "condition_pt": "room.campaignId ≠ 3001 e !BattleManager.loginToBattleFlag; created_type 3 (transferência) sem tela de loading",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:297,2530-2619"
+  },
+  {
+   "from_scene": "CASTLE_SCENE",
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "idem a partir do castelo (descarta o espaço)",
+   "opcode": 125,
+   "opcode_name": "U_C_CAMPAIGN_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomCreatedMsg",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2539-2543,2617"
+  },
+  {
+   "from_scene": "PVE_ROOM_SCENE",
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "dono inicia a sala (5039) → servidor 125",
+   "opcode": 5039,
+   "opcode_name": "U_C_CAMPAIGN_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "CampaignReqMsg{para_int2=campaignId, para_bool1=isNoGet, isCross}",
+   "condition_pt": "campanha escolhida (5034); EnterNumb > 1 exige mais jogadores",
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:76-98; core_module/scripts/yishi/manager/BaseManager.as:2530-2619"
+  },
+  {
+   "from_scene": "CAMPAIGN_MAP_SCENE",
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "portal 62/171 ou nó de envio: chegar ao nó (5125) → servidor recria a campanha no novo mapa (125 created_type=3) via EMPTY_SCENE",
+   "opcode": 5125,
+   "opcode_name": "U_C_CAMPAIGN_ARRIVE",
+   "opcode_direction": "send",
+   "proto_message": "CampaignReqMsg{para_int1=campDataId, para_bool1}",
+   "condition_pt": null,
+   "source_ref": "m3/scripts/map/net/MapSocketOuterManager.as:55-62; m3/scripts/map/campaign/helper/hero/CampaignArmyViewHelper.as:121-186; core_module/scripts/yishi/scene/SceneManager.as:207-244"
+  },
+  {
+   "from_scene": "CAMPAIGN_MAP_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "sair da campanha: Voltar → 5025; servidor 22 U_C_CAMPAIGN_EXIT → exitBack → returnToSpace",
+   "opcode": 22,
+   "opcode_name": "U_C_CAMPAIGN_EXIT",
+   "opcode_direction": "accept",
+   "proto_message": "CampaignExitMsg{result, player_id, army_id, server_name}",
+   "condition_pt": "returnScene = SPACE se spaceMapId≠0, !inCastle e nível ≥ 16",
+   "source_ref": "core_module/scripts/map/campaign/CampaignSocketOutManager.as:68-90; m3/scripts/map/campaign/CampaignSocketManger.as:1937-2044"
+  },
+  {
+   "from_scene": "CAMPAIGN_MAP_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "idem, quando returnScene = CASTLE (nível < 16 / veio do castelo)",
+   "opcode": 22,
+   "opcode_name": "U_C_CAMPAIGN_EXIT",
+   "opcode_direction": "accept",
+   "proto_message": "CampaignExitMsg",
+   "condition_pt": "nível < 16 ou inCastle",
+   "source_ref": "core_module/scripts/yishi/SwitchPageHelp.as:1955-1979"
+  },
+  {
+   "from_scene": "CAMPAIGN_MAP_SCENE",
+   "to_scene": "GAME_HALL_SCENE",
+   "trigger_pt": "sair da campanha com equipe do Salão do Jogo",
+   "opcode": 22,
+   "opcode_name": "U_C_CAMPAIGN_EXIT",
+   "opcode_direction": "accept",
+   "proto_message": "CampaignExitMsg",
+   "condition_pt": "GameHallManager.model.selfTeam",
+   "source_ref": "m3/scripts/map/campaign/CampaignSocketManger.as:2036-2039"
+  },
+  {
+   "from_scene": "CAMPAIGN_MAP_SCENE",
+   "to_scene": "PVE_ROOM_SCENE",
+   "trigger_pt": "fim de campanha de sala (CampaignOverTransaction)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "sem equipe de game hall",
+   "source_ref": "core_module/scripts/map/internals/transaction/CampaignOverTransaction.as:40"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "VEHICLE",
+   "trigger_pt": "125 com campaignId 3001 → createVehicle",
+   "opcode": 125,
+   "opcode_name": "U_C_CAMPAIGN_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomCreatedMsg",
+   "condition_pt": "room.campaignId = 3001",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2544-2548,2621-2634"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "PVE_ROOM_SCENE",
+   "trigger_pt": "NPC Tina 'Portal dos Heróis' (opção 2) → lista de salas → criar 5023 / entrar 5024 → servidor 12",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg (room_type 0)",
+   "condition_pt": "nível ≥ 20",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:295,2636-2661"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "PVP_ROOM_SCENE",
+   "trigger_pt": "lista de salas PvP → 5023(3,1)/5024 → 12",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg (room_type 1)",
+   "condition_pt": "nível ≥ 22 (PVP_MUTI)",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2654-2657"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "MULTILORDS_ROOM",
+   "trigger_pt": "12 com room_type 5",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg",
+   "condition_pt": "nível ≥ 50",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2666-2669"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "MATELORDS_ROOM",
+   "trigger_pt": "12 com room_type 8 (após 8976 C_MATE_LORDS_ROOM_CREATE)",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg",
+   "condition_pt": "nível ≥ 36",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2670-2673"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "ARESLORDS_ROOM",
+   "trigger_pt": "12 com room_type 9 (após 9615 op 5)",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg",
+   "condition_pt": "nível ≥ 36, inscrito e evento aberto",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2674-2677"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "APEX_ROOM",
+   "trigger_pt": "12 com room_type 14 (após 5439 C_APEX_CLIENT_OP)",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg",
+   "condition_pt": "nível ≥ 80",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2678-2681"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "GLORY_GAME_SCENE",
+   "trigger_pt": "12 com room_type 15 (após 9694 op 3)",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2682-2685"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "THESE_Double_PVP_SCENE",
+   "trigger_pt": "12 com room_type 16 (lista Teseu 5026/5023(1,16)/5024)",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "opcode_direction": "accept",
+   "proto_message": "RoomMsg",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2686-2689"
+  },
+  {
+   "from_scene": "PVE_ROOM_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "sair da sala: 5025 → servidor 15 → returnToSpace({isOpenPveRoomList:true})",
+   "opcode": 15,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_EXIT",
+   "opcode_direction": "accept",
+   "proto_message": "RoomExitRspMsg",
+   "condition_pt": "jogador = próprio",
+   "source_ref": "core_module/scripts/mvc/controler/RoomControl.as:40-48,87-90; core_module/scripts/managers/RoomManager.as:467-494"
+  },
+  {
+   "from_scene": "PVP_ROOM_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "sair da sala PvP → returnToSpace({isOpenPvpRoomList:true})",
+   "opcode": 15,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_EXIT",
+   "opcode_direction": "accept",
+   "proto_message": "RoomExitRspMsg",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/mvc/controler/PvpRoomControl.as:39"
+  },
+  {
+   "from_scene": "PVP_ROOM_SCENE",
+   "to_scene": "BATTLE_SCENE",
+   "trigger_pt": "partida PvP: estado da sala 2→3 (25) e batalha (157 U_B_PREPARE)",
+   "opcode": 157,
+   "opcode_name": "U_B_PREPARE",
+   "opcode_direction": "accept",
+   "proto_message": "BattlePrepareMsg",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/managers/RoomManager.as:526-534; core_module/scripts/battle/control/EnterBattleController.as:234"
+  },
+  {
+   "from_scene": null,
+   "to_scene": "BATTLE_SCENE",
+   "trigger_pt": "servidor prepara a batalha: CreateGameTransaction → EnterBattleController.switchToBattle",
+   "opcode": 157,
+   "opcode_name": "U_B_PREPARE",
+   "opcode_direction": "accept",
+   "proto_message": "BattlePrepareMsg",
+   "condition_pt": "BattleManager.started e (!exitFlag ou !loginToBattleFlag)",
+   "source_ref": "core_module/scripts/battle/control/EnterBattleController.as:221-240"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "CAMPAIGN_MAP_SCENE",
+   "trigger_pt": "fim de batalha: exitBattle → preScene (CampaignManager.setup define preScene = CAMPAIGN_MAP_SCENE)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "battleType 17/19/20/22/23/291/306/307 ou preScene; se mapModel == null cai em returnScene",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:93-210,544-549"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "fim de batalha com preScene/returnScene = SPACE; abre a moldura de origem via preSceneData (isOpenPveRoomList, isAbysmBattle…)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "battleType 16/35/3844 → returnScene; 3913/3915 → SPACE",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:330-526; m3/scripts/map/space/SpaceSceneController.as:237-511"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "fim de batalha com preScene = CASTLE (desafio iniciado no castelo) ou 3843 fora da Guerra dos Planos",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:214-223"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "OUTER_CITY_SCENE",
+   "trigger_pt": "fim de batalha no mapa-múndi (battleType 1-5, 3841) com MapInitData do castelo",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:170-178,211-213,528-545"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "CHANLLENGE_ROOM_SCENE",
+   "trigger_pt": "fim de desafio do Coliseu (battleType 16)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "ChallengeManager.isLogin; senão SPACE",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:332-343"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "SKYBOX_ROAD_SCENE",
+   "trigger_pt": "battleType 293",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:127-131"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "INCREASINGLY_ROAD_SCENE",
+   "trigger_pt": "battleType 3893",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:132-136"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "DARK_MAZE_SCENE",
+   "trigger_pt": "battleType 3898 (ou SPACE se passou/terminou)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:140-167"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "SANDBOX_SCENE",
+   "trigger_pt": "battleType 3876",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "!SandboxManager.exit",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:224-233"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "PLANE_CRISRIS",
+   "trigger_pt": "battleType 3877",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "!PlaneCrisisManager.exit",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:234-250"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "PLANES_WAR_SCENE",
+   "trigger_pt": "battleType 3843",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "isInPlanesWar",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:214-223"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "GAME_HALL_SCENE",
+   "trigger_pt": "battleType 3886/3877 com equipe",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "selfTeam",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:251-260"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "CROSS_GUILD_SCENE",
+   "trigger_pt": "battleType 296",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "isInCrossGuildWar e guilda",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:261-270"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "STARAREA_SCENE",
+   "trigger_pt": "battleType 3892",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "!StarareaManager.isExit",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:277-286"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "SELF_CHESS_SCENE",
+   "trigger_pt": "battleType 349",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:293-295"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "SECRET_ADVENTURE_SCENE",
+   "trigger_pt": "battleType 3904",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "!gotoSpace",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:296-305"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "THESE_PVP_SCENE",
+   "trigger_pt": "battleType 3907",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:306-308"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "THESE_Double_PVP_SCENE",
+   "trigger_pt": "battleType 3912",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:309-311"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "SECRET_WAR_SCENE",
+   "trigger_pt": "battleType 3908",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "guerra não acabou",
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:312-322"
+  },
+  {
+   "from_scene": "BATTLE_SCENE",
+   "to_scene": "CHILD_NS_WAR_SCENE",
+   "trigger_pt": "battleType 3911 (cai no case seguinte → SPACE; bug de fall-through)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/battle/handler/BattleResultHandler.as:323-327"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "CHANLLENGE_ROOM_SCENE",
+   "trigger_pt": "fila/coliseu (QueueBar) ou preSceneData.isOpenColosseum",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "fora de campanha",
+   "source_ref": "core_module/scripts/ui/queuebar/QueueBar.as:291; m3/scripts/map/space/SpaceSceneController.as:239-243"
+  },
+  {
+   "from_scene": "CASTLE_SCENE",
+   "to_scene": "CHANLLENGE_ROOM_SCENE",
+   "trigger_pt": "preSceneData.isOpenColosseum",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "m4/scripts/castle/CastleSceneView.as:116"
+  },
+  {
+   "from_scene": "CHANLLENGE_ROOM_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "Voltar quando ChallengeManager.enterScene = CASTLE_SCENE",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1639-1649; m13/scripts/colosseum/view/ChallengeView.as:295"
+  },
+  {
+   "from_scene": "CHANLLENGE_ROOM_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "Voltar (enterToSpace)",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1646; m13/scripts/colosseum/view/ChallengeView.as:299"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "GAME_HALL_SCENE",
+   "trigger_pt": "NPC Angelina (opção 135) → GameHallManager.enterGameHallScene",
+   "opcode": 8646,
+   "opcode_name": "C_GAME_HALL_OP",
+   "opcode_direction": "send",
+   "proto_message": "GameHallOpMsg",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/managers/GameHallManager.as:573"
+  },
+  {
+   "from_scene": "GAME_HALL_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "sair do salão → returnToSpace({isOpenGameHall:true})",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "m3/scripts/gamehall/GameHallSceneController.as:46"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "UNREAL_SHOOTING_ROOM",
+   "trigger_pt": "9662 op 1 → resposta 4828 param1==1",
+   "opcode": 9662,
+   "opcode_name": "C_UNREAL_SHOOTING_OP",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/mvc/controler/UnrealShootingController.as:162-178,340-388"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "SKYBOX_ROAD_SCENE",
+   "trigger_pt": "SkyboxRoadManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/managers/SkyboxRoadManager.as:195"
+  },
+  {
+   "from_scene": "SKYBOX_ROAD_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "Voltar → exitPortal + enterToSpace",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1650-1654"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "INCREASINGLY_ROAD_SCENE",
+   "trigger_pt": "IncreasinglyRoadManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/managers/IncreasinglyRoadManager.as:143"
+  },
+  {
+   "from_scene": "INCREASINGLY_ROAD_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "Voltar → enterToSpace",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1678-1680"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "DARK_MAZE_SCENE",
+   "trigger_pt": "NPC Alexey / DarkMazeManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": "fora de campanha",
+   "source_ref": "core_module/scripts/managers/DarkMazeManager.as:99"
+  },
+  {
+   "from_scene": "DARK_MAZE_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "Voltar → darkMazeOperation(7) + enterToSpace",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1681-1684"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "FINAL_DEFENSE_SCENE",
+   "trigger_pt": "GameBoxManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/managers/GameBoxManager.as:182"
+  },
+  {
+   "from_scene": "FINAL_DEFENSE_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "Voltar → enterToSpace",
+   "opcode": 8688,
+   "opcode_name": "C_PLAYER_SPACE_ENTER",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1655-1657"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "PLANES_WAR_SCENE",
+   "trigger_pt": "PlanesWarManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/PlanesWarManager.as:367,393"
+  },
+  {
+   "from_scene": "PLANES_WAR_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "sair da Guerra dos Planos",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/ui/maintoolbar/MainToolBar.as:1864; core_module/scripts/yishi/manager/PlanesWarManager.as:399"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "PLANE_CRISRIS",
+   "trigger_pt": "PlaneCrisisManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/PlaneCrisisManager.as:130"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "CROSS_GUILD_SCENE",
+   "trigger_pt": "CrossGuildManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/CrossGuildManager.as:293"
+  },
+  {
+   "from_scene": "CROSS_GUILD_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "setScene(returnScene)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "m6/scripts/consortia/view/crossguild/CrossGuildWarSceneView.as:80"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "SANDBOX_SCENE",
+   "trigger_pt": "SandboxManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/sandbox/SandboxManager.as:189"
+  },
+  {
+   "from_scene": "SANDBOX_SCENE",
+   "to_scene": "SPACE_SCENE",
+   "trigger_pt": "returnToSpace",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "m3/scripts/sandbox/SandboxSceneController.as:62"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "CHILD_NS_WAR_SCENE",
+   "trigger_pt": "ChildNswarManager (op 1)",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/managers/ChildNswarManager.as:166"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "SECRET_WAR_SCENE",
+   "trigger_pt": "SecretWarManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/SecretWarManager.as:148"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "SECRET_ADVENTURE_SCENE",
+   "trigger_pt": "SecretAdventerManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/SecretAdventerManager.as:134"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "STARAREA_SCENE",
+   "trigger_pt": "StarareaManager",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/mvc/module/stararea/StarareaManager.as:356"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "SELF_CHESS_SCENE",
+   "trigger_pt": "7º aniversário: auto-xadrez",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "m11/scripts/sevenyear/view/battleflag/SevenYearSelfChessView.as:232"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "THESE_PVP_SCENE",
+   "trigger_pt": "entrada da Arena de Teseu",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "m11/scripts/godpvpenter/item/TheseusPvpEnterItem.as:194"
+  },
+  {
+   "from_scene": "SPACE_SCENE",
+   "to_scene": "CASTLE_SCENE",
+   "trigger_pt": "atalho de Labirinto 2 (gotoCampaignById com checkMaze2)",
+   "opcode": 8747,
+   "opcode_name": "C_ENTER_CASTLE",
+   "opcode_direction": "send",
+   "proto_message": "PropertyMsg(simple)",
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/SwitchPageHelp.as:1119-1124"
+  },
+  {
+   "from_scene": "CAMPAIGN_MAP_SCENE",
+   "to_scene": "EMPTY_SCENE",
+   "trigger_pt": "setScene(mesma cena, force=true): passa pela cena vazia e reentra",
+   "opcode": null,
+   "opcode_name": null,
+   "opcode_direction": null,
+   "proto_message": null,
+   "condition_pt": null,
+   "source_ref": "core_module/scripts/yishi/scene/SceneManager.as:152-158,207-244"
+  }
+ ],
+ "worlds": [
+  {
+   "map_id": 1,
+   "world_kind": "outer_city_world",
+   "scene_type": "OUTER_CITY_SCENE",
+   "tile_px": 512,
+   "tile_grid": "20x20",
+   "coord_unit": "célula 20 px (exibida = célula/2,5; chunks de 1000 px)",
+   "notes": "mundo do castelo; troca de mundo = mover o castelo (5176 → 105). .titles com semântica de obstáculo.",
+   "source_ref": "m3/scripts/map/outercity/OuterCityController.as:150-161; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundBaseModel3D.as:13-15; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundCellInfo3D.as:44-56"
+  },
+  {
+   "map_id": 2,
+   "world_kind": "outer_city_world",
+   "scene_type": "OUTER_CITY_SCENE",
+   "tile_px": 512,
+   "tile_grid": "20x20",
+   "coord_unit": "célula 20 px (exibida = célula/2,5; chunks de 1000 px)",
+   "notes": "mundo do castelo; troca de mundo = mover o castelo (5176 → 105). .titles com semântica de obstáculo.",
+   "source_ref": "m3/scripts/map/outercity/OuterCityController.as:150-161; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundBaseModel3D.as:13-15; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundCellInfo3D.as:44-56"
+  },
+  {
+   "map_id": 3,
+   "world_kind": "outer_city_world",
+   "scene_type": "OUTER_CITY_SCENE",
+   "tile_px": 512,
+   "tile_grid": "20x20",
+   "coord_unit": "célula 20 px (exibida = célula/2,5; chunks de 1000 px)",
+   "notes": "mundo do castelo; troca de mundo = mover o castelo (5176 → 105). .titles com semântica de obstáculo.",
+   "source_ref": "m3/scripts/map/outercity/OuterCityController.as:150-161; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundBaseModel3D.as:13-15; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundCellInfo3D.as:44-56"
+  },
+  {
+   "map_id": 4,
+   "world_kind": "outer_city_world",
+   "scene_type": "OUTER_CITY_SCENE",
+   "tile_px": 512,
+   "tile_grid": "20x20",
+   "coord_unit": "célula 20 px (exibida = célula/2,5; chunks de 1000 px)",
+   "notes": "mundo do castelo; troca de mundo = mover o castelo (5176 → 105). .titles com semântica de obstáculo.",
+   "source_ref": "m3/scripts/map/outercity/OuterCityController.as:150-161; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundBaseModel3D.as:13-15; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundCellInfo3D.as:44-56"
+  },
+  {
+   "map_id": 5,
+   "world_kind": "outer_city_world",
+   "scene_type": "OUTER_CITY_SCENE",
+   "tile_px": 512,
+   "tile_grid": "20x20",
+   "coord_unit": "célula 20 px (exibida = célula/2,5; chunks de 1000 px)",
+   "notes": "mundo do castelo; troca de mundo = mover o castelo (5176 → 105). .titles com semântica de obstáculo.",
+   "source_ref": "m3/scripts/map/outercity/OuterCityController.as:150-161; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundBaseModel3D.as:13-15; m3/scripts/map/internals3D/mapbackground/model/MapBackgroundCellInfo3D.as:44-56"
+  },
+  {
+   "map_id": 100,
+   "world_kind": "outer_city_world",
+   "scene_type": "OUTER_CITY_SCENE",
+   "coord_unit": "célula 20 px",
+   "notes": "Costa do Crepúsculo (nível 8-10, 2000×1800): bitmap único (Width<5000), sem nuvens; exércitos com mapId>100000 podem atacar aqui",
+   "source_ref": "m3/scripts/map/outercity/view/OuterCityMap.as:123-155; core_module/scripts/map/outercity/OuterCityModel.as:548-551"
+  },
+  {
+   "map_id": 10000,
+   "world_kind": "space_hub",
+   "scene_type": "SPACE_SCENE",
+   "tile_px": 300,
+   "tile_grid": "30x20",
+   "coord_unit": "célula 20 px",
+   "notes": "Reino do Céu: lobby com 58 nós (game.map_nodes); nascimento nó 14 (175,98); portal nó 5 → 20001",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1351; core_module/scripts/map/space/SpaceManager.as:344-398"
+  },
+  {
+   "map_id": 20001,
+   "world_kind": "floor_chain",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px",
+   "notes": "Ilha de Einherjar, 1º piso (campanha 20000, tipo 10, nível 50)",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59"
+  },
+  {
+   "map_id": 20002,
+   "world_kind": "floor_chain",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px",
+   "notes": "Ilha de Einherjar, 2º piso (campanha 20000, tipo 10, nível 50)",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59"
+  },
+  {
+   "map_id": 20003,
+   "world_kind": "floor_chain",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px",
+   "notes": "Ilha de Einherjar, 3º piso (campanha 20000, tipo 10, nível 50)",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59"
+  },
+  {
+   "map_id": 20004,
+   "world_kind": "floor_chain",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px",
+   "notes": "Ilha de Einherjar, 4º piso (campanha 20000, tipo 10, nível 50)",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59"
+  },
+  {
+   "map_id": 10002,
+   "world_kind": "novice",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Monte do Dragão Divino: tutorial (newbieProcess < 19000)",
+   "source_ref": "core_module/scripts/yishi/lunch/StartupResourcesLoader.as:209-228; core_module/scripts/yishi/utils/WorldBossHelper.as:193-200"
+  },
+  {
+   "map_id": 2351,
+   "world_kind": "dungeon_floor",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px / px",
+   "notes": "Templo de Tara piso 1 (campanha 5902, equipe 4, nível 80)",
+   "source_ref": "web/public/maps/2351.json"
+  },
+  {
+   "map_id": 2352,
+   "world_kind": "dungeon_floor",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px / px",
+   "notes": "Templo de Tara piso 2",
+   "source_ref": "web/public/maps/2352.json"
+  },
+  {
+   "map_id": 2353,
+   "world_kind": "dungeon_floor",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px / px",
+   "notes": "Templo de Tara piso 3 (saída 退出副本)",
+   "source_ref": "web/public/maps/2353.json"
+  },
+  {
+   "map_id": 7601,
+   "world_kind": "dungeon_floor",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px / px",
+   "notes": "Altar Divino piso 1 (传送阵)",
+   "source_ref": "web/public/maps/7601.json"
+  },
+  {
+   "map_id": 7602,
+   "world_kind": "dungeon_floor",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "coord_unit": "célula 20 px / px",
+   "notes": "Altar Divino piso 2 (8 chefes)",
+   "source_ref": "web/public/maps/7602.json"
+  },
+  {
+   "map_id": 4901,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Terra do Crepúsculo (PvP 2 lados, 5 torres, minas)",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 4701,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Pico de Gelo e Fogo (PvP)",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 5301,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Domínio do Diabo",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 9996,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Inferno Sangrento (Bloody)",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 2291,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Grupo FB (raid em equipe) 1",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 2292,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Grupo FB 2",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 2293,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Grupo FB 3",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 2294,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Grupo FB 4",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 3001,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Ruínas Arcaicas (corrida de veículos)",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 5703,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Campo da Caça Fantástica",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  },
+  {
+   "map_id": 9995,
+   "world_kind": "event_map",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "notes": "Sala de Sacrifício (alcançável do 10000 pelo nó 99)",
+   "source_ref": "core_module/scripts/yishi/utils/WorldBossHelper.as"
+  }
+ ],
+ "world_links": [
+  {
+   "from_map_id": 10000,
+   "to_map_id": 20001,
+   "via_node_id": 5,
+   "link_kind": "space_portal",
+   "condition_pt": "nó 171 'Ilha dos Einherjars, Transmissor' (MoveToNodeId 2000101); nível 50; acionado por 8692 C_PLAYER_SPACE_NODE_TRIGGER → servidor 125",
+   "source_ref": "game.map_nodes id 5; core_module/scripts/map/space/SpaceManager.as:365-366; m3/scripts/map/space/helper/hero/SpaceArmyViewHelper.as:58-67"
+  },
+  {
+   "from_map_id": 10000,
+   "to_map_id": 20001,
+   "via_node_id": 5,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map1[0])"
+  },
+  {
+   "from_map_id": 20001,
+   "to_map_id": 20002,
+   "via_node_id": 2000102,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map1[1])"
+  },
+  {
+   "from_map_id": 20002,
+   "to_map_id": 20003,
+   "via_node_id": 2000202,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map1[2])"
+  },
+  {
+   "from_map_id": 20003,
+   "to_map_id": 20004,
+   "via_node_id": 2000341,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map1[3])"
+  },
+  {
+   "from_map_id": 20004,
+   "to_map_id": 20003,
+   "via_node_id": 2000401,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map2[0])"
+  },
+  {
+   "from_map_id": 20003,
+   "to_map_id": 20002,
+   "via_node_id": 2000301,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map2[1])"
+  },
+  {
+   "from_map_id": 20002,
+   "to_map_id": 20001,
+   "via_node_id": 2000201,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map2[2])"
+  },
+  {
+   "from_map_id": 20001,
+   "to_map_id": 10000,
+   "via_node_id": 2000150,
+   "link_kind": "cross_map_route",
+   "source_ref": "core_module/scripts/yishi/actions/map/crossmapsearch/CrossMapSearchActionQueue.as:26-59 (map2[3])"
+  },
+  {
+   "from_map_id": 10000,
+   "to_map_id": 9995,
+   "via_node_id": 99,
+   "link_kind": "cross_map_route",
+   "condition_pt": "caso especial de walkToCrossMapTarget",
+   "source_ref": "core_module/scripts/yishi/SwitchPageHelp.as:1021-1028"
+  },
+  {
+   "from_map_id": 1,
+   "to_map_id": 2,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 1,
+   "to_map_id": 3,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 1,
+   "to_map_id": 4,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 1,
+   "to_map_id": 5,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 2,
+   "to_map_id": 3,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 2,
+   "to_map_id": 4,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 2,
+   "to_map_id": 5,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 3,
+   "to_map_id": 4,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 3,
+   "to_map_id": 5,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 4,
+   "to_map_id": 5,
+   "link_kind": "server_transfer",
+   "direction": "both",
+   "condition_pt": "mover o castelo pelo mapa-múndi: 5176 CastleReqMsg{mag_id} → 105; energia ≥ 200 ou pago",
+   "source_ref": "core_module/scripts/mvc/controler/WorldMapControler.as:45-80; m11/scripts/worldmap/WorldMapFrame.as:72-147"
+  },
+  {
+   "from_map_id": 10000,
+   "to_map_id": 1,
+   "link_kind": "scene_switch",
+   "direction": "both",
+   "condition_pt": "SPACE ↔ cidade externa (mundo do castelo): gotoOuterCity / enterToSpace; nível ≥ 13 / ≥ 16",
+   "source_ref": "core_module/scripts/yishi/SwitchPageHelp.as:721-744,1950-1953"
+  }
+ ],
+ "dungeon_types": [
+  {
+   "code": "pve_room",
+   "name_pt": "Instância em equipe (Portal dos Heróis)",
+   "room_type": 0,
+   "scene_type": "PVE_ROOM_SCENE",
+   "campaign_types": [
+    0,
+    13,
+    51
+   ],
+   "min_players": 1,
+   "max_players": 4,
+   "min_level": 20,
+   "entry_pt": "NPC Tina 'Portal dos Heróis' (nó 2, opção 2) → lista pveroomlist (5026) → criar 5023(1,0,\"\") / entrar 5024 / buscar 8465 / convite 16",
+   "flow_pt": "12 RoomMsg → PVE_ROOM_SCENE; dono escolhe instância 5034; membros 5036 pronto; dono 5039 iniciar (ou cross 5039 isCross → 4994/25157); 125 → CAMPAIGN_MAP_SCENE; 21 membros; 127 nós",
+   "rewards_pt": "vitrine Campaigns.Item; cartas 135 U_C_CAMPAIGN_CARDS (card_count, pay_card_count, price, dropItems) → 5122 virar → 26 resultado; baú 5129; BaseGp; custo 20 de Energia",
+   "requirements_pt": "Campaigns.MinLevel, NeedTransfer/NeedChangeJob/NeedThirdTransfer/NeedTransferType, NeedFightPower (cross), dificuldade 2/3 exige a anterior, EnterNumb mínimo",
+   "source_ref": "core_module/scripts/mvc/controler/PVERoomListControler.as:130-135; m9/scripts/room/view/pve/RoomRightView.as:885-955,1280-1370; core_module/scripts/yishi/OpenGradesII.as:134"
+  },
+  {
+   "code": "pvp_room",
+   "name_pt": "Sala PvP (撮合战)",
+   "room_type": 1,
+   "scene_type": "PVP_ROOM_SCENE",
+   "min_players": 1,
+   "max_players": 4,
+   "min_level": 22,
+   "entry_pt": "lista pvproomlist 5026(1) → criar 5023(3,1,\"\") / 5024",
+   "flow_pt": "5036 pronto → 5039 (campaignId 0) → estado 2 (emparelhando) → 3 (jogando) via 25 → batalha 157/4103",
+   "rewards_pt": "relatório de batalha 4103",
+   "source_ref": "core_module/scripts/mvc/controler/PVPRoomListControler.as:129-134; m9/scripts/room/view/pvp/PVPRoomRightView.as:340-377"
+  },
+  {
+   "code": "vehicle",
+   "name_pt": "Corrida de veículos (Daimon Trial)",
+   "room_type": 2,
+   "scene_type": "VEHICLE",
+   "campaign_types": [
+    9
+   ],
+   "map_ids": [
+    3001
+   ],
+   "max_players": 4,
+   "min_level": 35,
+   "entry_pt": "prédio 1505/moldura vehicledaimon → 5023(4,2,\"\") / 5024 / 8608 jogo rápido",
+   "flow_pt": "12 abre vehicleroomlist (sem cena) → 5039 → 125 campaignId 3001 → VEHICLE",
+   "source_ref": "core_module/scripts/mvc/controler/VehicleDaimonTrialController.as:29-70; core_module/scripts/yishi/manager/BaseManager.as:2544-2548,2662-2665"
+  },
+  {
+   "code": "multilords",
+   "name_pt": "Multi-Senhores",
+   "room_type": 5,
+   "scene_type": "MULTILORDS_ROOM",
+   "min_level": 50,
+   "entry_pt": "opcodes 8841-8856 (C_MUTIL_LORDS_*) só no CSV; 8849 C_MUTIL_LORDS_ROOMCREATE; view multilordsroom.MultilordsRoomView ausente no decompilado",
+   "source_ref": "core_module/scripts/mvc/controler/MultilordsRoomController.as:48; core_module/scripts/yishi/OpenGradesII.as:232"
+  },
+  {
+   "code": "matelords",
+   "name_pt": "Mate Lords (Batalha Eterna)",
+   "room_type": 8,
+   "scene_type": "MATELORDS_ROOM",
+   "max_players": 2,
+   "min_level": 36,
+   "entry_pt": "8979 info, 8975 inscrição, 8976 C_MATE_LORDS_ROOM_CREATE, 8981 inspirar, 9611 loja",
+   "rewards_pt": "MateLordsListMsg/InfoMsg (score, turn, clearRateItems)",
+   "source_ref": "core_module/scripts/yishi/manager/MatelordsManager.as:327-358; m9/scripts/matelords/room/MatelordsRoomBackView.as:178"
+  },
+  {
+   "code": "areslords",
+   "name_pt": "Ares Lords",
+   "room_type": 9,
+   "scene_type": "ARESLORDS_ROOM",
+   "max_players": 1,
+   "min_level": 36,
+   "entry_pt": "9615 C_ARES_CLIENT_OP AresLordsListMsg{op 1 ver, 2 inscrever, 3 skill, 4 rank, 5 entrar sala}",
+   "rewards_pt": "ranking AresLordsListMsg",
+   "requirements_pt": "evento aberto e inscrito",
+   "source_ref": "core_module/scripts/yishi/manager/AresLordsManager.as:66-138"
+  },
+  {
+   "code": "apex",
+   "name_pt": "Liga do Pico (Apex) + equipe Apex",
+   "room_type": 14,
+   "scene_type": "APEX_ROOM",
+   "max_players": 4,
+   "min_level": 80,
+   "entry_pt": "5439 C_APEX_CLIENT_OP CommonMsg{param1: 1 main, 2 inscrição, 3 sala, 11 criar time, 12 kick, 13 convidar, 14 sair, 15 entrar, 16 lista, 18 aceitar}; resposta de time 191",
+   "rewards_pt": "ApexRewardDropTemp",
+   "source_ref": "core_module/scripts/yishi/manager/ApexManager.as:78-90,485-623; m9/scripts/apex/team/ApexTeamItem.as:67"
+  },
+  {
+   "code": "glory_game",
+   "name_pt": "Jogo da Glória (7º aniversário)",
+   "room_type": 15,
+   "scene_type": "GLORY_GAME_SCENE",
+   "max_players": 4,
+   "entry_pt": "9694 C_GLORYGAME_OP PropertyMsg{param1: 1 ver, 2 inscrever, 3 entrar sala, 4 apostar, 5 confirmar, 6 sair}; 9699 aposta",
+   "rewards_pt": "GloryRewardTemplate",
+   "source_ref": "core_module/scripts/managers/GloryGameManager.as:59-62,358-410"
+  },
+  {
+   "code": "theseus_double_pvp",
+   "name_pt": "Arena Multiplayer de Teseu",
+   "room_type": 16,
+   "scene_type": "THESE_Double_PVP_SCENE",
+   "max_players": 4,
+   "entry_pt": "lista Teseu 5026(16) → 5023(1,16,\"\") / 5024; pronto/início 5036/5037/5039/5034/5028; ops 9712/9736 PlayerOpMsg",
+   "rewards_pt": "TheseusMultiPvpTempInfo / IntegralTempInfo",
+   "source_ref": "core_module/scripts/mvc/controler/TheseusRoomListControler.as:134-139; core_module/scripts/managers/TheseusPvpManager.as:147-225,445-463"
+  },
+  {
+   "code": "groupfb",
+   "name_pt": "Grupo FB (raid em equipe, 2 times)",
+   "room_type": 7,
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "map_ids": [
+    2291,
+    2292,
+    2293,
+    2294
+   ],
+   "min_players": 2,
+   "max_players": 8,
+   "entry_pt": "tudo via 8972 C_TEAM_CAMPAIGN_OP MarriageOpMsg{op_type: 1 criar, 3 lista, 4 sair, 5 convidar, 6 entrar, 7 iniciar, 8 estado, 9 renomear, 10 senha, 11 líder, 12 formação, 13 kick, 14 buscar, 15 trocar time, 16 reforço, 17 income}",
+   "flow_pt": "4785 lista (TeamRoomListMsg), 4786/4791 sala (TeamRoomMsg), 4784 estado (MatchStateMsg); no mapa 4790 ataque / 4792 dano",
+   "rewards_pt": "chefes restantes (boss_count); estado 3 = encerrada",
+   "requirements_pt": "≥ 2 jogadores e ≥ 1 em cada time; vocationGrades > 0 para entrar por link",
+   "source_ref": "core_module/scripts/mvc/module/groupfb/GroupfbSender.as:12-205; core_module/scripts/managers/GroupfbManager.as:61-64; m9/scripts/groupfb/GroupfbTeamFrame.as:92-93,370-389"
+  },
+  {
+   "code": "freedom_team",
+   "name_pt": "Equipe livre (FreedomTeam)",
+   "max_players": 4,
+   "min_level": 36,
+   "entry_pt": "8738 convidar, 8734 responder, 8736 capitão, 8739 kick, 8740 AFK, 8741 sair, 8737 formação, 8807/8808 pedir para entrar; cross 25135-25140",
+   "flow_pt": "4620-4630 (U_C_TEAM_*), 4220",
+   "source_ref": "core_module/scripts/managers/FreedomTeamSocketOutManager.as:21-176; core_module/scripts/managers/FreedomTeamManager.as:61-71,760-797"
+  },
+  {
+   "code": "unreal_shooting",
+   "name_pt": "Caça Fantástica (tiro)",
+   "scene_type": "UNREAL_SHOOTING_ROOM",
+   "map_ids": [
+    5703
+   ],
+   "min_level": 1,
+   "entry_pt": "9662 C_UNREAL_SHOOTING_OP PropertyMsg{param1: 1 entrar, 2 selecionar, 3 confirmar, 4 buff, 5 ordem semanal, 6 sair}; 4828 param1==1 → cena",
+   "rewards_pt": "UnrealShootingRewardInfo{TemplateId, Count, Order}",
+   "source_ref": "core_module/scripts/mvc/controler/UnrealShootingController.as:162-178,340-388"
+  },
+  {
+   "code": "game_hall",
+   "name_pt": "Salão do Jogo",
+   "scene_type": "GAME_HALL_SCENE",
+   "entry_pt": "8646 C_GAME_HALL_OP GameHallOpMsg{op 1-14}, 8647 posição, 8648 convite, 8649 mover",
+   "flow_pt": "4561-4565 (U_C_GAME_HALL_TEAM_*)",
+   "rewards_pt": "GamehallEastDropTemplate",
+   "source_ref": "core_module/scripts/managers/GameHallManager.as:125-128,573,888-1017"
+  },
+  {
+   "code": "open_map_activity",
+   "name_pt": "Mapas abertos de atividade (Capacity 10000)",
+   "scene_type": "CAMPAIGN_MAP_SCENE",
+   "campaign_types": [
+    1,
+    6,
+    7,
+    8,
+    10,
+    12,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    24,
+    25,
+    29,
+    30,
+    50,
+    51
+   ],
+   "max_players": 10000,
+   "entry_pt": "NPC/atividade → servidor 125 (sem sala)",
+   "rewards_pt": "por atividade (chefe global, PvP de mapa, Zona Proibida…)",
+   "source_ref": "core_module/scripts/yishi/manager/TempleteManager.as:2580-2600; game.campaigns.capacity"
+  },
+  {
+   "code": "single_pass",
+   "name_pt": "Passagem solo (Caminho do Céu / Chegada dos Deuses)",
+   "max_players": 1,
+   "min_level": 60,
+   "entry_pt": "8753 C_TOLLGATE_REQUEST, 8755 atacar (player.ChallengeMsg), 8636 C_SKY_TRIAL, 8637 área",
+   "flow_pt": "4551-4554",
+   "rewards_pt": "SinglePassAreaRewardData / SinglePassBossRewardData",
+   "source_ref": "core_module/scripts/managers/SinglePassSocketOutManager.as:17-70; core_module/scripts/managers/SinglePassManager.as:56-59"
+  }
+ ],
+ "room_protocol": [
+  {
+   "dungeon_code": null,
+   "phase": "list",
+   "direction": "send",
+   "opcode": 5026,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_LIST",
+   "proto_message": "RoomReqMsg{room_type, name_key}",
+   "client_method": "RoomListSocketOutManager.requestRoomList",
+   "notes_pt": "PVE 0, PVP 1, Teseu 16",
+   "source_ref": "core_module/scripts/yishi/manager/RoomListSocketOutManager.as:22-29",
+   "step_order": 0
+  },
+  {
+   "dungeon_code": null,
+   "phase": "list",
+   "direction": "accept",
+   "opcode": 13,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_LIST",
+   "proto_message": "RoomListRspMsg{[]room:RoomMsg}",
+   "client_method": "PVERoomListControler",
+   "notes_pt": "RoomMsg: room_id, campaignId, master_id, name, count, capacity, room_state, room_type, is_set_password, masterServerName",
+   "source_ref": "core_module/scripts/mvc/controler/PVERoomListControler.as:74-103",
+   "step_order": 1
+  },
+  {
+   "dungeon_code": null,
+   "phase": "list",
+   "direction": "accept",
+   "opcode": 4270,
+   "opcode_name": "U_C_ROOM_SEND",
+   "proto_message": "RoomMsg",
+   "client_method": "PVERoomListControler",
+   "notes_pt": "atualização de uma sala; capacity 0 ou estado 2/3 → pede a lista de novo",
+   "source_ref": "core_module/scripts/mvc/controler/PVERoomListControler.as:105-125",
+   "step_order": 2
+  },
+  {
+   "dungeon_code": null,
+   "phase": "list",
+   "direction": "send",
+   "opcode": 8465,
+   "opcode_name": "U_C_ROOM_FIND",
+   "proto_message": "RoomReqMsg{room_id, room_type}",
+   "client_method": "RoomListSocketOutManager",
+   "notes_pt": "busca por id",
+   "source_ref": "core_module/scripts/yishi/manager/RoomListSocketOutManager.as:49-56",
+   "step_order": 3
+  },
+  {
+   "dungeon_code": null,
+   "phase": "list",
+   "direction": "accept",
+   "opcode": 4370,
+   "opcode_name": "U_C_ROOM_FIND_RESULT",
+   "proto_message": "RoomMsg",
+   "client_method": "PVERoomListControler",
+   "notes_pt": "se is_set_password abre RoomPasswordFrame",
+   "source_ref": "core_module/scripts/mvc/controler/PVERoomListControler.as:44-67",
+   "step_order": 4
+  },
+  {
+   "dungeon_code": null,
+   "phase": "create",
+   "direction": "send",
+   "opcode": 5023,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "proto_message": "RoomReqMsg{capacity, room_type, password}",
+   "client_method": "RoomListSocketOutManager.sendCreateRoom",
+   "notes_pt": "anti-flood 5 s; PVE (1,0), PVP (3,1), veículo (4,2), Teseu (1,16)",
+   "source_ref": "core_module/scripts/yishi/manager/RoomListSocketOutManager.as:58-72",
+   "step_order": 5
+  },
+  {
+   "dungeon_code": null,
+   "phase": "enter",
+   "direction": "send",
+   "opcode": 5024,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_ENTER",
+   "proto_message": "RoomReqMsg{room_id, password, room_type, is_invite, is_get}",
+   "client_method": "RoomListSocketOutManager.addRoomById",
+   "notes_pt": "is_get = entrar sem receber recompensa",
+   "source_ref": "core_module/scripts/yishi/manager/RoomListSocketOutManager.as:31-47",
+   "step_order": 6
+  },
+  {
+   "dungeon_code": null,
+   "phase": "enter",
+   "direction": "accept",
+   "opcode": 12,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_CREATE",
+   "proto_message": "RoomMsg",
+   "client_method": "BaseManager.__createRoomHandler",
+   "notes_pt": "resposta a criar e entrar; RoomManager.setup; cena por room_type",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2636-2690",
+   "step_order": 7
+  },
+  {
+   "dungeon_code": null,
+   "phase": "enter",
+   "direction": "accept",
+   "opcode": 120,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_MEMBER",
+   "proto_message": "RoomPlayerListMsg{state, []roomPlayer}",
+   "client_method": "RoomManager.__roomMemberHandler",
+   "notes_pt": "slot = current_room_index, estado = player_state",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:106,184-373",
+   "step_order": 8
+  },
+  {
+   "dungeon_code": null,
+   "phase": "slot",
+   "direction": "accept",
+   "opcode": 17,
+   "opcode_name": "U_C_CAMPAGIN_ROOM_PLACESTATE",
+   "proto_message": "PlaceStateRspMsg{[]placeState}",
+   "client_method": "RoomManager",
+   "notes_pt": "-1 fechado, 0 aberto, outro = ocupado",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:115,536-551",
+   "step_order": 9
+  },
+  {
+   "dungeon_code": null,
+   "phase": "slot",
+   "direction": "send",
+   "opcode": 5029,
+   "opcode_name": "U_C_CAMPAGIN_ROOM_PLACESTATE",
+   "proto_message": "RoomReqMsg{index, open}",
+   "client_method": "RoomSocketOutManager.sendClose",
+   "notes_pt": "dono abre/fecha slot",
+   "source_ref": "core_module/scripts/managers/RoomSocketOutManager.as:69-76",
+   "step_order": 10
+  },
+  {
+   "dungeon_code": "pve_room",
+   "phase": "slot",
+   "direction": "send",
+   "opcode": 5034,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_EDIT",
+   "proto_message": "RoomReqMsg{room_id, dungeon_id, campaign_id}",
+   "client_method": "RoomSocketOuterManager.updateRoomInfo",
+   "notes_pt": "dono escolhe a instância",
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:66-74",
+   "step_order": 11
+  },
+  {
+   "dungeon_code": null,
+   "phase": "slot",
+   "direction": "accept",
+   "opcode": 32,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_EDIT",
+   "proto_message": "EditRoomRspMsg",
+   "client_method": "RoomManager.__updateRoomInfoHandler",
+   "notes_pt": "dono, campanha, count, capacity, senha",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:108,375-396",
+   "step_order": 12
+  },
+  {
+   "dungeon_code": null,
+   "phase": "slot",
+   "direction": "send",
+   "opcode": 8344,
+   "opcode_name": "C_ROOM_PWDCHANGE",
+   "proto_message": "RoomEditMsg{room_id, room_pwd, room_name}",
+   "client_method": "RoomSocketOuterManager.sendLockCampaignRoom",
+   "notes_pt": "senha",
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:28-35",
+   "step_order": 13
+  },
+  {
+   "dungeon_code": null,
+   "phase": "slot",
+   "direction": "send",
+   "opcode": 8277,
+   "opcode_name": "C_CAMPIAGN_ARMYPOS_EDIT",
+   "proto_message": "ArmyFightPosEditListMsg",
+   "client_method": "ArmySocketSendManager.sendEditTeamPos",
+   "notes_pt": "formação (cross: 25160)",
+   "source_ref": "m5/scripts/teammanager/TeamSortFrame.as:205",
+   "step_order": 14
+  },
+  {
+   "dungeon_code": null,
+   "phase": "invite",
+   "direction": "send",
+   "opcode": 5027,
+   "opcode_name": "U_C_CAMPAIGN_INVITE_PLAYER_LIST",
+   "proto_message": null,
+   "client_method": "SocketSendManager.sendRefreshInviteHall",
+   "notes_pt": "lista de convidáveis; resposta 4161",
+   "source_ref": "core_module/scripts/yishi/service/managers/SocketSendManager.as:394",
+   "step_order": 15
+  },
+  {
+   "dungeon_code": null,
+   "phase": "invite",
+   "direction": "send",
+   "opcode": 5028,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_INVITE",
+   "proto_message": "RoomReqMsg{user_id}",
+   "client_method": "RoomSocketOuterManager.sendRoomInvite",
+   "notes_pt": null,
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:117-123",
+   "step_order": 16
+  },
+  {
+   "dungeon_code": null,
+   "phase": "invite",
+   "direction": "accept",
+   "opcode": 16,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_INVITE",
+   "proto_message": "RoomInviteMsg{room_id, player_id, nick_name, name, sign_str, room_type, …, isCross}",
+   "client_method": "BaseManager.__roomInviteHandler",
+   "notes_pt": "ignorado com nível < 20 em room_type 0; aceitar → 5024 is_invite ou 9557 (cross)",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2248-2490",
+   "step_order": 17
+  },
+  {
+   "dungeon_code": null,
+   "phase": "ready",
+   "direction": "send",
+   "opcode": 5036,
+   "opcode_name": "U_C_PLAYER_READY_STATE",
+   "proto_message": "RoomReqMsg{state 1 pronto/0 espera, is_get}",
+   "client_method": "RoomSocketOuterManager.sendPlayerState",
+   "notes_pt": null,
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:100-107",
+   "step_order": 18
+  },
+  {
+   "dungeon_code": null,
+   "phase": "ready",
+   "direction": "accept",
+   "opcode": 24,
+   "opcode_name": "U_C_PLAYER_READY_STATE",
+   "proto_message": "PlayerReadyRspMsg{[]PlayerReady{player_id, ready_state}}",
+   "client_method": "RoomManager.__updateReaderStateHandler",
+   "notes_pt": "allPlayerReader: todos ≠ 0 exceto o dono",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:111,442-465",
+   "step_order": 19
+  },
+  {
+   "dungeon_code": null,
+   "phase": "state",
+   "direction": "send",
+   "opcode": 5037,
+   "opcode_name": "U_C_ROOM_STATE",
+   "proto_message": "RoomReqMsg{state=1}",
+   "client_method": "RoomSocketOuterManager.sendRoomState",
+   "notes_pt": "dono cancela o início",
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:109-115",
+   "step_order": 20
+  },
+  {
+   "dungeon_code": null,
+   "phase": "state",
+   "direction": "accept",
+   "opcode": 25,
+   "opcode_name": "U_C_ROOM_STATE",
+   "proto_message": "RoomStateRspMsg{room_state}",
+   "client_method": "RoomManager.__updateRoomStateHandler",
+   "notes_pt": "0 livre, 1 aguardando, 2 emparelhando, 3 em jogo",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:114,526-534",
+   "step_order": 21
+  },
+  {
+   "dungeon_code": null,
+   "phase": "start",
+   "direction": "send",
+   "opcode": 5039,
+   "opcode_name": "U_C_CAMPAIGN_ENTER",
+   "proto_message": "CampaignReqMsg{para_int1, para_int2=campaignId, para_bool1=isNoGet, isCross}",
+   "client_method": "RoomSocketOuterManager.sendStartCampaignScene",
+   "notes_pt": "anti-flood 3 s",
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:76-98",
+   "step_order": 22
+  },
+  {
+   "dungeon_code": null,
+   "phase": "start",
+   "direction": "accept",
+   "opcode": 125,
+   "opcode_name": "U_C_CAMPAIGN_CREATE",
+   "proto_message": "RoomCreatedMsg{created_type, room, is_cross, campignId}",
+   "client_method": "BaseManager.__createCampaignHandler",
+   "notes_pt": "→ CAMPAIGN_MAP_SCENE (ou VEHICLE se 3001)",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:2530-2619",
+   "step_order": 23
+  },
+  {
+   "dungeon_code": null,
+   "phase": "in_game",
+   "direction": "accept",
+   "opcode": 21,
+   "opcode_name": "U_C_CAMPAIGN_ENTER",
+   "proto_message": "RoomEnterMsg{result, []player:RoomPlayerMsg}",
+   "client_method": "CampaignManager.__campaignStartHandler",
+   "notes_pt": "exércitos no mapa (cur_pos_x/y em células)",
+   "source_ref": "core_module/scripts/map/campaign/CampaignManager.as:210,519-532",
+   "step_order": 24
+  },
+  {
+   "dungeon_code": null,
+   "phase": "in_game",
+   "direction": "accept",
+   "opcode": 127,
+   "opcode_name": "U_C_CAMPAIGN_NODE",
+   "proto_message": "CampaignNodeListMsg{[]CampaignNodeMsg}",
+   "client_method": "CampaignManager.__campaignDataHandler",
+   "notes_pt": "nós do mapa",
+   "source_ref": "core_module/scripts/map/campaign/CampaignManager.as:211,237-306",
+   "step_order": 25
+  },
+  {
+   "dungeon_code": null,
+   "phase": "in_game",
+   "direction": "send",
+   "opcode": 5125,
+   "opcode_name": "U_C_CAMPAIGN_ARRIVE",
+   "proto_message": "CampaignReqMsg{para_int1=campDataId, para_bool1}",
+   "client_method": "MapSocketOuterManager.sendCampaignArrive",
+   "notes_pt": "interagir com nó (luta, portal, coleta)",
+   "source_ref": "m3/scripts/map/net/MapSocketOuterManager.as:55-62",
+   "step_order": 26
+  },
+  {
+   "dungeon_code": null,
+   "phase": "result",
+   "direction": "accept",
+   "opcode": 135,
+   "opcode_name": "U_C_CAMPAIGN_CARDS",
+   "proto_message": "CampaignCardsMsg{scene_type, card_count, pay_card_count, price, dropItems}",
+   "client_method": "BaseManager.__campaignCardsHandler",
+   "notes_pt": "cartas de recompensa",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:305,1985",
+   "step_order": 27
+  },
+  {
+   "dungeon_code": null,
+   "phase": "result",
+   "direction": "send",
+   "opcode": 5122,
+   "opcode_name": "U_C_CAMPAIGN_TAKE_CARD",
+   "proto_message": "CampaignReqMsg{para_int1, para_bool1=pago, para_int2}",
+   "client_method": "CampaignSocketOutManager.sendCampaignCard",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/map/campaign/CampaignSocketOutManager.as:92-100",
+   "step_order": 28
+  },
+  {
+   "dungeon_code": null,
+   "phase": "result",
+   "direction": "accept",
+   "opcode": 26,
+   "opcode_name": "U_C_CAMPAIGN_TAKE_CARD",
+   "proto_message": "CampaignTakeCardsMsg{player_id, name, pay, index, template_id, count, bind, …}",
+   "client_method": "BaseManager.__campaingTakeCardHandler",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:306,2003",
+   "step_order": 29
+  },
+  {
+   "dungeon_code": null,
+   "phase": "kick",
+   "direction": "send",
+   "opcode": 5031,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_KILLPLAYER",
+   "proto_message": "RoomReqMsg{user_id, name_key=serverName}",
+   "client_method": "RoomSocketOutManager.sendKickingInfo",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/RoomSocketOutManager.as:28-53",
+   "step_order": 30
+  },
+  {
+   "dungeon_code": null,
+   "phase": "kick",
+   "direction": "accept",
+   "opcode": 28,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_KILLPLAYER",
+   "proto_message": "KillPlayerRspMsg",
+   "client_method": "RoomManager.__campaingkillOutHandler",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/RoomManager.as:109,398-440",
+   "step_order": 31
+  },
+  {
+   "dungeon_code": null,
+   "phase": "kick",
+   "direction": "accept",
+   "opcode": 4984,
+   "opcode_name": "U_C_VOTE_KILLPLAYER",
+   "proto_message": "RoomReqMsg",
+   "client_method": "RoomManager.__crossCampaingkillOutHandler",
+   "notes_pt": "voto cross; resposta 25152",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:110,553",
+   "step_order": 32
+  },
+  {
+   "dungeon_code": null,
+   "phase": "master",
+   "direction": "send",
+   "opcode": 5030,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_MASTER_CHANGE",
+   "proto_message": "CampaignReqMsg{para_int1=userId, para_string1=server}",
+   "client_method": "RoomSocketOutManager.sendChangeRoomOwner",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/RoomSocketOutManager.as:19-26",
+   "step_order": 33
+  },
+  {
+   "dungeon_code": null,
+   "phase": "master",
+   "direction": "accept",
+   "opcode": 121,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_MASTER",
+   "proto_message": "ChangeMasterRspMsg{room_id, master_id, serverName, isCross}",
+   "client_method": "RoomManager.__updateHouseOwnerHandler",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/RoomManager.as:113,496-524",
+   "step_order": 34
+  },
+  {
+   "dungeon_code": null,
+   "phase": "leave",
+   "direction": "send",
+   "opcode": 5025,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_EXIT",
+   "proto_message": "RoomExitMsg{msg \"\"|\"kill self\"}",
+   "client_method": "CampaignSocketOutManager.sendReturnCampaignRoom",
+   "notes_pt": "sair da sala ou do mapa",
+   "source_ref": "core_module/scripts/map/campaign/CampaignSocketOutManager.as:68-82",
+   "step_order": 35
+  },
+  {
+   "dungeon_code": null,
+   "phase": "leave",
+   "direction": "send",
+   "opcode": 5120,
+   "opcode_name": "U_C_CAMPAIGN_EXIT",
+   "proto_message": "RoomExitMsg",
+   "client_method": "CampaignSocketOutManager.sendExitCampaignScene",
+   "notes_pt": "sair da cena de campanha",
+   "source_ref": "core_module/scripts/map/campaign/CampaignSocketOutManager.as:84-90",
+   "step_order": 36
+  },
+  {
+   "dungeon_code": null,
+   "phase": "leave",
+   "direction": "accept",
+   "opcode": 15,
+   "opcode_name": "U_C_CAMPAIGN_ROOM_EXIT",
+   "proto_message": "RoomExitRspMsg{player_id, exit_type, param1}",
+   "client_method": "RoomManager.__returnRoomHandler",
+   "notes_pt": "próprio jogador → returnToSpace",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:112,467-494",
+   "step_order": 37
+  },
+  {
+   "dungeon_code": null,
+   "phase": "leave",
+   "direction": "accept",
+   "opcode": 22,
+   "opcode_name": "U_C_CAMPAIGN_EXIT",
+   "proto_message": "CampaignExitMsg{result, player_id, army_id, server_name}",
+   "client_method": "CampaignSocketManger.__exitCampaignSceneHandler",
+   "notes_pt": "próprio → RoomManager.dispose + exitBack",
+   "source_ref": "m3/scripts/map/campaign/CampaignSocketManger.as:338,1937-1975",
+   "step_order": 38
+  },
+  {
+   "dungeon_code": "pve_room",
+   "phase": "match",
+   "direction": "accept",
+   "opcode": 4994,
+   "opcode_name": "U_C_MATCH_COMFIRE",
+   "proto_message": "PropertyMsg(simple){p1 leftBoss, p2 totalBoss, p4 nome, p5 campaignUid, p6 roomId}",
+   "client_method": "RoomManager.__crossMatchComfirmHandler",
+   "notes_pt": "abre CrossMatchAlertFrame",
+   "source_ref": "core_module/scripts/managers/RoomManager.as:117,563-577",
+   "step_order": 39
+  },
+  {
+   "dungeon_code": "pve_room",
+   "phase": "match",
+   "direction": "send",
+   "opcode": 25157,
+   "opcode_name": "CR_MULTI_MATCH_CHOOSE",
+   "proto_message": "PropertyMsg(simple){param1 1/0, param5, param6}",
+   "client_method": "RoomSocketOuterManager",
+   "notes_pt": "aceitar/recusar match cross",
+   "source_ref": "m9/scripts/room/net/RoomSocketOuterManager.as:125-133",
+   "step_order": 40
+  },
+  {
+   "dungeon_code": "pve_room",
+   "phase": "match",
+   "direction": "send",
+   "opcode": 25156,
+   "opcode_name": "CR_MULTICAMPAIGN_MATCH",
+   "proto_message": "RoomReqMsg{state, user_id, serverName}",
+   "client_method": "RoomSocketOutManager",
+   "notes_pt": "continuar/cancelar match (após 4995)",
+   "source_ref": "core_module/scripts/managers/RoomSocketOutManager.as:78-86",
+   "step_order": 41
+  },
+  {
+   "dungeon_code": "pve_room",
+   "phase": "match",
+   "direction": "send",
+   "opcode": 8780,
+   "opcode_name": "C_MULITY_CAMPAIGN_REQUEST",
+   "proto_message": "PropertyMsg(simple){param1=roomId}",
+   "client_method": "RoomListSocketOutManager",
+   "notes_pt": "link de sala no chat; resposta 4913",
+   "source_ref": "core_module/scripts/yishi/manager/RoomListSocketOutManager.as:86-92",
+   "step_order": 42
+  },
+  {
+   "dungeon_code": "pve_room",
+   "phase": "match",
+   "direction": "accept",
+   "opcode": 4913,
+   "opcode_name": "U_C_MULITY_CAMPAIGN_REQUEST",
+   "proto_message": "PropertyMsg(simple){p1 roomId, p2 campaignId, p6 chefes, p7 emCampanha}",
+   "client_method": "BaseManager.__mulityCampaignRequestHandler",
+   "notes_pt": "confirma → 5024 is_invite",
+   "source_ref": "core_module/scripts/yishi/manager/BaseManager.as:1156-1218",
+   "step_order": 43
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "create",
+   "direction": "send",
+   "opcode": 8972,
+   "opcode_name": "C_TEAM_CAMPAIGN_OP",
+   "proto_message": "MarriageOpMsg{op_type, property1..5, isNoGet}",
+   "client_method": "GroupfbSender",
+   "notes_pt": "todas as ações do Grupo FB",
+   "source_ref": "core_module/scripts/mvc/module/groupfb/GroupfbSender.as:12-205",
+   "step_order": 44
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "list",
+   "direction": "accept",
+   "opcode": 4785,
+   "opcode_name": "U_C_TEAM_CAMPAIGN_LIST",
+   "proto_message": "TeamRoomListMsg",
+   "client_method": "GroupfbManager.__roomListHandler",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/GroupfbManager.as:62",
+   "step_order": 45
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "enter",
+   "direction": "accept",
+   "opcode": 4786,
+   "opcode_name": "U_C_TEAM_CAMPAIGN_PLAYER_STATE",
+   "proto_message": "TeamRoomMsg{id, name, pwd, room_state, count, capacity, []infos:TeamPlayerMsg, master_id, boss_count, is_invite}",
+   "client_method": "GroupfbManager.__playerState",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/GroupfbManager.as:63",
+   "step_order": 46
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "enter",
+   "direction": "accept",
+   "opcode": 4791,
+   "opcode_name": "U_C_TEAM_ROOM_INFO",
+   "proto_message": "TeamRoomMsg",
+   "client_method": "GroupfbManager.__serachRoomResultHandler",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/GroupfbManager.as:64",
+   "step_order": 47
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "state",
+   "direction": "accept",
+   "opcode": 4784,
+   "opcode_name": "U_C_TEAM_CAMPAIGN_STATE",
+   "proto_message": "MatchStateMsg{match_state, param1, param2}",
+   "client_method": "GroupfbManager.__campaignSwitch",
+   "notes_pt": null,
+   "source_ref": "core_module/scripts/managers/GroupfbManager.as:61",
+   "step_order": 48
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "in_game",
+   "direction": "accept",
+   "opcode": 4790,
+   "opcode_name": "U_C_TEAM_CAMPAIGN_ATTACK",
+   "proto_message": null,
+   "client_method": "CampaignSocketManger.__groupfbMovieHandler",
+   "notes_pt": null,
+   "source_ref": "m3/scripts/map/campaign/CampaignSocketManger.as:376",
+   "step_order": 49
+  },
+  {
+   "dungeon_code": "groupfb",
+   "phase": "in_game",
+   "direction": "accept",
+   "opcode": 4792,
+   "opcode_name": "U_C_TEAM_CAMPAIGN_DAMAGE",
+   "proto_message": null,
+   "client_method": "CampaignSocketManger.__groupfbAttackHandler",
+   "notes_pt": null,
+   "source_ref": "m3/scripts/map/campaign/CampaignSocketManger.as:377",
+   "step_order": 50
+  }
+ ],
+ "login_states": {
+  "4": "副本 campanha",
+  "5": "batalha",
+  "6": "sandbox (Matança de Madrugada)",
+  "7": "Salão do Jogo",
+  "8": "Guerra Secreta",
+  "outros": "castelo / tutorial"
+ },
+ "client_states": {
+  "0": "CASTLE_SCENE",
+  "1": "lista de salas (não usado)",
+  "2": "PVE_ROOM_SCENE",
+  "3": "OUTER_CITY_SCENE",
+  "4": "CAMPAIGN_MAP_SCENE",
+  "5": "BATTLE_SCENE",
+  "6": "PVP_ROOM_SCENE"
+ },
+ "create_campaign_type": {
+  "1": "criar",
+  "2": "entrar",
+  "3": "transferir (portal, sem loading)",
+  "4": "convite",
+  "-1": "já em jogo"
+ }
+}

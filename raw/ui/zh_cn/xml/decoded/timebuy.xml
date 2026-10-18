@@ -1,0 +1,307 @@
+<style
+  name="timebuy"
+  source="ui/zh_cn/swf/timebuy.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.timeBuyNameTextStyle_t"
+      args="Arial,12,0x95cadb,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.timeBuyValueTextStyle_t"
+      args="Arial,14,0xbaad89,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.PurchaseValueTextStyle_t"
+      args="Arial,12,0xbaad89,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.PurchaseNumTextStyle_t"
+      args="Arial,14,0xbaad89,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.timeRemainingTextStyle_t"
+      args="Arial,16,0xfff17e,true,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="timebuy.timeRemainingTextStyle_f"
+      args="0x000000,1,2,2,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.descTime_t"
+      args="Arial,15,0xfff17e,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.timeBuyListPrice_t"
+      args="Arial,14,0x999999,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.PointTextStyle1_t"
+      args="Arial,16,0x95feff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="timebuy.PageTextStyle1_t"
+      args="Arial,16,0xfffdf4,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.timebuy.roleImg"
+      x="-40"
+      y="-44" />
+    <bitmapData
+      resourceLink="asset.timebuy.splitLine"
+      x="202"
+      y="439" />
+    <bitmapData
+      resourceLink="asset.timebuy.ShopDisplayShow"
+      x="32"
+      y="343" />
+    <bitmapData
+      resourceLink="asset.timebuy.ChargeBtnImg"
+      x="0"
+      y="0" />
+    <!-- 页码按钮.png-->
+    <bitmapData
+      resourceLink="asset.timebuy.pageBtnBg"
+      x="0"
+      y="0" />
+    <!-- 上一页.png-->
+    <bitmapData
+      resourceLink="asset.timebuy.LastPageImg"
+      x="0"
+      y="0" />
+    <!-- 下一页.png-->
+    <bitmapData
+      resourceLink="asset.timebuy.NextPageImg"
+      x="0"
+      y="0" />
+    <!-- 页码背景 -->
+    <bitmapData
+      resourceLink="asset.timebuy.pageNumBg"
+      x="534"
+      y="431" />
+    <bitmapData
+      resourceLink="asset.timebuy.worthImg"
+      x="16"
+      y="28" />
+    <bitmapData
+      resourceLink="asset.timebuy.discountNum" />
+    <bitmapData
+      resourceLink="asset.timebuy.discountImg" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="timebuy.BaseItemView2"
+      iconStyle="timebuy.BaseItemViewIcon2"
+      profileStyle="core.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="36"
+      fashionIconY="32"
+      profileX="0"
+      profileY="0"
+      profileWidth="55"
+      profileHeight="55"
+      showProfile="true"
+      x="20"
+      y="41" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="timebuy.BaseItemViewIcon2"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="27"
+      loadingY="27"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="timebuy.TimeBuyFrame"
+      stylename="timebuy.TimeBuyFrame"
+      parentStyle="core.Frame1"
+      width="945"
+      height="612"
+      containerX="13"
+      containerY="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="timebuy.bg01"
+      parentStyle="core.describeBackground_style04"
+      x="200"
+      y="21"
+      width="711"
+      height="507" />
+    <!-- 框背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="timeBuy.MouseOver1"
+      resourceLink="asset.core.shopover_scale9bg1,asset.core.shopover_scale9bg2,asset.core.shopover_scale9bg3,asset.core.shopover_scale9bg4,asset.core.shopover_scale9bg5,asset.core.shopover_scale9bg6,asset.core.shopover_scale9bg7,asset.core.shopover_scale9bg8,asset.core.shopover_scale9bg9"
+      width="234"
+      height="127" />
+    <!-- 限时热购 选中框 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="timebuy.MouseOverTimeBuy"
+      parentStyle="timeBuy.MouseOver1"
+      width="226"
+      height="127" />
+    <!-- 限时热购 选中时的背景图片 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="timebuy.GoodsItemTimeBuy"
+      resourceLink="asset.timebuy.buyItemBg,timebuy.MouseOverTimeBuy" />
+    <!-- 限时热购的背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="timebuy.timeBuyGoodsItemBg"
+      resourceLink="asset.timebuy.buyItemBg,timebuy.GoodsItemTimeBuy" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timebuy.BuyBtn"
+      backStyle="asset.timebuy.btnBg"
+      iconStyle="asset.timebuy.btnIcon"
+      iconInnerRectString="19,40,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="138"
+      y="89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.GoodsNameTextStyle"
+      textFormatStyle="timebuy.timeBuyNameTextStyle_t"
+      x="76"
+      y="42"
+      autoSize="none"
+      wordWrap="true"
+      width="145"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.goodsItem4ValueTextStyle"
+      textFormatStyle="timebuy.timeBuyValueTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="111"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.PurchaseTextStyle"
+      textFormatStyle="timebuy.PurchaseValueTextStyle_t"
+      height="20"
+      x="20"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.PurchaseNumTextStyle"
+      textFormatStyle="timebuy.PurchaseNumTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="72"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.timeRemaining"
+      textFormatStyle="timebuy.timeRemainingTextStyle_t"
+      filterString="timebuy.timeRemainingTextStyle_f"
+      autoSize="none"
+      x="92"
+      y="10"
+      height="22"
+      width="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.remainingTimeTxt"
+      textFormatStyle="timebuy.descTime_t"
+      filterString="core.normal_f"
+      height="20"
+      x="20"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.timeBuyListPromptTxt"
+      textFormatStyle="timebuy.timeBuyListPrice_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="78"
+      y="68" />
+    <!-- 页码数字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.PageTextStyle1"
+      textFormatStyle="timebuy.PageTextStyle1_t"
+      autoSize="none"
+      x="531"
+      y="436"
+      width="60"
+      height="20" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timebuy.LastPageBtn"
+      backStyle="asset.timebuy.PageBtnBg"
+      iconStyle="asset.timebuy.LastPageImg"
+      width="69"
+      height="29"
+      x="453"
+      y="432"
+      iconInnerRectString="12,42,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timebuy.NextPageBtn"
+      backStyle="asset.timebuy.PageBtnBg"
+      iconStyle="asset.timebuy.NextPageImg"
+      width="69"
+      height="29"
+      x="609"
+      y="432"
+      iconInnerRectString="12,42,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="timebuy.pointImage"
+      resourceLink="asset.timebuy.ShopDisplayShow,asset.timebuy.pointIconBg"
+      imageRectString="0|175|0|31|13,2|72|7|21|13"
+      x="221"
+      y="470"
+      width="177"
+      height="33" />
+    <!-- 钻石文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="timebuy.PointTextStyle1"
+      textFormatStyle="timebuy.PointTextStyle1_t"
+      autoSize="none"
+      x="297"
+      y="476"
+      width="100"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="timebuy.ChargeBtn"
+      backStyle="asset.timebuy.ChargeBtnImg"
+      x="730"
+      y="450"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="timebuy.discountBg"
+      resourceLink="asset.timebuy.discountBg"
+      x="170"
+      y="-17" />
+  </components>
+</style>

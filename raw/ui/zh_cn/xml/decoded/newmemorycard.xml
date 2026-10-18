@@ -1,0 +1,302 @@
+<style
+  name="newmemorycard"
+  source="ui/zh_cn/swf/newmemorycard.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewMemoryCardFrame.helpTxt_t"
+      args="Arial,12,0xeee095,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewMemoryCardFrame.linkTxt_t"
+      args="Arial,12,0x48d72a,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewMemoryCardFrame.stepTxt_t"
+      args="Arial,12,0xc39a59,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewMemoryCardFrame.buyStepTxt_t"
+      args="Arial,12,0x7ae606,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewMemoryCardFrame.remainTimeText_t"
+      args="Arial,12,0x00fff0,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.newmemoryitem.selectedBg"
+      x="-1"
+      y="-5" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.newmemoryitem.ItemEffect"
+      stylename="asset.newmemoryitem.ItemEffect"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="newmemoryitem.item"
+      fashionTextY="50"
+      fashionIconY="50"
+      iconStyle="newmemoryitem.itemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="newmemoryitem.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="newmemoryitem.itemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="25"
+      loadingY="25"
+      x="1"
+      iconHeight="50"
+      iconWidth="50"
+      y="1" />
+    <custom
+      classname="asset.newmemoryitem.iconEffect"
+      stylename="asset.newmemoryitem.iconEffect"
+      x="48"
+      y="63" />
+    <custom
+      classname="asset.newmemoryitem.borderEffect"
+      stylename="asset.newmemoryitem.borderEffect"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.newmemoryitem.lightEffect"
+      stylename="asset.newmemoryitem.lightEffect"
+      x="48"
+      y="63" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="NewMemoryCardFrame.specialItem"
+      fashionTextY="60"
+      fashionIconY="60"
+      iconStyle="NewMemoryCardFrame.specialItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="NewMemoryCardFrame.specialItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      x="697"
+      y="280" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="NewMemoryCardFrame.specialItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="1"
+      iconHeight="60"
+      iconWidth="60"
+      y="1" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="NewMemoryCardGoodsFrame.SimpleTileList"
+      vSpace="1"
+      hSpace="2" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="NewMemoryCardGoodsFrame.BagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="NewMemoryCardGoodsFrame.BagCellIcon"
+      textStyle="core.BaseItemText"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="25"
+      strengthenY="23" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="NewMemoryCardGoodsFrame.BagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="newmemorycard.NewMemoryCardFrame"
+      stylename="newmemorycard.NewMemoryCardFrame"
+      parentStyle="core.Frame1"
+      width="875"
+      height="660"
+      containerX="15"
+      containerY="55" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="NewMemoryCardFrame.bg"
+      parentStyle="core.describeBackground_style09"
+      x="0"
+      y="5"
+      width="840"
+      height="555" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="NewMemoryCardItem.bg"
+      resourceLink="asset.NewMemoryCardItem.bg1,asset.NewMemoryCardItem.bg2"
+      scaleX="1"
+      scaleY="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newmemoryitem.BaseItemText"
+      parentStyle="core.BaseItemText"
+      autoDisplay="false"
+      x="6"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="NewMemoryCardFrame.specialItemText"
+      parentStyle="core.BaseItemText"
+      x="15"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="NewMemoryCardFrame.rightBg"
+      resourceLink="asset.NewMemoryCardFrame.rightBg"
+      scaleGridString="10,10,50,50"
+      x="617"
+      y="10"
+      width="220"
+      height="545" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="NewMemoryCardFrame.txtBg"
+      resourceLink="asset.NewMemoryCardFrame.txtBack,asset.NewMemoryCardFrame.descTxt,asset.NewMemoryCardFrame.txtBack,asset.NewMemoryCardFrame.specialTxt,asset.NewMemoryCardFrame.iconBg"
+      imageRectString="0|0|19,10|5|19,0|215|19,10|213|19,65|250|19"
+      x="615"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="NewMemoryCardFrame.spanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,211,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="215"
+      height="180"
+      x="620"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="NewMemoryCardFrame.helpTxt"
+      textFormatStyle="NewMemoryCardFrame.helpTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="290"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="NewMemoryCardFrame.refreshBtn"
+      backStyle="asset.NewMemoryCardFrame.btnBg"
+      iconStyle="asset.NewMemoryCardFrame.refreshTXt"
+      iconInnerRectString="32,96,13,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="645"
+      y="375" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="NewMemoryCardFrame.buyBtn"
+      backStyle="asset.NewMemoryCardFrame.btnBg"
+      iconStyle="asset.NewMemoryCardFrame.buyTxt"
+      iconInnerRectString="32,96,13,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="645"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="NewMemoryCardFrame.linkTxt"
+      textFormatStyle="NewMemoryCardFrame.linkTxt_t"
+      filterString="core.normal_f"
+      mouseEnabled="true"
+      selectable="false"
+      x="730"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="NewMemoryCardFrame.stepTxt"
+      textFormatStyle="NewMemoryCardFrame.stepTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="674"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="NewMemoryCardGoodsFrame.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="302"
+      height="230"
+      x="-12"
+      y="0" />
+    <component
+      classname="newmemorycard.NewMemoryCardGoodsFrame"
+      parentStyle="core.Frame2"
+      stylename="newmemorycard.goodsFrame"
+      width="345"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="NewMemoryCardFrame.buyStepTxt"
+      textFormatStyle="NewMemoryCardFrame.buyStepTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="665"
+      y="505" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="NewMemoryCardFrame.remainTimeText"
+      textFormatStyle="NewMemoryCardFrame.remainTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="622"
+      y="525"
+      width="215"
+      height="25" />
+  </components>
+</style>

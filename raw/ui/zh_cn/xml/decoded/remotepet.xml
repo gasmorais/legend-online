@@ -1,0 +1,1041 @@
+<style
+  name="remotepet"
+  source="ui/zh_cn/swf/remotepet.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.SkillView.text_f"
+      args="Arial,12,0x48d72a,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetInfoView.currText_f"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetInfoView.rankText_f"
+      args="Arial,12,0x48d72a,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetListView.restText_f"
+      args="Arial,12,0xffba00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetHeadItemView.friendText_f"
+      args="Arial,10,0xffba00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetListView.enterWarText_f"
+      args="Arial,12,0xffea00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetListView.tipText_f"
+      args="Arial,12,0xff0000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.views.leveltxt_f"
+      args="Arial,12,0xfdf1c6,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetTurnDownView.currText_f"
+      args="Arial,14,0xff0000,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetFriendItemView.nameTxt_f"
+      args="Arial,14,0xe4d29c,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetFriendItemView.fightTxt_f"
+      args="Arial,12,0xfcedcb,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetFriendItemView.petInfoTxt_f"
+      args="Arial,14,0xff0000,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetOrderFrame.Title_f"
+      args="Arial,12,0xe7c88b,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetOrderItemView.sortText_t1"
+      args="Arial,12,0xe4d29c,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetOrderItemView.sortText_t2"
+      args="Arial,12,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remotepet.RemotePetTurnFrame.goodsTxt_f"
+      args="Arial,12,0x48d72a,,,true,,,left" />
+    <!-- 资质决定颜色 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petLvlProperty_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petLvlProperty_t2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petLvlProperty_t3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petLvlProperty_t4"
+      args="Arial,12,0xc300ff"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petLvlProperty_t5"
+      args="Arial,12,0xff9600"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="tips.petLvlProperty_t6"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.remote.line01"
+      x="8"
+      y="423"
+      width="624" />
+    <bitmapData
+      resourceLink="asset.remote.line02"
+      x="630"
+      y="28"
+      height="505" />
+    <bitmapData
+      resourceLink="asset.remotepet.skillTitle"
+      x="20"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.remotepet.infoBack"
+      x="0"
+      y="0"
+      width="380" />
+    <bitmapData
+      resourceLink="asset.remotepet.petFightImg"
+      x="20"
+      y="122" />
+    <bitmapData
+      resourceLink="asset.remotepet.friendFightImg"
+      x="210"
+      y="122" />
+    <bitmapData
+      resourceLink="asset.remotepet.headAdd"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.remotepet.ArrmorImg" />
+    <bitmapData
+      resourceLink="asset.remotepet.views.levelBack"
+      x="30"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnDownView.petBack"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnSingleItemView.progressBg"
+      x="0"
+      y="50" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnSingleItemView.progress"
+      x="7"
+      y="56" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetFriendFrame.contentBack"
+      x="-5"
+      y="37" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetFriendView.onLineFriend"
+      x="40"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetFriendView.fightImg"
+      x="170"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetFriendView.petInfo"
+      x="310"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetFriendItemView.ItemLine"
+      x="-5"
+      y="40"
+      width="460" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnInfoItemView.normal"
+      x="-17"
+      y="-21.5" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnInfoItemView.specail"
+      x="-30.5"
+      y="-30" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnInfoItemView.Boss"
+      x="-39.5"
+      y="-38" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnInfoItemView.now"
+      x="-20.5"
+      y="-23.5" />
+    <bitmapData
+      resourceLink="asset.remotepet.numberFight" />
+    <bitmapData
+      resourceLink="asset.remotepet.numberTurn" />
+    <bitmapData
+      resourceLink="asset.remotepet.RemotePetTurnUpView.lineImg2"
+      x="70"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.remotepet.ownerImg"
+      x="-32"
+      y="-35" />
+    <bitmapData
+      resourceLink="asset.remotepet.petBack"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.remotepet.normalEffect"
+      stylename="asset.remotepet.normalEffect"
+      x="-9"
+      y="-16" />
+    <custom
+      classname="asset.remotepet.bossEffect"
+      stylename="asset.remotepet.bossEffect"
+      x="-50"
+      y="-43" />
+    <custom
+      classname="asset.remotepet.BottomHpStripAsset"
+      stylename="asset.remotepet.BottomHpStripAsset"
+      x="-34"
+      y="7" />
+    <custom
+      classname="asset.remotepet.PawnBottomAsset"
+      stylename="asset.remotepet.PawnBottomAsset"
+      y="10" />
+    <custom
+      classname="remotepet.views.RemotePetFormationView"
+      stylename="remotepet.formationView"
+      x="7"
+      y="28" />
+    <custom
+      classname="remotepet.views.RemoteSkillView"
+      stylename="remotepet.skillView"
+      x="14"
+      y="412" />
+    <custom
+      classname="remotepet.views.RemotePetListView"
+      stylename="remotepet.petListView"
+      x="630"
+      y="28" />
+    <custom
+      classname="remotepet.views.RemotePetInfoView"
+      stylename="remotepet.infoView"
+      x="630"
+      y="348" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remotepet.views.skillIcon"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      iconWidth="41"
+      iconHeight="41"
+      x="12"
+      y="9" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remotepet.RemotePetHeadItemView.headIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="47"
+      iconWidth="47"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      tipStyle="yishi.view.tips.RemotePetTip"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remotepet.RemotePetSkillItemView.SkillBookIcon"
+      parentStyle="core.PawnSkillIcon"
+      iconHeight="40"
+      iconWidth="40"
+      y="0"
+      x="0" />
+    <custom
+      classname="remotepet.views.RemotePetSkillItemView"
+      stylename="remotepet.RemotePetSkillItemView"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remotepet.RemotePetHeadSelectItemView.petIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="47"
+      iconWidth="47"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      tipStyle="yishi.view.tips.RemotePetTip"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="remotepet.views.RemotePetTurnUpView"
+      stylename="remotepet.RemotePetTurnFrame.upView"
+      x="0"
+      y="" />
+    <custom
+      classname="remotepet.views.RemotePetTurnDownView"
+      stylename="remotepet.RemotePetTurnFrame.downView"
+      x="0"
+      y="380" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remotepet.RemotePetTurnSingleItemView.icon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="47"
+      iconWidth="47"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      tipStyle="yishi.view.tips.RemotePetTip"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="10" />
+    <custom
+      classname="remotepet.views.RemotePetFriendView"
+      stylename="remotepet.RemotePetFriendFrame.friendView"
+      x="0"
+      y="0" />
+    <custom
+      classname="remotepet.views.RemotePetFriendItemView"
+      stylename="remotepet.RemotePetFriendView.friendItemAsset"
+      width="383"
+      height="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remotepet.RemotePetTurnInfoItemView.icon"
+      iconX="3"
+      iconY="3"
+      iconWidth="49"
+      iconHeight="49"
+      x="-23"
+      y="-28" />
+    <custom
+      classname="remotepet.views.RemotePetTurnInfoItemView"
+      stylename="remotepet.RemotePetTurnInfoItemView"
+      tipStyle="yishi.view.tips.RemotePetTurnTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      isFollowMouse="false" />
+  </customDisplay>
+  <components>
+    <component
+      classname="remotepet.RemotePetReadyFrame"
+      stylename="remotepet.RemotePetReadyFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="1045"
+      height="625" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="remotepet.bg"
+      parentStyle="core.describeBackground_style11"
+      width="1005"
+      height="512"
+      x="5"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="remote.RemotePetFormationView.back"
+      resourceLink="asset.remotepetformation.Back,asset.remotepetformation.Title"
+      imageRectString="0|624|0|395|13,183|258|0|45|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetFormationItemView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      y="-190" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.SkillView.text1"
+      textFormatStyle="remotepet.SkillView.text_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="230"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="remotepet.skill.hBox"
+      x="10"
+      y="45"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.SkillView.text2"
+      textFormatStyle="remotepet.SkillView.text_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="430"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remotepet.views.skillBack"
+      resourceLink="asset.remotepet.skillBack"
+      x="10"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetInfoView.currText"
+      textFormatStyle="remotepet.RemotePetInfoView.currText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="20"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetInfoView.maxText"
+      textFormatStyle="remotepet.RemotePetInfoView.currText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="170"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetInfoView.rankText"
+      textFormatStyle="remotepet.RemotePetInfoView.rankText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="115"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remotepet.RemotePetInfoView.startBtn"
+      backStyle="asset.remotepet.btnBack"
+      iconStyle="asset.remotepet.startIcon"
+      width="200"
+      height="57"
+      iconInnerRectString="48,104,16,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="90"
+      y="54" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remotepet.RemotePetInfoView.nextBtn"
+      backStyle="asset.remotepet.btnBack"
+      iconStyle="asset.remotepet.nextIcon"
+      width="200"
+      height="57"
+      iconInnerRectString="48,104,16,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="90"
+      y="54" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="remotepet.RemotePetListView.titleImg"
+      resourceLink="asset.remotepet.petListBack,asset.remotepet.petListTitle"
+      imageRectString="0|247|0|30|13,10|275|5|27|13"
+      x="60"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetListView.restText"
+      textFormatStyle="remotepet.RemotePetListView.restText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="25"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetHeadItemView.friendText"
+      textFormatStyle="remotepet.RemotePetHeadItemView.friendText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="55"
+      x="0"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetListView.enterWarText"
+      textFormatStyle="remotepet.RemotePetListView.enterWarText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="45"
+      x="85"
+      y="32"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetListView.tipText"
+      textFormatStyle="remotepet.RemotePetListView.tipText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="45"
+      x="170"
+      y="33"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="remotepet.RemotePetHeadItemView.headBack"
+      resourceLink="asset.remotepet.headBack"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetSkillItemView.ItemBack"
+      parentStyle="core.ItemBack"
+      x="0"
+      y="0"
+      width="40"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetHeadSelectView.bg"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="340"
+      height="177" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetHeadSelectItemView.levelTxt"
+      textFormatStyle="remotepet.RemotePetListView.tipText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="1"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.RemotePetHeadSelectItemView.closeBtn"
+      backStyle="asset.remotepet.delete"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="18"
+      height="18"
+      x="32"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.views.leveltxt"
+      textFormatStyle="remotepet.views.leveltxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="35"
+      x="24"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.views.addBtn"
+      backStyle="asset.remotepet.views.addBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="23"
+      height="22"
+      x="40"
+      y="0" />
+    <component
+      classname="remotepet.RemotePetTurnFrame"
+      stylename="remotepet.RemotePetTurnFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="924"
+      height="615" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="remotepet.RemotePetTurnFrame.bg"
+      parentStyle="core.describeBackground_style11"
+      width="884"
+      height="504"
+      x="5"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remotepet.RemotePetTurnFrame.titleBack"
+      resourceLink="asset.remotepet.TurnBack1,asset.remotepet.TurnBack2,asset.remotepet.TurnBack3,asset.remotepet.TurnBack4,asset.remotepet.TurnBack5,asset.remotepet.TurnBack6,asset.remotepet.TurnBack7"
+      y="28"
+      x="7" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="remotepet.RemotePetTurnFrame.goodsTxtBtn"
+      textStyle="remotepet.RemotePetTurnFrame.goodsTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="110"
+      height="20"
+      x="660"
+      y="25"
+      buttonMode="true"
+      displacement="true"
+      enable="true"
+      enableHtml="false"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetTurnFrame.goodsTxt"
+      textFormatStyle="remotepet.RemotePetTurnFrame.goodsTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="620"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetTurnFrame.orderTxt"
+      textFormatStyle="remotepet.RemotePetInfoView.rankText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="730"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remotepet.RemotePetTurnUpView.lineImg"
+      resourceLink="asset.remotepet.RemotePetTurnUpView.lineImg,asset.remotepet.RemotePetTurnUpView.lineImg2"
+      y="60"
+      x="60" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.RemotePetTurnUpView.lastBtn"
+      backStyle="remotepet.RemotePetTurnUpView.nextBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="52"
+      height="68"
+      x="66"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.RemotePetTurnUpView.nextBtn"
+      backStyle="asset.remotepet.RemotePetTurnUpView.Btn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="52"
+      height="68"
+      x="820"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="remotepet.RemotePetTurnUpView.nextBtnBack"
+      resourceLink="asset.remotepet.RemotePetTurnUpView.Btn"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remotepet.RemotePetTurnDownView.toReadyBtn"
+      backStyle="asset.remotepet.RemotePetTurnDownView.btnBack"
+      iconStyle="asset.remotepet.RemotePetTurnDownView.ready"
+      width="227"
+      height="71"
+      iconInnerRectString="55,117,22,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="275"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remotepet.RemotePetTurnDownView.enterWarBtn"
+      backStyle="asset.remotepet.RemotePetTurnDownView.btnBack"
+      iconStyle="asset.remotepet.RemotePetTurnDownView.enter"
+      width="227"
+      height="71"
+      iconInnerRectString="55,118,22,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="500"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetTurnDownView.currText"
+      textFormatStyle="remotepet.RemotePetTurnDownView.currText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="670"
+      y="100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetTurnDownView.maxText"
+      textFormatStyle="remotepet.RemotePetTurnDownView.currText_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="670"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="remotepet.RemotePetTurnDownView.hBox"
+      x="20"
+      y="40"
+      spacing="-6" />
+    <component
+      classname="remotepet.RemotePetFriendFrame"
+      stylename="remotepet.RemotePetFriendFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="538"
+      height="415" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="remotepet.RemotePetFriendFrame.back"
+      parentStyle="core.describeBackground_style11"
+      width="508"
+      height="325"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetFriendFrame.upBack"
+      resourceLink="asset.remotepet.RemotePetFriendFrame.upBack"
+      scaleGridString="20,10,30,20"
+      x="-5"
+      y="10"
+      width="500"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetFriendFrame.downBack"
+      resourceLink="asset.remotepet.RemotePetFriendFrame.downBack"
+      scaleGridString="10,10,20,20"
+      x="-5"
+      y="270"
+      width="500"
+      height="56" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="remotepet.RemotePetFriendView.ListPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="20,-54,-2,30,3"
+      viewportInnerRectString="0,0,-32,32,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|remotepet.RemotePetFriendView.friendItemAsset,38,383"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="441"
+      height="262"
+      x="0"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remotepet.RemotePetFriendView.okBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="190"
+      y="278" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetFriendItemView.ItemBg02"
+      resourceLink="asset.remotepet.RemotePetFriendItemView.ItemBg02"
+      scaleGridString="10,10,20,20"
+      width="480"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remotepet.RemotePetFriendItemView.ItemBg"
+      resourceLink=",remotepet.RemotePetFriendItemView.ItemBg02"
+      x="-3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetFriendItemView.nameTxt"
+      textFormatStyle="remotepet.RemotePetFriendItemView.nameTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="24"
+      x="0"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetFriendItemView.fightTxt"
+      textFormatStyle="remotepet.RemotePetFriendItemView.fightTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24"
+      x="150"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetFriendItemView.petInfoTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="24"
+      x="300"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remotepet.RemotePetTurnInfoItemView.back"
+      resourceLink="asset.remotepet.RemotePetTurnInfoItemView.normal,asset.remotepet.RemotePetTurnInfoItemView.specail,asset.remotepet.RemotePetTurnInfoItemView.Boss,asset.remotepet.RemotePetTurnInfoItemView.now"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="remotepet.RemotePetOrderFrame"
+      stylename="remotepet.RemotePetOrderFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="350"
+      height="570"
+      x="930"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetOrderFrame.bg1"
+      parentStyle="core.describeBackground_style04"
+      width="315"
+      height="480"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetOrderFrame.titleBg1"
+      resourceLink="asset.core.titleBg1"
+      scaleGridString="20,10,30,20"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="remotepet.RemotePetOrderFrame.titleBg3"
+      resourceLink="asset.core.titleBg3"
+      scaleGridString="20,10,30,20"
+      height="35" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="remotepet.RemotePetOrderFrame.titleBg"
+      resourceLink="remotepet.RemotePetOrderFrame.titleBg1,remotepet.RemotePetOrderFrame.titleBg3"
+      imageRectString="0|155|0|35|13,155|155|0|35|13"
+      x="2"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="remotepet.RemotePetOrderFrame.vBox"
+      x="2"
+      y="47"
+      spacing="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderFrame.orderTitle"
+      textFormatStyle="remotepet.RemotePetOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="5"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderFrame.nameTitle"
+      textFormatStyle="remotepet.RemotePetOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="70"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderFrame.indexTitle"
+      textFormatStyle="remotepet.RemotePetOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="40"
+      x="240"
+      y="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderFrame.fightTitle"
+      textFormatStyle="remotepet.RemotePetOrderFrame.Title_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="40"
+      x="170"
+      y="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="remotepet.RemotePetOrderItemView.Line"
+      resourceLink="asset.core.SellItemLine1,asset.core.SellItemLine2,asset.core.SellItemLine3"
+      width="315"
+      height="2"
+      x="0"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="remotepet.RemotePetOrderItemView.vipText"
+      textFieldStyle="remotepet.RemotePetOrderItemView.vipTextField"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="136"
+      height="20"
+      x="37"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderItemView.vipTextField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="136"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderItemView.sortText"
+      textFormatStyle="remotepet.RemotePetOrderItemView.sortText_t1,remotepet.RemotePetOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="3"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderItemView.nameText"
+      textFormatStyle="remotepet.RemotePetOrderItemView.sortText_t1,remotepet.RemotePetOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="136"
+      height="20"
+      x="37"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderItemView.indexText"
+      textFormatStyle="remotepet.RemotePetOrderItemView.sortText_t1,remotepet.RemotePetOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="255"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remotepet.RemotePetOrderItemView.fightText"
+      textFormatStyle="remotepet.RemotePetOrderItemView.sortText_t1,remotepet.RemotePetOrderItemView.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="170"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="960"
+      y="-15" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="remotepet.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="remotepet.helpContent"
+      titleText="public.help"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.RemotePetTurnFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="830"
+      y="-15" />
+    <!-- 获得物品窗口 -->
+    <component
+      classname="remotepet.views.RemotePetGoodsFrame"
+      stylename="remotepet.RemotePetGoodsFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="43"
+      width="310"
+      height="310" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remotepet.RemotePetHeadItemView.closeBtn"
+      backStyle="asset.remotepet.delete"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="22"
+      x="32"
+      y="-5" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="remotepet.hardhelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="remotepet.hardhelpContent"
+      titleText="public.help"
+      textWidth="363" />
+  </components>
+</style>

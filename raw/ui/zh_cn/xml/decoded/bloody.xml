@@ -1,0 +1,128 @@
+<style
+  name="bloody"
+  source="ui/zh_cn/swf/bloody.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="molong.nameTextStyle"
+      args="Arial,12,0x39cdde,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="molong.nameTextStyle2"
+      args="Arial,24,0xffe827,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="molong.nameTextStyle2.boxCountdown"
+      args="Arial,18,0xffe827,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bloody.poundEggDesc_t"
+      args="Arial,12,0xffa800,,,,,,left"
+      leading="5" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.molong.num" />
+  </bitmaps>
+  <customDisplay></customDisplay>
+  <components>
+    <!-- 背景框 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bloody.frameBG"
+      resourceLink="asset.bloody.frameBG"
+      x="0"
+      y="0" />
+    <!-- 抽出了最好奖励： -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bloody.winBestReward"
+      resourceLink="asset.bloody.winBestReward"
+      x="0"
+      y="0" />
+    <!-- 恭喜 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bloody.congratulation"
+      resourceLink="asset.bloody.congratulation"
+      x="0"
+      y="0" />
+    <!-- 关闭 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bloody.closeBtn"
+      resourceLink="asset.bloody.closeBtn"
+      x="0"
+      y="0" />
+    <!-- 获得奖励加成： -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bloody.extraReward"
+      resourceLink="asset.bloody.extraReward"
+      x="0"
+      y="0" />
+    <!-- 结束倒计时 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bloody.countDownTxt"
+      resourceLink="asset.bloody.countDownTxt"
+      x="6"
+      y="302" />
+    <component
+      classname="map.campaign.view.ui.bloody.PoundEggView"
+      stylename="bloody.PoundEggView2"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="36"
+      containerY="56"
+      width="594"
+      height="363" />
+    <component
+      classname="map.campaign.view.ui.bloody.PoundEggView"
+      stylename="bloody.PoundEggView"
+      closestyle="bloody.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="bloody.frameBG"
+      moveInnerRectString="120,120,15,35,1"
+      titleOuterRectPosString="0,18,1"
+      closeInnerRectString="29,-10,0,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="35"
+      containerY="40"
+      width="528"
+      height="397" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="bloody.CloseBtn"
+      backStyle="asset.core.closeBtn_style01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32"
+      x="498"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bloody.poundEggDesc"
+      textFormatStyle="bloody.poundEggDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="447"
+      height="42"
+      multiline="true"
+      wordWrap="true"
+      x="0"
+      y="-27" />
+  </components>
+</style>

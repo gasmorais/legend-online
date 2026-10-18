@@ -1,0 +1,594 @@
+<style
+  name="transferbuilding"
+  source="ui/zh_cn/swf/transferbuilding.swf">
+  <sets>
+    <!-- 描述 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="transferbuilding.describe_t"
+      args="Arial,13,0x918a64" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="transferbuilding.describe_f"
+      args="0x6e4f13,1,2,2,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesItemView.planesCount_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesItemView.planesCount_t_1"
+      args="Arial,16,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesRenameFrame.inputTipTxt_t"
+      args="Arial,14,0xffc62c,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesRenameFrame.NameTxt_t"
+      letterSpacing="1"
+      args="Arial,12,0xfddfa9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesItemView.reviveCount_t"
+      args="Arial,16,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PlanesResourceItemView.resourceName_t"
+      args="Arial,14,0xdcc4a6,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="planesItemView.resiText_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="transferbuilding.planesDescText_t"
+      args="Arial,13,0x9d8a66,true,,,,,left"
+      leading="6" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.transferbuilding.PowerAsset"
+      x="139"
+      y="370" />
+    <bitmapData
+      resourceLink="asset.transferbuilding.HelpTxt"
+      x="-4"
+      y="22" />
+    <bitmapData
+      resourceLink="asset.planesListView.titleImage"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.planesListView.splitterBarImage" />
+    <bitmapData
+      resourceLink="asset.planesItemView.IncomeTxt"
+      x="571"
+      y="137" />
+    <bitmapData
+      resourceLink="asset.planesListView.IncomImage" />
+    <bitmapData
+      resourceLink="asset.planesRenameFrame.back"
+      x="-30"
+      y="-25" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 能量条 -->
+    <custom
+      classname="yishi.view.community.BulePowerItem"
+      stylename="transferbuilding.PowerItem"
+      width="248"
+      x="206"
+      y="365" />
+    <custom
+      classname="buildings.transferbuilding.view.PlanesListView"
+      stylename="transferbuilding.planesListView"
+      x="7"
+      y="10" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="planesItemView.lifeContiner"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      ipGapH="-36"
+      isFollowMouse="false"
+      x="270"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="planesListView.BaseItemViewGoodsCellIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="planesListView.BaseItemView"
+      iconStyle="planesListView.BaseItemViewGoodsCellIcon"
+      textStyle="planesListView.BaseItemText"
+      profileStyle="core.GoodsProfileBG" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="PlanesBagFrame.BagCellIcon"
+      iconHeight="43"
+      iconWidth="43"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="buildings.transferbuilding.view.planesbag.PlanesBagCell"
+      stylename="PlanesBagFrame.BagCell"
+      backgroundStyle="core.ItemBack"
+      iconStyle="PlanesBagFrame.BagCellIcon"
+      textStyle="core.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="44"
+      profileHeight="44"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24" />
+    <custom
+      classname="buildings.transferbuilding.view.planesbag.PlanesGoodsItemMenu"
+      stylename="PlanesBagCell.GoodsItemMenu" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesListView.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="2"
+      y="26" />
+    <!--  传送阵Frame-->
+    <component
+      classname="buildings.transferbuilding.view.TransferBuildFrame"
+      stylename="transferbuilding.TransferBuildFrame"
+      parentStyle="core.Frame1"
+      width="830"
+      height="555" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="transferbuilding.back"
+      parentStyle="core.describeBackground_style11"
+      width="794"
+      height="445"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="transferbuilding.planesNotOpenBg"
+      resourceLink="asset.transferbuilding.planesNotOpen"
+      x="3"
+      y="11" />
+    <!-- 传送阵背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="transferbuilding.BackGround1"
+      parentStyle="core.describeBackground_style04"
+      width="470"
+      height="110"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="transferbuilding.BackGround2"
+      parentStyle="core.FameBottomImage"
+      width="470"
+      height="53"
+      x="0"
+      y="115" />
+    <!--描述 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="transferbuilding.DescribeText"
+      textFormatStyle="transferbuilding.describe_t"
+      filterString="transferbuilding.describe_f"
+      autoSize="none"
+      width="320"
+      height="60"
+      x="146"
+      y="392"
+      wordWrap="true" />
+    <!-- 充能按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="transferbuilding.PowerButton"
+      backStyle="asset.transferbuilding.PowerBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="471"
+      y="373" />
+    <!-- 世界地图按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="transferbuilding.MapButton"
+      backStyle="asset.transferbuilding.WorldBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="629"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="transferbuilding.bottomBg"
+      resourceLink="asset.transferbuilding.bottomBg"
+      scaleGridString="10,10,30,20"
+      x="3"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="transferbuilding.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="429"
+      y="-34" />
+    <component
+      classname="buildings.transferbuilding.view.TransferHelpFrame"
+      stylename="transferbuilding.TransferHelpFrame"
+      titleStyle="core.FrameTitleText"
+      backStyle="core.FrameBg2"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="35"
+      containerY="40"
+      width="363"
+      height="273" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="transferbuilding.HelpBack"
+      parentStyle="core.describeBackground_style04"
+      x="-18"
+      y="4"
+      width="326"
+      height="141" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="transferbuilding.HelpConfirmBtn"
+      parentStyle="core.GreenBtn"
+      textStyle="transferbuilding.HelpConfirmBtnTxt"
+      x="106"
+      y="147" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="transferbuilding.HelpConfirmBtnTxt"
+      textFormatStyle="core.friendsButtonSelected_t"
+      autoSize="none"
+      width="74"
+      height="22"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="planesListView.boardBg"
+      parentStyle="core.describeBackground_style06"
+      width="505"
+      height="325"
+      x="-3"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="planesItemView.back"
+      resourceLink="asset.planesItemView.back"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="planesListView.itemVBox"
+      x="0"
+      y="35"
+      spacing="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.planesCount"
+      textFormatStyle="planesItemView.planesCount_t_1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="346"
+      y="298" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.energyCount"
+      textFormatStyle="planesItemView.reviveCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="450"
+      y="297" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.resiText"
+      textFormatStyle="planesItemView.resiText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="250"
+      height="65"
+      x="520"
+      y="170" />
+    <!-- 增加精力按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="planesItemView.addEnergyBtn"
+      backStyle="asset.planesItemView.energyImage"
+      iconStyle="asset.planesListView.addBtnImage"
+      iconInnerRectString="20,16,16,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      x="402"
+      y="290"
+      autoCenter="false" />
+    <!--	位面入侵信息按钮	-->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="planesItemView.attackLogBtn"
+      backStyle="asset.planesListView.attackLogImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="10"
+      tipGapV="10"
+      x="264"
+      y="293" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="planesListView.IncomImage"
+      resourceLink="asset.planesListView.IncomImage"
+      tipStyle="yishi.view.tips.PlanesRewardTip"
+      tipDirctions="7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      isFollowMouse="false"
+      x="5"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.index"
+      textFormatStyle="planesItemView.planesCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="7"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.planesName"
+      textFormatStyle="planesItemView.planesCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="140"
+      height="38"
+      x="28"
+      y="15"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.precent"
+      textFormatStyle="planesItemView.planesCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="185"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="planesItemView.remainTimeText"
+      textFormatStyle="planesItemView.planesCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20" />
+    <!-- 优先使用绑定钻石的选项框 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="planesRenameFrame.useBindPointBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      textStyle="quickbuy.usebindPointTxt"
+      fieldX="-7"
+      fieldY="3"
+      x="30"
+      y="60" />
+    <!-- 放弃按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="planesItemView.giveupBtn"
+      backStyle="asset.planesItemView.giveupBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      x="170"
+      y="18" />
+    <!-- 购买寿命按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="planesItemView.addLifeBtn"
+      backStyle="asset.planesItemView.addBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      x="345"
+      y="15" />
+    <!-- 传送按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="planesItemView.transferBtn"
+      backStyle="asset.planesWarView.transferBtnImgae"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="32"
+      tipGapV="32"
+      x="405"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="planesListView.planesTextImage"
+      resourceLink="asset.planesListView.planesTextImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="304"
+      y="297" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="planesListView.energyImage"
+      resourceLink="asset.planesItemView.energyImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="10"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="528"
+      y="285" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="transferbuilding.planesListView.isOpenAlert"
+      resourceLink="asset.transferbuilding.planesNoOpen.alert,asset.transferbuilding.planesOpen.alert50"
+      x="333"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="transferBuildFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="750"
+      y="-38" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="transferBuildFrame.HelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="transferBuildFrame.HelperFrame.helpContent"
+      titleText="transferBuildFrame.HelperFrame.title"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="planesItemView.sacrificeBtn"
+      backStyle="asset.planesListView.sacrificeBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      x="582"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="planesListView.rightBack"
+      resourceLink="asset.planesListView.rightBackImage"
+      x="493"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="planesListView.splitterBarImage"
+      resourceLink="asset.planesListView.splitterBarImage"
+      x="-5"
+      y="285" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="planesListView.rewardsGoodsHbox"
+      x="522"
+      y="230"
+      spacing="4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="transferbuilding.planesDescText"
+      textFormatStyle="transferbuilding.planesDescText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      wordWrap="true"
+      multiline="true"
+      width="365"
+      height="140"
+      x="220"
+      y="121" />
+    <!--	位面背包	-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="planesListView.planesBagBtn"
+      backStyle="asset.planesBagBtn.back"
+      iconStyle="asset.planesBagBtn.Text"
+      iconInnerRectString="7,75,8,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,0,3"
+      tipGapH="10"
+      tipGapV="10"
+      x="10"
+      y="293" />
+    <component
+      classname="buildings.transferbuilding.view.planesbag.PlanesBagFrame"
+      stylename="planeswar.planesListView.planesBagFrame"
+      parentStyle="core.Frame2"
+      width="387"
+      height="390"
+      containerX="17"
+      containerY="57" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="PlanesBagFrame.SimpleTileList"
+      vSpace="1"
+      hSpace="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="PlanesBagFrame.bagScroll"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="339"
+      height="368"
+      x="37"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PlanesBagFrame.back"
+      resourceLink="asset.PlanesBagFrame.back"
+      scaleGridString="60,60,120,120"
+      x="-5"
+      y="-5"
+      height="291" />
+  </components>
+</style>

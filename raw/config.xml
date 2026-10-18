@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<config>
+		<LANGUAGE value="zh_cn" />
+	<REQUEST_PATH value="http://s1264oas.creaction-network.com/" />
+                
+		<CastleServicePath value='http://s1264oas.creaction-network.com/messagebroker/amf' />
+		<OuterCityServicePath value='http://s1264oas.creaction-network.com/messagebroker/amf' />
+		<FOWARDSITE siteName="Oasis Games" value="http://lobr.creaction-network.com/fbapp/index.php?s=game" />
+        <SocktPath value="s1264oas.creaction-network.com" SocketPort="5000" />
+		<TEMPLATE_PATH value="http://s1264oas.creaction-network.com/xml/" />
+		<ResourcePath value="http://res1264oas.creaction-network.com:8080/" />
+		<!-- 客服图片上传地址 -->
+		<UPLOAD_PATH value="http://121.10.143.167:8080/" />
+                 <FACE_NUM value="20" />
+                 <VERSION value="1.3.0" />	
+	 <SITES>
+        	<NODE site='broas_1264'>
+		<CLIENT_LOGIN_PATH value="http://lobr.creaction-network.com/legend_online/client/download.php" />
+				<!--	客户端标题名	-->
+                <CLIENT_LOGIN_NAME value="Oasis Games" />
+                <!-- 网站名称， 官网，充值地址 -->
+				<SITE value="http://lobr.creaction-network.com/fbapp/index.php?s=game" />
+				<DOCTOR value="http://forum.lobr.creaction-network.com/viewtopic.php?f=12&t=11869"/>
+				<READVIP value="http://lobr.creaction-network.com/fbapp/pay/vip/subscription.php?uid={0}&site={1}" />
+				<PAY value="http://lobr.creaction-network.com/fbapp/pay.php?s=game&username={username}&server_id=21264" />
+				<PORTPATH value="http://assist1264oas.creaction-network.com/snsevents" />
+				<DOCTOR value="http://forum.lobr.creaction-network.com/viewtopic.php?f=6&p=414"/>
+				<SNSPATH value="http://assist1264oas.creaction-network.com/snsevents" />
+				<!-- 开关控制 -->
+				<SWITCHS></SWITCHS>
+                                <RSAKey site="broas_1264" 
+                            PublicKeyModulus="AIu0+SZdBrZr2T5znwXJ0I/SpyntlETpuBrf//4WAMtz0hrYDa+6iD9XhLWcyccjPqs47UGwbDskaGFmS+tEmi7NRQgD3+A/suVfJgaAhWIpk0b2KthG1kTGtMUQF+L8i6AWBnGesAOYryEhVMOukKDlsENpHAzf4ln2SA4EQCKl"
+                                publicExponent="AQAB"			
+                          />
+        	</NODE>
+        </SITES>
+		<sounds source="http://res1264oas.creaction-network.com:8080/audio.swf">
+			<sound id="001" cls="Sound001" /><!-- 副本行走 -->
+			<sound id="002" cls="Sound002" /><!-- 胜利结算 -->
+			<sound id="003" cls="Sound003" /><!-- 背包物品移动或点起 -->
+			<sound id="004" cls="Sound004" /><!-- 打开潘多拉魔盒 -->
+			<sound id="005" cls="Sound005" /><!-- 被密聊时提示音 -->
+			<sound id="006" cls="Sound006" /><!-- 在聊天栏内回车 -->
+			<sound id="007" cls="Sound007" /><!-- 翻牌声音 -->
+			<sound id="008" cls="Sound008" /><!-- 关闭按钮 -->
+			<sound id="009" cls="Sound009" /><!-- 添加好友成功 -->
+			<sound id="010" cls="Sound010" /><!-- 建筑升级 -->
+			<sound id="011" cls="Sound011" /><!-- 点击内城建筑 -->
+			<sound id="012" cls="Sound012" /><!-- 强化失败 -->
+			<sound id="013" cls="Sound013" /><!-- 强化成功 -->
+			<sound id="014" cls="Sound014" /><!-- 新邮件提示音 -->
+			<sound id="015" cls="Sound015" /><!-- 主工具条按钮 -->
+			<sound id="016" cls="Sound016" /><!-- 副本准备或开始 -->
+			<sound id="018" cls="Sound018" /><!-- 副本战役按钮 -->
+			<sound id="019" cls="Sound019" /><!-- 返回按钮 -->
+			<sound id="020" cls="Sound020" /><!-- 打开时间宝箱 -->
+			<sound id="021" cls="Sound021" /><!-- 神树充能 -->
+			<sound id="022" cls="Sound022" /><!-- 确定按钮 -->
+			<sound id="023" cls="Sound023" /><!-- 宝石镶嵌 -->
+			<sound id="024" cls="Sound024" /><!-- 穿戴装备 -->
+			<sound id="025" cls="Sound025" /><!-- 领主升级 -->
+			<sound id="026" cls="Sound026" /><!-- 占星 -->
+			<sound id="027" cls="Sound027" /><!-- 星运合成 -->
+			<sound id="028" cls="Sound028" /><!-- 装备星运 -->
+			<sound id="029" cls="Sound029" /><!-- 血包使用 -->
+			<sound id="030" cls="Sound030" /><!-- 获得物品 -->
+			<sound id="031" cls="Sound031" /><!-- 点击铁匠铺 -->
+			<sound id="032" cls="Sound032" /><!-- 任务完成 -->
+			<sound id="033" cls="Sound033" /><!-- 战斗胜利 -->
+			<sound id="034" cls="Sound034" /><!-- 战斗失败 -->
+			<sound id="035" cls="Sound035" /><!-- 战役外城占星按钮 -->
+			<sound id="036" cls="Sound036" /><!-- 怪物头上出现感叹号 -->
+			<sound id="037" cls="Sound037" /><!-- 获得黄金 -->
+			<sound id="039" cls="Sound039" /><!-- 采集紫晶音效 -->
+			<sound id="040" cls="Sound040" /><!-- 采集木材音效 -->
+			<sound id="041" cls="Sound041" /><!-- 采集黄铜音效 -->
+			<sound id="047" cls="Sound047" />
+			<sound id="048" cls="Sound048" />
+			<sound id="049" cls="Sound049" />
+			<sound id="050" cls="Sound050" />
+		</sounds>
+		<musics root="http://res1264oas.creaction-network.com:8080/sounds/">
+			<!-- 战斗中的背景音乐 filename中的第1个为世界BOSS,第二个为普通BOSS-->
+			<music key="battle" filename="WORLDBOSS,BOSS">
+				<battle_map mapid="1" filename="cybattle01,cybattle02,cybattle03"/><!-- 战斗地图音乐 -->
+				<battle_map mapid="2" filename="battle02,battle02"/><!-- 战斗地图音乐 -->
+				<battle_map mapid="3" filename="battle03,battle03"/><!-- 战斗地图音乐 -->
+				<battle_map mapid="4" filename="battle04,battle04"/><!-- 战斗地图音乐 -->
+				<battle_map mapid="5" filename="battle05,battle05"/><!-- 战斗地图音乐 -->
+				<battle_map mapid="6" filename="battle06,battle06"/><!-- 战斗地图音乐 -->
+			</music>
+			<music key="castle" filename="innercity" />
+			<music key="outercity" filename="outercity" />
+			<music key="campaign_succeed" filename="campaign03" />
+			<music key="farm" filename="farm" />
+			<music key="vehicle" filename="bgm3001" />
+			<music key="space" filename="bgm_space" />
+			<music key="petland" filename="bgm_pet" />
+		</musics>
+		
+		
+	</config>
+	
+	<update>
+		<version from="71" to="72">
+                        <file value="*" />
+                </version>
+ 		<version from="73" to="74">
+ 			<file value="resource/icon/player/18/*" />
+ 			<file value="resource/images/head/*.swf" />
+ 			<file value="resource/sounds/*.flv" />
+ 		</version>
+ 		<version from="75" to="76">
+ 			<file value="2.png" />
+ 		</version>
+ 		<version from="77" to="78">
+ 			<file value="resource/sounds/*.flv" />
+ 		</version>
+ 		<version from="79" to="80">
+ 			<file value="1.png" />
+ 		</version>
+ 		<version from="81" to="82">
+ 			<file value="1.png" />
+ 		</version>
+ 		<version from="83" to="84">
+ 			<file value="1.png" />
+ 		</version>
+                <version from="85" to="86">
+                        <file value="*" />
+                </version>
+
+ 		<version from="89" to="90">
+ 			<file value="*" />
+ 		</version>
+ 		<version from="91" to="92">
+ 			<file value="*" />
+ 		</version>
+ 		<version from="93" to="94">
+ 			<file value="*" />
+ 		</version>
+ 		<version from="95" to="96">
+ 			<file value="*" />
+ 		</version>
+ 		<version from="97" to="98">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="99" to="100">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="100" to="101">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="101" to="102">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="102" to="103">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="103" to="104">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="104" to="105">
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 		</version>
+ 		<version from="105" to="106">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="106" to="107">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="107" to="108">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="108" to="109">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="109" to="110">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="110" to="111">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="111" to="112">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="112" to="113">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="113" to="114">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="114" to="115">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="115" to="116">
+ 			<file value="*" />
+ 		</version>
+ 		<version from="116" to="117">
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 		</version>
+ 		<version from="117" to="118">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="118" to="119">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="119" to="120">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="120" to="121">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="121" to="122">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="122" to="123">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="123" to="124">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="124" to="125">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="125" to="126">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="126" to="127">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="127" to="128">
+ 			<file value="*" />
+ 		</version>
+ 		<version from="128" to="129">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="129" to="130">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="130" to="131">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="131" to="132">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="132" to="133">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="7.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="133" to="134">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="134" to="135">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="135" to="136">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="136" to="137">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="137" to="138">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="138" to="139">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="139" to="140">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="140" to="141">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+ 		<version from="141" to="142">
+ 			<file value="1.png" />
+ 			<file value="2.png" />
+ 			<file value="3.png" />
+ 			<file value="4.png" />
+ 			<file value="5.png" />
+ 			<file value="6.png" />
+ 			<file value="7.png" />
+ 			<file value="8.png" />
+ 			<file value="9.png" />
+ 			<file value="10.png" />
+ 			<file value="11.png" />
+ 			<file value="12.png" />
+ 			<file value="13.png" />
+ 			<file value="14.png" />
+ 			<file value="15.png" />
+ 			<file value="16.png" />
+ 			<file value="ui/zh_cn/swf/*.swf" />
+ 			<file value="ui/zh_cn/xml/*.png" />
+ 			<file value="ui/zh_cn/xml/*.xml" />
+ 		</version>
+        </update>
+
+	<corssdomainfiles>
+		<corssdomainfile value="http://res1264oas.creaction-network.com:8080/crossdomain.xml" />
+	</corssdomainfiles>
+</root>

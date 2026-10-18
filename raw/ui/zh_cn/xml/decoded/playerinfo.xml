@@ -1,0 +1,1885 @@
+<style
+  name="playerinfo"
+  source="ui/zh_cn/swf/playerinfo.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.EquipNickLevelTxt_t"
+      args="Arial,12,0x39cdde,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.EquipNickNameTxt_t"
+      args="Arial,12,0x39cdde,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.PlayerEquipConsortiaTxt_t"
+      args="Arial,12,0x39cdde,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.ThaneRankTxt_f1"
+      args="Arial,12,0xd6a203,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.ringLevelTxt_t"
+      args="Arial,12,0xffff00,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.checkBtnTxt_f"
+      args="Arial,12,0xecdfa1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.fashionTickTxt_f"
+      args="Arial,10,0xecdfa1,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.ProgressLevelTxt_t"
+      args="Arial,14,0xecdfa1,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerinfo.fashionLevelTxt_t"
+      args="Arial,14,0xecdfa1,true,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.playerinfo.HonerItemBack2"
+      x="315"
+      y="261" />
+    <bitmapData
+      resourceLink="asset.playerinfo.AttackAttributeBg"
+      x="-2"
+      y="-9" />
+    <!-- 展示玩家装备界面 -->
+    <bitmapData
+      resourceLink="asset.playerinfo.EquipItemBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.playerinfo.PlayerInfoBack"
+      x="4"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.playerinfo.StarBtn"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.playerinfo.checkPlayerLine"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.playerinfo.fashionBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.playerinfo.fashionTick"
+      x="32"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.playerinfo.lvlBmp"
+      x="61"
+      y="320" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.playerinfo.MountInfoBg"
+      stylename="playerinfo.MountInfoBg"
+      resourceLink="asset.playerinfo.MountInfoBg"
+      x="4"
+      y="9" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="playerinfo.PlayerInfoStarStripView"
+      tipStyle="yishi.view.tips.goods.StarPowTip"
+      tipDirctions="6,4,7,5"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="259"
+      y="228" />
+    <custom
+      classname="playerinfo.view.EquipCheckList"
+      stylename="playerinfo.equipCheckList"
+      x="250"
+      y="-10" />
+    <custom
+      classname="armyII.viewII.equip.FashionTick"
+      stylename="playerinfo.FashionTick1"
+      x="11"
+      y="75" />
+    <custom
+      classname="armyII.viewII.equip.FashionTick"
+      stylename="playerinfo.FashionTick2"
+      x="11"
+      y="129" />
+    <custom
+      classname="armyII.viewII.equip.FashionTick"
+      stylename="playerinfo.FashionTick3"
+      x="11"
+      y="184" />
+    <custom
+      classname="armyII.viewII.equip.FashionTick"
+      stylename="playerinfo.FashionTick4"
+      x="11"
+      y="241" />
+    <custom
+      classname="asset.playerinfo.ProgressBar"
+      stylename="playerinfo.ProgressBar"
+      x="57"
+      y="310" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="playerinfo.fashionProgressStrip"
+      tipStyle="yishi.view.tips.goods.FashionComposeTip"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="55"
+      y="315" />
+    <custom
+      classname="playerinfo.view.DragonTalkerEquipInfoView"
+      stylename="playerinfo.dragonTalkerView"
+      x="4"
+      y="20" />
+    <custom
+      classname="asset.DragonTalkerEquipInfoView.EquipGird"
+      stylename="DragonTalkerEquipInfoView.EquipGird"
+      x="11"
+      y="37" />
+    <custom
+      stylename="playerInfo.MonsterFrame.propView"
+      classname="monster.view.MonsterPropView"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <!-- 查看时装的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkFashionBtnBg"
+      resourceLink="playerinfo.checkBtnFrame01,playerinfo.checkFashionBtn,playerinfo.checkFashionBtn,playerinfo.checkFashionBtn" />
+    <!-- 查看时装未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame01"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.FashionIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看时装选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkFashionBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.FashionIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看时装的文字样式 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.checkBtnTxt"
+      textFormatStyle="playerinfo.checkBtnTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="18"
+      x="88"
+      y="9" />
+    <!-- 查看时装的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkFashionItemBtn"
+      backStyle="playerinfo.checkFashionBtnBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <!-- 查看灵魂刻印的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkSoulBg"
+      resourceLink="playerinfo.checkBtnFrame02,playerinfo.checkSoulBtn,playerinfo.checkSoulBtn,playerinfo.checkSoulBtn" />
+    <!-- 查看灵魂刻印未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame02"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.JewelSuitIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看灵魂刻印选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkSoulBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.JewelSuitIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看灵魂刻印的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkSoulItemBtn"
+      backStyle="playerinfo.checkSoulBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44" />
+    <!-- 查看灵魂印记的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkSeniorJewelBg"
+      resourceLink="playerinfo.checkBtnFrame03,playerinfo.checkSeniorJewelBtn,playerinfo.checkSeniorJewelBtn,playerinfo.checkSeniorJewelBtn" />
+    <!-- 查看灵魂印记未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame03"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.SeniorJewelSuitIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看灵魂印记选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkSeniorJewelBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.SeniorJewelSuitIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看灵魂印记的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkSeniorJewelItemBtn"
+      backStyle="playerinfo.checkSeniorJewelBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44"
+      tipStyle="yishi.view.tips.JewelSuitTips"
+      tipDirctions="6,4,7,5"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <!-- 查看命运轮盘的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkFateRotaryBg"
+      resourceLink="playerinfo.checkBtnFrame14,playerinfo.checkFateRotaryBtn,playerinfo.checkFateRotaryBtn,playerinfo.checkFateRotaryBtn" />
+    <!-- 查看命运轮盘未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame14"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.FateRotaryIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看命运轮盘选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkFateRotaryBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.FateRotaryIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看命运轮盘的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkFateRotaryItemBtn"
+      backStyle="playerinfo.checkFateRotaryBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44" />
+    <!-- 查看卡牌的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkCardBg"
+      resourceLink="playerinfo.checkBtnFrame04,playerinfo.checkCardBtn,playerinfo.checkCardBtn,playerinfo.checkCardBtn" />
+    <!-- 查看卡牌的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame04"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.magicCardIcon"
+      imageRectString="0|185|0|44|13,8|31|5|37|13" />
+    <!-- 查看卡牌的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkCardBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.magicCardIcon"
+      imageRectString="0|0|0|0|0,8|31|5|37|13"
+      width="185"
+      height="44" />
+    <!-- 查看卡牌的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkCardItemBtn"
+      backStyle="playerinfo.checkCardBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44" />
+    <!-- 查看宠物的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkPetBg"
+      resourceLink="playerinfo.checkBtnFrame05,playerinfo.checkPetBtnBg,playerinfo.checkPetBtnBg,playerinfo.checkPetBtnBg" />
+    <!-- 查看宠物未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame05"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.PetBtn"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看宠物选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkPetBtnBg"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.PetBtn"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看宠物的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkPetBtn"
+      backStyle="playerinfo.checkPetBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <!-- 查看坐骑的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkMountBg"
+      resourceLink="playerinfo.checkBtnFrame06,playerinfo.checkMountBtnBg,playerinfo.checkMountBtnBg,playerinfo.checkMountBtnBg" />
+    <!-- 查看坐骑未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame06"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.MountBtn"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看坐骑选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkMountBtnBg"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.MountBtn"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看坐骑的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkMountBtn"
+      backStyle="playerinfo.checkMountBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <!-- 查看战兽未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.unSelectBattleMount"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.battleMount"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看战兽选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.selectBattleMount"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.battleMount"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看战兽按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkBattleMountBg"
+      resourceLink="playerinfo.unSelectBattleMount,playerinfo.selectBattleMount,playerinfo.selectBattleMount,playerinfo.selectBattleMount" />
+    <!-- 查看战兽按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkBattleMountBtn"
+      backStyle="playerinfo.checkBattleMountBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <!-- 查看星运值的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkStarBg"
+      resourceLink="playerinfo.checkBtnFrame07,playerinfo.checkStarBtnBg,playerinfo.checkStarBtnBg,playerinfo.checkStarBtnBg" />
+    <!-- 查看星运值未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame07"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.StarBtn"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看星运值选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkStarBtnBg"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.StarBtn"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看星运值的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkStarBtn"
+      backStyle="playerinfo.checkStarBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.petNotOpenItem"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="5,7,4,0"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.SoulItem"
+      tipStyle="yishi.view.tips.JewelSuitTips"
+      tipDirctions="6,4,7,5"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.fateItem"
+      tipStyle="playerinfo.FateRotaryTip"
+      tipDirctions="6,4,7,5"
+      tipWidth="172"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.starItem"
+      tipStyle="yishi.view.tips.goods.StarPowTip"
+      tipDirctions="6,4,7,5"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.cardItem"
+      tipStyle="playerinfo.FateRotaryTip"
+      tipWidth="172"
+      tipDirctions="6,4,7,5"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <!-- 查看玩家子女按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkChildBg"
+      resourceLink="playerinfo.checkBtnFrame08,playerinfo.checkChildBtnBg,playerinfo.checkChildBtnBg,playerinfo.checkChildBtnBg" />
+    <!-- 查看子女未选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame08"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.ChildBtn"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看子女选中时按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkChildBtnBg"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.ChildBtn"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看子女的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkChildBtn"
+      backStyle="playerinfo.checkChildBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <!-- 查看装备弹窗 -->
+    <component
+      classname="playerinfo.PlayerInfoFrameII"
+      stylename="playerinfo.PlayerInfoFrame"
+      parentStyle="core.Frame1"
+      containerX="16"
+      containerY="66"
+      width="413"
+      height="562" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="playerinfo.PlayerInfoBack"
+      parentStyle="core.describeBackground_style11"
+      width="376"
+      height="430"
+      x="3"
+      y="18" />
+    <!-- 装备按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="playerinfo.PlayerInfoEquipBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.playerinfo.PanelEquipSelectedTxt"
+      unselectedIconStyle="asset.playerinfo.PanelEquipUnselectedTxt"
+      selectedIconInnerRectString="26,47,7,20,13"
+      unselectedIconInnerRectString="26,47,8,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="99"
+      height="34"
+      x="40"
+      y="-7" />
+    <!-- 属性按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="core.PlayerAttributeInfoBtn"
+      parentStyle="playerinfo.PlayerInfoEquipBtn"
+      selectedIconStyle="asset.playerinfo.PanelAttributeSelectedTxt"
+      unselectedIconStyle="asset.playerinfo.PanelAttributeUnselectedTxt"
+      x="90"
+      y="-7" />
+    <!-- 资料按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="playerinfo.PlayerInfoInfoBtn"
+      parentStyle="playerinfo.PlayerInfoEquipBtn"
+      selectedIconStyle="asset.playerinfo.PanelInformationSelectedTxt"
+      unselectedIconStyle="asset.playerinfo.PanelInformationUnselectedTxt"
+      x="142"
+      y="-7" />
+    <custom
+      classname="playerinfo.view.EquipInfoView"
+      stylename="playerinfo.EquipInfoView"
+      x="4"
+      y="18" />
+    <custom
+      classname="playerinfo.view.playerattribute.PlayerTotalAttributeView"
+      stylename="playerinfo.PlayerAttributeView"
+      x="1"
+      y="18" />
+    <custom
+      classname="playerinfo.view.InfoView"
+      stylename="playerinfo.PlayerInfoView"
+      x="7"
+      y="21" />
+    <custom
+      classname="playerinfo.view.playerattribute.PlayerThaneView"
+      stylename="playerinfo.PlayerThaneView"
+      x="5"
+      y="12" />
+    <custom
+      classname="playerinfo.view.playerattribute.PlayerSummaryAttributeView"
+      stylename="playerinfo.PlayerSummaryAttributeView"
+      x="168"
+      y="6" />
+    <custom
+      classname="playerinfo.view.playerattribute.PlayerDetailedAttributeView"
+      stylename="playerinfo.PlayerDetailedAttributeView"
+      x="9"
+      y="203" />
+    <!-- 装备栏 -->
+    <!-- 职业背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.PlayerFigureBack"
+      parentStyle="army.HeroFigureBack"
+      x="3"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerThaneLevelTxt"
+      textFormatStyle="playerinfo.EquipNickLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="9"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerEquipNameTxt"
+      textFormatStyle="playerinfo.EquipNickNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="20"
+      x="50"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerEquipConsortiaTxt"
+      textFormatStyle="playerinfo.PlayerEquipConsortiaTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="270"
+      height="20"
+      x="97"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoCombatTxt"
+      textFormatStyle="playerinfo.ThaneRankTxt_f1"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="260"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.RunesItemBack1"
+      resourceLink="asset.core.RunesItemBack1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="319"
+      y="266" />
+    <custom
+      classname="asset.playerinfo.EquipGird"
+      stylename="playerinfo.EquipGird"
+      x="11"
+      y="37" />
+    <custom
+      classname="asset.playerinfo.EquipGird2"
+      stylename="playerinfo.EquipGird2"
+      x="11"
+      y="37" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="core.PlayerEquipicon"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="7,5,4,6,3,2,0,1"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <!-- 英雄武器栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroWeaponCell"
+      backgroundStyle="playerinfo.HeroEquipItemBack"
+      iconStyle="core.PlayerEquipicon"
+      profileStyle="core.GoodsProfileBG"
+      activeStyle="core.EquipActiveBack"
+      effectStyle="core.EquipItemEffect"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="24"
+      fashionIconY="21"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      iconWidth="42"
+      iconHeight="42"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      pos="0"
+      x="13"
+      y="205" />
+    <!-- 英雄头盔栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroHeaddressCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="1"
+      x="13"
+      y="40" />
+    <!-- 英雄项链栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroNecklaceCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="3"
+      x="13"
+      y="96" />
+    <!-- 英雄衣服栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroClothesCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="2"
+      x="13"
+      y="150" />
+    <!-- 英雄戒指栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroRing1Cell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="4"
+      x="318"
+      y="40" />
+    <!-- 英雄戒指栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroRing2Cell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="5"
+      x="318"
+      y="96" />
+    <!-- 英雄饰品栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroTrinket1Cell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="6"
+      x="318"
+      y="150" />
+    <!-- 英雄饰品栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroTrinket2Cell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="7"
+      x="318"
+      y="205" />
+    <!-- 时装帽子 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroHeaddressFashionCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="9"
+      x="13"
+      y="40" />
+    <!-- 时装衣服 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroClothesFashionCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="10"
+      x="13"
+      y="96" />
+    <!-- 时装武器 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroWeaponFashionCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="11"
+      x="13"
+      y="150" />
+    <!-- 英雄纹章 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroheraldryCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="12"
+      x="70"
+      y="295" />
+    <!-- 英雄翅膀栏 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HeroWingCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="8"
+      x="13"
+      y="205" />
+    <!-- 英雄圣物 -->
+    <custom
+      classname="cell.view.playerequip.PlayerEquipCell"
+      stylename="playerinfo.HerorelicCell"
+      parentStyle="playerinfo.HeroWeaponCell"
+      pos="13"
+      x="15"
+      y="295" />
+    <!-- 副职业时装帽子 -->
+    <custom
+      classname="cell.view.playerequip.VicePlayerEquipCell"
+      stylename="playerinfo.ViceHeroHeaddressFashionCell"
+      backgroundStyle="playerinfo.HeroEquipItemBack"
+      iconStyle="core.PlayerEquipicon"
+      profileStyle="core.GoodsProfileBG"
+      activeStyle="core.EquipActiveBack"
+      effectStyle="core.EquipItemEffect"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="24"
+      fashionIconY="21"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      iconWidth="42"
+      iconHeight="42"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      pos="9"
+      x="13"
+      y="40" />
+    <!-- 副职业时装衣服 -->
+    <custom
+      classname="cell.view.playerequip.VicePlayerEquipCell"
+      stylename="playerinfo.ViceHeroClothesFashionCell"
+      parentStyle="playerinfo.ViceHeroHeaddressFashionCell"
+      pos="10"
+      x="13"
+      y="96" />
+    <!-- 副职业时装武器 -->
+    <custom
+      classname="cell.view.playerequip.VicePlayerEquipCell"
+      stylename="playerinfo.ViceHeroWeaponFashionCell"
+      parentStyle="playerinfo.ViceHeroHeaddressFashionCell"
+      pos="11"
+      x="13"
+      y="150" />
+    <!-- 副职业英雄翅膀栏 -->
+    <custom
+      classname="cell.view.playerequip.VicePlayerEquipCell"
+      stylename="playerinfo.ViceHeroWingCell"
+      parentStyle="playerinfo.ViceHeroHeaddressFashionCell"
+      pos="8"
+      x="13"
+      y="205" />
+    <!-- 荣誉装备 -->
+    <custom
+      classname="cell.view.playerequip.HonorCell"
+      stylename="playerinfo.HonorCell1"
+      backgroundStyle="playerinfo.HonerCellBack"
+      iconStyle="core.PlayerEquipicon"
+      profileStyle="core.GoodsProfileBG"
+      activeStyle="core.EquipActiveBack"
+      effectStyle="core.EquipItemEffect"
+      textStyle="core.BaseItemText"
+      profileX="0"
+      profileY="0"
+      showProfile="true"
+      pos="0"
+      x="127"
+      y="295" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="playerinfo.ring"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipStyle="yishi.view.tips.MarryTip"
+      tipDirctions="0,4,5,3"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="playerinfo.JewelSuitBtnTip"
+      tipStyle="core.HtmlMultipleLineTip"
+      tipWidth="160"
+      tipDirctions="7,2,5,4"
+      tipGapH="-20"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="0"
+      y="40" />
+    <component
+      stylename="playerinfo.JewelSuitLevel"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      textFormatStyle="core.JewelSuitBtnTxt_t"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="83"
+      y="57" />
+    <component
+      stylename="playerinfo.JewelSuitBtn"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.playerinfo.JewelSuitIcon,asset.playerinfo.SeniorJewelSuitIcon"
+      tipStyle="yishi.view.tips.JewelSuitTips"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="playerinfo.StarSuitBtnTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,2,5,4"
+      tipWidth="140"
+      tipGapH="-20"
+      tipGapV="-20"
+      isFollowMouse="false"
+      x="100"
+      y="40" />
+    <component
+      stylename="playerinfo.StarSuitLevel"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      textFormatStyle="core.JewelSuitBtnTxt_t"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="116"
+      y="57" />
+    <component
+      stylename="playerinfo.StarSuitBtn"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.playerinfo.StarSuitIcon"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      isFollowMouse="false" />
+    <custom
+      classname="yishi.view.tips.MultipleDictionaryTip"
+      stylename="playerinfo.FateRotaryTip"
+      leftTxtStyle="playerinfo.FateRotaryTip_left"
+      rightTxtStyle="playerinfo.FateRotaryTip_right"
+      enableHtml="true"
+      width="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.FateRotaryTip_left"
+      textFormatStyle="faterotary.Skill_t"
+      mouseEnabled="false"
+      autoSize="none"
+      width="250"
+      height="20"
+      alpha="1"
+      displayAsPassword="false"
+      multiline="false"
+      scaleX="1"
+      scaleY="1"
+      selectable="true"
+      type="dynamic"
+      wordWrap="false"
+      x="5"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.FateRotaryTip_right"
+      textFormatStyle="faterotary.Skill_t"
+      mouseEnabled="false"
+      autoSize="none"
+      width="72"
+      height="20"
+      alpha="1"
+      displayAsPassword="false"
+      multiline="false"
+      scaleX="1"
+      scaleY="1"
+      selectable="true"
+      type="dynamic"
+      wordWrap="false"
+      x="74.05"
+      y="37.55" />
+    <component
+      stylename="playerinfo.FateRotaryBtn"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.playerinfo.FateRotaryIcon"
+      tipStyle="playerinfo.FateRotaryTip"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <!-- 资料栏 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoNameTxt"
+      textFormatStyle="core.InformationInputNameTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="185"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoSignTxt"
+      textFormatStyle="core.InformationInputNameTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="262"
+      height="74"
+      x="86"
+      y="152" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoSexTxt"
+      textFormatStyle="core.InformationSexComBoxTxt_f"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="80"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoBloodTxt"
+      textFormatStyle="core.InformationSexComBoxTxt_f"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="262"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoBirthTxt"
+      textFormatStyle="core.InformationSexComBoxTxt_f"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="92"
+      height="20"
+      x="80"
+      y="304" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoStarTxt"
+      textFormatStyle="core.InformationSexComBoxTxt_f"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      x="262"
+      y="304"
+      width="75"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.PlayerInfoAddressTxt"
+      textFormatStyle="core.InformationSexComBoxTxt_f"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      width="135"
+      height="20"
+      x="75"
+      y="347" />
+    <custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="playerinfo.PlayerInfoHeadCell"
+      parentStyle="core.PreviewBigIconCell"
+      x="15"
+      y="24" />
+    <!-- 领主名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.ThaneNameTxt"
+      textFormatStyle="core.ThaneNameTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="9"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.ThaneRankingTxt"
+      parentStyle="core.ThaneNameTxt"
+      x="246"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="playerinfo.HeroEquipItemBack"
+      resourceLink="asset.playerinfo.EquipItemBack"
+      width="51"
+      height="51"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="core.RunesCellBack"
+      resourceLink="asset.core.RunesItemBack1,asset.core.RunesItemBack2"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="44"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.HonerCellBack"
+      resourceLink="asset.playerinfo.HonerItemBack"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      width="44"
+      height="44"
+      x="-5"
+      y="-3" />
+    <!-- 装备界面属性背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.EquiLeftShape"
+      resourceLink="asset.core.ShowInfoExpShade"
+      mouseEnable="false"
+      mouseChildren="false"
+      x="4"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="core.EquiRightShape"
+      resourceLink="asset.core.ShowInfoExpShade"
+      mouseEnable="false"
+      mouseChildren="false"
+      scaleX="-1"
+      x="372"
+      y="254" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.PhysicAttackTxt"
+      textFormatStyle="core.AttributeTxt_f,core.AttributeTxt_f2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="70"
+      x="93"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.PhysicDefenceTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="279"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.MagicAttackTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="93"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.MagicDefenceTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="279"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.CritTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="93"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.ParryTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="279"
+      y="51" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.LiveTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="93"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="core.CountTxt"
+      parentStyle="core.PhysicAttackTxt"
+      x="279"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="playerinfo.MountBtn"
+      backStyle="asset.playerinfo.MountBtn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="260"
+      y="262" />
+    <component
+      classname="playerinfo.view.MountInfoView"
+      stylename="playerinfo.MountInfoView"
+      parentStyle="core.Frame1"
+      width="509"
+      height="374"
+      containerX="16"
+      containerY="61" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="playerinfo.MountInfoViewBorder"
+      parentStyle="core.describeBackground_style11"
+      width="477"
+      height="254"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountNameText"
+      textFormatStyle="mounts.MountNameText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="24"
+      x="10"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountAttribute01"
+      parentStyle="core.PhysicAttackTxt"
+      autoSize="none"
+      height="20"
+      width="82"
+      x="380"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountAttribute02"
+      parentStyle="playerinfo.MountAttribute01"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountAttribute03"
+      parentStyle="playerinfo.MountAttribute01"
+      y="109" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountAttribute04"
+      parentStyle="playerinfo.MountAttribute01"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountAttribute05"
+      parentStyle="playerinfo.MountAttribute01"
+      y="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.MountAttribute06"
+      parentStyle="playerinfo.MountAttribute01"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="playerinfo.AttributeBg01"
+      resourceLink="asset.playerinfo.AttributeBg1,asset.playerinfo.AttributeBg2,asset.playerinfo.AttributeBg3"
+      width="80"
+      height="28"
+      x="380"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="playerinfo.AttributeBg02"
+      parentStyle="playerinfo.AttributeBg01"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="playerinfo.AttributeBg03"
+      parentStyle="playerinfo.AttributeBg01"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="playerinfo.AttributeBg04"
+      parentStyle="playerinfo.AttributeBg01"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="playerinfo.AttributeBg05"
+      parentStyle="playerinfo.AttributeBg01"
+      y="175" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="playerinfo.AttributeBg06"
+      parentStyle="playerinfo.AttributeBg01"
+      y="210" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="playerinfo.myFrameBackImage"
+      parentStyle="core.FrameBackgoundBase2"
+      width="257"
+      height="330"
+      x="502"
+      y="-43" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="playerinfo.myMountInfoBg"
+      parentStyle="core.describeBackground_style04"
+      x="539"
+      y="5"
+      width="183"
+      height="253" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="EquipInfoView.HBox"
+      x="125"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="EquipInfoView.petImage"
+      resourceLink="asset.playerinfo.PetBtn"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      isFollowMouse="false"
+      x="193"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="MarryRingView.upBtn"
+      backStyle="asset.core.ringUpBack1"
+      iconInnerRectString="9,11,9,10,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,4,3"
+      tipGapV="3"
+      tipGapH="-20"
+      isFollowMouse="false"
+      width="29"
+      height="28"
+      x="25"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.ringLevelTxt"
+      textFormatStyle="playerinfo.ringLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="20"
+      x="0"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.VocationIconBtn"
+      parentStyle="core.VocationIcon"
+      x="185"
+      y="58" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="playerinfo.checkmenuBg"
+      resourceLink="asset.playerinfo.checkMenuBg01,asset.playerinfo.checkMenuBg02,asset.playerinfo.checkMenuBg03,asset.playerinfo.checkMenuBg04,asset.playerinfo.checkMenuBg05,asset.playerinfo.checkMenuBg06,asset.playerinfo.checkMenuBg07,asset.playerinfo.checkMenuBg08,asset.playerinfo.checkMenuBg09"
+      width="185"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="playerinfo.selectedBg"
+      resourceLink="asset.playerinfo.selectedBg01,asset.playerinfo.selectedBg02,asset.playerinfo.selectedBg03,asset.playerinfo.selectedBg04,asset.playerinfo.selectedBg05,asset.playerinfo.selectedBg06,asset.playerinfo.selectedBg07,asset.playerinfo.selectedBg08,asset.playerinfo.selectedBg09"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="playerinfo.checkVbox"
+      x="2"
+      y="2"
+      spacing="2" />
+    <!-- 查看泰坦的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkDragonTitanBg"
+      resourceLink="playerinfo.checkBtnFrame09,playerinfo.checkDragonTitanBtn,playerinfo.checkDragonTitanBtn,playerinfo.checkDragonTitanBtn" />
+    <!-- 查看泰坦的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame09"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.dragonTitanIcon"
+      imageRectString="0|185|0|44|13,8|35|5|36|13" />
+    <!-- 查看泰坦的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkDragonTitanBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.dragonTitanIcon"
+      imageRectString="0|0|0|0|0,8|35|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看泰坦的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkDragonTitanItemBtn"
+      backStyle="playerinfo.checkDragonTitanBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="1,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.fashionTickTxt"
+      textFormatStyle="playerinfo.fashionTickTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-12"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.ProgressLevelTxt"
+      textFormatStyle="playerinfo.ProgressLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="120"
+      x="121"
+      y="317" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="playerinfo.fashionLevelTxt"
+      textFormatStyle="playerinfo.fashionLevelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="42"
+      x="87"
+      y="317" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.conciseSprite"
+      tipStyle="yishi.view.tips.EquipConciseTips"
+      tipWidth="172"
+      tipDirctions="6,4,7,5"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <!-- 查看装备凝炼的按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.conciseItem"
+      backStyle="playerinfo.checkconciseBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44" />
+    <!-- 查看装备凝炼的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkconciseBg"
+      resourceLink="playerinfo.checkconciseBtnFrame04,playerinfo.checkconciseBtn,playerinfo.checkconciseBtn,playerinfo.checkconciseBtn" />
+    <!-- 查看装备凝炼的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkconciseBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.conciseIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <!-- 查看装备凝炼的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkconciseBtnFrame04"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.conciseIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <!-- 查看他人圣器 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.checkPetHallowsItemBtn"
+      backStyle="playerinfo.checkPetHallowsBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="185"
+      height="44" />
+    <!-- 查看他人圣器的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkPetHallowsBg"
+      resourceLink="playerinfo.checkPetHallowsBgFrame04,playerinfo.checkPetHallowsBtn,playerinfo.checkPetHallowsBtn,playerinfo.checkPetHallowsBtn" />
+    <!-- 查看他人圣器的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkPetHallowsBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.PetHallowsIcon"
+      imageRectString="0|0|0|0|0,8|37|5|43|13"
+      width="185"
+      height="44" />
+    <!-- 查看他人圣器的按钮背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkPetHallowsBgFrame04"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.PetHallowsIcon"
+      imageRectString="0|185|0|44|13,8|37|5|43|13" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="playerinfo.petHallowsSprite"
+      tipStyle="yishi.view.tips.PetHallowsLookTips"
+      tipWidth="172"
+      tipDirctions="6,4,7,5"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.rareweaponItemBtn"
+      backStyle="playerinfo.rareweaponBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.rareweaponBg"
+      resourceLink="playerinfo.checkBtnFrame11,playerinfo.rareweaponBtn,playerinfo.rareweaponBtn,playerinfo.rareweaponBtn" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkBtnFrame11"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.rareweaponIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.rareweaponBtn"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.rareweaponIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="playerinfo.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar08"
+      viewportInnerRectString="0,395,0,0,2"
+      vScrollbarInnerRectString="15,0,5,2,3"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="170"
+      height="292"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="PlayerInfoFrameII.EquipButton"
+      selectedStyle="army.PlayerInfoTabSelectBack"
+      unSelectedStyle="army.PlayerInfoTabUnselectBack"
+      selectedIconStyle="asset.PlayerInfoFrameII.EquipButtonSelectedTxt"
+      unselectedIconStyle="asset.PlayerInfoFrameII.EquipButtonUnselectedTxt"
+      selectedIconInnerRectString="-5,85,1,29,13"
+      unselectedIconInnerRectString="-3,85,1,29,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="PlayerInfoFrameII.dragonTalkerBtn"
+      selectedStyle="army.PlayerInfoTabSelectBack"
+      unSelectedStyle="army.PlayerInfoTabUnselectBack"
+      selectedIconStyle="asset.PlayerInfoFrameII.dragonTalkerBtnSelectedTxt"
+      unselectedIconStyle="asset.PlayerInfoFrameII.dragonTalkerBtnUnselectedTxt"
+      selectedIconInnerRectString="9,70,2,28,13"
+      unselectedIconInnerRectString="9,70,1,28,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DragonTalkerEquipInfoView.symbioteImage"
+      resourceLink="asset.DragonTalkerEquipInfoView.symbioteImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="15"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="DragonTalkerEquipInfoView.battleBeastImage"
+      resourceLink="asset.DragonTalkerEquipInfoView.battleBeastImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="55"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.goddessItemBtn"
+      backStyle="playerinfo.checkGoddessBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkGoddessBg"
+      resourceLink="playerinfo.checkGoddess13,playerinfo.checkGoddessBtnImage,playerinfo.checkGoddessBtnImage,playerinfo.checkGoddessBtnImage" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkGoddess13"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.goddessIcon"
+      imageRectString="0|185|0|44|13,8|35|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkGoddessBtnImage"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.goddessIcon"
+      imageRectString="0|0|0|0|0,8|35|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.monsterItemBtn"
+      backStyle="playerinfo.checkMonsterBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkMonsterBg"
+      resourceLink="playerinfo.checkMonster14,playerinfo.checkMonsterBtnImage,playerinfo.checkMonsterBtnImage,playerinfo.checkMonsterBtnImage" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkMonster14"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.monster"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkMonsterBtnImage"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.monster"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="monster.view.MonsterPropSeeViewFrame"
+      stylename="playerInfo.monsterInfoCheckFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="14"
+      containerY="50"
+      width="610"
+      height="525" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.revengerItemBtn"
+      backStyle="playerinfo.checkRevengerBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkRevengerBg"
+      resourceLink="playerinfo.checkRevneger15,playerinfo.checkRevengerBtnImage,playerinfo.checkRevengerBtnImage,playerinfo.checkRevengerBtnImage" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkRevneger15"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.revenger"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkRevengerBtnImage"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.revenger"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="avenger.AvengerOtherFrame"
+      stylename="playerInfo.avengerInfoCheckFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="14"
+      containerY="50"
+      width="610"
+      height="510" />
+    <component
+      classname="monster.view.MonsterPropSeeView"
+      stylename="playerInfo.monsterPropSeeView" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.devilArmorBtn"
+      backStyle="playerinfo.checkDevilArmorBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.goddessEquipBtn"
+      backStyle="playerinfo.checkgoddessEquipBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="playerinfo.theseusoulEquipBtn"
+      backStyle="playerinfo.checkTheseusBg"
+      textStyle="playerinfo.checkBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="50,0,12,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,7,4,0"
+      tipGapH="0"
+      tipGapV="0"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkDevilArmorBg"
+      resourceLink="playerinfo.checkDevilArmor16,playerinfo.checkDevilArmorBtnImage,playerinfo.checkDevilArmorBtnImage,playerinfo.checkDevilArmorBtnImage" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkgoddessEquipBg"
+      resourceLink="playerinfo.checkGoddessEquip17,playerinfo.checkGoddessEquipBtnImage,playerinfo.checkGoddessEquipBtnImage,playerinfo.checkGoddessEquipBtnImage" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="playerinfo.checkTheseusBg"
+      resourceLink="playerinfo.checkTheseus18,playerinfo.TheseusImage,playerinfo.TheseusImage,playerinfo.TheseusImage" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkDevilArmor16"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.devilArmor"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkGoddessEquip17"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.goddessEquip"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkTheseus18"
+      resourceLink="asset.playerinfo.checkBtnBg01,asset.playerinfo.theseusBtnIcon"
+      imageRectString="0|185|0|44|13,8|36|5|36|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkDevilArmorBtnImage"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.devilArmor"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.checkGoddessEquipBtnImage"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.goddessEquip"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="playerinfo.TheseusImage"
+      resourceLink="playerinfo.selectedBg,asset.playerinfo.theseusBtnIcon"
+      imageRectString="0|0|0|0|0,8|36|5|36|13"
+      width="185"
+      height="44" />
+    <component
+      classname="avenger.AvengerOtherView"
+      stylename="playerInfo.avengerOtherView" />
+    <component
+      classname="avenger.DevilArmorInfoView"
+      stylename="playerInfo.devilArmorInfoView" />
+    <component
+      classname="theseus.TheseusOtherFrame"
+      stylename="playerInfo.TheseusOtherFrame" />
+    <component
+      classname="avenger.DevilArmorLookInfoFrame"
+      stylename="playerinfo.devilArmorFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="0"
+      containerY="50"
+      width="405"
+      height="417" />
+    <component
+      classname="goddess.GodDessEquipLookInfoFrame"
+      stylename="playerinfo.GodDessEquipLookInfoFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="0"
+      containerY="50"
+      width="403"
+      height="551" />
+    <component
+      classname="theseus.ThereusLookEquipFrame"
+      stylename="playerinfo.ThereusLookEquipFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="16"
+      containerY="50"
+      width="405"
+      height="522" />
+    <component
+      classname="goddess.GodDessEquipInfoView"
+      stylename="goddess.lookup.GodDessEquipInfoView" />
+  </components>
+</style>

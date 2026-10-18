@@ -1,0 +1,59 @@
+<style
+  name="gradebox"
+  source="ui/zh_cn/swf/gradebox.swf">
+  <sets />
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.gradebox.NumStyle01" />
+    <bitmapData
+      resourceLink="asset.gradebox.GetBoxTxtImg"
+      x="20" />
+    <bitmapData
+      resourceLink="asset.gradebox.UpToGetBoxTxtImg"
+      x="-15" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="gradebox.goodsList"
+      vSpace="0"
+      hSpace="0"
+      x="-7"
+      y="18" />
+  </customDisplay>
+  <components>
+    <component
+      classname="gradebox.GradeBoxFrame"
+      stylename="gradebox.GradeBoxFrame"
+      parentStyle="core.RoomPasswordFrame"
+      width="431"
+      height="297"
+      containerX="1"
+      containerY="9" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gradebox.Bg"
+      resourceLink="asset.gradebox.BG"
+      imageRectString="0|424|0|254|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gradebox.TitleImg"
+      resourceLink="asset.gradebox.UpToGetBoxTxtImg,asset.gradebox.GetBoxTxtImg"
+      y="-24" />
+    <!--领取按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="gradebox.GetRewardBtn"
+      unSelectedStyle="asset.gradebox.GetRewardBtnBg"
+      selectedStyle="asset.gradebox.GetRewardBtnBg"
+      unselectedIconStyle="asset.gradebox.GetLatterTxtImg"
+      selectedIconStyle="asset.gradebox.GetRewardTxtImg"
+      unselectedIconInnerRectString="9,88,12,18,13"
+      selectedIconInnerRectString="9,88,12,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="106"
+      height="44"
+      x="152"
+      y="208" />
+  </components>
+</style>

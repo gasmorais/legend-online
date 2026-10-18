@@ -1,0 +1,1242 @@
+<style
+  name="monopoly"
+  source="ui/zh_cn/swf/monopoly.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.DiceNormalCountTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistFrame.WarFlagTxt_t"
+      args="Arial,14,0xf8b95b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistFrame.WarFlagCountTxt_t"
+      args="Arial,16,0xeecfa1,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyAlertFrame.ContentTxt_t"
+      args="Arial,12,0x39cdde,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistView.titleTextFormat_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistItemView.GradesTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistItemView.NameTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistItemView.FightingCapacityTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistItemView.InviteStyle_t"
+      args="Arial,12,0xffefbd,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFinishRewardFrame.DiceCountTxt_t"
+      args="Arial,12,0xffeec0,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFinishRewardItemView.ItemCountTxt_t"
+      args="Arial,14,0xffeec0,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyBattleFailureFrame.ContentTxt_t"
+      args="Arial,14,0xffefbd,,,,,,center"
+      leading="12"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ContentTxt_t"
+      args="Arial,14,0xffefbd,,,,,,center"
+      leading="0"
+      letterSpacing="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt_t1"
+      args="Arial,14,0xffffff" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt_t2"
+      args="Arial,14,0x59cd41" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt_t3"
+      args="Arial,14,0x32a2f8" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt_t4"
+      args="Arial,14,0xa838f7" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt_t5"
+      args="Arial,14,0xeb9504" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt_t6"
+      args="Arial,14,0xce0f0f" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistFrame.SearchTxt_t"
+      args="Arial,12,0xd9b88d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.MonopolyFriendAssistFrame.SearchTipTxt_t"
+      args="Arial,12,0x6b6b6b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.AlertTextStyle_t"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      leading="10" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="monopoly.scoreNum_t"
+      args="Arial,14,0xf3b288,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.monopoly.ArrmorImg" />
+    <bitmapData
+      resourceLink="asset.monopoly.AlertIcon4" />
+    <bitmapData
+      resourceLink="asset.monopoly.AlertIcon5" />
+    <bitmapData
+      resourceLink="asset.monopoly.AlertIcon6" />
+    <bitmapData
+      resourceLink="asset.monopoly.AlertIcon11" />
+    <bitmapData
+      resourceLink="asset.GameMaze.mpnopoly.GameMazeNum" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 主界面 -->
+    <custom
+      classname="asset.monopoly.DiceRollMC"
+      stylename="monopoly.DiceRollMC"
+      x="0"
+      y="0" />
+    <!-- 我的队伍 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="monopoly.MonopolyTeamItemView.headIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="monopoly.MonopolySkillView.SkillBookIcon"
+      parentStyle="petSkill.SkillBookIcon"
+      iconHeight="40"
+      iconWidth="40"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="monopoly.MonopolyPetFormationPetHeadView.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="95"
+      iconHeight="58"
+      x="2"
+      y="2" />
+    <custom
+      classname="asset.core.TaskRewardButtonMc1"
+      stylename="monopoly.MonopolyTeamView.adjustBtnMC"
+      x="-65"
+      y="-21" />
+    <!-- 事件提示 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="monopoly.MonopolyAlertFrame.EventIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="80"
+      iconWidth="78"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="40"
+      loadingY="39"
+      x="31"
+      y="38" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="monopoly.MonopolyAlertFrame.NCPIcon"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="40"
+      loadingY="39"
+      x="31"
+      y="38" />
+    <!-- 邀请协助 -->
+    <custom
+      classname="monopoly.view.MonopolyFriendAssistView"
+      stylename="monopoly.MonopolyFriendAssistFrame.ContentView"
+      x="0"
+      y="40" />
+    <custom
+      classname="monopoly.view.MonopolyFriendAssistItemView"
+      stylename="monopoly.MonopolyAlertFrame.ItemView"
+      width="400"
+      height="30" />
+    <!-- 到达终点 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="monopoly.MonopolyFinishRewardItemView.ItemIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="30"
+      loadingY="30"
+      x="7"
+      y="5" />
+    <custom
+      classname="asset.monopoly.Handle"
+      stylename="monopoly.Handle"
+      x="374"
+      y="62" />
+    <!-- 游戏结束 -->
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="monopoly.MonopolyGameOverFrame.ItemContainer"
+      vSpace="0"
+      hSpace="10"
+      x="30"
+      y="25" />
+    <!-- 休闲游戏-夺宝奇兵 -->
+    <custom
+      classname="monopoly.gemmaze.view.MonopolyGemMazeView"
+      stylename="GemMaze.MonopolyGemMazeView"
+      x="245"
+      y="74" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.AlertIcon4"
+      resourceLink="asset.monopoly.AlertIcon4"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.AlertIcon5"
+      resourceLink="asset.monopoly.AlertIcon5"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.AlertIcon6"
+      resourceLink="asset.monopoly.AlertIcon6"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.AlertIcon11"
+      resourceLink="asset.monopoly.AlertIcon11"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="monopoly.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="Monopoly.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <!-- 主界面 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.DiceNormalBtn"
+      backStyle="asset.monopoly.DiceNormalBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.DiceNormalCountBg"
+      resourceLink="asset.monopoly.CountBg"
+      x="53"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.DiceNormalCountTxt"
+      textFormatStyle="monopoly.DiceNormalCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="36"
+      height="20"
+      x="53"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.DiceMagicBtn"
+      backStyle="asset.monopoly.DiceMagicBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="100"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.DiceMagicCountBg"
+      resourceLink="asset.monopoly.CountBg"
+      x="153"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.DiceMagicCountTxt"
+      textFormatStyle="monopoly.DiceNormalCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="36"
+      height="20"
+      x="153"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.DiceMagicAddBtn"
+      backStyle="asset.monopoly.AddBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="153"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyTopView.CampaignName"
+      resourceLink="asset.monopoly.CampaignName"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.DiceRollResult"
+      resourceLink="asset.monopoly.DiceRollResult1,asset.monopoly.DiceRollResult2,asset.monopoly.DiceRollResult3,asset.monopoly.DiceRollResult4,asset.monopoly.DiceRollResult5,asset.monopoly.DiceRollResult6"
+      x="0"
+      y="0" />
+    <!-- 我的队伍 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyTeamItemView.bg"
+      resourceLink="asset.monopoly.TeamBg"
+      x="0"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyTeamView.optipTxt"
+      textFormatStyle="PetChallengeTeamView.optipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="5"
+      y="145" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyTeamView.adjustBtn"
+      backStyle="asset.monopoly.SmallBtnBg"
+      iconStyle="asset.monopoly.TeamBtnTxt"
+      iconInnerRectString="7,57,7,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyTeamView.helpBtn"
+      parentStyle="monopoly.MonopolyTeamView.adjustBtn"
+      iconStyle="asset.monopoly.HelpBtnTxt"
+      iconInnerRectString="7,57,7,20,13"
+      x="70"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyTeamView.resetBtn"
+      parentStyle="monopoly.MonopolyTeamView.adjustBtn"
+      iconStyle="asset.monopoly.ResetBtnTxt"
+      iconInnerRectString="14,42,7,20,13"
+      x="140"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyTeamItemView.headBack"
+      resourceLink="asset.monopoly.HeadBackImg"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolySkillSelectView.bg"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="160"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="monopoly.MonopolySkillSelectView.hBox"
+      spacing="5"
+      strictWidth="50"
+      strictHeight="50"
+      x="8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolySkillView.ItemBack"
+      parentStyle="core.ItemBack"
+      width="40"
+      height="40"
+      x="0"
+      y="0" />
+    <!-- 阵型调整 -->
+    <component
+      classname="monopoly.view.MonopolyPetFormationFrame"
+      stylename="monopoly.MonopolyPetFormationFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="290,290,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="650"
+      height="470" />
+    <component
+      classname="monopoly.view.MonopolyPetFormationPetHeadView"
+      stylename="monopoly.MonopolyPetFormationPetHeadView"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolyPetFormationFrame.border"
+      parentStyle="core.describeBackground_style04"
+      x="-16"
+      y="-2"
+      width="631"
+      height="402" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="monopoly.MonopolyPetFormationFrame.back"
+      resourceLink="asset.monopoly.Back,asset.monopoly.Title"
+      imageRectString="0|624|0|395|13,183|258|0|45|13"
+      x="-14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolyPetFormationFrame.listBack"
+      parentStyle="core.commonTipBg"
+      width="160"
+      height="402"
+      x="-193"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="monopoly.MonopolyPetFormationFrame.vBox"
+      spacing="-3"
+      scaleY="1"
+      x="-190"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyPetFormationFrame.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="-177"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyPetFormationFrame.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="-73"
+      y="365"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyPetFormationFrame.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="-181"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyPetFormationFrame.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-142"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolyPetFormationPetHeadView.border"
+      parentStyle="core.describeBackground_style04"
+      width="154"
+      height="63"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyPetFormationPetHeadView.back"
+      resourceLink="asset.monopoly.PetItemBg"
+      y="3"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyPetFormationPetHeadView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="right"
+      mouseEnabled="false"
+      width="150"
+      height="22"
+      x="150"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyPetFormationPetHeadView.gradeTxt"
+      textFormatStyle="pet.PetItemGrade_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="66"
+      height="22"
+      x="83"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.MonopolyPetFormationPetHeadView.stateFlag"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      resourceLink=",asset.monopoly.EnterWarImg"
+      y="-1"
+      x="-0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyPetFormationItemView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      y="-190" />
+    <!-- 魔力骰子 -->
+    <component
+      classname="monopoly.view.MonopolyDiceMagicFrame"
+      stylename="monopoly.MonopolyDiceMagicFrame"
+      parentStyle="core.Frame2"
+      closeInnerRectString="29,7,8,29,14"
+      containerX="10"
+      containerY="45"
+      width="600"
+      height="210" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicFrame.ContentBg"
+      resourceLink="asset.monopoly.DiceMagicFrameBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicBtn.DiceSelectBg1"
+      resourceLink="asset.monopoly.DiceSelectBg"
+      x="8"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicBtn.DiceSelectBg2"
+      parentStyle="monopoly.MonopolyDiceMagicBtn.DiceSelectBg1"
+      x="98" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicBtn.DiceSelectBg3"
+      parentStyle="monopoly.MonopolyDiceMagicBtn.DiceSelectBg1"
+      x="188" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicBtn.DiceSelectBg4"
+      parentStyle="monopoly.MonopolyDiceMagicBtn.DiceSelectBg1"
+      x="278" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicBtn.DiceSelectBg5"
+      parentStyle="monopoly.MonopolyDiceMagicBtn.DiceSelectBg1"
+      x="368" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyDiceMagicBtn.DiceSelectBg6"
+      parentStyle="monopoly.MonopolyDiceMagicBtn.DiceSelectBg1"
+      x="458" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyDiceMagicFrame.DiceBtn1"
+      backStyle="asset.monopoly.DiceMagic1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="15"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyDiceMagicFrame.DiceBtn2"
+      parentStyle="monopoly.MonopolyDiceMagicFrame.DiceBtn1"
+      backStyle="asset.monopoly.DiceMagic2"
+      x="105" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyDiceMagicFrame.DiceBtn3"
+      parentStyle="monopoly.MonopolyDiceMagicFrame.DiceBtn1"
+      backStyle="asset.monopoly.DiceMagic3"
+      x="195" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyDiceMagicFrame.DiceBtn4"
+      parentStyle="monopoly.MonopolyDiceMagicFrame.DiceBtn1"
+      backStyle="asset.monopoly.DiceMagic4"
+      x="285" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyDiceMagicFrame.DiceBtn5"
+      parentStyle="monopoly.MonopolyDiceMagicFrame.DiceBtn1"
+      backStyle="asset.monopoly.DiceMagic5"
+      x="375" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyDiceMagicFrame.DiceBtn6"
+      parentStyle="monopoly.MonopolyDiceMagicFrame.DiceBtn1"
+      backStyle="asset.monopoly.DiceMagic6"
+      x="465" />
+    <!-- 事件提示 -->
+    <component
+      classname="monopoly.view.MonopolyAlertFrame"
+      stylename="monopoly.MonopolyAlertFrame"
+      backStyle="core.quickBuyFrameBg"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-4,1"
+      moveInnerRectString="290,290,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="5"
+      containerY="20"
+      width="464"
+      height="246" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolyAlertFrame.ScaleBg"
+      parentStyle="core.describeBackground_style06"
+      width="450"
+      height="180"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyAlertFrame.ContentBg"
+      resourceLink="asset.monopoly.AlertFrameBg"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyAlertFrame.ContentTxt"
+      textFormatStyle="monopoly.MonopolyAlertFrame.ContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="270"
+      height="60"
+      x="140"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyAlertFrame.SelfFightBtn"
+      backStyle="asset.monopoly.BtnBg"
+      iconStyle="asset.monopoly.SelfFightTxt"
+      iconInnerRectString="10,67,7,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="90"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyAlertFrame.FriendFightBtn"
+      parentStyle="monopoly.MonopolyAlertFrame.SelfFightBtn"
+      iconStyle="asset.monopoly.FriendFightTxt"
+      iconInnerRectString="10,67,7,22,13"
+      x="275" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyAlertFrame.ConfirmBtn"
+      parentStyle="monopoly.MonopolyAlertFrame.SelfFightBtn"
+      iconStyle="asset.monopoly.ConfirmTxt"
+      iconInnerRectString="19,48,7,22,13"
+      x="183" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyAlertFrame.PayBtn"
+      parentStyle="monopoly.MonopolyAlertFrame.SelfFightBtn"
+      iconStyle="asset.monopoly.PayTxt"
+      iconInnerRectString="10,67,7,22,13"
+      x="183" />
+    <!-- 邀请协助 -->
+    <component
+      classname="monopoly.view.MonopolyFriendAssistFrame"
+      stylename="monopoly.MonopolyFriendAssistFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="70"
+      width="459"
+      height="425" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolyFriendAssistFrame.ScaleBg"
+      parentStyle="core.describeBackground_style04"
+      width="434"
+      height="310"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="monopoly.MonopolyFriendAssistFrame.ContentBg"
+      parentStyle="core.describeBackground_style40"
+      width="430"
+      height="217"
+      x="2"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="monopoly.MonopolyFriendAssistFrame.UnionButton"
+      unSelectedStyle="monopoly.UnionUnselectedBg"
+      selectedStyle="monopoly.UnionSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      fieldX="20"
+      fieldY="3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="25"
+      x="5"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="monopoly.MonopolyFriendAssistFrame.FriendsButton"
+      unSelectedStyle="monopoly.FriendsUnselectedBg"
+      selectedStyle="monopoly.FriendsSelectedBg"
+      textStyle="core.FriendsBtnTextStyle"
+      fieldX="21"
+      fieldY="3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="25"
+      x="77"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="monopoly.UnionSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedImg,asset.core.friendsUnionImg"
+      imageRectString="0|70|0|25|13,3|21|2|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="monopoly.UnionUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsUnionImg"
+      imageRectString="0|70|0|24|13,3|21|2|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="monopoly.FriendsSelectedBg"
+      resourceLink="asset.core.friendsButtonSelectedImg,asset.core.friendsFriendImg"
+      imageRectString="0|75|0|25|13,5|19|4|17|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="monopoly.FriendsUnselectedBg"
+      resourceLink="asset.core.friendsButtonUnselectedImg,asset.core.friendsFriendImg"
+      imageRectString="0|75|0|24|13,5|19|4|17|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyFriendAssistFrame.WarFlagIcon"
+      resourceLink="asset.monopoly.WarFlagIcon"
+      x="10"
+      y="272" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistFrame.WarFlagTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistFrame.WarFlagTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="35"
+      y="272" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistFrame.WarFlagCountTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistFrame.WarFlagCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="170"
+      y="269" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyFriendAssistFrame.WarFlagAddBtn"
+      backStyle="asset.monopoly.AddBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="210"
+      y="267" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyFriendAssistFrame.SearchBg"
+      resourceLink="asset.monopoly.SearchBg"
+      x="146"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistFrame.SearchTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistFrame.SearchTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      restrict="^ "
+      autoSize="none"
+      width="110"
+      height="20"
+      x="150"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistFrame.SearchTipTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistFrame.SearchTipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="150"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="monopoly.MonopolyFriendAssistFrame.SearchBtn"
+      backStyle="asset.monopoly.SearchBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="260"
+      y="14" />
+    <!-- MonopolyFriendAssistView -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistView.NameTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistView.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="165"
+      height="20"
+      x="4"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistView.GradesTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistView.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="50"
+      height="20"
+      x="170"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistView.FightingCapacityTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistView.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="40"
+      x="215"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistView.OprateTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistView.titleTextFormat_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="50"
+      height="20"
+      x="335"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="monopoly.MonopolyFriendAssistFrame.PlayerListPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,1,-2,0,3"
+      viewportInnerRectString="0,0,5,2,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|monopoly.MonopolyAlertFrame.ItemView,30,400"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="20"
+      width="423"
+      height="177"
+      x="7"
+      y="38" />
+    <!-- MonopolyFriendAssistItemView -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="monopoly.MonopolyFriendAssistItemView.HeroRankItemBack"
+      parentStyle="core.TitleBack_Style888"
+      width="409"
+      height="29"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="monopoly.MonopolyFriendAssistItemView.HeroRankItemBack02"
+      parentStyle="monopoly.MonopolyFriendAssistItemView.HeroRankItemBack"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.MonopolyFriendAssistItemView.ItemBg"
+      resourceLink=",monopoly.MonopolyFriendAssistItemView.HeroRankItemBack02"
+      height="25"
+      x="-3"
+      y="-3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistItemView.NameTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistItemView.NameTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="165"
+      height="20"
+      x="0"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="monopoly.MonopolyFriendAssistItemView.VipNameGradientTxt"
+      textFieldStyle="monopoly.MonopolyFriendAssistItemView.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="165"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistItemView.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="165"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.MonopolyFriendAssistItemView.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="160"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistItemView.GradesTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistItemView.GradesTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="50"
+      height="20"
+      x="170"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistItemView.FightingCapacityTxt"
+      textFormatStyle="monopoly.MonopolyFriendAssistItemView.FightingCapacityTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="110"
+      height="20"
+      x="225"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="monopoly.MonopolyFriendAssistItemView.InviteBtn"
+      parentStyle="core.GreenIIBtn"
+      textStyle="monopoly.MonopolyFriendAssistItemView.InviteStyle"
+      backgoundInnerRectString="5,5,4,2"
+      x="340"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFriendAssistItemView.InviteStyle"
+      textFormatStyle="monopoly.MonopolyFriendAssistItemView.InviteStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="18" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="monopoly.MonopolyFriendAssistItemView.ItemLine"
+      resourceLink="asset.core.gapLine01,asset.core.gapLine02,asset.core.gapLine03"
+      imageRectString="0|81|0|2|13,81|250|0|2|13,331|80|0|2|13"
+      y="30" />
+    <!-- 终点抽奖 -->
+    <component
+      classname="monopoly.view.MonopolyFinishRewardFrame"
+      stylename="monopoly.MonopolyFinishRewardFrame"
+      backStyle="asset.monopoly.FinishRewardBg"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="0"
+      width="371"
+      height="235" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyFinishRewardFrame.TitleImg"
+      resourceLink="asset.monopoly.SuccessTxt"
+      x="49"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyFinishRewardFrame.DiceIcon"
+      resourceLink="asset.monopoly.DiceIcon"
+      x="155"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFinishRewardFrame.DiceCountTxt"
+      textFormatStyle="monopoly.MonopolyFinishRewardFrame.DiceCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="192"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFinishRewardFrame.FreeCountTxt"
+      textFormatStyle="monopoly.MonopolyFinishRewardFrame.DiceCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="202"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyFinishRewardFrame.StartBtn"
+      backStyle="asset.monopoly.StartBtnBg"
+      iconStyle="asset.monopoly.StartBtnTxt"
+      iconInnerRectString="66,67,15,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="86"
+      y="185" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyFinishRewardItemView.ItemIconBg"
+      resourceLink="asset.monopoly.ItemIconBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.MonopolyFinishRewardItemView.ItemIconImages"
+      resourceLink="asset.monopoly.ItemIcon1,asset.monopoly.ItemIcon2,asset.monopoly.ItemIcon3,asset.monopoly.ItemIcon4,asset.monopoly.ItemIcon5,asset.monopoly.ItemIcon6,asset.monopoly.ItemIcon7,asset.monopoly.ItemIcon8,asset.monopoly.ItemIcon9,asset.monopoly.ItemIcon10,asset.monopoly.ItemIcon11"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyFinishRewardItemView.ItemCountTxt"
+      textFormatStyle="monopoly.MonopolyFinishRewardItemView.ItemCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="0"
+      y="75" />
+    <!-- 游戏结束 -->
+    <component
+      classname="monopoly.view.MonopolyGameOverFrame"
+      stylename="monopoly.MonopolyGameOverFrame"
+      backStyle="core.FrameBg2"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,12,1"
+      moveInnerRectString="0,30,0,45,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="12"
+      containerY="47"
+      width="431"
+      height="338" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="monopoly.MonopolyGameOverFrame.ScaleBg"
+      parentStyle="core.describeBackground_style06"
+      width="406"
+      height="247"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="monopoly.MonopolyGameOverFrame.ContentBg"
+      resourceLink="asset.monopoly.GameOverFrameBg"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.MonopolyGameOverFrame.ResultImg"
+      resourceLink="asset.monopoly.FailureTxt,asset.monopoly.SuccessTxt"
+      x="67"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="monopoly.MonopolyGameOverFrame.ContentScroll"
+      vScrollbarStyle="core.VScrollbar07"
+      vScrollbarInnerRectString="14,2,0,0,3"
+      viewportInnerRectString="0,17,30,0,0"
+      width="365"
+      height="127"
+      x="25"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyGameOverFrame.ContentTxt"
+      textFormatStyle="monopoly.MonopolyGameOverFrame.ContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="300"
+      height="24"
+      x="30"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyGameOverFrame.ItemTxt"
+      textFormatStyle="monopoly.MonopolyGameOverFrame.ItemTxt_t1,monopoly.MonopolyGameOverFrame.ItemTxt_t2,monopoly.MonopolyGameOverFrame.ItemTxt_t3,monopoly.MonopolyGameOverFrame.ItemTxt_t4,monopoly.MonopolyGameOverFrame.ItemTxt_t5,monopoly.MonopolyGameOverFrame.ItemTxt_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="24"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyGameOverFrame.ConfirmBtn"
+      parentStyle="monopoly.MonopolyAlertFrame.SelfFightBtn"
+      iconStyle="asset.monopoly.ConfirmTxt"
+      iconInnerRectString="19,48,7,22,13"
+      x="160"
+      y="200" />
+    <!-- 战斗失败 -->
+    <component
+      classname="monopoly.view.MonopolyBattleFailureFrame"
+      stylename="monopoly.MonopolyBattleFailureFrame"
+      backStyle="core.quickBuyFrameBg"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-4,1"
+      moveInnerRectString="290,290,0,30,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="0"
+      containerY="20"
+      width="280"
+      height="180" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.MonopolyBattleFailureFrame.ContentTxt"
+      textFormatStyle="monopoly.MonopolyBattleFailureFrame.ContentTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="280"
+      height="60"
+      x="0"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyBattleFailureFrame.SelfFightBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.monopoly.FSelfFightTxt"
+      iconInnerRectString="11,73,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.MonopolyBattleFailureFrame.FriendFightBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.monopoly.FFriendFightTxt"
+      iconInnerRectString="14,68,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="monopoly.EventIcon"
+      resourceLink="asset.monopoly.EventType1,asset.monopoly.EventType2,asset.monopoly.EventType6,asset.monopoly.EventType4,asset.monopoly.EventType3"
+      x="0"
+      y="0" />
+    <!-- 魔力骰子/战争旗帜购买，今日不在提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="monopoly.TodayNotAlertFrame"
+      parentStyle="worldboss.RiverNotAlert"
+      describeStyle="monopoly.AlertTextStyle"
+      width="390" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.AlertTextStyle"
+      textFormatStyle="monopoly.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="375"
+      height="50"
+      x="0"
+      y="0" />
+    <!-- 休闲游戏-宝物迷阵 -->
+    <component
+      classname="monopoly.llk.MonopolyLlkFrame"
+      stylename="monopoly.MonopolyLlkFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="54"
+      width="796"
+      height="450" />
+    <!-- 休闲游戏-夺宝奇兵 -->
+    <component
+      classname="monopoly.gemmaze.MonopolyGemMazeFrame"
+      stylename="monopoly.MonopolyGemMazeFrame"
+      parentStyle="core.Frame2"
+      containerX="16"
+      containerY="54"
+      width="495"
+      height="624" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="monopoly.gameMazeCountTxt"
+      textFormatStyle="monopoly.scoreNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="275"
+      height="50"
+      x="61"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="monopoly.BuyTimesButton"
+      backStyle="asset.GameMaze.mpnopoly.buyTimesBtnBg"
+      iconStyle="asset.GameMaze.mpnopoly.buyTimesBtnIcon"
+      iconInnerRectString="78,95,39,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="143"
+      y="417" />
+  </components>
+</style>

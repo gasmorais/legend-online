@@ -1,0 +1,1147 @@
+<style
+  name="areslords"
+  source="ui/zh_cn/swf/areslords.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.SignUpRoundTxt_t"
+      args="Arial,12,0xfec231,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.SignUpTimeTxt_t"
+      args="Arial,14,0x74ee23,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.SignUpPlayerUserNameTxt_t"
+      args="Arial,14,0x74ee23,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.SignUpPlayerServerNameTxt_t"
+      args="Arial,14,0xf9ffc7,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.SignUpPlayerPointTxt_t"
+      args="Arial,16,0xdeff00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.StartTxt1_t"
+      args="Arial,12,0xf6e2b3,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.StartTxt2_t"
+      args="Arial,12,0xe2e50d,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.StartTxt3_t"
+      args="Arial,12,0xf22800,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankTxt1_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankTxt2_t"
+      args="Arial,14,0xe7c88b,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankTxt3_t"
+      args="Arial,12,0xc08c38,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankTxt4_t"
+      args="Arial,16,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankTxt5_t"
+      args="Arial,16,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankTxt6_t"
+      args="Arial,12,0x04ef25,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RankItemTxt1_t"
+      args="Arial,12,0xe7ed36,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.RewardTxt1_t"
+      args="Arial,18,0xF6FD4B,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="areslords.PageTextStyle1_t"
+      args="Arial,16,0xfffdf4,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.areslords.StartRankNum" />
+    <bitmapData
+      resourceLink="asset.areslords.StartFightNum" />
+    <bitmapData
+      resourceLink="asset.areslords.GroupSelectedAsset6"
+      x="5" />
+    <bitmapData
+      resourceLink="asset.areslords.GroupSelectedAsset5"
+      x="-5" />
+    <bitmapData
+      resourceLink="asset.areslords.GroupSelectedAsset4"
+      x="0" />
+    <bitmapData
+      resourceLink="asset.areslords.GroupSelectedAsset3"
+      x="-10" />
+    <bitmapData
+      resourceLink="asset.areslords.GroupSelectedAsset2"
+      x="-5" />
+    <bitmapData
+      resourceLink="asset.areslords.GroupSelectedAsset1"
+      x="-7" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.SignUpFrameRankBtnBack"
+      resourceLink="asset.areslords.SignUpFrameRankBtnBg,asset.areslords.SignUpFrameRankBtnTxt,asset.areslords.SignUpFrameRankBtnIcon"
+      imageRectString="0|203|4|33|13,79|79|8|25|13,40|38|0|37|13" />
+    <custom
+      classname="com.pickgliss.ui.image.Image"
+      stylename="asset.areslords.SignUpFrameBg4"
+      resourceLink="asset.areslords.SignUpFrameBg3"
+      scaleX="-1" />
+    <custom
+      classname="com.pickgliss.ui.image.Image"
+      stylename="asset.areslords.StartFrameFront3"
+      resourceLink="asset.areslords.StartFrameFront1"
+      scaleX="-1" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="areslords.SignUpPlayer"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="35"
+      y="45" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="areslords.TopPlayerPos1"
+      x="265"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="areslords.TopPlayerPos2"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="areslords.TopPlayerPos3"
+      x="530"
+      y="0" />
+  </customDisplay>
+  <components>
+    <!-- 共用组件 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="areslords.frameBorder"
+      resourceLink="asset.areslords.frameBorder"
+      scaleGridString="28,28,32,32" />
+    <!-- 报名界面 -->
+    <component
+      classname="areslords.AresLordsSignUpFrame"
+      stylename="areslords.AresLordsSignUpFrame"
+      parentStyle="core.Frame1"
+      moveInnerRectString="0,70,15,25,1"
+      closeInnerRectString="29,0,21,29,14"
+      containerX="20"
+      containerY="64"
+      width="884"
+      height="640" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.SignUpFrameBg"
+      resourceLink="asset.areslords.SignUpFrameBg1,asset.areslords.SignUpFrameBg2,asset.areslords.SignUpFrameBg3,asset.areslords.SignUpFrameBg4,asset.areslords.SignUpFrameBg5,areslords.frameBorder"
+      imageRectString="0|840|0|361|13,-1|843|361|167|13,756|82|3|44|13,85|82|3|44|13,294|462|361|47|13,0|841|0|531|13"
+      mouseChildren="false"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.SignUpFrameTitle"
+      resourceLink="asset.areslords.SignUpFrameTitleBg,asset.areslords.SignUpFrameTitleTxt"
+      imageRectString="0|200|0|60|13,46|110|11|24|13"
+      x="320"
+      y="-11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="areslords.SignUpFrameShopBtn"
+      backStyle="asset.areslords.AresLordsShopBtnBg"
+      iconStyle="asset.areslords.AresLordsShopBtnTxt"
+      iconInnerRectString="18,85,70,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="51"
+      y="379"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="areslords.SignUpFrameRankBtn"
+      backStyle="areslords.SignUpFrameRankBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="10"
+      y="491" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="areslords.SignUpFrameSignUpBtn"
+      backStyle="asset.areslords.AresLordsBtnBg"
+      iconStyle="asset.areslords.SignUpFrameSignUpBtnTxt"
+      iconInnerRectString="15,110,7,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="452"
+      y="474"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SignUpFrameCost"
+      resourceLink="asset.areslords.SignUpFrameCost"
+      x="367"
+      y="417" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.SignUpFrameCostTxt"
+      textFormatStyle="areslords.SignUpTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="150"
+      height="20"
+      x="525"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SignUpFrameTime"
+      resourceLink="asset.areslords.SignUpFrameTime"
+      x="367"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.SignUpFrameTimeTxt"
+      textFormatStyle="areslords.SignUpTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="180"
+      height="20"
+      x="446"
+      y="435" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.SignUpFrameRoundTxt"
+      textFormatStyle="areslords.SignUpRoundTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="250"
+      height="16"
+      x="396"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="areslords.SignUpFramePlayerTop"
+      x="31"
+      y="55" />
+    <!-- 报名界面玩家 -->
+    <component
+      classname="areslords.signup.AresLordsSignUpPlayerView"
+      stylename="areslords.SignUpPlayerView" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SignUpPlayerBg"
+      resourceLink="asset.areslords.SignUpPlayerBg"
+      x="73"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SignUpPlayerShadow"
+      resourceLink="asset.areslords.SignUpPlayerShadow" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SignUpPlayerPointBg"
+      resourceLink="asset.areslords.SignUpPlayerPointBg"
+      x="17"
+      y="272" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SignUpPlayerNone"
+      resourceLink="asset.areslords.SignUpPlayerNone"
+      x="55"
+      y="278" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.SignUpPlayerMedal"
+      resourceLink="asset.areslords.SignUpFrameMedal1,asset.areslords.SignUpFrameMedal2,asset.areslords.SignUpFrameMedal3,asset.areslords.SignUpFrameMedal4,asset.areslords.SignUpFrameMedal5,asset.areslords.SignUpFrameMedal6"
+      x="45"
+      y="262" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.SignUpPlayerUserNameTxt"
+      textFormatStyle="areslords.SignUpPlayerUserNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="120"
+      height="18"
+      x="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.SignUpPlayerServerNameTxt"
+      textFormatStyle="areslords.SignUpPlayerServerNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="120"
+      height="23"
+      x="70"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.SignUpPlayerPointTxt"
+      textFormatStyle="areslords.SignUpPlayerPointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="120"
+      height="23"
+      x="110"
+      y="280" />
+    <!-- 开始界面 -->
+    <component
+      classname="areslords.AresLordsStartFrame"
+      stylename="areslords.AresLordsStartFrame"
+      parentStyle="core.Frame1"
+      moveInnerRectString="0,70,15,25,1"
+      closeInnerRectString="29,0,21,29,14"
+      containerX="20"
+      containerY="64"
+      width="882"
+      height="640" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.StartFrameBg"
+      resourceLink="asset.areslords.StartFrameBg1,asset.areslords.StartFrameBg2,asset.areslords.StartFrameBg3,areslords.frameBorder"
+      imageRectString="0|571|0|46|13,1|571|487|40|13,573|265|3|524|13,0|841|0|531|13"
+      mouseChildren="false"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartFrameTitle1"
+      resourceLink="asset.areslords.StartFrameTitle1"
+      x="218"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartFrameTitle2"
+      resourceLink="asset.areslords.StartFrameTitle2"
+      x="642"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.StartFrameMyMedal"
+      resourceLink="asset.areslords.StartFrameMedalb1,asset.areslords.StartFrameMedalb2,asset.areslords.StartFrameMedalb3,asset.areslords.StartFrameMedalb4,asset.areslords.StartFrameMedalb5,asset.areslords.StartFrameMedalb6"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      x="625"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="areslords.StartFrameShopBtn"
+      backStyle="asset.areslords.AresLordsShopBtnBg"
+      iconStyle="asset.areslords.AresLordsShopBtnTxt"
+      iconInnerRectString="22,85,70,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="643"
+      y="236"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="areslords.StartFrameRankBtn"
+      backStyle="asset.areslords.StartFrameRankBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="587"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="areslords.StartFrameRewardBtn"
+      backStyle="asset.areslords.StartFrameRewardBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="712"
+      y="183" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="areslords.StartFrameStartBtn"
+      backStyle="asset.areslords.StartFrameStartBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="621"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="areslords.StartFrameStartEff"
+      resourceLink="asset.areslords.AresLordsStartBtnEff"
+      mouseChildren="false"
+      mouseEnabled="false"
+      x="621"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartFrameMyTxt"
+      textFormatStyle="areslords.StartTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="220"
+      height="22"
+      x="617"
+      y="154" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartFrameTime"
+      resourceLink="asset.areslords.StartFrameTime"
+      x="613"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartFrameTimeTxt"
+      textFormatStyle="areslords.StartTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="150"
+      height="16"
+      x="680"
+      y="351" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartFrameRoundTxt"
+      textFormatStyle="areslords.StartTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="150"
+      height="16"
+      x="622"
+      y="352" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartFrameLeftTxt"
+      textFormatStyle="areslords.StartTxt3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="175"
+      height="41"
+      x="400"
+      y="483"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="areslords.StartFrameRankList"
+      backgoundStyle="core.describeBackground_style33"
+      backgoundInnerRectString="0,0,0,0,-1"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|areslords.StartRankItemView,89,571"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="571"
+      height="446"
+      x="2"
+      y="36" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="areslords.StartFramePrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="175"
+      y="492"
+      iconInnerRectString="2,66,7,17,13"
+      autoCenter="false" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="areslords.StartFrameNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="325"
+      y="492"
+      iconInnerRectString="1,64,7,18,13"
+      autoCenter="false" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartFramePageTxt"
+      textFormatStyle="areslords.PageTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="255"
+      y="495" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.StartFrameFront"
+      resourceLink="asset.areslords.StartFrameFront1,asset.areslords.StartFrameFront2,asset.areslords.StartFrameFront3"
+      imageRectString="-10|51|-6|498|13,41|485|481|11|13,581|51|-6|498|13"
+      mouseChildren="false"
+      mouseEnabled="false" />
+    <!-- 开始界面排行 -->
+    <component
+      classname="areslords.start.AresLordsStartRankItemView"
+      stylename="areslords.StartRankItemView" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartRankBg"
+      resourceLink="asset.areslords.StartRankBg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.StartRankNumBg"
+      resourceLink="asset.areslords.StartRankNumBg1,asset.areslords.StartRankNumBg2,asset.areslords.StartRankNumBg3,asset.areslords.StartRankNumBg4"
+      x="11"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="areslords.StartRankNum"
+      x="48"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartRankHeadBg"
+      resourceLink="asset.areslords.StartRankHeadBg"
+      x="85"
+      y="10" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="areslords.StartRankHead"
+      iconHeight="55"
+      iconWidth="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="6"
+      loadingHeight="6"
+      loadingX="30"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="93"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartRankFightBg"
+      resourceLink="asset.areslords.StartRankFightBg"
+      x="200"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartRankFightTitle"
+      resourceLink="asset.areslords.StartRankFightTitle"
+      x="170"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartRankFightTxt"
+      textFormatStyle="areslords.StartTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="100"
+      height="18"
+      x="288"
+      y="61" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="areslords.StartRankPointNum"
+      x="428"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartRankPointImg"
+      resourceLink="asset.areslords.StartRankScoreImg"
+      x="426"
+      y="56" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.StartRankMedal"
+      resourceLink="asset.areslords.StartFrameMedal1,asset.areslords.StartFrameMedal2,asset.areslords.StartFrameMedal3,asset.areslords.StartFrameMedal4,asset.areslords.StartFrameMedal5,asset.areslords.StartFrameMedal6"
+      x="447"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.StartRankMedalBg"
+      resourceLink="asset.areslords.StartRankMedalBg"
+      x="454"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.StartRankGroupName"
+      resourceLink="asset.areslords.GroupSelectedAsset1,asset.areslords.GroupSelectedAsset2,asset.areslords.GroupSelectedAsset3,asset.areslords.GroupSelectedAsset4,asset.areslords.GroupSelectedAsset5,asset.areslords.GroupSelectedAsset6"
+      x="385"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartRankNameTitleTxt"
+      textFormatStyle="areslords.StartTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="50"
+      height="18"
+      x="172"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartRankNameTxt"
+      textFormatStyle="areslords.StartTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="200"
+      height="18"
+      x="232"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartRankSvrNameTitleTxt"
+      textFormatStyle="areslords.StartTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="50"
+      height="18"
+      x="172"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.StartRankSvrNameTxt"
+      textFormatStyle="areslords.StartTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="200"
+      height="18"
+      x="232"
+      y="36" />
+    <!-- 排行榜界面 -->
+    <component
+      classname="areslords.AresLordsRankFrame"
+      stylename="areslords.AresLordsRankFrame"
+      parentStyle="core.Frame2"
+      containerX="6"
+      containerY="65"
+      width="535"
+      height="585" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="areslords.RankFrameScoreBg"
+      resourceLink="asset.areslords.TxtBg_L,asset.areslords.TxtBg_M,asset.areslords.TxtBg_R" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.RankFrameBg"
+      resourceLink="core.describeBackground_style04,asset.areslords.SplitLine"
+      imageRectString="0|516|0|456|13,2|512|382|3|13"
+      x="0"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.RankFrameTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|517|0|34|13,63|22|3|28|13,334|22|3|28|13,455|22|3|28|13"
+      width="514"
+      height="34"
+      x="1"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameRankTitleTxt"
+      textFormatStyle="areslords.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="17"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameNameTitleTxt"
+      textFormatStyle="areslords.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="189"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameFightTitleTxt"
+      textFormatStyle="areslords.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="37"
+      x="364"
+      y="8"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFramePointTitleTxt"
+      textFormatStyle="areslords.RankTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="53"
+      height="20"
+      x="460"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="areslords.RankFrameBottomBg"
+      resourceLink="asset.areslords.MyRankTitle,asset.areslords.ScoreTitle,areslords.RankFrameScoreBg"
+      imageRectString="25|56|7|16|13,330|54|8|16|13,402|114|0|27|13"
+      x="0"
+      y="434" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameUpdateTimeTxt"
+      textFormatStyle="areslords.RankTxt3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="29"
+      x="9"
+      y="392"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameMarkTxt"
+      textFormatStyle="areslords.RankTxt6_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="490"
+      height="18"
+      x="9"
+      y="419" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameNotApplyTips"
+      textFormatStyle="areslords.RankTxt4_t"
+      x="82"
+      y="437" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.RankFrameRankGroup"
+      resourceLink="asset.areslords.GroupFull1,asset.areslords.GroupFull2,asset.areslords.GroupFull3,asset.areslords.GroupFull4,asset.areslords.GroupFull5,asset.areslords.GroupFull6"
+      x="84"
+      y="443" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.RankFrameRankTitle"
+      resourceLink="asset.areslords.RankTitle"
+      x="184"
+      y="442" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameRankTxt"
+      textFormatStyle="areslords.RankTxt5_t"
+      autoSize="none"
+      width="74"
+      height="23"
+      x="184"
+      y="438" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFrameMyPointTxt"
+      textFormatStyle="areslords.RankTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="114"
+      height="20"
+      x="402"
+      y="437" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="areslords.RankFrameList"
+      backgoundStyle="core.describeBackground_style33"
+      backgoundInnerRectString="3,3,3,3,-1"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|areslords.RankItemView,34,504"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="504"
+      height="344"
+      x="6"
+      y="42" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="areslords.RankFramePrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="220"
+      y="392" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="areslords.RankFrameNextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="275"
+      y="392" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankFramePageTxt"
+      textFormatStyle="areslords.PageTextStyle1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="230"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="areslords.RankFrameGroupBtn1"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.areslords.GroupUnselectedAsset1"
+      selectedIconStyle="asset.areslords.GroupSelectedAsset1"
+      unselectedIconInnerRectString="27,55,8,19,13"
+      selectedIconInnerRectString="27,55,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      x="-5"
+      y="-18"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="areslords.RankFrameGroupBtn2"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.areslords.GroupUnselectedAsset2"
+      selectedIconStyle="asset.areslords.GroupSelectedAsset2"
+      unselectedIconInnerRectString="20,63,8,18,13"
+      selectedIconInnerRectString="20,63,8,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      x="83"
+      y="-18"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="areslords.RankFrameGroupBtn3"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.areslords.GroupUnselectedAsset3"
+      selectedIconStyle="asset.areslords.GroupSelectedAsset3"
+      unselectedIconInnerRectString="16,69,7,23,13"
+      selectedIconInnerRectString="16,69,7,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      x="166"
+      y="-18"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="areslords.RankFrameGroupBtn4"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.areslords.GroupUnselectedAsset4"
+      selectedIconStyle="asset.areslords.GroupSelectedAsset4"
+      unselectedIconInnerRectString="25,51,8,17,13"
+      selectedIconInnerRectString="25,51,8,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      x="252"
+      y="-18"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="areslords.RankFrameGroupBtn5"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.areslords.GroupUnselectedAsset5"
+      selectedIconStyle="asset.areslords.GroupSelectedAsset5"
+      unselectedIconInnerRectString="22,59,7,19,13"
+      selectedIconInnerRectString="22,59,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      x="337"
+      y="-18"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="areslords.RankFrameGroupBtn6"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.areslords.GroupUnselectedAsset6"
+      selectedIconStyle="asset.areslords.GroupSelectedAsset6"
+      unselectedIconInnerRectString="32,34,8,18,13"
+      selectedIconInnerRectString="32,34,8,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="120"
+      tipDirctions="2"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="90"
+      height="38"
+      x="423"
+      y="-18"
+      autoCenter="false" />
+    <!-- 排行榜界面玩家 -->
+    <component
+      classname="areslords.rank.AresLordsRankItemView"
+      stylename="areslords.RankItemView" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.RankItemRank"
+      resourceLink="asset.areslords.rank1,asset.areslords.rank2,asset.areslords.rank3"
+      x="10"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankItemRankTxt"
+      textFormatStyle="areslords.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="25"
+      height="16"
+      x="10"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankItemNameTxt"
+      textFormatStyle="areslords.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="250"
+      height="16"
+      x="60"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankItemFightValTxt"
+      textFormatStyle="areslords.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="16"
+      x="345"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RankItemPointTxt"
+      textFormatStyle="areslords.RankItemTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="16"
+      x="449"
+      y="7" />
+    <!-- 奖励界面 -->
+    <component
+      classname="areslords.AresLordsRewardFrame"
+      stylename="areslords.AresLordsRewardFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="team.Back"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,-3,1"
+      closeInnerRectString="29,-22,-8,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="285"
+      height="400"
+      containerX="0"
+      containerY="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.RewardFrameTitle"
+      resourceLink="asset.areslords.RewardTitle"
+      x="25"
+      y="-38" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="areslords.RewardFrameList"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|areslords.RewardItemView,57,504"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="245"
+      height="342"
+      x="24"
+      y="2" />
+    <!-- 奖励界面子项 -->
+    <component
+      classname="areslords.reward.AresLordsRewardItemView"
+      stylename="areslords.RewardItemView" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.RewardMedal"
+      resourceLink="asset.areslords.SignUpFrameMedal1,asset.areslords.SignUpFrameMedal2,asset.areslords.SignUpFrameMedal3,asset.areslords.SignUpFrameMedal4,asset.areslords.SignUpFrameMedal5,asset.areslords.SignUpFrameMedal6"
+      x="8"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="areslords.RewardGroupName"
+      resourceLink="asset.areslords.GroupSelectedAsset1,asset.areslords.GroupSelectedAsset2,asset.areslords.GroupSelectedAsset3,asset.areslords.GroupSelectedAsset4,asset.areslords.GroupSelectedAsset5,asset.areslords.GroupSelectedAsset6"
+      x="16"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.RewardCoin"
+      resourceLink="asset.core.AresHeart"
+      x="117"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="areslords.RewardNumTxt"
+      textFormatStyle="areslords.RewardTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="23"
+      x="141"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.RewardSplit"
+      resourceLink="asset.core.SpliceLine_02"
+      x="0"
+      y="54" />
+    <!-- 所有技能 -->
+    <component
+      classname="areslords.AresLordsSkillFrame"
+      stylename="areslords.AresLordsSkillFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="team.Back"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,-3,1"
+      closeInnerRectString="29,-22,-8,29,14"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="285"
+      height="270"
+      containerX="0"
+      containerY="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SkillFrameTitle"
+      resourceLink="asset.areslords.SkillTitle"
+      x="0"
+      y="-38" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="areslords.SkillFrameList"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|areslords.skill.AresLordsSkillRowView,70,504"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="12,0,0,0,3"
+      vScrollProxy="1"
+      width="245"
+      height="200"
+      x="24"
+      y="8" />
+    <!-- 所有技能行 -->
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="areslords.SkillFrameBox"
+      spacing="18" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="areslords.SkillFrameSplit"
+      resourceLink="asset.core.SpliceLine_02"
+      y="60" />
+    <!-- 所有技能项 -->
+    <component
+      classname="areslords.skill.AresLordsSkillItemView"
+      stylename="areslords.SkillFrameSkillItemView" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="areslords.SkillFrameSkillBg"
+      resourceLink="asset.areslords.SkillFrameSkillNumBg"
+      scaleGridString="7,7,9,9"
+      width="50"
+      height="50" />
+    <component
+      classname="yishi.view.community.BaseIconView"
+      stylename="areslords.SkillFrameSkillIcon"
+      iconHeight="44"
+      iconWidth="44"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="22"
+      loadingY="22"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      tipStyle="yishi.view.tips.goods.SkillTips"
+      isFollowMouse="false"
+      x="3"
+      y="3" />
+  </components>
+</style>

@@ -1,0 +1,174 @@
+<style
+  name="questionnaire"
+  source="ui/zh_cn/swf/questionnaire.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionnaire.NormalTextFormat_t"
+      args="Arial,12,0xfff9b9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionnaire.TitleTextFormat_t"
+      args="Arial,14,0xffff32,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionnaire.TitleTextFormat_t_1"
+      args="Arial,18,0xffea00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionnaire.ServiceReplyFormat_t"
+      args="Arial,12,0x7cb066,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionnaire.DescribeTextFormat_t"
+      args="Arial,14,0x0099FF,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.questionnaire.NextStepTextImg" />
+    <bitmapData
+      resourceLink="asset.questionnaire.InputTextBack"
+      x="280"
+      y="350" />
+    <bitmapData
+      resourceLink="asset.questionnaire.TitleBack"
+      x="7"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.questionnaire.Bg"
+      x="7"
+      y="8" />
+  </bitmaps>
+  <components>
+    <!-- 问卷调查界面 -->
+    <component
+      classname="questionnaire.QuestionnaireFrame"
+      stylename="questionnaire.QuestionnaireFrame"
+      parentStyle="core.Frame1"
+      width="604"
+      height="595" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="questionnaire.backgroundK"
+      parentStyle="core.describeBackground_style11"
+      width="564"
+      height="490"
+      x="4"
+      y="5" />
+    <component
+      classname="questionnaire.view.SelectText"
+      stylename="questionnaire.SelectText"
+      textStyle="questionnaire.NormalTextFormat"
+      selectBtnStyle="questionnaire.SelectButton"
+      btnRectString="1,1,1,1,0" />
+    <component
+      classname="questionnaire.view.SelectText"
+      stylename="questionnaire.SingleSelectText"
+      textStyle="questionnaire.NormalTextFormat"
+      selectBtnStyle="questionnaire.SingleSelectButton"
+      btnRectString="1,1,1,1,0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionnaire.NormalTextFormat"
+      textFormatStyle="questionnaire.NormalTextFormat_t"
+      filterString="core.normal_f"
+      height="22"
+      x="26"
+      y="2"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionnaire.QuestionTitleText"
+      textFormatStyle="questionnaire.TitleTextFormat_t"
+      filterString="core.normal_f"
+      height="22"
+      x="10"
+      y="0"
+      mouseEnabled="false" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="questionnaire.Title"
+      textFieldStyle="questionnaire.Title_text"
+      colors="0xffd200,0xfffffff"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="230"
+      y="14"
+      width="142" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionnaire.Title_text"
+      textFormatStyle="questionnaire.TitleTextFormat_t_1"
+      autoSize="none"
+      mouseEnabled="false"
+      width="142"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="questionnaire.SelectButton"
+      parentStyle="core.checkstyle_2.CheckButton"
+      x="470"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="questionnaire.SingleSelectButton"
+      parentStyle="core.checkstyle_1.CheckButton"
+      x="470"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="questionnaire.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,2,2,0,3"
+      viewportInnerRectString="0,17,5,2,0"
+      vScrollProxy="1"
+      vUnitIncrement="15"
+      width="555"
+      height="380"
+      x="9"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="questionnaire.NextStepBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.questionnaire.NextStepTextImg"
+      x="210"
+      y="436"
+      width="152"
+      height="51"
+      iconInnerRectString="77,27,14,0,9"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="questionnaire.EndBtn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.questionnaire.EndTextImg"
+      x="210"
+      y="436"
+      width="152"
+      height="51"
+      iconInnerRectString="60,27,14,0,9"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.TextInput"
+      stylename="questionnaire.InputTxt"
+      filterString="core.normal_f"
+      textStyle="questionnaire.NormalTextFormat"
+      autoSize="none"
+      width="90"
+      height="20"
+      maxChars="35"
+      x="40"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionnaire.QuestionDescribeText"
+      textFormatStyle="questionnaire.DescribeTextFormat_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="520"
+      x="10"
+      mouseEnabled="false" />
+  </components>
+</style>

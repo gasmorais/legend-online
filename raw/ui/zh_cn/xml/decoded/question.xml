@@ -1,0 +1,149 @@
+<style
+  name="question"
+  source="ui/zh_cn/swf/question.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionFrame.remainTxt_t"
+      args="Arial,12,0x66db17,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionFrame.timeTxt_t"
+      args="Arial,12,0xfff6ca,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionFrame.descTxt_t"
+      args="Arial,12,0xfef500,,,,,,left"
+      leading="5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionItem.subjectTxt_t"
+      args="Arial,14,0xffff32,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="questionItem.btnTxt_t"
+      args="Arial,12,0xfff9b9,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.questionFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.questionFrame.txtBg"
+      x="-40"
+      y="-60" />
+  </bitmaps>
+  <components>
+    <!-- 问卷调查界面 -->
+    <component
+      classname="question.QuestionFrame"
+      stylename="question.QuestionFrame"
+      parentStyle="core.Frame1"
+      width="790"
+      height="595"
+      containerX="14"
+      containerY="58" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionFrame.remainTxt"
+      textFormatStyle="questionFrame.remainTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="100"
+      height="24"
+      x="50"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionFrame.timeTxt"
+      textFormatStyle="questionFrame.timeTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="150"
+      height="24"
+      x="145"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionFrame.descTxt"
+      textFormatStyle="questionFrame.descTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="270"
+      height="48"
+      x="50"
+      y="200"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="questionFrame.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,394,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="412"
+      height="415"
+      x="342"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="questionFrame.vBox"
+      x="0"
+      y="0"
+      spacing="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionItem.subjectTxt"
+      textFormatStyle="questionItem.subjectTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="375"
+      height="48"
+      x="10"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="questionItem.SelectedCheckButton"
+      unSelectedStyle="asset.core.checkstyle_1.UnSelected"
+      selectedStyle="asset.core.checkstyle_1.Selected"
+      textStyle="questionItem.btnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="questionItem.btnTxt"
+      textFormatStyle="questionItem.btnTxt_t"
+      autoSize="left"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="300"
+      height="48"
+      x="25"
+      y="3"
+      wordWrap="true" />
+    <component
+      classname="yishi.view.base.GroupSelectObj"
+      stylename="questionItem.groupSelectObj"
+      x="25"
+      y="30"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="questionFrame.submitBtn"
+      backStyle="asset.questionFrame.btnBg"
+      iconStyle="asset.questionFrame.btnTxt"
+      displacement="true"
+      iconInnerRectString="27,96,13,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="485"
+      y="431" />
+  </components>
+</style>

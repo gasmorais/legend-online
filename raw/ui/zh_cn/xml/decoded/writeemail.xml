@@ -1,0 +1,246 @@
+<style
+  name="writeemail"
+  source="ui/zh_cn/swf/writeemail.swf">
+  <sets>
+    <!-- 邮费样式 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="writeemail.cost_text_t"
+      args="Arial,12,0xfff112,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="writeemail.emailGroupSend.confirmBtn_t"
+      args="Arial,12,0xffd200,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="writeemail.emailGroupSend.memberTitleTxt_t"
+      args="Arial,14,0xe7c88b,true,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="writeemail.consortiaEmailMemberItem.memberTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <!--下拉选择框.png-->
+    <bitmapData
+      resourceLink="asset.writeemail.WriteMailSelectInputBg"
+      x="72"
+      y="20" />
+    <!--公会邮件成员列表分割线-->
+    <bitmapData
+      resourceLink="asset.writeemail.emailMemberLine"
+      x="-2"
+      y="199" />
+    <!--收件人：.png-->
+    <bitmapData
+      resourceLink="asset.writeemail.ReceiveMailNameTxtImg"
+      x="21"
+      y="21" />
+    <!--邮费：.png-->
+    <bitmapData
+      resourceLink="asset.writeemail.WriteMailCostTxtImg"
+      x="249"
+      y="56" />
+    <!--邮件BG.jpg-->
+    <bitmapData
+      resourceLink="asset.writeemail.ReadMailBg"
+      x="0"
+      y="0" />
+    <!--主题.png-->
+    <bitmapData
+      resourceLink="asset.writeemail.MailSubjectTxtImg"
+      x="15"
+      y="51" />
+  </bitmaps>
+  <customDisplay />
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.WriteEmailCostValueText"
+      textFormatStyle="writeemail.cost_text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="288"
+      y="54" />
+    <!-- 工会群发邮件背景 -->
+    <component
+      classname="consortia.view.myConsortia.chairmanPath.consortiaEmail.ConsortiaEmailGroupSendView"
+      stylename="writeemail.ConsortiaEmailGroupSendView"
+      parentStyle="core.Frame1"
+      moveInnerRectString="200,27,20,0,9"
+      containerX="13"
+      width="383"
+      height="502" />
+    <!--	公会邮件子框	-->
+    <custom
+      classname="consortia.view.myConsortia.chairmanPath.consortiaEmail.ConsortiaEmailView"
+      stylename="writeemail.memberView"
+      x="75"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="writeemail.WriteEmailBack"
+      resourceLink="writeemail.ReadEmailBaseBack,writeemail.ReadMailRightBg,writeemail.ReadMailLeftBg,writeemail.WriteMailInputBg,asset.writeemail.ReceiveMailNameTxtImg,writeemail.MailSubjectTxtImg,asset.writeemail.WriteMailCostTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="writeemail.ReadMailLeftBg"
+      resourceLink="asset.writeemail.ReadMailBg"
+      scaleX="-1"
+      x="177"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="writeemail.ReadMailRightBg"
+      resourceLink="asset.writeemail.ReadMailBg"
+      x="177"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="writeemail.ReadEmailBaseBack"
+      parentStyle="core.describeBackground_style09"
+      width="352"
+      height="370"
+      x="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="writeemail.WriteMailInputBg"
+      resourceLink="asset.writeemail.WriteMailSelectInputBg"
+      x="0"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="writeemail.MailSubjectTxtImg"
+      resourceLink="asset.writeemail.MailSubjectTxtImg"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="writeemail.CloseBtn"
+      parentStyle="core.AlertButton"
+      x="190"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="writeemail.sendBtn"
+      parentStyle="core.AlertButton"
+      x="71"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="writeemail.emailGroupSend.memberListViewBG"
+      parentStyle="core.describeBackground_style11"
+      width="196"
+      height="239" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="writeemail.emailGroupSend.titleBg"
+      resourceLink="asset.writeemail.emailGroupSendTitleBg"
+      width="191"
+      height="31"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.emailGroupSendText"
+      textFormatStyle="writeemail.emailGroupSend.confirmBtn_t"
+      filterString="core.normal_f"
+      x="8"
+      y="3"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="writeemail.emailGroupSend.confirmBtn"
+      backStyle="writeemail.emailGroupSendConfirmBtn.backStyle"
+      textStyle="writeemail.emailGroupSendText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="65"
+      height="28"
+      backgoundInnerRectString="3,8,3,13"
+      x="24"
+      y="206" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="writeemail.emailGroupSendConfirmBtn.backStyle"
+      resourceLink="asset.writeemail.UnselectedButtonBg2,asset.writeemail.SelectedButtonBg2,asset.writeemail.SelectedButtonBg2" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="writeemail.emailGroupSend.cancelBtn"
+      parentStyle="writeemail.emailGroupSend.confirmBtn"
+      x="107"
+      y="206" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.emailGroupSend.memberTitleTxt"
+      textFormatStyle="writeemail.emailGroupSend.memberTitleTxt_t"
+      filterString="core.normal_f"
+      x="35"
+      y="7"
+      autoSize="none"
+      width="70"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.emailGroupSend.dutyTitleTxt"
+      parentStyle="writeemail.emailGroupSend.memberTitleTxt"
+      x="118"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.consortiaEmailMemberItem.nickNameTxt"
+      textFormatStyle="writeemail.consortiaEmailMemberItem.memberTxt_t"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="29"
+      y="2"
+      autoSize="none"
+      width="90"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="writeemail.consortiaEmailMemberItem.dutyTxt"
+      parentStyle="writeemail.consortiaEmailMemberItem.nickNameTxt"
+      x="120"
+      y="2"
+      width="70" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="writeemail.emailGroupSend.titleCheckBoxBg"
+      resourceLink="asset.core.checkstyle_2.UnSelected,asset.core.checkstyle_2.Selected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="writeemail.emailGroupSend.checkBoxBg"
+      parentStyle="writeemail.emailGroupSend.titleCheckBoxBg"
+      x="6"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="writeemail.emailGroupSend.memberVbox"
+      x="0"
+      y="0"
+      spacing="1" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="writeemail.emailGroupSend.memberScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="11,0,0,0,3"
+      viewportInnerRectString="0,0,10,0,5"
+      hScrollProxy="2"
+      vScrollProxy="1"
+      vUnitIncrement="10"
+      width="191"
+      height="169"
+      x="0"
+      y="31" />
+  </components>
+</style>

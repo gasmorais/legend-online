@@ -1,0 +1,96 @@
+package yishi.utils
+{
+   import com.greensock.TweenMax;
+   import flash.display.DisplayObject;
+   import flash.display.DisplayObjectContainer;
+   
+   public class NoviceBtnGlowEffect
+   {
+      
+      private var _target:DisplayObject;
+      
+      private var _targetFilters:Array;
+      
+      private var _time:Number = 0.5;
+      
+      private var _strength:Number;
+      
+      public function NoviceBtnGlowEffect(param1:DisplayObject, param2:Number = 15)
+      {
+         super();
+         _strength = param2;
+         _target = param1;
+         if(_target)
+         {
+            _targetFilters = _target.filters;
+         }
+      }
+      
+      public function stop() : void
+      {
+         if(_target)
+         {
+            TweenMax.killChildTweensOf(_target as DisplayObjectContainer);
+            TweenMax.killTweensOf(_target);
+            _target.filters = _targetFilters;
+         }
+      }
+      
+      public function play() : void
+      {
+         if(!_target)
+         {
+            return;
+         }
+         TweenMax.to(_target,_time,{
+            "glowFilter":{
+               "color":16763955,
+               "blurX":10,
+               "blurY":10,
+               "strength":_strength,
+               "quality":1
+            },
+            "onComplete":onFlowComplete
+         });
+      }
+      
+      private function onFlowComplete() : void
+      {
+         if(!_target)
+         {
+            return;
+         }
+         disposeTween();
+         TweenMax.to(_target,_time,{
+            "glowFilter":{
+               "color":16711680,
+               "alpha":1,
+               "blurX":0,
+               "blurY":0,
+               "strength":0,
+               "quality":1
+            },
+            "onComplete":onResumeComplete
+         });
+      }
+      
+      private function onResumeComplete() : void
+      {
+         disposeTween();
+         play();
+      }
+      
+      private function disposeTween() : void
+      {
+         TweenMax.killTweensOf(_target as DisplayObjectContainer);
+      }
+      
+      public function dispose() : void
+      {
+         stop();
+         _target = null;
+         _targetFilters = null;
+      }
+   }
+}
+

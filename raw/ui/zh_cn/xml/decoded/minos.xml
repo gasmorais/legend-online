@@ -1,0 +1,786 @@
+<style
+  name="minos"
+  source="ui/zh_cn/swf/minos.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.lvCardTxt_t"
+      args="Arial,16,0xfbe7aa,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.lvExportProTxt_t"
+      args="Arial,14,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.mapCardTxt_t"
+      args="Arial,16,0xfbe7aa,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.mapFightTxt_t"
+      args="Arial,14,0xf5d49a,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.cardNameTxt_t"
+      args="Arial,16,0xffee7c,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.topInfoTxt1_t"
+      args="Arial,14,0xdfbb5c,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.topInfoTxt2_t"
+      args="Arial,14,0xdfbb5c,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.cardInfoTip_t"
+      args="Arial,14,0xff6826,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.diffTxt_t1"
+      args="Arial,14,0x0099CC,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.diffTxt_t2"
+      args="Arial,14,0x9900CC,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.diffTxt_t3"
+      args="Arial,14,0xFF9900,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.diffTxt_t4"
+      args="Arial,14,0xFF0000,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.cardpronTxt_t"
+      args="Arial,14,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.lvmapProTxt_t"
+      args="Arial,14,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.toprt_t"
+      args="Arial,14,0xfbe7aa,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.toprp1_t"
+      args="Arial,12,0xffea78,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.nodeRwardProTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.gjItemTxt_t"
+      args="Arial,14,0xffc34f,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.gjDesTxt_t"
+      args="Arial,12,0xf5d49a,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="minos.g_f"
+      args="0xd81400,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.lvCardTipTxt_t"
+      args="Arial,14,0xffffff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.cardNeedLv_t"
+      args="Arial,14,0x7fc91e,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.goOnTip_t"
+      args="Arial,12,0x00ff00,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.minos.featTxt_t"
+      args="arial,12,0xe7d5ad,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.minos.cardDesBg"
+      x="8"
+      y="41" />
+    <bitmapData
+      resourceLink="asset.minos.cardDot"
+      x="15"
+      y="43" />
+    <bitmapData
+      resourceLink="asset.minos.rwardNodeproBg"
+      x="1"
+      y="65" />
+    <bitmapData
+      resourceLink="asset.minos.rwardNodeproBar1"
+      x="4"
+      y="67" />
+    <bitmapData
+      resourceLink="asset.minos.rwardNodeproBar2"
+      x="4"
+      y="67" />
+    <bitmapData
+      resourceLink="asset.minos.lightm"
+      x="834"
+      y="83" />
+    <bitmapData
+      resourceLink="asset.minos.lvbg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.minos.lvprobar"
+      x="7"
+      y="332" />
+    <bitmapData
+      resourceLink="asset.minos.map.bigProBar"
+      x="8"
+      y="513" />
+    <bitmapData
+      resourceLink="asset.minos.card.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.minos.guai1"
+      x="97"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.minos.guai2"
+      x="92"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.minos.guai3"
+      x="88"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.minos.card.probg"
+      x="2"
+      y="73" />
+    <bitmapData
+      resourceLink="asset.minos.card.namebg"
+      x="0"
+      y="44" />
+    <bitmapData
+      resourceLink="asset.minos.card.probar1"
+      x="21"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.minos.card.pre"
+      x="14"
+      y="211" />
+    <bitmapData
+      resourceLink="asset.minos.bigbg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.minos.title"
+      x="509"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.minos.nodeRewadPrebg"
+      x="0"
+      y="202" />
+    <bitmapData
+      resourceLink="asset.minos.ritembg"
+      x="5"
+      y="36" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.minos.nodeReward.Hbox"
+      strictWidth="90"
+      x="582"
+      y="-99" />
+    <custom
+      classname="consortia.view.minos.ui.MinosSamllMapView"
+      stylename="ui.minos.MinosSamllMapView"
+      x="774"
+      y="1" />
+    <custom
+      classname="consortia.view.minos.ui.MinosCardChoseViewUI"
+      stylename="ui.minos.MinosCardChoseViewUI"
+      x="774"
+      y="172" />
+    <custom
+      classname="consortia.view.minos.ui.MinosMapViewUI"
+      stylename="ui.minos.MinosMapViewUI"
+      x="111"
+      y="153" />
+    <custom
+      classname="asset.minos.mapbg"
+      stylename="ui.minos.mapbg"
+      width="760"
+      height="540"
+      x="0"
+      y="0"
+      mouseEnable="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.minos.lvHbox"
+      spacing="5"
+      x="438"
+      y="202" />
+    <custom
+      classname="consortia.view.minos.ui.MinosTopLeftUI"
+      stylename="ui.minos.enterTopLeft"
+      x="182"
+      y="42" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.minos.bossIcon"
+      iconHeight="290"
+      iconWidth="250"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="125"
+      loadingY="145"
+      x="10"
+      y="38" />
+    <custom
+      classname="asset.minos.lockMc"
+      stylename="ui.minos.lvUnlockMc"
+      width="260"
+      height="189"
+      x="39"
+      y="137"
+      mouseEnable="false" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.minos.nodeDiffVbox"
+      spacing="3"
+      x="68"
+      y="98" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.minos.nodeDiffHbox"
+      spacing="20"
+      x="32"
+      y="243" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ui.minos.gjItemHbox"
+      spacing="15"
+      x="23"
+      y="41" />
+  </customDisplay>
+  <components>
+    <component
+      classname="consortia.view.minos.MinousmapFrame"
+      stylename="consortia.view.minos.MinousmapFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,70,40,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="1262"
+      height="742"
+      containerY="0" />
+    <component
+      classname="consortia.view.minos.MinosEnterFrame"
+      stylename="consortia.view.minos.MinosEnterFrame"
+      parentStyle="core.Frame1"
+      backStyle="flash.display.Sprite"
+      closeInnerRectString="29,70,40,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="1262"
+      height="742"
+      containerY="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.lvCardTxt"
+      textFormatStyle="ui.minos.lvCardTxt_t"
+      filterString="minos.g_f"
+      autoSize="none"
+      width="167"
+      height="24"
+      x="53"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.minos.lvExportBtn"
+      backStyle="asset.secretad.red"
+      iconStyle="asset.minos.lvExportBtn"
+      iconInnerRectString="46,62,10,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="58"
+      y="377" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.lvExportProTxt"
+      textFormatStyle="ui.minos.lvExportProTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="249"
+      height="20"
+      x="10"
+      y="334" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.mapCardTxt"
+      textFormatStyle="ui.minos.mapCardTxt_t"
+      filterString="minos.g_f"
+      autoSize="none"
+      width="167"
+      height="24"
+      x="298"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.mapFightTxt"
+      textFormatStyle="ui.minos.mapFightTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="218"
+      height="20"
+      x="484"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.mapBuyAddBtn"
+      backStyle="asset.minos.buyAddbtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="720"
+      y="3"
+      width="23"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.cardNameTxt"
+      textFormatStyle="ui.minos.cardNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="214"
+      height="24"
+      x="25"
+      y="49" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.minos.leftInfo"
+      resourceLink="asset.minos.infoBg"
+      x="0"
+      y="0"
+      scaleX="1"
+      width="350"
+      height="109" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.minos.rightInfo"
+      resourceLink="asset.minos.infoBg"
+      x="736"
+      y="42"
+      scaleX="1"
+      width="350"
+      height="109" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.mainpreBtn"
+      backStyle="asset.minos.preBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="397"
+      y="382"
+      width="34"
+      height="74" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.mainnextBtn"
+      backStyle="asset.minos.nextBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1121"
+      y="382"
+      width="34"
+      height="74" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.minos.rankMbg"
+      resourceLink="asset.minos.rank.bg,asset.minos.rank.sort,asset.minos.rank.name,asset.minos.rank.gj,asset.minos.rank.mysort,asset.minos.rank.mygj"
+      imageRectString="0|0|19,17|10|19,69|10|19,192|10|19,4|484|19,148|484|19"
+      x="125"
+      y="177" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.topBtn1"
+      backStyle="asset.minos.info.shopBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="44"
+      y="36"
+      width="82"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.topBtn2"
+      backStyle="asset.minos.info.rewardBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="41"
+      width="58"
+      height="52" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.topBtn3"
+      backStyle="asset.guild.top.reward"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="249"
+      y="42"
+      width="66"
+      height="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.topInfoTxt1"
+      textFormatStyle="ui.minos.topInfoTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="157"
+      height="20"
+      x="98"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.topInfoTxt2"
+      textFormatStyle="ui.minos.topInfoTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="157"
+      height="20"
+      x="836"
+      y="57" />
+    <!-- add -->
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.minos.rank.vbox"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.minos.rank.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,256,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="256"
+      height="454"
+      x="122"
+      y="211" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.cardInfoTip"
+      textFormatStyle="ui.minos.cardInfoTip_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="242"
+      height="24"
+      x="14"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.minos.lvunLockBtn"
+      backStyle="asset.secretad.red"
+      iconStyle="asset.minos.lockBtn"
+      iconInnerRectString="49,53,14,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="58"
+      y="395" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="ui.minos.SingleSelectButton"
+      parentStyle="core.checkstyle_1.CheckButton"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.minos.nodeFightBtn"
+      backStyle="asset.secretad.red"
+      iconStyle="asset.minos.nodeFightBt"
+      iconInnerRectString="45,62,9,32,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="57"
+      y="306" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.diffTxt"
+      textFormatStyle="ui.minos.diffTxt_t1,ui.minos.diffTxt_t2,ui.minos.diffTxt_t3,ui.minos.diffTxt_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="157"
+      height="20"
+      x="40"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.cardpronTxt"
+      textFormatStyle="ui.minos.cardpronTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="222"
+      height="20"
+      autoDisplay="false"
+      x="20"
+      y="76" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.lvmapProTxt"
+      textFormatStyle="ui.minos.lvmapProTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="739"
+      height="20"
+      x="11"
+      y="513" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.myRankTxt"
+      textFormatStyle="consortiaNewBossRankItem.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="184"
+      y="666" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.featTxt"
+      textFormatStyle="ui.minos.featTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="325"
+      y="666" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.minos.spliteImg"
+      resourceLink="asset.minos.splieLine"
+      x="20"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.toprt"
+      textFormatStyle="ui.minos.toprt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="285"
+      height="24"
+      x="772"
+      y="89" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.toprp1"
+      textFormatStyle="ui.minos.toprp1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="20"
+      x="748"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.toprp2"
+      textFormatStyle="ui.minos.toprp1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="20"
+      x="909"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.minos.nodeRewardBtn"
+      backStyle="asset.minos.rewardNodeGetBg"
+      iconStyle="asset.minos.rewardNodeGetFt"
+      iconInnerRectString="2,61,4,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="4"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.nodeRwardProTxt"
+      textFormatStyle="ui.minos.nodeRwardProTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="63"
+      height="18"
+      x="9"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.minos.nodeHasGet"
+      resourceLink="asset.minos.hasGetFlg"
+      x="1"
+      y="22"
+      scaleX="1"
+      width="76"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.gjItemTxt"
+      textFormatStyle="ui.minos.gjItemTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="377"
+      height="20"
+      x="18"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.minos.rwscaleBit"
+      resourceLink="asset.minos.rewardNodeGetBg"
+      scaleGridString="8,6,50,16" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.minos.ritembtnImg"
+      resourceLink="ui.minos.rwscaleBit,asset.minos.lqBtn"
+      imageRectString="0|100|0|37|13,5|10|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.gjItemBtn"
+      backStyle="ui.minos.ritembtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="420"
+      y="52"
+      width="100"
+      height="37" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.minos.gjHasFlg"
+      resourceLink="asset.minos.hasGetFlg"
+      x="434"
+      y="46"
+      scaleX="1"
+      width="76"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.minos.gjScrollpanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,553,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="553"
+      height="391"
+      x="32"
+      y="47" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.gjDesTxt"
+      textFormatStyle="ui.minos.gjDesTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="534"
+      height="69"
+      x="43"
+      y="449" />
+    <component
+      classname="consortia.view.minos.MinosGJRewardFrame"
+      stylename="consortia.view.minos.MinosGJRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.FrameBg2"
+      closeInnerRectString="29,10,20,29,14"
+      containerX="-20"
+      containerY="0"
+      moveInnerRectString="376,37,10,0,9"
+      width="580"
+      height="538" />
+    <component
+      classname="consortia.view.minos.MinosSeaonRewardFrame"
+      stylename="consortia.view.minos.MinosSeaonRewardFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.FrameBg2"
+      closeInnerRectString="29,10,20,29,14"
+      containerX="-20"
+      containerY="0"
+      moveInnerRectString="376,37,10,0,9"
+      width="580"
+      height="538" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.minos.gjBigBg"
+      parentStyle="core.describeBackground_style04"
+      x="30"
+      y="45"
+      width="557"
+      height="400" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.lvCardTipTxt"
+      textFormatStyle="ui.minos.lvCardTipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="205"
+      height="20"
+      x="43"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.cardNeedLv"
+      textFormatStyle="ui.minos.cardNeedLv_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="242"
+      height="20"
+      x="14"
+      y="357" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.minos.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="1112"
+      y="36" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="ui.minos.HelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="minos.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.minos.goOnTip"
+      textFormatStyle="ui.minos.goOnTip_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="242"
+      height="40"
+      wordWrap="true"
+      x="14"
+      y="352" />
+  </components>
+</style>

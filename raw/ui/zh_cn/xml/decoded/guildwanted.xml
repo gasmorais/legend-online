@@ -1,0 +1,540 @@
+<style
+  name="guildwanted"
+  source="ui/zh_cn/swf/guildwanted.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.rankTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.nameTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.scoreTxt_t"
+      args="Arial,12,0xffffff,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.selfScoreTxt_t"
+      args="Arial,14,0xfff38d,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.guildScoreTxt_t"
+      args="Arial,14,0xfff38d,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.selfScoreDesc_t"
+      args="Arial,12,0xc45f23,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.guildScoreDesc_t"
+      args="Arial,12,0xc45f23,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.targetTxt_t"
+      args="Arial,12,0xff8400,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.starTxt_t"
+      args="Arial,12,0xff8400,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.rewardTxt_t"
+      args="Arial,12,0xff8400,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.countTxt_t"
+      args="Arial,12,0xff8400,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.rank_t"
+      args="Arial,12,0xe3d39b,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.name_t"
+      args="Arial,12,0xe3d39b,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.score_t"
+      args="Arial,12,0xe3d39b,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.totalScoreTxt_t"
+      args="Arial,12,0xff9600,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.selfRankTxt_t"
+      args="Arial,12,0xff9600,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.guildwanted.rewardListTxt_t"
+      args="Arial,12,0x0093d6,,,,,,left"
+      underline="true" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.guildwanted.Txt_f"
+      args="0xa70000,2,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedChestItem.txt_t"
+      args="Arial,12,0xfff38d,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedFrame.downUpdateTime.text_t"
+      args="Arial,12,0x00ca00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedFrame.refreshTxt_t"
+      args="Arial,12,0x00ca00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedFrame.nickNameTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedFrame.consortiaNameTxt_t"
+      args="Arial,12,0xff8400,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedRewardTipView.rewardTxt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GuildWantedFrame.notJoinActPrompt_t"
+      args="Arial,12,0xFF0000,,,,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.guildwanted.vBox"
+      spacing="0"
+      x="437"
+      y="264" />
+  </customDisplay>
+  <components>
+    <component
+      classname="consortia.view.wanted.GuildWantedFrame"
+      stylename="consortia.view.wanted.GuildWantedFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,3,25,29,14"
+      containerX="-15"
+      containerY="0"
+      moveInnerRectString="376,27,50,0,9"
+      width="751"
+      height="604" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.guildwanted.back"
+      resourceLink="asset.guildwanted.bg,asset.guildwanted.score,asset.guildwanted.guildScore"
+      imageRectString="0|0|19,35|15|19,34|74|19"
+      x="31"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.guildwanted.spanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,402,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="402"
+      height="158"
+      x="328"
+      y="351" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.rankTxt"
+      textFormatStyle="ui.guildwanted.rankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="20"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.nameTxt"
+      textFormatStyle="ui.guildwanted.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="148"
+      height="20"
+      x="121"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.scoreTxt"
+      textFormatStyle="ui.guildwanted.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="20"
+      x="305"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.guildwanted.refreshBtn"
+      backStyle="asset.core.GreenBtn"
+      iconStyle="asset.guildwanted.refreshBtnTxt"
+      iconInnerRectString="13,51,7,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="582"
+      y="225" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.guildwanted.fightBtn"
+      backStyle="asset.guildwanted.fightBtnBmp"
+      iconStyle="asset.guildwanted.fightBtnTxt"
+      iconInnerRectString="39,67,12,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="108"
+      y="497" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.selfScoreTxt"
+      textFormatStyle="ui.guildwanted.selfScoreTxt_t"
+      filterString="ui.guildwanted.Txt_f"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="182"
+      y="81" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.guildScoreTxt"
+      textFormatStyle="ui.guildwanted.guildScoreTxt_t"
+      filterString="ui.guildwanted.Txt_f"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="177"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.selfScoreDesc"
+      textFormatStyle="ui.guildwanted.selfScoreDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="195"
+      height="35"
+      x="46"
+      y="95"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.guildScoreDesc"
+      textFormatStyle="ui.guildwanted.guildScoreDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="176"
+      height="35"
+      x="51"
+      y="152"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.targetTxt"
+      textFormatStyle="ui.guildwanted.targetTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="214"
+      height="20"
+      x="326"
+      y="203" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.starTxt"
+      textFormatStyle="ui.guildwanted.starTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="326"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.rewardTxt"
+      textFormatStyle="ui.guildwanted.rewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="165"
+      height="20"
+      x="326"
+      y="258" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.countTxt"
+      textFormatStyle="ui.guildwanted.countTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      x="326"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.rank"
+      textFormatStyle="ui.guildwanted.rank_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="72"
+      height="20"
+      x="335"
+      y="326" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.name"
+      textFormatStyle="ui.guildwanted.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="72"
+      height="20"
+      x="477"
+      y="326" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.score"
+      textFormatStyle="ui.guildwanted.score_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="72"
+      height="20"
+      x="635"
+      y="326" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.totalScoreTxt"
+      textFormatStyle="ui.guildwanted.totalScoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="121"
+      height="35"
+      x="338"
+      y="508"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.selfRankTxt"
+      textFormatStyle="ui.guildwanted.selfRankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="111"
+      height="40"
+      x="478"
+      y="508"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.guildwanted.rewardListTxt"
+      textFormatStyle="ui.guildwanted.rewardListTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="GuildWantedFrame.selfBar"
+      backgroundLink="asset.guildwanted.progressBg"
+      barLink="asset.guildwanted.progressColor"
+      x="235"
+      y="99"
+      scaleX=".8"
+      scaleY=".8" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="GuildWantedFrame.guildBar"
+      backgroundLink="asset.guildwanted.progressBg"
+      barLink="asset.guildwanted.progressColor"
+      x="235"
+      y="154"
+      scaleX=".8"
+      scaleY=".8" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GuildWantedChestItem.chestIcon"
+      resourceLink="asset.guildwanted.chestIcon"
+      x="0"
+      y="0"
+      scaleX=".8"
+      scaleY=".8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedChestItem.txt"
+      textFormatStyle="GuildWantedChestItem.txt_t"
+      filterString="ui.guildwanted.Txt_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="0"
+      y="30" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="GuildWantedFrame.downUpdateTime"
+      timeTxtStyle="GuildWantedFrame.downUpdateTime.text"
+      x="660"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.downUpdateTime.text"
+      textFormatStyle="GuildWantedFrame.downUpdateTime.text_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.refreshTxt"
+      textFormatStyle="GuildWantedFrame.refreshTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="585"
+      y="254" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.nickNameTxt"
+      textFormatStyle="GuildWantedFrame.nickNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="80"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.consortiaNameTxt"
+      textFormatStyle="GuildWantedFrame.consortiaNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="80"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GuildWantedChestItem.btn"
+      backStyle="asset.guildwanted.chestBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      scaleX=".8"
+      scaleY=".8"
+      x="-14"
+      y="-13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="GuildWantedRewardTipView.vbox"
+      spacing="4"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedRewardTipView.rewardTxt"
+      textFormatStyle="GuildWantedRewardTipView.rewardTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="GuildWantedFrame.rewardListBtn"
+      textStyle="ui.guildwanted.rewardListTxt"
+      backgoundInnerRectString="1,8,3,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="60"
+      height="24"
+      autoSizeAble="false"
+      displacement="false"
+      x="620"
+      y="518" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="GuildWantedFrame.RefreshAlertFrame"
+      parentStyle="worldboss.RiverNotAlert"
+      confirmStyle="GuildWantedFrame.RefreshConfirmBtn"
+      cancelStyle="GuildWantedFrame.RefreshCancelBtn"
+      checkStyle="GuildWantedFrame.RefreshCheckBtn"
+      describeStyle="GuildWantedFrame.RefreshDescribe"
+      showPromptStyle="GuildWantedFrame.RefreshPrompt"
+      usebindPointStyle="GuildWantedFrame.UseBindPointBtn"
+      width="550"
+      height="200"
+      containerX="28"
+      containerY="20"
+      notJoinActPromptStyle="GuildWantedFrame.notJoinActPromptTxt" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="GuildWantedFrame.RefreshConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="90"
+      y="101" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="GuildWantedFrame.RefreshCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="300"
+      y="101" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="GuildWantedFrame.RefreshCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="0"
+      y="54" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.RefreshDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="32"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.RefreshPrompt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="41"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="GuildWantedFrame.UseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="100"
+      y="54"
+      fieldX="13"
+      fieldY="-2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GuildWantedFrame.notJoinActPromptTxt"
+      textFormatStyle="GuildWantedFrame.notJoinActPrompt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="42"
+      y="82" />
+  </components>
+</style>

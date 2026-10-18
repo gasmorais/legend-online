@@ -1,0 +1,327 @@
+<style
+  name="stararea"
+  source="ui/zh_cn/swf/stararea.swf">
+  <sets>
+    <!--右侧界面 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRlightCount_t"
+      args="Arial,12,0xe9ecf5,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRkeyCount_t"
+      args="Arial,12,0xe9ecf5,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRinfo_t"
+      args="Arial,12,0x849e9d,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRscoreStr1_t"
+      args="Arial,12,0x2bfeef,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRscoreStr2_t"
+      args="Arial,12,0x2bfeef,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRscoreValue1_t"
+      args="Arial,12,0xffb62b,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRscoreValue2_t"
+      args="Arial,12,0xffb62b,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtRactionPower_t"
+      args="Arial,18,0xffffff,,,,,,center"
+      leading="0" />
+    <!--左侧界面单项 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtLtitle_t"
+      args="Arial,12,0xfff700,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtLcontent_t"
+      args="Arial,12,0xe5d19e,,,,,,left"
+      leading="-2" />
+    <!--小地图 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.stararea.txtMapTitle_t"
+      args="Arial,16,0xBB8F49,,,,,,center"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <!--大地图 -->
+    <bitmapData
+      resourceLink="asset.stararea.bg" />
+    <bitmapData
+      resourceLink="asset.stararea.line" />
+    <!--右侧界面 -->
+    <bitmapData
+      resourceLink="asset.stararea.bg2"
+      x="0"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.stararea.str1"
+      x="97"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.stararea.str2"
+      x="43"
+      y="270" />
+    <bitmapData
+      resourceLink="asset.stararea.str5"
+      x="46"
+      y="117" />
+    <bitmapData
+      resourceLink="asset.stararea.icon.light2"
+      x="68"
+      y="42" />
+    <bitmapData
+      resourceLink="asset.stararea.icon.key2"
+      x="129"
+      y="42" />
+    <!--左侧界面 -->
+    <bitmapData
+      resourceLink="asset.stararea.bg4"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.stararea.str6"
+      x="26"
+      y="9" />
+    <!--小地图 -->
+    <bitmapData
+      resourceLink="asset.stararea.bg5"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <!--大地图 -->
+    <custom
+      classname="asset.stararea.mc.line"
+      stylename="asset.stararea.mc.line" />
+    <custom
+      classname="asset.stararea.mc.roadContent"
+      stylename="asset.stararea.mc.roadContent" />
+    <!--小地图 -->
+    <custom
+      classname="asset.stararea.mc.smallmap"
+      stylename="asset.stararea.mc.smallmap" />
+  </customDisplay>
+  <components>
+    <!--右侧界面 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRlightCount"
+      textFormatStyle="ui.stararea.txtRlightCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="17"
+      x="68"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRkeyCount"
+      textFormatStyle="ui.stararea.txtRkeyCount_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="17"
+      x="130"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRinfo"
+      textFormatStyle="ui.stararea.txtRinfo_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="159"
+      height="59"
+      x="40"
+      y="148"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRscoreStr1"
+      textFormatStyle="ui.stararea.txtRscoreStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="16"
+      x="27"
+      y="208" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRscoreStr2"
+      textFormatStyle="ui.stararea.txtRscoreStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="16"
+      x="27"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRscoreValue1"
+      textFormatStyle="ui.stararea.txtRscoreValue1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="16"
+      x="153"
+      y="208" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRscoreValue2"
+      textFormatStyle="ui.stararea.txtRscoreValue2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="16"
+      x="153"
+      y="230" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtRactionPower"
+      textFormatStyle="ui.stararea.txtRactionPower_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="84"
+      height="22"
+      x="118"
+      y="266" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stararea.Rbg1"
+      resourceLink="asset.stararea.bg3"
+      imageRectString="0|0|19"
+      x="26"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stararea.Rbg3"
+      resourceLink="asset.stararea.bg3"
+      imageRectString="0|0|19"
+      x="26"
+      y="264" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stararea.Rbg2"
+      resourceLink="asset.stararea.bg3"
+      imageRectString="0|0|19"
+      x="26"
+      y="112" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stararea.btnOut"
+      backStyle="asset.stararea.str3"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="5"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stararea.btnIn"
+      backStyle="asset.stararea.str4"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="3"
+      y="116" />
+    <!--左侧界面 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stararea.Lbg2"
+      resourceLink="asset.stararea.bg3"
+      imageRectString="0|211|0|31|13"
+      x="2"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.stararea.imgLLine"
+      resourceLink="asset.stararea.line2,asset.stararea.line2,asset.stararea.line2,asset.stararea.line2,asset.stararea.line2,asset.stararea.line2"
+      imageRectString="0|0|19,0|110|19,0|165|19,0|220|19,0|278|19,0|55|19"
+      x="0"
+      y="88" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ui.stararea.left.bg"
+      resourceLink="asset.stararea.leftBack"
+      scaleGridString="10,10,70,30"
+      x="0"
+      y="0"
+      width="238"
+      height="546" />
+    <!--左侧界面单项 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.stararea.imgMapNode"
+      resourceLink="asset.stararea.icon.ban,asset.stararea.icon.lock,asset.stararea.icon.fight,asset.stararea.icon.box,asset.stararea.icon.game,asset.stararea.icon.light,asset.stararea.icon.key,asset.stararea.icon.fashion,asset.stararea.icon.mount"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtLtitle"
+      textFormatStyle="ui.stararea.txtLtitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="16"
+      x="46"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtLcontent"
+      textFormatStyle="ui.stararea.txtLcontent_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="157"
+      height="45"
+      x="46"
+      y="7"
+      wordWrap="true"
+      multiline="true" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.stararea.vbox"
+      x="8"
+      y="45"
+      spacing="-15" />
+    <!--小地图 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.stararea.txtMapTitle"
+      textFormatStyle="ui.stararea.txtMapTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="45"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stararea.left.btnOut"
+      backStyle="asset.stararea.left2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="241" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.stararea.left.btnIn"
+      backStyle="asset.stararea.left1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="215"
+      y="241" />
+  </components>
+</style>

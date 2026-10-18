@@ -1,0 +1,609 @@
+<style
+  name="warsoultower"
+  source="ui/zh_cn/swf/warsoultower.swf">
+  <sets>
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="warSoulTowerFrame.rewardsTxt.text_f"
+      args="0xff6000,0.2,4,4,6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.rewardsTxt.text_t"
+      args="Arial,12,0xfffca2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.currentLevelTxt.text_t"
+      args="Arial,24,0xfffca2,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.highestLevelTxt.text_t"
+      args="Arial,24,0xfffca2,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.challengeNumTxt_t"
+      args="Arial,12,0xdec975,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerItem.levelTxt_t"
+      args="Arial,12,0xe9c68c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerLevelItem.levelTxt_t"
+      args="Arial,12,0x90775f,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerLevelItem.txt_t"
+      args="Arial,12,0xfffca2,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.armorTxt_t"
+      args="Arial,18,0xfffca2,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="warSoulTowerLevelItem.txt_g"
+      args="0xff0000,1,5,5,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.skillTxt_t"
+      args="Arial,12,0xfffca2,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerFrame.passTxt_t"
+      args="Arial,18,0xfffca2,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerStageItem.txt_t"
+      args="Arial,12,0xe9c68c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerStageItem.receiveTxt_t1"
+      args="Arial,12,0xe9c68c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerStageItem.receiveTxt_t2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerResultFrame.titleTxt.text_t"
+      args="Arial,12,0xff6000,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warSoulTowerResultFrame.startTxt.text_t"
+      args="Arial,24,0xfffca2,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.warSoulTowerFrame.bg"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.warSoulTowerFrame.rewardsBg"
+      x="13"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.warSoulTowerFrame.challengeNumBg"
+      x="802"
+      y="510" />
+    <bitmapData
+      resourceLink="asset.warSoulTowerLevelItem.icon"
+      x="15"
+      y="105" />
+    <bitmapData
+      resourceLink="asset.warSoulTowerResultFrame.recordImg"
+      x="650"
+      y="135" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="warSoulTowerItem.hBox"
+      x="75"
+      y="0"
+      spacing="5" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="warSoulTowerItem.itemView"
+      backgroundStyle="core.ItemBack"
+      iconStyle="warSoulTowerItem.itemView.BaseItemViewIcon"
+      textStyle="core.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="warSoulTowerItem.itemView.BaseItemViewIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="20"
+      loadingY="20"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="warSoulTowerFrame.passVBox"
+      x="0"
+      y="88"
+      spacing="3" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="warSoulTowerFrame.repeatVBox"
+      x="0"
+      y="363"
+      spacing="3" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="warSoulTowerFrame.itemVBox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="warSoulTowerStageItem.hBox"
+      x="5"
+      y="40"
+      spacing="2" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="warSoulTowerStageItem.itemView"
+      parentStyle="warSoulTowerItem.itemView" />
+    <custom
+      classname="asset.warSoulTowerResultFrame.bg"
+      stylename="warSoulTowerResultFrame.bg"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="warSoulTowerResultFrame.itemVBox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="warSoulTowerResultItem.vBox"
+      x="15"
+      y="35"
+      spacing="3" />
+  </customDisplay>
+  <components>
+    <component
+      classname="warsoultower.WarSoulTowerFrame"
+      stylename="warsoultower.WarSoulTowerFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="16"
+      containerY="65"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,27,10,0,9"
+      width="1043"
+      height="717" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="warSoulTowerFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="1007"
+      height="607" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warSoulTowerFrame.leftBorder"
+      parentStyle="core.describeBackground_style04"
+      x="6"
+      y="10"
+      width="223"
+      height="594" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerFrame.rewardsTxt"
+      autoSize="none"
+      width="170"
+      textFieldStyle="warSoulTowerFrame.rewardsTxt.text"
+      colors="0xffffff,0xffd972"
+      filterString="warSoulTowerFrame.rewardsTxt.text_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="35"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.rewardsTxt.text"
+      textFormatStyle="warSoulTowerFrame.rewardsTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="170"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="warSoulTowerFrame.leftBtn"
+      backStyle="asset.warSoulTowerFrame.leftBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="40"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="warSoulTowerFrame.rightBtn"
+      backStyle="asset.warSoulTowerFrame.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="164"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerFrame.mutiImg"
+      resourceLink="asset.warSoulTowerFrame.itemBg,asset.warSoulTowerFrame.firstPassRewards,asset.warSoulTowerFrame.itemBg,asset.warSoulTowerFrame.repeatRewards"
+      imageRectString="0|0|19,10|5|19,0|275|19,10|280|19"
+      x="10"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerFrame.rightImg"
+      resourceLink="asset.warSoulTowerFrame.rightBg,asset.warSoulTowerFrame.itemRedBg,asset.warSoulTowerFrame.itemRedBg,asset.warSoulTowerFrame.currentLevelBg,asset.warSoulTowerFrame.highestLevelBg,asset.warSoulTowerFrame.itemBg,asset.warSoulTowerFrame.armorTxt"
+      imageRectString="0|227|0|260|13,2|225|-3|36|13,2|225|85|36|13,35|172|5|18|13,60|119|93|18|13,10|216|180|28|13,10|144|188|17|13"
+      x="777"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerFrame.currentLevelTxt"
+      autoSize="none"
+      width="170"
+      textFieldStyle="warSoulTowerFrame.currentLevelTxt.text"
+      colors="0xffffff,0xffd972"
+      filterString="warSoulTowerFrame.rewardsTxt.text_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="810"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.currentLevelTxt.text"
+      textFormatStyle="warSoulTowerFrame.currentLevelTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="170"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerFrame.highestLevelTxt"
+      autoSize="none"
+      width="170"
+      textFieldStyle="warSoulTowerFrame.highestLevelTxt.text"
+      colors="0xffffff,0xffd972"
+      filterString="warSoulTowerFrame.rewardsTxt.text_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="810"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.highestLevelTxt.text"
+      textFormatStyle="warSoulTowerFrame.highestLevelTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="170"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="warSoulTowerFrame.challengeBtn"
+      backStyle="asset.warSoulTowerFrame.challengeBtnBg"
+      iconStyle="asset.warSoulTowerFrame.challengeBtnTxt"
+      iconInnerRectString="38,49,51,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="835"
+      y="405" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.challengeNumTxt"
+      textFormatStyle="warSoulTowerFrame.challengeNumTxt_t"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="795"
+      y="522" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerItem.levelTxt"
+      textFormatStyle="warSoulTowerItem.levelTxt_t"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="13"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerLevelItem.levelTxt"
+      textFormatStyle="warSoulTowerLevelItem.levelTxt_t"
+      autoSize="none"
+      width="89"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="warSoulTowerLevelItem.iconBg"
+      resourceLink="asset.warSoulTowerLevelItem.iconBg0,asset.warSoulTowerLevelItem.iconBg1,asset.warSoulTowerLevelItem.iconBg2,asset.warSoulTowerLevelItem.iconBg3"
+      x="0"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerLevelItem.txt"
+      textFormatStyle="warSoulTowerLevelItem.txt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="warSoulTowerLevelItem.txt_g"
+      width="45"
+      height="24"
+      x="35"
+      y="107" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.armorTxt"
+      textFormatStyle="warSoulTowerFrame.armorTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="warSoulTowerLevelItem.txt_g"
+      width="80"
+      height="30"
+      x="930"
+      y="213" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.skillTxt"
+      textFormatStyle="warSoulTowerFrame.skillTxt_t"
+      autoSize="none"
+      width="200"
+      height="40"
+      x="793"
+      y="243"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.passTxt"
+      textFormatStyle="warSoulTowerFrame.passTxt_t"
+      autoSize="none"
+      width="185"
+      height="60"
+      x="25"
+      y="180"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerFrame.repeatTxt"
+      textFormatStyle="warSoulTowerFrame.passTxt_t"
+      autoSize="none"
+      width="185"
+      height="60"
+      x="25"
+      y="415"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="warSoulTowerFrame.spanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,237,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="218"
+      height="545"
+      x="7"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerStageItem.txt"
+      textFormatStyle="warSoulTowerStageItem.txt_t"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="15"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerStageItem.receiveTxt"
+      textFormatStyle="warSoulTowerStageItem.receiveTxt_t1,warSoulTowerStageItem.receiveTxt_t2"
+      autoSize="none"
+      width="60"
+      height="40"
+      x="151"
+      y="45"
+      wordWrap="true" />
+    <!-- 战灵之塔结算界面 -->
+    <component
+      stylename="warsoultower.WarSoulTowerResultFrame"
+      classname="warsoultower.WarSoulTowerResultFrame"
+      containerX="0"
+      containerY="0"
+      width="789"
+      height="314"
+      enterEnable="true"
+      escEnable="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="warSoulTowerResultFrame.btn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.warSoulTowerResultFrame.btnTxt"
+      iconInnerRectString="40,50,12,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="130"
+      height="46"
+      x="500"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="warSoulTowerResultFrame.repeatBtn"
+      unSelectedStyle="warSoulTowerResultFrame.repeatBtn.unSeleected"
+      selectedStyle="warSoulTowerResultFrame.repeatBtn.seleected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="95"
+      height="26"
+      x="85"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerResultFrame.repeatBtn.unSeleected"
+      resourceLink="asset.core.Style116UnSelectedBtn,asset.warSoulTowerResultFrame.repeatBtnUnSelected"
+      imageRectString="0|95|0|26|13,18|60|0|28|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerResultFrame.repeatBtn.seleected"
+      resourceLink="asset.core.Style116SelectedBtn,asset.warSoulTowerResultFrame.repeatBtnSelected"
+      imageRectString="0|95|0|26|13,17|63|0|30|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="warSoulTowerResultFrame.passBtn"
+      unSelectedStyle="warSoulTowerResultFrame.passBtn.unSeleected"
+      selectedStyle="warSoulTowerResultFrame.passBtn.seleected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="95"
+      height="26"
+      x="180"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerResultFrame.passBtn.unSeleected"
+      resourceLink="asset.core.Style116UnSelectedBtn,asset.warSoulTowerResultFrame.passBtnUnSelected"
+      imageRectString="0|95|0|26|13,14|67|0|27|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerResultFrame.passBtn.seleected"
+      resourceLink="asset.core.Style116SelectedBtn,asset.warSoulTowerResultFrame.passBtnSelected"
+      imageRectString="0|95|0|26|13,13|70|0|27|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="warSoulTowerResultFrame.stageBtn"
+      unSelectedStyle="warSoulTowerResultFrame.stageBtn.unSeleected"
+      selectedStyle="warSoulTowerResultFrame.stageBtn.seleected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="95"
+      height="26"
+      x="275"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerResultFrame.stageBtn.unSeleected"
+      resourceLink="asset.core.Style116UnSelectedBtn,asset.warSoulTowerResultFrame.stageBtnUnSelected"
+      imageRectString="0|95|0|26|13,16|62|0|27|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warSoulTowerResultFrame.stageBtn.seleected"
+      resourceLink="asset.core.Style116SelectedBtn,asset.warSoulTowerResultFrame.stageBtnSelected"
+      imageRectString="0|95|0|26|13,15|65|0|28|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warSoulTowerResultFrame.border"
+      parentStyle="core.describeBackground_style04"
+      x="85"
+      y="64"
+      width="291"
+      height="235" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="warSoulTowerResultFrame.spanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,277,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="286"
+      height="226"
+      x="86"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerResultItem.txt"
+      textFormatStyle="warSoulTowerStageItem.txt_t"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="15"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerResultItem.goodsTxt"
+      textFormatStyle="warSoulTowerStageItem.txt_t"
+      autoSize="none"
+      width="265"
+      height="20"
+      wordWrap="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerResultFrame.titleTxt"
+      autoSize="none"
+      width="190"
+      textFieldStyle="warSoulTowerResultFrame.titleTxt.text"
+      colors="0xffffff,0xffd972"
+      filterString="warSoulTowerFrame.rewardsTxt.text_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="455"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerResultFrame.titleTxt.text"
+      textFormatStyle="warSoulTowerResultFrame.titleTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="190"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerResultFrame.startTxt"
+      autoSize="none"
+      width="60"
+      textFieldStyle="warSoulTowerResultFrame.startTxt.text"
+      colors="0xffffff,0xffd972"
+      filterString="warSoulTowerFrame.rewardsTxt.text_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="436"
+      y="117" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warSoulTowerResultFrame.startTxt.text"
+      textFormatStyle="warSoulTowerResultFrame.startTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="60"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerResultFrame.endTxt"
+      parentStyle="warSoulTowerResultFrame.startTxt"
+      x="610"
+      y="117" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="warSoulTowerResultFrame.highestTxt"
+      parentStyle="warSoulTowerResultFrame.startTxt"
+      x="547"
+      y="208" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="warSoulTowerFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="955"
+      y="-50" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="warSoulTowerFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="warSoulTowerFrame.helperFrame.helpTxt.text"
+      titleText="warSoulTowerFrame.helperFrame.HelpTitle.text"
+      textWidth="363" />
+  </components>
+</style>

@@ -1,0 +1,621 @@
+<style
+  name="worldboss"
+  source="ui/zh_cn/swf/worldboss.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.ItemName_t"
+      args="Arial,14,0xffba00,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.ItemLevel_t"
+      args="Arial,14,0xffe400,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.ItemTime_t"
+      args="Arial,12,0xffffff,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.ItemDesc_t"
+      args="Arial,12,0x936e09,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.ItemState_t"
+      args="Arial,12,0x9e9e9e,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.worldbossConfitm_t"
+      args="Arial,14,0xfff9d2,,,,,,center"
+      leading="10"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.pvp.warfight.MapName_t"
+      args="Arial,14,0xffba00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.pvp.warfight.Time_t"
+      args="Arial,12,0x9e9e9e,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.pvp.warfight.Des_t"
+      args="Arial,12,0xf7f6f5,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.buyAvatarTextButtonTxt_t"
+      args="Arial,12,0xffba02,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.HelpText2_t"
+      leading="6"
+      args="Arial,13,0xffdd83,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PvpSelectFrame.Txt_t"
+      args="Arial,14,0x02eaff,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="worldboss.BuyAvatarFrame.DescriptionTxt_t"
+      leading="6"
+      args="Arial,12,0xffefbd,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.worldboss.ItemBack"
+      x="0"
+      y="0" />
+    <!-- boss帮助 -->
+    <bitmapData
+      resourceLink="asset.worldboss.pvpwarfight.WarFightItemBgAsset" />
+    <bitmapData
+      resourceLink="asset.worldboss.pvpwarfight.ItemEnterTxtBtnAsset" />
+    <bitmapData
+      resourceLink="asset.worldboss.HelpBmp" />
+    <!-- 职业图标 -->
+    <bitmapData
+      resourceLink="asset.worldboss.ranking.JobIcon_0"
+      x="20" />
+    <bitmapData
+      resourceLink="asset.worldboss.ranking.JobIcon_1"
+      x="20" />
+    <bitmapData
+      resourceLink="asset.worldboss.ranking.JobIcon_2"
+      x="20" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="worldboss.ItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="27"
+      loadingY="27"
+      iconWidth="55"
+      iconHeight="55"
+      x="11"
+      y="14" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="pvpHerosFrame.RewardIconView"
+      tipStyle="pvpHerosFrame.HtmlMultipleLineTip"
+      isFollowMouse="false"
+      tipWidth="300"
+      tipDirctions="2"
+      tipGapH="5"
+      iconWidth="46"
+      iconHeight="46"
+      x="485"
+      y="329" />
+    <custom
+      classname="yishi.view.tips.MultipleLineTip"
+      stylename="pvpHerosFrame.HtmlMultipleLineTip"
+      enableHtml="true"
+      contentWidth="300" />
+  </customDisplay>
+  <components>
+    <!--世界Boss-->
+    <component
+      classname="worldboss.WorldBossFrame"
+      stylename="worldboss.WorldBossFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="457"
+      height="290" />
+    <component
+      classname="worldboss.PvpSelectFrame"
+      stylename="worldboss.PvpSelectFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      titleOuterRectPosString="0,23,1"
+      width="460"
+      height="335" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PvpSelectFrame.FrameBack"
+      parentStyle="core.describeBackground_style06"
+      width="417"
+      height="217"
+      x="1"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PvpSelectFrame.FrameBack2"
+      parentStyle="core.describeBackground_style06"
+      width="538"
+      height="60"
+      x="5"
+      y="322" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="worldboss.FrameBack"
+      parentStyle="core.describeBackground_style13"
+      width="423"
+      height="168"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="PvpSelectFrame.ScrollPanel"
+      parentStyle="worldboss.ScrollPanel"
+      width="412"
+      height="156"
+      x="-4"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="worldboss.ScrollPanel"
+      vScrollbarStyle="worldboss.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      hScrollProxy="2"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="412"
+      height="155"
+      x="-6"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="worldboss.VScrollbar02"
+      parentStyle="core.VScrollbar02"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="-3,-3,10,20,0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="worldboss.Vbox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <!--item-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="worldboss.ItemIconBack"
+      resourceLink="core.shop.goodsItemBack1"
+      scaleGridString="10,10,48,48"
+      x="7"
+      y="10" />
+    <!-- 帮助说明文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.HelpText"
+      textFormatStyle="worldboss.ItemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="322"
+      height="240"
+      x="-10"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.HelpText2"
+      textFormatStyle="worldboss.HelpText2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="322"
+      height="240"
+      x="-10"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="worldboss.HelpTextBmp_1"
+      resourceLink="asset.worldboss.HelpBmp"
+      x="18"
+      y="99" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="worldboss.HelpTextBmp_2"
+      resourceLink="asset.worldboss.HelpBmp"
+      x="18"
+      y="121" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="worldboss.HelpTextBmp_3"
+      resourceLink="asset.worldboss.HelpBmp"
+      x="18"
+      y="142" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.ItemName"
+      textFormatStyle="worldboss.ItemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="234"
+      height="20"
+      x="78"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.ItemLevel"
+      textFormatStyle="worldboss.ItemLevel_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="253"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.ItemTime"
+      textFormatStyle="worldboss.ItemTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="20"
+      x="78"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.ItemDesc"
+      textFormatStyle="worldboss.ItemDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="305"
+      height="40"
+      x="78"
+      y="43"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.ItemState"
+      textFormatStyle="worldboss.ItemState_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="275"
+      y="28" />
+    <!--加入按钮-->
+    <component
+      stylename="worldboss.ItemButtonMc"
+      classname="com.pickgliss.ui.image.MovieImage"
+      resourceLink="asset.worldboss.ItemButtonMc"
+      x="-5"
+      y="-4"
+      width="87"
+      height="38" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.ItemButton"
+      backStyle="asset.core.ConfirmButton"
+      iconStyle="asset.worldboss.ItemButtonTxt"
+      iconInnerRectString="28,48,9,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="282"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.worldbossConfitm"
+      textFormatStyle="worldboss.worldbossConfitm_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="5"
+      y="4" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="worldboss.worldbossHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="worldboss.view.BaseHelpFrame.helpText"
+      titleText="worldboss.view.WorldBossHelp.title1"
+      textWidth="364" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="worldboss.PvpHeroHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="pvpHeroHelperFrame.content"
+      titleText="pvpHeroHelperFrame.title"
+      textWidth="364" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="worldboss.pvpHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="worldboss.view.BaseHelpFrame.BattleHelpContent"
+      titleText="worldboss.view.WorldBossHelp.title2"
+      textWidth="452" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="worldboss.pvpHelperFrame2"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="worldboss.view.BaseHelpFrame.FlameHelpContent"
+      titleText="worldboss.view.BaseHelpFrame.FlameHelpTitle"
+      textWidth="452" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.BattleHelpText"
+      textFormatStyle="worldboss.ItemName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="399"
+      height="231"
+      x="-5"
+      y="14" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="worldboss.FriendList.help"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      backStyle="asset.core.HelpButton_01"
+      x="392"
+      y="23" />
+    <!-- PVP WARFIGHT -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.pvp.warfight.ItemButton"
+      backStyle="asset.core.ConfirmButton"
+      iconStyle="asset.worldboss.pvpwarfight.ItemEnterTxtBtnAsset"
+      iconInnerRectString="28,48,9,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="282"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.pvp.warfight.MapNameTxt"
+      textFormatStyle="worldboss.pvp.warfight.MapName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="70"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.pvp.warfight.OpenTimeTxt"
+      textFormatStyle="worldboss.pvp.warfight.Time_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="300"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.pvp.warfight.OpenTimeValueTxt"
+      textFormatStyle="worldboss.pvp.warfight.Time_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="74"
+      height="20"
+      x="300"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.pvp.warfight.DesTxt"
+      textFormatStyle="worldboss.pvp.warfight.Des_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="40"
+      x="70"
+      y="25"
+      wordWrap="true" />
+    <!-- v1.4 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.EnterButton"
+      backStyle="asset.core.GreenBtn"
+      iconStyle="asset.worldboss.EnterButtonText"
+      iconInnerRectString="18,47,6,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="308"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.BuyButton"
+      backStyle="asset.core.BrownBtn"
+      iconStyle="asset.worldboss.UseAvatarText"
+      iconInnerRectString="9,62,7,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="308"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.UseState"
+      textFormatStyle="worldboss.ItemState_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="85"
+      height="20"
+      x="305"
+      y="45" />
+    <component
+      classname="worldboss.view.BuyAvatarFrame"
+      stylename="worldboss.BuyAvatarFrame"
+      parentStyle="core.Frame2"
+      width="365"
+      height="225" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.BuyAvatarFrame.DescriptionTxt"
+      textFormatStyle="worldboss.BuyAvatarFrame.DescriptionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="75"
+      x="6"
+      y="10"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.BuyAvatarFrame.AlertButtonConfirm_2"
+      parentStyle="core.AlertButtonConfirm_2"
+      x="30"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.BuyAvatarFrame.AlertButtonCancel_1"
+      parentStyle="core.AlertButtonCancel_1"
+      x="167"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PvpSelectFrame.Txt"
+      textFormatStyle="PvpSelectFrame.Txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="318"
+      height="20"
+      x="55"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="worldboss.buyAvatarTextButton"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      textStyle="worldboss.buyAvatarTextButtonTxt"
+      backgoundInnerRectString="25,22,2,23,13"
+      displacement="false"
+      tipStyle="yishi.view.tips.BuyAvartarTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="298"
+      y="22"
+      width="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.buyAvatarTextButtonTxt"
+      textFormatStyle="worldboss.buyAvatarTextButtonTxt_t"
+      width="50" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="worldboss.BuffNotAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="worldboss.BuffNotAlert_confirmStyle"
+      cancelStyle="worldboss.BuffNotAlert_cancelStyle"
+      checkStyle="worldboss.RiverNotAlertCheckBtnFrame"
+      describeStyle="worldboss.BuffNotAlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="worldboss.BuffNotAlertTextStyle"
+      backStyle="core.AlertFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="-1"
+      containerY="30"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="260"
+      height="190"
+      showPromptStyle="worldboss.BuyBuffShowPrompt"
+      usebindPointStyle="worldBoss.buyBuffUseBindPointBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="worldboss.RiverNotAlertCheckBtnFrame"
+      parentStyle="core.ThewCheckBtn"
+      x="20"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="worldBoss.buyBuffUseBindPointBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="133"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.BuyBuffShowPrompt"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="160"
+      x="61"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="worldboss.BuffNotAlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="275"
+      height="50"
+      x="-8"
+      y="10"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="worldboss.BuffNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="15"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="worldboss.BuffNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="140"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="worldboss.pvp.warfight.HeroesButton"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.worldboss.heroBtnTxt"
+      iconInnerRectString="14,88,11,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="4"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="worldboss.hideBtn"
+      parentStyle="core.CloseBtn"
+      backStyle="asset.tasktracebar.ShieldBtnImg"
+      tipDirctions="6,4,1,3,0"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="worldboss.cancleHideBtn"
+      parentStyle="core.CloseBtn"
+      backStyle="asset.tasktracebar.CancelShieldBtnImg"
+      tipDirctions="6,4,1,3,0"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="-21" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="worldBoss.gemBuyTimesBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="64"
+      y="52" />
+  </components>
+</style>

@@ -1,0 +1,450 @@
+<style
+  name="luckyexchange"
+  source="ui/zh_cn/swf/luckyexchange.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.iconRewardItemText_t"
+      args="Arial,12,0xfffefe,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchangeLeftButton.titleTxt_t"
+      args="Arial,14,0xffc34f,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.leftSelectedBtnText_t1"
+      args="Arial,12,0xffc34f,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.leftSelectedBtnText_t2"
+      args="Arial,14,0xffc34f,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.pageText_f"
+      args="Arial,16,0xe6d9b0,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.materialTxt_t"
+      args="Arial,12,0xffdfa2,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.exchangeTxt_t"
+      args="Arial,14,0xffdfa2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.bagItem.title_t"
+      args="Arial,14,0xffdfa2,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.materialNoteTxt_t"
+      args="Arial,12,0x00fe24,,,,,,left"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.exchangeNoteTxt_t"
+      args="Arial,12,0xffdfa2,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.progressText_f"
+      args="Arial,14,0xfffce3,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="luckyexchange.remainTimeText_t"
+      args="Arial,16,0xffc34f,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.luckyexchange.rightViewBg"
+      x="1"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.luckyexchange.rightViewNote"
+      x="271"
+      y="-4" />
+    <bitmapData
+      resourceLink="asset.luckyexchange.itemBg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.luckyexchange.rightViewInputBg"
+      x="517"
+      y="211" />
+    <bitmapData
+      resourceLink="asset.luckyexchange.separationLine"
+      x="198"
+      y="2" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="luckyexchange.BlackjackLayer"
+      stylename="luckyexchange.BlackjackLayer"
+      x="3"
+      y="2" />
+    <custom
+      classname="luckyexchange.BlackjackExchangeView"
+      stylename="luckyexchange.BlackjackExchangeView"
+      x="630"
+      y="8" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="luckyexchange.iconMaterialView"
+      iconStyle="luckyexchange.iconMaterialIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="1"
+      profileY="1"
+      profileWidth="82"
+      profileHeight="82"
+      showProfile="true"
+      x="51"
+      y="120" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="luckyexchange.iconMaterialIcon"
+      iconHeight="81"
+      iconWidth="81"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="18"
+      loadingHeight="18"
+      loadingX="42"
+      loadingY="42"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="luckyexchange.iconRewardView"
+      iconStyle="luckyexchange.iconRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="luckyexchange.iconRewardItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="46"
+      profileHeight="46"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="luckyexchange.iconRewardIcon"
+      iconHeight="45"
+      iconWidth="45"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="22"
+      loadingY="22"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      isFollowMouse="false"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.iconRewardItemText"
+      parentStyle="core.BaseItemText"
+      textFormatStyle="luckyexchange.iconRewardItemText_t"
+      autoSize="none"
+      x="13"
+      y="29"
+      width="33"
+      height="20" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="luckyexchange.rewardTileList"
+      vSpace="8"
+      hSpace="15"
+      x="18"
+      y="25" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="luckyexchange.pageSpComponent"
+      x="41"
+      y="501" />
+    <custom
+      classname="luckyexchange.LuckyExchangeRightView"
+      stylename="luckyexchange.LuckyExchangeRightView"
+      x="202"
+      y="0" />
+    <custom
+      classname="asset.luckyexchange.ProgressMc"
+      stylename="luckyexchange.ProgressMc"
+      x="186"
+      y="117" />
+    <custom
+      classname="luckyexchange.LuckyexchangeBagItem"
+      stylename="luckyexchange.LuckyexchangeBagItem"
+      x="12"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="luckyexchange.itemBgComponent"
+      x="15"
+      y="21" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="luckyexchange.effectComponent"
+      x="15"
+      y="21" />
+  </customDisplay>
+  <components>
+    <component
+      classname="luckyexchange.LuckyExchangeFrame"
+      stylename="luckyexchange.LuckyExchangeFrame"
+      parentStyle="core.Frame1"
+      containerX="14"
+      containerY="67"
+      width="858"
+      height="655" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="luckyexchangeLeftButton.title"
+      colors="0xffc000,0xffffd5"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="luckyexchangeLeftButton.titleTxt"
+      x="30"
+      y="15"
+      width="140"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchangeLeftButton.titleTxt"
+      textFormatStyle="luckyexchangeLeftButton.titleTxt_t"
+      autoSize="none"
+      width="140"
+      height="40"
+      wordWrap="true"
+      multiline="true" />
+    <!-- 左侧按钮 -->
+    <component
+      classname="luckyexchange.LuckyExchangeLeftButton"
+      stylename="luckyexchange.leftSelectedBtn"
+      unSelectedStyle="asset.luckyexchange.leftBtn1"
+      selectedStyle="asset.luckyexchange.leftBtn2"
+      textStyle="luckyexchange.leftSelectedBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="193"
+      height="55"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.leftSelectedBtnText"
+      textFormatStyle="luckyexchange.leftSelectedBtnText_t1,luckyexchange.leftSelectedBtnText_t2"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      x="30"
+      y="17"
+      width="136"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="luckyexchange.leftVBox"
+      x="4"
+      y="4"
+      spacing="-1" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="luckyexchange.preBtn"
+      parentStyle="auction.prePageBtn"
+      x="0"
+      y="1" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="luckyexchange.nextBtn"
+      parentStyle="auction.nextPageBtn"
+      x="100"
+      y="1" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.pageText"
+      textFormatStyle="luckyexchange.pageText_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="58"
+      height="20"
+      maxChars="10"
+      x="35"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="luckyexchange.PageNumBack"
+      resourceLink="asset.luckyexchange.PageNumBack"
+      x="35"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="luckyexchange.exchangeBtn"
+      backStyle="asset.luckyexchange.exchangeBtnBmp"
+      iconStyle="asset.luckyexchange.exchangeTxtBmp"
+      iconInnerRectString="40,76,14,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="444"
+      y="138"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.materialTxt"
+      textFormatStyle="luckyexchange.materialTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="180"
+      height="20"
+      x="166"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.exchangeTxt"
+      textFormatStyle="luckyexchange.exchangeTxt_t"
+      autoSize="none"
+      type="input"
+      restrict="0-9"
+      filterString="core.normal_f"
+      width="65"
+      height="20"
+      x="518"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="luckyexchange.MainBgBorder"
+      parentStyle="core.describeBackground_style04"
+      x="0"
+      y="0"
+      width="827"
+      height="544" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.remainTimeText"
+      parentStyle="funnyRightView.remainTimeText"
+      textFormatStyle="luckyexchange.remainTimeText_t"
+      x="128"
+      y="496" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.bagItem.title"
+      textFormatStyle="luckyexchange.bagItem.title_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="520"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="luckyexchange.ScrollPanel1"
+      vScrollbarStyle="core.VScrollbar07"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarInnerRectString="12,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="607"
+      height="62"
+      x="10"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="luckyexchange.totalVBox1"
+      x="0"
+      y="0"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="luckyexchange.ScrollPanel2"
+      vScrollbarStyle="core.VScrollbar07"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarInnerRectString="12,1,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="613"
+      height="214"
+      x="5"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="luckyexchange.totalVBox2"
+      x="0"
+      y="0"
+      spacing="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.exchangeNoteTxt"
+      textFormatStyle="luckyexchange.exchangeNoteTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="180"
+      height="20"
+      x="339"
+      y="214" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.materialNoteTxt"
+      textFormatStyle="luckyexchange.materialNoteTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      wordWrap="true"
+      width="250"
+      height="54"
+      x="166"
+      y="159" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="luckyexchange.progressText"
+      textFormatStyle="luckyexchange.progressText_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="118"
+      height="20"
+      x="233"
+      y="132" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="luckyexchange.iconEffect"
+      resourceLink="asset.luckyexchange.iconEffect"
+      x="27"
+      y="-27" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="luckyexchange.barEffect"
+      resourceLink="asset.luckyexchange.barEffect"
+      x="291"
+      y="141" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="luckyexchange.btnEffect"
+      resourceLink="asset.luckyexchange.btnEffect"
+      x="523"
+      y="164" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="luckyexchange.rewardEffect"
+      resourceLink="asset.luckyexchange.rewardEffect"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outyard.activityBtn"
+      backStyle="asset.outyard.activityBtnBmp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1200"
+      y="82" />
+  </components>
+</style>

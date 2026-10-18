@@ -1,0 +1,153 @@
+<style
+  name="upgradepresent"
+  source="ui/zh_cn/swf/upgradepresent.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="UpgradePresent.UpgradePresentFrame.leftTimeText_t"
+      args="Arial,14,0xffe5a7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="UpgradePresentGoodsItem.costPointText_t"
+      args="Arial,12,0xe7c88b,,,,,,left" />
+  </sets>
+  <bitmaps></bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="UpgradePresentGoodsItem.item"
+      parentStyle="core.BaseItemView"
+      scaleX="1.1"
+      scaleY="1.1"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="UpgradePresent.UpgradePresentFrame.nextBtn"
+      backStyle="asset.UpgradePresent.nextBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="523"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="UpgradePresent.UpgradePresentFrame.preBtn"
+      backStyle="UpgradePresent.UpgradePresentFrame.preBtnImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="112"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="UpgradePresent.UpgradePresentFrame.preBtnImage"
+      resourceLink="asset.UpgradePresent.nextBtnImage"
+      scaleX="-1"
+      x="52"
+      y="0" />
+    <component
+      stylename="UpgradePresent.UpgradePresentFrame.headImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.UpgradePresent.headImage.n0,asset.UpgradePresent.headImage.n1,asset.UpgradePresent.headImage.n2,asset.UpgradePresent.headImage.n3"
+      x="16"
+      y="257"
+      autoHCenter="true"
+      autoVCenter="true" />
+    <component
+      stylename="UpgradePresent.UpgradePresentFrame.rightBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.UpgradePresent.rightBack.colorBack,asset.UpgradePresent.rightBack.timeImage"
+      imageRectString="0|414|0|403|13,48|134|127|22|13"
+      x="137"
+      y="62" />
+    <component
+      stylename="UpgradePresent.UpgradePresentFrame.titleImage"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.UpgradePresent.titleImage.titleImage1,asset.UpgradePresent.titleImage.titleImage2,asset.UpgradePresent.titleImage.titleImage3,asset.UpgradePresent.titleImage.titleImage4"
+      autoVCenter="true"
+      autoHCenter="true"
+      x="345"
+      y="130" />
+    <component
+      stylename="upgradepresent.UpgradePresentFrame"
+      classname="upgradepresent.UpgradePresentFrame"
+      parentStyle="core.Frame1"
+      containerX="- 20"
+      containerY="0"
+      width="565"
+      height="510" />
+    <component
+      stylename="UpgradePresent.UpgradePresentFrame.leftTimeText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="UpgradePresent.UpgradePresentFrame.leftTimeText_t"
+      type="dynamic"
+      width="208"
+      height="20"
+      x="320"
+      y="191" />
+    <component
+      stylename="UpgradePresentGoodsItem.back"
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      resourceLink="asset.UpgradePresentGoodsItem.back1,asset.UpgradePresentGoodsItem.back2"
+      autoHCenter="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="UpgradePresentGoodsItem.goodsContiner"
+      x="9"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="UpgradePresentGoodsItem.buyBtn"
+      backStyle="asset.UpgradePresent.buyBtn.btnBack"
+      iconStyle="asset.UpgradePresent.buyBtn.icon"
+      iconInnerRectString="24,70,23,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="-70"
+      y="152"
+      autoCenter="false" />
+    <component
+      stylename="UpgradePresentGoodsItem.buyCountText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="UpgradePresentGoodsItem.costPointText_t"
+      type="dynamic"
+      width="50"
+      height="20"
+      x="90"
+      y="23" />
+    <component
+      stylename="UpgradePresentGoodsItem.costPointText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="UpgradePresentGoodsItem.costPointText_t"
+      type="dynamic"
+      width="70"
+      height="20"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="UpgradePresent.UpgradePresentFrame.itemContiner"
+      x="345"
+      y="228" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="UpgradePresentGoodsItem.hbox1"
+      spacing="2"
+      autoCenter="true"
+      x="-1"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="UpgradePresentGoodsItem.hbox2"
+      spacing="2"
+      autoCenter="true"
+      x="-1"
+      y="80" />
+  </components>
+</style>

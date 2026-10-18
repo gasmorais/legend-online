@@ -1,0 +1,840 @@
+<style
+  name="colosseum"
+  source="ui/zh_cn/swf/colosseum.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t1"
+      args="Arial,36,0xff0000,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t3"
+      args="Arial,14,0xfff9e2,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t4"
+      args="Arial,14,0xfff603,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t5"
+      args="Arial,14,0xfff603,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t6"
+      args="Arial,14,0xf9e8c5,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t7"
+      args="Arial,12,0xe1dcb4,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t8"
+      args="Arial,13,0xfff9e2,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t9"
+      args="Arial,16,0xfff9e2,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t10"
+      args="Arial,14,0xf3e9c1,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.t11"
+      args="Arial,14,0xfcc64d,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.AppellTxtStyle_t1"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.AppellTxtStyle_t2"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.topViewTxt_t"
+      args="Arial,14,0xfff4c2,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.challengeLeftView.thanename_t"
+      args="Arial,12,0xe8d8a7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.challengeMiddleView.thanename_t"
+      args="Arial,12,0x00f0ff,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.challengeMiddleView.thanename_t2"
+      args="Arial,12,0x00ff46,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="colosseum.challengeMiddleView.hasNumTxt_t"
+      args="Arial,36,0xFF0000,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.colosseum.FrameBack"
+      x="13"
+      y="-9" />
+    <bitmapData
+      resourceLink="asset.colosseum.TodayCount2"
+      x="283"
+      y="400" />
+    <bitmapData
+      resourceLink="asset.colosseum.SelfRank"
+      x="139"
+      y="430" />
+    <bitmapData
+      resourceLink="asset.colosseum.ItemEffect"
+      x="-13"
+      y="-8" />
+    <bitmapData
+      resourceLink="asset.colosseum.FrameBack3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.colosseum.FrameBack2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.colosseum.RankRewardAsset"
+      x="20"
+      y="461" />
+    <bitmapData
+      resourceLink="asset.colosseum.RecieveAsset"
+      x="287"
+      y="463" />
+    <bitmapData
+      resourceLink="asset.colosseum.LastRound"
+      x="5"
+      y="280" />
+    <bitmapData
+      resourceLink="asset.colosseum.ItemBack1" />
+    <bitmapData
+      resourceLink="asset.colosseum.ItemRankBack"
+      x="-5"
+      y="216" />
+    <bitmapData
+      resourceLink="asset.colosseum.EventIcon1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.colosseum.EventIcon2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.colosseum.LogtFrameLine"
+      x="0"
+      y="0"
+      width="593" />
+    <bitmapData
+      resourceLink="asset.colosseum.AppellIcon1"
+      x="3"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.colosseum.AppellIcon2"
+      x="4"
+      y="24" />
+    <bitmapData
+      resourceLink="asset.colosseum.Appell1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.colosseum.Appell2"
+      x="0"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.colosseum.Appell3"
+      x="0"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.colosseum.Appell4"
+      x="0"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.challenge.topviewReward"
+      x="46"
+      y="58" />
+    <bitmapData
+      resourceLink="asset.challenge.topviewGetTime"
+      x="57"
+      y="88" />
+    <bitmapData
+      resourceLink="asset.challenge.leftViewYellowBg"
+      x="0"
+      y="-1" />
+    <bitmapData
+      resourceLink="asset.challenge.leftViewRedBg"
+      x="2"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.challenge.middleView.cushion"
+      x="-88"
+      y="-28" />
+    <bitmapData
+      resourceLink="asset.challenge.middleView.Fightimg"
+      x="-80"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.challenge.hasNumTxt"
+      x="1126"
+      y="141" />
+    <bitmapData
+      resourceLink="asset.challenge.numTxt" />
+    <bitmapData
+      resourceLink="asset.challenge.ranknumTxt" />
+    <bitmapData
+      resourceLink="asset.challenge.notInRank"
+      y="22" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="colosseum.view.ChallengeView"
+      stylename="colosseum.ChallengeView"
+      x="0"
+      y="0" />
+    <custom
+      classname="colosseum.view.ChallengeTopView"
+      stylename="colosseum.ChallengeTopView"
+      x="0"
+      y="0" />
+    <custom
+      classname="colosseum.view.ChallengeLeftView"
+      stylename="colosseum.ChallengeLeftView"
+      x="16"
+      y="31" />
+    <custom
+      classname="colosseum.view.ChallengeLeftItemView"
+      stylename="colosseum.ChallengeLeftItemView"
+      x="0"
+      y="0" />
+    <custom
+      classname="colosseum.view.ChallengeMiddleView"
+      stylename="colosseum.ChallengeMiddleView"
+      x="0"
+      y="505" />
+    <custom
+      classname="colosseum.view.ChallengeMiddleItem"
+      stylename="colosseum.ChallengeMiddleItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="colosseum.ShowAvatar"
+      x="0"
+      y="0"
+      scaleX="0.8"
+      scaleY="0.8" />
+    <custom
+      classname="asset.challenge.selected"
+      stylename="asset.challenge.selected"
+      y="22" />
+    <custom
+      classname="colosseum.view.ColosseumSelfView"
+      stylename="colosseum.SelfView"
+      x="16"
+      y="-6" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="colosseum.PlayerIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="7"
+      loadingHeight="7"
+      loadingX="51"
+      loadingY="51"
+      iconWidth="103"
+      iconHeight="103"
+      x="20"
+      y="20" />
+    <custom
+      classname="colosseum.view.ColosseumPlayerItem"
+      stylename="colosseum.PlayerItem_0"
+      x="428"
+      y="-4" />
+    <custom
+      classname="colosseum.view.ColosseumPlayerItem"
+      stylename="colosseum.PlayerItem_1"
+      x="667"
+      y="-4" />
+    <custom
+      classname="colosseum.view.ColosseumPlayerItem"
+      stylename="colosseum.PlayerItem_2"
+      x="428"
+      y="264" />
+    <custom
+      classname="colosseum.view.ColosseumPlayerItem"
+      stylename="colosseum.PlayerItem_3"
+      x="667"
+      y="264" />
+  </customDisplay>
+  <components>
+    <!--角斗场Frame-->
+    <component
+      classname="colosseum.ColosseumFrame"
+      stylename="colosseum.ColosseumFrame"
+      parentStyle="core.Frame6"
+      closeInnerRectString="29,3,0,29,14" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="colosseum.FrameBack1"
+      parentStyle="core.describeBackground_style12"
+      width="880"
+      height="438"
+      x="0"
+      y="2" />
+    <!--新闻-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.NewsTxt"
+      textFormatStyle="colosseum.t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="370"
+      height="20"
+      x="43"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="colosseum.NewsIcon"
+      resourceLink="asset.chatII.BigBugleIcon"
+      x="23"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.TodayCount1"
+      resourceLink="asset.colosseum.TodayCount1,asset.colosseum.BuyCountTxtImg"
+      x="99"
+      y="394" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.TodayCountValue"
+      textFormatStyle="colosseum.t1"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="40"
+      x="229"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.SelfRankValue"
+      textFormatStyle="colosseum.t9"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="213"
+      y="428" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.RewardGoldValue"
+      textFormatStyle="colosseum.t9"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="84"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="colosseum.RewardGoldIcon"
+      resourceLink="asset.core.GoldIcon"
+      x="145"
+      y="456" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.RewardSoulValue"
+      textFormatStyle="colosseum.t9"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="183"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="colosseum.RewardSoulIcon"
+      resourceLink="asset.core.PawnLevelupSoulIcon"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="145"
+      y="451" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.RewardDateValue"
+      textFormatStyle="colosseum.t10"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="349"
+      y="462" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="colosseum.HeroRankBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.colosseum.HeroRankBtntext"
+      iconInnerRectString="26,64,9,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="76"
+      y="486" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="colosseum.ReportBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.colosseum.ReportAsset"
+      iconInnerRectString="26,64,9,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="224"
+      y="486" />
+    <!--玩家格子-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.ItemRankValue"
+      textFormatStyle="colosseum.t5"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="131"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.ItemName"
+      textFormatStyle="colosseum.t8"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="46"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.ItemLevel"
+      textFormatStyle="colosseum.t3"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="38"
+      height="20"
+      x="1"
+      y="232" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.JobImg"
+      parentStyle="core.HeroVocation"
+      x="6"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="colosseum.StartBtn"
+      backStyle="asset.colosseum.BattleStartBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="117"
+      y="170" />
+    <!--战报-->
+    <component
+      classname="colosseum.view.ColosseumEventFrame"
+      stylename="colosseum.ColossumEventFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="40"
+      width="660"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="colosseum.ColossumEventFrameBack"
+      parentStyle="core.describeBackground_style04"
+      width="625"
+      height="232"
+      x="6"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="colosseum.Hbox"
+      x="1"
+      y="32"
+      spacing="-13" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="colosseum.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      hScrollbarStyle="core.HScrollbar01"
+      hScrollbarInnerRectString="0,22,20,0,4"
+      vScrollbarInnerRectString="20,0,-3,0,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      hScrollProxy="2"
+      width="610"
+      height="220"
+      x="21"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="colosseum.EventBox1"
+      x="0"
+      y="23"
+      spacing="28" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="colosseum.EventBox2"
+      x="0"
+      y="0"
+      spacing="6" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.EventIcon"
+      resourceLink="asset.colosseum.EventIcon1,asset.colosseum.EventIcon2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.EventTimeTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      height="20"
+      x="22"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.EventAttackTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.EventDescribeTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      height="20"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.EventDefenceTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.EventResultTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      height="20"
+      x="0"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.EventRankTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      height="20"
+      x="0"
+      y="1" />
+    <!--英雄榜-->
+    <component
+      classname="colosseum.view.HeroRankFrame"
+      stylename="colosseum.HeroRankFrame"
+      parentStyle="core.Frame1"
+      containerX="18"
+      containerY="64"
+      width="450"
+      height="475" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="colosseum.HeroRankBack1"
+      parentStyle="core.describeBackground_style13"
+      width="415"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="colosseum.HeroRankBack2"
+      parentStyle="core.FameBottomImage"
+      width="412"
+      height="53"
+      x="0"
+      y="310" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="colosseum.HeroRankTitleBack"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|406|0|32|13,65|22|3|28|13,193|22|3|28|13,279|22|3|28|13"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankTxt"
+      textFormatStyle="colosseum.t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="6"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankNameTxt"
+      parentStyle="colosseum.HeroRankTxt"
+      x="108"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankLevelTxt"
+      parentStyle="colosseum.HeroRankTxt"
+      x="212"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankCombatTxt"
+      parentStyle="colosseum.HeroRankTxt"
+      x="305"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankTrendTxt"
+      parentStyle="colosseum.HeroRankTxt"
+      x="340"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="colosseum.HeroRankCancelBtn"
+      parentStyle="core.AlertButton"
+      fieldX="3"
+      fieldY="6"
+      width="97"
+      height="33"
+      x="156"
+      y="321" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="colosseum.HeroRankScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,-6,-4,6,3"
+      viewportInnerRectString="0,0,11,7,5"
+      vScrollProxy="0"
+      vUnitIncrement="10"
+      width="400"
+      height="270"
+      x="2"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="colosseum.HeroRankVbox"
+      x="0"
+      y="0"
+      spacing="0"
+      firstYPos="-4" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.HeroRankItemBack"
+      resourceLink="core.HeroRankItemBack1,core.HeroRankItemBack2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankValueTxt"
+      textFormatStyle="colosseum.t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="65"
+      height="20"
+      x="6"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankNameValueTxt"
+      textFormatStyle="colosseum.t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="20"
+      x="73"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="colosseum.HeroRankNameGradientText"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="colosseum.HeroRankNameGradientTextField"
+      width="130"
+      height="20"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankNameGradientTextField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="130"
+      height="20"
+      x="73"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankLevelValueTxt"
+      textFormatStyle="colosseum.t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="203"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.HeroRankCombatValueTxt"
+      textFormatStyle="colosseum.t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="96"
+      height="20"
+      x="287"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="colosseum.FrameBack3.MutipleImage"
+      resourceLink="asset.colosseum.FrameBack3,colosseum.FrameBack3.scaleXImage"
+      x="2"
+      y="371" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="colosseum.FrameBack3.scaleXImage"
+      resourceLink="asset.colosseum.FrameBack3"
+      scaleX="-1"
+      x="404" />
+    <!-- 称号 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.AppellTxtStyle1"
+      textFormatStyle="colosseum.AppellTxtStyle_t1" />
+          autoSize="none" mouseEnabled="false" width="120" height="20"
+          <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="colosseum.AppellTxt1"
+      textFieldStyle="colosseum.AppellTxtStyle1"
+      colors="0xfff6ba,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="95"
+      y="3" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.AppellTxtStyle2"
+      textFormatStyle="colosseum.AppellTxtStyle_t2"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="20" /><component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="colosseum.AppellTxt2"
+      textFieldStyle="colosseum.AppellTxtStyle2"
+      colors="0x57a2ff,0x00f6ff"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="95"
+      y="26" /><component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="colosseum.AppellTxt3"
+      parentStyle="colosseum.AppellTxt2"
+      y="47" /><component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="colosseum.AppellTxt4"
+      parentStyle="colosseum.AppellTxt2"
+      y="68" /><component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="colosseum.returnBtn"
+      backStyle="asset.challenge.returnBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.rewardSoultxt"
+      textFormatStyle="colosseum.topViewTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="80"
+      height="20"
+      x="204"
+      y="55" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.rewardGoldtxt"
+      parentStyle="colosseum.rewardSoultxt"
+      x="292" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.getTimetxt"
+      parentStyle="colosseum.rewardSoultxt"
+      x="188"
+      y="84"
+      width="90" /><component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="colosseum.rinkBtn"
+      backStyle="asset.challenge.btnBg"
+      iconStyle="asset.challenge.ringBtntxtImg"
+      iconInnerRectString="0,78,0,35,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="127"
+      y="14" /><component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="colosseum.battleFieldBtn"
+      parentStyle="colosseum.rinkBtn"
+      iconStyle="asset.challenge.battlefieldTxtImg"
+      x="215" /><component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.ChallengeLeftItemBg"
+      resourceLink="asset.challenge.leftViewYellowBg,asset.challenge.leftViewRedBg"
+      x="43"
+      y="0" /><component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.challengeLeftItemTitle"
+      resourceLink="asset.colosseum.Appell1,asset.colosseum.Appell2,asset.colosseum.Appell3,asset.colosseum.Appell4"
+      x="50"
+      y="17" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.challengeLeftView.thanename"
+      textFormatStyle="colosseum.challengeLeftView.thanename_t"
+      filterString="core.normal_f"
+      selectable="false"
+      x="185"
+      y="16" /><custom
+      classname="yishi.view.community.HeadIconCell"
+      stylename="colosseum.HeadIconCell"
+      parentStyle="core.PreviewSmallIconCell"
+      overEnable="true"
+      x="0"
+      y="4" /><component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="colosseum.challengeLeftView.vbox"
+      x="0"
+      y="0"
+      spacing="-4" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.challengeMiddleView.thanename"
+      textFormatStyle="colosseum.challengeMiddleView.thanename_t2"
+      filterString="core.normal_f"
+      x="0"
+      y="-230" /><component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="colosseum.challengeMiddleView.hbox"
+      x="0"
+      y="0" /><component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="colosseum.challengeMiddleView.hasNumTxt"
+      textFormatStyle="colosseum.challengeMiddleView.hasNumTxt_t"
+      filterString="core.normal_f"
+      width="52"
+      y="152" /><component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="colosseum.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="200"
+      y="6" /></components>
+</style>

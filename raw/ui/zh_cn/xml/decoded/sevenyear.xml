@@ -1,0 +1,3070 @@
+<style
+  name="sevenyear"
+  source="ui/zh_cn/swf/sevenyear.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBattleFlagView.scoreTxt_t"
+      args="Arial,16,0xef8c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBattleFlagView.scoreDesc_t"
+      args="Arial,12,0xef8c00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBattleFlagView.buyBtnTextField_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBattleFlagView.progressTxt_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearSnowView.snowTime_t"
+      args="Arial,12,0xef2d00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearSnowView.snowLastTxt_t"
+      args="Arial,12,0xef8c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearSnowView.snowIconTxt_t"
+      args="Arial,12,0x45bd1b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearGameView.gameTime_t"
+      args="Arial,12,0xef2d00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearGameView.gameTxt_t"
+      args="Arial,12,0xef8c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearGameView.gameIconTxt_t"
+      args="Arial,12,0x45bd1b,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearGameView.honorWarIconTxt_t"
+      args="Arial,12,0xc0a47c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearGameView.honorWarTime_t"
+      args="Arial,16,0xef8c00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearRankView.rankGradeTxt_t"
+      args="Arial,12,0xef8c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearRankItem.nameTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearRankItem.gradeTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAchievementItem.desc_t"
+      args="Arial,14,0xbaad89,,,,,,left"
+      leading="4" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAchievementItem.progressTxt_t"
+      args="Arial,12,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAchievementItem.name_t"
+      args="Arial,12,0xbaad89,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAchievementItem.iconTxt_t"
+      args="Arial,14,0xbaad89,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAchievementView.achievementTxt_t"
+      args="Arial,14,0xed9d47,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAchievementView.scoreTxt_t"
+      args="Arial,14,0xed9d47,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAnswerView.scoreTxt_t"
+      args="Arial,12,0xef8c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAnswerView.questionTxt_t"
+      args="Arial,12,0x00e1ef,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAnswerView.timeTxt_t"
+      args="Arial,12,0xef2d00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearAnswerItem.answerTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBuyFrame.priceTxt_t"
+      args="Arial,16,0xffdd83,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBuyFrame.allGradeTxt_t"
+      args="Arial,14,0xdecfa4,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBuyFrame.allPriceTxt_t"
+      args="Arial,14,0xdecfa4,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBuyItem.gradeTxt_t"
+      args="Arial,14,0xdecfa4,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBuyItem.priceTxt_t"
+      args="Arial,14,0xdecfa4,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearBuyItem.numTxt_t"
+      args="Arial,14,0xfffeac,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearRewardView.returnTxt_t"
+      args="Arial,12,0xef8c00,,,true,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearRewardView.receiveTxt_t"
+      args="Arial,12,0xef8c00,,,true,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.nameTxt_t"
+      args="Arial,14,0xeae1c9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.descTxt_t"
+      args="Arial,12,0xbaad89,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.txt_t"
+      args="Arial,12,0x0edcfb,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.buyGradeBtnText_t"
+      args="Arial,12,0xffd195,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.pointTxt_t"
+      args="Arial,14,0xdecfa4,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.ownTxt_t"
+      args="Arial,16,0xed9d47,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.openTxt_t"
+      args="Arial,14,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.openDescTxt_t"
+      args="Arial,14,0xbaad89,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="SevenYearBuyItem.numTxt_f"
+      args="0xff3c00,0.75,5,5,5" />
+    <!--惊奇星域 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaContent_t"
+      args="Arial,12,0x87a09d,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaTime_t"
+      args="Arial,16,0xd4d6fc,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaScoreStr1_t"
+      args="Arial,12,0x2bfeef,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaScoreStr2_t"
+      args="Arial,12,0x2bfeef,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaScoreValue1_t"
+      args="Arial,12,0xffb62b,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaScoreValue2_t"
+      args="Arial,12,0xffb62b,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaActionPowerStr_t"
+      args="Arial,14,0x2bfeef,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtStarareaActionPowerValue_t"
+      args="Arial,14,0xede7cf,,,,,,left"
+      leading="0" />
+    <!--荣耀争霸 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryGame.comBoxTxt_f"
+      args="Arial,12,0xfff6ce,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryGame.defaultTxt_f"
+      args="Arial,12,0xfff6ce,,,,,,left"
+      letterSpacing="0" />
+    <!--荣耀争霸报名 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameSignTurn_t"
+      args="Arial,16,0xf3ecd2,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameSignNextTime_t"
+      args="Arial,16,0xf7f4c9,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameSignRule_t"
+      args="Arial,12,0xbbb2a9,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameSignCondition_t"
+      args="Arial,12,0xbbb2a9,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameSignTime_t"
+      args="Arial,12,0xf83f09,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGame.nickNameTxt_t"
+      args="Arial,14,0x00E1F9,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGame.playerServerNameTxt_t"
+      args="Arial,14,0xE5E5C9,,,,,,center" />
+    <!--荣耀争霸预测 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastRule_t"
+      args="Arial,12,0xbbb2a9,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastTime5_t"
+      args="Arial,12,0xf83f09,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastAward1_t"
+      args="Arial,16,0xbbb2a9,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastTime1_t"
+      args="Arial,12,0xf83f09,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastTime2_t"
+      args="Arial,12,0xf83f09,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastTime4_t"
+      args="Arial,12,0xf83f09,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameForecastTime3_t"
+      args="Arial,12,0xf83f09,,,,,,left"
+      leading="0" />
+    <!--荣耀争霸赛程单项类型1 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name1_t"
+      args="Arial,12,0xff780f,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score1_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name2_t"
+      args="Arial,12,0x6adaff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score2_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name3_t"
+      args="Arial,12,0xff780f,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score3_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name4_t"
+      args="Arial,12,0x6adaff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score4_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Time_t"
+      args="Arial,12,0xc9c3a1,,,,,,left"
+      leading="0" />
+    <!--荣耀争霸赛程单项类型2 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Name1_t"
+      args="Arial,12,0xff780f,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Score1_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Name2_t"
+      args="Arial,12,0x6adaff,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Score2_t"
+      args="Arial,14,0xffffff,,,,,,right"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Time_t"
+      args="Arial,12,0xc9c3a1,,,,,,left"
+      leading="0" />
+    <!---荣耀争霸每日赛事 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameDailyName1_t"
+      args="Arial,12,0xff8402,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameDailyName2_t"
+      args="Arial,12,0xff8402,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameDailyScore1_t"
+      args="Arial,12,0xd7ceb1,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameDailyScore2_t"
+      args="Arial,12,0xd7ceb1,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameDailyTime_t"
+      args="Arial,12,0xe2d99e,false,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtGloryGameDailyDesc_t"
+      args="Arial,12,0xe2d99e,false,,,,,center"
+      leading="0" />
+    <!---战旗购买赠送 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtFlagCost1_t"
+      args="Arial,16,0xd8d9b9,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtFlagCost40_t"
+      args="Arial,16,0xd8d9b9,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtFlagCost40_2_t"
+      args="Arial,16,0xff0000,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtFlagStr1_t"
+      args="Arial,12,0x29a3bb,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.sevenyear.txtFlagStr40_t"
+      args="Arial,12,0x29a3bb,false,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="SevenYearTreasureBoxFrame.needGradeText_t"
+      args="arial,14,0xfff9d5,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="SevenYearTreasureBoxFrame.needGradeText_t_f"
+      args="0xff0000,1,5,5,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sevenyear.SelectedTextButtonTxt_t1"
+      args="Arial,14,0xb4956b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sevenyear.SelectedTextButtonTxt_t2"
+      args="Arial,14,0xfff9d2,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.SevenYearBattleFlagView.numBg"
+      x="174"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.SevenYearTreasureBoxFrame.bg"
+      x="0"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.SevenYearTreasureBoxFrame.flagBmp"
+      x="360"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.SevenYearTreasureBoxFrame.ownBmp"
+      x="320"
+      y="124" />
+    <bitmapData
+      resourceLink="asset.SevenYearTreasureBoxFrame.itemBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SevenYearTreasureBoxFrame.itemSelected"
+      x="0"
+      y="0" />
+    <!--惊奇星域 -->
+    <bitmapData
+      resourceLink="asset.SevenYearStararea.str1"
+      x="33"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.SevenYearStararea.str2"
+      x="783"
+      y="103" />
+    <bitmapData
+      resourceLink="asset.SevenYearStararea.str3"
+      x="761"
+      y="315" />
+    <bitmapData
+      resourceLink="asset.SevenYearStararea.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SevenYearBattleFlagView.receiveBmp"
+      x="0"
+      y="102" />
+    <!--商城 -->
+    <bitmapData
+      resourceLink="asset.SevenYearShop.girl"
+      x="-45"
+      y="10" />
+    <!--荣耀争霸报名 -->
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.str26"
+      x="214"
+      y="63" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.str28"
+      x="224"
+      y="63" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.str8"
+      x="250"
+      y="63" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.str30"
+      x="218"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.str17"
+      x="173"
+      y="62" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.line2"
+      x="697"
+      y="428" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.bg5"
+      x="172"
+      y="46" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.bg6"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.sign2"
+      x="225"
+      y="61" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.sign1"
+      x="185"
+      y="61" />
+    <!--荣耀争霸赛程 -->
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.bg7"
+      x="0"
+      y="0" />
+    <!--荣耀争霸预测 -->
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.str12"
+      x="695"
+      y="291" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.bg8"
+      x="0"
+      y="0" />
+    <!---荣耀争霸每日赛事 -->
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGame.bg3"
+      x="0"
+      y="0" />
+    <!---战旗购买赠送 -->
+    <bitmapData
+      resourceLink="asset.SevenYearFlagHandleFrame.bg2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SevenYearFlagHandleFrame.bg1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.SevenYearRewardView.free"
+      x="20"
+      y="20" />
+    <bitmapData
+      resourceLink="asset.SevenYearRewardView.point"
+      x="20"
+      y="105" />
+    <bitmapData
+      resourceLink="asset.SevenYearGloryGameForecastItem.back"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      stylename="SevenYearMainFrame.battleFlagView"
+      classname="sevenyear.view.SevenYearBattleFlagView"
+      x="8"
+      y="58" />
+    <custom
+      stylename="SevenYearMainFrame.starAreaView"
+      classname="sevenyear.view.SevenYearStarAreaView"
+      x="7"
+      y="57" />
+    <custom
+      stylename="SevenYearMainFrame.gloryGameView"
+      classname="sevenyear.view.SevenYearGloryGameView"
+      x="8"
+      y="58" />
+    <custom
+      stylename="SevenYearMainFrame.achievementView"
+      classname="sevenyear.view.SevenYearAchievementView"
+      x="9"
+      y="58" />
+    <custom
+      stylename="SevenYearBattleFlagView.gradeView"
+      classname="sevenyear.view.battleflag.SevenYearGradeView"
+      x="2"
+      y="0" />
+    <custom
+      stylename="SevenYearBattleFlagView.snowView"
+      classname="sevenyear.view.battleflag.SevenYearSnowView"
+      x="233"
+      y="0" />
+    <custom
+      stylename="SevenYearBattleFlagView.gameView"
+      classname="sevenyear.view.battleflag.SevenYearGameView"
+      x="464"
+      y="0" />
+    <custom
+      stylename="SevenYearBattleFlagView.rankView"
+      classname="sevenyear.view.battleflag.SevenYearRankView"
+      x="682"
+      y="0" />
+    <custom
+      stylename="SevenYearMainFrame.shopView"
+      classname="sevenyear.view.SevenYearShopView"
+      x="9"
+      y="58" />
+    <custom
+      stylename="SevenYearBattleFlagView.answerView"
+      classname="sevenyear.view.battleflag.SevenYearAnswerView"
+      x="682"
+      y="0" />
+    <custom
+      stylename="SevenYearBattleFlagView.rewardView"
+      classname="sevenyear.view.battleflag.SevenYearRewardView"
+      x="1"
+      y="282" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="SevenYearBattleFlagView.numContainer"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="4"
+      tipGapH="0"
+      x="0"
+      y="40" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="SevenYearRewardItem.numContainer"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="4"
+      tipGapH="0"
+      x="0"
+      y="213" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="SevenYearBattleFlagView.ProgressPanel"
+      x="10"
+      y="160" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="SevenYearGameView.honorWarIcon"
+      parentStyle="core.BaseItemView"
+      x="60"
+      y="168" />
+    <custom
+      stylename="SevenYearRankView.rankItem"
+      classname="sevenyear.view.item.SevenYearRankItem"
+      x="5"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="SevenYearAchievementView.list"
+      vSpace="2"
+      hSpace="13"
+      y="15"
+      x="20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SevenYearAchievementItem.icon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="15"
+      y="40" />
+    <custom
+      classname="yishi.view.base.ProgressPanel"
+      stylename="SevenYearAchievementItem.progress"
+      x="80"
+      y="95" />
+    <custom
+      stylename="SevenYearAchievementView.item"
+      classname="sevenyear.view.item.SevenYearAchievementItem"
+      x="20"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SevenYearAnswerView.questionIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="80"
+      y="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SevenYearAnswerItem.answerIcon"
+      iconHeight="40"
+      iconWidth="40"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="20"
+      loadingY="20"
+      x="34"
+      y="8" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="SevenYearBuyFrame.curContainer"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="4"
+      tipGapH="0"
+      x="237"
+      y="97" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="SevenYearBuyFrame.nextContainer"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="4"
+      tipGapH="0"
+      x="341"
+      y="97" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="SevenYearRewardItem.goodsItem"
+      parentStyle="core.BaseItemView"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="SevenYearRewardItem.list"
+      vSpace="14"
+      hSpace="15"
+      x="14"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SevenYearRewardItem.fashionContainer"
+      tipStyle="yishi.view.tips.goods.FourEquipContrastTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="55"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SevenYearTreasureBoxItem.fashionContainer"
+      tipStyle="yishi.view.tips.goods.FourEquipContrastTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="55"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="SevenYearTreasureBoxFrame.itemView"
+      parentStyle="shop.ItemBaseItemView"
+      x="25"
+      y="20" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="SevenYearTreasureBoxFrame.itemView.icon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="30"
+      loadingY="30"
+      x="0"
+      y="0" />
+    <custom
+      stylename="SevenYearTreasureBoxFrame.item"
+      classname="sevenyear.view.item.SevenYearTreasureBoxItem"
+      x="0"
+      y="0" />
+    <custom
+      stylename="SevenYearTreasureBoxFrame.goodsFlickerEffctMC"
+      classname="asset.SevenYearTreasureBoxFrame.goodsFlickerEffctMC"
+      x="0"
+      y="0" />
+    <!--惊奇星域 -->
+    <custom
+      stylename="asset.SevenYearStararea.line"
+      classname="asset.SevenYearStararea.line"
+      x="367"
+      y="330" />
+    <custom
+      classname="com.pickgliss.ui.core.Component"
+      stylename="SevenYearStararea.fashionContainer"
+      tipStyle="yishi.view.tips.goods.TwoEquipContrastTips"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0"
+      y="0" />
+    <!--荣耀争霸 -->
+    <custom
+      stylename="SevenYearGloryGameSignView"
+      classname="sevenyear.view.gloryGame.SevenYearGloryGameSignView"
+      x="2"
+      y="35" />
+    <custom
+      stylename="SevenYearGloryGameScheduleView"
+      classname="sevenyear.view.gloryGame.SevenYearGloryGameScheduleView"
+      x="0"
+      y="35" />
+    <custom
+      stylename="SevenYearGloryGameForecastView"
+      classname="sevenyear.view.gloryGame.SevenYearGloryGameForecastView"
+      x="0"
+      y="35" />
+    <!--荣耀争霸房间 -->
+    <custom
+      classname="gloryGame.GloryGameRoomView"
+      stylename="gloryGame.GloryGameRoomView" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="gloryGame.GloryGameRoom.PlayerFigure_4"
+      x="1310"
+      y="180" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="gloryGame.GloryGameRoom.PlayerFigure_3"
+      x="1090"
+      y="247" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="gloryGame.GloryGameRoom.PlayerFigure_2"
+      x="870"
+      y="247" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="gloryGame.GloryGameRoom.PlayerFigure_1"
+      x="650"
+      y="180" />
+    <!--战旗购买赠送 -->
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="SevenYearFlagHandleFrame.list1"
+      vSpace="0"
+      hSpace="0"
+      x="7"
+      y="135" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="SevenYearFlagHandleFrame.list40"
+      vSpace="0"
+      hSpace="0"
+      x="305"
+      y="135" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="SevenYearFlagHandleFrame.item"
+      parentStyle="core.BaseItemView"
+      x="0"
+      y="0" />
+    <custom
+      stylename="SevenYearBattleFlagView.selfchessView"
+      classname="sevenyear.view.battleflag.SevenYearSelfChessView"
+      x="233"
+      y="0" />
+    <custom
+      classname="yishi.view.component.TileContainer"
+      stylename="SevenYearGloryGameForecastView.tileCon"
+      paddingH="-1"
+      paddingV="-3"
+      rowCount="2"
+      columnCount="5"
+      x="40"
+      y="5" />
+  </customDisplay>
+  <components>
+    <component
+      classname="sevenyear.SevenYearMainFrame"
+      stylename="sevenyear.SevenYearMainFrame"
+      closestyle="core.CloseBtn"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,2,27,29,14"
+      moveInnerRectString="0,55,15,35,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="13"
+      containerY="33"
+      width="950"
+      height="735" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearMainFrame.titleTxt"
+      resourceLink="asset.SevenYearMainFrame.titleTxt"
+      x="380"
+      y="-16" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearAchievementItem.received"
+      resourceLink="asset.SevenYearBattleFlagView.receiveBmp"
+      x="124"
+      y="4" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearMainFrame.titleBg"
+      resourceLink="asset.SevenYearMainFrame.titleBg"
+      x="-55"
+      y="-33" />
+    <component
+      stylename="SevenYearMainFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      parentStyle="core.describeBackground_style09"
+      scaleGridString="10,10,50,20"
+      x="5"
+      y="55"
+      width="914"
+      height="600" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SevenYearMainFrame.btnHbox"
+      x="15"
+      y="30"
+      spacing="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearMainFrame.battleFlagBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.SevenYearMainFrame.battleFlagBtnSelected"
+      unselectedIconStyle="asset.SevenYearMainFrame.battleFlagBtnUnSelected"
+      selectedIconInnerRectString="14,62,5,25,13"
+      unselectedIconInnerRectString="15,58,5,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearMainFrame.starAreaBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.SevenYearMainFrame.starAreaBtnSelected"
+      unselectedIconStyle="asset.SevenYearMainFrame.starAreaBtnUnSelected"
+      selectedIconInnerRectString="2,85,3,29,13"
+      unselectedIconInnerRectString="3,81,4,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearMainFrame.gloryGameBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.SevenYearMainFrame.honorWarBtnSelected"
+      unselectedIconStyle="asset.SevenYearMainFrame.honorWarBtnUnSelected"
+      selectedIconInnerRectString="9,72,4,25,13"
+      unselectedIconInnerRectString="10,68,4,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearMainFrame.achievementBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.SevenYearMainFrame.achievementBtnSelected"
+      unselectedIconStyle="asset.SevenYearMainFrame.achievementBtnUnSelected"
+      selectedIconInnerRectString="18,52,10,14,13"
+      unselectedIconInnerRectString="20,50,10,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearMainFrame.shopBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.SevenYearMainFrame.shopBtnSelected"
+      unselectedIconStyle="asset.SevenYearMainFrame.shopBtnUnSelected"
+      selectedIconInnerRectString="2,86,2,26,13"
+      unselectedIconInnerRectString="6,82,3,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      stylename="SevenYearBattleFlagView.upBg"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.SevenYearBattleFlagView.upBg"
+      scaleGridString="10,10,210,260"
+      x="0"
+      y="0"
+      width="906"
+      height="278" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearBattleFlagView.flag"
+      resourceLink="asset.SevenYearBattleFlagView.flag"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearGradeView.bg"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYearBattleFlagView.level,asset.SevenYearBattleFlagView.levelLine,asset.SevenYearBattleFlagView.nextGrade"
+      imageRectString="0|232|0|278|13,36|65|54|31|13,10|114|90|10|13,15|206|130|30|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearSnowView.bg"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYearBattleFlagView.snowBg,asset.SevenYearBattleFlagView.titleBg,asset.SevenYearBattleFlagView.snowball,asset.SevenYear.coin"
+      imageRectString="0|232|0|278|13,5|223|5|269|13,0|222|0|36|13,0|187|2|16|13,15|29|60|31|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearGameView.bg"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYearBattleFlagView.titleBg,asset.SevenYearBattleFlagView.dailyGame,asset.SevenYear.coin,asset.SevenYearBattleFlagView.titleBg,asset.SevenYearGloryGame.str13"
+      imageRectString="0|220|0|278|13,0|222|0|36|13,10|78|9|19|13,70|29|110|31|13,0|222|130|36|13,5|172|139|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearRankView.bg"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYearBattleFlagView.titleBg,asset.SevenYearBattleFlagView.rank"
+      imageRectString="0|225|0|278|13,0|222|0|36|13,5|93|4|27|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearAnswerView.bg"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYearBattleFlagView.titleBg,asset.SevenYearBattleFlagView.answer"
+      imageRectString="0|225|0|278|13,0|222|0|36|13,5|96|2|28|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearRewardView.bg"
+      resourceLink="asset.SevenYearBattleFlagView.downBg"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearAchievementView.bg"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYearAchievementView.downBg,asset.SevenYearAchievementView.reach,asset.SevenYearAchievementView.score"
+      imageRectString="0|906|0|540|13,0|907|535|60|13,20|137|549|28|13,230|189|549|28|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBattleFlagView.scoreTxt"
+      textFormatStyle="SevenYearBattleFlagView.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="26"
+      x="145"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBattleFlagView.scoreDesc"
+      textFormatStyle="SevenYearBattleFlagView.scoreDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="26"
+      x="10"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearBattleFlagView.buyBtn"
+      backStyle="asset.SevenYearBattleFlagView.btnBg"
+      textStyle="SevenYearBattleFlagView.buyBtnText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="173"
+      height="31"
+      backgoundInnerRectString="0,8,7,13"
+      x="30"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="SevenYearBattleFlagView.buyBtnText"
+      colors="0xffd052,0xfffce7"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="SevenYearBattleFlagView.buyBtnTextField"
+      mouseEnabled="false"
+      width="183"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBattleFlagView.buyBtnTextField"
+      textFormatStyle="SevenYearBattleFlagView.buyBtnTextField_t"
+      autoSize="none"
+      width="183"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearBattleFlagView.giftBtn"
+      parentStyle="SevenYearBattleFlagView.buyBtn"
+      x="125"
+      y="236" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBattleFlagView.progressTxt"
+      textFormatStyle="SevenYearBattleFlagView.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="210"
+      height="20"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearSnowView.snowTime"
+      textFormatStyle="SevenYearSnowView.snowTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="85"
+      height="24"
+      x="140"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearSnowView.snowLastTxt"
+      textFormatStyle="SevenYearSnowView.snowLastTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="24"
+      x="10"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearSnowView.snowIconTxt"
+      textFormatStyle="SevenYearSnowView.snowIconTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="24"
+      x="45"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearSnowView.matchingImg"
+      resourceLink="asset.SevenYearBattleFlagView.matchImg"
+      x="15"
+      y="115" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="SevenYearSnowView.matchCountTxt"
+      colors="0xffd052,0xfffce7"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="SevenYearBattleFlagView.buyBtnTextField"
+      mouseEnabled="false"
+      width="93"
+      height="24"
+      x="25"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearSnowView.starBtn"
+      parentStyle="SevenYearBattleFlagView.buyBtn"
+      x="23"
+      y="236"
+      width="184" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearSnowView.stopBtn"
+      parentStyle="SevenYearBattleFlagView.buyBtn"
+      x="33"
+      y="236"
+      width="173" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearGameView.gameTime"
+      textFormatStyle="SevenYearGameView.gameTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="140"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearGameView.gameIconBtn"
+      backStyle="asset.SevenYearBattleFlagView.gameIcon"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="50"
+      height="50"
+      x="20"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearGameView.gameTxt"
+      textFormatStyle="SevenYearGameView.gameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="131"
+      height="39"
+      x="75"
+      y="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearGameView.gameBtn"
+      parentStyle="SevenYearBattleFlagView.buyBtn"
+      x="25"
+      y="88"
+      width="173" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearGameView.gameIconTxt"
+      textFormatStyle="SevenYearGameView.gameIconTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="24"
+      x="100"
+      y="117" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearGameView.honorWarIconTxt"
+      textFormatStyle="SevenYearGameView.honorWarIconTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="202"
+      height="39"
+      x="5"
+      y="180"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearGameView.honorWarTime"
+      textFormatStyle="SevenYearGameView.honorWarTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="212"
+      height="39"
+      x="5"
+      y="206"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearGameView.honorWarBtn"
+      parentStyle="SevenYearBattleFlagView.buyBtn"
+      x="25"
+      y="241"
+      width="173" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearGameView.GroupLookBtn"
+      parentStyle="SevenYearBattleFlagView.buyBtn"
+      x="25"
+      y="241"
+      width="173" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearRankView.rankGradeTxt"
+      textFormatStyle="SevenYearRankView.rankGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="29"
+      x="115"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="SevenYearRankItem.bg"
+      resourceLink="asset.SevenYearBattleFlagView.rankSelected"
+      x="0"
+      y="-1"
+      width="191" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearRankItem.nameTxt"
+      textFormatStyle="SevenYearRankItem.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="24"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearRankItem.gradeTxt"
+      textFormatStyle="SevenYearRankItem.gradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="24"
+      x="150"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearRankItem.line"
+      resourceLink="asset.SevenYearBattleFlagView.rankLine"
+      x="0"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="SevenYearRankView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,2,2,1,3"
+      viewportInnerRectString="1,0,1,236,1"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      x="0"
+      y="35"
+      width="220"
+      height="240" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="SevenYearRankView.vBox"
+      width="200"
+      spacing="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="SevenYearAchievementView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar01"
+      vScrollbarInnerRectString="20,4,2,-3,3"
+      viewportInnerRectString="15,0,1,525,1"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      x="0"
+      y="3"
+      width="903"
+      height="525" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearAchievementItem.bg"
+      resourceLink="asset.SevenYearAchievementView.itemBg,asset.SevenYear.coin"
+      imageRectString="0|277|0|164|13,195|29|120|31|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAchievementItem.desc"
+      textFormatStyle="SevenYearAchievementItem.desc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="190"
+      height="60"
+      x="75"
+      y="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAchievementItem.progressTxt"
+      textFormatStyle="SevenYearAchievementItem.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="184"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAchievementItem.name"
+      textFormatStyle="SevenYearAchievementItem.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="98"
+      height="35"
+      x="15"
+      y="115"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearAchievementItem.btn"
+      backStyle="asset.SevenYearAchievementView.btnBg"
+      iconStyle="asset.SevenYearAchievementView.btnTxt"
+      iconInnerRectString="5,70,4,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAchievementItem.iconTxt"
+      textFormatStyle="SevenYearAchievementItem.iconTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="225"
+      y="125" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SevenYearAchievementItem.hBox"
+      x="25"
+      y="12"
+      spacing="8" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearAchievementItem.optionBtn1"
+      selectedStyle="asset.SevenYearAchievementView.optionBg"
+      unSelectedStyle="asset.SevenYearAchievementView.optionBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearAchievementItem.optionBtn2"
+      parentStyle="SevenYearAchievementItem.optionBtn1"
+      selectedIconStyle="asset.SevenYearAchievementView.optionSuccess"
+      unselectedIconStyle="asset.SevenYearAchievementView.optionSuccess"
+      selectedIconInnerRectString="0,22,0,22,13"
+      unselectedIconInnerRectString="0,22,0,22,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearAchievementItem.optionBtn3"
+      parentStyle="SevenYearAchievementItem.optionBtn1"
+      selectedIconStyle="asset.SevenYearAchievementView.optionLock"
+      unselectedIconStyle="asset.SevenYearAchievementView.optionLock"
+      selectedIconInnerRectString="-1,24,-1,26,13"
+      unselectedIconInnerRectString="-1,24,-1,26,13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAchievementView.achievementTxt"
+      textFormatStyle="SevenYearAchievementView.achievementTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="154"
+      y="554" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAchievementView.scoreTxt"
+      textFormatStyle="SevenYearAchievementView.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="417"
+      y="554" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAnswerView.scoreTxt"
+      textFormatStyle="SevenYearAnswerView.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="29"
+      x="120"
+      y="5"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAnswerView.questionTxt"
+      textFormatStyle="SevenYearAnswerView.questionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="215"
+      height="40"
+      wordWrap="true"
+      x="5"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAnswerView.timeTxt"
+      textFormatStyle="SevenYearAnswerView.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="125"
+      height="20"
+      x="12"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearAnswerItem.unSelectedImg"
+      resourceLink="asset.SevenYearBattleFlagView.redBtn"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearAnswerItem.selectedImg"
+      resourceLink="asset.SevenYearBattleFlagView.greenBtn"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearAnswerItem.border"
+      resourceLink="asset.SevenYearBattleFlagView.border"
+      x="-8"
+      y="-8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearAnswerItem.answerIndex"
+      resourceLink="asset.SevenYearBattleFlagView.A,asset.SevenYearBattleFlagView.B,asset.SevenYearBattleFlagView.C,asset.SevenYearBattleFlagView.D"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearAnswerItem.answerTxt"
+      textFormatStyle="SevenYearAnswerItem.answerTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="101"
+      height="49"
+      x="0"
+      y="2"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearAnswerItem.resultImg"
+      resourceLink="asset.SevenYearBattleFlagView.wrong,asset.SevenYearBattleFlagView.right"
+      x="61"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYear.icontip"
+      resourceLink="asset.SevenYear.coin"
+      width="30"
+      height="30"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <component
+      classname="sevenyear.SevenYearBuyFrame"
+      stylename="sevenyear.SevenYearBuyFrame"
+      parentStyle="core.Frame2"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="11"
+      containerY="50"
+      width="535"
+      height="500" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearBuyFrame.bg"
+      resourceLink="asset.SevenYearBattleFlagView.buyFrameBg,asset.SevenYearBattleFlagView.buyFrameLine,asset.SevenYearBattleFlagView.buyFrameLine"
+      imageRectString="0|506|0|410|13,0|506|184|2|13,0|506|304|2|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearBuyFrame.curLvImg"
+      resourceLink="asset.SevenYearBattleFlagView.curLvImg"
+      x="215"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearBuyFrame.nextLvImg"
+      resourceLink="asset.SevenYearBattleFlagView.nextLvImg"
+      x="330"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearBuyFrame.curIcon"
+      parentStyle="SevenYearBattleFlagView.flag"
+      x="205"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearBuyFrame.arrow"
+      resourceLink="asset.SevenYearBattleFlagView.arrow"
+      x="240"
+      y="95" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearBuyFrame.nextIcon"
+      parentStyle="SevenYearBattleFlagView.flag"
+      x="328"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearBuyFrame.buyBtn"
+      backStyle="asset.SevenYearBattleFlagView.buyBtnBg"
+      iconStyle="asset.SevenYearBattleFlagView.buyBtnTxt"
+      iconInnerRectString="26,78,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="122"
+      height="48"
+      x="190"
+      y="350" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyFrame.priceTxt"
+      textFormatStyle="SevenYearBuyFrame.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="85"
+      y="158" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyFrame.numTxt"
+      textFormatStyle="SevenYearBuyFrame.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="183"
+      y="158" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyFrame.totalGradeTxt"
+      textFormatStyle="SevenYearBuyFrame.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="24"
+      x="295"
+      y="158" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyFrame.totalPriceTxt"
+      textFormatStyle="SevenYearBuyFrame.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="400"
+      y="158" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyFrame.allGradeTxt"
+      textFormatStyle="SevenYearBuyFrame.allGradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="303"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyFrame.allPriceTxt"
+      textFormatStyle="SevenYearBuyFrame.allPriceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="422"
+      y="314" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyItem.gradeTxt"
+      textFormatStyle="SevenYearBuyItem.gradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyItem.totalGradeTxt"
+      textFormatStyle="SevenYearBuyItem.gradeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="303"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyItem.priceTxt"
+      textFormatStyle="SevenYearBuyItem.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="110"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyItem.totalPriceTxt"
+      textFormatStyle="SevenYearBuyItem.priceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      x="422"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearBuyItem.numTxt"
+      textFormatStyle="SevenYearBuyItem.numTxt_t"
+      filterString="SevenYearBuyItem.numTxt_f"
+      autoSize="none"
+      width="80"
+      height="24"
+      type="input"
+      restrict="0-9"
+      x="177"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearBuyItem.plusBtn"
+      backStyle="asset.SevenYearBattleFlagView.numPlus"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="21"
+      x="265"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearBuyItem.minusBtn"
+      backStyle="asset.SevenYearBattleFlagView.numMinus"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="22"
+      height="21"
+      x="290"
+      y="8" />
+    <component
+      stylename="SevenYearRewardItem.downBg"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.SevenYearBattleFlagView.numDownBg"
+      scaleGridString="10,5,60,15"
+      x="0"
+      y="213"
+      width="15"
+      height="21" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="SevenYearRewardView.scrollPanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-14,4"
+      viewportInnerRectString="0,0,0,253,1"
+      vScrollProxy="2"
+      hScrollProxy="2"
+      hUnitIncrement="260"
+      x="60"
+      y="27"
+      width="780"
+      height="253" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SevenYearRewardView.hBox"
+      x="125"
+      y="31"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearRewardView.leftBtn"
+      backStyle="asset.SevenYearBattleFlagView.leftBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="28"
+      height="38"
+      x="25"
+      y="241" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearRewardView.rightBtn"
+      backStyle="asset.SevenYearBattleFlagView.rightBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="28"
+      height="38"
+      x="850"
+      y="241" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearRewardView.returnTxt"
+      textFormatStyle="SevenYearRewardView.returnTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearRewardView.receiveTxt"
+      textFormatStyle="SevenYearRewardView.receiveTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearRewardView.returnTxtBtn"
+      textStyle="SevenYearRewardView.returnTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="112"
+      height="24"
+      x="590"
+      y="279" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearRewardView.receiveTxtBtn"
+      textStyle="SevenYearRewardView.receiveTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="208"
+      height="24"
+      x="590"
+      y="279" />
+    <component
+      classname="sevenyear.SevenYearTreasureBoxFrame"
+      stylename="sevenyear.SevenYearTreasureBoxFrame"
+      parentStyle="core.Frame2"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="11"
+      containerY="50"
+      width="835"
+      height="605" />
+    <component
+      stylename="SevenYearTreasureBoxFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      parentStyle="core.describeBackground_style09"
+      scaleGridString="10,10,50,20"
+      x="0"
+      y="0"
+      width="812"
+      height="514" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearTreasureBoxFrame.boxBack"
+      resourceLink="SevenYearTreasureBoxFrame.boxBack1,SevenYearTreasureBoxFrame.boxBack2"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearTreasureBoxFrame.boxBack1"
+      resourceLink="asset.SevenYearTreasureBoxFrame.boxItemBack,SevenYearTreasureBoxFrame.back,SevenYearTreasureBoxFrame.back,SevenYearTreasureBoxFrame.back"
+      imageRectString="0|304|0|104|13,0|304|105|45|13,304|242|0|104|13,304|242|105|45|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearTreasureBoxFrame.boxBack2"
+      resourceLink="SevenYearTreasureBoxFrame.back,SevenYearTreasureBoxFrame.back"
+      imageRectString="0|304|0|104|13,0|304|104|45|13" />
+    <component
+      stylename="SevenYearTreasureBoxFrame.back"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.SevenYearTreasureBoxFrame.back"
+      scaleGridString="10,10,220,90"
+      width="242"
+      height="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.nameTxt"
+      textFormatStyle="SevenYearTreasureBoxFrame.nameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="215"
+      height="20"
+      x="90"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.descTxt"
+      textFormatStyle="SevenYearTreasureBoxFrame.descTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="215"
+      height="70"
+      wordWrap="true"
+      x="90"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.txt"
+      textFormatStyle="SevenYearTreasureBoxFrame.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="25"
+      y="126" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearTreasureBoxFrame.buyGradeBtn"
+      backStyle="asset.SevenYearTreasureBoxFrame.btnBack"
+      textStyle="SevenYearTreasureBoxFrame.buyGradeBtnText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="82"
+      height="29"
+      backgoundInnerRectString="15,8,6,13"
+      x="387"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.buyGradeBtnText"
+      textFormatStyle="SevenYearTreasureBoxFrame.buyGradeBtnText_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearTreasureBoxFrame.buyImg"
+      resourceLink="asset.SevenYearTreasureBoxFrame.buyNum,asset.SevenYearTreasureBoxFrame.buyPoint,asset.SevenYearTreasureBoxFrame.numBack"
+      imageRectString="320|60|7|29|13,320|73|43|17|13,387|83|8|25|13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.numTxt"
+      parentStyle="SevenYearBuyItem.numTxt"
+      x="389"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearTreasureBoxFrame.plusBtn"
+      parentStyle="SevenYearBuyItem.plusBtn"
+      x="482"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearTreasureBoxFrame.minusBtn"
+      parentStyle="SevenYearBuyItem.minusBtn"
+      x="510"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.pointTxt"
+      textFormatStyle="SevenYearTreasureBoxFrame.pointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="398"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearTreasureBoxFrame.buyBtn"
+      parentStyle="SevenYearTreasureBoxFrame.buyGradeBtn"
+      backgoundInnerRectString="15,8,6,13"
+      x="388"
+      y="64"
+      width="94" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="SevenYearTreasureBoxFrame.giftBtn"
+      parentStyle="SevenYearTreasureBoxFrame.buyGradeBtn"
+      backgoundInnerRectString="15,8,6,13"
+      x="448"
+      y="64" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.ownTxt"
+      textFormatStyle="SevenYearTreasureBoxFrame.ownTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="386"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearTreasureBoxFrame.openBtn"
+      backStyle="asset.SevenYearTreasureBoxFrame.openBtnBack"
+      iconStyle="asset.SevenYearTreasureBoxFrame.openBtnTxt"
+      iconInnerRectString="11,65,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="88"
+      height="34"
+      x="450"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.openTxt"
+      textFormatStyle="SevenYearTreasureBoxFrame.openTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.openDescTxt"
+      textFormatStyle="SevenYearTreasureBoxFrame.openDescTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="295"
+      height="60"
+      enableHtml="true"
+      wordWrap="true"
+      x="7"
+      y="22" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearTreasureBoxFrame.startBtn"
+      backStyle="asset.SevenYearTreasureBoxFrame.openBtnBack"
+      iconStyle="asset.SevenYearTreasureBoxFrame.startBtnTxt"
+      iconInnerRectString="11,64,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="88"
+      height="34"
+      x="22"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearTreasureBoxFrame.againBtn"
+      backStyle="asset.SevenYearTreasureBoxFrame.openBtnBack"
+      iconStyle="asset.SevenYearTreasureBoxFrame.againBtnTxt"
+      iconInnerRectString="11,64,8,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="88"
+      height="34"
+      x="22"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearTreasureBoxFrame.cannelBtn"
+      backStyle="asset.SevenYearTreasureBoxFrame.openBtnBack"
+      iconStyle="asset.SevenYearTreasureBoxFrame.cannelBtnTxt"
+      iconInnerRectString="21,44,9,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="88"
+      height="34"
+      x="190"
+      y="116" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearTreasureBoxItem.rareImg"
+      resourceLink="SevenYearTreasureBoxItem.rareImg1,SevenYearTreasureBoxItem.rareImg2"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearTreasureBoxItem.rareImg1"
+      resourceLink="asset.SevenYearTreasureBoxFrame.rareBg,asset.SevenYearTreasureBoxFrame.rareTxt"
+      imageRectString="-4|67|-4|70|13,7|32|5|33|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearTreasureBoxItem.rareImg2"
+      resourceLink="asset.SevenYearTreasureBoxFrame.veryRareBg,asset.SevenYearTreasureBoxFrame.veryRareTxt"
+      imageRectString="-4|67|-4|70|13,0|47|0|48|13"
+      x="0"
+      y="0" />
+    <!--惊奇星域 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaContent"
+      textFormatStyle="ui.sevenyear.txtStarareaContent_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="144"
+      height="58"
+      x="752"
+      y="287"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaTime"
+      textFormatStyle="ui.sevenyear.txtStarareaTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="437"
+      height="20"
+      x="241"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaScoreStr1"
+      textFormatStyle="ui.sevenyear.txtStarareaScoreStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="16"
+      x="750"
+      y="333" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaScoreStr2"
+      textFormatStyle="ui.sevenyear.txtStarareaScoreStr2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="107"
+      height="16"
+      x="750"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaScoreValue1"
+      textFormatStyle="ui.sevenyear.txtStarareaScoreValue1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="16"
+      x="831"
+      y="348" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaScoreValue2"
+      textFormatStyle="ui.sevenyear.txtStarareaScoreValue2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="16"
+      x="831"
+      y="386" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaActionPowerStr"
+      textFormatStyle="ui.sevenyear.txtStarareaActionPowerStr_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="97"
+      height="21"
+      x="718"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtStarareaActionPowerValue"
+      textFormatStyle="ui.sevenyear.txtStarareaActionPowerValue_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="79"
+      height="18"
+      x="829"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sevenyear.btnStarareaPlay"
+      backStyle="asset.SevenYearStararea.btnPlay"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="746"
+      y="410" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sevenyear.btnStarareaHelp"
+      backStyle="asset.SevenYearStararea.btnHelp"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="802"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.starareaLight"
+      resourceLink="asset.SevenYearStararea.light,asset.SevenYearStararea.light,asset.SevenYearStararea.light,asset.SevenYearStararea.light"
+      imageRectString="30|155|-88|142|13,535|155|-88|142|13,-6|155|216|142|13,583|155|216|142|13"
+      x="6"
+      y="160" />
+    <component
+      classname="sevenyear.view.help.SevenYearStarAreaHelpFrame"
+      stylename="sevenyear.stararea.help"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="stararea.help"
+      titleText="public.help"
+      textWidth="500"
+      isOpenScorll="true" />
+    <!--商城 -->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="sevenyear.shop.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="715 "
+      height="494"
+      x="169"
+      y="5" />
+    <!--荣耀争霸 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYear.gloryGame.signBtn"
+      selectedStyle="asset.SevenYearGloryGame.tab2"
+      unSelectedStyle="asset.SevenYearGloryGame.tab1"
+      selectedIconStyle="asset.SevenYearGloryGame.str29"
+      unselectedIconStyle="asset.SevenYearGloryGame.str1"
+      selectedIconInnerRectString="32,53,6,19,13"
+      unselectedIconInnerRectString="35,51,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYear.gloryGame.scheduleBtn"
+      selectedStyle="asset.SevenYearGloryGame.tab2"
+      unSelectedStyle="asset.SevenYearGloryGame.tab1"
+      selectedIconStyle="asset.SevenYearGloryGame.str14"
+      unselectedIconStyle="asset.SevenYearGloryGame.str15"
+      selectedIconInnerRectString="15,91,5,19,13"
+      unselectedIconInnerRectString="15,87,6,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYear.gloryGame.forecastBtn"
+      selectedStyle="asset.SevenYearGloryGame.tab2"
+      unSelectedStyle="asset.SevenYearGloryGame.tab1"
+      selectedIconStyle="asset.SevenYearGloryGame.str21"
+      unselectedIconStyle="asset.SevenYearGloryGame.str22"
+      selectedIconInnerRectString="30,60,5,16,13"
+      unselectedIconInnerRectString="32,58,6,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="SevenYear.gloryGame.hbox"
+      x="27"
+      y="2"
+      spacing="10" />
+    <!--荣耀争霸报名 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameSignTurn"
+      textFormatStyle="ui.sevenyear.txtGloryGameSignTurn_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="45"
+      height="20"
+      x="445"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.gloryGameSignPic2"
+      resourceLink="asset.SevenYearGloryGame.str6,asset.SevenYearGloryGame.str10"
+      imageRectString="0|0|19,240|0|19"
+      x="144"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameSignNextTime"
+      textFormatStyle="ui.sevenyear.txtGloryGameSignNextTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="208"
+      height="20"
+      x="382"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameSignRule"
+      textFormatStyle="ui.sevenyear.txtGloryGameSignRule_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="193"
+      height="405"
+      x="688"
+      y="34"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameSignCondition"
+      textFormatStyle="ui.sevenyear.txtGloryGameSignCondition_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="29"
+      x="688"
+      y="284"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameSignTime"
+      textFormatStyle="ui.sevenyear.txtGloryGameSignTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="208"
+      height="18"
+      x="684"
+      y="353" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sevenyear.btnGloryGameSign"
+      backStyle="asset.SevenYearGloryGame.btnSign"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="705"
+      y="388" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sevenyear.btnGloryGameLookAward"
+      backStyle="asset.SevenYearGloryGame.btnLookAward"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="799"
+      y="388"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="-5"
+      isFollowMouse="false" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.gloryGameSignPic1"
+      resourceLink="asset.SevenYearGloryGame.str4,asset.SevenYearGloryGame.str3,asset.SevenYearGloryGame.str2"
+      imageRectString="10|57|0|20|13,-60|180|246|20|13,-15|109|326|15|13"
+      x="755"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sevenyear.btnGloryGameStart"
+      backStyle="asset.SevenYearGloryGame.btnBg"
+      iconStyle="asset.SevenYearGloryGame.str9"
+      iconInnerRectString="26,106,14,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="716"
+      y="436" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.gloryGame.nickNameTxt"
+      textFormatStyle="ui.sevenyear.txtGloryGame.nickNameTxt_t"
+      autoSize="none"
+      width="127"
+      height="24"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="ui.sevenyear.gloryGame.nickname.gradient"
+      autoSize="none"
+      width="142"
+      textFieldStyle="ui.sevenyear.gloryGame.nickNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="59"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.gloryGame.playerServerNameTxt"
+      textFormatStyle="ui.sevenyear.txtGloryGame.playerServerNameTxt_t"
+      autoSize="none"
+      width="127"
+      height="24"
+      isAutoFitLength="true"
+      x="59"
+      y="-10"
+      filterString="core.normal2_f" />
+    <!--荣耀争霸赛程 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.gloryGameSchedulePic1"
+      resourceLink="asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.str19,asset.SevenYearGloryGame.str25,asset.SevenYearGloryGame.str27,asset.SevenYearGloryGame.str7,asset.SevenYearGloryGame.A,asset.SevenYearGloryGame.B,asset.SevenYearGloryGame.C,asset.SevenYearGloryGame.D,asset.SevenYearGloryGame.str20,asset.SevenYearGloryGame.str20,asset.SevenYearGloryGame.str20,asset.SevenYearGloryGame.str20,asset.SevenYearGloryGame.str16,asset.SevenYearGloryGame.str16,asset.SevenYearGloryGame.str16,asset.SevenYearGloryGame.str16,asset.SevenYearGloryGame.str16,asset.SevenYearGloryGame.str16,asset.SevenYearGloryGame.str16"
+      imageRectString="100|0|19,322|0|19,543|0|19,768|0|19,83|0|19,303|0|19,540|1|19,784|2|19,38|47|19,41|162|19,42|276|19,41|392|19,0|79|19,0|194|19,0|309|19,0|424|19,243|47|19,243|165|19,243|277|19,243|395|19,470|103|19,470|333|19,685|219|19"
+      x="-4"
+      y="34" />
+    <!--荣耀争霸预测 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastRule"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastRule_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="203"
+      height="140"
+      x="685"
+      y="87"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastTime5"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastTime5_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="38"
+      x="682"
+      y="396"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastAward1"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastAward1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="69"
+      height="23"
+      x="810"
+      y="294" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.gloryGameForecastPic1"
+      resourceLink="asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.bg4,asset.SevenYearGloryGame.str25,asset.SevenYearGloryGame.str27,asset.SevenYearGloryGame.str7,asset.SevenYearGloryGame.str23,asset.SevenYearGloryGame.str24"
+      imageRectString="0|0|19,221|0|19,446|0|19,-19|0|19,218|1|19,462|2|19,593|5|19,594|183|19"
+      x="86"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.sevenyear.btnGloryGameLock"
+      backStyle="asset.SevenYearGloryGame.btnLock"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="748"
+      y="363" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.gloryGameForecastPic2"
+      resourceLink="asset.SevenYear.coin"
+      imageRectString="5|-7|19"
+      x="768"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastTime1"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastTime1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="218"
+      height="16"
+      x="10"
+      y="455" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastTime2"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastTime2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="218"
+      height="16"
+      x="234"
+      y="414" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastTime4"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastTime4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="218"
+      height="16"
+      x="457"
+      y="415" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameForecastTime3"
+      textFormatStyle="ui.sevenyear.txtGloryGameForecastTime3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="218"
+      height="16"
+      x="457"
+      y="314" />
+    <!--荣耀争霸预测 combobox1 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="gloryGame.comBox1"
+      listPanelStyle="gloryGame.comBoxListPanel1"
+      listInnerRectString="0,33,0,100,18"
+      textStyle="gloryGame.ComBoxTxt1"
+      textInnerRectString="6,25,4,0,0"
+      buttonStyle="gloryGame.comBoxBtn1"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="132"
+      height="25"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="gloryGame.comBoxListPanel1"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|gloryGame.comBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,1,0,-1,3"
+      vScrollProxy="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryGame.ComBoxTxt1"
+      textFormatStyle="gloryGame.comBoxTxt_f"
+      filterString="core.normal_f"
+      y="7"
+      x="11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryGame.comBoxBtn1"
+      backStyle="asset.SevenYearGloryGame.comboBtn1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!--荣耀争霸预测 combobox2 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="gloryGame.comBox2"
+      listPanelStyle="gloryGame.comBoxListPanel2"
+      listInnerRectString="0,33,0,100,18"
+      textStyle="gloryGame.ComBoxTxt2"
+      textInnerRectString="6,25,4,0,0"
+      buttonStyle="gloryGame.comBoxBtn2"
+      selctedPropName="text"
+      enableHtml="true"
+      direction="1"
+      width="42"
+      height="25"
+      x="134"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="gloryGame.comBoxListPanel2"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      viewportInnerRectString="0,0,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|gloryGame.comBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryGame.ComBoxTxt2"
+      textFormatStyle="gloryGame.comBoxTxt_f"
+      filterString="core.normal_f"
+      y="7"
+      x="11" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryGame.comBoxBtn2"
+      backStyle="asset.SevenYearGloryGame.comboBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="yishi.view.adapter.SimpleTextCellAdapter"
+      stylename="gloryGame.comBoxListCell"
+      backStyle="gloryGame.comBoxListCellBg"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="gloryGame.ComBoxTxt1"
+      autoSizeAble="false"
+      enableHtml="true"
+      textFrameChange="false"
+      width="160"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="gloryGame.comBoxListCellBg"
+      resourceLink=",gloryGame.comBoxItemBg,gloryGame.comBoxItemBg"
+      fillAlphaRect="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryGame.comBoxItemBg"
+      resourceLink="asset.SevenYearGloryGame.comboSelect1"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryGame.defaultTxt"
+      textFormatStyle="gloryGame.defaultTxt_f"
+      filterString="core.normal_f"
+      y="7"
+      x="11" />
+    <!--荣耀争霸赛程单项类型1 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name1"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Name1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="18"
+      x="161"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score1"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Score1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="18"
+      x="263"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name2"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Name2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="18"
+      x="157"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score2"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Score2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="18"
+      x="259"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name3"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Name3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="18"
+      x="153"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score3"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Score3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="18"
+      x="255"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Name4"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Name4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="18"
+      x="147"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Score4"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Score4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="18"
+      x="249"
+      y="59" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType1Time"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType1Time_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="163"
+      height="18"
+      x="138"
+      y="82" />
+    <!--荣耀争霸赛程单项类型2 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Name1"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType2Name1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="18"
+      x="153"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Score1"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType2Score1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="18"
+      x="255"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Name2"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType2Name2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="115"
+      height="18"
+      x="147"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Score2"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType2Score2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="33"
+      height="18"
+      x="249"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameScheduleType2Time"
+      textFormatStyle="ui.sevenyear.txtGloryGameScheduleType2Time_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="163"
+      height="18"
+      x="138"
+      y="42" />
+    <!---荣耀争霸每日赛事 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameDailyName1"
+      textFormatStyle="ui.sevenyear.txtGloryGameDailyName1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="106"
+      height="19"
+      x="64"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameDailyName2"
+      textFormatStyle="ui.sevenyear.txtGloryGameDailyName2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="106"
+      height="19"
+      x="64"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameDailyScore1"
+      textFormatStyle="ui.sevenyear.txtGloryGameDailyScore1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="16"
+      height="19"
+      x="178"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameDailyScore2"
+      textFormatStyle="ui.sevenyear.txtGloryGameDailyScore2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="16"
+      height="19"
+      x="178"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameDailyTime"
+      textFormatStyle="ui.sevenyear.txtGloryGameDailyTime_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="19"
+      x="4"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtGloryGameDailyDesc"
+      textFormatStyle="ui.sevenyear.txtGloryGameDailyDesc_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="56"
+      height="19"
+      x="4"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="sevenyear.gloryGame.daily.ScrollPanel"
+      vScrollbarStyle="core.VScrollbar04"
+      vScrollbarInnerRectString="11,-13,0,-2,3"
+      viewportInnerRectString="10,0,0,0,5"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="204 "
+      height="108"
+      x="-5"
+      y="163" />
+    <!---战旗购买赠送 -->
+    <component
+      classname="sevenyear.view.battleflag.SevenYearFlagHandleFrame"
+      stylename="sevenyear.view.battleflag.SevenYearFlagHandleFrame"
+      parentStyle="core.Frame2"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="11"
+      containerY="50"
+      width="610"
+      height="505" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sevenyear.btnBuy1L"
+      backStyle="asset.SevenYearFlagHandleFrame.btn"
+      iconStyle="asset.SevenYearFlagHandleFrame.str2"
+      iconInnerRectString="14,88,13,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="53"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sevenyear.btnBuy40L"
+      backStyle="asset.SevenYearFlagHandleFrame.btn"
+      iconStyle="asset.SevenYearFlagHandleFrame.str3"
+      iconInnerRectString="10,98,11,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="350"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sevenyear.btnSend1L"
+      backStyle="asset.SevenYearFlagHandleFrame.btn"
+      iconStyle="asset.SevenYearFlagHandleFrame.str4"
+      iconInnerRectString="16,88,12,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="53"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.sevenyear.btnSend40L"
+      backStyle="asset.SevenYearFlagHandleFrame.btn"
+      iconStyle="asset.SevenYearFlagHandleFrame.str1"
+      iconInnerRectString="11,98,13,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="350"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ui.sevenyear.imgFlagPic1"
+      resourceLink="asset.SevenYearFlagHandleFrame.diamond,asset.SevenYearFlagHandleFrame.diamond,asset.SevenYearFlagHandleFrame.diamond,asset.SevenYearBattleFlagView.line"
+      imageRectString="89|18|345|18|13,387|18|353|18|13,387|18|338|18|13,390|70|337|18|13"
+      x="97"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtFlagCost1"
+      textFormatStyle="ui.sevenyear.txtFlagCost1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="71"
+      height="20"
+      x="208"
+      y="379" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtFlagCost40"
+      textFormatStyle="ui.sevenyear.txtFlagCost40_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="71"
+      height="20"
+      x="507"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtFlagCost40_2"
+      textFormatStyle="ui.sevenyear.txtFlagCost40_2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="71"
+      height="20"
+      x="507"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtFlagStr1"
+      textFormatStyle="ui.sevenyear.txtFlagStr1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="280"
+      height="38"
+      wordWrap="true"
+      x="2"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtFlagStr40"
+      textFormatStyle="ui.sevenyear.txtFlagStr40_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="310"
+      height="38"
+      wordWrap="true"
+      x="290"
+      y="0" />
+    <!--战旗 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYear.flag"
+      resourceLink="asset.SevenYearBattleFlagView.flag1,asset.SevenYearBattleFlagView.flag2,asset.SevenYearBattleFlagView.flag3,asset.SevenYearBattleFlagView.flag4,asset.SevenYearBattleFlagView.flag5"
+      x="0"
+      y="0" />
+    <component
+      classname="sevenyear.view.item.SevenYearFlagItem"
+      stylename="SevenYearBuyFrame.curIcon.new"
+      x="205"
+      y="55" />
+    <component
+      classname="sevenyear.view.item.SevenYearFlagItem"
+      stylename="SevenYearBuyFrame.nextIcon.new"
+      x="328"
+      y="55" />
+    <component
+      classname="sevenyear.view.item.SevenYearFlagItem"
+      stylename="SevenYearFlagHandleFrame.flag1"
+      x="101"
+      y="30" />
+    <component
+      classname="sevenyear.view.item.SevenYearFlagItem"
+      stylename="SevenYearFlagHandleFrame.flag40"
+      x="394"
+      y="33" />
+    <!--主界面时间 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.sevenyear.txtMainTime"
+      textFormatStyle="ui.sevenyear.txtFlagStr40_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="389"
+      height="23"
+      x="533"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.sevenyear.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,200,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="200"
+      height="210"
+      x="683"
+      y="37" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.sevenyear.scrollPanel2"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,210,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="210"
+      height="150"
+      x="678"
+      y="82" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="SevenYearTreasureBoxFrame.flagBmp"
+      resourceLink="asset.SevenYearTreasureBoxFrame.flagBmp,asset.SevenYearTreasureBoxFrame.flagBmpEnd"
+      autoHCenter="true"
+      x="430"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="SevenYearTreasureBoxFrame.needGradeText"
+      textFormatStyle="SevenYearTreasureBoxFrame.needGradeText_t"
+      filterString="SevenYearTreasureBoxFrame.needGradeText_t_f"
+      autoSize="none"
+      width="88"
+      height="22"
+      x="373"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="SevenYearMainFrame.warn"
+      resourceLink="asset.SevenYear.warnFlag"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="29"
+      y="219" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="SevenYearSnowView.bg2"
+      resourceLink="SevenYearBattleFlagView.upBg,asset.SevenYear.selfChessBg,asset.SevenYearBattleFlagView.titleBg,asset.SevenYearBattleFlagView.selfchess,asset.SevenYear.coin"
+      imageRectString="0|232|0|278|13,5|223|5|269|13,0|222|0|36|13,10|157|10|18|13,15|29|60|31|13" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="SevenYearRewardView.scrollPanel.HScrollBar"
+      parentStyle="core.HScrollbar04"
+      decreaseButtonStyle="SevenYearRewardView.Scrollbar04_left"
+      increaseButtonStyle="SevenYearRewardView.Scrollbar04_right"
+      decreaseButtonInnerRectString="-5,15,16,16,11"
+      increaseButtonInnerRectString="0,-22,16,16,12" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SevenYearRewardView.Scrollbar04_left"
+      backStyle="asset.core.scrollbar03_up"
+      displacement="false"
+      rotation="-90" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="SevenYearRewardView.Scrollbar04_right"
+      backStyle="asset.core.scrollbar03_up"
+      displacement="false"
+      rotation="90" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="SevenYearGloryGameForecastView.btnBox"
+      spacing="0"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearGloryGameForecastView.fightBtn"
+      selectedStyle="asset.core.vStyleSelectButton"
+      unSelectedStyle="asset.core.vStyleUnSelectButton"
+      selectedIconStyle="asset.SevenYearGloryGameForecastView.fightSelected"
+      unselectedIconStyle="asset.SevenYearGloryGameForecastView.fightUnSelected"
+      selectedIconInnerRectString="12,21,42,51,13"
+      unselectedIconInnerRectString="12,20,42,49,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearGloryGameForecastView.heroBtn"
+      parentStyle="SevenYearGloryGameForecastView.fightBtn"
+      selectedIconStyle="asset.SevenYearGloryGameForecastView.heroSelected"
+      unselectedIconStyle="asset.SevenYearGloryGameForecastView.heroUnSelected"
+      selectedIconInnerRectString="12,22,42,50,13"
+      unselectedIconInnerRectString="12,22,42,49,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearGloryGameForecastView.teamBtn"
+      parentStyle="SevenYearGloryGameForecastView.fightBtn"
+      selectedIconStyle="asset.SevenYearGloryGameForecastView.teamSelected"
+      unselectedIconStyle="asset.SevenYearGloryGameForecastView.teamUnSelected"
+      selectedIconInnerRectString="12,22,42,49,13"
+      unselectedIconInnerRectString="12,21,42,48,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="SevenYearGloryGameForecastView.matchBtn"
+      parentStyle="SevenYearGloryGameForecastView.fightBtn"
+      selectedIconStyle="asset.SevenYearGloryGameForecastView.matchBtnSelected"
+      unselectedIconStyle="asset.SevenYearGloryGameForecastView.matchBtnUnSelected"
+      selectedIconInnerRectString="12,22,42,51,13"
+      unselectedIconInnerRectString="12,22,42,49,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="SevenYearGloryGameForecastItem.forecastBtn"
+      backStyle="asset.SevenYearGloryGameForecastItem.forecastBg"
+      iconStyle="asset.SevenYearGloryGameForecastItem.forecastIcon"
+      iconInnerRectString="5,62,4,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="220" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="SevenYearGloryGameForecastView.border"
+      parentStyle="core.describeBackground_style06"
+      width="908"
+      height="543"
+      x="0"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedTextButton"
+      stylename="sevenyear.SelectedTextButton"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      textStyle="sevenyear.SelectedTextButtonTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      autoSizeAble="false"
+      autoSelect="false"
+      width="90"
+      height="31"
+      x="327"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sevenyear.SelectedTextButtonTxt"
+      textFormatStyle="sevenyear.SelectedTextButtonTxt_t1,sevenyear.SelectedTextButtonTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="5"
+      width="90"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="sevenyear.SelectedTextButtonHbox"
+      spacing="10"
+      x="318"
+      y="271"
+      autoCenter="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.SevenYearGloryGame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,200,0,0,2"
+      vScrollbarInnerRectString="15,-10,0,0,3"
+      vScrollProxy="0"
+      width="200"
+      height="214"
+      x="683"
+      y="34" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.SevenYearSelfChess.inviteBtn"
+      backStyle="asset.SevenYear.inviteBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="162"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="Sevenyear.honrBuyBtn"
+      backStyle="asset.SevenYearBuyHonerBtnBg"
+      iconStyle="asset.SevenYearBuyHonerBtn"
+      iconInnerRectString="70,83,20,18,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="30"
+      y="216" />
+  </components>
+</style>

@@ -1,0 +1,508 @@
+<style
+  name="poseidonshop"
+  source="ui/zh_cn/swf/poseidonshop.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.name_t"
+      args="Arial,12,0xeee1c9,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.price_t"
+      args="Arial,12,0xbaad89,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.limit_t"
+      args="Arial,12,0xbaad89,true,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.tip_t"
+      args="Arial,12,0xff0000,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.allNum_t"
+      args="Arial,12,0xffdfa1,true,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poseidon.rightSelectedBtnText_t1"
+      args="Arial,14,0xf8ea8a,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="poseidon.rightSelectedBtnText_t2"
+      args="Arial,14,0xc57e3d,,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="core.poseidon_g"
+      args="0x402100,1,5,5,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.buyName_t"
+      args="Arial,14,0xe7c88b,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.buyNumTxt_t"
+      args="Arial,16,0xffdd83,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.buyPriceTxt_t"
+      args="Arial,16,0xffdd83,,,,,,left"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.buyNumTxtIn_t"
+      args="Arial,14,0xfffeac,,,,,,center"
+      leading="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ui.poseidonshop.buyPriceTxtIn_t"
+      args="Arial,14,0xfffeac,,,,,,center"
+      leading="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.poseridon.itemBack"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.poseridon.empty"
+      x="9"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.poseridon.back"
+      x="0"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.poseridon.numBack"
+      x="555"
+      y="12" />
+    <bitmapData
+      resourceLink="asset.poseridon.buyFrameBack"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ui.poseidonshop.itemView"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="ui.poseidonshop.icon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="shop.BaseItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="58"
+      profileHeight="58"
+      showProfile="true"
+      x="12"
+      y="10" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.poseidonshop.icon"
+      iconHeight="58"
+      iconWidth="58"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="29"
+      loadingY="29" />
+    <custom
+      classname="poseidon.view.PoseidonView"
+      stylename="ui.poseidonshop.view"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="ui.poseidonshop.leftVbox"
+      spacing="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.SimpleTileList"
+      stylename="ui.poseidonshop.rightSimpleTitle"
+      vSpace="0"
+      hSpace="0"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ui.poseidonshop.buyIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingHeight="5"
+      loadingWidth="5"
+      loadingX="30"
+      loadingY="30"
+      x="55"
+      y="21" />
+    <custom
+      classname="poseidon.view.PoseidonBuyView"
+      stylename="ui.poseidonshop.PoseidonBuyView"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.poseidonshop.buy"
+      backStyle="asset.poseridon.buyBack"
+      iconStyle="asset.poseridon.buyFt"
+      iconInnerRectString="9,33,3,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="171"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.name"
+      textFormatStyle="ui.poseidonshop.name_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="153"
+      height="18"
+      x="80"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.price"
+      textFormatStyle="ui.poseidonshop.price_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="18"
+      x="79"
+      y="72" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.limit"
+      textFormatStyle="ui.poseidonshop.limit_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="18"
+      x="146"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.buy.limit"
+      textFormatStyle="ui.poseidonshop.limit_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="18"
+      x="197"
+      y="61" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.tip"
+      textFormatStyle="ui.poseidonshop.tip_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="175"
+      height="36"
+      wordWrap="true"
+      x="63"
+      y="71" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.poseidonshop.itemPriceIcon"
+      resourceLink="asset.poseridon.pIcon,asset.core.SmallPointImg"
+      x="137"
+      y="81"
+      autoHCenter="true"
+      autoVCenter="true" />
+    <component
+      classname="poseidon.PoseidonFrame"
+      stylename="poseidon.PoseidonFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="760"
+      height="528" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.poseidonshop.noraml"
+      unSelectedStyle="asset.poseridon.tabUnSelect"
+      selectedStyle="asset.poseridon.tab1Select"
+      unselectedIconStyle="asset.poseridon.normalUnSelect"
+      selectedIconStyle="asset.poseridon.normalSelect"
+      unselectedIconInnerRectString="46,61,20,16,13"
+      selectedIconInnerRectString="48,57,21,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="39"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="ui.poseidonshop.step"
+      unSelectedStyle="asset.poseridon.tabUnSelect"
+      selectedStyle="asset.poseridon.tab1Select"
+      unselectedIconStyle="asset.poseridon.stepUnSelect"
+      selectedIconStyle="asset.poseridon.stepSelect"
+      unselectedIconInnerRectString="38,76,20,21,13"
+      selectedIconInnerRectString="40,70,21,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="195"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.allNum"
+      textFormatStyle="ui.poseidonshop.allNum_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="18"
+      x="558"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.poseidonshop.leftSp"
+      vScrollbarStyle="poseidon.VScrollbar03"
+      viewportInnerRectString="0,500,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="500"
+      height="368"
+      x="7"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="ui.poseidonshop.rightSp"
+      vScrollbarStyle="poseidon.VScrollbar03"
+      viewportInnerRectString="0,204,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="0"
+      width="204"
+      height="368"
+      x="516"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="poseidon.VScrollbar03"
+      trackStyle="poseidon.Scrollbar03_Back"
+      thumbStyle="poseidon.Scrollbar03_Step"
+      decreaseButtonStyle="poseidon.Scrollbar03_Up"
+      increaseButtonStyle="poseidon.Scrollbar03_Down"
+      trackInnerRectString="0,0,0,0,0"
+      thumbAreaInnerRectString="0,0,12,14,0"
+      decreaseButtonInnerRectString="21,14,0,0,9"
+      increaseButtonInnerRectString="21,14,0,0,10"
+      orientation="0"
+      thumbMinSize="23"
+      width="21"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poseidon.Scrollbar03_Up"
+      backStyle="asset.poseridon.sbUp"
+      displacement="false"
+      width="21"
+      height="14" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poseidon.Scrollbar03_Down"
+      backStyle="asset.poseridon.sbDown"
+      displacement="false"
+      width="21"
+      height="14" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poseidon.scrollbar03_stepAsset"
+      resourceLink="asset.poseridon.sbThume"
+      scaleGridString="3,5,8,19"
+      width="15"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poseidon.Scrollbar03_Step"
+      backStyle="poseidon.scrollbar03_stepAsset"
+      displacement="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="15"
+      height="30" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="poseidon.Scrollbar03_Back"
+      resourceLink="asset.poseridon.sbBack"
+      width="15"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.poseidonshop.mainPriceIcon"
+      resourceLink="asset.poseridon.pIcon,asset.core.SmallPointImg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5,7,4,6"
+      tipGapV="10"
+      tipGapH="-20"
+      isFollowMouse="false"
+      x="539"
+      y="24"
+      autoHCenter="true"
+      autoVCenter="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="poseidon.rightSelectedBtn"
+      unSelectedStyle="asset.poseridon.tab2UnSelect"
+      selectedStyle="asset.poseridon.tab2Select"
+      textStyle="poseidon.rightSelectedBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="192"
+      height="55"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="poseidon.rightSelectedBtnText"
+      textFormatStyle="poseidon.rightSelectedBtnText_t2,poseidon.rightSelectedBtnText_t1"
+      filterString="core.poseidon_g"
+      autoSize="none"
+      x="0"
+      y="12"
+      width="192"
+      wordWrap="true"
+      height="40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.poseidonshop.limitTip"
+      resourceLink="asset.poseridon.allLimit,asset.poseridon.dayLimit"
+      x="76"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.poseidonshop.buy.limitTip"
+      resourceLink="asset.poseridon.allLimit,asset.poseridon.dayLimit"
+      x="131"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ui.poseidonshop.buyConfrim"
+      backStyle="asset.poseridon.confirmBack"
+      iconStyle="asset.poseridon.confirmFt"
+      iconInnerRectString="26,45,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="91"
+      y="193" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.poseidonshop.buyNumBack"
+      resourceLink="asset.core.TextInputBG2"
+      x="142"
+      y="114"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ui.poseidonshop.buyPriceBack"
+      resourceLink="asset.core.TextInputBG2"
+      x="142"
+      y="149"
+      scaleX="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.buyName"
+      textFormatStyle="ui.poseidonshop.buyName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="147"
+      height="40"
+      wordWrap="true"
+      x="132"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.buyNumTxt"
+      textFormatStyle="ui.poseidonshop.buyNumTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="24"
+      x="0"
+      y="119" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.buyPriceTxt"
+      textFormatStyle="ui.poseidonshop.buyPriceTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="78"
+      height="24"
+      x="17"
+      y="153" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ui.poseidonshop.buyPriceIcon"
+      resourceLink="asset.poseridon.pIcon,asset.core.SmallPointImg"
+      x="114"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.poseidonshop.buyAdd"
+      backStyle="asset.poseridon.buyJia"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="234"
+      y="119" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="ui.poseidonshop.buyReduce"
+      backStyle="asset.poseridon.buyJian"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="116"
+      y="119" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.buyNumTxtIn"
+      textFormatStyle="ui.poseidonshop.buyNumTxtIn_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="82"
+      height="24"
+      type="input"
+      x="144"
+      y="121" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ui.poseidonshop.buyPriceTxtIn"
+      textFormatStyle="ui.poseidonshop.buyPriceTxtIn_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="82"
+      height="24"
+      x="144"
+      y="156" />
+    <component
+      classname="poseidon.PoseidonBuyFrame"
+      stylename="poseidon.PoseidonBuyFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      closeInnerRectString="29,-10,-10,29,14"
+      moveInnerRectString="290,37,-10,0,9"
+      titleOuterRectPosString="0,-10,1"
+      containerX="2"
+      containerY="12"
+      width="290"
+      height="295" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="poseidonshop.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="674"
+      y="-33" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="poseidon.poseidonHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="poseidon.shop.helpTip"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+  </components>
+</style>

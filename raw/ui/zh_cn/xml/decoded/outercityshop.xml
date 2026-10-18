@@ -1,0 +1,681 @@
+<style
+  name="outercityshop"
+  source="ui/zh_cn/swf/outercityshop.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.goodsLinkTxt_f"
+      args="Arial,14,0x00d8ff,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.freshTimeTxt_f"
+      args="Arial,12,0xe3b911,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.displayShowTxt_f"
+      args="Arial,16,0xfacf56,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.nameTxt_f"
+      args="Arial,14,0xfffd92,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.valueTxt1_f"
+      args="Arial,14,0xfffd92,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.valueTxt2_f"
+      args="Arial,14,0xff0000,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.OuterCityShopGoodsNameTextStyle_t"
+      args="Arial,12,0xeae1c9,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.OuterCityShopGoodsValueTextStyle_t"
+      args="Arial,12,0xbaad89,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.PageTextStyle_t"
+      args="Arial,14,0xfff9d2,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="outercityshop.DailyCountTxt_f"
+      args="Arial,14,0xe3b911,,,,,,right"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.outercityshop.upBack"
+      x="238"
+      y="363" />
+    <bitmapData
+      resourceLink="asset.outercityshop.luckBack"
+      x="2"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.outercityshop.luckTxtBitmap"
+      x="78"
+      y="8" />
+    <bitmapData
+      resourceLink="asset.outercityshop.tipAsset"
+      x="4"
+      y="374" />
+    <bitmapData
+      resourceLink="asset.outercityshop.displayShowBack"
+      x="240"
+      y="407" />
+    <bitmapData
+      resourceLink="asset.outercityshop.displayShow"
+      x="248"
+      y="412" />
+    <bitmapData
+      resourceLink="asset.outercityshop.luckyBg" />
+    <bitmapData
+      resourceLink="asset.outercityshop.lucky" />
+    <bitmapData
+      resourceLink="asset.outercityshop.dropImg"
+      x="10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.outercityshop.tipAssetBg"
+      x="9"
+      y="369" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="outercityshop.view.OuterCityShopLeftView"
+      stylename="outercityshop.leftView"
+      x="5"
+      y="30" />
+    <custom
+      classname="outercityshop.view.OuterCityShopRandomView"
+      stylename="outercityshop.randomView"
+      x="235"
+      y="65" />
+    <custom
+      classname="outercityshop.view.OuterCityShopExchangeView"
+      stylename="outercityshop.exchangeView"
+      x="235"
+      y="65" />
+    <custom
+      classname="outercityshop.view.LuckyProgressView"
+      stylename="outercityshop.progressView"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="335"
+      y="310" />
+    <custom
+      classname="outercityshop.view.OuterCityShopSelectedView"
+      stylename="outercityshop.view.selectedView"
+      x="206"
+      y="308" />
+    <custom
+      classname="outercityshop.view.OuterCityShopGoodsView"
+      stylename="outercityshop.goodsView"
+      x="29"
+      y="28" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="outercityshop.goodsItemView"
+      parentStyle="core.BaseItemView"
+      backgroundStyle="outercityshop.goodsItemBack"
+      textStyle="outercityshop.goodsItemText"
+      iconStyle="outercityshop.goodsItemViewIcon"
+      profileX="0"
+      profileY="0"
+      profileWidth="60"
+      profileHeight="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outercityshop.goodsItemViewIcon"
+      iconHeight="60"
+      iconWidth="60"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="32"
+      loadingY="32"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outercityshop.OuterCityShopGoodsBaseItemViewIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="65"
+      iconWidth="65"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="outercityshop.OuterCityShopGoodsBaseItemView"
+      iconStyle="outercityshop.OuterCityShopGoodsBaseItemViewIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="outercityshop.goodsItemText"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="true"
+      x="15"
+      y="15" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="outercityshop.OuterCityShopGoodsValueIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="22"
+      iconWidth="22"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="100"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercityshop.goodsItemBack"
+      parentStyle="core.goods.ItemBack"
+      width="60"
+      height="60" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.goodsItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="60"
+      x="4"
+      y="44" />
+    <component
+      classname="outercityshop.OuterCityShopFrame"
+      stylename="outercityshop.OuterCityShopFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="40"
+      width="775"
+      height="535" />
+    <component
+      classname="outercityshop.view.OuterCityShopGoodsFrame"
+      stylename="outercityshop.goodsFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="500"
+      height="510" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="outercityshop.leftBackBg"
+      parentStyle="core.describeBackground_style11"
+      width="228"
+      height="418"
+      x="5"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="outercityshop.rightBackBg"
+      parentStyle="core.describeBackground_style11"
+      width="508"
+      height="383"
+      x="235"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="outercityshop.OuterCityShopFrame.SelectedTableBtnAsset"
+      resourceLink="asset.core.SelectedTableBtn_style1_L,asset.core.SelectedTableBtn_style1_C,asset.core.SelectedTableBtn_style1_R"
+      imageRectString="0|56|0|42|13,56|20|0|42|13,76|57|0|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="outercityshop.OuterCityShopFrame.UnSelectedTableBtnAsset"
+      resourceLink="asset.core.UnSelectedTableBtn_style1_L,asset.core.UnSelectedTableBtn_style1_C,asset.core.UnSelectedTableBtn_style1_R"
+      imageRectString="0|48|0|37|13,48|22|0|37|13,70|57|0|37|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="outercityshop.randomButton"
+      selectedStyle="outercityshop.OuterCityShopFrame.SelectedTableBtnAsset"
+      unSelectedStyle="outercityshop.OuterCityShopFrame.UnSelectedTableBtnAsset"
+      selectedIconStyle="asset.outercityshop.SelectRandomItemTxt"
+      unselectedIconStyle="asset.outercityshop.UnSelectRandomItemTxt"
+      selectedIconInnerRectString="35,69,9,28,13"
+      unselectedIconInnerRectString="35,64,9,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="235"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="outercityshop.exchangeButton"
+      parentStyle="outercityshop.randomButton"
+      selectedIconInnerRectString="28,78,15,18,13"
+      unselectedIconInnerRectString="28,74,15,18,13"
+      selectedIconStyle="asset.outercityshop.SelectExchangeItemTxt"
+      unselectedIconStyle="asset.outercityshop.UnSelectExchangeItemTxt"
+      x="369"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.goodsLinkTxt"
+      textFormatStyle="outercityshop.goodsLinkTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="570"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.freshTimeTxt"
+      textFormatStyle="outercityshop.freshTimeTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="25"
+      x="480"
+      y="410" />
+    <component
+      classname="yishi.view.community.TimeDownView"
+      stylename="outercityshop.downUpdateTime"
+      timeTxtStyle="outercityshop.downUpdateTimeText"
+      x="675"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.downUpdateTimeText"
+      textFormatStyle="outercityshop.freshTimeTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.displayShowTxt"
+      textFormatStyle="outercityshop.displayShowTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="25"
+      x="315"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="outercityshop.ScrollPanel"
+      vScrollbarStyle="outercityshop.VScrollbar"
+      vScrollbarInnerRectString="20,0,-3,3,3"
+      viewportInnerRectString="4,-2,8,75,5"
+      vScrollProxy="0"
+      vUnitIncrement="10"
+      width="226"
+      height="380"
+      x="0"
+      y="36" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="outercityshop.VScrollbar"
+      parentStyle="core.VScrollbar02"
+      trackStyle="consortia.Scrollbar04_Back"
+      trackInnerRectString="1,2,0,0,0"
+      thumbAreaInnerRectString="1,1,10,10,0"
+      width="15"
+      height="260" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="outercityshop.Vbox"
+      width="440"
+      spacing="0"
+      height="305" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="outercityshop.OuterCityShopGoodsItemAsset"
+      resourceLink="asset.outercityshop.GoodBoxNew,outercityshop.MouseOver1"
+      imageRectString="0|251|0|101|13,0|251|-8|115|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outercityshop.OuterCityShopGoodsItemBg"
+      resourceLink="asset.outercityshop.GoodBoxNew,outercityshop.OuterCityShopGoodsItemAsset" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="outercityshop.MouseOver1"
+      parentStyle="shop.MouseOver1"
+      width="251"
+      height="115" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="outercityshop.view.progressBgHbox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="outercityshop.view.progressHbox"
+      x="0"
+      y="0"
+      spacing="0" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.QuickRefreshBtn"
+      backStyle="asset.core.Style11Btn"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,0,0"
+      tipGapV="-5"
+      isFollowMouse="false"
+      iconStyle="asset.outercityshop.QuickRefreshTxtImg"
+      iconInnerRectString="25,101,12,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="358"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="outercityshop.selectBtn"
+      selectedIconStyle="asset.core.checkstyle_2.Selected"
+      unselectedIconStyle="asset.core.checkstyle_2.UnSelected"
+      selectedIconInnerRectString="0,22,0,23,13"
+      unselectedIconInnerRectString="0,22,0,23,13"
+      textStyle="outercityshop.nameTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="23"
+      x="130"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="outercityshop.selectBtn2"
+      parentStyle="outercityshop.selectBtn"
+      y="38"
+      selectedIconInnerRectString="0,22,0,23,13"
+      unselectedIconInnerRectString="0,22,0,23,13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.nameTxt"
+      textFormatStyle="outercityshop.nameTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="130"
+      height="25"
+      x="-193"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.valueTxt"
+      textFormatStyle="outercityshop.valueTxt1_f,outercityshop.valueTxt2_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="25"
+      x="-15"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.valueTxt2"
+      parentStyle="outercityshop.valueTxt"
+      y="40"
+      x="70" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outercityshop.payIconImg"
+      resourceLink="asset.core.SmallPointImg,asset.outercityshop.soulIcon"
+      x="22"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outercityshop.payIconImg2"
+      parentStyle="outercityshop.payIconImg"
+      y="8"
+      x="112" />
+    <!-- 外城商店-Page -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outercityshop.PageBg"
+      resourceLink="asset.core.pageBg"
+      x="330"
+      y="328" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.PageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="333"
+      y="334" />
+    <!-- 外城商店-上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="250"
+      y="330" />
+    <!-- 外城商店-下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="410"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="outercityshop.goodsBackBg"
+      parentStyle="core.describeBackground_style11"
+      width="468"
+      height="428"
+      x="0"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="outercityshop.goodsBack"
+      resourceLink="asset.outercityshop.goodsBack"
+      scaleGridString="40,30,70,40"
+      width="440"
+      height="360"
+      x="16"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.OuterCityShopGoodsNameTextStyle"
+      textFormatStyle="outercityshop.OuterCityShopGoodsNameTextStyle_t"
+      x="85"
+      y="15"
+      autoSize="none"
+      width="150"
+      height="40"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.OuterCityShopGoodsValueTextStyle"
+      textFormatStyle="outercityshop.OuterCityShopGoodsValueTextStyle_t"
+      autoSize="none"
+      x="0"
+      y="0"
+      width="55"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="outercityshop.OuterCityShopGoodsHbox"
+      width="440"
+      spacing="0"
+      height="305"
+      x="150"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="outercityshop.OuterCityShopBuyImage"
+      resourceLink="asset.core.ShopBuyBtn,asset.core.ShopBuyBtn,asset.core.ShopBuyBtn2,asset.core.ShopBuyBtn" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.OuterCityShopGoodsBuyBtn"
+      backStyle="outercityshop.OuterCityShopBuyImage"
+      iconStyle="asset.core.ShopBuyTxt"
+      iconInnerRectString="19,40,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.OuterCityShopGoodsBoughtBtn"
+      backStyle="outercityshop.OuterCityShopBuyImage"
+      iconStyle="asset.outercityshop.Bought"
+      iconInnerRectString="15,50,5,19,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="outercityshop.OuterCityShopFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="695"
+      y="-15" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="outercityshop.helpframe"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="outercityshop.helpContent"
+      titleText="public.help"
+      textWidth="363" />
+    <!-- 外城商店-Page -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outercityshop.lookPageBg"
+      resourceLink="asset.core.pageBg"
+      x="178"
+      y="362" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.lookPageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="180"
+      y="369" />
+    <!-- 外城商店-上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.lookLastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="90"
+      y="364" />
+    <!-- 外城商店-下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.lookNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="260"
+      y="364" />
+    <!-- 外城商店今日不再提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="outercityshop.todayNotAlert"
+      parentStyle="worldboss.RiverNotAlert2"
+      confirmStyle="outercityshop.RiverNotAlert_confirmStyle"
+      cancelStyle="outercityshop.RiverNotAlert_cancelStyle"
+      checkStyle="outercityshop.RiverNotAlertCheckBtn"
+      describeStyle="outercityshop.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="outercityshop.AlertTextStyle"
+      usebindPointStyle="outercityshop.UseBindPointBtn3"
+      containerY="25"
+      width="340"
+      height="190" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercityshop.UseBindPointBtn3"
+      parentStyle="core.ThewCheckBtn"
+      x="0"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.AlertTextStyle"
+      textFormatStyle="worldboss.AlertTextStyle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="100"
+      x="15"
+      y="-5"
+      multiline="true"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercityshop.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="55"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercityshop.RiverNotAlert_confirmStyle"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="45"
+      y="82" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="outercityshop.RiverNotAlert_cancelStyle"
+      parentStyle="core.AlertButton_2"
+      x="180"
+      y="82" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="outercityshop.FreeRefreshBtn"
+      backStyle="asset.outercityshop.FreeRefreshTxtImgBg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,0,0"
+      tipGapV="-5"
+      isFollowMouse="false"
+      iconStyle="asset.outercityshop.FreeRefreshTxtImg"
+      iconInnerRectString="28,99,12,33,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="360"
+      y="305" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="outercityshop.DailyCountTxt"
+      textFormatStyle="outercityshop.DailyCountTxt_f"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="229"
+      height="45"
+      x="502"
+      y="21"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outercityshop.displayShowPoints"
+      resourceLink="asset.outercityshop.displayShowPoints"
+      x="252"
+      y="381" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="outercityshop.PointsImg"
+      resourceLink="asset.outercityshop.PointsImg"
+      x="24"
+      y="2" />
+  </components>
+</style>

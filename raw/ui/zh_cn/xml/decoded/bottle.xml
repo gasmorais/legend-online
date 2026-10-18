@@ -1,0 +1,920 @@
+<style
+  name="bottle"
+  source="ui/zh_cn/swf/bottle.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.openBtnIconText_t"
+      args="Arial,14,0xfcdfa7,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.BottleHammerTitleText_t"
+      args="Arial,12,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.BottleHammerNumText_t"
+      args="Arial,14,0xa1eefe,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.StorageTipText_t"
+      args="Arial,12,0xeddb95,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.RemainTimeText_t"
+      args="Arial,12,0xc7b079,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.OpenBottleDescribeTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.FallItemsLinkTxt_t"
+      args="Arial,12,0x35ff48,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.ItemName_t1"
+      args="Arial,12,0xffffff"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.ItemName_t2"
+      args="Arial,12,0x59cd41"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.ItemName_t3"
+      args="Arial,12,0x32a2f8"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.ItemName_t4"
+      args="Arial,12,0xa838f7"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.ItemName_t5"
+      args="Arial,12,0xff8000"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.ItemName_t6"
+      args="Arial,12,0xce0f0f"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.countText_t"
+      args="Arial,14,0x95feff,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.OpenDescribeTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.OpenDescribeTxt_t1"
+      args="Arial,14,0xffffff,,,,,,center"
+      borderColor="0x000000"
+      borderSize="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.gooddescribe_t"
+      args="Arial,12,0xe9c68c"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.goodtipText_t"
+      args="Arial,12,0xcd0000"
+      leading="0"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="bottle.nametipText_t"
+      args="Arial,12,0xfff600"
+      leading="0"
+      letterSpacing="0" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.bottle.bestGoods"
+      x="45"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.bottle.rewards"
+      x="25"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.bottle.luckShow"
+      x="50"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.bottle.DropFrameLine"
+      x="0"
+      y="0"
+      width="545" />
+    <bitmapData
+      resourceLink="asset.bottle.CurrentCount"
+      x="8"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.bottle.CurrentCount2"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.bottle.BottleBoxViewEf"
+      x="132"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.bottle.percentbg"
+      x="138"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.bottle.countbg"
+      x="-5"
+      y="-13" />
+    <bitmapData
+      resourceLink="asset.bottle.NumBmpData" />
+    <bitmapData
+      resourceLink="asset.bottle.NumBmpData2" />
+    <bitmapData
+      resourceLink="asset.bottle.timeNumBmdGold" />
+    <!-- 神树宝箱(主界面下部分) -->
+    <bitmapData
+      resourceLink="asset.bottle.BottleBoxViewEf1"
+      x="0"
+      y="55" />
+    <!--		<bitmapData resourceLink='asset.bottle.percentbg1' x="0" y="55"/>-->
+    <bitmapData
+      resourceLink="asset.bottle.NumImage"
+      x="0"
+      y="53" />
+    <bitmapData
+      resourceLink="asset.bottle.prize"
+      x="35"
+      y="35" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.bottle.CTBoxLight"
+      stylename="bottle.CTBoxLight"
+      x="-5"
+      y="-10" />
+    <custom
+      classname="asset.bottle.CTBoxLight1"
+      stylename="bottle.CTBoxLight1"
+      x="18"
+      y="18" />
+    <custom
+      classname="bottle.BottleIntergalBoxView"
+      stylename="bottle.BottleIntergalBoxView"
+      profileWidth="60"
+      profileHeight="60"
+      iconStyle="bottle.BaseItemViewIcon"
+      x="0" />
+    <custom
+      classname="bottle.BottleBottomIntergalBoxView"
+      stylename="bottle.BottleBottomIntergalBoxView"
+      y="51" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="bottle.BaseItemViewIcon"
+      iconHeight="48"
+      iconWidth="48"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="22"
+      loadingY="22"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="7"
+      y="7" />
+    <custom
+      classname="asset.bottle.progressLight"
+      stylename="bottle.progress.mc"
+      x="-60"
+      y="55" />
+    <custom
+      classname="bottle.BottleBoxView"
+      stylename="bottle.BottleBoxView"
+      x="8"
+      y="17" />
+    <custom
+      classname="bottle.BottleBottomView"
+      stylename="bottle.BottleBottomBoxView"
+      x="185"
+      y="415" />
+    <custom
+      classname="cell.view.bottlebag.BottleBagCell"
+      stylename="bottle.BottleBagCell"
+      parentStyle="core.BaseItemView"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="bottle.ItemIcon"
+      iconHeight="59"
+      iconWidth="59"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="28"
+      loadingY="28"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      smoothing="false"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="bottle.BottleDropItemCell"
+      iconStyle="bottle.BottleDropItemCellIcon"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      iconWidth="30"
+      iconHeight="30"
+      profileX="1"
+      profileY="1"
+      profileWidth="31"
+      profileHeight="31"
+      x="2"
+      y="2" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="bottle.BottleDropItemCellIcon"
+      iconHeight="32"
+      iconWidth="32"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="14"
+      loadingY="14"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="bottle.BottleFrame"
+      stylename="bottle.BottleFrame"
+      parentStyle="core.Frame1"
+      width="910"
+      height="620"
+      containerX="19"
+      containerY="65" />
+    <!-- 背景圖片 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bottle.BottleFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="870"
+      height="510"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bottle.BottleFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="861"
+      height="500"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="bottle.BottleFrameBack3"
+      parentStyle="core.describeBackground_style04"
+      width="230"
+      height="475"
+      x="630"
+      y="20" />
+    <!-- 魔罐界面右边信息 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.TitleBack1"
+      resourceLink="asset.bottle.TitleBack,asset.bottle.bestGoods"
+      x="617"
+      y="27"
+      imageRectString="0|206|0|24|13,45|164|0|20|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.TitleBack2"
+      resourceLink="asset.bottle.TitleBack,asset.bottle.rewards"
+      x="642"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.TitleBack3"
+      resourceLink="asset.bottle.TitleBack,asset.bottle.luckShow"
+      x="642"
+      y="345" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="bottle.RewardsListScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,0,1,2,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="200"
+      height="120"
+      x="649"
+      y="224" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="bottle.LuckShowListScrollPanel"
+      parentStyle="bottle.RewardsListScrollPanel"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="bottle.RewardsVBox"
+      x="0"
+      y="0"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="bottle.LuckShowVBox"
+      x="493"
+      y="235"
+      width="205"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.SmallPointImg"
+      resourceLink="asset.core.SmallPointImg" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.openBtnText1"
+      textFormatStyle="bottle.openBtnIconText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.openBtnBg1"
+      resourceLink="asset.bottle.openBtnBack,asset.bottle.openNum1,bottle.SmallPointImg"
+      imageRectString="0|132|0|53|13,20|92|10|19|13,70|23|28|21|13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="bottle.openBtn1"
+      backStyle="bottle.openBtnBg1"
+      textStyle="bottle.openBtnText1"
+      autoSizeAble="false"
+      backgoundInnerRectString="23,0,28,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="190"
+      y="407" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.openBtnBg2"
+      resourceLink="asset.bottle.openBtnBack,asset.bottle.openNum2,bottle.SmallPointImg"
+      imageRectString="0|132|0|53|13,9|105|7|19|13,70|23|28|21|13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="bottle.openBtn2"
+      parentStyle="bottle.openBtn1"
+      backStyle="bottle.openBtnBg2"
+      x="338"
+      y="407" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.openBtnBg3"
+      resourceLink="asset.bottle.openBtnBack,asset.bottle.openNum3,bottle.SmallPointImg"
+      imageRectString="0|132|0|53|13,9|105|7|19|13,70|23|28|21|13" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="bottle.openBtn3"
+      parentStyle="bottle.openBtn1"
+      backStyle="bottle.openBtnBg3"
+      x="485"
+      y="407" />
+    <!-- 魔罐界面中间 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.BottleBack"
+      resourceLink="asset.bottle.BottleBack"
+      x="215"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.CountdownBack"
+      resourceLink="asset.bottle.CountdownBack"
+      x="266"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.CountdownBugleIcon"
+      resourceLink="asset.bottle.BigBugleIcon"
+      x="270"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="bottle.BottleImage"
+      resourceLink="asset.bottle.BottleBack" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bottle.StorageButton"
+      backStyle="asset.bottle.StorageButtonBack"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="497"
+      y="265" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.ItemBack"
+      resourceLink="asset.bottle.ItemBack" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.hammerTitleText"
+      textFormatStyle="bottle.BottleHammerTitleText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="25"
+      x="325"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.hammerNumText"
+      textFormatStyle="bottle.BottleHammerNumText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="50"
+      height="25"
+      x="458"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.RemainTimeText"
+      textFormatStyle="bottle.RemainTimeText_t"
+      autoSize="none"
+      mouseEnabled="false"
+      filterString="core.normal_f"
+      width="200"
+      height="25"
+      x="305"
+      y="14" />
+    <component
+      classname="yishi.view.community.BaseItemView"
+      stylename="bottle.Item"
+      iconStyle="bottle.ItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="-1"
+      profileY="-1"
+      profileWidth="60"
+      profileHeight="60"
+      showProfile="true"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="30"
+      strengthenY="30" />
+    <!-- 魔罐仓库 -->
+    <component
+      classname="bottle.BottleStorageFrame"
+      stylename="bottle.BottleStorageFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="422"
+      height="350" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bottle.BottleStorageFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="400"
+      height="240"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bottle.BottleStorageFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="390"
+      height="230"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.StorageTipText"
+      textFormatStyle="bottle.StorageTipText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="22"
+      x="-22"
+      y="250" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.StorageBtnText"
+      textFormatStyle="bottle.StorageTipText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="bottle.StoragePickupBtn"
+      backStyle="asset.bottle.StorageBtnBack"
+      textStyle="bottle.StorageBtnText"
+      autoSizeAble="false"
+      backgoundInnerRectString="3,0,3,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="95"
+      height="28"
+      x="200"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="bottle.StorageGiveupBtn"
+      parentStyle="bottle.StoragePickupBtn"
+      x="250"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="bottle.StorageCleanupBtn"
+      parentStyle="bottle.StoragePickupBtn"
+      x="292"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="bottle.BottleBagScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="400"
+      height="235"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="bottle.BottleBagVBox"
+      x="0"
+      y="0"
+      width="375"
+      spacing="2" />
+    <!-- 开启魔罐提示 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="bottle.OpenBottleAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      containerY="42"
+      containerX="35"
+      confirmStyle="bottle.OpenBottleConfirmBtn"
+      cancelStyle="bottle.OpenBottleCancelBtn"
+      checkStyle="bottle.OpenBottleCheckBtn"
+      describeStyle="bottle.OpenBottleDescribeTxt"
+      width="300"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="bottle.OpenBottleCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="54"
+      y="42" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="bottle.OpenBottleConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="0"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="bottle.OpenBottleCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="130"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.OpenBottleDescribeTxt"
+      parentStyle="core.ThewDescribeTxt"
+      textFormatStyle="bottle.OpenBottleDescribeTxt_t"
+      autoSize="none"
+      height="40"
+      width="235"
+      x="-5"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="bottle.BottleHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="830"
+      y="-40" />
+    <!-- 魔罐帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="bottle.BottleHelpFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="29,3,12,29,14"
+      containerX="20"
+      containerY="60"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="bottle.BottleFrame.helpFrame.helpContent"
+      titleText="public.help"
+      textWidth="350" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="bottle.OpenBottleUseBindPoint"
+      parentStyle="core.ThewCheckBtn"
+      x="125"
+      y="48" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="bottle.fallItemsBtn"
+      backStyle="asset.bottle.fallItemsBtnBack"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="212"
+      y="282" />
+    <!-- 魔罐掉落 -->
+    <component
+      classname="bottle.BottleDropFrame"
+      stylename="bottle.BottleDropFrame"
+      parentStyle="core.QuickBuyFrame"
+      closeInnerRectString="29,-17,-4,29,14"
+      containerX="5"
+      containerY="22"
+      width="580"
+      height="235" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="bottle.BottleDropFrame.Bg"
+      resourceLink="asset.bottle.DropFrameBg1,asset.bottle.DropFrameBg2,asset.bottle.DropFrameBg3,asset.bottle.DropFrameBg4,asset.bottle.DropFrameBg5,asset.bottle.DropFrameBg6,asset.bottle.DropFrameBg7,asset.bottle.DropFrameBg8,asset.bottle.DropFrameBg9"
+      width="570"
+      height="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleDropItemName"
+      textFormatStyle="bottle.ItemName_t1,bottle.ItemName_t2,bottle.ItemName_t3,bottle.ItemName_t4,bottle.ItemName_t5,bottle.ItemName_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="145"
+      x="35"
+      y="6"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleDropItemCount"
+      textFormatStyle="bottle.ItemName_t1,bottle.ItemName_t2,bottle.ItemName_t3,bottle.ItemName_t4,bottle.ItemName_t5,bottle.ItemName_t6"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      multiline="true"
+      isAutoFitLength="true"
+      width="95"
+      x="35"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="bottle.BottleDropScrollPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,0,-5,-5,3"
+      viewportInnerRectString="0,2,0,2,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="560"
+      height="158"
+      x="3"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.countText"
+      textFormatStyle="bottle.countText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="25"
+      x="80"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.OpenDescribeTxt"
+      textFormatStyle="bottle.OpenDescribeTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="bottle.UseStick.CheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="300"
+      y="376"
+      fieldY="-2"
+      fieldX="23" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bottle.getBoxBtn1"
+      backStyle="asset.battle.getBoxBg"
+      iconStyle="asset.bottle.getBoxText1"
+      displacement="true"
+      iconInnerRectString="5,19,5,18,13"
+      tipStyle="bottle.BottleBottomViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bottle.getBoxBtn2"
+      backStyle="asset.battle.getBoxBg"
+      iconStyle="asset.bottle.getBoxText2"
+      displacement="true"
+      iconInnerRectString="5,19,5,18,13"
+      tipStyle="bottle.BottleBottomViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bottle.getBoxBtn3"
+      backStyle="asset.battle.getBoxBg"
+      iconStyle="asset.bottle.getBoxText3"
+      displacement="true"
+      iconInnerRectString="5,19,5,18,13"
+      tipStyle="bottle.BottleBottomViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bottle.getBoxBtn4"
+      backStyle="asset.battle.getBoxBg"
+      iconStyle="asset.bottle.getBoxText4"
+      displacement="true"
+      iconInnerRectString="5,19,5,18,13"
+      tipStyle="bottle.BottleBottomViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="bottle.getBoxBtn5"
+      backStyle="asset.battle.getBoxBg"
+      iconStyle="asset.bottle.getBoxText5"
+      displacement="true"
+      iconInnerRectString="5,19,5,18,13"
+      tipStyle="bottle.BottleBottomViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.boxBg1"
+      resourceLink="asset.bottle.box.firstBg"
+      tipStyle="bottle.BottleBoxViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.boxBg2"
+      resourceLink="asset.bottle.box.secondBg"
+      tipStyle="bottle.BottleBoxViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.boxBg3"
+      resourceLink="asset.bottle.box.thirdBg"
+      tipStyle="bottle.BottleBoxViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.boxBg4"
+      resourceLink="asset.bottle.box.forthBg"
+      tipStyle="bottle.BottleBoxViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.boxBg5"
+      resourceLink="asset.bottle.box.fiveBg"
+      tipStyle="bottle.BottleBoxViewTips"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      isFollowMouse="false"
+      tipDirctions="2,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.bottleBottomView.tips"
+      textFormatStyle="bottle.gooddescribe_t"
+      filterString="core.normal_f"
+      wordWrap="true"
+      multiline="true"
+      height="18"
+      width="210"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="bottle.percentbg"
+      resourceLink="asset.bottle.percentbg1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="true"
+      x="0"
+      y="55" />
+    <!-- tips-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleBoxViewTips.titleText"
+      textFormatStyle="bottle.gooddescribe_t"
+      filterString="core.normal_f"
+      width="80"
+      x="10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleBoxViewTips.nameText"
+      textFormatStyle="bottle.gooddescribe_t"
+      filterString="core.normal_f"
+      x="30"
+      y="23"
+      wordWrap="true"
+      multiline="true"
+      width="240" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleBoxViewTips.gongxi"
+      textFormatStyle="bottle.goodtipText_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleBoxViewTips.userName"
+      textFormatStyle="bottle.nametipText_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.BottleBoxViewTips.getReward"
+      textFormatStyle="bottle.goodtipText_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.OpenDescribeTxt1"
+      textFormatStyle="bottle.OpenDescribeTxt_t1"
+      autoSize="left"
+      mouseEnabled="false"
+      width="100"
+      height="25" />
+    <component
+      stylename="bottle.percentbg2"
+      classname="com.pickgliss.ui.image.Image"
+      resourceLink="asset.bottle.BottleBoxViewEf1"
+      tipStyle="yishi.view.tips.OneLineTip"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="true"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="bottle.ItemText"
+      textFormatStyle="core.baseitem_t,core.baseitem_t1,core.baseitem_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="58"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="bottle.LightEffect"
+      resourceLink="asset.bottle.LightEffect"
+      x="27"
+      y="-27" />
+  </components>
+</style>

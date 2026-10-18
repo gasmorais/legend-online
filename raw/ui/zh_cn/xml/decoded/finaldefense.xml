@@ -1,0 +1,531 @@
+<style
+  name="finaldefense"
+  source="ui/zh_cn/swf/finaldefense.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="finaldefens.skillCountTxt_t"
+      args="Arial,12,0xf3eabf,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finaldefens.leftTimeTxt_t"
+      args="Arial,24,0xfffaac,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finaldefens.powerTxt_t"
+      args="Arial,14,0xf3eabf,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="finaldefens.pointTxt_t"
+      args="Arial,11,0xd9b554,true,,,,,center"
+      letterSpacing="1" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.finaldefense.bg"
+      width="1300"
+      height="700" />
+    <bitmapData
+      resourceLink="asset.gamebox.powerProgressBg" />
+    <bitmapData
+      resourceLink="asset.gamebox.powerProgressImg"
+      x="18"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.gamebox.powerProgressTxtBg"
+      x="5"
+      y="255" />
+    <bitmapData
+      resourceLink="asset.finaldefense.TopViewBg" />
+    <bitmapData
+      resourceLink="asset.finaldefense.RightViewBg"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.finaldefense.RightViewIndexBg"
+      x="75" />
+    <bitmapData
+      resourceLink="asset.finaldefense.BottomViewBg" />
+    <bitmapData
+      resourceLink="asset.finaldefense.SkillCountBg"
+      x="21"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.finaldefense.RightViewPointPress"
+      x="118"
+      y="97" />
+    <bitmapData
+      resourceLink="asset.finaldefense.pointImg0"
+      x="70"
+      y="478" />
+    <bitmapData
+      resourceLink="asset.finaldefense.pointImg1"
+      x="72"
+      y="385" />
+    <bitmapData
+      resourceLink="asset.finaldefense.pointImg2"
+      x="71"
+      y="292" />
+    <bitmapData
+      resourceLink="asset.finaldefense.pointImg3"
+      x="72"
+      y="200" />
+    <bitmapData
+      resourceLink="asset.finaldefense.pointImg4"
+      x="72"
+      y="107" />
+    <bitmapData
+      resourceLink="asset.finaldefense.gemastarbg" />
+    <bitmapData
+      resourceLink="asset.finaldefense.boxrewardBg" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="finaldefense.RightBoxGetedImg0"
+      resourceLink="asset.finaldefense.RightBoxGetedImg"
+      x="18"
+      y="483" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="finaldefense.RightBoxGetedImg1"
+      resourceLink="asset.finaldefense.RightBoxGetedImg"
+      x="18"
+      y="390" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="finaldefense.RightBoxGetedImg2"
+      resourceLink="asset.finaldefense.RightBoxGetedImg"
+      x="18"
+      y="298" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="finaldefense.RightBoxGetedImg3"
+      resourceLink="asset.finaldefense.RightBoxGetedImg"
+      x="18"
+      y="205" />
+    <custom
+      classname="com.pickgliss.ui.image.CustomBitmap"
+      stylename="finaldefense.RightBoxGetedImg4"
+      resourceLink="asset.finaldefense.RightBoxGetedImg"
+      x="18"
+      y="110" />
+    <custom
+      classname="finaldefense.view.FinalDefensePowerPrgView"
+      stylename="finaldefense.FinalDefensePowerPrgView"
+      x="20"
+      y="160" />
+    <custom
+      classname="finaldefense.view.FinalDefenseTopView"
+      stylename="finaldefense.FinalDefenseTopView"
+      x="510"
+      y="20" />
+    <custom
+      classname="finaldefense.view.FinalDefenseRightView"
+      stylename="finaldefense.FinalDefenseRightView"
+      x="1126"
+      y="5" />
+    <custom
+      classname="finaldefense.view.FinalDefenseBottomView"
+      stylename="finaldefense.FinalDefenseBottomView"
+      x="465"
+      y="565" />
+    <custom
+      classname="finaldefense.view.FinalDefenseSkillItem"
+      stylename="finaldefense.FinalDefenseSkillItem0"
+      x="105"
+      y="-20" />
+    <custom
+      classname="finaldefense.view.FinalDefenseSkillItem"
+      stylename="finaldefense.FinalDefenseSkillItem1"
+      x="173"
+      y="-20" />
+    <custom
+      classname="finaldefense.view.FinalDefenseSkillItem"
+      stylename="finaldefense.FinalDefenseSkillItem2"
+      x="242"
+      y="-20" />
+    <custom
+      classname="asset.finaldefense.RightBox"
+      stylename="finaldefense.rightBoxImg"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finaldefense.boxIcon0"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="16"
+      loadingY="16"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      x="10"
+      y="470" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finaldefense.boxIcon1"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="16"
+      loadingY="16"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      x="10"
+      y="377" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finaldefense.boxIcon2"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="16"
+      loadingY="16"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      x="10"
+      y="284" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finaldefense.boxIcon3"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="16"
+      loadingY="16"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      x="10"
+      y="191" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finaldefense.boxIcon4"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="16"
+      loadingY="16"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0"
+      x="10"
+      y="98" />
+    <custom
+      classname="finaldefense.view.FinalDefenseGameStarView"
+      stylename="finaldefense.FinalDefenseGameStarView"
+      x="401"
+      y="208" />
+    <custom
+      classname="asset.finaledefense.RoleLoadingView"
+      stylename="finaldefense.RoleLoadingView" />
+    <custom
+      classname="finaldefense.view.FinalDefenseView"
+      stylename="finaldefense.FinalDefenseView"
+      x="80"
+      y="90" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="finaldefense.exploreRewardView0"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      scaleX="0.8"
+      scaleY="0.8"
+      iconStyle="finaldefense.exploreRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="finaldefense.BaseItemText"
+      x="26"
+      y="34"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="finaldefense.exploreRewardView1"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      scaleX="0.8"
+      scaleY="0.8"
+      iconStyle="finaldefense.exploreRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="finaldefense.BaseItemText"
+      x="90"
+      y="34"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="finaldefense.exploreRewardView2"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      scaleX="0.8"
+      scaleY="0.8"
+      iconStyle="finaldefense.exploreRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="finaldefense.BaseItemText"
+      x="154"
+      y="34"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="finaldefense.exploreRewardView3"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      scaleX="0.8"
+      scaleY="0.8"
+      iconStyle="finaldefense.exploreRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="finaldefense.BaseItemText"
+      x="217"
+      y="34"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="finaldefense.exploreRewardView4"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      scaleX="0.8"
+      scaleY="0.8"
+      iconStyle="finaldefense.exploreRewardIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="finaldefense.BaseItemText"
+      x="281"
+      y="34"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="finaldefense.exploreRewardIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="1"
+      y="1" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finaldefense.BaseItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="17"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.skillbtn0"
+      backStyle="asset.finaldefense.Skill0"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.skillbtn1"
+      backStyle="asset.finaldefense.Skill1"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.skillbtn2"
+      backStyle="asset.finaldefense.Skill2"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.buySkillbtn"
+      backStyle="asset.finaldefense.BuySkill"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="22"
+      y="-7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finaldefens.skillCountTxt"
+      textFormatStyle="finaldefens.skillCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="10"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finaldefens.leftTimeTxt"
+      textFormatStyle="finaldefens.leftTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="31"
+      width="112"
+      x="143"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finaldefens.powerTxt"
+      textFormatStyle="finaldefens.powerTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="42"
+      x="9"
+      y="269" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="finaldefens.pointTxt"
+      textFormatStyle="finaldefens.pointTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="21"
+      width="82"
+      x="23"
+      y="564" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="finalDefense.gameIndexImg"
+      resourceLink="asset.finaldefense.RightViewIndex0,asset.finaldefense.RightViewIndex1,asset.finaldefense.RightViewIndex2,asset.finaldefense.RightViewIndex3,asset.finaldefense.RightViewIndex4"
+      x="103"
+      y="17" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finaldefens.getRewardBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.finaldefense.getRewardBtn"
+      iconInnerRectString="38,40,12,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="125"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="finaldefens.gamestarBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.finaldefense.gemastarBtn"
+      iconInnerRectString="36,46,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="188"
+      y="114" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.canLvUpBtn"
+      backStyle="asset.finaldefense.CanLvUp"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="-17"
+      y="-110" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.cannotLvUpBtn"
+      backStyle="asset.finaldefense.CanNotLvUp"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="-17"
+      y="-110" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.lifeLvUpBtn"
+      backStyle="asset.finaldefense.ItemSkill101"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="-17"
+      y="-130" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.iceLvUpBtn"
+      backStyle="asset.finaldefense.ItemSkill201"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="-47"
+      y="-120" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="finaldefense.fireLvUpBtn"
+      backStyle="asset.finaldefense.ItemSkill301"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="13"
+      y="-120" />
+  </components>
+</style>

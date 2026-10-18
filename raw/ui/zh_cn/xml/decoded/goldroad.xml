@@ -1,0 +1,519 @@
+<style
+  name="goldroad"
+  source="ui/zh_cn/swf/goldroad.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldRoad.UpdateTimeText_f"
+      args="Arial,16,0xf6f0c9,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldroad.goldRoadOpButtonText_t"
+      args="Arial,12,0xeddb95,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldroad.ThewDescribeTxt_t"
+      args="Arial,14,0xe7c88b,,,,,,center"
+      leading="2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldRoadFrame.canUseText_t"
+      args="Arial,12,0xeddb95,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GoldRoadCell.count_t"
+      args="Arial,18,0xeddb95,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="goldRoadFrame.scoreTxt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.goldroad.bg"
+      x="0"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.goldroad.bottomBg"
+      x="20"
+      y="425" />
+    <bitmapData
+      resourceLink="asset.goldRoadFrame.canUseBack"
+      x="39"
+      y="-63" />
+    <bitmapData
+      resourceLink="asset.GoldRoadCell.countBack"
+      x="60"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.GoldRoadCell.iconBack" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.goldRoadFrame.mutiAlertMc"
+      stylename="goldRoadFrame.mutiAlertMc"
+      x="460"
+      y="25" />
+    <custom
+      classname="asset.goldroad.scoreMc"
+      stylename="goldRoadFrame.scoreMc" />
+    <custom
+      classname="asset.goldroad.bigDiceMc"
+      stylename="goldroad.bigDiceMc"
+      x="430"
+      y="200" />
+    <custom
+      classname="asset.goldRoadFrame.diceAppearMc"
+      stylename="goldRoadFrame.diceAppearMc"
+      y="-95" />
+    <custom
+      classname="asset.goldRoadFrame.dicedisAppearMc"
+      stylename="goldRoadFrame.dicedisAppearMc"
+      y="-95" />
+    <custom
+      classname="goldroad.ScoreMovieSprite"
+      stylename="goldRoadFrame.scoreMovieSprite"
+      x="463"
+      y="504" />
+    <custom
+      classname="asset.GoldRoadCell.rareYellowMc"
+      stylename="GoldRoadCell.rareYellowMc" />
+    <custom
+      classname="asset.GoldRoadCell.GetYellowMc"
+      stylename="GoldRoadCell.GetYellowMc" />
+    <custom
+      classname="goldroad.GoldRoadView"
+      stylename="goldRoadFrame.goldRoadView" />
+    <custom
+      classname="goldroad.GoldRoadViewII"
+      stylename="goldRoadFrame.goldRoadViewII" />
+    <custom
+      classname="asset.goldroad.goldroadmount.Run0"
+      stylename="goldroad.goldroadmount.Run0" />
+    <custom
+      classname="asset.goldroad.goldroadmount.Run1"
+      stylename="goldroad.goldroadmount.Run1" />
+    <custom
+      classname="asset.goldroad.goldroadmount.Run2"
+      stylename="goldroad.goldroadmount.Run2"
+      scaleX="-1" />
+    <custom
+      classname="asset.goldroad.goldroadmount.Run3"
+      stylename="goldroad.goldroadmount.Run3" />
+    <custom
+      classname="cell.view.goldroad.GoldRoadBagCell"
+      stylename="gold.goldRoadBagCell"
+      parentStyle="core.BaseItemView"
+      iconWidth="42"
+      iconHeight="42"
+      profileX="1"
+      profileY="1"
+      profileWidth="43"
+      profileHeight="43" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="GoldRoadCell.GoldRoadCellView"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="46"
+      fashionIconY="42"
+      iconStyle="GoldRoadCell.GoldRoadCellIcon"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="65"
+      profileHeight="65"
+      showProfile="false" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="GoldRoadCell.GoldRoadCellIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="32"
+      loadingY="32"
+      x="1"
+      y="1" />
+    <custom
+      classname="asset.goldRoadFrame.doubleAlertMc"
+      stylename="goldRoadFrame.doubleAlertMc"
+      x="460"
+      y="25" />
+    <custom
+      classname="asset.goldRoadFrame.fiveAlertMc"
+      stylename="goldRoadFrame.fiveAlertMc"
+      x="475"
+      y="10" />
+  </customDisplay>
+  <components>
+    <component
+      classname="goldroad.GoldRoadFrame"
+      stylename="goldroad.GoldRoadFrame"
+      parentStyle="core.Frame1"
+      moveEnable="false"
+      width="950"
+      height="620" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="goldRoadFrame.doubleUnSelectButton"
+      backStyle="asset.goldroad.doubleUnSelect"
+      iconStyle="asset.goldroad.double"
+      iconInnerRectString="21,53,23,23,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,4"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="190"
+      y="447"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="goldRoadFrame.doubleSelectButton"
+      backStyle="asset.goldroad.doubleSelect"
+      iconStyle="asset.goldroad.double"
+      iconInnerRectString="30,33,23,21,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,4"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="190"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="goldRoadFrame.trebleButton"
+      backStyle="asset.goldroad.trebleBg"
+      iconStyle="asset.goldroad.treble"
+      iconInnerRectString="19,49,31,23,13"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,4"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="106"
+      y="439"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="goldRoadFrame.diceButton"
+      backStyle="asset.goldroad.diceImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="440"
+      y="442" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="goldRoadFrame.refreshButton"
+      backStyle="asset.goldroad.refreshImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="705"
+      y="464" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="goldRoadFrame.bagButton"
+      backStyle="asset.goldroad.bagImage"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,6"
+      isFollowMouse="false"
+      x="780"
+      y="468" />
+    <!-- 黄金背包 -->
+    <component
+      classname="goldroad.GoldRoadBagFrame"
+      stylename="gold.goldRoadBagFrame"
+      parentStyle="core.Frame2"
+      containerX="24"
+      containerY="43"
+      width="422"
+      height="350" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="goldroad.goldRoadBagFrameBack1"
+      parentStyle="core.describeBackground_style11"
+      width="400"
+      height="240"
+      x="-15"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="goldroad.goldRoadBagFrameBack2"
+      parentStyle="core.describeBackground_style25"
+      width="390"
+      height="230"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="goldroad.goldRoadPickupBtn"
+      backStyle="asset.goldroad.goldRoadPickupBtnbg"
+      textStyle="goldroad.goldRoadOpButtonText"
+      autoSizeAble="false"
+      backgoundInnerRectString="3,0,3,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="87"
+      height="28"
+      x="190"
+      y="245" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="goldroad.goldRoadTidyBtn"
+      parentStyle="goldroad.goldRoadPickupBtn"
+      x="280"
+      y="245"
+      width="110" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldroad.goldRoadOpButtonText"
+      textFormatStyle="goldroad.goldRoadOpButtonText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="goldroad.goldRoadBagScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="18,9,1,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      vScrollProxy="0"
+      vUnitIncrement="5"
+      width="400"
+      height="235"
+      x="-10"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="goldroad.goldRoadBagVBox"
+      x="0"
+      y="0"
+      width="375"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GoldRoadCell.vertexImage0"
+      resourceLink="asset.GoldRoadCell.vertexImage0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GoldRoadCell.vertexImage9"
+      resourceLink="asset.GoldRoadCell.vertexImage0"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GoldRoadCell.vertexImage18"
+      resourceLink="asset.GoldRoadCell.vertexImage1"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GoldRoadCell.vertexImage27"
+      resourceLink="asset.GoldRoadCell.vertexImage1" />
+    <!-- 绑定提示框 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="goldroad.goldRoadTodayNotAlertFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      containerY="12"
+      containerX="43"
+      confirmStyle="goldroad.ConfirmBtn"
+      cancelStyle="goldroad.CancelBtn"
+      checkStyle="goldroad.ThewCheckBtn"
+      describeStyle="goldroad.AlertDescribe"
+      width="355"
+      height="185" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="goldroad.ThewCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="75"
+      y="73" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="goldroad.ConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="10"
+      y="96" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="goldroad.CancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="165"
+      y="96" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldroad.AlertDescribe"
+      textFormatStyle="goldroad.ThewDescribeTxt_t"
+      autoSize="none"
+      height="40"
+      width="345"
+      wordWrap="true"
+      x="-40"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="goldroad.DiceMutiImage"
+      resourceLink="asset.goldroad.dice1,asset.goldroad.dice2,asset.goldroad.dice3,asset.goldroad.dice4,asset.goldroad.dice5,asset.goldroad.dice6"
+      x="430"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="goldRoadFrame.scoreMcContainer"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="goldRoadFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="875"
+      y="-30" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="goldRoad.goldRoadHelperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="goldRoad.goldRoadHelperText"
+      titleText="goldroad.goldRoadFrame.helpButtonTipdata"
+      textWidth="400" />
+    <!--	黄金之路改版	-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="goldRoadFrame.oneButton"
+      selectedStyle="asset.goldroad.SelectBg"
+      unSelectedStyle="asset.goldroad.oneUnSelect"
+      selectedIconStyle="asset.goldroad.oneText"
+      unselectedIconStyle="asset.goldroad.oneText"
+      selectedIconInnerRectString="35,26,25,20,13"
+      unselectedIconInnerRectString="35,26,25,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="280"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="goldRoadFrame.doubleButton"
+      selectedStyle="asset.goldroad.SelectBg"
+      unSelectedStyle="asset.goldroad.doubleUnSelect"
+      selectedIconStyle="asset.goldroad.doubleText"
+      unselectedIconStyle="asset.goldroad.doubleText"
+      selectedIconInnerRectString="30,28,25,20,13"
+      unselectedIconInnerRectString="30,28,25,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="190"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="goldRoadFrame.fiveButton"
+      selectedStyle="asset.goldroad.SelectBg"
+      unSelectedStyle="asset.goldroad.fiveUnSelect"
+      selectedIconStyle="asset.goldroad.fiveText"
+      unselectedIconStyle="asset.goldroad.fiveText"
+      selectedIconInnerRectString="30,28,25,20,13"
+      unselectedIconInnerRectString="30,28,25,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="100"
+      y="447" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="goldRoadFrame.mutiDiceBtn"
+      backStyle="asset.goldroad.mutiDiceBack"
+      iconStyle="asset.goldroad.mutiDiceText"
+      iconInnerRectString="5,41,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="542"
+      y="450" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GoldRoadCell.count"
+      textFormatStyle="GoldRoadCell.count_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="22"
+      x="30"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldRoadFrame.superDiceBtnText"
+      textFormatStyle="goldRoadFrame.canUseText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="30"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="goldRoadFrame.superDiceBtn"
+      backStyle="asset.goldRoadFrame.superDiceBtnBack"
+      textStyle="goldRoadFrame.superDiceBtnText"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3"
+      tipGapV="0"
+      isFollowMouse="false"
+      backgoundInnerRectString="6,0,12,13"
+      width="40"
+      height="39"
+      x="35"
+      y="-48" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GoldRoadCell.countBack"
+      resourceLink="asset.GoldRoadCell.countBack"
+      x="-25"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldRoadFrame.scoreTxt"
+      textFormatStyle="goldRoadFrame.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="22"
+      x="-20"
+      y="-5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="goldRoadFrame.scoreDescTxt"
+      textFormatStyle="goldRoadFrame.scoreTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="410"
+      height="22"
+      x="10"
+      y="10" />
+  </components>
+</style>

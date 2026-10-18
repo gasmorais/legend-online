@@ -1,0 +1,409 @@
+<style
+  name="newactiveleed"
+  source="ui/zh_cn/swf/newactiveleed.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveBoxItem.txt_t"
+      args="Arial,12,0xe4d29c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedView.dayNumTxt_t"
+      args="Arial,14,0xe4d29c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedView.dayDescTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedItem.txt_t"
+      args="Arial,14,0xe4d29c,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedItem.titleTxt_t"
+      args="Arial,14,0xffa82c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedItem.descTxt_t"
+      args="Arial,14,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedItem.timeTxt_t"
+      args="Arial,12,0xffa82c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedItem.timeNumTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedItem.countTxt_t"
+      args="Arial,16,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="NewActiveLeedFrame.remainTxt_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.NewActiveLeedFrame.iconImg"
+      x="5"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.NewActiveLeedItem.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.NewActiveLeedItem.tagBg"
+      x="5"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.NewActiveLeedFrame.weekBoxBg"
+      x="-30"
+      y="31" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.NewActiveLeedFrame.Progress"
+      stylename="NewActiveLeedView.Progress"
+      x="30"
+      y="50" />
+  </customDisplay>
+  <components>
+    <component
+      stylename="newactiveleed.NewActiveLeedFrame"
+      classname="newactiveleed.NewActiveLeedFrame"
+      parentStyle="core.Frame1"
+      width="773"
+      height="533" />
+    <component
+      stylename="NewActiveLeedFrame.border"
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      resourceLink="asset.fairycommon.border.border1"
+      scaleGridString="32,24,23,19"
+      width="734"
+      height="427"
+      x="2"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedFrame.noviceBtn"
+      selectedStyle="asset.NewActiveLeedFrame.selectBack"
+      unSelectedStyle="asset.NewActiveLeedFrame.unselectBack"
+      selectedIconStyle="asset.NewActiveLeedFrame.noviceBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedFrame.noviceBtnUnSelectTxt"
+      selectedIconInnerRectString="60,63,19,18,13"
+      unselectedIconInnerRectString="60,60,18,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedFrame.oneTurnBtn"
+      selectedStyle="asset.NewActiveLeedFrame.selectBack"
+      unSelectedStyle="asset.NewActiveLeedFrame.unselectBack"
+      selectedIconStyle="asset.NewActiveLeedFrame.oneTurnBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedFrame.oneTurnBtnUnSelectTxt"
+      selectedIconInnerRectString="5,157,19,23,13"
+      unselectedIconInnerRectString="5,158,18,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedFrame.twoTurnBtn"
+      selectedStyle="asset.NewActiveLeedFrame.selectBack"
+      unSelectedStyle="asset.NewActiveLeedFrame.unselectBack"
+      selectedIconStyle="asset.NewActiveLeedFrame.twoTurnBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedFrame.twoTurnBtnUnSelectTxt"
+      selectedIconInnerRectString="8,156,19,19,13"
+      unselectedIconInnerRectString="10,149,18,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedFrame.threeTurnBtn"
+      selectedStyle="asset.NewActiveLeedFrame.selectBack"
+      unSelectedStyle="asset.NewActiveLeedFrame.unselectBack"
+      selectedIconStyle="asset.NewActiveLeedFrame.threeTurnBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedFrame.threeTurnBtnUnSelectTxt"
+      selectedIconInnerRectString="12,144,18,17,13"
+      unselectedIconInnerRectString="18,132,18,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="190" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedFrame.fourTurnBtn"
+      selectedStyle="asset.NewActiveLeedFrame.selectBack"
+      unSelectedStyle="asset.NewActiveLeedFrame.unselectBack"
+      selectedIconStyle="asset.NewActiveLeedFrame.fourTurnBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedFrame.fourTurnBtnUnSelectTxt"
+      selectedIconInnerRectString="7,154,19,20,13"
+      unselectedIconInnerRectString="10,147,18,23,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="6"
+      y="250" />
+    <component
+      stylename="NewActiveLeedFrame.rightBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.NewActiveLeedFrame.line,asset.NewActiveLeedFrame.bg,asset.NewActiveLeedFrame.day,asset.NewActiveLeedFrame.week"
+      imageRectString="-5|8|-2|422|13,0|557|0|421|13,10|104|87|17|13,0|144|380|16|13"
+      x="176"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="NewActiveBoxItem.bg"
+      resourceLink="asset.NewActiveLeedFrame.Box0,asset.NewActiveLeedFrame.Box1,asset.NewActiveLeedFrame.Box2,asset.NewActiveLeedFrame.Box3,asset.NewActiveLeedFrame.Box4,asset.NewActiveLeedFrame.weekBox0,asset.NewActiveLeedFrame.weekBox1,asset.NewActiveLeedFrame.weekBox2" />
+    <component
+      stylename="NewActiveBoxItem.txt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveBoxItem.txt_t"
+      type="dynamic"
+      width="40"
+      height="20"
+      x="18"
+      y="30" />
+    <component
+      stylename="NewActiveLeedView.dayNumTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedView.dayNumTxt_t"
+      type="dynamic"
+      width="50"
+      height="20"
+      x="125"
+      y="84" />
+    <component
+      stylename="NewActiveLeedView.dayDescTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedView.dayDescTxt_t"
+      type="dynamic"
+      width="150"
+      height="20"
+      x="165"
+      y="84" />
+    <component
+      stylename="NewActiveLeedView.weekNumTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedView.dayNumTxt_t"
+      type="dynamic"
+      width="50"
+      height="20"
+      x="157"
+      y="380" />
+    <component
+      stylename="NewActiveLeedView.weekDescTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedView.dayDescTxt_t"
+      type="dynamic"
+      width="150"
+      height="20"
+      x="5"
+      y="400" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedView.dailyBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.NewActiveLeedView.dailyBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedView.dailyBtnUnSelectTxt"
+      selectedIconInnerRectString="27,39,11,16,13"
+      unselectedIconInnerRectString="28,36,11,15,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedView.singleBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.NewActiveLeedView.singleBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedView.singleBtnUnSelectTxt"
+      selectedIconInnerRectString="8,78,4,29,13"
+      unselectedIconInnerRectString="10,74,4,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedView.mutiBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.NewActiveLeedView.mutiBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedView.mutiBtnUnSelectTxt"
+      selectedIconInnerRectString="9,75,4,30,13"
+      unselectedIconInnerRectString="10,72,4,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedView.mutiPkBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.NewActiveLeedView.mutiPkBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedView.mutiPkBtnUnSelectTxt"
+      selectedIconInnerRectString="16,58,11,14,13"
+      unselectedIconInnerRectString="17,56,11,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedView.consortiaBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.NewActiveLeedView.consortiaBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedView.consortiaBtnUnSelectTxt"
+      selectedIconInnerRectString="15,62,5,26,13"
+      unselectedIconInnerRectString="16,58,5,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="NewActiveLeedView.petAndChildBtn"
+      selectedStyle="asset.core.Style26SelectedBtn"
+      unSelectedStyle="asset.core.Style26UnSelectedBtn"
+      selectedIconStyle="asset.NewActiveLeedView.petAndChildBtnSelectTxt"
+      unselectedIconStyle="asset.NewActiveLeedView.petAndChildBtnUnSelectTxt"
+      selectedIconInnerRectString="13,67,5,26,13"
+      unselectedIconInnerRectString="14,63,5,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="NewActiveLeedView.hBox"
+      x="3"
+      y="115"
+      spacing="2" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="NewActiveLeedView.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      viewportInnerRectString="0,531,0,0,2"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="545"
+      height="213"
+      x="8"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="NewActiveLeedView.vBox"
+      spacing="7" />
+    <component
+      stylename="NewActiveLeedItem.txt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedItem.txt_t"
+      type="dynamic"
+      width="40"
+      height="20"
+      x="25"
+      y="9" />
+    <component
+      stylename="NewActiveLeedItem.titleTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedItem.titleTxt_t"
+      type="dynamic"
+      width="250"
+      height="20"
+      x="65"
+      y="10" />
+    <component
+      stylename="NewActiveLeedItem.descTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedItem.descTxt_t"
+      type="dynamic"
+      width="305"
+      height="35"
+      x="10"
+      y="35"
+      wordWrap="true" />
+    <component
+      stylename="NewActiveLeedItem.timeTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedItem.timeTxt_t"
+      type="dynamic"
+      width="100"
+      height="20"
+      x="315"
+      y="10" />
+    <component
+      stylename="NewActiveLeedItem.timeNumTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedItem.timeNumTxt_t"
+      type="dynamic"
+      width="120"
+      height="40"
+      wordWrap="true"
+      x="300"
+      y="30" />
+    <component
+      stylename="NewActiveLeedItem.countTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedItem.countTxt_t"
+      type="dynamic"
+      width="100"
+      height="20"
+      x="413"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="NewActiveLeedItem.gotoBtn"
+      backStyle="asset.NewActiveLeedItem.btnBg"
+      iconStyle="asset.NewActiveLeedItem.btnTxt"
+      iconInnerRectString="28,40,11,17,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="415"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="NewActiveLeedFrame.doubleBtn"
+      backStyle="asset.NewActiveLeedFrame.doubleBtnBg"
+      iconStyle="asset.NewActiveLeedFrame.doubleBtnTxt"
+      iconInnerRectString="-17,169,84,18,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="132"
+      height="113"
+      x="23"
+      y="315" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="NewActiveLeedFrame.doubleOpenBtn"
+      backStyle="asset.NewActiveLeedFrame.doubleOpenBtnBg"
+      iconStyle="asset.NewActiveLeedFrame.doubleOpenBtnBack"
+      iconInnerRectString="-4,138,80,32,13"
+      autoCenter="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="139"
+      height="113"
+      x="23"
+      y="315" />
+    <component
+      stylename="NewActiveLeedFrame.remainTxt"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="NewActiveLeedFrame.remainTxt_t"
+      type="dynamic"
+      width="130"
+      height="40"
+      wordWrap="true"
+      x="25"
+      y="395" />
+  </components>
+</style>

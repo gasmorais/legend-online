@@ -1,0 +1,572 @@
+<style
+  name="remainsexplore"
+  source="ui/zh_cn/swf/remainsexplore.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreNodeItem.txt_t"
+      args="Arial,12,0xdcd7ce,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreFrame.progressTxt_t"
+      args="Arial,12,0x967f59,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreFrame.numTxt_t"
+      args="Arial,14,0xf9ff95,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreFrame.countTxt_t"
+      args="Arial,16,0xfacf56,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreDropFrame.dropTxt_t"
+      args="Arial,14,0xa88a67,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreActivityItem.txt_t"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="remainsExploreActivityItem.bar.text_t"
+      args="Arial,12,0x00ff24,true,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.RemainsExploreFrame.bg"
+      x="3"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreNodeItem.boss1"
+      x="-10"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreNodeItem.boss2"
+      x="-17"
+      y="45" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreNodeItem.txtBg"
+      x="15"
+      y="100" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreNodeItem.lock"
+      x="20"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreNodeFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreNodeFrame.icon"
+      x="360"
+      y="360" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreDropFrame.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.bg1"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.bg2"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.bg3"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.bg4"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.txt1"
+      x="40"
+      y="55" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.txt2"
+      x="30"
+      y="55" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.txt3"
+      x="55"
+      y="40" />
+    <bitmapData
+      resourceLink="asset.RemainsExploreAreaItem.txt4"
+      x="45"
+      y="40" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="asset.RemainsExploreNodeFrame.progressMc"
+      stylename="remainsExploreFrame.progressMc"
+      x="20"
+      y="79" />
+    <custom
+      classname="asset.RemainsExploreNodeFrame.stepMc"
+      stylename="remainsExploreNodeFrame.stepMc"
+      x="45"
+      y="200" />
+    <custom
+      classname="asset.RemainsExploreNodeFrame.markMc"
+      stylename="remainsExploreNodeFrame.markMc"
+      x="45"
+      y="200" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="remainsExploreDropFrame.itemView"
+      iconStyle="remainsExploreDropFrame.BaseItemViewIcon"
+      textStyle="ancientartifact.BaseItemText"
+      profileStyle="core.GoodsProfileBG"
+      showProfile="true"
+      profileWidth="60"
+      profileHeight="60"
+      x="0"
+      y="0"
+      iconWidth="60"
+      iconHeight="60" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="remainsExploreDropFrame.BaseItemViewIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="60"
+      iconHeight="60"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="remainsexplore.RemainsExploreBoxItem"
+      stylename="remainsexplore.RemainsExploreBoxItem1"
+      x="40"
+      y="-50" />
+    <custom
+      classname="remainsexplore.RemainsExploreBoxItem"
+      stylename="remainsexplore.RemainsExploreBoxItem2"
+      x="130"
+      y="-50" />
+    <custom
+      classname="remainsexplore.RemainsExploreBoxItem"
+      stylename="remainsexplore.RemainsExploreBoxItem3"
+      x="220"
+      y="-50" />
+    <custom
+      classname="remainsexplore.RemainsExploreBoxItem"
+      stylename="remainsexplore.RemainsExploreBoxItem4"
+      x="310"
+      y="-50" />
+    <custom
+      classname="remainsexplore.RemainsExploreBoxItem"
+      stylename="remainsexplore.RemainsExploreBoxItem5"
+      x="400"
+      y="-50" />
+    <custom
+      classname="remainsexplore.RemainsExploreProgressView"
+      stylename="remainsExploreActivityFrame.activeProgress"
+      x="25"
+      y="100" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="remainsExploreNodeFrame.stripView"
+      x="20"
+      y="477"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false" />
+  </customDisplay>
+  <components>
+    <component
+      classname="remainsexplore.RemainsExploreFrame"
+      stylename="remainsexplore.RemainsExploreFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="16"
+      containerY="65"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,37,10,0,9"
+      width="900"
+      height="655" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="remainsExploreFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="865"
+      height="542" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreFrame.activityBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.RemainsExploreFrame.btnTxt"
+      iconInnerRectString="34,52,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="680"
+      y="486"
+      width="160"
+      height="42" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="remainsExploreFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="825"
+      height="445"
+      x="20"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="remainsExploreFrame.vBox"
+      spacing="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="remainsExploreAreaItem.hBox"
+      spacing="35"
+      x="235"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreNodeItem.bg1"
+      resourceLink="asset.RemainsExploreNodeItem.node11,asset.RemainsExploreNodeItem.node12,asset.RemainsExploreNodeItem.node13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreNodeItem.bg2"
+      resourceLink="asset.RemainsExploreNodeItem.node21,asset.RemainsExploreNodeItem.node22,asset.RemainsExploreNodeItem.node23"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreNodeItem.bg3"
+      resourceLink="asset.RemainsExploreNodeItem.node31,asset.RemainsExploreNodeItem.node32,asset.RemainsExploreNodeItem.node33"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreNodeItem.bg4"
+      resourceLink="asset.RemainsExploreNodeItem.node41,asset.RemainsExploreNodeItem.node42,asset.RemainsExploreNodeItem.node43"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreNodeItem.txt"
+      textFormatStyle="remainsExploreNodeItem.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="24"
+      x="-20"
+      y="103" />
+    <!-- nodeFrame -->
+    <component
+      stylename="remainsexplore.RemainsExploreNodeFrame"
+      classname="remainsexplore.RemainsExploreNodeFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="50"
+      width="770"
+      height="625" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreFrame.progressTxt"
+      textFormatStyle="remainsExploreFrame.progressTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="695"
+      height="24"
+      x="30"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreFrame.back"
+      resourceLink="asset.RemainsExploreNodeFrame.back1,asset.RemainsExploreNodeFrame.back2,asset.RemainsExploreNodeFrame.back3,asset.RemainsExploreNodeFrame.back4"
+      x="22"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreFrame.exploreBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.RemainsExploreNodeFrame.exploreBtnTxt"
+      iconInnerRectString="52,49,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="310"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreFrame.bossBtn1"
+      backStyle="asset.RemainsExploreNodeFrame.bossBtn1"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="195"
+      y="380" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreFrame.bossBtn2"
+      backStyle="asset.RemainsExploreNodeFrame.bossBtn2"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="245"
+      y="368" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreFrame.numTxt"
+      textFormatStyle="remainsExploreFrame.numTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="24"
+      x="385"
+      y="362" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="remainsExploreFrame.iconBack"
+      resourceLink="asset.shop.ShopDisplayShow02,asset.RemainsExploreNodeFrame.icon,asset.RemainsExploreNodeFrame.iconTxtBmp"
+      imageRectString="0|0|19,17|7|19,40|7|19"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreFrame.countTxt"
+      textFormatStyle="remainsExploreFrame.countTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="24"
+      x="122"
+      y="483" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreFrame.buyBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.RemainsExploreNodeFrame.buyBtnTxt"
+      iconInnerRectString="12,69,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="235"
+      y="475" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreFrame.dropBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.RemainsExploreNodeFrame.dropBtnTxt"
+      iconInnerRectString="12,70,9,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="630"
+      y="475" />
+    <!-- dropFrame -->
+    <component
+      stylename="remainsexplore.RemainsExploreDropFrame"
+      classname="remainsexplore.RemainsExploreDropFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="45"
+      width="390"
+      height="360" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreDropFrame.dropTxt"
+      textFormatStyle="remainsExploreDropFrame.dropTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24"
+      x="0"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreDropFrame.bossDropTxt1"
+      textFormatStyle="remainsExploreDropFrame.dropTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24"
+      x="5"
+      y="132" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreDropFrame.bossDropTxt2"
+      textFormatStyle="remainsExploreDropFrame.dropTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="24"
+      x="5"
+      y="218" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="remainsExploreDropFrame.hBox"
+      spacing="8"
+      x="135"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="remainsExploreDropFrame.bossHBox1"
+      spacing="8"
+      x="135"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="remainsExploreDropFrame.bossHBox2"
+      spacing="8"
+      x="135"
+      y="195" />
+    <!-- activityFrame -->
+    <component
+      stylename="remainsexplore.RemainsExploreActivityFrame"
+      classname="remainsexplore.RemainsExploreActivityFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="50"
+      width="580"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="remainsExploreActivityFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="0"
+      width="555"
+      height="405" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="remainsExploreActivityFrame.dayBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.RemainsExploreActivityFrame.dayBtnSelectTxt"
+      unselectedIconStyle="asset.RemainsExploreActivityFrame.dayBtnUnSelectTxt"
+      selectedIconInnerRectString="13,91,6,15,13"
+      unselectedIconInnerRectString="14,86,6,14,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="20"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="remainsExploreActivityFrame.weekBtn"
+      selectedStyle="asset.core.Style116SelectedBtn"
+      unSelectedStyle="asset.core.Style116UnSelectedBtn"
+      selectedIconStyle="asset.RemainsExploreActivityFrame.weekBtnSelectTxt"
+      unselectedIconStyle="asset.RemainsExploreActivityFrame.weekBtnUnSelectTxt"
+      selectedIconInnerRectString="6,103,6,14,13"
+      unselectedIconInnerRectString="8,97,6,13,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreActivityFrame.bg"
+      resourceLink="asset.RemainsExploreActivityFrame.dayBg,asset.RemainsExploreActivityFrame.weekBg"
+      x="3"
+      y="29" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="remainsExploreActivityFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="1,1,2,0,5"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="540"
+      height="245"
+      x="5"
+      y="150" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="remainsExploreActivityFrame.vBox"
+      spacing="5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreActivityItem.bg"
+      resourceLink="asset.RemainsExploreActivityItem.dayBg,asset.RemainsExploreActivityItem.weekBg"
+      x="3"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="remainsExploreActivityItem.icon"
+      resourceLink="asset.RemainsExploreActivityItem.dayIcon,asset.RemainsExploreActivityItem.weekIcon"
+      x="20"
+      y="7" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreActivityItem.txt"
+      textFormatStyle="remainsExploreActivityItem.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="24"
+      x="85"
+      y="13" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="remainsExploreActivityItem.bar"
+      backgroundLink="asset.RemainsExploreActivityItem.barBg"
+      barLink="asset.RemainsExploreActivityItem.barColor"
+      textStyle="remainsExploreActivityItem.bar.text"
+      x="80"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="remainsExploreActivityItem.bar.text"
+      textFormatStyle="remainsExploreActivityItem.bar.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="100"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreActivityItem.receiveBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.RemainsExploreActivityItem.receive"
+      iconInnerRectString="25,45,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="400"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="remainsExploreFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="815"
+      y="-50" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="remainsExploreFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="remainsExploreFrame.helperFrame.helpTxt.text"
+      titleText="remainsExploreFrame.helperFrame.HelpTitle.text"
+      textWidth="363" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="remainsExploreNodeFrame.tipBtn"
+      backStyle="asset.RemainsExploreNodeFrame.tipBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.RemainsExploreTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="-30"
+      isFollowMouse="false"
+      x="20"
+      y="130" />
+  </components>
+</style>

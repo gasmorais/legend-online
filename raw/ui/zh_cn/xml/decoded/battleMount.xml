@@ -1,0 +1,360 @@
+<style
+  name="battleMount"
+  source="ui/zh_cn/swf/battlemount.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="battleMount.levelAndNameTitle_TF"
+      args="Arial,14,0xffa200,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battleMount.propertyValue_TF"
+      args="Arial,14,0xffc000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battleMount.addValue_TF"
+      args="Arial,14,0x00e430,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="battleMount.avatarTip_TF"
+      args="Arial,14,0xfe0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <!-- 背景资源 -->
+    <bitmapData
+      resourceLink="asset.battleMount.background"
+      x="0"
+      y="18" />
+    <bitmapData
+      resourceLink="asset.battleMount.propertyBackground"
+      x="0"
+      y="319" />
+    <bitmapData
+      resourceLink="asset.battleMount.nameBackground"
+      x="85"
+      y="25" />
+    <!-- 标题资源 -->
+    <bitmapData
+      resourceLink="asset.battleMount.propertyTitle" />
+    <bitmapData
+      resourceLink="asset.battleMount.attackTitle" />
+    <bitmapData
+      resourceLink="asset.battleMount.armorTitle" />
+    <bitmapData
+      resourceLink="asset.battleMount.strengthTitle" />
+    <bitmapData
+      resourceLink="asset.battleMount.staminaTitle" />
+    <bitmapData
+      resourceLink="asset.battleMount.intellectTitle" />
+    <bitmapData
+      resourceLink="asset.battleMount.blessingTile"
+      x="30"
+      y="430" />
+    <bitmapData
+      resourceLink="asset.battleMount.curCount" />
+    <!-- 按钮资源 -->
+    <bitmapData
+      resourceLink="asset.battleMount.change"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battleMount.evolution"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.battleMount.selectArrow" />
+    <!-- 其它资源 -->
+    <bitmapData
+      resourceLink="asset.battleMount.upArrow" />
+    <bitmapData
+      resourceLink="asset.battleMount.propIcon"
+      x="150"
+      y="460" />
+    <bitmapData
+      resourceLink="asset.battleMount.critNum" />
+    <bitmapData
+      resourceLink="asset.battleMount.crit" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="yishi.view.community.BulePowerItem"
+      stylename="battleMount.blessingProgress"
+      width="280" />
+    <custom
+      classname="asset.battleMount.blessingEvoEffect"
+      stylename="battleMount.blessingEffect" />
+    <custom
+      classname="asset.battleMount.levelUpEffect"
+      stylename="battleMount.levelUpEffect"
+      x="250"
+      y="250" />
+    <custom
+      classname="asset.battleMount.critEffect"
+      stylename="battleMount.critEffect" />
+    <custom
+      classname="battleMount.BattleMountPropertyView"
+      stylename="battleMount.BattleMountPropertyView"
+      x="30"
+      y="333" />
+    <custom
+      classname="battleMount.BattleMountAvatarView"
+      stylename="battleMount.BattleMountAvatarView"
+      x="-50"
+      y="30" />
+  </customDisplay>
+  <components>
+    <!-- 战兽窗体 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="battleMount.Frame"
+      resourceLink="core.FrameBg2"
+      imageRectString="" />
+    <component
+      classname="battleMount.frame.BattleMountMainFrame"
+      stylename="battleMount.BattleMountMainFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="battleMount.Frame"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,15,15,25,1"
+      titleOuterRectPosString="0,13,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="10"
+      containerY="30"
+      width="435"
+      height="610" />
+    <component
+      classname="battleMount.frame.BattleMountEvolutionFrame"
+      stylename="battleMount.BattleMountEvolutionFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="battleMount.Frame"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,15,15,25,1"
+      titleOuterRectPosString="0,13,1"
+      enterEnable="true"
+      escEnable="true"
+      containerX="10"
+      containerY="30"
+      width="435"
+      height="610" />
+    <component
+      classname="battleMount.frame.BattleMountChangeFrame"
+      stylename="battleMount.BattleMountChangeFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="battleMount.Frame"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,15,15,25,1"
+      titleOuterRectPosString="0,13,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="10"
+      containerY="30"
+      width="435"
+      height="610" />
+    <component
+      classname="battleMount.frame.BattleMountCompareFrame"
+      stylename="battleMount.BattleMountCompareFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="battleMount.Frame"
+      closeInnerRectString="29,3,12,29,14"
+      moveInnerRectString="0,15,15,25,1"
+      titleOuterRectPosString="0,13,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      containerX="10"
+      containerY="30"
+      width="435"
+      height="500"
+      scorllRectSize="470,430" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="battleMount.RiverNotAlertCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="80"
+      y="60" />
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="battleMount.costAlert"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="worldboss.RiverNotAlert_confirmStyle"
+      cancelStyle="worldboss.RiverNotAlert_cancelStyle"
+      checkStyle="battleMount.RiverNotAlertCheckBtn"
+      describeStyle="worldboss.AlertTextStyle"
+      titleStyle="core.FrameTitleText"
+      titleOuterRectPosString="0,-7,1"
+      textStyle="worldboss.AlertTextStyle"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      frameInnerRectString="20,20,0,50,-1"
+      moveInnerRectString="0,30,0,30,1"
+      containerX="8"
+      containerY="30"
+      frameMiniW="285"
+      frameMiniH="170"
+      buttonToBottom="40"
+      width="270"
+      height="210" />
+    <!-- 文本框 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battleMount.levelAndNameText"
+      textFormatStyle="battleMount.levelAndNameTitle_TF"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="24"
+      x="85"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battleMount.propertyTitleText"
+      textFormatStyle="battleMount.propertyValue_TF"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="24"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battleMount.propertyAddText"
+      textFormatStyle="battleMount.addValue_TF"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="24"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battleMount.avatarTipText"
+      textFormatStyle="battleMount.avatarTip_TF"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="24"
+      x="30"
+      y="500" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battleMount.curCountText"
+      textFormatStyle="battleMount.propertyValue_TF"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="battleMount.attackValueText"
+      textFormatStyle="battleMount.propertyValue_TF"
+      filterString="core.normal_f"
+      width="55"
+      height="24"
+      x="0"
+      y="0" />
+    <!-- 按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battleMount.changeBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.battleMount.change"
+      iconInnerRectString="33,84,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battleMount.evolutionBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.battleMount.evolution"
+      iconInnerRectString="33,84,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="230"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battleMount.toEvolveBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.battleMount.toEvolve"
+      iconInnerRectString="50,54,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,5,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="25"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battleMount.toAdvancedEvolveBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.battleMount.toAdvancedEvolve"
+      iconInnerRectString="33,84,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="0,3,5,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="230"
+      y="490" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="battleMount.backBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.battleMount.back"
+      iconInnerRectString="50,54,11,29,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="230"
+      y="440" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="battleMount.leftArrow"
+      backStyle="asset.battleMount.selectArrow"
+      delayClickTime="400"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="3"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.controls.SimpleBitmapButton"
+      stylename="battleMount.rightArrow"
+      backStyle="asset.battleMount.selectArrow"
+      delayClickTime="400"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="3,6,4,7"
+      tipGapH="0"
+      tipGapV="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="405"
+      y="140"
+      scaleX="-1" />
+    <!-- 下拉框 -->
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="battleMount.combox"
+      listPanelStyle="sort.MultilordsComboxListpanel"
+      listInnerRectString="0,41,3,100,18"
+      textStyle="sort.MultilordsComboxText"
+      textInnerRectString="5,24,5,1,0"
+      buttonStyle="sort.MultilordsComboxButton"
+      width="200"
+      height="25"
+      x="110"
+      y="360" />
+  </components>
+</style>

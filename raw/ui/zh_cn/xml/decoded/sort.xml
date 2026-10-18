@@ -1,0 +1,1874 @@
+<style
+  name="sort"
+  source="ui/zh_cn/swf/sort.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.ItemTextStyle2_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.lastUpdateTimeText_t1"
+      args="Arial,12,0xc08c38,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.lastUpdateTimeText_t2"
+      args="Arial,12,0xc08c38,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.ItemTextStyle3_t"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.ItemTextStyle4_t"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.MySortTextStyle1_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.sortText_t"
+      args="Arial,12,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.WarlordsSortRightNameTxt_t"
+      args="Arial,14,0xe6c166,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.ItemTextStyle5_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.numberone.VipNameTxt_f"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="PetChallengeSortFrame.tipTxt_t"
+      args="Arial,12,0xff0000,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.MultilordsServiceName_t"
+      args="Arial,12,0xccaf70,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="sort.ChildNameTxt_t"
+      args="Arial,12,0xf4c68b"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.rankView.titleTxt_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.RankTopTips_t"
+      args="Arial,16,0xffe400,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.NotApplyTips_t"
+      args="Arial,16,0xffe400,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gvgcross.TopText_t"
+      args="Arial,12,0xe4d29c,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <!-- 个人等级02.png -->
+    <bitmapData
+      resourceLink="asset.sort.SelfLevelTxtImg2"
+      x="18"
+      y="10"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 个人等级.png -->
+    <bitmapData
+      resourceLink="asset.sort.SelfLevelTxtImg1"
+      x="18"
+      y="10"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 个人战斗力02】.png -->
+    <bitmapData
+      resourceLink="asset.sort.SelfPowTxtImg2"
+      x="14"
+      y="12"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 个人战斗力.png -->
+    <bitmapData
+      resourceLink="asset.sort.SelfPowTxtImg1"
+      x="17"
+      y="10"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 综合战斗力02.png -->
+    <bitmapData
+      resourceLink="asset.sort.multiplePowTxtImg2"
+      x="18"
+      y="5"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 综合战斗力.png -->
+    <bitmapData
+      resourceLink="asset.sort.multiplePowTxtImg1"
+      x="20"
+      y="5"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 公会战斗力02.png -->
+    <bitmapData
+      resourceLink="asset.sort.ConsortiaPowTxtImg2"
+      x="11"
+      y="10"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 公会战斗力.png -->
+    <bitmapData
+      resourceLink="asset.sort.ConsortiaPowTxtImg1"
+      x="11"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 个人荣誉.png -->
+    <bitmapData
+      resourceLink="asset.sort.honourSelectedTxtImg"
+      x="19"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 个人荣誉1.png -->
+    <bitmapData
+      resourceLink="asset.sort.honourUnSelectedTxtImg"
+      x="16"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 魅力值亮.png -->
+    <bitmapData
+      resourceLink="asset.sort.charmsSelectedTxtImg"
+      x="10"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 魅力值暗.png -->
+    <bitmapData
+      resourceLink="asset.sort.charmsUnSelectedTxtImg"
+      x="11"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 众神榜亮.png -->
+    <bitmapData
+      resourceLink="asset.sort.warlordsSelectedTxtImg"
+      x="18"
+      y="9" />
+    <!-- 众神榜暗.png -->
+    <bitmapData
+      resourceLink="asset.sort.warlordsUnSelectedTxtImg"
+      x="18"
+      y="9" />
+    <!-- 泰坦榜亮.png -->
+    <bitmapData
+      resourceLink="asset.sort.taitanSelectedTxtImg"
+      x="6"
+      y="16" />
+    <!-- 泰坦榜暗.png -->
+    <bitmapData
+      resourceLink="asset.sort.taitanUnSelectedTxtImg"
+      x="6"
+      y="16" />
+    <!-- 日-增-副本.png -->
+    <bitmapData
+      resourceLink="asset.sort.DayAddTxtImg"
+      x="17"
+      y="6" />
+    <!-- 周-增-副本-2.png -->
+    <bitmapData
+      resourceLink="asset.sort.WeekAddTxtImg"
+      x="7"
+      y="7" />
+    <!-- 积-累.png -->
+    <bitmapData
+      resourceLink="asset.sort.AccumulationTxtImg"
+      x="19"
+      y="6" />
+    <!-- title-分割线-->
+    <bitmapData
+      resourceLink="asset.sort.spaceLine"
+      x="0"
+      y="40" />
+    <!-- 排名bg.png-->
+    <bitmapData
+      resourceLink="asset.sort.MySortBg" />
+    <!-- mySortImg.png-->
+    <bitmapData
+      resourceLink="asset.sort.MySortImg"
+      x="13"
+      y="17" />
+    <!-- consortiaSortImg.png-->
+    <bitmapData
+      resourceLink="asset.sort.ConsortiaSortImg"
+      x="13"
+      y="17" />
+    <!-- 排-名.png-->
+    <bitmapData
+      resourceLink="asset.sort.SortTxtImg"
+      x="34"
+      y="54" />
+    <!-- 等-级.png-->
+    <bitmapData
+      resourceLink="asset.sort.LevelTxtImg"
+      x="209"
+      y="54" />
+    <!-- 经-验.png-->
+    <bitmapData
+      resourceLink="asset.sort.ExperienceTxtImg"
+      x="381"
+      y="54" />
+    <!-- 建-设.png-->
+    <bitmapData
+      resourceLink="asset.sort.BuildTxtImg"
+      x="355"
+      y="54" />
+    <!-- 战斗力.png-->
+    <bitmapData
+      resourceLink="asset.sort.PowTxtImg"
+      x="372"
+      y="54" />
+    <!-- Lv.png-->
+    <bitmapData
+      resourceLink="asset.sort.LevelImg"
+      y="15" />
+    <!-- 荣誉.png-->
+    <bitmapData
+      resourceLink="asset.sort.honourTxtImg"
+      x="375"
+      y="54" />
+    <!-- 魅力值.png-->
+    <bitmapData
+      resourceLink="asset.sort.CharmsTxtImg"
+      x="363"
+      y="54" />
+    <!-- 兽魂值.png-->
+    <bitmapData
+      resourceLink="asset.sort.SoulScoreTxtImg"
+      x="363"
+      y="54" />
+    <bitmapData
+      resourceLink="asset.sort.SoulScoreUnSelectedTxtImg"
+      x="18"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.sort.SoulScoreSelectedTxtImg"
+      x="13"
+      y="11"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.sort.MySortTopBg"
+      x="3"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.sort.SelectedBack1"
+      x="0"
+      y="2" />
+    <!-- 联赛排名 -->
+    <bitmapData
+      resourceLink="asset.sort.RankRefreshTips"
+      x="393"
+      y="455" />
+    <bitmapData
+      resourceLink="asset.sort.RankTips2" />
+    <bitmapData
+      resourceLink="asset.sort.RankTips3" />
+    <bitmapData
+      resourceLink="asset.sort.RankTips4" />
+    <bitmapData
+      resourceLink="asset.sort.btnshoubang" />
+    <bitmapData
+      resourceLink="asset.shoubang.benqu"
+      x="16"
+      y="3"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.shoubang.kuaqu"
+      x="20"
+      y="3"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.shoubang.regress"
+      x="9"
+      y="7" />
+    <!-- 泰坦之战 -->
+    <bitmapData
+      resourceLink="asset.sort.MultilordsBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.sort.MultilordsItemNameBg"
+      x="-75"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.sort.PleaseAwaitImg"
+      x="-58"
+      y="7" />
+    <bitmapData
+      resourceLink="asset.sort.WarlordsTopHunterDefault"
+      x="0"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.sort.WarlordsTopWizardDefault"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.sort.WarlordsTopWarriorDefault"
+      x="-42"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.shoubang.chenghao1"
+      x="-22" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="sort.SortLeftview"
+      stylename="sort.SortLeftview"
+      x="2"
+      y="2" />
+    <custom
+      classname="sort.SortRightView"
+      stylename="sort.SortRightView"
+      x="141"
+      y="2" />
+    <custom
+      classname="sort.WarlordsSortRightView"
+      stylename="sort.WarlordsSortRightView"
+      x="141"
+      y="2" />
+    <custom
+      classname="sort.MultilordsSortRightView"
+      stylename="sort.MultilordsSortRightView"
+      x="141"
+      y="2" />
+    <custom
+      classname="sort.RegressRightView"
+      stylename="sort.RegressRightView"
+      x="141"
+      y="2" />
+    <custom
+      classname="sort.MySortView"
+      stylename="sort.MySortView"
+      x="143"
+      y="342" />
+    <custom
+      classname="avatar.view.ShowAvatar"
+      stylename="sort.WarlordsSortRightAvatar"
+      scaleX="0.9"
+      scaleY="0.9"
+      x="-11"
+      y="119" />
+    <custom
+      classname="sort.SortGeneralListCell"
+      stylename="sort.WarlordsSortRightPeriodListCell"
+      cellType="1"
+      disObjStyle1="sort.WarlordsItemBg"
+      disObjStyle2="sort.WarlordsItemPeriodTxt"
+      disObjStyle3="sort.WarlordsItemVipNameGradientTxt"
+      disObjStyle4="sort.WarlordsItemNameTxt"
+      disObjStyle5="sort.WarlordsItemServerNameTxt" />
+    <custom
+      classname="asset.shoubang.headbg"
+      stylename="sort.numberone.headbg"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <!-- Frame -->
+    <component
+      classname="sort.SortFrame"
+      stylename="sort.SortFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="61"
+      width="730"
+      height="536" />
+    <!--9宫图背景6-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.LeftViewBg"
+      parentStyle="core.describeBackground_style06"
+      width="135"
+      height="430"
+      x="2"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.MySortBg"
+      resourceLink="asset.sort.MySortBg"
+      width="548"
+      height="55"
+      x="2"
+      y="32" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.RightViewBg"
+      parentStyle="core.describeBackground_style06"
+      width="555"
+      height="400"
+      y="30" />
+    <!-- 个人等级按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.selfLevelUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.SelfLevelTxtImg1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.selfLevelSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.SelfLevelTxtImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.selfLevelBtn"
+      unSelectedStyle="sort.selfLevelUnSelected"
+      selectedStyle="sort.selfLevelSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="327" />
+    <!-- 个人战斗力按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.selfPowUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.SelfPowTxtImg1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.selfPowSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.SelfPowTxtImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.selfPowBtn"
+      unSelectedStyle="sort.selfPowUnSelected"
+      selectedStyle="sort.selfPowSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="133" />
+    <!-- 综合战斗力按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.consortiaLevelUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.multiplePowTxtImg1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.consortiaLevelSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.multiplePowTxtImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.consortiaLevelBtn"
+      unSelectedStyle="sort.consortiaLevelUnSelected"
+      selectedStyle="sort.consortiaLevelSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="229" />
+    <!-- 公会战斗力按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.consortiaPowUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.ConsortiaPowTxtImg1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.consortiaPowSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.ConsortiaPowTxtImg2" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.consortiaPowBtn"
+      unSelectedStyle="sort.consortiaPowUnSelected"
+      selectedStyle="sort.consortiaPowSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="262" />
+    <!-- 个人荣誉按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.honourUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.honourUnSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.honourSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.honourSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.honourBtn"
+      unSelectedStyle="sort.honourUnSelected"
+      selectedStyle="sort.honourSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="359" />
+    <!--	魅力值按钮	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.charmsUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.charmsUnSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.charmsSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.charmsSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.charmsBtn"
+      unSelectedStyle="sort.charmsUnSelected"
+      selectedStyle="sort.charmsSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="391" />
+    <!--	兽魂积分按钮	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.soulUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.SoulScoreUnSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.soulSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.SoulScoreSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.SoulBtn"
+      unSelectedStyle="sort.soulUnSelected"
+      selectedStyle="sort.soulSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="294" />
+    <!--	泰坦榜按钮	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.taitanBtnUnSelected"
+      resourceLink="asset.sort.warlordsBtnUnselectedImg,asset.sort.taitanUnSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.taitanBtnSelected"
+      resourceLink="asset.sort.warlordsBtnSelectedImg,asset.sort.taitanSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.taitanBtn"
+      unSelectedStyle="sort.taitanBtnSelected"
+      selectedStyle="sort.taitanBtnUnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="49" />
+    <!--	众神榜按钮	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.warlordsUnSelected"
+      resourceLink="asset.sort.warlordsBtnUnselectedImg,asset.sort.warlordsUnSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.warlordsSelected"
+      resourceLink="asset.sort.warlordsBtnSelectedImg,asset.sort.warlordsSelectedTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.warlordsBtn"
+      unSelectedStyle="sort.warlordsSelected"
+      selectedStyle="sort.warlordsUnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="93" />
+    <!-- 最后更新时间 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.lastUpdateTimeText1"
+      textFormatStyle="sort.lastUpdateTimeText_t1"
+      filterString="core.normal_f"
+      height="20"
+      x="6"
+      y="321" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.lastUpdateTimeText2"
+      textFormatStyle="sort.lastUpdateTimeText_t2"
+      filterString="core.normal_f"
+      height="20"
+      x="115"
+      y="322" />
+    <!-- 日增按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.dayAddUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg2,asset.sort.DayAddTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.dayAddSelected"
+      resourceLink="asset.sort.SelectedButtonBg2,asset.sort.DayAddTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.dayAddBtn"
+      unSelectedStyle="sort.dayAddUnSelected"
+      selectedStyle="sort.dayAddSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="310"
+      y="3" />
+    <!-- 周增按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.weekAddUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg2,asset.sort.WeekAddTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.weekAddSelected"
+      resourceLink="asset.sort.SelectedButtonBg2,asset.sort.WeekAddTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.weekAddBtn"
+      unSelectedStyle="sort.weekAddUnSelected"
+      selectedStyle="sort.weekAddSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="390"
+      y="3" />
+    <!-- 积累按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.accumulationUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg2,asset.sort.AccumulationTxtImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.accumulationSelected"
+      resourceLink="asset.sort.SelectedButtonBg2,asset.sort.AccumulationTxtImg" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.accumulationBtn"
+      unSelectedStyle="sort.accumulationUnSelected"
+      selectedStyle="sort.accumulationSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="467"
+      y="3" />
+    <!-- 排名 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="sort.TitleBg"
+      parentStyle="core.TitleBack_Style05"
+      x="5"
+      y="38"
+      width="545" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.sortText"
+      textFormatStyle="sort.sortText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      x="20"
+      y="44"
+      width="70" />
+    <!-- 排名条 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="sort.itemBgGray"
+      parentStyle="core.TitleBack_Style777"
+      x="3"
+      y="7"
+      width="546" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="sort.itemBgLight"
+      parentStyle="core.TitleBack_Style888"
+      x="2"
+      y="7"
+      width="547" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.itemBg"
+      resourceLink="sort.itemBgGray,sort.itemBgLight" />
+    <!--page-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.PageTextStyle"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="53"
+      height="20"
+      x="393"
+      y="346" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="sort.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="387"
+      y="340" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="310"
+      y="341" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="458"
+      y="341" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="sort.textBg1"
+      resourceLink="asset.sort.TxtBgLeft,asset.sort.TxtBgMiddle,asset.sort.TxtBgRight"
+      x="56"
+      y="49"
+      width="82"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="sort.textBg2"
+      resourceLink="asset.sort.TxtBgLeft,asset.sort.TxtBgMiddle,asset.sort.TxtBgRight"
+      x="231"
+      y="49"
+      width="82"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="sort.textBg3"
+      resourceLink="asset.sort.TxtBgLeft,asset.sort.TxtBgMiddle,asset.sort.TxtBgRight"
+      x="403"
+      y="49"
+      width="118"
+      height="27" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.MySortTextStyle1"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="55"
+      height="20"
+      x="71"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.MySortTextStyle2"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="95"
+      height="20"
+      x="417"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.ItemTextStyle1"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="75"
+      height="20"
+      x="4"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.ItemTextStyle5"
+      textFormatStyle="sort.ItemTextStyle5_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="85"
+      height="20"
+      x="70"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.ItemTextStyle2"
+      textFormatStyle="sort.ItemTextStyle2_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="142"
+      height="20"
+      x="90"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="sort.ItemTextStyle2_vip"
+      autoSize="none"
+      width="142"
+      textFieldStyle="sort.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="90"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.VipNameTxt"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="142"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.ItemTextStyle3"
+      textFormatStyle="sort.ItemTextStyle3_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="0"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.ItemTextStyle4"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="297"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.ItemTextStyle6"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      x="302"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.selfAreaBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.SelfArea1"
+      selectedIconStyle="asset.sort.SelfArea2"
+      unselectedIconInnerRectString="16,72,-1,34,13"
+      selectedIconInnerRectString="16,72,-1,34,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="38"
+      x="7"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.crossAreaBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.CrossArea1"
+      selectedIconStyle="asset.sort.CrossArea2"
+      unselectedIconInnerRectString="13,70,2,30,13"
+      selectedIconInnerRectString="15,73,2,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="106"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.regressBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.Regress1"
+      selectedIconStyle="asset.sort.Regress2"
+      unselectedIconInnerRectString="15,65,5,25,13"
+      selectedIconInnerRectString="15,65,5,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="7"
+      y="5" />
+    <!--	众神榜	-->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.WarlordsSortRightBg"
+      resourceLink="core.describeBackground_style06,asset.core.pageBg"
+      imageRectString="0|554|0|407|13,362|64|358|33|13"
+      x="0"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.WarlordsSortRightTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S"
+      imageRectString="0|311|0|34|13,66|22|3|28|13"
+      x="238"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.warlordsSortRightNameBg"
+      resourceLink="asset.sort.warlordsSortRightNameBg,sort.WarlordsSortRightLine"
+      imageRectString="3|231|377|51|13,232|3|26|402|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="sort.WarlordsSortRightLine"
+      resourceLink="asset.sort.warlordsSortRightLine,asset.sort.warlordsSortRightLine,asset.sort.warlordsSortRightLine" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsSortRightPeriodTitleTxt"
+      textFormatStyle="warlordsroom.FinalRoomRightRankTitleTxt_t"
+      filterString="core.normal_f"
+      x="247"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsSortRightNameTitleTxt"
+      parentStyle="sort.WarlordsSortRightPeriodTitleTxt"
+      x="386"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsSortRightPageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="365"
+      y="387" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.WarlordsSortRightPrePageBtn"
+      parentStyle="core.LastPageBtn"
+      x="287"
+      y="383" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.WarlordsSortRightNextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="433"
+      y="383" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="sort.WarlordsSortRightPeriodListPanel"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|sort.WarlordsSortRightPeriodListCell,31,319"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="323"
+      height="311"
+      x="236"
+      y="56" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="sort.WarlordsItemBgGray"
+      parentStyle="core.TitleBack_Style777"
+      width="312" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="sort.WarlordsItemBgLight"
+      parentStyle="core.TitleBack_Style888"
+      width="312" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.WarlordsItemBg"
+      resourceLink="sort.WarlordsItemBgGray,sort.WarlordsItemBgLight" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsItemPeriodTxt"
+      textFormatStyle="sort.ItemTextStyle4_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="7"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsItemServerNameTxt"
+      textFormatStyle="sort.ItemTextStyle2_t"
+      filterString="core.normal_f"
+      x="16"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="sort.WarlordsItemVipNameGradientTxt"
+      parentStyle="core.NpcName_VipText"
+      textFieldStyle="sort.WarlordsItemVipNameTxt"
+      x="78"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsItemVipNameTxt"
+      parentStyle="core.NpcName_VipTextField"
+      autoSize="left" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsItemNameTxt"
+      textFormatStyle="sort.ItemTextStyle2_t"
+      filterString="core.normal_f"
+      x="78"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.WarlordsSortRightNameTxt"
+      textFormatStyle="sort.WarlordsSortRightNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="229"
+      height="20"
+      x="3"
+      y="394" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.WarlordsSortRightJobImg"
+      resourceLink="asset.sort.warlordsSortRightWarriorJobBg,asset.sort.warlordsSortRightHunterJobBg,asset.sort.warlordsSortRightWizardJobBg"
+      x="2"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.WarlordsSortRightWarriorTabBtn"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      selectedIconStyle="asset.sort.warlordsSortRightWarriorTitle_Selected"
+      unselectedIconStyle="asset.sort.warlordsSortRightWarriorTitle_Unselected"
+      selectedIconInnerRectString="18,62,5,27,13"
+      unselectedIconInnerRectString="20,62,5,27,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="101"
+      y="-4" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.WarlordsSortRightWizardTabBtn"
+      parentStyle="sort.WarlordsSortRightWarriorTabBtn"
+      selectedIconStyle="asset.sort.warlordsSortRightWizardTitle_Selected"
+      unselectedIconStyle="asset.sort.warlordsSortRightWizardTitle_Unselected"
+      x="2"
+      selectedIconInnerRectString="22,55,5,27,13"
+      unselectedIconInnerRectString="22,55,5,27,13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.WarlordsSortRightHunterTabBtn"
+      parentStyle="sort.WarlordsSortRightWarriorTabBtn"
+      selectedIconStyle="asset.sort.warlordsSortRightHunterTitle_Selected"
+      unselectedIconStyle="asset.sort.warlordsSortRightHunterTitle_Unselected"
+      x="200"
+      selectedIconInnerRectString="18,64,4,27,13"
+      unselectedIconInnerRectString="16,64,4,27,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.WarlordsSortRightNewRankBtn"
+      backStyle="asset.sort.UnselectedButtonBg2"
+      iconStyle="asset.sort.warlordsNewRankTxt"
+      iconInnerRectString="7,55,6,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="460"
+      y="-6" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.petPowUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.PetPowerUnSelectedImg"
+      imageRectString="0|119|0|35|13,9|98|10|17|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.petPowSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.PetPowerSelectedImg"
+      imageRectString="0|119|0|35|13,7|104|10|18|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.petPowBtn"
+      unSelectedStyle="sort.petPowUnSelected"
+      selectedStyle="sort.petPowSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="165" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.PetNameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6,sort.ChildNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="70"
+      y="13"
+      width="180"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mysort.PetNameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6,sort.ChildNameTxt_t"
+      filterString="core.normal_f"
+      autoSize="left"
+      x="26"
+      y="52"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="mysort.MySortTextStyle1"
+      textFormatStyle="sort.MySortTextStyle1_t"
+      autoSize="left"
+      filterString="core.normal_f"
+      width="55"
+      height="20"
+      x="71"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="310"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.childPowUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.ChildPowerUnSelectedImg"
+      imageRectString="0|119|0|35|13,20|73|5|25|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.childPowSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.ChildPowerSelectedImg"
+      imageRectString="0|119|0|35|13,20|77|5|27|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.childPowBtn"
+      unSelectedStyle="sort.childPowUnSelected"
+      selectedStyle="sort.childPowSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="197" />
+    <!-- 联赛排名(多人竞技) -->
+    <component
+      classname="yishi.view.frame.pvpleague.PVPLeagueRankListFrame"
+      stylename="sort.league.PVPLeagueRankListFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      closeInnerRectString="32,3,8,29,14"
+      containerX="15"
+      containerY="50"
+      width="575"
+      height="590" />
+    <!-- 联赛排名（英灵竞技） -->
+    <component
+      classname="petchallenge.PetChallengeSortFrame"
+      stylename="sort.league.PetChallengeSortFrame"
+      parentStyle="core.Frame2"
+      moveInnerRectString="0,120,0,45,1"
+      closeInnerRectString="29,3,8,29,14"
+      containerX="15"
+      containerY="50"
+      width="575"
+      height="550" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sort.league.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="495"
+      y="-40" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.league.FrameBg"
+      parentStyle="core.describeBackground_style06"
+      width="543"
+      height="465"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="sort.league.RankContentBg"
+      resourceLink="asset.sort.RankContentBg"
+      x="7"
+      y="39" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.league.RankGroupTips"
+      resourceLink="asset.sort.GroupAsset1,asset.sort.GroupAsset2,asset.sort.GroupAsset3,asset.sort.GroupAsset4"
+      x="112"
+      y="464" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.RankTopTips"
+      textFormatStyle="gvgcross.RankTopTips_t"
+      autoSize="none"
+      width="30"
+      height="20"
+      x="235"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.NotApplyTips"
+      textFormatStyle="gvgcross.NotApplyTips_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="113"
+      y="460" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.RankListTitle.rankNum"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="12"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.RankListTitle.nickName"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="92"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.RankListTitle.serverName"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="202"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.RankListTitle.totleScore"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="347"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.RankListTitle.fightTxt"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="442"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="sort.league.RankItemVbox"
+      spacing="2"
+      x="8"
+      y="67" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="sort.league.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="232"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.PageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="238"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.league.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="155"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.league.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="303"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.league.GroupBtn1"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset1"
+      selectedIconStyle="asset.sort.GroupSelectedAsset1"
+      unselectedIconInnerRectString="20,61,4,26,13"
+      selectedIconInnerRectString="16,68,4,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="90"
+      height="38"
+      x="12"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.league.GroupBtn2"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset2"
+      selectedIconStyle="asset.sort.GroupSelectedAsset2"
+      unselectedIconInnerRectString="23,51,4,26,13"
+      selectedIconInnerRectString="23,53,4,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="90"
+      height="38"
+      x="102"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.league.GroupBtn3"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset3"
+      selectedIconStyle="asset.sort.GroupSelectedAsset3"
+      unselectedIconInnerRectString="25,49,4,26,13"
+      selectedIconInnerRectString="23,55,4,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="90"
+      height="38"
+      x="192"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="sort.league.GroupBtn4"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.sort.GroupUnselectedAsset4"
+      selectedIconStyle="asset.sort.GroupSelectedAsset4"
+      unselectedIconInnerRectString="26,50,4,26,13"
+      selectedIconInnerRectString="23,53,4,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="90"
+      height="38"
+      x="282"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="sort.league.ShowReward"
+      resourceLink="asset.sort.ShowRewardAsset"
+      tipStyle="yishi.view.tips.PVPLeagueRewardTips"
+      tipDirctions="0,5,4,7,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="10"
+      y="413" />
+    <!-- 联赛排名-Item -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="sort.league.ItemBg"
+      resourceLink="sort.league.itemBgLight" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="sort.league.itemBgLight"
+      parentStyle="core.TitleBack_Style888"
+      x="2"
+      y="7"
+      width="524" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.league.TopIcon"
+      resourceLink="asset.sort.RankTop1,asset.sort.RankTop2,asset.sort.RankTop3"
+      x="15"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.TopText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="70"
+      height="20"
+      x="4"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.NameText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="74"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.ServerNameText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="194"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.ScoreText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="120"
+      height="20"
+      x="314"
+      y="13" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.league.FightCapacityText"
+      textFormatStyle="gvgcross.TopText_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="80"
+      height="20"
+      x="434"
+      y="13" />
+    <!-- 联赛排名帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="sort.league.HelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="yishi.view.frame.pvpleague.PVPLeagueRankListFrame.helpContent"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <!-- 首榜按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.numberOneBtn"
+      unSelectedStyle="sort.warlordsSelected"
+      selectedStyle="sort.warlordsUnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="sort.numberone.ItemTextStyle_vip"
+      autoSize="none"
+      textFieldStyle="sort.numberone.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="20"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.numberone.VipNameTxt"
+      textFormatStyle="sort.numberone.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.numberone.ItemTextStyle"
+      textFormatStyle="sort.ItemTextStyle2_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      x="-11"
+      y="103"
+      width="120"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.numberone.btnshoubang"
+      backStyle="asset.sort.btnshoubang"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      enableHtml="false"
+      iconFrameChange="true"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0"
+      height="40"
+      width="113"
+      x="9"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="sort.numberone.btntotal"
+      backStyle="asset.shoubang.btnshowzongbang"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      enableHtml="false"
+      iconFrameChange="true"
+      isFollowMouse="true"
+      mouseChildren="false"
+      mouseEnabled="true"
+      pressEnable="false"
+      scaleX="1"
+      scaleY="1"
+      tipGapH="0"
+      tipGapV="0"
+      height="48"
+      width="147"
+      x="525"
+      y="358" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.shoubang.localBtn"
+      unSelectedStyle="sort.shoubang.local"
+      selectedStyle="sort.shoubang.localselected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="415"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.shoubang.local"
+      resourceLink="asset.shoubang.UnselectedButtonBg2,asset.shoubang.benqu"
+      imageRectString="0|85|0|30|13,16|58|3|22|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.shoubang.localselected"
+      resourceLink="asset.shoubang.SelectedButtonBg2,asset.shoubang.benqu"
+      imageRectString="0|85|0|30|13,16|58|3|22|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.shoubang.crossBtn"
+      unSelectedStyle="sort.shoubang.cross"
+      selectedStyle="sort.shoubang.crossselected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="505"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.shoubang.cross"
+      resourceLink="asset.shoubang.UnselectedButtonBg2,asset.shoubang.kuaqu"
+      imageRectString="0|85|0|30|13,20|50|3|22|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.shoubang.crossselected"
+      resourceLink="asset.shoubang.SelectedButtonBg2,asset.shoubang.kuaqu"
+      imageRectString="0|85|0|30|13,20|50|3|22|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.shoubang.regressBtn"
+      unSelectedStyle="sort.shoubang.regress"
+      selectedStyle="sort.shoubang.regressselected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="595"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.shoubang.regress"
+      resourceLink="asset.shoubang.UnselectedButtonBg2,asset.shoubang.regress"
+      imageRectString="0|85|0|30|13,10|63|3|22|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.shoubang.regressselected"
+      resourceLink="asset.shoubang.SelectedButtonBg2,asset.shoubang.regress"
+      imageRectString="0|85|0|30|13,10|63|3|22|13" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="PetChallengeSortFrame.RankItemVbox"
+      strictHeight="32"
+      x="21"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.RankListTitle.fightTxt"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="true"
+      autoSize="none"
+      width="130"
+      height="40"
+      x="420"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.RankListTitle.serverName"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="220"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.RankListTitle.nickName"
+      textFormatStyle="gvgcross.rankView.titleTxt_t"
+      filterString="core.DefaultFilter"
+      multiline="false"
+      wordWrap="false"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="105"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.SelfRankTips"
+      textFormatStyle="PetChallengeInfoView.rankingLabel_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="200"
+      height="20"
+      x="120"
+      y="436" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.NotApplyTips"
+      textFormatStyle="gvgcross.NotApplyTips_t"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="120"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeSortFrame.RankGroupTips"
+      resourceLink="asset.sort.GroupAsset1,asset.sort.GroupAsset2,asset.sort.GroupAsset3,asset.sort.GroupAsset4"
+      x="120"
+      y="422" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="PetChallengeSortFrame.FrameBg"
+      parentStyle="core.describeBackground_style06"
+      width="543"
+      height="425"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="PetChallengeSortFrame.pageBg"
+      resourceLink="asset.core.pageBg"
+      x="382"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.PageTxt"
+      textFormatStyle="core.PageTextStyle1_t"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="388"
+      y="418" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="PetChallengeSortFrame.tipTxt"
+      textFormatStyle="PetChallengeSortFrame.tipTxt_t"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="390"
+      y="0"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetChallengeSortFrame.LastPageBtn"
+      parentStyle="core.LastPageBtn"
+      x="305"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="PetChallengeSortFrame.NextPageBtn"
+      parentStyle="core.NextPageBtn"
+      x="453"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="PetChallengeTopListItemView.TopIcon"
+      resourceLink="asset.sort.RankTop1,asset.sort.RankTop2,asset.sort.RankTop3"
+      x="2"
+      y="0" />
+    <!-- 泰坦之战 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.MultilordsSortRightBg"
+      parentStyle="core.describeBackground_style06"
+      width="555"
+      height="390" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="sort.MultilordsCombox"
+      listPanelStyle="sort.MultilordsComboxListpanel"
+      listInnerRectString="0,41,3,100,18"
+      textStyle="sort.MultilordsComboxText"
+      textInnerRectString="5,24,5,1,0"
+      buttonStyle="sort.MultilordsComboxButton"
+      width="154"
+      height="25"
+      x="196"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="sort.MultilordsComboxListpanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="21,0,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|sort.MultilordsComboxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.SimpleTextCellAdapter"
+      stylename="sort.MultilordsComboxListCell"
+      backStyle="sort.MultilordsComboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="sort.MultilordsComboxListCellText"
+      autoSizeAble="false"
+      width="154"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.MultilordsComboxListCellAsset"
+      resourceLink=",sort.MultilordsComboxComBoxItemBg,sort.MultilordsComboxComBoxItemBg"
+      fillAlphaRect="true"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.MultilordsComboxComBoxItemBg"
+      resourceLink="asset.core.comboxItembgBg"
+      width="130"
+      height="22"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.MultilordsComboxListCellText"
+      textFormatStyle="SelectCP.AreaListCellTextStyle_t"
+      filterString="core.filter_01"
+      type="input"
+      autoSize="none"
+      width="125"
+      height="20"
+      x="5"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.MultilordsComboxText"
+      textFormatStyle="SelectCP.combox_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      buttonMode="true"
+      autoSize="none"
+      width="100"
+      height="20"
+      maxChars="14" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sort.MultilordsComboxButton"
+      backStyle="sort.MultilordsComboxButton.Image" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.MultilordsComboxButton.Image"
+      resourceLink="sort.MultilordsComboxButton.comBoxBg01,sort.MultilordsComboxButton.comBoxBg02,sort.MultilordsComboxButton.comBoxBg02,sort.MultilordsComboxButton.comBoxBg02"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      width="154"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.MultilordsComboxButton.comBoxBg01"
+      resourceLink="asset.sort.MultilordsComboxBg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="sort.MultilordsComboxButton.comBoxBg02"
+      resourceLink="asset.sort.MultilordsComboxBg" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sort.MultilordsPrevBtn"
+      backStyle="asset.sort.MultilordsComboxBtnBg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="168"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sort.MultilordsNextBtn"
+      backStyle="sort.MultilordsComboxBtnBgNext"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="378"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="sort.MultilordsComboxBtnBgNext"
+      resourceLink="asset.sort.MultilordsComboxBtnBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="sort.MultilordsLinkBtn"
+      backStyle="asset.sort.MultilordsLinkBtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="485"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="sort.MultilordsServiceName"
+      textFormatStyle="sort.MultilordsServiceName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="8"
+      width="200"
+      height="18" />
+    <!-- 泰坦排行中没有玩家数据显示的默认图片 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="sort.MultilordsTopItemDefaultAvatarImg"
+      resourceLink="asset.sort.WarlordsTopWizardDefault,asset.sort.WarlordsTopWarriorDefault,asset.sort.WarlordsTopHunterDefault"
+      scaleX="0.8"
+      scaleY="0.8"
+      x="-84"
+      y="-218" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="sort.tabBox"
+      spacing="-2"
+      x="0"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.theseusBtnUnSelected"
+      resourceLink="asset.sort.UnselectedButtonBg1,asset.sort.jiaUnSelectedImg"
+      imageRectString="0|119|0|35|13,10|100|10|14|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="sort.theseusBtnSelected"
+      resourceLink="asset.sort.SelectedButtonBg1,asset.sort.jiaSelectedImg"
+      imageRectString="0|119|0|35|13,10|100|10|15|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="sort.theseusBtn"
+      unSelectedStyle="sort.theseusBtnUnSelected"
+      selectedStyle="sort.theseusBtnSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="9"
+      y="53" />
+  </components>
+</style>

@@ -1,0 +1,1930 @@
+<style
+  name="room"
+  source="ui/zh_cn/swf/room.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_1"
+      args="Arial,14,0xffe505,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_2"
+      args="Arial,14,0xffb505,true" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_4"
+      args="Arial,16,0xffa535,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_5"
+      args="Arial,14,0xe2c489,,,,,,left,,,,5" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_6"
+      args="Arial,16,0xfff0a8,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_8"
+      args="Arial,15,0xfae950,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_9"
+      args="Arial,16,0xfcc64d,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_white"
+      args="Arial,16,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_Green"
+      args="Arial,16,0xbae800,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.format_Blue"
+      args="Arial,16,0x00d8ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.InstaneRightBG.TodayCount_t"
+      args="Arial,16,0x00ff00,true,,,,,left" />
+    <set
+      type="flash.filters.ColorMatrixFilter"
+      stylename="room.GrayFilter"
+      args="0.5,0.69,0.31,0,0,0.5,0.69,0.31,0,0,0.5,0.69,0.31,0,0,0,0,0,1,0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.PageText_t"
+      letterSpacing="1"
+      args="Arial,16,0xe6d9b0,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="room.PageText_f"
+      args="0x3c2000,1,1,1,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.InstanceItem.gradeText_t"
+      args="arial,15,0xfff0a8,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomPVP.roomRight.timeTxtt_t"
+      args="Arial,30,0xfff4c2,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CrossMatchAlertFrame.contentText_t"
+      args="Arial,20,0xffc939,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CrossMatchAlertFrame.leftTimeText_t"
+      args="arial,14,0xffc000,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="CrossMatchAlertFrame.campaignName_t"
+      args="Arial,14,0xffc939,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.InstaneRight.recommendGrades_t"
+      args="Arial,13,0xfff0a8,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.InstanceItem.alertGrades_t"
+      args="Arial,14,0xfdfddb,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.instanceRight.optimzeText_t"
+      args="Arial,13,0xfdfddb,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.instanceRight.optimzeValueText_t"
+      args="Arial,15,0xfdfddb,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.InstanceItemNameTxt.text_t"
+      args="Arial,16,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.instanceRight.todayText_t"
+      args="Arial,12,0xffee78,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.instanceRight.todayAlertText.text_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="room.InstaneRight.areaNameTxt.text_t"
+      args="Arial,16,0xffffff,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.areaNameTxt.text_t"
+      args="Arial,16,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.difText.text_t"
+      args="Arial,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="xmlui.baseroom.fla.spacetimeGetTxt_t"
+      args="黑体,14,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="raceAgainstTimeFrame.clearTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="raceAgainstTimeFrame.timeTxt_t"
+      args="Arial,12,0xe7c88b,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.room.InstaneRightBG" />
+    <!-- 房间右边框 -->
+    <bitmapData
+      resourceLink="asset.baseroom.enterRoomBG" />
+    <bitmapData
+      resourceLink="asset.room.InstanceLeftBG"
+      x="43"
+      y="3" />
+    <bitmapData
+      resourceLink="asset.room.leftTabOneFontI"
+      x="11"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.room.leftTabOneFontII"
+      x="11"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.room.leftTabTwoFontI"
+      x="11"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.room.leftTabTwoFontII"
+      x="11"
+      y="26" />
+    <bitmapData
+      resourceLink="asset.room.leftTabThreeFontI"
+      x="10"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.room.leftTabThreeFontII"
+      x="10"
+      y="35" />
+    <bitmapData
+      resourceLink="asset.room.leftTabCloseFontIII"
+      x="11"
+      y="37" />
+    <bitmapData
+      resourceLink="asset.room.InstaneOKFont"
+      x="37"
+      y="19" />
+    <bitmapData
+      resourceLink="asset.room.InstanceFontI"
+      x="40"
+      y="30" />
+    <bitmapData
+      resourceLink="asset.room.InstanceItemSelectImg"
+      x="-6"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.room.instanceRightNoteFontBG"
+      x="21"
+      y="174" />
+    <bitmapData
+      resourceLink="asset.room.PveRoomRightBG1"
+      x="-1"
+      y="-10" />
+    <bitmapData
+      resourceLink="asset.room.PveRoomRightBG2"
+      x="81"
+      y="-151" />
+    <bitmapData
+      resourceLink="asset.room.PveRoomRightBG3"
+      x="10"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.room.PveRoomRightSelectInstanceBtnBG"
+      x="11"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.room.TimeLeftBMD"
+      x="21"
+      y="447" />
+    <bitmapData
+      resourceLink="asset.room.income"
+      x="50"
+      y="417"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 未选中 -->
+    <bitmapData
+      resourceLink="asset.room.UnselectedSimpleImg"
+      x="14"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.room.UnselectedCommonImg"
+      x="9"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.room.UnselectedHardImg"
+      x="20"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.room.UnselectedNightmareImg"
+      x="11"
+      y="14" />
+    <!-- 选中 -->
+    <bitmapData
+      resourceLink="asset.room.SelectedSimpleImg"
+      x="14"
+      y="14" />
+    <bitmapData
+      resourceLink="asset.room.SelectedCommonImg"
+      x="9.2"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.room.SelectedHardImg"
+      x="20"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.room.SelectedNightmareImg"
+      x="11"
+      y="13" />
+    <bitmapData
+      resourceLink="asset.room.SelectedBloody0"
+      x="11"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.room.SelectedBloody1"
+      x="11"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.room.SelectedBloody2"
+      x="11"
+      y="9" />
+    <bitmapData
+      resourceLink="asset.room.PveRoomRightSelectInstanceBtnOverBG"
+      x="2"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.room.roomRight.buttonLine"
+      x="75"
+      y="325" />
+    <bitmapData
+      resourceLink="asset.room.pve.timeBG"
+      x="22"
+      y="470"
+      width="258" />
+    <bitmapData
+      resourceLink="asset.room.pve.timeFontBG"
+      x="54"
+      y="505" />
+    <bitmapData
+      resourceLink="asset.CrossMatchAlertFrame.leftTimeImage"
+      x="110"
+      y="75" />
+    <bitmapData
+      resourceLink="asset.CrossMatchAlertFrame.lightBg"
+      x="-35"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.raceAgainstTimeFrame.back"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="room.view.pve.RoomView"
+      stylename="room.RoomView" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="room.InstanceMapIcon"
+      iconWidth="144"
+      iconHeight="55"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="72"
+      loadingY="27"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="room.InstanceBigMapIcon"
+      iconWidth="260"
+      iconHeight="278"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="130"
+      loadingY="139"
+      x="6"
+      y="7" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="room.MapIcon"
+      iconWidth="260"
+      iconHeight="278"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="8"
+      loadingHeight="8"
+      loadingX="130"
+      loadingY="139"
+      x="19"
+      y="43" />
+    <custom
+      classname="room.view.pve.RoomRightView"
+      stylename="room.roomRightView"
+      x="700"
+      y="10" />
+    <!-- 物品掉落 -->
+    <custom
+      classname="room.view.pve.FallGoodsOldView"
+      stylename="room.PveFallGoodsView"
+      x="26"
+      y="231" />
+    <!-- 玩家形象 -->
+    <custom
+      classname="room.view.anteroom.AnteroomView"
+      stylename="room.AnteroomView" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.PlayerFigure_4"
+      x="1220"
+      y="120" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.PlayerFigure_3"
+      x="990"
+      y="187" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.PlayerFigure_2"
+      x="700"
+      y="187" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.PlayerFigure_1"
+      x="430"
+      y="120" />
+    <!-- 副本选择 -->
+    <custom
+      classname="room.view.pve.instance.InstanceLeftView"
+      stylename="room.InstanceLeftView"
+      x="-3"
+      y="-3" />
+    <custom
+      classname="room.view.pve.instance.InstanceRightView"
+      stylename="room.InstanceRightView"
+      x="510"
+      y="-3" />
+    <!-- 副本选择_左 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.instanceSp"
+      x="12"
+      y="12" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_1"
+      x="62"
+      y="20" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_2"
+      x="310"
+      y="70" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_3"
+      x="120"
+      y="150" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_4"
+      x="310"
+      y="230" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_5"
+      x="62"
+      y="282" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_6"
+      x="77"
+      y="40" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_7"
+      x="295"
+      y="85" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_8"
+      x="77"
+      y="215" />
+    <custom
+      classname="flash.geom.Point"
+      stylename="room.selectInstanceItem_9"
+      x="295"
+      y="255" />
+    <!-- 副本选择_右 -->
+    <custom
+      classname="room.view.pve.FallGoodsOldView"
+      stylename="room.instanceRight.PveFallGoodsView"
+      x="13"
+      y="200" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="room.roomRight.StartBtn"
+      back="room.RoomRightStartBtnBack"
+      button="room.RoomRightStartBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="150"
+      y="368" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="room.roomRight.PveStartBtn"
+      parentStyle="room.roomRight.StartBtn"
+      x="164"
+      y="330" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="room.roomRight.ReadyBtn"
+      back="room.RoomRightStartBtnBack"
+      button="room.RoomRightReadyBtn"
+      x="150"
+      y="368" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="room.roomRight.PveReadyBtn"
+      parentStyle="room.roomRight.ReadyBtn"
+      x="164"
+      y="330" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="room.roomRight.CancelBtn"
+      back="room.RoomRightCancelBtnBack"
+      button="room.RoomRightCancelBtn"
+      x="150"
+      y="368" />
+    <custom
+      classname="yishi.view.component.MovieButton"
+      stylename="room.roomRight.PveCancelBtn"
+      parentStyle="room.roomRight.CancelBtn"
+      x="164"
+      y="330" />
+    <!--		<custom classname="yishi.view.component.MovieButton" stylename="room.roomRight.PveStartBtn"-->
+    <!--			parentStyle="room.roomRight.StartBtn" x="164" y="330" />-->
+    <custom
+      classname="asset.room.intanceImage.iconBackMc"
+      stylename="room.intanceImage.iconBackMc"
+      x="20"
+      y="44" />
+    <custom
+      classname="asset.room.intanceImage.iconBackMc"
+      stylename="room.InstanceBigMapIcon.iconBackMc"
+      x="7"
+      y="8" />
+    <custom
+      classname="yishi.view.component.MovieButtonII"
+      stylename="room.roomRight.crossPveStartBtn"
+      back="room.RoomRight.crossStartBtnBack"
+      button="room.RoomRight.crossStartBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <custom
+      classname="room.view.RoomReadyTopView"
+      stylename="room.RoomReadyTopView" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain10"
+      x="4"
+      y="283" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="raceAgainstTimeFrame.itemView"
+      parentStyle="core.normal.BaseItemView"
+      x="0"
+      y="0" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain11"
+      x="4"
+      y="283" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.trialContain"
+      x="5"
+      y="283" />
+    <custom
+      classname="theseusDoublepvpscene.TheseusDoubleRoomView"
+      stylename="theseusDoublepvpscene.theseusDoubleRoomView" />
+  </customDisplay>
+  <components>
+    <!-- 准备按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRightReadyBtn"
+      resourceLink="asset.baseroom.RoomRightReadyBtn" />
+    <!-- 取消按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRightCancelBtnBack"
+      resourceLink="asset.baseroom.RoomRightCancelBtnBack" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRightCancelBtn"
+      resourceLink="asset.baseroom.RoomRightCancelBtn" />
+    <!-- 开始按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRightStartBtnBack"
+      resourceLink="asset.baseroom.RoomRightStartBtnBack"
+      x="61"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRightStartBtn"
+      resourceLink="asset.baseroom.RoomRightStartBtn" />
+    <!-- PVE -->
+    <!--9宫图背景6 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.pveRightDescribeBackground"
+      parentStyle="core.describeBackground_style06"
+      x="17"
+      y="41"
+      width="263"
+      height="281" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.fallGoodsOldBG"
+      resourceLink="asset.core.RoomFallGoodsBG"
+      scaleGridString="10,30,70,50"
+      width="246"
+      height="84" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="room.fallGoodsOldPanel"
+      parentStyle="core.fallGoodsPanel"
+      width="234"
+      height="50"
+      x="10"
+      y="27" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="room.roomRight.PveInviteBtn"
+      backStyle="asset.room.roomRight.PveInviteBtnBack"
+      iconStyle="asset.room.roomRight.PveInviteBtnText"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="17"
+      y="328"
+      iconInnerRectString="17,42,11,22,13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="room.roomRight.TeamSortBtn"
+      parentStyle="room.roomRight.PveInviteBtn"
+      backStyle="asset.room.roomRight.TeamSortBtnBack"
+      iconStyle="asset.room.roomRight.TeamSortBtnText"
+      iconInnerRectString="12,42,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="82"
+      y="328" />
+    <!--  <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="room.roomRight.TeamSortBtn"
+      parentStyle="room.roomRight.PveInviteBtn"
+      backStyle="asset.baseroom.RoomRightSortBtn"
+      x="83"
+      iconStyle="asset.room.roomRight.TeamSortBtnText"
+      iconInnerRectString="12,42,11,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      y="328" /> -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.roomRight.PveLockBtn"
+      parentStyle="core.checkBtnStyle_3"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-10"
+      x="-10"
+      y="-10" />
+    <!-- 选择副本按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.roomRight.PveSelectInstanceBtnSelect"
+      resourceLink="asset.room.PveRoomRightSelectInstanceBtnOverBG,asset.room.PveRoomRightSelectInstanceBtnBG" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="room.roomRight.PveSelectInstanceBtnSelectAsset"
+      resourceLink="asset.room.PveRoomRightSelectInstanceBtnBG,room.roomRight.PveSelectInstanceBtnSelect,room.roomRight.PveSelectInstanceBtnSelect,asset.room.PveRoomRightSelectInstanceBtnBG" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.roomRight.PveSelectInstanceBtn"
+      unSelectedStyle="room.roomRight.PveSelectInstanceBtnSelectAsset"
+      selectedStyle="room.roomRight.PveSelectInstanceBtnSelectAsset"
+      x="77"
+      y="114"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.roomRight.titleTxt"
+      textFormatStyle="room.format_1"
+      filterString="core.normal_f"
+      x="115"
+      y="3"
+      width="84"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.roomRight.pveRoomNumber"
+      textFormatStyle="room.format_2"
+      filterString="core.normal_f"
+      x="45"
+      y="14"
+      width="84"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.roomRight.roomNumber"
+      textFormatStyle="room.format_2"
+      filterString="core.normal_f"
+      x="33"
+      y="33"
+      width="84"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.roomRight.PveroomPeopleNumber"
+      x="150"
+      y="14"
+      parentStyle="room.roomRight.roomNumber" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.roomRight.EnterTimeRecord"
+      textFormatStyle="room.format_8"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="100"
+      y="447" />
+    <!-- 玩家形象 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.anterRoom.nameTxt"
+      textFormatStyle="room.format_white,room.format_Green,room.format_Blue"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="-245"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="room.anterRoom.nameGradientText"
+      colors="0xfdff78,0xff9000"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal2_f"
+      textFieldStyle="room.anterRoom.nameGradientTextField"
+      x="0"
+      y="-245"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.anterRoom.nameGradientTextField"
+      textFormatStyle="room.format_9"
+      autoSize="none"
+      mouseEnabled="false"
+      x="0"
+      y="0"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.anterRoom.consortiaTxt"
+      textFormatStyle="room.format_white,room.format_Green,room.format_Blue"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="-245"
+      width="200"
+      height="22" />
+    <!-- 副本选择 -->
+    <component
+      classname="room.view.pve.instance.InstanceSelectFrame"
+      stylename="room.InstanceSelectFrame"
+      parentStyle="core.Frame1"
+      width="820"
+      height="552"
+      containerX="15"
+      containerY="67" />
+    <!-- 副本选择_左 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="room.InstanceSelectBack"
+      parentStyle="core.describeBackground_style11"
+      width="460"
+      height="450"
+      x="39"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="room.InstanceItemBG"
+      resourceLink="asset.room.InstanceItemBGII" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="room.InstanceItemNameTxt"
+      colors="0xffe138,0xff9d33"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal_f"
+      textFieldStyle="room.InstanceItemNameTxt.text"
+      width="120"
+      height="22"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="room.InstanceGoodsBox"
+      x="165"
+      y="400"
+      spacing="-60" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabOneBtn.unSelect"
+      resourceLink="asset.room.leftTabBGI,asset.room.leftTabOneFontI" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabOneBtn.Select"
+      resourceLink="asset.room.leftTabBGII,asset.room.leftTabOneFontII" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.LeftInstance.TabOneBtn"
+      unSelectedStyle="room.leftTabOneBtn.unSelect"
+      selectedStyle="room.leftTabOneBtn.Select"
+      x="0"
+      y="10"
+      width="43"
+      height="152"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabTwoBtn.unSelect"
+      resourceLink="asset.room.leftTabBGI,asset.room.leftTabTwoFontI" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabTwoBtn.Select"
+      resourceLink="asset.room.leftTabBGII,asset.room.leftTabTwoFontII" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.LeftInstance.TabTwoBtn"
+      unSelectedStyle="room.leftTabTwoBtn.unSelect"
+      selectedStyle="room.leftTabTwoBtn.Select"
+      x="0"
+      y="153"
+      width="43"
+      height="152"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabThreeBtn.unSelect"
+      resourceLink="asset.room.leftTabBGI,asset.room.leftTabThreeFontI" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabThreeBtn.Select"
+      resourceLink="asset.room.leftTabBGII,asset.room.leftTabThreeFontII" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.LeftInstance.TabThreeBtn"
+      unSelectedStyle="room.leftTabThreeBtn.unSelect"
+      selectedStyle="room.leftTabThreeBtn.Select"
+      x="0"
+      y="292"
+      width="43"
+      height="152"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabCloseBtn.unSelect"
+      x="0"
+      y="292"
+      resourceLink="asset.room.leftTabBGIII,asset.room.leftTabCloseFontIII" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.leftTabCloseBtn.Select"
+      resourceLink="asset.room.leftTabBGIII,asset.room.leftTabCloseFontIII" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.LeftInstance.TabCloseBtn"
+      unSelectedStyle="room.leftTabCloseBtn.unSelect"
+      selectedStyle="room.leftTabCloseBtn.Select"
+      x="0"
+      y="292"
+      width="43"
+      height="152"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <!-- 副本选择_右 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain1"
+      x="0"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.RightInstance.OKBtnBG"
+      resourceLink="asset.room.InstaneOKBtn,asset.room.InstaneOKFont" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="room.RightInstance.OKBtn"
+      backStyle="room.RightInstance.OKBtnBG"
+      x="33"
+      y="367"
+      parentStyle="room.roomRight.StartBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.NormalBtn"
+      unSelectedStyle="asset.core.UnSelectedBtn_style11"
+      selectedStyle="asset.core.SelectedBtn_style11"
+      selectedIconStyle="asset.core.SelectedBtntxt2_style11"
+      unselectedIconStyle="asset.core.UnSelectedBtntxt2_style11"
+      selectedIconInnerRectString="24,72,14,22,13"
+      unselectedIconInnerRectString="24,72,14,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="133"
+      height="47"
+      transparentEnable="true"
+      x="10"
+      y="0"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.DifficultBtn"
+      parentStyle="selecteCP.NormalBtn"
+      unSelectedStyle="asset.core.UnSelectedBtn_style12"
+      selectedStyle="asset.core.SelectedBtn_style12"
+      unselectedIconStyle="asset.core.UnSelectedBtntxt1_style12"
+      selectedIconStyle="asset.core.SelectedBtntxt1_style12"
+      unselectedIconInnerRectString="42,64,12,22,13"
+      selectedIconInnerRectString="42,64,12,22,13"
+      x="126"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.InstaneRightBG.MutipleImage"
+      resourceLink="asset.room.InstaneRightBG,room.InstaneRightBG.scaleXImage"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.scaleXImage"
+      resourceLink="asset.room.InstaneRightBG"
+      scaleX="-1"
+      x="272" />
+    <!--9宫图背景 副本选择 右 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="room.InstaneRightDescribeBackgroundScale"
+      parentStyle="core.describeBackground_style11"
+      x="-3"
+      y="-3"
+      width="278"
+      height="446" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.InstaneRightDescribeBackground1"
+      parentStyle="core.describeBackground_style06"
+      x="4"
+      y="5"
+      width="263"
+      height="281" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.InstaneRightDescribeBackground2"
+      parentStyle="core.describeBackground_style06"
+      x="5"
+      y="296"
+      width="260"
+      height="62" />
+    <!-- 试练之塔 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain2"
+      x="0"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.TrailImg"
+      resourceLink="asset.room.InstaneRight.TrailImg"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.TodayImage"
+      resourceLink="asset.room.InstaneRight.TodayImg"
+      x="11"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRightBG.TodayCount"
+      textFormatStyle="room.InstaneRightBG.TodayCount_t"
+      autoSize="none"
+      height="24"
+      width="150"
+      x="118"
+      y="26" />
+    <!-- 最佳通关评价 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="room.Profile"
+      parentStyle="core.Profile"
+      x="105"
+      y="118" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.ProfileTxt"
+      resourceLink="asset.core.ProfileTxt"
+      x="22"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="room.instanceRight.Profile"
+      parentStyle="core.Profile"
+      x="85"
+      y="62" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.instanceRight.ProfileTxt"
+      resourceLink="asset.core.ProfileTxt"
+      x="7"
+      y="65" />
+    <!-- 快速邀请提示框 -->
+    <component
+      classname="yishi.view.frame.TodayNotAlertFrame"
+      stylename="room.QucikInviteFrame"
+      parentStyle="core.TodayNotAlertFrame"
+      confirmStyle="room.QuickInviteConfirmBtn"
+      cancelStyle="room.QuickInviteCancelBtn"
+      checkStyle="room.QuickInviteThewCheckBtn"
+      describeStyle="room.QucikInviteDescribe"
+      width="300"
+      height="205" />
+    <!-- 不再提示按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="room.QuickInviteThewCheckBtn"
+      parentStyle="core.ThewCheckBtn"
+      x="60"
+      y="48" />
+    <!-- 提示框按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="room.QuickInviteConfirmBtn"
+      parentStyle="core.AlertConfirmBtn_2"
+      x="-5"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="room.QuickInviteCancelBtn"
+      parentStyle="core.AlertButton_2"
+      x="130"
+      y="86" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.QucikInviteDescribe"
+      textFormatStyle="core.ThewDescribeTxt_t"
+      autoSize="none"
+      height="20"
+      width="250"
+      x="-10"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.PveRoomRightBG"
+      resourceLink="asset.room.PveRoomRightBG1,room.PveRoomRightBG1.scaleXImage,asset.room.PveRoomRightBG2,asset.room.PveRoomRightBG3"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.PveRoomRightBG1.scaleXImage"
+      resourceLink="asset.room.PveRoomRightBG1"
+      scaleX="-1"
+      x="297" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.incomeBtn"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      selectedIconStyle="asset.room.income"
+      unselectedIconStyle="asset.room.income"
+      selectedIconInnerRectString="21,102,5,18,13"
+      unselectedIconInnerRectString="21,102,5,18,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="100"
+      height="25"
+      displacement="false"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-100"
+      tipGapV="0"
+      x="15"
+      y="414"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.incomeTxt"
+      textFormatStyle="core.BaseInputAlert_t_3"
+      filterString="core.normal_f"
+      alpha="0" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="room.incomeBtn2"
+      backStyle="asset.baseroom.RoomRightInviteBtn"
+      alpha="0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="23"
+      y="414"
+      width="118"
+      height="20"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-10" />
+    <!-- 王者之塔 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="room.DifficultyImg"
+      resourceLink="asset.room.KingSimple,asset.room.KingCommon,asset.room.KingHard,asset.room.KingNightmare"
+      x="190"
+      y="68" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain3"
+      x="4"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="room.instanceRight.DifficultyImg"
+      resourceLink="asset.room.KingSimple,asset.room.KingCommon,asset.room.KingHard,asset.room.KingNightmare"
+      x="180"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.KingImg"
+      resourceLink="asset.room.InstaneRight.KingImg"
+      x="2"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.TodayKingImage"
+      resourceLink="asset.room.InstaneRight.TodayKingImg"
+      x="4"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRightBG.TodayKingCount"
+      textFormatStyle="room.InstaneRightBG.TodayCount_t"
+      autoSize="none"
+      height="24"
+      width="150"
+      x="90"
+      y="28" />
+    <!-- 简单难度按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.InstaneRight.simpleBtn"
+      unSelectedStyle="room.simpleUnSelected"
+      selectedStyle="room.simpleSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.simpleUnSelected"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.UnselectedSimpleImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.simpleSelected"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedSimpleImg" />
+    <!-- 普通难度按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.InstaneRight.commonBtn"
+      unSelectedStyle="room.commonUnSelected"
+      selectedStyle="room.commonSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.commonUnSelected"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.UnselectedCommonImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.commonSelected"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedCommonImg" />
+    <!-- 困难难度按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.InstaneRight.hardBtn"
+      unSelectedStyle="room.hardUnSelected"
+      selectedStyle="room.hardSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="129"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.hardUnSelected"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.UnselectedHardImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.hardSelected"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedHardImg" />
+    <!-- 噩梦难度按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.InstaneRight.nightmareBtn"
+      unSelectedStyle="room.nightmareUnSelected"
+      selectedStyle="room.nightmareSelected"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="193"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.nightmareUnSelected"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.UnselectedNightmareImg" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.nightmareSelected"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedNightmareImg" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="room.InstaneRightDescribeBackground3"
+      resourceLink="asset.room.DescribeBG"
+      x="0"
+      y="0"
+      width="263"
+      height="89" />
+    <!-- 血色魔狱 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="bloody.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="238"
+      y="10" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain4"
+      x="4"
+      y="283" />
+    <!-- 50-60级按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.bloodyLvBtn0.simpleBtn"
+      unSelectedStyle="room.bloodyLvBtn0Uned"
+      selectedStyle="room.bloodyLvBtn0ed"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="1"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.bloodyLvBtn0Uned"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.SelectedBloody0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.bloodyLvBtn0ed"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedBloody0" />
+    <!-- 60-70级按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.bloodyLvBtn1.simpleBtn"
+      unSelectedStyle="room.bloodyLvBtn1Uned"
+      selectedStyle="room.bloodyLvBtn1ed"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="65"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.bloodyLvBtn1Uned"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.SelectedBloody1" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.bloodyLvBtn1ed"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedBloody1" />
+    <!-- 70-80级按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="room.bloodyLvBtn2.simpleBtn"
+      unSelectedStyle="room.bloodyLvBtn2Uned"
+      selectedStyle="room.bloodyLvBtn2ed"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="129"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.bloodyLvBtn2Uned"
+      resourceLink="asset.room.UnselectedButtonBg,asset.room.SelectedBloody2" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="room.bloodyLvBtn2ed"
+      resourceLink="asset.room.SelectedButtonBg,asset.room.SelectedBloody2" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="room.bloody.helpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="room.InstanceRightView.bloodyContent"
+      titleText="public.help"
+      textWidth="383" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.bloodyImg"
+      resourceLink="asset.room.InstaneRight.bloodyImg"
+      x="2"
+      y="2" />
+    <!-- 魔龙巢穴 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain5"
+      x="0"
+      y="303" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.molongImg"
+      resourceLink="asset.room.InstaneRight.molongImg"
+      x="7"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRightBG.todaymolongImg"
+      resourceLink="asset.room.InstaneRight.TodayImg"
+      x="7"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRightBG.todaymolongCount"
+      textFormatStyle="room.InstaneRightBG.TodayCount_t"
+      autoSize="none"
+      height="24"
+      width="150"
+      x="118"
+      y="32" />
+    <!-- 纳兰德拉 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="nalan.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="238"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRightBG.nalanTodayCount"
+      textFormatStyle="room.InstaneRightBG.TodayCount_t"
+      autoSize="none"
+      height="24"
+      width="150"
+      x="135"
+      y="52" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain6"
+      x="4"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRight.nalanImg"
+      resourceLink="asset.room.InstaneRight.nalanImg"
+      x="4"
+      y="24" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRight.TodayNalanImg"
+      resourceLink="asset.room.InstaneRight.TodayNalanImg"
+      x="6"
+      y="56" />
+    <!-- 翻页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="room.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      x="195"
+      y="413"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="room.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="315"
+      y="413"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="199"
+      y="414" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.PageText"
+      textFormatStyle="room.PageText_t"
+      filterString="room.PageText_f"
+      x="238"
+      y="416"
+      autoSize="none"
+      width="60"
+      height="20" />
+    <!-- 跨服撮合按钮 -->
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRight.crossStartBtnBack"
+      resourceLink="asset.room.RoomRight.crossStartBtnBack"
+      x="61"
+      y="-24" />
+    <component
+      classname="com.pickgliss.ui.image.MovieImage"
+      stylename="room.RoomRight.crossStartBtn"
+      resourceLink="asset.room.RoomRight.crossStartBtn" />
+    <!-- 泰拉神庙 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRightBG.tailaTodayCount"
+      textFormatStyle="room.InstaneRightBG.TodayCount_t"
+      autoSize="none"
+      height="24"
+      width="150"
+      x="130"
+      y="45" />
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain7"
+      x="4"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRight.tailaImg"
+      resourceLink="asset.room.InstaneRight.tailaImg"
+      x="3"
+      y="19" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="room.InstaneRight.TodayTailaImg"
+      resourceLink="asset.room.InstaneRight.TodayTailaImg"
+      x="4"
+      y="50" />
+    <!--	多人本第三难度新		-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.NormalBtn1"
+      unSelectedStyle="asset.room.select.normalBtn11"
+      selectedStyle="asset.room.select.normalBtn11"
+      selectedIconStyle="asset.room.select.normalText"
+      unselectedIconStyle="asset.room.select.normalText"
+      selectedIconInnerRectString="43,64,13,21,13"
+      unselectedIconInnerRectString="43,64,13,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="60"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.NormalBtn2"
+      unSelectedStyle="asset.room.unselect.normallBtn22"
+      selectedStyle="asset.room.select.normallBtn22"
+      selectedIconStyle="asset.room.select.normalText"
+      unselectedIconStyle="asset.room.unselect.normalText"
+      selectedIconInnerRectString="31,64,12,21,13"
+      unselectedIconInnerRectString="31,64,12,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.DifficultBtn2"
+      unSelectedStyle="asset.room.unselect.hardlBtn22"
+      selectedStyle="asset.room.select.hardlBtn22"
+      selectedIconStyle="asset.room.select.hardText"
+      unselectedIconStyle="asset.room.unselect.hardText"
+      selectedIconInnerRectString="44,69,8,28,13"
+      unselectedIconInnerRectString="44,69,8,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="127"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.NormalBtn3"
+      unSelectedStyle="asset.room.unselect.normalBtn31"
+      selectedStyle="asset.room.select.normalBtn31"
+      selectedIconStyle="asset.room.select.normalText"
+      unselectedIconStyle="asset.room.unselect.normalText"
+      selectedIconInnerRectString="6,64,11,21,13"
+      unselectedIconInnerRectString="6,64,11,21,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="10"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.DifficultBtn3"
+      unSelectedStyle="asset.room.unselect.hardlBtn32"
+      selectedStyle="asset.room.select.hardlBtn32"
+      selectedIconStyle="asset.room.select.hardText"
+      unselectedIconStyle="asset.room.unselect.hardText"
+      selectedIconInnerRectString="6,69,10,28,13"
+      unselectedIconInnerRectString="6,69,10,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="95"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.hellBtn3"
+      unSelectedStyle="asset.room.unselect.helllBtn33"
+      selectedStyle="asset.room.select.helllBtn33"
+      selectedIconStyle="asset.room.select.hellText"
+      unselectedIconStyle="asset.room.unselect.hellText"
+      selectedIconInnerRectString="1,77,10,28,13"
+      unselectedIconInnerRectString="1,77,10,28,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      transparentEnable="true"
+      x="180"
+      y="0" />
+    <custom
+      stylename="room.InstanceRightView.hellStripview"
+      classname="mainBar.StripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="0" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="room.InstanceItem.hbox"
+      y="63" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstanceItem.gradeText0"
+      textFormatStyle="room.InstanceItem.gradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="28"
+      height="20"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstanceItem.gradeText1"
+      textFormatStyle="room.InstanceItem.gradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="28"
+      height="20"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstanceItem.gradeText2"
+      textFormatStyle="room.InstanceItem.gradeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="28"
+      height="20"
+      x="5"
+      y="5" />
+    <!--	跨服多人本		-->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="room.roomRight.quickStartBtn"
+      backStyle="asset.room.roomRight.quickStartBack"
+      iconStyle="asset.room.roomRight.quickStartText"
+      iconInnerRectString="27,84,8,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="17"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roompve.roomRight.timeTxt"
+      textFormatStyle="roomPVP.roomRight.timeTxtt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="246"
+      height="50"
+      x="29"
+      y="475" />
+    <component
+      classname="room.view.pve.CrossMatchAlertFrame"
+      stylename="room.crossPve.CrossMatchAlertFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="35"
+      containerY="30"
+      width="390"
+      height="227" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CrossMatchAlertFrame.campaignName"
+      textFormatStyle="CrossMatchAlertFrame.campaignName_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="22"
+      x="50"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CrossMatchAlertFrame.contentText"
+      textFormatStyle="CrossMatchAlertFrame.contentText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="240"
+      height="40"
+      x="40"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="CrossMatchAlertFrame.leftTimeText"
+      textFormatStyle="CrossMatchAlertFrame.leftTimeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="40"
+      height="20"
+      x="190"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CrossMatchAlertFrame.confirmBtn"
+      backStyle="asset.core.AlertBtnStyle_02"
+      iconStyle="asset.CrossMatchAlertFrame.confirmText"
+      iconInnerRectString="25,46,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="25"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="CrossMatchAlertFrame.cancleBtn"
+      backStyle="asset.core.AlertBtnStyle_01"
+      iconStyle="asset.CrossMatchAlertFrame.cancleText"
+      iconInnerRectString="25,46,10,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="200"
+      y="105" />
+    <component
+      classname="mainBar.StripView"
+      stylename="room.roomRight.startStripView"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipWidth="172"
+      tipDirctions="0"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      alpha="1"
+      mouseChildren="true"
+      mouseEnabled="true"
+      x="164"
+      y="330" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRight.recommendGrades"
+      textFormatStyle="room.InstaneRight.recommendGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="10"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roompve.roomRight.crossNeedPowerText"
+      textFormatStyle="room.InstaneRight.recommendGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="220"
+      height="20"
+      x="25"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roompve.roomRight.recommendGrades"
+      textFormatStyle="room.InstaneRight.recommendGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="20"
+      x="25"
+      y="68" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstanceItem.alertGrades"
+      textFormatStyle="room.InstanceItem.alertGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="163"
+      height="20"
+      x="3"
+      y="43" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.instanceRight.optimzeText"
+      textFormatStyle="room.instanceRight.optimzeText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="147"
+      y="196" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.instanceRight.optimzeValueText"
+      textFormatStyle="room.instanceRight.optimzeValueText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="216"
+      y="195" />
+    <!-- 废弃法环 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain8"
+      x="4"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstanceItemNameTxt.text"
+      textFormatStyle="room.InstanceItemNameTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="163"
+      height="44"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.instanceRight.difText"
+      textFormatStyle="room.InstaneRight.recommendGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="200"
+      y="14" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="room.instanceRight.todayAlertText"
+      colors="0xfff073,0xff9600"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal_f"
+      textFieldStyle="room.instanceRight.todayAlertText.text"
+      width="120"
+      height="45"
+      x="10"
+      y="282" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.instanceRight.todayAlertText.text"
+      textFormatStyle="room.instanceRight.todayAlertText.text_t"
+      autoSize="none"
+      height="45"
+      width="250"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.instanceRight.todayText"
+      textFormatStyle="room.instanceRight.todayText_t"
+      autoSize="none"
+      height="24"
+      width="100"
+      x="155"
+      y="334" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.instanceRight.todayLeftCount"
+      textFormatStyle="room.InstaneRightBG.TodayCount_t"
+      autoSize="none"
+      height="24"
+      width="120"
+      x="225"
+      y="313" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="room.InstaneRight.areaNameTxt"
+      colors="0xffe138,0xff9d33"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal_f"
+      textFieldStyle="room.InstaneRight.areaNameTxt.text"
+      width="120"
+      height="22"
+      x="5"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="room.InstaneRight.areaNameTxt.text"
+      textFormatStyle="room.InstaneRight.areaNameTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="roompve.roomRight.areaNameTxt"
+      colors="0xffe138,0xff9d33"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal_f"
+      textFieldStyle="room.InstaneRight.areaNameTxt.text"
+      width="120"
+      height="22"
+      x="10"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pveroomlist.areaNameTxt"
+      colors="0xffe138,0xff9d33"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="core.normal_f"
+      textFieldStyle="pveroomlist.areaNameTxt.text"
+      width="120"
+      height="32"
+      x="22"
+      y="129" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.areaNameTxt.text"
+      textFormatStyle="pveroomlist.areaNameTxt.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="123"
+      height="60"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pveroomlist.difText"
+      colors="0xfffbe2,0xe7b92d"
+      alphas="1,1"
+      ratios="30,230"
+      filterString="core.normal_f"
+      textFieldStyle="pveroomlist.difText.text"
+      width="120"
+      height="25"
+      x="24"
+      y="154" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.difText.text"
+      textFormatStyle="pveroomlist.difText.text_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="roompve.roomRight.difText"
+      textFormatStyle="room.InstaneRight.recommendGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="180"
+      height="25"
+      x="205"
+      y="50" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.NormalBtnII"
+      parentStyle="room.RightInstance.NormalBtn2"
+      selectedIconInnerRectString="31,64,10,21,13"
+      unselectedIconInnerRectString="31,64,10,21,13"
+      x="12"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.DifficultBtnII"
+      parentStyle="room.RightInstance.DifficultBtn2"
+      selectedIconInnerRectString="39,69,10,28,13"
+      unselectedIconInnerRectString="39,69,10,28,13"
+      x="130"
+      y="28" />
+    <!-- 圣器神殿 -->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="room.RightInstance.Contain9"
+      x="4"
+      y="283" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.NormalBtnIII"
+      parentStyle="room.RightInstance.NormalBtn3"
+      x="5"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.DifficultBtnIII"
+      parentStyle="room.RightInstance.DifficultBtn3"
+      x="95"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="room.RightInstance.HellBtnIII"
+      parentStyle="room.RightInstance.hellBtn3"
+      x="180"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="xmlui.baseroom.fla.spaceTimeGetBtn"
+      backStyle="xmlui.baseroom.fla.spacetimeGetBack"
+      textStyle="xmlui.baseroom.fla.spacetimeGetTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="85,0,25,0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="-10"
+      tipGapV="-10"
+      supportTipsWhenGray="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="0"
+      y="431" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="xmlui.baseroom.fla.spacetimeGetTxt"
+      textFormatStyle="xmlui.baseroom.fla.spacetimeGetTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="22" />
+    <component
+      stylename="xmlui.baseroom.fla.spacetimeGetBack"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.baseroom.spaceTimeGetBtn1,asset.baseroom.spaceTimeGetBtn0"
+      imageRectString="0|158|0|54|13,22|62|16|31|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="raceAgainstTimeFrame.rewardsBg"
+      resourceLink="asset.raceAgainstTimeFrame.titleBg,asset.raceAgainstTimeFrame.bottomBg,asset.raceAgainstTimeFrame.titleBg,asset.raceAgainstTimeFrame.bottomBg,asset.raceAgainstTimeFrame.clearTxt,asset.raceAgainstTimeFrame.timeTxt"
+      imageRectString="0|368|0|27|13,0|365|28|108|13,0|368|137|27|13,0|365|165|108|13,105|153|4|16|13,115|131|140|19|13"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="raceAgainstTimeFrame.clearTxt"
+      textFormatStyle="raceAgainstTimeFrame.clearTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="271"
+      height="25"
+      x="51"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="raceAgainstTimeFrame.timeTxt"
+      textFormatStyle="raceAgainstTimeFrame.timeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="300"
+      height="25"
+      x="41"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="raceAgainstTimeFrame.clearHBox"
+      x="110"
+      y="90"
+      spacing="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="raceAgainstTimeFrame.timeHBox"
+      x="110"
+      y="225"
+      spacing="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="raceAgainstTimeFrame.btn"
+      backStyle="asset.core.Style11Btn"
+      iconStyle="asset.raceAgainstTimeFrame.define"
+      iconInnerRectString="50,50,15,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="105"
+      y="310" />
+  </components>
+</style>

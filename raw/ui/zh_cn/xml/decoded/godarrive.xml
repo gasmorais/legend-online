@@ -1,0 +1,769 @@
+<style
+  name="godarrive"
+  source="ui/zh_cn/swf/godarrive.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveFrame.sortBtn.GradientField_t"
+      args="Arial,12,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveFrame.leftCountTxt1Field_t"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveFrame.nickName.TextField_t"
+      args="Arial,18,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveFrame.nickName.TextField_t2"
+      args="Arial,12,0xffffff,true,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveSortFrame.sortTitle_t"
+      args="Arial,14,0xe7c88b,true,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveSortItem.sortText_t1"
+      args="Arial,14,0xe4d29c,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveSortItem.sortText_t2"
+      args="Arial,14,0x00fffc,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godarrive.itemName_t"
+      args="Arial,12,0xff8000,,,true,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godarrive.placesTxt_t"
+      args="Arial,13,0xdcc77f,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godarrive.itemName_t2"
+      args="Arial,13,0xb64fff,,,true,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveReportFrame.scoreTxt_t"
+      args="Arial,16,0xff0000,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godarrive.luckTxt_t"
+      args="Arial,15,0xffffff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="godarrive.luckField_t"
+      args="Arial,16,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="GodArriveFrame.activeTimeTxt_t"
+      args="Arial,13,0xe60203,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.godarrive.hasPass"
+      x="39"
+      y="171" />
+    <bitmapData
+      resourceLink="asset.godarrive.bossCardShine"
+      x="133"
+      y="19" />
+    <bitmapData
+      resourceLink="asset.godarrive.luckyImage"
+      x="17"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.godarrive.countNumber" />
+    <bitmapData
+      resourceLink="asset.godarrive.gateNumber" />
+    <bitmapData
+      resourceLink="asset.godarrivereward.line"
+      x="315"
+      y="349" />
+    <bitmapData
+      resourceLink="asset.godarrive.bloodIcon"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.godarrivereward.bg"
+      x="3"
+      y="6"
+      width="845" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="godarrive.view.GodPassCardView"
+      stylename="godarrive.GodPassCardView"
+      x="3"
+      y="8" />
+    <custom
+      classname="godarrive.view.GodPassCardItemView"
+      stylename="godarrive.GodPassCardItemView" />
+    <custom
+      classname="godarrive.GodArriveBossCard"
+      stylename="godarrive.godArriveBossCard"
+      x="143"
+      y="29" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="GodArriveBossCard.bossIcon"
+      iconHeight="280"
+      iconWidth="230"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="20"
+      loadingHeight="20"
+      loadingX="115"
+      loadingY="140"
+      x="3"
+      y="3" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="GodArriveGoodsItem.BaseItemView"
+      backgroundStyle="core.ItemBack"
+      iconStyle="core.BaseItemViewIcon"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="26"
+      fashionIconY="21"
+      lockStyle="core.BagCellLock"
+      strengthenStyle="core.goods.Strengthen"
+      strengthenX="24"
+      strengthenY="24"
+      showProfile="true"
+      x="25" />
+  </customDisplay>
+  <components>
+    <component
+      classname="godarrive.GodArriveFrame"
+      stylename="godarrive.GodArriveFrame"
+      parentStyle="core.Frame1"
+      width="555"
+      height="500"
+      containerX="13"
+      containerY="63" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="GodArriveFrame.addTimeBtn"
+      backStyle="asset.godarrive.addTimeBtn"
+      textStyle="GodArriveFrame.timeTxt"
+      autoSizeAble="false"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      backgoundInnerRectString="52,0,12,0"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3"
+      tipGapV="0"
+      isFollowMouse="false"
+      width="241"
+      height="41"
+      x="134"
+      y="278" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveFrame.timeTxt"
+      textFieldStyle="GodArriveFrame.leftCountTxt1Field"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      tipDirctions="5"
+      isFollowMouse="false"
+      width="135"
+      height="17" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GodArriveFrame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="480"
+      y="-40" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="GodArriveFrame.GodArriveHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="godarrive.GodarriveFrame.helpBtnTipContent"
+      titleText="godarrive.GodarriveFrame.HelpFrame.title"
+      textWidth="570" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GodArriveFrame.bg"
+      resourceLink="GodArriveFrame.bg1,asset.godarrive.bg,asset.godarrive.gateImage"
+      imageRectString="0|525|0|390|13,2|521|2|386|13,200|61|335|19|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="GodArriveFrame.bg1"
+      parentStyle="core.describeBackground_style06"
+      width="522"
+      height="387" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="GodArriveFrame.sortBtn"
+      backStyle="asset.godarrive.btnBack"
+      textStyle="GodArriveFrame.sortBtn.Text"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      autoSizeAble="false"
+      backgoundInnerRectString="1,1,1,1"
+      x="420"
+      y="10"
+      width="100"
+      height="24" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveFrame.sortBtn.Text"
+      textFieldStyle="GodArriveFrame.sortBtn.GradientField"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveFrame.sortBtn.GradientField"
+      textFormatStyle="GodArriveFrame.sortBtn.GradientField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="60"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="GodArriveFrame.rewardBtn"
+      parentStyle="GodArriveFrame.sortBtn"
+      y="37"
+      width="110"
+      x="410" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveFrame.leftCountTxt1"
+      textFieldStyle="GodArriveFrame.leftCountTxt1Field"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      isFollowMouse="false"
+      width="100"
+      height="22"
+      x="6"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveFrame.leftCountTxt2"
+      parentStyle="GodArriveFrame.leftCountTxt1"
+      width="100"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveFrame.leftCountTxt1Field"
+      textFormatStyle="GodArriveFrame.leftCountTxt1Field_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="125"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="GodArriveFrame.bossCardBg"
+      parentStyle="core.describeBackground_style11"
+      width="256"
+      height="306" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GodArriveFrame.attImage1"
+      resourceLink="asset.godarrive.attribute_101,asset.godarrive.attribute_102,asset.godarrive.attribute_103,asset.godarrive.attribute_104,asset.godarrive.attribute_105,asset.godarrive.attribute_106"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="5"
+      isFollowMouse="false"
+      x="144"
+      y="33" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GodArriveFrame.rewardImage1"
+      resourceLink="asset.godarrive.gateReward"
+      tipStyle="yishi.view.tips.SinglePassRewardTip"
+      tipDirctions="5,2,4,1"
+      isFollowMouse="false"
+      x="144"
+      y="79" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GodArriveFrame.attImage2"
+      resourceLink="asset.godarrive.attribute_101,asset.godarrive.attribute_102,asset.godarrive.attribute_103,asset.godarrive.attribute_104,asset.godarrive.attribute_105,asset.godarrive.attribute_106"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="44"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GodArriveFrame.rewardImage2"
+      resourceLink="asset.godarrive.gateReward"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="44"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GodArriveFrame.attImage3"
+      resourceLink="asset.godarrive.attribute_101,asset.godarrive.attribute_102,asset.godarrive.attribute_103,asset.godarrive.attribute_104,asset.godarrive.attribute_105,asset.godarrive.attribute_106"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="444"
+      y="94" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GodArriveFrame.rewardImage3"
+      resourceLink="asset.godarrive.gateReward"
+      scaleX="0.7"
+      scaleY="0.7"
+      x="444"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="GodArriveFrame.firstKill"
+      resourceLink="asset.godarrive.firstKill1,asset.godarrive.firstKill2"
+      x="290"
+      y="200" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveFrame.nickName2"
+      textFieldStyle="GodArriveFrame.nickName.TextField2"
+      colors="0xfffb96,0xe8d165,0xca8a01"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,125,255"
+      width="97"
+      height="20"
+      x="378"
+      y="260" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveFrame.nickName.TextField2"
+      textFormatStyle="GodArriveFrame.nickName.TextField_t2"
+      autoSize="none"
+      mouseEnabled="false"
+      width="97"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveFrame.nickName1"
+      textFieldStyle="GodArriveFrame.nickName.TextField1"
+      colors="0xfffb96,0xe8d165,0xca8a01"
+      filterString="core.normal2_f"
+      alphas="1,1,1"
+      ratios="10,125,255"
+      width="200"
+      height="25"
+      x="175"
+      y="263" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveFrame.nickName.TextField1"
+      textFormatStyle="GodArriveFrame.nickName.TextField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="200"
+      height="25" />
+    <component
+      classname="godarrive.GodArriveSortFrame"
+      stylename="godarrive.GodArriveSortFrame"
+      parentStyle="core.QuickBuyFrame"
+      closeInnerRectString="29,-17,-7,29,14"
+      containerX="0"
+      containerY="30"
+      moveEnable="false"
+      escEnable="false"
+      width="220"
+      height="450"
+      x="560"
+      y="46" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="GodArriveSortFrame.bg1"
+      parentStyle="core.describeBackground_style04"
+      width="218"
+      height="345"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="GodArriveSortFrame.titleBg"
+      resourceLink="asset.core.titleBg1,asset.core.titleBg2,asset.core.titleBg3"
+      width="214"
+      height="35"
+      x="2"
+      y="2" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GodArriveSortFrame.preBtn"
+      parentStyle="auction.prePageBtn"
+      x="45"
+      y="352" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GodArriveSortFrame.nextBtn"
+      parentStyle="auction.nextPageBtn"
+      x="149"
+      y="352" />
+    <!-- 首页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GodArriveSortFrame.firstBtn"
+      parentStyle="auction.prePageBtn"
+      backStyle="asset.godarrive.firstPage"
+      x="9"
+      y="352" />
+    <!-- 尾页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="GodArriveSortFrame.lastBtn"
+      parentStyle="auction.prePageBtn"
+      backStyle="asset.godarrive.lastPage"
+      x="180"
+      y="352" />
+    <!-- 页码文字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveSortFrame.pageText"
+      textFormatStyle="auction.PageTxt_f"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="false"
+      autoSize="none"
+      width="63"
+      height="20"
+      x="79"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveSortFrame.sortTitle"
+      textFormatStyle="GodArriveSortFrame.sortTitle_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="200"
+      x="10"
+      y="11" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="GodArriveSortItem.vipText"
+      textFieldStyle="GodArriveSortItem.vipTextField"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      width="136"
+      height="20"
+      x="42"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveSortItem.vipTextField"
+      textFormatStyle="consortia.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="136"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveSortItem.sortText"
+      textFormatStyle="GodArriveSortItem.sortText_t1,GodArriveSortItem.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="57"
+      height="20"
+      x="3"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveSortItem.nameText"
+      textFormatStyle="GodArriveSortItem.sortText_t1,GodArriveSortItem.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="136"
+      height="20"
+      x="42"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveSortItem.scoreText"
+      textFormatStyle="GodArriveSortItem.sortText_t1,GodArriveSortItem.sortText_t2"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="55"
+      height="20"
+      x="160"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="GodArriveSortItem.Line"
+      resourceLink="asset.core.SellItemLine1,asset.core.SellItemLine2,asset.core.SellItemLine3"
+      width="215"
+      height="2"
+      x="0"
+      y="26" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="GodArriveSortFrame.vBox"
+      x="2"
+      y="37"
+      spacing="5" />
+    <!-- 诸神降临积分榜奖励Frame -->
+    <component
+      classname="godarrive.GodArriveRewardFrame"
+      stylename="godarrive.GodArriveRewardFrame"
+      parentStyle="core.Frame2"
+      width="890"
+      height="558"
+      containerX="16"
+      containerY="46" />
+    <!-- 缩放背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="godarrive.scaleBg"
+      parentStyle="core.describeBackground_style09"
+      x="-6"
+      y="0"
+      width="865"
+      height="475" />
+    <!-- GodarriveRewardItem01 Bg -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="godarrive.rewardItem01Bg"
+      resourceLink="asset.godarrive.describeBackground"
+      scaleGridString="10,10,70,30"
+      x="0"
+      y="0"
+      width="840"
+      height="77" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="godarrive.itemHbox"
+      spacing="0"
+      x="73"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="godarrive.rewardItemvBox"
+      spacing="-1"
+      x="6"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="godarrive.rewardGoodsNameVbox"
+      spacing="0"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godarrive.rewardItemName"
+      textFormatStyle="godarrive.itemName_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="100"
+      height="20"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="godarrive.rewardItemIcon"
+      resourceLink="asset.godarrive.firstNum,asset.godarrive.secondNum,asset.godarrive.thirdNum"
+      x="0"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godarrive.rewardGoodsNameItem.placesTxt"
+      textFormatStyle="godarrive.placesTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="76"
+      height="20"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="godarrive.itemNameHbox"
+      spacing="5"
+      x="100"
+      y="1" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="godarrive.itemVbox02"
+      spacing="-1"
+      x="10"
+      y="240" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="godarrive.itemNameBtn"
+      textStyle="godarrive.itemNameTxt"
+      enableHtml="true"
+      tipStyle="yishi.view.tips.goods.PropTips"
+      tipDirctions="4,1,6,5"
+      tipGapH="-25"
+      tipGapV="0"
+      isFollowMouse="false"
+      buttonMode="false"
+      textFrameChange="false"
+      displacement="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godarrive.itemNameTxt"
+      textFormatStyle="godarrive.itemName_t2"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="godarrive.luckRewardItemHbox"
+      spacing="20"
+      strictWidth="40"
+      y="366" />
+    <!--  -->
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="godarrive.luckTxt"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      textFieldStyle="godarrive.luckField"
+      filterString="core.normal2_f"
+      width="40"
+      height="20"
+      x="360"
+      y="344" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godarrive.luckField"
+      textFormatStyle="godarrive.luckField_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="40"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="godarrive.luckTxt_2"
+      textFormatStyle="godarrive.luckTxt_t"
+      autoSize="none"
+      mouseEnabled="false"
+      width="40"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="godarrive.getRewardNumTxt"
+      colors="0xfffce7,0xfff3ce,0xffd052"
+      alphas="1,1,1"
+      ratios="10,20,255"
+      textFieldStyle="godarrive.luckTxt_2"
+      filterString="core.normal2_f"
+      width="40"
+      height="20"
+      x="210"
+      y="420" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="godarrive.luckNumberHbox"
+      spacing="8"
+      x="298"
+      y="442" />
+    <!--领奖结算界面-->
+    <component
+      classname="godarrive.GodArriveReportFrame"
+      stylename="godarrive.GodArriveReportFrame" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="GodArriveReportFrame.Bg"
+      resourceLink="GodArriveReportFrame.BgStyle01,asset.godarrive.LaceStyle01,GodArriveReportFrame.LaceStyle01Turn,asset.godarrive.reportTitle,asset.godarrive.reportDescribeImage,asset.godarrive.reportScoreImage,asset.godarrive.reportLuckyImage"
+      imageRectString="0|534|0|217|13,110|90|-6|24|13,424|90|-6|24|13,200|133|-9|21|13,0|492|30|18|13,55|60|80|29|13,55|60|130|29|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="GodArriveReportFrame.BgStyle01"
+      resourceLink="asset.godarrive.BgStyle01_U,asset.godarrive.BgStyle01_M,asset.godarrive.BgStyle01_D" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GodArriveReportFrame.LaceStyle01Turn"
+      resourceLink="asset.godarrive.LaceStyle01"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveReportFrame.scoreTxt"
+      textFormatStyle="GodArriveReportFrame.scoreTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="76"
+      height="20"
+      x="132"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveReportFrame.orderTxt"
+      textFormatStyle="GodArriveReportFrame.scoreTxt_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      width="76"
+      height="20"
+      x="278"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="GodArriveReportFrame.scoreHBox"
+      spacing="5"
+      x="120"
+      y="70" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="GodArriveReportFrame.luckyHBox"
+      spacing="5"
+      x="120"
+      y="120" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="GodArriveReportFrame.ConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="225"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="GodArriveFrame.activeTimeTxt"
+      textFormatStyle="GodArriveFrame.activeTimeTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      mouseEnabled="false"
+      selectable="false"
+      width="400"
+      height="20"
+      x="30"
+      y="365" />
+    <component
+      classname="mainBar.StripView"
+      stylename="GodArriveFrame.BloodIconTip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      x="146"
+      y="284" />
+    <!-- GodPassCardView -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="godarrive.GodPassCardView.PrevTollgateBtn"
+      backStyle="godarrive.CardLeftAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="45"
+      y="295" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="godarrive.CardLeftAsset"
+      resourceLink="asset.godarrive.CardRightAsset"
+      scaleX="-1"
+      x="52" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="godarrive.GodPassCardView.NextTollgateBtn"
+      backStyle="asset.godarrive.CardRightAsset"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="440"
+      y="295" />
+  </components>
+</style>

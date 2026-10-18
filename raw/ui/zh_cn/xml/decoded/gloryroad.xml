@@ -1,0 +1,851 @@
+<style
+  name="gloryroad"
+  source="ui/zh_cn/swf/gloryroad.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryroad.costStones_T"
+      args="Arial,12,0xfcdfa7,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryroad.socre_T"
+      args="arial,14,0xfcdfa7,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryroad.baseAtt_T"
+      args="arial,12,0xffff00,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryroad.getSocre_T"
+      args="arial,12,0x5fc017,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="army.AttackTxt_f"
+      args="Arial,14,0xfafafa,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryroad.treasureCellPassTxt_t"
+      args="Arial,14,0xffeccc,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="gloryroad.descText_t"
+      args="Arial,14,0xffeccc,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.gloryroad.lightBg" />
+    <bitmapData
+      resourceLink="asset.gloryroad.circle" />
+    <bitmapData
+      resourceLink="asset.gloryroad.box" />
+    <bitmapData
+      resourceLink="asset.gloryroad.buff" />
+    <bitmapData
+      resourceLink="asset.gloryroad.storeIcon" />
+    <bitmapData
+      resourceLink="asset.gloryroad.rewardIcon" />
+    <bitmapData
+      resourceLink="asset.gloryroad.gloryScore"
+      x="44"
+      y="429" />
+    <bitmapData
+      resourceLink="asset.gloryroad.passScore"
+      x="727"
+      y="538" />
+    <bitmapData
+      resourceLink="asset.gloryroad.txtBg"
+      width="190"
+      scaleX="1"
+      scaleY="1" />
+    <bitmapData
+      resourceLink="asset.gloryroad.attBg"
+      x="707"
+      y="80" />
+    <bitmapData
+      resourceLink="asset.gloryroad.linkBg"
+      x="696"
+      y="316" />
+    <bitmapData
+      resourceLink="asset.gloryroad.att0"
+      x="740" />
+    <bitmapData
+      resourceLink="asset.gloryroad.att1"
+      x="740" />
+    <bitmapData
+      resourceLink="asset.gloryroad.att2"
+      x="740" />
+    <bitmapData
+      resourceLink="asset.gloryroad.att3"
+      x="740" />
+    <bitmapData
+      resourceLink="asset.gloryroad.star"
+      x="805"
+      y="118" />
+    <bitmapData
+      resourceLink="asset.gloryroad.shopTxtBg"
+      x="12"
+      y="422" />
+    <bitmapData
+      resourceLink="asset.gloryroad.pageNumBg"
+      x="534"
+      y="408" />
+    <bitmapData
+      resourceLink="asset.gloryroad.difficultyGrid0" />
+    <bitmapData
+      resourceLink="asset.gloryroad.difficultyGrid1" />
+    <bitmapData
+      resourceLink="asset.gloryroad.difficultyGrid2" />
+    <bitmapData
+      resourceLink="asset.gloryroad.buffBg0"
+      x="3"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.gloryroad.buffBg1"
+      x="3"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.gloryroad.buffBg2"
+      x="3"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.gloryroad.buffBg3"
+      x="3"
+      y="6" />
+    <bitmapData
+      resourceLink="asset.gloryroad.buffLeftTxt"
+      x="495"
+      y="282" />
+    <bitmapData
+      resourceLink="asset.gloryroad.rewardTitleBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.gloryroad.rewardBgBox" />
+    <bitmapData
+      resourceLink="asset.gloryroad.rewardBg"
+      x="2"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.gloryroad.cutLine" />
+    <bitmapData
+      resourceLink="asset.gloryroad.title"
+      x="345"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.gloryroad.haveAccepted"
+      x="310"
+      y="25" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="gloryroad.component.GloryChildrenView"
+      stylename="gloryroad.childrenHead"
+      x="577"
+      y="580" />
+    <custom
+      classname="ui.resourcebar.view.PetFigureView"
+      stylename="gloryroad.PetFigureView"
+      x="40"
+      y="655" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gloryroad.rewardItemIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      loadingX="25"
+      loadingY="25"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="1"
+      y="1" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gloryroad.rewardItem"
+      backgroundStyle="gloryroad.rewardItemBack"
+      iconStyle="gloryroad.rewardItemIcon"
+      textStyle="gloryroad.rewardItemText"
+      profileStyle="core.GoodsProfileBG"
+      profileX="0"
+      profileY="0"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="gloryroad.ChildrenIcon"
+      iconX="3"
+      iconY="3"
+      iconWidth="45"
+      iconHeight="45"
+      x="7"
+      y="3" />
+    <custom
+      classname="mainBar.StripView"
+      stylename="gloryroad.figureCoverStrip"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapH="20"
+      tipGapV="-40"
+      isFollowMouse="false"
+      x="35"
+      y="595" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="gloryroad.parentFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="asset.gloryroad.frameBg"
+      closeInnerRectString="29,3,25,29,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="955"
+      height="730" />
+    <component
+      classname="gloryroad.GloryRoadFrame"
+      stylename="gloryroad.GloryRoadFrame"
+      parentStyle="gloryroad.parentFrame" />
+    <component
+      classname="com.pickgliss.ui.controls.Frame"
+      stylename="gloryroad.difficultyParentFrame"
+      closestyle="core.CloseBtn"
+      titleStyle="core.FrameTitleText"
+      backStyle="asset.gloryroad.difficultyBg"
+      closeInnerRectString="29,3,25,29,14"
+      moveInnerRectString="376,27,20,0,9"
+      titleOuterRectPosString="0,26,1"
+      moveEnable="true"
+      enterEnable="true"
+      escEnable="true"
+      width="523"
+      height="367" />
+    <component
+      classname="gloryroad.view.GloryRoadDifficultyFrame"
+      stylename="gloryroad.view.GloryRoadDifficultyFrame"
+      parentStyle="gloryroad.difficultyParentFrame"
+      containerX="16"
+      containerY="16" />
+    <component
+      classname="gloryroad.view.GloryRoadBuffFrame"
+      stylename="gloryroad.view.GloryRoadBuffFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="45"
+      width="655"
+      height="395" />
+    <component
+      classname="gloryroad.view.GloryRoadTreasureFrame"
+      stylename="gloryroad.view.GloryRoadTreasureFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="45"
+      width="577"
+      height="536" />
+    <component
+      classname="gloryroad.view.GloryRoadScoreFrame"
+      stylename="gloryroad.view.GloryRoadScoreFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="45"
+      width="454"
+      height="472" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.boxImg"
+      resourceLink="asset.gloryroad.box" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.scoreFrameBg"
+      resourceLink="asset.gloryroad.rewardBg"
+      scaleGridString="26,26,24,32"
+      width="428"
+      height="382" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.treasureFrameBg"
+      resourceLink="asset.gloryroad.rewardBg"
+      width="550" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.treasureBgBox"
+      resourceLink="asset.gloryroad.rewardBgBox"
+      scaleGridString="26,26,24,32"
+      width="554"
+      height="387" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.mainGloryScoer"
+      resourceLink="asset.gloryroad.gloryScore"
+      x="690"
+      y="-84" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.attTxtBg"
+      resourceLink="asset.gloryroad.txtBg"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="724"
+      height="30"
+      width="190" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.buffImg"
+      resourceLink="asset.gloryroad.buff" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.storeImg"
+      resourceLink="asset.gloryroad.storeIcon"
+      buttonMode="true"
+      x="748"
+      y="373" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.rewardImg"
+      resourceLink="asset.gloryroad.rewardIcon"
+      buttonMode="true"
+      x="750"
+      y="565" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.btnReset"
+      backStyle="asset.gloryroad.btnBgRed"
+      iconStyle="asset.gloryroad.btnResetTxt"
+      iconInnerRectString="23,45,8,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="315"
+      y="638" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.btnAllLife"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.btnAllLifeTxt"
+      iconInnerRectString="15,65,8,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="300"
+      y="638" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.btnGuardLife"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.btnGuardLifeTxt"
+      iconInnerRectString="15,65,7,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      x="576"
+      y="638" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.resetTxt"
+      textFormatStyle="gloryroad.costStones_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="90"
+      height="20"
+      x="322"
+      y="677" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.allLifeToken"
+      firstTxtLink="gloryroad.resetTxt"
+      secondTxtLink="gloryroad.resetTxt"
+      iconLink="asset.core.SmallPointImg"
+      space="2"
+      xy="290,677" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.guardLifeToken"
+      firstTxtLink="gloryroad.resetTxt"
+      iconLink="asset.core.SmallPointImg"
+      space="2"
+      xy="595,677" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.socreTxt"
+      textFormatStyle="gloryroad.socre_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="856"
+      y="344" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.passScoreTxt"
+      textFormatStyle="gloryroad.socre_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      restrict="0-9"
+      width="80"
+      height="24"
+      x="878"
+      y="536" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.starTxt"
+      textFormatStyle="gloryroad.socre_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="100"
+      height="24"
+      x="766"
+      y="121" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.attTxt"
+      textFormatStyle="gloryroad.socre_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      restrict="0-9"
+      width="100"
+      height="20"
+      x="803"
+      y="158" />
+    <component
+      classname="yishi.view.base.PageList"
+      stylename="gloryroad.pageList"
+      renderStyle="view.inside.GloryShopCell"
+      pageSwitchTabLink="gloryroad.switchTab"
+      xy="6,5"
+      xyNum="3,3" />
+    <component
+      classname="yishi.view.base.PageSwitchTab"
+      stylename="gloryroad.switchTab"
+      renderStyle="view.inside.GloryShopCell"
+      leftBtnLink="gloryroad.firstBtn"
+      rightBtnLink="gloryroad.secondBtn"
+      txtBgLink="asset.shop.pageNumBg"
+      txtLink="gloryroad.shopTxt"
+      xy="7,384" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.firstBtn"
+      parentStyle="core.LastPageBtn"
+      x="252"
+      y="384" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.secondBtn"
+      parentStyle="core.NextPageBtn"
+      x="230"
+      y="300" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.returnBtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.stop.SignButtonTxt"
+      iconInnerRectString="32,61,8,32,13"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="570"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.storeSocreTxt"
+      textFormatStyle="gloryroad.socre_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="115"
+      height="25"
+      x="125"
+      y="429" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.shopTxt"
+      textFormatStyle="gloryroad.socre_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      restrict="0-9"
+      width="60"
+      height="20"
+      x="531"
+      y="413" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.shopBg"
+      parentStyle="core.describeBackground_style09"
+      width="723"
+      height="483" />
+    <!-- 难度选择 -->
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.difficultyGridImg0"
+      resourceLink="asset.gloryroad.difficultyGrid0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.difficultyGridImg1"
+      resourceLink="asset.gloryroad.difficultyGrid1" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="gloryroad.difficultyGridImg2"
+      resourceLink="asset.gloryroad.difficultyGrid2" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.btnSelect"
+      backStyle="asset.gloryroad.btnBgRed"
+      iconStyle="asset.gloryroad.btnSelectTxt"
+      iconInnerRectString="25,45,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="38"
+      y="255" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.difficultyBaseAtt"
+      textFormatStyle="gloryroad.baseAtt_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="25"
+      x="0"
+      y="87" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.difficultySocreTxt"
+      textFormatStyle="gloryroad.getSocre_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="25"
+      x="0"
+      y="130" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.difficultyGloryTxt"
+      textFormatStyle="gloryroad.getSocre_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="160"
+      height="25"
+      x="0"
+      y="155" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.difficultyStarTxt"
+      textFormatStyle="gloryroad.getSocre_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      width="160"
+      height="25"
+      x="20"
+      y="178" />
+    <component
+      classname="yishi.view.base.ProgressCommon"
+      stylename="gloryroad.progress"
+      backgroundLink="asset.gloryroad.headProgressBg"
+      barLink="asset.gloryroad.headProgressBar"
+      barMargin="50,29,14,9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.progressExplain"
+      textFormatStyle="gloryroad.costStones_T"
+      filterString="core.normal_f"
+      autoSize="left"
+      multiline="true"
+      wordWrap="true"
+      width="300"
+      height="70"
+      x="60"
+      y="72" />
+    <!-- Buff购买-->
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.buffStarToken"
+      firstTxtLink="gloryroad.resetTxt"
+      iconLink="asset.gloryroad.star"
+      space="2"
+      xy="54,100" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.buffAttTxt"
+      textFormatStyle="gloryroad.costStones_T"
+      filterString="core.normal_f"
+      mouseEnabled="false"
+      autoSize="none"
+      multiline="true"
+      wordWrap="true"
+      width="110"
+      x="20"
+      y="122" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.buffBuyBtn"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.buffBuyTxt"
+      iconInnerRectString="25,45,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="30"
+      y="232" />
+    <component
+      classname="yishi.view.base.PageList"
+      stylename="gloryroad.buffList"
+      renderStyle="gloryroad.component.GloryRoadBuffCell"
+      selectedEnabled="false"
+      xy="10,6"
+      xyNum="4,1"
+      xySpace="4,0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.buffViewBg"
+      parentStyle="core.describeBackground_style09"
+      width="634"
+      height="313" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.buffStarLeftToken"
+      firstTxtLink="gloryroad.resetTxt"
+      iconLink="asset.gloryroad.star"
+      layout="center"
+      space="2"
+      xy="564,280" />
+    <!-- 宝箱奖励-->
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gloryroad.reasureScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="1,560,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="552"
+      height="376"
+      x="4"
+      y="5" />
+    <component
+      classname="yishi.view.base.PageList"
+      stylename="gloryroad.treasurePageList"
+      renderStyle="gloryroad.component.GloryRoadTreasureCell"
+      xyNum="1,1000"
+      xySpace="0,2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.treasureCellPassTxt"
+      textFormatStyle="gloryroad.treasureCellPassTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="5"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.treaseCellBtn"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.btnOneMore"
+      iconInnerRectString="15,68,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="440"
+      y="30" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.treaseCellToken"
+      firstTxtLink="gloryroad.resetTxt"
+      secondTxtLink="gloryroad.resetTxt"
+      iconLink="asset.core.SmallPointImg"
+      space="2"
+      xy="446,68" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.treaseOpenOneBtn"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.turesureOpenOne"
+      iconInnerRectString="12,70,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="160"
+      y="400" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.treaseOpenOneToken"
+      firstTxtLink="gloryroad.resetTxt"
+      secondTxtLink="gloryroad.resetTxt"
+      iconLink="asset.core.SmallPointImg"
+      space="2"
+      xy="165,435" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.treaseOpentenBtn"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.turesureOpenTen"
+      iconInnerRectString="13,70,10,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="300"
+      y="400" />
+    <component
+      classname="yishi.view.base.TokenAmountItem"
+      stylename="gloryroad.treaseOpenTenToken"
+      firstTxtLink="gloryroad.resetTxt"
+      secondTxtLink="gloryroad.resetTxt"
+      iconLink="asset.core.SmallPointImg"
+      space="2"
+      xy="315,435" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="gloryroad.rewardIcon"
+      iconStyle="shop.BaseItemViewIcon2"
+      profileStyle="core.GoodsProfileBG"
+      fashionStyle="core.FashionLevel"
+      fashionTextY="36"
+      fashionIconY="32"
+      profileX="0"
+      profileY="0"
+      profileWidth="55"
+      profileHeight="55"
+      showProfile="true"
+      y="30" />
+    <!-- 积分奖励-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.rewardCutLine"
+      resourceLink="asset.gloryroad.cutLine"
+      scaleGridString="2,2,2,2"
+      width="391"
+      height="4"
+      x="5"
+      y="90" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.treasureCutLine"
+      resourceLink="asset.gloryroad.cutLine"
+      scaleGridString="3,2,2,2"
+      width="530"
+      height="4"
+      x="2"
+      y="95" />
+    <component
+      classname="yishi.view.base.PageList"
+      stylename="gloryroad.scorePageList"
+      renderStyle="gloryroad.component.GloryRoadScoreCell"
+      xyNum="1,1000"
+      xySpace="0,2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.scroeCellTxt"
+      textFormatStyle="gloryroad.costStones_T"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="30"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.scoreAcceptBtn"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.scoreAccept"
+      iconInnerRectString="23,45,8,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="295"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.rewardBgBox"
+      resourceLink="asset.gloryroad.rewardBgBox"
+      scaleGridString="26,26,24,32"
+      width="432"
+      height="387" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="gloryroad.scoreScrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="1,560,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="423"
+      height="348"
+      x="4"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="gloryroad.rewardItemBack"
+      resourceLink="asset.core.goodsItemBack4" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.rewardItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="16"
+      width="40"
+      x="7"
+      y="31" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gloryroad.Item.Contain"
+      spacing="16"
+      x="100"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="gloryroad.Item.treasure"
+      spacing="5"
+      x="95"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="gloryroad.attribute.line"
+      resourceLink="asset.core.attributeImage07"
+      imageRectString="7|158|136|16|13"
+      x="0"
+      y="12" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.attribute.attTxt"
+      autoSize="none"
+      height="19"
+      width="82"
+      x="0"
+      y="0"
+      textFormatStyle="army.AttackTxt_f"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="gloryroad.nextBuffBtn"
+      backStyle="asset.gloryroad.btnBgGreen"
+      iconStyle="asset.gloryroad.buffRefresh"
+      iconInnerRectString="29,37,9,20,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="250"
+      y="327" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.nextRefreshTxt"
+      autoSize="left"
+      height="19"
+      width="130"
+      x="350"
+      y="340"
+      textFormatStyle="army.AttackTxt_f"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="GloryRoadTreasureCell.boxImage"
+      resourceLink="asset.GloryRoadTreasureCell.boxImage"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="4,5,7,6"
+      tipGapH="0"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="10"
+      y="30" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="gloryroad.descText"
+      textFormatStyle="gloryroad.descText_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="395"
+      height="20"
+      x="85"
+      y="5" />
+  </components>
+</style>

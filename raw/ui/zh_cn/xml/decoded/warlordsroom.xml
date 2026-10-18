@@ -1,0 +1,642 @@
+<style
+  name="warlordsroom"
+  source="ui/zh_cn/swf/warlordsroom.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="warlordsroom.NameBlue"
+      args="Arial,16,0x00d8ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warlordsroom.PrelimRoomRightScoreTxt_t"
+      args="Arial,16,0xfae950"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warlordsroom.FinalRoomRightRankTitleTxt_t"
+      args="Arial,14,0xe7c88b,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warlordsroom.FinalRoomRightSelfRankTxt_t"
+      args="Arial,14,0x00fffc" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warlordsroom.FinalRankListCellRankTxt_t1"
+      args="Arial,14,0xfbf1b6,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="warlordsroom.FinalRankListCellRankTxt_t2"
+      args="Arial,14,0xf6a150,,,,,,center" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.warlordsroom.RoomBg" />
+    <bitmapData
+      resourceLink="asset.warlordsroom.ArrmorImg" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="warlords.room.WarlordsRoomView"
+      stylename="warlordsroom.WarlordsRoomView"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.warlordsroom.RoomBgEffect"
+      stylename="warlordsroom.RoomBgEffect"
+      x="0"
+      y="0" />
+    <custom
+      classname="warlords.room.WarlordsRoomPlayerView"
+      stylename="warlordsroom.RoomPlayerView"
+      x="724"
+      y="729" />
+    <custom
+      classname="warlords.WarlordsGeneralListCell"
+      stylename="warlordsroom.FinalRoomRightRankListCell"
+      cellType="4"
+      disObjStyle1="warlordsroom.FinalRankListCellRankImg"
+      disObjStyle2="warlordsroom.FinalRankListCellRankTxt"
+      disObjStyle3="warlordsroom.FinalRankListCellNameTxt"
+      disObjStyle4="warlordsroom.FinalRankListCellWinCountTxt" />
+    <custom
+      classname="warlords.room.WarlordsReportListCell"
+      stylename="warlordsroom.WarlordsReportFrameReportListCell" />
+    <custom
+      classname="asset.warlordsroom.PosReadyEffect"
+      stylename="warlordsroom.PosReadyEffect"
+      x="2"
+      y="4" />
+    <!-- 我的队伍 -->
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="warlordsroom.WarlordsTeamItemView.headIcon"
+      parentStyle="pet.MainPetIcon"
+      iconHeight="50"
+      iconWidth="50"
+      loadingWidth="5"
+      loadingHeight="5"
+      iconBackStyle="core.GoodsBack"
+      loadingX="25"
+      loadingY="25"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="warlordsroom.WarlordsSkillView.SkillBookIcon"
+      parentStyle="petSkill.SkillBookIcon"
+      iconHeight="40"
+      iconWidth="40"
+      y="0"
+      x="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="warlordsroom.WarlordsPetFormationPetHeadView.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="53"
+      loadingY="31"
+      iconWidth="95"
+      iconHeight="58"
+      x="2"
+      y="2" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.PlayerNickNameTxt"
+      textFormatStyle="warlordsroom.NameBlue"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="-245"
+      width="200"
+      height="22" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.PlayerConsortiaNameTxt"
+      textFormatStyle="warlordsroom.NameBlue"
+      filterString="core.normal_f"
+      autoSize="none"
+      x="0"
+      y="-245"
+      width="200"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.PrelimRoomRightBg"
+      resourceLink="warlordsroom.RoomRightMidBorder,asset.warlordsroom.PrelimRightBg,warlordsroom.PrelimRightTurnBg,warlordsroom.RoomRightTopBorder,asset.warlordsroom.RoomRightBottomBorder,asset.warlordsroom.ChainImg,asset.warlordsroom.MyPrelimScoreTxt,asset.warlordsroom.MyPrelimRankTxt"
+      imageRectString="5|238|8|146|13,9|115|12|138|13,239|115|12|138|13,0|249|0|50|13,-2|254|119|49|13,52|140|-147|160|13,50|58|47|16|13,50|82|87|16|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="warlordsroom.PrelimRightTurnBg"
+      resourceLink="asset.warlordsroom.PrelimRightBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.PrelimRoomRightScoreTxt"
+      textFormatStyle="warlordsroom.PrelimRoomRightScoreTxt_t"
+      filterString="core.normal_f"
+      x="115"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.PrelimRoomRightRemainCountTxt"
+      parentStyle="warlordsroom.PrelimRoomRightScoreTxt"
+      x="135"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.PrelimRoomRightMatchTimeTxt"
+      textFormatStyle="roomPVP.format_9"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="246"
+      height="50"
+      x="23"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="warlordsroom.PrelimReportBtn"
+      backStyle="asset.core.ButtonStyle_03"
+      iconStyle="asset.warlordsroom.ReportTxt"
+      iconInnerRectString="32,50,9,25,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="175"
+      y="371" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.FinalRoomRightBg"
+      resourceLink="warlordsroom.RoomRightMidBorder,warlordsroom.RoomRightMidBorder,asset.warlordsroom.FinalRoomRightMidBg,warlordsroom.FinalRoomRightMidBgTurn,warlordsroom.FinalRoomRightTitleBg,warlordsroom.RoomRightTopBorder,asset.warlordsroom.RoomRightBottomBorder,asset.warlordsroom.ChainImg"
+      imageRectString="5|238|8|397|13,5|238|45|360|13,9|115|49|352|13,239|115|49|352|13,7|234|47|34|13,0|249|0|50|13,-2|254|370|49|13,52|140|-147|160|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="warlordsroom.RoomRightMidBorder"
+      parentStyle="core.describeBackground_style11" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="warlordsroom.FinalRoomRightMidBgTurn"
+      resourceLink="asset.warlordsroom.FinalRoomRightMidBg"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="warlordsroom.RoomRightTopBorder"
+      resourceLink="asset.warlordsroom.RoomRightTopBorder_L,asset.warlordsroom.RoomRightTopBorder_M,asset.warlordsroom.RoomRightTopBorder_R" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.FinalRoomRightTitleBg"
+      resourceLink="core.TitleBack_Style05,asset.core.TitleBack_Style01_S,asset.core.TitleBack_Style01_S"
+      imageRectString="0|234|0|34|13,65|22|3|28|13,160|22|3|28|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="warlordsroom.FinalRoomRightTempleTab"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.warlordsroom.TempleTxtUnselected"
+      selectedIconStyle="asset.warlordsroom.TempleTxtSelected"
+      unselectedIconInnerRectString="10,83,5,24,13"
+      selectedIconInnerRectString="10,83,5,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="9"
+      y="-139" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="warlordsroom.FinalRoomRightBraveTab"
+      unSelectedStyle="core.PlayerInfoTabUnselectBack"
+      selectedStyle="core.PlayerInfoTabSelectBack"
+      unselectedIconStyle="asset.warlordsroom.BraveTxtUnselected"
+      selectedIconStyle="asset.warlordsroom.BraveTxtSelected"
+      unselectedIconInnerRectString="19,62,7,24,13"
+      selectedIconInnerRectString="19,62,7,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="90"
+      height="38"
+      x="104"
+      y="-139" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomRightRankTitleTxt"
+      textFormatStyle="warlordsroom.FinalRoomRightRankTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="12"
+      y="-102" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomRightNameTitleTxt"
+      parentStyle="warlordsroom.FinalRoomRightRankTitleTxt"
+      x="73"
+      width="95" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomRightWinTitleTxt"
+      parentStyle="warlordsroom.FinalRoomRightRankTitleTxt"
+      x="173" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomRightSelfRankTxt"
+      textFormatStyle="warlordsroom.FinalRoomRightSelfRankTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="20"
+      x="1"
+      y="85" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomRightSelfWinCountTxt"
+      parentStyle="warlordsroom.FinalRoomRightSelfRankTxt"
+      autoSize="none"
+      width="75"
+      height="20"
+      x="160" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="warlordsroom.FinalRoomRightRankListPanel"
+      viewportInnerRectString="1,1,2,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|warlordsroom.FinalRoomRightRankListCell,28,223"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="215"
+      height="313"
+      x="7"
+      y="-74"
+      vScrollbarStyle="warlordsroom.FinalRoomRightRankListPanelVScrollbar"
+      vScrollbarInnerRectString="12,0,0,0,3"
+      vScrollProxy="1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="warlordsroom.FinalRankListCellRankImg"
+      resourceLink="asset.warlordsroom.RankNumStyle02_1,asset.warlordsroom.RankNumStyle02_2,asset.warlordsroom.RankNumStyle02_3"
+      x="7"
+      y="-1" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRankListCellRankTxt"
+      textFormatStyle="warlordsroom.FinalRankListCellRankTxt_t1,warlordsroom.FinalRankListCellRankTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="0"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRankListCellNameTxt"
+      textFormatStyle="warlordsroom.FinalRankListCellRankTxt_t1,warlordsroom.FinalRankListCellRankTxt_t2"
+      filterString="core.normal_f"
+      x="58"
+      y="2"
+      isAutoFitLength="true"
+      autoSize="none"
+      width="110"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRankListCellWinCountTxt"
+      parentStyle="warlordsroom.FinalRankListCellRankTxt"
+      x="169" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="warlordsroom.FinalReportBtn"
+      parentStyle="warlordsroom.PrelimReportBtn"
+      x="130"
+      y="382" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.FinalRoomTopBg"
+      resourceLink="warlordsroom.FinalRoomTopBgImg,asset.warlordsroom.FinalRoomTopRemainTimeTxt"
+      imageRectString="0|318|0|100|13,39|262|54|26|13" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleUpDownImage"
+      stylename="warlordsroom.FinalRoomTopBgImg"
+      resourceLink="asset.warlordsroom.FinalRoomTopBg_U,asset.warlordsroom.FinalRoomTopBg_M,asset.warlordsroom.FinalRoomTopBg_D" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="warlordsroom.FinalRoomTopTitleImg"
+      resourceLink="asset.warlordsroom.PrelimRoomTopRoundTxt,asset.warlordsroom.FinalRoomTempleRoundTxt,asset.warlordsroom.FinalRoomBraveRoundTxt,asset.warlordsroom.WaitForPrelimResultTxt,asset.warlordsroom.WaitForFinalResultTxt"
+      x="39"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomTopWaitTimeTxt"
+      parentStyle="warlordsroom.PrelimRoomRightMatchTimeTxt"
+      x="59"
+      y="48" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.FinalRoomTopRoundTxt"
+      textFormatStyle="roomPVP.format_10"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="100"
+      height="50"
+      x="223"
+      y="17"
+      parentStyle="warlordsroom.PrelimRoomRightMatchTimeTxt" />
+    <!--	战报界面	-->
+    <component
+      classname="warlords.room.WarlordsReportFrame"
+      stylename="warlordsroom.WarlordsReportFrame"
+      parentStyle="core.Frame2"
+      containerX="17"
+      containerY="42"
+      width="513"
+      height="330" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="warlordsroom.WarlordsReportFrameReportListPanel"
+      backgoundStyle="core.describeBackground_style04"
+      backgoundInnerRectString="3,3,3,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="12,1,0,-1,3"
+      vScrollProxy="1"
+      viewportInnerRectString="1,1,2,1,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|warlordsroom.WarlordsReportFrameReportListCell,30,470"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="475"
+      height="232"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="warlordsroom.WarlordsReportListCellIcon"
+      resourceLink="asset.warlordsroom.AttackIcon,asset.warlordsroom.DefenceIcon"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.WarlordsReportListCellContentTxt"
+      textFormatStyle="colosseum.t7"
+      filterString="core.normal_f"
+      x="22"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleLeftRightImage"
+      stylename="warlordsroom.WarlordsReportListCellLine"
+      resourceLink="asset.warlordsroom.DashedLine,asset.warlordsroom.DashedLine,asset.warlordsroom.DashedLine"
+      width="470"
+      height="3"
+      x="2"
+      y="23" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="warlordsroom.WarlordsPrelimHelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="210"
+      y="-10" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="warlordsroom.WarlordsFinalHelpBtn"
+      parentStyle="warlords.WarlordsFrame.HelpButton"
+      x="210"
+      y="-138" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="warlords.room.WarlordsPrelimHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="warlords.room.WarlordsRoomView.helpContent1"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="warlords.room.WarlordsFinalHelpFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="warlords.room.WarlordsRoomView.helpContent2"
+      titleText="friends.view.FriendsHelpFrame.title"
+      textWidth="363" />
+    <!-- 预赛 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.PrelimRoomRightBgNew"
+      resourceLink="asset.warlordsroom.PrelimBg,asset.warlordsroom.MyPrelimScoreTxt,asset.warlordsroom.MyPrelimRankTxt"
+      imageRectString="0|237|0|118|13,50|58|30|16|13,50|82|70|16|13"
+      x="0"
+      y="0" />
+    <!-- 决赛 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.FinalRoomRightBgNew"
+      resourceLink="asset.warlordsroom.FinalBg,asset.warlordsroom.FinalTitleBg"
+      imageRectString="0|237|0|232|13,3|231|3|39|13"
+      x="0"
+      y="-114" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="warlordsroom.FinalRoomRightRankListPanelVScrollbar"
+      parentStyle="core.VScrollbar04"
+      trackInnerRectString="-3,-3,0,0,0"
+      thumbAreaInnerRectString="-1,-1,10,10,0"
+      decreaseButtonInnerRectString="10,10,0,0,9"
+      increaseButtonInnerRectString="10,10,0,0,10"
+      orientation="0"
+      thumbMinSize="38"
+      width="23"
+      height="200" />
+    <!-- 我的队伍 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.RoomTeamBg"
+      resourceLink="asset.warlordsroom.TeamBg,asset.warlordsroom.TeamTitle"
+      imageRectString="0|237|0|193|13,76|97|10|18|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.WarlordsTeamView.optipTxt"
+      textFormatStyle="PetChallengeTeamView.optipTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="15"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="warlordsroom.WarlordsTeamView.adjustBtn"
+      backStyle="asset.warlordsroom.TeamFormationBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="130"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="warlordsroom.WarlordsTeamItemView.headBack"
+      resourceLink="asset.warlordsroom.HeadBackImg"
+      x="-2"
+      y="-2" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warlordsroom.WarlordsSkillSelectView.bg"
+      parentStyle="core.commonTipBg"
+      x="0"
+      y="0"
+      width="160"
+      height="65" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="warlordsroom.WarlordsSkillSelectView.hBox"
+      spacing="5"
+      strictWidth="50"
+      strictHeight="50"
+      x="8"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warlordsroom.WarlordsSkillView.ItemBack"
+      parentStyle="core.ItemBack"
+      width="40"
+      height="40"
+      x="0"
+      y="0" />
+    <!-- 英灵阵型调整 -->
+    <component
+      classname="warlords.room.WarlordsPetFormationPetHeadView"
+      stylename="warlords.room.WarlordsPetFormationPetHeadView"
+      tipStyle="yishi.view.tips.PetCompareTip"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      isFollowMouse="false" />
+    <component
+      classname="warlords.room.WarlordsPetFormationFrame"
+      stylename="warlords.room.WarlordsPetFormationFrame"
+      parentStyle="core.Frame2"
+      enterEnable="true"
+      escEnable="true"
+      backStyle="core.quickBuyFrameBg"
+      closestyle="core.AlertCloseBtn"
+      closeInnerRectString="26,-17,-6,26,14"
+      titleStyle="core.FrameTitleText"
+      moveInnerRectString="290,290,0,30,1"
+      titleOuterRectPosString="0,-4,1"
+      containerX="25"
+      containerY="30"
+      width="650"
+      height="470" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warlordsroom.WarlordsPetFormationFrame.border"
+      parentStyle="core.describeBackground_style04"
+      x="-16"
+      y="-2"
+      width="631"
+      height="402" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="warlordsroom.WarlordsPetFormationFrame.back"
+      resourceLink="asset.warlordsroom.Back,asset.warlordsroom.Title"
+      imageRectString="0|624|0|395|13,183|258|0|45|13"
+      x="-14"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warlordsroom.WarlordsPetFormationFrame.listBack"
+      parentStyle="core.commonTipBg"
+      width="160"
+      height="402"
+      x="-193"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="warlordsroom.WarlordsPetFormationFrame.vBox"
+      spacing="-3"
+      scaleY="1"
+      x="-190"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="warlordsroom.WarlordsPetFormationFrame.PrePageBtn"
+      backStyle="asset.core.PrePageBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      x="-177"
+      y="365" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="warlordsroom.WarlordsPetFormationFrame.NextPageBtn"
+      backStyle="asset.core.NextPageBtn"
+      x="-73"
+      y="365"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="warlordsroom.WarlordsPetFormationFrame.PageBg"
+      resourceLink="asset.core.PageNumBack"
+      x="-181"
+      y="366" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.WarlordsPetFormationFrame.PageText"
+      textFormatStyle="wildsoul.PageText_t"
+      filterString="wildsoul.PageText_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="-142"
+      y="369" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="warlordsroom.WarlordsPetFormationPetHeadView.border"
+      parentStyle="core.describeBackground_style04"
+      width="154"
+      height="63"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="warlordsroom.WarlordsPetFormationPetHeadView.back"
+      resourceLink="asset.warlordsroom.PetItemBg"
+      y="3"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.WarlordsPetFormationPetHeadView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      autoSize="right"
+      mouseEnabled="false"
+      width="150"
+      height="22"
+      x="150"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.WarlordsPetFormationPetHeadView.gradeTxt"
+      textFormatStyle="pet.PetItemGrade_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="66"
+      height="22"
+      x="83"
+      y="35" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="warlordsroom.WarlordsPetFormationPetHeadView.stateFlag"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,3,7,5,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      resourceLink=",asset.warlordsroom.EnterWarImg,asset.warlordsroom.EnterChildImg"
+      y="-1"
+      x="-0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="warlordsroom.WarlordsPetFormationItemView.nameTxt"
+      textFormatStyle="tips.PetNameTxt_t1,tips.PetNameTxt_t2,tips.PetNameTxt_t3,tips.PetNameTxt_t4,tips.PetNameTxt_t5,tips.PetNameTxt_t6"
+      filterString="core.normal_f"
+      y="-190" />
+  </components>
+</style>

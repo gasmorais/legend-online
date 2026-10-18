@@ -1,0 +1,234 @@
+<style
+  name="proficiency"
+  source="ui/zh_cn/swf/proficiency.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="ProficiencyFrame.layerText_t"
+      args="Arial,24,0xffffff,true,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ProficiencyFrame.maxText_t"
+      args="Arial,16,0xfff476,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ProficiencyFrame.proficiencyValueText_t"
+      args="Arial,14,0xedbf83,,,,,,left" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ProficiencyFrame.maxText_t_f"
+      args="0xff2d2d,1,4,4,2" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ProficiencyFrame.layerText_t_f"
+      args="0xd64100,1,5,5,2" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ProficiencyPropItem.propText_t"
+      args="Arial,14,0xedbf83,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ProficiencyExchangeFrame.descText_t"
+      args="Arial,14,0xe7c88b,,,,,,center"
+      leading="3" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ProficiencyFrame.maxBg"
+      x="443"
+      y="220" />
+    <bitmapData
+      resourceLink="asset.ProficiencyPropItem.back"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ProficiencyPropItem.titleImage2"
+      x="-55"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="proficiency.item.ProficiencyPropItem"
+      stylename="ProficiencyFrame.curItem"
+      x="445"
+      y="20" />
+    <custom
+      classname="proficiency.item.ProficiencyPropItem"
+      stylename="ProficiencyFrame.nextItem"
+      x="445"
+      y="180" />
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="ProficiencyExchangeFrame.exchangeItem"
+      iconStyle="ProficiencyExchangeFrame.exchangeItem.CellIcon"
+      textStyle="ProficiencyExchangeFrame.exchangeItemText"
+      parentStyle="core.BaseItemView"
+      profileWidth="60"
+      profileHeight="60"
+      isShowProfile="true"
+      strengthenX="30"
+      strengthenY="30" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="ProficiencyExchangeFrame.exchangeItem.CellIcon"
+      parentStyle="core.BaseItemViewIcon"
+      loadingX="30"
+      loadingY="30"
+      iconWidth="60"
+      iconHeight="60"
+      x="0"
+      y="0" />
+    <custom
+      classname="asset.ProficiencyFrame.layerMc"
+      stylename="ProficiencyFrame.layerMc"
+      x="170"
+      y="150" />
+    <custom
+      classname="asset.ProficiencyGradeMcView.ballMc"
+      stylename="ProficiencyGradeMcView.ballMc"
+      x="0"
+      y="0" />
+    <custom
+      classname="proficiency.ProficiencyGradeMcView"
+      stylename="ProficiencyFrame.ballMcView"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="proficiency.ProficiencyFrame"
+      stylename="proficiency.ProficiencyFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="65"
+      width="755"
+      height="565" />
+    <component
+      stylename="ProficiencyFrame.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.ProficiencyFrame.back,asset.ProficiencyFrame.titleImage,asset.ProficiencyFrame.layerImage,asset.ProficiencyFrame.blackBg,asset.ProficiencyFrame.proficiencyValueImage"
+      imageRectString="0|721|0|454|13,105|233|180|43|13,165|74|230|32|13,445|270|350|30|13,445|99|358|13|13"
+      x="0"
+      y="0" />
+    <component
+      stylename="ProficiencyFrame.layerText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="ProficiencyFrame.layerText_t_f"
+      autoSize="none"
+      textFormatStyle="ProficiencyFrame.layerText_t"
+      width="80"
+      height="32"
+      x="215"
+      y="230" />
+    <component
+      stylename="ProficiencyFrame.maxText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="ProficiencyFrame.maxText_t_f"
+      autoSize="none"
+      textFormatStyle="ProficiencyFrame.maxText_t"
+      width="240"
+      height="22"
+      x="460"
+      y="235" />
+    <component
+      stylename="ProficiencyFrame.proficiencyValueText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="ProficiencyFrame.proficiencyValueText_t"
+      width="120"
+      height="22"
+      x="545"
+      y="355" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ProficiencyFrame.exchangeBtn"
+      backStyle="asset.core.GreenBtnII"
+      iconStyle="asset.ProficiencyFrame.exchangeBtn.icon"
+      iconInnerRectString="6,51,4,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="650"
+      y="351" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ProficiencyFrame.practiceBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.ProficiencyFrame.practiceBtn.icon"
+      iconInnerRectString="53,50,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="508"
+      y="385" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="ProficiencyPropItem.titleImage"
+      resourceLink="asset.ProficiencyPropItem.titleImage1,asset.ProficiencyPropItem.titleImage2"
+      x="93"
+      y="5" />
+    <component
+      stylename="ProficiencyPropItem.propText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="ProficiencyPropItem.propText_t"
+      width="160"
+      height="22"
+      x="70" />
+    <component
+      classname="proficiency.ProficiencyExchangeFrame"
+      stylename="proficiency.ProficiencyExchangeFrame"
+      parentStyle="core.Frame2"
+      containerX="10"
+      containerY="46"
+      width="390"
+      height="360" />
+    <component
+      stylename="ProficiencyExchangeFrame.back"
+      classname="com.pickgliss.ui.image.MutipleImage"
+      resourceLink="asset.ProficiencyExchangeFrame.back,asset.ProficiencyExchangeFrame.itemback"
+      imageRectString="0||0|19,0|110|19"
+      x="0"
+      y="0" />
+    <component
+      stylename="ProficiencyExchangeFrame.descText"
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      filterString="core.normal_f"
+      autoSize="none"
+      textFormatStyle="ProficiencyExchangeFrame.descText_t"
+      width="320"
+      height="40"
+      wordWrap="true"
+      x="25"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="ProficiencyExchangeFrame.hbox"
+      x="185"
+      y="130"
+      autoCenter="true"
+      spacing="20" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ProficiencyExchangeFrame.exchangeBtn"
+      backStyle="asset.core.PawnSpecialApperceiveAsset"
+      iconStyle="asset.ProficiencyExchangeFrame.exchangeBtn.icon"
+      iconInnerRectString="40,78,13,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="110"
+      y="215" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ProficiencyExchangeFrame.exchangeItemText"
+      textFormatStyle="core.baseitem_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="0"
+      y="40" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ProficiencyGradeMcView.ballMcCon"
+      x="0"
+      y="-12" />
+  </components>
+</style>

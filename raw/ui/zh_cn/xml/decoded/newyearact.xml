@@ -1,0 +1,383 @@
+<style
+  name="newyearact"
+  source="ui/zh_cn/swf/newyearact.swf">
+  <sets>
+    <!-- 连续登录 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.loginDayTxt_t"
+      args="Arial,12,0xfce0a8,true,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.loginDayTitleTxt_t"
+      args="Arial,14,0xf0e8c5,true,,,,,center"
+      letterSpacing="1" />
+    <!-- 赠送红包 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.handlselInputComBoxTxt_t"
+      args="Arial,12,0xdad8b6" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.handlselInputComBoxBtnTxt_t"
+      args="Arial,12,0xffeda7" />
+    <!-- 春节抽奖 -->
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.NewYearLotteryFrame.TipTxt1_t"
+      args="Arial,12,0xef9c00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.NewYearLotteryFrame.TipTxt2_t"
+      args="Arial,12,0x00ff00,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="newyearact.NewYearLotteryFrame.TipTxt3_t"
+      args="Arial,12,0x00ff00,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <!-- 连续登录 -->
+    <bitmapData
+      resourceLink="asset.newYearAct.continousLoginBg"
+      x="5"
+      y="5" />
+    <bitmapData
+      resourceLink="asset.newYearAct.titleSplitLine"
+      x="119"
+      y="11" />
+    <bitmapData
+      resourceLink="asset.newYearAct.hasGetRewardImg"
+      width="68"
+      height="51.2"
+      x="439"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.newYearAct.getRewardImg" />
+    <!-- 赠送红包 -->
+    <bitmapData
+      resourceLink="asset.newyearact.handlselBg" />
+    <bitmapData
+      resourceLink="asset.newyearact.inputFriendName"
+      x="65"
+      y="32" />
+    <!-- 春节抽奖 -->
+    <bitmapData
+      resourceLink="asset.newyearact.handlselBg02" />
+    <bitmapData
+      resourceLink="asset.newyearact.ItemSelect"
+      x="-5"
+      y="-5" />
+    <bitmapData
+      resourceLink="asset.newyearact.ItemNullBg"
+      x="0"
+      y="0" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 连续登录 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="newyearact.rewardItem"
+      iconStyle="newyear.rewardItemIcon"
+      profileStyle="core.GoodsProfileBG"
+      textStyle="newyearact.BaseItemText"
+      profileX="1"
+      profileY="1"
+      profileWidth="41"
+      profileHeight="41"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="newyear.rewardItemIcon"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconHeight="41"
+      iconWidth="41"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="5"
+      loadingHeight="5"
+      loadingX="26"
+      loadingY="26"
+      x="1"
+      y="1" />
+    <!-- 赠送红包 -->
+    <!-- 春节抽奖 -->
+    <custom
+      classname="yishi.view.community.BaseItemView"
+      stylename="newyearact.NewYearLotteryItem.GoodsItem"
+      backgroundStyle="newyearact.NewYearLotteryItem.ItemBg"
+      iconStyle="newyearact.NewYearLotteryItem.GoodsItemIcon"
+      lockStyle="core.BagCellLock"
+      profileStyle="core.GoodsProfileBG"
+      profileX="6"
+      profileY="7"
+      profileWidth="50"
+      profileHeight="50"
+      showProfile="true"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="newyearact.NewYearLotteryItem.GoodsItemIcon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="3"
+      loadingHeight="3"
+      loadingX="27"
+      loadingY="27"
+      tipDirctions="4,6,5,7,0,1,2,3"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      iconWidth="46"
+      iconHeight="46"
+      x="8"
+      y="9" />
+    <custom
+      classname="asset.newyearact.goodsFlickerEffctMC"
+      stylename="newyearact.NewYearLotteryItem.GoodsFlickerEffctMC"
+      x="-1"
+      y="-1" />
+  </customDisplay>
+  <components>
+    <!-- 连续登录 -->
+    <component
+      classname="newyearactivity.ContinuousLoginFrame"
+      stylename="newYearAct.ContinuousLoginFrame"
+      parentStyle="core.Frame1"
+      containerX="15"
+      containerY="61"
+      width="579"
+      height="566" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="newYearAct.continuousLoginBg"
+      parentStyle="core.describeBackground_style09"
+      x="0"
+      y="0"
+      width="547"
+      height="462" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newYearAct.continuousLogin.loginDayTitleTxt"
+      textFormatStyle="newyearact.loginDayTitleTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="7"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newYearAct.continuousLogin.getRewardTitleTxt"
+      parentStyle="newYearAct.continuousLogin.loginDayTitleTxt"
+      x="268" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newYearAct.continuousLogin.loginDayTxt"
+      textFormatStyle="newyearact.loginDayTxt_t"
+      autoSize="none"
+      width="86"
+      height="20"
+      x="14"
+      y="20" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="newYearAct.getRewardBtn"
+      backStyle="asset.newYearAct.getRewardImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="439"
+      y="9" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newyearact.BaseItemText"
+      parentStyle="core.BaseItemText"
+      x="9"
+      y="27"
+      width="34" />
+    <!-- 赠送红包 -->
+    <component
+      classname="simplegame.handlsel.HandlselFrame"
+      stylename="newYearAct.HandlselFrame"
+      parentStyle="core.ConfirmSellFrame"
+      containerX="5"
+      containerY="4"
+      backStyle="newyearact.handlselFrameBg"
+      closeInnerRectString="26,-12,-8,26,14"
+      width="372"
+      height="174" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="newyearact.handlselFrameBg"
+      resourceLink="newyearact.handlselFrameBg_2,core.FrameTitleImage2"
+      imageRectString="0|0|0|0|0,229|17|-6|0|9" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="newyearact.handlselFrameBg_2"
+      resourceLink="asset.newyearact.handlselBg02"
+      scaleGridString="10,10,70,30" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="newYearAct.handlselBg"
+      resourceLink="asset.newyearact.handlselBg,asset.newyearact.inputFriendName" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="newYearAct.inputBg"
+      parentStyle="core.InputBack_style02"
+      width="155"
+      height="25"
+      x="63"
+      y="65" />
+    <component
+      classname="yishi.view.component.WriteMailComboxBox"
+      stylename="newYearAct.handlselInputComBox"
+      listPanelStyle="newYearAct.handlselInputComBoxListPanel"
+      listInnerRectString="38,50,10,100,18"
+      textStyle="newYearAct.handlselInputComBoxTxt"
+      textInnerRectString="-205,243,50,-43,0"
+      buttonStyle="newYearAct.handlselInputComBoxBtn"
+      width="138"
+      height="25"
+      x="271"
+      y="21" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="newYearAct.handlselInputComBoxListPanel"
+      backgoundStyle="asset.newyearact.handselInputComBoxBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="13,4,-2,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|friends.RosePresentViewInputComBoxListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      vUnitIncrement="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newYearAct.handlselInputComBoxTxt"
+      textFormatStyle="newyearact.handlselInputComBoxTxt_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      width="155"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="newYearAct.handlselInputComBoxBtn"
+      backStyle="newYearAct.handlselInputComBoxBtnBg"
+      textStyle="newYearAct.handlselInputComBoxBtnTxt"
+      autoSizeAble="false"
+      backgoundInnerRectString="33,0,9,0"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="96"
+      height="40"
+      x="-54"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newYearAct.handlselInputComBoxBtnTxt"
+      textFormatStyle="newyearact.handlselInputComBoxBtnTxt_t"
+      filterString="core.normal_f" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="newYearAct.handlselInputComBoxBtnBg"
+      resourceLink="asset.core.AlertBtnStyle_02,asset.core.friendsFriendImg"
+      imageRectString="0|96|0|40|13,12|19|11|17|13" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="newYearAct.handlselConfirmBtn"
+      parentStyle="core.AlertButtonConfirm_1"
+      x="57"
+      y="111" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="newYearAct.handlselCancleBtn"
+      parentStyle="core.AlertButtonCancel_1"
+      x="219"
+      y="111" />
+    <!-- 春节抽奖 -->
+    <component
+      classname="newyearactivity.NewYearLotteryFrame"
+      stylename="newYearAct.NewYearLotteryFrame"
+      parentStyle="core.Frame1"
+      width="520"
+      height="560" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="newyearact.NewYearLotteryFrame.FrameBg"
+      resourceLink="asset.newyearact.FrameBgAsset,asset.newyearact.FrameEdgingAsset"
+      imageRectString="11|466|6|447|13,0|488|0|460|13"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="newyearact.NewYearLotteryFrame.Box"
+      resourceLink="asset.newyearact.BoxDefaultAsset,asset.newyearact.BoxOpenAsset"
+      x="130"
+      y="16" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newyearact.NewYearLotteryFrame.TipTxt1"
+      textFormatStyle="newyearact.NewYearLotteryFrame.TipTxt1_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="40"
+      width="412"
+      x="45"
+      y="18"
+      wordWrap="true" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newyearact.NewYearLotteryFrame.TipTxt2"
+      textFormatStyle="newyearact.NewYearLotteryFrame.TipTxt2_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="400"
+      x="44"
+      y="195" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newyearact.NewYearLotteryFrame.TipTxt3"
+      textFormatStyle="newyearact.NewYearLotteryFrame.TipTxt3_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="20"
+      width="260"
+      x="220"
+      y="432" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="newyearact.NewYearLotteryFrame.OpenBtn"
+      backStyle="asset.newyearact.BtnBgAsset"
+      iconStyle="asset.newyearact.BtnTxtAsset"
+      iconInnerRectString="33,125,17,26,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="3,7,5,4,6"
+      isFollowMouse="false"
+      tipGapH="0"
+      tipGapV="0"
+      width="191"
+      height="60"
+      x="148"
+      y="370" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="newyearact.NewYearLotteryItem.ItemCountTxt"
+      textFormatStyle="armyII.VipBoxItemCountTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="55"
+      height="22"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="newyearact.NewYearLotteryItem.ItemBg"
+      resourceLink="asset.newyearact.ItemBg" />
+  </components>
+</style>

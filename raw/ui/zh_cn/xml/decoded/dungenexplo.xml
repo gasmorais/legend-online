@@ -1,0 +1,121 @@
+<style
+  name="dungenexplo"
+  source="ui/zh_cn/swf/dungenexplo.swf">
+  <sets>
+	<set type="flash.text.TextFormat" stylename="ui.dungenexplo.Title_t" args="Arial,30,0xa6ddf4,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.openflow_t" args="Arial,18,0xaae7fb,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.nowopenflow_t" args="Arial,18,0x8ec6e3,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.numshuijian_t" args="Arial,18,0xdad550,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.numgaozi_t" args="Arial,18,0xdad550,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.yaoshi_t" args="Arial,18,0xdad550,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.shuijing_t" args="Arial,18,0xdad550,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.shuaxintishi_t" args="Arial,14,0xeae1c9,,,,,,center" leading="0" />
+<set type="flash.text.TextFormat" stylename="ui.dungenexplo.qianwangxiayiceng_t" args="Arial,16,0xc1e5ff,,,,,,center" leading="0" />
+ 		<set type="flash.text.TextFormat" stylename="ui.dungenexplo.rewardSortIdxTxt_t"
+			args="Arial,16,0xe4d29c,true,,,,,center" leading="0" />
+					<set type="flash.text.TextFormat" stylename="ui.dungenexplo.rewardIttx_t"
+			args="Arial,12,0xedbf83,,,,,,left" leading="0" />
+			
+					<set type="flash.text.TextFormat" stylename="ui.dungenexpol.gjDesTxt_t"
+			args="宋体,14,0xf5d49a,,,,,,left" leading="4" />
+  </sets>
+  <bitmaps>
+    <bitmapData resourceLink="asset.dungenexplo.bg" x="0" y="0" />
+<bitmapData resourceLink="asset.dungenexplo.BindDiamondBG" x="147" y="636" />
+<bitmapData resourceLink="asset.dungenexplo.gaotouTxt" x="382" y="644" />
+<bitmapData resourceLink="asset.dungenexplo.gaotouxiao" x="360" y="642" />
+<bitmapData resourceLink="asset.dungenexplo.shuijingxiao" x="0" y="0" />
+<bitmapData resourceLink="asset.dungenexplo.shuijingTxt" x="173" y="639" />
+<bitmapData resourceLink="asset.dungenexplo.yaoshiTxt" x="184" y="683" />
+<bitmapData resourceLink="asset.dungenexplo.yaoshixiao" x="153" y="680" />
+<bitmapData resourceLink="asset.dungenexplo.shuizhuankepohuai" x="0" y="0" />
+<bitmapData resourceLink="asset.dungenexplo.shuizhuanBukepohuai" x="-1" y="0" />
+<bitmapData resourceLink="asset.dungenexplo.private.bgetBtn" x="-29" y="5" />
+
+  </bitmaps>
+  <customDisplay>
+    		<custom classname="asset.dungenexplo.gaozichuiqian" stylename="asset.dungenexplo.gaozichuiqian" />
+    	<custom classname="com.pickgliss.ui.controls.container.VBox"
+			stylename="ui.dungenexplo.rewardVbox" spacing="10" x="0" y="0" />
+	<custom classname="com.pickgliss.ui.controls.container.HBox"
+			stylename="ui.dungenexplo.rewardHbox" spacing="10" x="39" y="39" />
+	
+  </customDisplay>
+  <components>
+    <component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.Title" textFormatStyle="ui.dungenexplo.Title_t" filterString="core.normal_f" autoSize="none" width="286" height="46" x="425" y="17" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.openflow" textFormatStyle="ui.dungenexplo.openflow_t" filterString="core.normal_f" autoSize="none" width="104" height="26" x="506" y="126" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.nowopenflow" textFormatStyle="ui.dungenexplo.nowopenflow_t" filterString="core.normal_f" autoSize="none" width="262" height="26" x="176" y="77" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.numshuijian" textFormatStyle="ui.dungenexplo.numshuijian_t" filterString="core.normal_f" autoSize="none" width="76" height="24" x="245" y="643" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.numgaozi" textFormatStyle="ui.dungenexplo.numgaozi_t" filterString="core.normal_f" autoSize="none" width="76" height="24" x="445" y="641" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.yaoshi" textFormatStyle="ui.dungenexplo.yaoshi_t" filterString="core.normal_f" autoSize="none" width="76" height="24" x="243" y="680" />
+<component classname="com.pickgliss.ui.controls.BaseButton" stylename="ui.dungenexplo.topBtn1" backStyle="asset.dungenexplo.reward" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" x="990" y="78" width="65" height="65" />
+<component classname="com.pickgliss.ui.controls.BaseButton" stylename="ui.dungenexplo.topBtn2" backStyle="asset.dungenexplo.btnShop" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" x="992" y="152" width="65" height="65" />
+<component classname="com.pickgliss.ui.controls.BaseButton" stylename="ui.dungenexplo.topBtn3" backStyle="asset.dungenexplo.skillBtn" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" x="993" y="230" width="65" height="65" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.shuijing" textFormatStyle="ui.dungenexplo.shuijing_t" filterString="core.normal_f" autoSize="none" width="76" height="24" x="245" y="641" />
+<component classname="com.pickgliss.ui.controls.BaseButton" stylename="ui.dungenexplo.topBtn4" backStyle="asset.dungenexplo.xiaoyiceng" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" x="957" y="604" width="132" height="117" />
+<component classname="com.pickgliss.ui.controls.BaseButton" stylename="ui.dungenexplo.topBtn5" backStyle="asset.dungenexplo.xiaoyicengsuo" filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter" x="956" y="604" width="132" height="117" />
+
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.shuaxintishi" textFormatStyle="ui.dungenexplo.shuaxintishi_t" filterString="core.normal_f" autoSize="none" width="500" height="20" x="460" y="678" />
+<component classname="com.pickgliss.ui.text.FilterFrameText" stylename="ui.dungenexplo.qianwangxiayiceng" textFormatStyle="ui.dungenexplo.qianwangxiayiceng_t" filterString="core.normal_f" autoSize="none" width="100" height="56" x="977" y="672"  wordWrap="true" />
+
+	<component classname="com.pickgliss.ui.controls.ScrollPanel"
+			stylename="ui.dungenexplo.rewardSpanel" vScrollbarStyle="core.VScrollbar03"
+			viewportInnerRectString="0,547,0,0,2" vScrollbarInnerRectString="15,0,0,0,3"
+			vScrollProxy="0" width="557" height="405" x="0" y="0" />
+<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.dungenexplo.rewardSortIdxTxt" textFormatStyle="ui.dungenexplo.rewardSortIdxTxt_t"
+			filterString="core.normal_f" autoSize="none" width="104" height="20"
+			x="12" y="56" />
+		<component classname="com.pickgliss.ui.controls.BaseButton"
+			stylename="ui.dungenexplo.rwGetBtn" backStyle="asset.core.HookReceiveBack"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			x="399" y="43" />
+			<component classname="com.pickgliss.ui.image.ScaleFrameImage"
+			stylename="ui.dungenexplo.rwIconBtn"
+			resourceLink="asset.dungenexplo.notCplete,asset.dungenexplo.private.bgetBtn"
+			x="56" y="6" autoHCenter="true" />
+				<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.dungenexplo.rewardIttx" textFormatStyle="ui.dungenexplo.rewardIttx_t"
+			filterString="core.normal_f" autoSize="none" width="505" height="20"
+			x="18" y="7" />
+         <component
+      classname="dungenexploration.DungenSkillBagFrame"
+      stylename="dungenexploration.DungenSkillBagFrame"
+      parentStyle="core.Frame1"
+      containerX="18"
+      containerY="62"
+      width="640"
+      height="509" />
+      
+       <component
+      classname="dungenexploration.DungenexploTaskFrame"
+      stylename="dungenexploration.DungenexploTaskFrame"
+      parentStyle="core.Frame1"
+      containerX="18"
+      containerY="62"
+      width="595"
+      height="534" />
+      
+      	<component classname="com.pickgliss.ui.controls.BaseButton"
+			stylename="uidungenexplo.buyBtn" backStyle="asset.dungenexplo.buyBtn"
+			filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+			x="505" y="645" />
+        	<component classname="dungenexploration.DungenexploFrame" stylename="dungenexploration.DungenexploFrame"
+			parentStyle="" containerX="- 20" containerY="0" closestyle="core.CloseBtn"
+			closeInnerRectString="29,33,25,29,14" moveInnerRectString="0,30,50,30,1"
+			moveEnable="true" enterEnable="true" escEnable="true" width="1139"
+			height="746" />
+			
+					<component classname="yishi.view.frame.SimpleHelpFrame"
+			stylename="dungenexploration.DungenexploFrame.helpFrame" parentStyle="core.SimpleHelpFrame"
+			helpHtmlText="dungenexploration.DungenexploFrame.helpFramecount" titleText="dungenexploration.DungenexploFrame.helpFrametitle"
+			textWidth="500" />
+					<component classname="com.pickgliss.ui.image.ScaleBitmapImage"
+			stylename="ui.dungenexpol.gjBigBg" parentStyle="core.describeBackground_style04"
+			x="-5" y="-5" width="567" height="415" />
+				<component classname="com.pickgliss.ui.text.FilterFrameText"
+			stylename="ui.dungenexpol.gjDesTxt" textFormatStyle="ui.dungenexpol.gjDesTxt_t"
+			filterString="core.normal_f" autoSize="none" width="529" height="29"
+			x="8" y="414" />
+  </components>
+</style>

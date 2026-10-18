@@ -1,0 +1,738 @@
+<style
+  name="pveroomlist"
+  source="ui/zh_cn/swf/pveroomlist.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemName_t1"
+      args="Arial,14,0xe2c489,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemName_t2"
+      args="Arial,14,0xffae00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemName_t3"
+      args="Arial,14,0xffe943,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemName_t4"
+      args="Arial,14,0xffc038,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemLevel_t1"
+      args="Arial,14,0xe2c489,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemLevel_t2"
+      args="Arial,14,0xffae00,,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemLevel_t3"
+      args="Arial,14,0xffe943,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="playerItemLevel_t4"
+      args="Arial,14,0xffc038,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomItem_titleno_t"
+      args="Arial,14,0xe7d5ad,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomItem_title_t"
+      args="Arial,16,0xe7d5ad,true,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomItem_level_t"
+      args="Arial,24,0xffe138,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomItem_capicity_t"
+      args="Arial,20,0xe7d5ad,true,,,,,right"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="roomsearch_t"
+      args="Arial,12,0xd9b88d,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="search_id_t"
+      args="Arial,15,0xefbd61,,,,,,left"
+      letterSpacing="1"
+      leading="10" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="search_id_value_t"
+      args="Arial,12,0x897c50,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="search_pwd_t"
+      args="Arial,12,0xffae00,,,,,,left"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="search_pwd_value_t"
+      args="Arial,12,0x897c50,,,,,,center"
+      letterSpacing="1" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.ListCellTextStyle_t"
+      args="Arial,12,0xffdd9a,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.ComboxText_t"
+      args="Arial,12,0xe7d5ad,true,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.VipLevelTxt_f"
+      args="Arial,14,0xffffff,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.VipNameTxt_f"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="pveroomlist.needGrades_t"
+      args="Arial,13,0xffe400,true,,,,,right" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.pveroomlist.RoomListBack"
+      x="2"
+      y="4" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.RoomTitle"
+      x="12"
+      y="-11" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.PlayerTitleBack"
+      x="10"
+      y="-9" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.PlayerTitleTxt"
+      x="12"
+      y="15" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.PlayerSpliceLine"
+      x="0"
+      y="23" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.PlayerFrameSpliceLine"
+      x="1"
+      y="319" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.TimeLeftBMD"
+      x="57"
+      y="450" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.FilterBack"
+      x="9"
+      y="427" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.FilterTxt"
+      x="5"
+      y="436" />
+    <bitmapData
+      resourceLink="asset.pveroomlist.RoomItemBG"
+      x="14"
+      y="20" />
+  </bitmaps>
+  <customDisplay>
+    <!-- 房间列表 -->
+    <custom
+      classname="pveroomlist.view.PVERoomListView"
+      stylename="pveroomlist.CampaignRoomListView"
+      x="3"
+      y="0" />
+    <!--  玩家列表 -->
+    <custom
+      classname="pveroomlist.view.PVEPlayerListView"
+      stylename="pveroomlist.CampaignPlayerListView"
+      x="514"
+      y="0" />
+    <!--		  房间搜索 -->
+    <!--		<custom classname="pveroomlist.view.PVERoomSearchView" stylename="pveroomlist.RoomSearchView" -->
+    <!--			x="13"  y="422"-->
+    <!--		/>-->
+    <!-- 房间格子 -->
+    <custom
+      classname="pveroomlist.view.PVERoomItem"
+      stylename="pveroomlist.PVERoomItem"
+      x="0"
+      y="0" />
+    <custom
+      classname="pveroomlist.view.PVEPlayerListItem"
+      stylename="pveroomlist.PlayerListItem"
+      unSelectedStyle="pveroomlist.PlayerItemUnselected"
+      selectedStyle="pveroomlist.PlayerItemSelected"
+      selectedIconInnerRectString="3,43,10,21,13"
+      unselectedIconInnerRectString="3,43,10,21,13"
+      nameTextStyle="pveroomlist.PlayerListItemName"
+      levelTextStyle="pveroomlist.PlayerListItemLevel"
+      vipNameTextStyle="pveroomlist.PlayerListItemVipName"
+      vipLevelTextStyle="pveroomlist.PlayerListItemVipLevel"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,4,6"
+      tipGapV="0"
+      tipGapH="0"
+      isFollowMouse="false"
+      width="212"
+      height="27" />
+    <custom
+      classname="theseusdoublepvproom.TheseusDoubleRoomListView"
+      stylename="theseusdoublepvproom.TheseusDoubleRoomListView"
+      x="3"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pveroomlist.FilterBackImage"
+      resourceLink="asset.pveroomlist.FilterBack"
+      scaleGridString="110,10,140,15"
+      x="3"
+      y="427"
+      width="298" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pveroomlist.PlayerListBack"
+      resourceLink="asset.pveroomlist.PlayerListBack"
+      x="4"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="pveroomlist.RoomListBack2"
+      resourceLink="asset.pveroomlist.RoomListBack1"
+      x="2"
+      y="416" />
+    <!--紫晶炉Frame-->
+    <component
+      classname="pveroomlist.PVERoomListFrame"
+      stylename="pveroomlist.PVERoomListFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="68"
+      width="784"
+      height="580" />
+    <!-- 房间列表背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pveroomlist.RoomListBack1"
+      parentStyle="core.describeBackground_style11"
+      width="501"
+      height="470" />
+    <!--玩家列表背景 -->
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="pveroomlist.PlayerListBack1"
+      parentStyle="core.describeBackground_style11"
+      width="240"
+      height="470" />
+    <!-- 上一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pveroomlist.PreBtn"
+      iconStyle="asset.pveroomlist.PrePage"
+      backStyle="asset.core.ConfirmButton"
+      iconInnerRectString="20,58,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="301"
+      y="426" />
+    <!-- 下一页 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="pveroomlist.NextBtn"
+      iconStyle="asset.pveroomlist.NextPage"
+      backStyle="asset.core.ConfirmButton"
+      iconInnerRectString="20,58,9,22,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="399"
+      y="426" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pveroomlist.RefreshBtn"
+      backStyle="asset.pveroomlist.RefreshBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="216"
+      y="416" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.roomRight.EnterTimeRecord"
+      textFormatStyle="room.format_8"
+      filterString="core.normal_f_3"
+      autoSize="none"
+      width="80"
+      height="20"
+      x="140"
+      y="450" />
+    <!-- 房间列表容器 -->
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="pveroomlist.ListContain"
+      x="10"
+      y="10" />
+    <!-- 搜索 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedButton"
+      stylename="pveroomlist.comboxButton"
+      unSelectedStyle="asset.core.DownBtnStyle01"
+      selectedStyle="asset.core.DownBtnStyle01"
+      filterString="core.DefaultFilter,core.LightFilter,core.LightFilter,core.GrayFilter"
+      displacement="false"
+      x="197"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.ComboxText"
+      textFormatStyle="pveroomlist.ComboxText_t"
+      filterString="core.normal_f"
+      selectable="false"
+      mouseEnabled="true"
+      buttonMode="true"
+      autoSize="none"
+      width="195"
+      height="20"
+      maxChars="14"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.controls.ComboBox"
+      stylename="pveroomlist.Combox"
+      listPanelStyle="pveroomlist.Listpanel"
+      listInnerRectString="0,33,0,-100,18"
+      textStyle="pveroomlist.ComboxText"
+      textInnerRectString="0,29,3,1,0"
+      buttonStyle="pveroomlist.comboxButton"
+      direction="1"
+      enableHtml="true"
+      width="224"
+      height="26"
+      x="78"
+      y="430" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="pveroomlist.Listpanel"
+      backgoundStyle="core.commonTipBg"
+      backgoundInnerRectString="2,2,6,3,-1"
+      vScrollbarStyle="core.VScrollbar02"
+      vScrollbarInnerRectString="11,5,0,0,3"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      viewportInnerRectString="0,0,22,0,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|pveroomlist.CampaignListCell,24,150"
+      listStyle="com.pickgliss.ui.controls.list.List" />
+    <component
+      classname="yishi.view.adapter.CampaignListCellAdapter"
+      stylename="pveroomlist.CampaignListCell"
+      backStyle="pveroomlist.ComboxListCellAsset"
+      backgoundInnerRectString="3,10,2,5,-1"
+      textStyle="pveroomlist.ListCellTextStyle"
+      autoSizeAble="false"
+      width="215"
+      height="22"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.ComboxListCellAsset"
+      resourceLink=",asset.pveroomlist.ComboxListCellAsset,asset.pveroomlist.ComboxListCellAsset"
+      fillAlphaRect="true"
+      x="2" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.ListCellTextStyle"
+      textFormatStyle="pveroomlist.ListCellTextStyle_t"
+      filterString="core.filter_01"
+      type="input"
+      autoSize="none"
+      width="190"
+      height="20"
+      y="1"
+      isAutoFitLength="true" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pveroomlist.SearchBack"
+      resourceLink="asset.pveroomlist.SearchBack"
+      height="32" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pveroomlist.SearchBtn"
+      backStyle="asset.core.zoomBtnImg"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="163"
+      y="5" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.SearchInput"
+      textFormatStyle="roomsearch_t"
+      filterString="core.normal_f"
+      type="input"
+      autoSize="none"
+      height="22"
+      width="156"
+      x="7"
+      y="6" />
+    <!-- 格子 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.RoomItemTitleNo"
+      textFormatStyle="roomItem_titleno_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="46"
+      x="17"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.RoomItemTitle"
+      textFormatStyle="roomItem_title_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="22"
+      width="60"
+      x="45"
+      y="8" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.RoomCapicity"
+      textFormatStyle="roomItem_capicity_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      height="25"
+      width="124"
+      x="20"
+      y="165" />
+    <!-- 玩家列表 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.PlayerListItemUp"
+      resourceLink="asset.pveroomlist.PlayerItemOver"
+      alpha="0"
+      width="212" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.PlayerListItemOver"
+      resourceLink="asset.pveroomlist.PlayerItemOver"
+      width="212" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.PlayerItemSelected"
+      resourceLink="asset.pveroomlist.PlayerItemSelected,asset.pveroomlist.PlayerItemSelected,asset.pveroomlist.PlayerItemSelected,asset.pveroomlist.PlayerItemSelected"
+      width="212"
+      x="3" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.PlayerItemUnselected"
+      resourceLink="pveroomlist.PlayerListItemUp,pveroomlist.PlayerListItemOver,pveroomlist.PlayerItemSelected,pveroomlist.PlayerListItemUp"
+      width="212"
+      x="3" />
+    <!-- 列表名字 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.PlayerListItemName"
+      textFormatStyle="playerItemName_t1,playerItemName_t2,playerItemName_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="43"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.VipNameTxt"
+      textFormatStyle="pveroomlist.VipNameTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="120"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pveroomlist.PlayerListItemVipName"
+      textFieldStyle="pveroomlist.VipNameTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="43"
+      y="0" />
+    <!-- 列表等级 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.PlayerListItemLevel"
+      textFormatStyle="playerItemLevel_t1,playerItemLevel_t2,playerItemLevel_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="50"
+      height="20"
+      x="161"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.VipLevelTxt"
+      textFormatStyle="pveroomlist.VipLevelTxt_f"
+      autoSize="none"
+      mouseEnabled="false"
+      width="50"
+      height="20" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="pveroomlist.PlayerListItemVipLevel"
+      textFieldStyle="pveroomlist.VipLevelTxt"
+      colors="0xfdff78,0xff9000"
+      filterString="core.normal2_f"
+      alphas="1,1"
+      ratios="60,230"
+      x="161"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.ListPanel"
+      stylename="pveroomlist.PlayerListPanel"
+      vScrollbarStyle="pveroomlist.VScrollbar02"
+      vScrollbarInnerRectString="11,1,-2,6,3"
+      viewportInnerRectString="0,0,0,5,5"
+      factoryStyle="com.pickgliss.ui.controls.cell.SimpleListCellFactory|pveroomlist.PlayerListItem,27,212"
+      listStyle="com.pickgliss.ui.controls.list.List"
+      width="230"
+      height="283"
+      x="4"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.Scrollbar"
+      stylename="pveroomlist.VScrollbar02"
+      trackStyle="pveroomlist.Scrollbar02_Back"
+      thumbStyle="core.Scrollbar02_Step"
+      decreaseButtonStyle="pveroomlist.Scrollbar02_Up"
+      increaseButtonStyle="pveroomlist.Scrollbar02_Down"
+      trackInnerRectString="-3,-3,0,0,0"
+      thumbAreaInnerRectString="-4,-4,10,10,0"
+      decreaseButtonInnerRectString="14,12,0,0,9"
+      increaseButtonInnerRectString="14,12,0,0,10"
+      orientation="0"
+      thumbMinSize="38"
+      width="21"
+      height="200" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pveroomlist.Scrollbar02_Back"
+      resourceLink="asset.pveroomlist.scrollbar02_bg"
+      width="17"
+      height="283" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pveroomlist.Scrollbar02_Up"
+      backStyle="asset.pveroomlist.scrollbar02_up"
+      displacement="false"
+      width="14"
+      height="12" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pveroomlist.Scrollbar02_Down"
+      backStyle="asset.pveroomlist.scrollbar02_down"
+      displacement="false"
+      width="14"
+      height="12" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.SexIcon"
+      parentStyle="core.SexIcon"
+      x="4"
+      y="2" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pveroomlist.SearchRoomBtn"
+      backStyle="asset.pveroomlist.SearchBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="13"
+      y="340" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="pveroomlist.CreateRoomBtn"
+      backStyle="asset.pveroomlist.CreateBtnBack"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      displacement="false"
+      x="120"
+      y="340" />
+    <!-- 查询房间 -->
+    <component
+      classname="pveroomlist.view.PVERoomSearchFrame"
+      stylename="pveroomlist.SearchRoomFrame"
+      parentStyle="core.Frame2"
+      width="355"
+      height="250" />
+    <!-- 查找房间背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pveroomlist.SearchRoomBack"
+      parentStyle="core.describeBackground_style04"
+      width="318"
+      height="100"
+      x="-18"
+      y="5" />
+    <!-- Id值背景 -->
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="pveroomlist.SearchRoomIdBack"
+      resourceLink="asset.core.ConfirmSellInputBack"
+      scaleGridString="10,7,36,16"
+      width="154"
+      height="27"
+      x="90"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.SearchRoomPasswdBack"
+      resourceLink="asset.pveroomlist.InputBack1,asset.pveroomlist.InputBack2"
+      width="154"
+      height="27"
+      x="90"
+      y="60" />
+    <!-- 请输入房间id -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.SearchRoomIdText"
+      textFormatStyle="search_id_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="80"
+      x="0"
+      y="44" />
+    <!-- 房间id值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.SearchRoomIdValueText"
+      textFormatStyle="search_id_value_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      type="input"
+      height="20"
+      width="152"
+      x="90"
+      y="45"
+      maxChars="5"
+      restrict="0-9" />
+    <!-- 密码值 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.SearchRoomPasswdValueTxt"
+      textFormatStyle="search_pwd_value_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      type="input"
+      height="18"
+      width="152"
+      x="90"
+      y="66"
+      maxChars="8"
+      restrict="0-9"
+      displayAsPassword="true" />
+    <!-- 密码锁定按钮 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.SearchRoomPasswdTxt"
+      textFormatStyle="search_pwd_t"
+      autoSize="none"
+      filterString="core.normal_f"
+      height="20"
+      width="70"
+      x="35"
+      y="60" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pveroomlist.SearchRoomPasswdCheckBtn"
+      parentStyle="core.BuildUpgradeButton"
+      unSelectedStyle="asset.core.checkstyle_2.UnSelected"
+      selectedStyle="asset.core.checkstyle_2.Selected"
+      textStyle="pveroomlist.SearchRoomPasswdTxt"
+      fieldX="25"
+      fieldY="4"
+      x="23"
+      y="60" />
+    <!-- 确定按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pveroomlist.SearchRoomConfirmBtn"
+      parentStyle="core.AlertButton"
+      width="97"
+      height="33"
+      x="25"
+      y="113" />
+    <!-- 取消按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedCheckButton"
+      stylename="pveroomlist.SearchRoomCancelBtn"
+      parentStyle="core.AlertButton"
+      width="97"
+      height="33"
+      x="170"
+      y="113" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.DifficultyImg"
+      resourceLink="asset.pveroomlist.KingSimple,asset.pveroomlist.KingCommon,asset.pveroomlist.KingHard,asset.pveroomlist.KingNightmare"
+      x="46"
+      y="171" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.VocationIcon"
+      parentStyle="core.VocationIcon"
+      x="141"
+      y="-2" />
+    <!--	多人本第三难度	-->
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="pveroomlist.RoomItemIconBack"
+      resourceLink=",asset.pveroomlist.RoomItemIconBack2,asset.pveroomlist.RoomItemIconBack3"
+      x="24"
+      y="28" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="pveroomlist.needGrades"
+      textFormatStyle="pveroomlist.needGrades_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="120"
+      height="20"
+      x="24"
+      y="110"
+      isAutoFitLength="true" />
+    <component
+      classname="theseusdoublepvproom.TheseusDoubleRoomListFrame"
+      stylename="theseusdoublepvproom.TheseusDoubleRoomListFrame"
+      parentStyle="core.Frame1"
+      containerX="13"
+      containerY="68"
+      width="974"
+      height="590" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="pveroomlist.theseuspvpPlayerListPanel"
+      vScrollbarStyle="core.VScrollbar02"
+      hScrollbarStyle="core.HScrollbar02"
+      hScrollbarInnerRectString="0,22,21,0,4"
+      vScrollbarInnerRectString="10,3,0,0,3"
+      viewportInnerRectString="0,17,0,0,0"
+      vScrollProxy="1"
+      hScrollProxy="2"
+      width="695"
+      height="407"
+      x="240"
+      y="3" />
+  </components>
+</style>

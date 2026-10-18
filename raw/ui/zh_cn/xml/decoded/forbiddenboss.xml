@@ -1,0 +1,675 @@
+<style
+  name="forbiddenboss"
+  source="ui/zh_cn/swf/forbiddenboss.swf">
+  <sets>
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.bossTxt.text_t"
+      args="Arial,16,0xff6000,true,,,,,center" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="ui.bossName.Txt_f"
+      args="0xff6000,0.2,6,6,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.armorTxt_t"
+      args="Arial,14,0xe3bf96,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.armorNumTxt_t1"
+      args="Arial,14,0xe7d5ad,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.armorNumTxt_t2"
+      args="Arial,14,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.serverTxt_t"
+      args="Arial,14,0xe3bf96,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.siteTxt_t"
+      args="Arial,14,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.ascriptionTxt_t"
+      args="Arial,12,0xe3bf96,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.ascriptionNum_t1"
+      args="Arial,12,0xffffff,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.ascriptionNum_t2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.bossTxt_t"
+      args="Arial,14,0xe3bf96,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.levelTxt_t"
+      args="Arial,14,0xe3bf96,,,,,,right" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.refreshTxt_t1"
+      args="Arial,12,0x00ff00,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.refreshTxt_t2"
+      args="Arial,12,0xff0000,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.iconTxt_t1"
+      args="Arial,12,0x00dbfc,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.iconTxt_t2"
+      args="Arial,12,0xfca2ff,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.iconTxt_t3"
+      args="Arial,12,0xfff088,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossItem.iconTxt_t4"
+      args="Arial,12,0xff5454,,,,,,center" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenRecordItem.txt_t"
+      args="Arial,12,0xe4d29c,,,,,,left" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="forbiddenBossFrame.tipsTxt_t"
+      args="Arial,16,0xFF0000,,,,,,left" />
+  </sets>
+  <bitmaps>
+    <bitmapData
+      resourceLink="asset.ForbiddenBossItem.bg"
+      x="5"
+      y="2" />
+    <bitmapData
+      resourceLink="asset.ForbiddenBossItem.selectedBg"
+      x="0"
+      y="-7" />
+    <bitmapData
+      resourceLink="asset.ForbiddenRewardsItem.bg"
+      x="0"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ForbiddenRewardsItem.img"
+      x="540"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.ForbiddenBossFrame.red"
+      x="808"
+      y="341" />
+  </bitmaps>
+  <customDisplay>
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="forbiddenBossFrame.vBox"
+      spacing="2"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="forbiddenBossItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="60"
+      iconHeight="60"
+      loadingX="30"
+      loadingY="30"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="13"
+      y="11" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="forbiddenBossFrame.ascriptionHBox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="forbiddenBossFrame.partakeHBox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="forbiddenRewardsFrame.vBox"
+      spacing="6"
+      x="0"
+      y="0" />
+    <custom
+      classname="yishi.view.community.BaseIconView"
+      stylename="forbiddenRewardsItem.icon"
+      loadingStyle="asset.core.IconLoading"
+      loadingWidth="4"
+      loadingHeight="4"
+      iconWidth="78"
+      iconHeight="78"
+      loadingX="39"
+      loadingY="39"
+      isFollowMouse="false"
+      tipDirctions="4,1,6,5,2,7,0,3"
+      tipGapH="0"
+      tipGapV="0"
+      x="4"
+      y="3" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.HBox"
+      stylename="forbiddenRewardsItem.hBox"
+      x="0"
+      y="0"
+      spacing="10" />
+    <custom
+      classname="com.pickgliss.ui.controls.container.VBox"
+      stylename="forbiddenRecordFrame.vBox"
+      spacing="2"
+      x="0"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="forbiddenboss.ForbiddenBossFrame"
+      stylename="forbiddenboss.ForbiddenBossFrame"
+      parentStyle="core.Frame1"
+      backStyle="core.FrameBg1"
+      containerX="16"
+      containerY="65"
+      closeInnerRectString="29,10,20,29,14"
+      moveInnerRectString="376,27,10,0,9"
+      width="950"
+      height="665" />
+    <component
+      classname="com.pickgliss.ui.image.Scale9CornerImage"
+      stylename="forbiddenBossFrame.border"
+      parentStyle="core.describeBackground_style11"
+      x="0"
+      y="36"
+      width="915"
+      height="521" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="forbiddenBossFrame.btn.SelectedTableBtnAsset"
+      resourceLink="asset.core.SelectedTableBtn_style1_L,asset.core.SelectedTableBtn_style1_C,asset.core.SelectedTableBtn_style1_R"
+      imageRectString="0|56|0|42|13,56|50|0|42|13,106|57|0|42|13" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="forbiddenBossFrame.btn.UnSelectedTableBtnAsset"
+      resourceLink="asset.core.UnSelectedTableBtn_style1_L,asset.core.UnSelectedTableBtn_style1_C,asset.core.UnSelectedTableBtn_style1_R"
+      imageRectString="0|48|0|37|13,48|50|0|37|13,98|57|0|37|13" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="forbiddenBossFrame.btn1"
+      selectedStyle="forbiddenBossFrame.btn.SelectedTableBtnAsset"
+      unSelectedStyle="forbiddenBossFrame.btn.UnSelectedTableBtnAsset"
+      selectedIconStyle="asset.ForbiddenBossFrame.selectedBtn1"
+      unselectedIconStyle="asset.ForbiddenBossFrame.unSelectedBtn1"
+      selectedIconInnerRectString="49,54,15,17,13"
+      unselectedIconInnerRectString="47,52,14,16,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="30"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="forbiddenBossFrame.btn2"
+      parentStyle="forbiddenBossFrame.btn1"
+      selectedIconStyle="asset.ForbiddenBossFrame.selectedBtn2"
+      unselectedIconStyle="asset.ForbiddenBossFrame.unSelectedBtn2"
+      selectedIconInnerRectString="51,66,15,16,13"
+      unselectedIconInnerRectString="49,62,14,15,13"
+      x="205"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="forbiddenBossFrame.btn3"
+      parentStyle="forbiddenBossFrame.btn1"
+      selectedIconStyle="asset.ForbiddenBossFrame.selectedBtn3"
+      unselectedIconStyle="asset.ForbiddenBossFrame.unSelectedBtn3"
+      selectedIconInnerRectString="47,66,15,17,13"
+      unselectedIconInnerRectString="49,63,14,16,13"
+      x="380"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="forbiddenBossFrame.btn4"
+      parentStyle="forbiddenBossFrame.btn1"
+      selectedIconStyle="asset.ForbiddenBossFrame.selectedBtn4"
+      unselectedIconStyle="asset.ForbiddenBossFrame.unSelectedBtn4"
+      selectedIconInnerRectString="54,60,15,16,13"
+      unselectedIconInnerRectString="51,57,14,15,13"
+      x="555"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="forbiddenBossFrame.bg"
+      resourceLink="asset.ForbiddenBossFrame.bg1,asset.ForbiddenBossFrame.bg2,asset.ForbiddenBossFrame.bg3,asset.ForbiddenBossFrame.bg4,asset.ForbiddenBossFrame.bg5"
+      x="250"
+      y="38" />
+    <component
+      classname="com.pickgliss.ui.text.GradientText"
+      stylename="forbiddenBossFrame.bossTxt"
+      textFieldStyle="forbiddenBossFrame.bossTxt.text"
+      colors="0xffd972,0xffffff"
+      alphas="1,1"
+      ratios="60,230"
+      filterString="ui.bossName.Txt_f"
+      autoSize="none"
+      width="170"
+      height="25"
+      x="288"
+      y="52" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.bossTxt.text"
+      textFormatStyle="forbiddenBossFrame.bossTxt.text_t"
+      autoSize="none"
+      width="170"
+      height="25" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.armorTxt"
+      textFormatStyle="forbiddenBossFrame.armorTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="605"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.armorNumTxt"
+      textFormatStyle="forbiddenBossFrame.armorNumTxt_t1,forbiddenBossFrame.armorNumTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="825"
+      y="55" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="forbiddenBossFrame.rewardsBtn"
+      backStyle="asset.ForbiddenBossFrame.rewardsBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="765"
+      y="343" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="forbiddenBossFrame.recordBtn"
+      backStyle="asset.ForbiddenBossFrame.recordBtn"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="835"
+      y="343" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.serverTxt"
+      textFormatStyle="forbiddenBossFrame.serverTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="60"
+      height="20"
+      x="265"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.siteTxt"
+      textFormatStyle="forbiddenBossFrame.siteTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="500"
+      height="20"
+      x="330"
+      y="412" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.ascriptionTxt"
+      textFormatStyle="forbiddenBossFrame.ascriptionTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="270"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.partakeTxt"
+      parentStyle="forbiddenBossFrame.ascriptionTxt"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="255"
+      y="507" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.ascriptionNumTxt"
+      parentStyle="forbiddenBossFrame.ascriptionTxt"
+      autoSize="none"
+      width="170"
+      height="20"
+      x="615"
+      y="457" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.ascriptionNum"
+      textFormatStyle="forbiddenBossFrame.ascriptionNum_t1,forbiddenBossFrame.ascriptionNum_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="640"
+      y="472" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.partakeNumTxt"
+      parentStyle="forbiddenBossFrame.ascriptionTxt"
+      autoSize="none"
+      width="205"
+      height="20"
+      x="590"
+      y="507" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.partakeNum"
+      parentStyle="forbiddenBossFrame.ascriptionNum"
+      autoSize="none"
+      width="110"
+      height="20"
+      x="640"
+      y="522" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="forbiddenBossFrame.enterBtn"
+      backStyle="asset.ForbiddenBossFrame.enterBtnBg"
+      iconStyle="asset.ForbiddenBossFrame.enterBtnTxt"
+      iconInnerRectString="22,74,32,42,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="780"
+      y="425" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="forbiddenBossFrame.bossSpanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,237,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="252"
+      height="513"
+      x="1"
+      y="41" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="forbiddenBossFrame.ascriptionSpanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-5,4"
+      viewportInnerRectString="0,0,-5,50,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="275"
+      height="50"
+      x="360"
+      y="445" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="forbiddenBossFrame.partakeSpanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-5,4"
+      viewportInnerRectString="0,0,-5,50,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="275"
+      height="50"
+      x="360"
+      y="505" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossItem.bossTxt"
+      textFormatStyle="forbiddenBossItem.bossTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="40"
+      wordWrap="true"
+      x="80"
+      y="10" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossItem.levelTxt"
+      textFormatStyle="forbiddenBossItem.levelTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="70"
+      height="20"
+      x="5"
+      y="54" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossItem.refreshTxt"
+      textFormatStyle="forbiddenBossItem.refreshTxt_t1,forbiddenBossItem.refreshTxt_t2"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="72"
+      y="53" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleFrameImage"
+      stylename="forbiddenBossItem.iconImg"
+      resourceLink="asset.ForbiddenBossItem.iconImg1,asset.ForbiddenBossItem.iconImg2,asset.ForbiddenBossItem.iconImg3,asset.ForbiddenBossItem.iconImg4"
+      x="5"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossItem.iconTxt"
+      textFormatStyle="forbiddenBossItem.iconTxt_t1,forbiddenBossItem.iconTxt_t2,forbiddenBossItem.iconTxt_t3,forbiddenBossItem.iconTxt_t4"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="48"
+      height="20"
+      x="3"
+      y="6" />
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="forbiddenBossFrame.helpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="865"
+      y="-50" />
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="forbiddenBossFrame.helperFrame"
+      parentStyle="core.SimpleHelpFrame"
+      helpHtmlText="forbiddenBossFrame.helperFrame.helpTxt.text"
+      titleText="forbiddenBossFrame.helperFrame.HelpTitle.text"
+      textWidth="600" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="forbiddenBossFrame.lock2"
+      resourceLink="asset.ForbiddenBossFrame.lock"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="230"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="forbiddenBossFrame.lock3"
+      resourceLink="asset.ForbiddenBossFrame.lock"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="405"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="forbiddenBossFrame.lock4"
+      resourceLink="asset.ForbiddenBossFrame.lock"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="580"
+      y="0" />
+    <!-- 奖励界面 -->
+    <component
+      classname="forbiddenboss.ForbiddenRewardsFrame"
+      stylename="forbiddenboss.ForbiddenRewardsFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="48"
+      width="780"
+      height="548" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="forbiddenRewardsFrame.rewardsSpanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,741,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="756"
+      height="458"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenRewardsItem.bossTxt"
+      textFormatStyle="forbiddenBossItem.bossTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="105"
+      height="40"
+      wordWrap="true"
+      x="90"
+      y="25" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="forbiddenRewardsItem.rewardsSpanel"
+      hScrollbarStyle="core.HScrollbar04"
+      hScrollbarInnerRectString="2,2,17,-5,4"
+      viewportInnerRectString="0,0,-5,70,1"
+      vScrollProxy="2"
+      hScrollProxy="1"
+      hUnitIncrement="17"
+      width="345"
+      height="70"
+      x="195"
+      y="15" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="forbiddenRewardsItem.receiveBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.ForbiddenRewardsItem.receiveBtn"
+      iconInnerRectString="33,50,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="580"
+      y="23" />
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="forbiddenRewardsItem.receivedBtn"
+      backStyle="asset.core.HookReceiveBack"
+      iconStyle="asset.ForbiddenRewardsItem.receivedBtn"
+      iconInnerRectString="28,61,9,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="580"
+      y="23" />
+    <!-- 记录界面 -->
+    <component
+      classname="forbiddenboss.ForbiddenRecordFrame"
+      stylename="forbiddenboss.ForbiddenRecordFrame"
+      parentStyle="core.Frame2"
+      containerX="11"
+      containerY="48"
+      width="650"
+      height="505" />
+    <component
+      classname="com.pickgliss.ui.controls.ScrollPanel"
+      stylename="forbiddenRecordFrame.scrollPanel"
+      vScrollbarStyle="core.VScrollbar03"
+      viewportInnerRectString="0,610,0,0,2"
+      vScrollbarInnerRectString="15,0,0,0,3"
+      vScrollProxy="1"
+      vUnitIncrement="5"
+      width="625"
+      height="400"
+      x="0"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenRecordItem.txt"
+      textFormatStyle="forbiddenRecordItem.txt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="580"
+      height="40"
+      wordWrap="true"
+      x="7"
+      y="3" />
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconButton"
+      stylename="forbiddenBossFrame.btn5"
+      parentStyle="forbiddenBossFrame.btn1"
+      selectedIconStyle="asset.ForbiddenBossFrame.selectedBtn5"
+      unselectedIconStyle="asset.ForbiddenBossFrame.unSelectedBtn5"
+      selectedIconInnerRectString="32,100,8,32,13"
+      unselectedIconInnerRectString="32,95,8,31,13"
+      x="730"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="forbiddenBossFrame.lock5"
+      resourceLink="asset.ForbiddenBossFrame.lock"
+      tipStyle="yishi.view.tips.OneLineTip"
+      tipDirctions="0,7,5,4,6"
+      tipGapV="0"
+      isFollowMouse="false"
+      x="755"
+      y="0" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.belongMaxTxt"
+      textFormatStyle="forbiddenBossFrame.armorTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="605"
+      y="80" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenBossFrame.joinMaxTxt"
+      textFormatStyle="forbiddenBossFrame.armorTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="150"
+      height="20"
+      x="605"
+      y="105" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="forbiddenRecordFrame.tipstxt"
+      textFormatStyle="forbiddenBossFrame.tipsTxt_t"
+      filterString="core.normal_f"
+      autoSize="none"
+      width="250"
+      height="30"
+      x="5"
+      y="400" />
+  </components>
+</style>

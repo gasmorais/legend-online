@@ -1,0 +1,553 @@
+<style
+  name="expback"
+  source="ui/zh_cn/swf/expback.swf">
+  <sets>
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="expback.title_f"
+      args="0x000000,1,1,1,3" />
+    <set
+      type="flash.filters.GlowFilter"
+      stylename="expback.view_txt_t"
+      args="0x000000,1,1,1,3" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.frame.pagetxt_t"
+      args="Arial,16,0xe6d9b0,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.sigenlframe.backnumtxt_t"
+      args="Arial,12,0xffdd83,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.sigenlframe.needtxt_t"
+      args="Arial,12,0xffdd83,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.sigenlframe.rewardtxt_t"
+      args="Arial,12,0xffdd83,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.sigenlframe.selectedbtnTxt_t"
+      args="Arial,12,0xffdd83,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.item.nameTxt_t"
+      args="Arial,14,0xebd9b2,,,,,,right"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.item.countTxt_t"
+      args="Arial,12,0xc8a757,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.item.countValueTxt_t"
+      args="Arial,12,0xffdd83,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.item.rewardTxt_t"
+      args="Arial,12,0xc8a757,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.item.rewardValueTxt_t"
+      args="Arial,12,0xffdd83,,,,,,left"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="expback.item.ButtonTextStyle_t"
+      args="Arial,12,0xebd9b2,,,,,,center"
+      leading="10"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExpBackNewFrame.titleAlert_t"
+      args="Arial,12,0xff3000,,,,,,center"
+      letterSpacing="0" />
+    <set
+      type="flash.text.TextFormat"
+      stylename="ExpBackNewFrame.backText_t"
+      args="Arial,14,0xff8000,true,,,,,center"
+      letterSpacing="2" />
+  </sets>
+  <bitmaps>
+    <!-- 测试图片 -->
+    <bitmapData
+      resourceLink="asset.expback.alert.count"
+      x="465"
+      y="0" />
+    <bitmapData
+      resourceLink="asset.ExpBackNewFrame.back"
+      x="0"
+      y="10" />
+    <bitmapData
+      resourceLink="asset.ExpBackNewFrame.titleImage"
+      x="130"
+      y="25" />
+    <bitmapData
+      resourceLink="asset.expback.numComponent.bitmap1" />
+    <bitmapData
+      resourceLink="asset.expback.numComponent.bitmap2" />
+  </bitmaps>
+  <customDisplay>
+    <!-- icon容器-->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="expback.item.iconpanel"
+      x="20"
+      y="20" />
+    <!-- 找回面板 icon容器-->
+    <custom
+      classname="flash.display.Sprite"
+      stylename="expback.sigenlframe.iconpanel"
+      x="16"
+      y="0" />
+  </customDisplay>
+  <components>
+    <component
+      classname="expback.ExpBackFrame"
+      stylename="expback.ExperienceBackFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="735"
+      moveInnerRectString="0,70,0,45,1"
+      height="545" />
+    <component
+      classname="expback.ExpBackSignelFrame"
+      stylename="expback.ExpBackSignelFrame"
+      parentStyle="core.Frame2"
+      backStyle="core.quickBuyFrameBg"
+      titleOuterRectPosString="0,-7,1"
+      closeInnerRectString="26,-17,-6,26,14"
+      containerX="10"
+      containerY="40"
+      width="270"
+      height="276" />
+    <!-- 页数 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.frame.pagetxt"
+      textFormatStyle="expback.frame.pagetxt_t"
+      autoSize="center"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="370"
+      y="428" />
+    <!-- 道具数量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.frame.itemCounttxt"
+      textFormatStyle="expback.frame.pagetxt_t"
+      filterString="core.normal_f"
+      width="60"
+      height="20"
+      x="625"
+      y="0" />
+    <!--9宫图背景6 -->
+    <!-- 背景矩形 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="expback.frame.bgup"
+      resourceLink="expback.frame.bgup1,expback.frame.bgup2"
+      imageRectString="0|355|25|386|13,702|348|25|386|13" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="expback.frame.bgup1"
+      resourceLink="asset.expback.frame.bgup" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="expback.frame.bgup2"
+      resourceLink="asset.expback.frame.bgup"
+      scaleX="-1" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="expback.frame.blackup"
+      parentStyle="core.describeBackground_style06"
+      width="710"
+      height="395"
+      y="20"
+      x="-5" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="expback.frame.bgdown"
+      parentStyle="core.describeBackground_style06"
+      width="710"
+      height="40"
+      y="420"
+      x="-5" />
+    <!-- 上一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="expback.frame.upbtn"
+      parentStyle="core.LastPageBtn"
+      x="260"
+      y="425" />
+    <!-- 下一页按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="expback.frame.nextbtn"
+      parentStyle="core.NextPageBtn"
+      x="420"
+      y="425" />
+    <!-- 找回界面背景 -->
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="expback.sigenlframe.bg"
+      resourceLink="asset.expback.alert.bg,asset.expback.alert.bottom,asset.expback.alert.backnum,asset.expback.alert.need,asset.expback.alert.rewards"
+      imageRectString="0|268|0|225|13,0|269|15|97|13,103|80|25|19|13,90|93|50|19|13,112|71|75|19|13"
+      x="-10"
+      y="-25" />
+    <!-- 累计可找回数量 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.sigenlframe.backnumtxt"
+      textFormatStyle="expback.sigenlframe.backnumtxt_t"
+      filterString="core.normal_f"
+      width="40"
+      height="20"
+      x="173"
+      y="0" />
+    <!-- 消耗需求 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.sigenlframe.needtxt"
+      textFormatStyle="expback.sigenlframe.needtxt_t"
+      filterString="core.normal_f"
+      width="100"
+      height="40"
+      x="170"
+      y="23"
+      wordWrap="true" />
+    <!-- 累计奖励 -->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.sigenlframe.rewardtxt"
+      textFormatStyle="expback.sigenlframe.rewardtxt_t"
+      filterString="core.normal_f"
+      width="80"
+      height="40"
+      x="173"
+      y="49"
+      wordWrap="true" />
+    <!--单选按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="expback.sigenlframe.selectedbtn"
+      selectedIconStyle="asset.core.checkstyle_1.Selected"
+      unselectedIconStyle="asset.core.checkstyle_1.UnSelected"
+      selectedIconInnerRectString="0,22,0,23,13"
+      unselectedIconInnerRectString="0,22,0,23,13"
+      textStyle="expback.sigenlframe.selectedbtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="23"
+      x="65"
+      y="110"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.sigenlframe.selectedbtnTxt"
+      textFormatStyle="expback.sigenlframe.selectedbtnTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="23"
+      y="1" />
+    <!-- 高级找回按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="expback.item.advbtn"
+      backStyle="asset.core.BrownBtn"
+      textStyle="expback.item.ButtonTextStyle"
+      autoSizeAble="false"
+      backgoundInnerRectString="3,8,5,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="77"
+      height="31"
+      x="35"
+      y="95"
+      autoCenter="false" />
+    <!--棕色按钮-->
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.item.ButtonTextStyle"
+      textFormatStyle="expback.item.ButtonTextStyle_t"
+      autoSize="none"
+      width="70"
+      height="20"
+      filterString="core.normal_f" />
+    <!-- 黄金找回按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.TextButton"
+      stylename="expback.item.goldbtn"
+      parentStyle="expback.item.advbtn"
+      backgoundInnerRectString="4,8,5,13"
+      filterString="core.normal_f"
+      x="135"
+      y="95" />
+    <!-- 单次找回按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="expback.sigenlframe.oncebtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.expback.alert.once"
+      iconInnerRectString="27,76,10,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="130"
+      height="46"
+      x="-10"
+      y="140" />
+    <!-- 全部找回按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="expback.sigenlframe.allbtn"
+      backStyle="asset.core.Style9Btn"
+      iconStyle="asset.expback.alert.all"
+      iconInnerRectString="27,76,10,24,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="130"
+      height="46"
+      x="120"
+      y="140" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.item.nameTxt"
+      textFormatStyle="expback.item.nameTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="104"
+      y="18" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.item.countTxt"
+      textFormatStyle="expback.item.countTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="79"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.item.countValueTxt"
+      textFormatStyle="expback.item.countValueTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="155"
+      y="45" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.item.rewardTxt"
+      textFormatStyle="expback.item.rewardTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="79"
+      y="65" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.item.rewardValueTxt"
+      textFormatStyle="expback.item.rewardValueTxt_t"
+      autoSize="none"
+      width="70"
+      height="40"
+      filterString="core.normal_f"
+      x="156"
+      y="65"
+      wordWrap="true" />
+    <!--今日不再提示  - 单选按钮-->
+    <component
+      classname="com.pickgliss.ui.controls.SelectedIconTextButton"
+      stylename="expback.frame.selectedbtn"
+      selectedIconStyle="asset.core.checkstyle_1.Selected"
+      unselectedIconStyle="asset.core.checkstyle_1.UnSelected"
+      selectedIconInnerRectString="0,22,0,23,13"
+      unselectedIconInnerRectString="0,22,0,23,13"
+      textStyle="expback.frame.selectedbtnTxt"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      width="150"
+      height="23"
+      x="550"
+      y="428"
+      autoCenter="false" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="expback.frame.selectedbtnTxt"
+      textFormatStyle="expback.sigenlframe.selectedbtnTxt_t"
+      autoSize="none"
+      width="120"
+      height="22"
+      filterString="core.normal_f"
+      x="23"
+      y="1" />
+    <!-- 帮助按钮 -->
+    <component
+      classname="com.pickgliss.ui.controls.BaseButton"
+      stylename="expback.frame.HelpBtn"
+      backStyle="asset.core.HelpButton_01"
+      displacement="true"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      tipStyle="yishi.view.tips.OneLineTip"
+      isFollowMouse="false"
+      tipDirctions="4,0,5,6,3,7"
+      tipGapH="0"
+      tipGapV="0"
+      x="655"
+      y="-28"
+      alpha="1"
+      autoSizeAble="true"
+      buttonMode="true"
+      enable="true"
+      mouseEnabled="true"
+      scaleX="1"
+      scaleY="1" />
+    <!-- 帮助说明 -->
+    <component
+      classname="yishi.view.frame.SimpleHelpFrame"
+      stylename="expback.frame.HelperFrame"
+      parentStyle="core.Frame2"
+      width="500"
+      height="300"
+      moveInnerRectString="0,30,0,45,1"
+      titleOuterRectPosString="0,12,1"
+      closeInnerRectString="35,-6,8,35,14"
+      containerX="20"
+      containerY="40"
+      background="core.describeBackground_style04"
+      btnStyle="core.SimpleHelpConfirmBtn"
+      helpTxt="core.SimpleHelpText"
+      helpHtmlText="active.expback.helpContent"
+      titleText="active.expback.helptitle"
+      textWidth="322" />
+    <component
+      classname="expback.ExpBackNewFrame"
+      stylename="expback.ExperienceBackNewFrame"
+      parentStyle="core.Frame2"
+      containerX="15"
+      containerY="40"
+      width="555"
+      moveInnerRectString="0,70,0,45,1"
+      height="495" />
+    <component
+      classname="com.pickgliss.ui.image.ScaleBitmapImage"
+      stylename="ExpBackNewFrame.boardBack"
+      parentStyle="core.describeBackground_style09"
+      x="-6"
+      y="4"
+      width="535"
+      height="410" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExpBackNewFrame.titleAlert"
+      textFormatStyle="ExpBackNewFrame.titleAlert_t"
+      filterString="core.normal_f"
+      width="300"
+      height="20"
+      x="35"
+      y="110" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ExpBackNewFrame.expContiner"
+      x="180"
+      y="75" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ExpBackNewFrame.normalBackImage"
+      resourceLink="asset.expback.normal.back,asset.expback.normal.text"
+      imageRectString="0|125|0|36|13,3|114|1|36|13"
+      x="0"
+      y="160" />
+    <component
+      classname="com.pickgliss.ui.image.MutipleImage"
+      stylename="ExpBackNewFrame.doubleBackImage"
+      resourceLink="asset.expback.double.back,asset.expback.double.text"
+      imageRectString="0|125|0|36|13,3|109|1|38|13"
+      x="0"
+      y="282" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExpBackNewFrame.backText"
+      textFormatStyle="ExpBackNewFrame.backText_t"
+      filterString="core.normal_f"
+      width="300"
+      height="20"
+      x="125"
+      y="168" />
+    <component
+      classname="com.pickgliss.ui.text.FilterFrameText"
+      stylename="ExpBackNewFrame.costText"
+      textFormatStyle="ExpBackNewFrame.backText_t"
+      filterString="core.normal_f"
+      width="300"
+      height="20"
+      x="160"
+      y="203" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ExpBackNewFrame.normalExpText"
+      x="265"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ExpBackNewFrame.normalCostContiner"
+      x="260"
+      y="205" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ExpBackNewFrame.doubleCostText"
+      x="265"
+      y="290" />
+    <component
+      classname="com.pickgliss.ui.core.Component"
+      stylename="ExpBackNewFrame.doubleCostContiner"
+      x="265"
+      y="325" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ExpBackNewFrame.expImgae"
+      resourceLink="asset.ExpBackNewFrame.expImgae"
+      x="360"
+      y="170" />
+    <component
+      classname="com.pickgliss.ui.image.Image"
+      stylename="ExpBackNewFrame.pointImage"
+      resourceLink="asset.core.SmallPointImg"
+      x="300"
+      y="322" />
+    <!-- 普通 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExpBackNewFrame.normalBtn"
+      backStyle="asset.ExpBackNewFrame.normalBtn.back"
+      iconStyle="asset.ExpBackNewFrame.normalBtn.text"
+      iconInnerRectString="20,53,3,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="420"
+      y="190" />
+    <!-- 双倍找回 -->
+    <component
+      classname="com.pickgliss.ui.controls.IconButton"
+      stylename="ExpBackNewFrame.doubleBtn"
+      backStyle="asset.ExpBackNewFrame.doubleBtn.back"
+      iconStyle="asset.ExpBackNewFrame.doubleBtn.text"
+      iconInnerRectString="20,53,3,30,13"
+      filterString="core.DefaultFilter,core.LightFilter,core.DefaultFilter,core.GrayFilter"
+      x="420"
+      y="321" />
+  </components>
+</style>

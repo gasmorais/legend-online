@@ -1,0 +1,225 @@
+package view.subshop
+{
+   import com.pickgliss.events.FrameEvent;
+   import com.pickgliss.ui.ComponentFactory;
+   import com.pickgliss.ui.LayerManager;
+   import com.pickgliss.ui.controls.Frame;
+   import com.pickgliss.ui.controls.IconButton;
+   import com.pickgliss.ui.image.MutipleImage;
+   import com.pickgliss.ui.image.ScaleBitmapImage;
+   import com.pickgliss.ui.text.FilterFrameText;
+   import com.pickgliss.utils.ObjectUtils;
+   import com.pickgliss.utils.SoundManager;
+   import events.ShopEvent;
+   import flash.events.Event;
+   import flash.events.MouseEvent;
+   import mainBar.StripView;
+   import manager.LanguageMgr;
+   import managers.PlayerCurrencyManager;
+   import mvc.module.consortia.ConsortiaModel;
+   import mvc.module.currency.CurrencyInfo;
+   import mvc.module.shop.ShopGoodsInfo;
+   import mvc.module.shop.ShopModel;
+   import view.GoodsItem;
+   import yishi.datas.templates.ConfigInfosTempInfo;
+   import yishi.datas.templates.GoodsTemplateInfo;
+   import yishi.keyboard.KeyBoardRegister;
+   import yishi.manager.FrameControllerManager;
+   import yishi.manager.NotificationManager;
+   import yishi.manager.PlayerManager;
+   import yishi.manager.TempleteManager;
+   
+   public class CrossPvPShopFrame extends Frame
+   {
+      
+      private var _data:ShopModel;
+      
+      private var _bg:MutipleImage;
+      
+      private var _back:ScaleBitmapImage;
+      
+      private var _displayShow:ScaleBitmapImage;
+      
+      private var _pageNumTxt:FilterFrameText;
+      
+      private var _prePageBtn:IconButton;
+      
+      private var _nextPageBtn:IconButton;
+      
+      private var _itemList:Vector.<GoodsItem>;
+      
+      private var _hasNum:FilterFrameText;
+      
+      private var _sealOfKingImg:MutipleImage;
+      
+      private var _stripView:StripView;
+      
+      public function CrossPvPShopFrame()
+      {
+         super();
+         initView();
+         initEvent();
+         initData();
+      }
+      
+      private function initView() : void
+      {
+         var _loc6_:int = 0;
+         var _loc1_:GoodsItem = null;
+         var _loc4_:* = null;
+         _data = FrameControllerManager.instance.shopController.model;
+         _itemList = new Vector.<GoodsItem>();
+         titleText = LanguageMgr.GetTranslation("view.subshop.CrossPvPShopFrame.titleText");
+         _bg = ComponentFactory.Instance.creatComponentByStylename("shop.GoodsListViewBG03");
+         _back = ComponentFactory.Instance.creatComponentByStylename("stop.ComShopFrameDescribeBackground");
+         _displayShow = ComponentFactory.Instance.creatComponentByStylename("shop.CrossPvpShopBg");
+         _prePageBtn = ComponentFactory.Instance.creatComponentByStylename("stop.ComShopFramePrePageBtn");
+         _nextPageBtn = ComponentFactory.Instance.creatComponentByStylename("stop.ComShopFrameNextPageBtn");
+         _pageNumTxt = ComponentFactory.Instance.creatComponentByStylename("stop.ComShopFramePageTextStyle");
+         _hasNum = ComponentFactory.Instance.creatComponentByStylename("stop.ComMoneyTextStyle");
+         _sealOfKingImg = ComponentFactory.Instance.creatComponentByStylename("shop.CrossGuild.SealOfKing");
+         _stripView = ComponentFactory.Instance.creatCustomObject("shop.CrossPvPShopFrame.StripView");
+         var _loc9_:GoodsTemplateInfo = TempleteManager.instance.goodsTemplateCate.getTemplateByID(-3600);
+         _stripView.setHitArea(0,0,30,27);
+         _stripView.tipData = _loc9_.Description;
+         _pageNumTxt.text = "1/1";
+         addToContent(_back);
+         addToContent(_bg);
+         _bg.x = 7;
+         _bg.y = 5;
+         addToContent(_displayShow);
+         _displayShow.x = 12;
+         _displayShow.y = 434;
+         addToContent(_pageNumTxt);
+         addToContent(_prePageBtn);
+         addToContent(_nextPageBtn);
+         addToContent(_sealOfKingImg);
+         addToContent(_hasNum);
+         addToContent(_stripView);
+         _hasNum.text = PlayerCurrencyManager.instance.currencyInfo.yarramanCoin.amount + "";
+         _hasNum.x = 176;
+         _hasNum.y = 441;
+         var _loc8_:int = 0;
+         var _loc5_:int = 0;
+         _loc6_ = 0;
+         while(_loc6_ < 9)
+         {
+            _loc1_ = new GoodsItem();
+            _loc8_ = _loc6_ / 3;
+            _loc5_ = _loc6_ % 3;
+            _loc1_.x = _loc5_ * _loc1_.width + 7;
+            _loc1_.y = _loc8_ * (_loc1_.height + 3) + 5;
+            addToContent(_loc1_);
+            _itemList.push(_loc1_);
+            _loc6_++;
+         }
+         var _loc2_:ConfigInfosTempInfo = TempleteManager.instance.getConfigInfoByConfigName("CrossGuild_TimeOutDate");
+         var _loc7_:ConsortiaModel = FrameControllerManager.instance.consortiaController.model;
+         var _loc3_:CurrencyInfo = PlayerCurrencyManager.instance.currencyInfo.yarramanCoin;
+      }
+      
+      private function initEvent() : void
+      {
+         addEventListener("response",__frameResponse);
+         _prePageBtn.addEventListener("click",__prePageBtnHandler);
+         _nextPageBtn.addEventListener("click",__nextPageBtnHandler);
+         _data.addEventListener("PAGE_UPDATE",__refreshPage);
+         _data.addEventListener("GOODS_LIST_UPDATE",__refreshGoods);
+         PlayerManager.instance.currentPlayerModel.playerInfo.addEventListener("CROSSGUILDSCOREREFRESH",__refreshScore);
+         NotificationManager.instance.addEventListener("CURRENCYREFRESH",__refreshScore);
+      }
+      
+      private function __refreshScore(param1:Event) : void
+      {
+         _hasNum.text = PlayerCurrencyManager.instance.currencyInfo.yarramanCoin.amount + "";
+      }
+      
+      private function initData() : void
+      {
+         FrameControllerManager.instance.shopController.initCrossGvgShopFrame();
+      }
+      
+      private function removeEvent() : void
+      {
+         removeEventListener("response",__frameResponse);
+         _prePageBtn.removeEventListener("click",__prePageBtnHandler);
+         _nextPageBtn.removeEventListener("click",__nextPageBtnHandler);
+         _data.removeEventListener("PAGE_UPDATE",__refreshPage);
+         _data.removeEventListener("GOODS_LIST_UPDATE",__refreshGoods);
+         PlayerManager.instance.currentPlayerModel.playerInfo.removeEventListener("CROSSGUILDSCOREREFRESH",__refreshScore);
+         NotificationManager.instance.removeEventListener("CURRENCYREFRESH",__refreshScore);
+      }
+      
+      private function __prePageBtnHandler(param1:MouseEvent) : void
+      {
+         SoundManager.instance.play("022");
+         FrameControllerManager.instance.shopController.shopPageBtnHandler(param1.currentTarget == _prePageBtn);
+      }
+      
+      private function __nextPageBtnHandler(param1:MouseEvent) : void
+      {
+         SoundManager.instance.play("022");
+         FrameControllerManager.instance.shopController.shopPageBtnHandler(param1.currentTarget == _prePageBtn);
+      }
+      
+      private function __refreshPage(param1:ShopEvent) : void
+      {
+         _pageNumTxt.text = _data.currentPage + "/" + _data.totalPage;
+         _prePageBtn.enable = _data.currentPage != 1;
+         _nextPageBtn.enable = _data.currentPage != _data.totalPage;
+      }
+      
+      private function __refreshGoods(param1:ShopEvent) : void
+      {
+         var _loc2_:int = 0;
+         _loc2_ = 0;
+         while(_loc2_ < 9)
+         {
+            _itemList[_loc2_].data = _loc2_ < _data.showGoodsList.length ? ShopGoodsInfo(_data.showGoodsList[_loc2_]) : null;
+            _loc2_++;
+         }
+      }
+      
+      private function __frameResponse(param1:FrameEvent) : void
+      {
+         switch(int(param1.responseCode))
+         {
+            case 0:
+               dispose();
+               break;
+            case 1:
+               dispose();
+         }
+      }
+      
+      public function show() : void
+      {
+         KeyBoardRegister.instance.keyEnable = false;
+         LayerManager.Instance.addToLayer(this,3,true,true,2);
+      }
+      
+      override public function get groups() : Array
+      {
+         return ["MAIN_TOOLS_GROUP","BAG_GROUP"];
+      }
+      
+      override public function dispose() : void
+      {
+         removeEvent();
+         ObjectUtils.disposeObject(_bg);
+         _bg = null;
+         ObjectUtils.disposeObject(_back);
+         _back = null;
+         ObjectUtils.disposeObject(_hasNum);
+         _hasNum = null;
+         ObjectUtils.disposeObject(_sealOfKingImg);
+         _sealOfKingImg = null;
+         ObjectUtils.disposeObject(_stripView);
+         _stripView = null;
+         ObjectUtils.disposeAllChildren(this);
+         KeyBoardRegister.instance.keyEnable = true;
+         super.dispose();
+      }
+   }
+}
+
